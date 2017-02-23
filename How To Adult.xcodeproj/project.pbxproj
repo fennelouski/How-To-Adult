@@ -17,6 +17,7 @@
 		80A419C21E5F7774004D0C0D /* How_To_AdultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419C11E5F7774004D0C0D /* How_To_AdultTests.m */; };
 		80A419CD1E5F7774004D0C0D /* How_To_AdultUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419CC1E5F7774004D0C0D /* How_To_AdultUITests.m */; };
 		80A419DC1E5F7925004D0C0D /* HTACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419DB1E5F7925004D0C0D /* HTACollectionViewCell.m */; };
+		80A419DF1E5F8382004D0C0D /* HTACollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419DE1E5F8382004D0C0D /* HTACollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		80A419CE1E5F7774004D0C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A419DA1E5F7925004D0C0D /* HTACollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTACollectionViewCell.h; sourceTree = "<group>"; };
 		80A419DB1E5F7925004D0C0D /* HTACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTACollectionViewCell.m; sourceTree = "<group>"; };
+		80A419DD1E5F8382004D0C0D /* HTACollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTACollectionViewLayout.h; sourceTree = "<group>"; };
+		80A419DE1E5F8382004D0C0D /* HTACollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTACollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				80A419AB1E5F7774004D0C0D /* ViewController.m */,
 				80A419DA1E5F7925004D0C0D /* HTACollectionViewCell.h */,
 				80A419DB1E5F7925004D0C0D /* HTACollectionViewCell.m */,
+				80A419DD1E5F8382004D0C0D /* HTACollectionViewLayout.h */,
+				80A419DE1E5F8382004D0C0D /* HTACollectionViewLayout.m */,
 				80A419AD1E5F7774004D0C0D /* Main.storyboard */,
 				80A419B31E5F7774004D0C0D /* Assets.xcassets */,
 				80A419B51E5F7774004D0C0D /* LaunchScreen.storyboard */,
@@ -288,6 +293,7 @@
 				80A419A91E5F7774004D0C0D /* AppDelegate.m in Sources */,
 				80A419B21E5F7774004D0C0D /* How_To_Adult.xcdatamodeld in Sources */,
 				80A419A61E5F7774004D0C0D /* main.m in Sources */,
+				80A419DF1E5F8382004D0C0D /* HTACollectionViewLayout.m in Sources */,
 				80A419DC1E5F7925004D0C0D /* HTACollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

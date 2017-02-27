@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80310E841E64CB080089E956 /* HTADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E831E64CB080089E956 /* HTADataManager.m */; };
+		80310E871E64CB160089E956 /* HTARowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E861E64CB160089E956 /* HTARowModel.m */; };
 		80A419A61E5F7774004D0C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419A51E5F7774004D0C0D /* main.m */; };
 		80A419A91E5F7774004D0C0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419A81E5F7774004D0C0D /* AppDelegate.m */; };
 		80A419AC1E5F7774004D0C0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419AB1E5F7774004D0C0D /* ViewController.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80310E821E64CB080089E956 /* HTADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTADataManager.h; sourceTree = "<group>"; };
+		80310E831E64CB080089E956 /* HTADataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTADataManager.m; sourceTree = "<group>"; };
+		80310E851E64CB160089E956 /* HTARowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTARowModel.h; sourceTree = "<group>"; };
+		80310E861E64CB160089E956 /* HTARowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTARowModel.m; sourceTree = "<group>"; };
 		80A419A11E5F7774004D0C0D /* How To Adult.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How To Adult.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A419A51E5F7774004D0C0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80A419A71E5F7774004D0C0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +123,10 @@
 				80A419DB1E5F7925004D0C0D /* HTACollectionViewCell.m */,
 				80A419DD1E5F8382004D0C0D /* HTACollectionViewLayout.h */,
 				80A419DE1E5F8382004D0C0D /* HTACollectionViewLayout.m */,
+				80310E821E64CB080089E956 /* HTADataManager.h */,
+				80310E831E64CB080089E956 /* HTADataManager.m */,
+				80310E851E64CB160089E956 /* HTARowModel.h */,
+				80310E861E64CB160089E956 /* HTARowModel.m */,
 				80A419AD1E5F7774004D0C0D /* Main.storyboard */,
 				80A419B31E5F7774004D0C0D /* Assets.xcassets */,
 				80A419B51E5F7774004D0C0D /* LaunchScreen.storyboard */,
@@ -293,7 +303,9 @@
 				80A419A91E5F7774004D0C0D /* AppDelegate.m in Sources */,
 				80A419B21E5F7774004D0C0D /* How_To_Adult.xcdatamodeld in Sources */,
 				80A419A61E5F7774004D0C0D /* main.m in Sources */,
+				80310E841E64CB080089E956 /* HTADataManager.m in Sources */,
 				80A419DF1E5F8382004D0C0D /* HTACollectionViewLayout.m in Sources */,
+				80310E871E64CB160089E956 /* HTARowModel.m in Sources */,
 				80A419DC1E5F7925004D0C0D /* HTACollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +544,7 @@
 				80A419D31E5F7774004D0C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80A419D41E5F7774004D0C0D /* Build configuration list for PBXNativeTarget "How To AdultTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +553,7 @@
 				80A419D61E5F7774004D0C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80A419D71E5F7774004D0C0D /* Build configuration list for PBXNativeTarget "How To AdultUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +562,7 @@
 				80A419D91E5F7774004D0C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

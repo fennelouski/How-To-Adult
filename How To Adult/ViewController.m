@@ -13,7 +13,7 @@
 typedef NS_ENUM(NSUInteger, HTAItems) {
     HTAItemsLaundry,
     HTAItemsCompliments,
-    HTAItemsCount = 50,
+    HTAItemsCount = 5000,
 };
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HTACollectionViewLayoutDelegate>
@@ -29,8 +29,6 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
     // Do any additional setup after loading the view, typically from a nib.
 
     [self.view addSubview:self.collectionView];
-
-//    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 - (UICollectionView *)collectionView {
@@ -53,6 +51,9 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
 
 - (CGRect)collectionViewFrame {
     CGRect frame = self.view.bounds;
+
+    frame.origin.y = CGRectGetMaxY(UIApplication.sharedApplication.statusBarFrame);
+    frame.size.height -= CGRectGetMaxY(UIApplication.sharedApplication.statusBarFrame);
 
     return frame;
 }
@@ -118,7 +119,7 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
             break;
 
         default:
-            height = arc4random()%3 * 25 + 50;
+            height = arc4random()%3 * 50 + 50;
             break;
     }
 

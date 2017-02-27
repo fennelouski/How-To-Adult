@@ -10,4 +10,15 @@
 
 @implementation HTACollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+
+    if (self) {
+        self.layer.borderColor = UIColor.greenColor.CGColor;
+        self.layer.borderWidth = 6.0f;
+    }
+
+    return self;
+}
+
 @end

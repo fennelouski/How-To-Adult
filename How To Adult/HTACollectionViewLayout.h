@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HTACollectionViewLayoutDelegate <NSObject>
+
+- (CGFloat)heightForCollectionViewCellAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface HTACollectionViewLayout : UICollectionViewLayout
+
+@property id <HTACollectionViewLayoutDelegate> delegate;
 
 @end

@@ -31,6 +31,18 @@
     return self;
 }
 
+
+- (CGFloat)defaultHeight {
+    CGFloat height = MAX(CGRectGetHeight(UIScreen.mainScreen.bounds), CGRectGetWidth(UIScreen.mainScreen.bounds));
+
+    height *= self.proportionalHeight;
+
+    height = MIN(height, self.maxHeight);
+
+    return MAX(height, self.minHeight);
+}
+
+
 - (NSString *)description {
     NSMutableString *description = [super description].mutableCopy;
 

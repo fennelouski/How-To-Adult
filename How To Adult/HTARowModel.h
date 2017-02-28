@@ -28,5 +28,7 @@
 /// Default is 0.0f
 @property CGFloat minHeight;
 
+- (CGFloat)defaultHeight;
+
 
 @end

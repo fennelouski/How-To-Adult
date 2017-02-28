@@ -10,6 +10,7 @@
 		80310E841E64CB080089E956 /* HTADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E831E64CB080089E956 /* HTADataManager.m */; };
 		80310E871E64CB160089E956 /* HTARowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E861E64CB160089E956 /* HTARowModel.m */; };
 		80310E8A1E65D7FB0089E956 /* HTALaundryRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E891E65D7FB0089E956 /* HTALaundryRowModel.m */; };
+		80310E8E1E65D8740089E956 /* HTALaundryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80310E8D1E65D8740089E956 /* HTALaundryViewController.m */; };
 		80A419A61E5F7774004D0C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419A51E5F7774004D0C0D /* main.m */; };
 		80A419A91E5F7774004D0C0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419A81E5F7774004D0C0D /* AppDelegate.m */; };
 		80A419AC1E5F7774004D0C0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A419AB1E5F7774004D0C0D /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		80310E861E64CB160089E956 /* HTARowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTARowModel.m; sourceTree = "<group>"; };
 		80310E881E65D7FB0089E956 /* HTALaundryRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTALaundryRowModel.h; sourceTree = "<group>"; };
 		80310E891E65D7FB0089E956 /* HTALaundryRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTALaundryRowModel.m; sourceTree = "<group>"; };
+		80310E8C1E65D8740089E956 /* HTALaundryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTALaundryViewController.h; sourceTree = "<group>"; };
+		80310E8D1E65D8740089E956 /* HTALaundryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTALaundryViewController.m; sourceTree = "<group>"; };
 		80A419A11E5F7774004D0C0D /* How To Adult.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How To Adult.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A419A51E5F7774004D0C0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80A419A71E5F7774004D0C0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +107,15 @@
 			name = "Row Models";
 			sourceTree = "<group>";
 		};
+		80310E8F1E65D8790089E956 /* Row View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80310E8C1E65D8740089E956 /* HTALaundryViewController.h */,
+				80310E8D1E65D8740089E956 /* HTALaundryViewController.m */,
+			);
+			name = "Row View Controllers";
+			sourceTree = "<group>";
+		};
 		80A419981E5F7774004D0C0D = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +151,7 @@
 				80310E831E64CB080089E956 /* HTADataManager.m */,
 				80310E851E64CB160089E956 /* HTARowModel.h */,
 				80310E861E64CB160089E956 /* HTARowModel.m */,
+				80310E8F1E65D8790089E956 /* Row View Controllers */,
 				80310E8B1E65D8040089E956 /* Row Models */,
 				80A419AD1E5F7774004D0C0D /* Main.storyboard */,
 				80A419B31E5F7774004D0C0D /* Assets.xcassets */,
@@ -314,6 +327,7 @@
 			files = (
 				80A419AC1E5F7774004D0C0D /* ViewController.m in Sources */,
 				80A419A91E5F7774004D0C0D /* AppDelegate.m in Sources */,
+				80310E8E1E65D8740089E956 /* HTALaundryViewController.m in Sources */,
 				80310E8A1E65D7FB0089E956 /* HTALaundryRowModel.m in Sources */,
 				80A419B21E5F7774004D0C0D /* How_To_Adult.xcdatamodeld in Sources */,
 				80A419A61E5F7774004D0C0D /* main.m in Sources */,

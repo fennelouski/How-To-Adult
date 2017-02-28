@@ -15,7 +15,7 @@
     self = [super init];
 
     if (self) {
-        self.representativeViewController = [[HTALaundryViewController alloc] init];
+        self.representativeViewController = [[HTALaundryViewController alloc] initWithDataModel:self];
     }
 
     return self;

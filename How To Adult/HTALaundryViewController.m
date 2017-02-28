@@ -10,9 +10,21 @@
 
 @interface HTALaundryViewController ()
 
+@property (nonatomic, strong) HTALaundryRowModel *model;
+
 @end
 
 @implementation HTALaundryViewController
+
+- (instancetype)initWithDataModel:(HTALaundryRowModel *)model {
+    self = [super init];
+
+    if (self) {
+        self.model = model;
+    }
+
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

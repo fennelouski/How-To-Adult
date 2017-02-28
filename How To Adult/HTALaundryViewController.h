@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTALaundryRowModel.h"
 
 @interface HTALaundryViewController : UIViewController
+
+- (instancetype)initWithDataModel:(HTALaundryRowModel *)model;
 
 @end

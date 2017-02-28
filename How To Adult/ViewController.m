@@ -13,6 +13,8 @@
 #import "HTADataManager.h"
 #import "HTARowModel.h"
 
+static const CGFloat columnWidth = 110.0f;
+
 typedef NS_ENUM(NSUInteger, HTAItems) {
     HTAItemsLaundry,
     HTAItemsCompliments,
@@ -130,7 +132,9 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
     return height;
 }
 
-
+- (NSUInteger)numberOfColumns {
+    return CGRectGetWidth(self.view.bounds) / columnWidth;
+}
 
 
 

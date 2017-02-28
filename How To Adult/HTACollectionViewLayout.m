@@ -8,7 +8,6 @@
 
 #import "HTACollectionViewLayout.h"
 
-static const NSUInteger numberOfColumns = 3;
 static const CGFloat cellPadding = 6.0f;
 
 @interface HTACollectionViewLayout ()
@@ -34,6 +33,11 @@ static const CGFloat cellPadding = 6.0f;
 
 - (void)prepareLayout {
     if (self.cache.count == 0) {
+        NSUInteger numberOfColumns = 1;
+        if ([self.delegate respondsToSelector:@selector(numberOfColumns)]) {
+            numberOfColumns = [self.delegate numberOfColumns];
+        }
+
         CGFloat columnWidth = self.contentWidth / (CGFloat)numberOfColumns;
         NSMutableArray <NSNumber *> *xOffsets = @[].mutableCopy;
         NSMutableArray <NSNumber *> *yOffsets = @[].mutableCopy;

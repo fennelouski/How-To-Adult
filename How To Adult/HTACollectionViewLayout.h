@@ -12,6 +12,8 @@
 
 - (CGFloat)heightForCollectionViewCellAtIndexPath:(NSIndexPath *)indexPath;
 
+- (NSUInteger)numberOfColumns;
+
 @end
 
 @interface HTACollectionViewLayout : UICollectionViewLayout

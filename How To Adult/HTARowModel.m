@@ -10,4 +10,12 @@
 
 @implementation HTARowModel
 
+- (NSString *)description {
+    NSMutableString *description = [super description].mutableCopy;
+
+    [description appendFormat:@"\n%@", self.title];
+
+    return description;
+}
+
 @end

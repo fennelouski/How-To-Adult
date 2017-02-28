@@ -37,6 +37,10 @@
     return _rows;
 }
 
+
+
+
+
 + (void)calculatePrimes {
     NSMutableArray <NSNumber *> * potentialValues = @[].mutableCopy;
     NSMutableArray <NSNumber *> * primes = @[].mutableCopy;

@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HTARowModel : NSObject
 
 @property (nonatomic, strong) NSString *title;
+
+@property (nonatomic, strong) UIViewController *representativeViewController;
 
 @end

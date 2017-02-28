@@ -7,7 +7,18 @@
 //
 
 #import "HTALaundryRowModel.h"
+#import "HTALaundryViewController.h"
 
 @implementation HTALaundryRowModel
+
+- (instancetype)init {
+    self = [super init];
+
+    if (self) {
+        self.representativeViewController = [[HTALaundryViewController alloc] init];
+    }
+
+    return self;
+}
 
 @end

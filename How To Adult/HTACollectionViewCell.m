@@ -16,15 +16,15 @@
 
 @implementation HTACollectionViewCell {
     NSString *_title;
+    UIColor *_textColor;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
 
     if (self) {
-        self.layer.borderColor = UIColor.greenColor.CGColor;
-        self.layer.borderWidth = 6.0f;
-
+        self.layer.cornerRadius = 5.0f;
+        self.clipsToBounds = YES;
         [self.contentView addSubview:self.titleLabel];
     }
 
@@ -36,6 +36,8 @@
 
     self.titleLabel.text = self.title;
     self.titleLabel.frame = self.titleLabelFrame;
+
+    self.titleLabel.textColor = self.textColor;
 }
 
 - (UILabel *)titleLabel {
@@ -61,6 +63,19 @@
 
 - (void)setTitle:(NSString *)title {
     _title = title;
+    [self layoutSubviews];
+}
+
+- (UIColor *)textColor {
+    return _textColor;
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+    if ([textColor isEqual:_textColor]) {
+        return;
+    }
+
+    _textColor = textColor;
     [self layoutSubviews];
 }
 

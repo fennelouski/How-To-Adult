@@ -13,4 +13,7 @@
 - (NSString *)title;
 - (void)setTitle:(NSString *)title;
 
+- (UIColor *)textColor;
+- (void)setTextColor:(UIColor *)textColor;
+
 @end

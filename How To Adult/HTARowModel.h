@@ -16,5 +16,6 @@
 @property (nonatomic, strong) UIViewController *representativeViewController;
 
 @property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong) UIColor *textColor;
 
 @end

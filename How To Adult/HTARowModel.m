@@ -14,10 +14,15 @@
     self = [super init];
 
     if (self) {
-        self.backgroundColor = [UIColor colorWithHue:arc4random_uniform(1000) * 0.001f
+        CGFloat hue = arc4random_uniform(1000) * 0.001f;
+        self.backgroundColor = [UIColor colorWithHue:hue
                                           saturation:1.0f
                                           brightness:0.3f
                                                alpha:1.0f];
+        self.textColor = [UIColor colorWithHue:hue
+                                    saturation:0.3f
+                                    brightness:1.0f
+                                         alpha:1.0f];
     }
 
     return self;

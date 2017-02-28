@@ -102,7 +102,9 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
         cell.layer.borderColor = UIColor.whiteColor.CGColor;
     }
 
-    cell.title = HTADataManager.rows[indexPath.row].title;
+    cell.title              = HTADataManager.rows[indexPath.row].title;
+    cell.backgroundColor    = HTADataManager.rows[indexPath.row].backgroundColor;
+    cell.textColor          = HTADataManager.rows[indexPath.row].textColor;
 
     return cell;
 }

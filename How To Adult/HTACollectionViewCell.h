@@ -10,4 +10,7 @@
 
 @interface HTACollectionViewCell : UICollectionViewCell
 
+- (NSString *)title;
+- (void)setTitle:(NSString *)title;
+
 @end

@@ -10,10 +10,13 @@
 #import "HTACollectionViewCell.h"
 #import "HTACollectionViewLayout.h"
 
+#import "HTADataManager.h"
+#import "HTARowModel.h"
+
 typedef NS_ENUM(NSUInteger, HTAItems) {
     HTAItemsLaundry,
     HTAItemsCompliments,
-    HTAItemsCount = 5000,
+    HTAItemsCount,
 };
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HTACollectionViewLayoutDelegate>
@@ -80,7 +83,7 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
     NSInteger numberOfItems = 0;
 
     if ([collectionView isEqual:self.collectionView]) {
-        numberOfItems = HTAItemsCount;
+        numberOfItems = HTADataManager.rows.count;
     }
 
     return numberOfItems;
@@ -97,9 +100,10 @@ typedef NS_ENUM(NSUInteger, HTAItems) {
         cell.layer.borderColor = UIColor.whiteColor.CGColor;
     }
 
+    cell.title = HTADataManager.rows[indexPath.row].title;
+
     return cell;
 }
-
 
 
 

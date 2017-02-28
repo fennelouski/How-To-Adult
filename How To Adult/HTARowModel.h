@@ -10,4 +10,6 @@
 
 @interface HTARowModel : NSObject
 
+@property (nonatomic, strong) NSString *title;
+
 @end

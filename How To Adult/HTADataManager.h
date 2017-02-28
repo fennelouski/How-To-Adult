@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HTARowModel.h"
 
 @interface HTADataManager : NSObject
+
++ (NSMutableArray <HTARowModel *> *)rows;
 
 @end

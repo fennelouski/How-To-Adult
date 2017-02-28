@@ -18,4 +18,15 @@
 @property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) UIColor *textColor;
 
+/// Height relative to screen's maximum dimension.
+/// Default is 0.3f
+@property CGFloat proportionalHeight;
+/// Maximum height the cell can be, regardless of proportional height.
+/// Default is screen's minimum dimension
+@property CGFloat maxHeight;
+/// Minimum height the cell can be. Overrides maxHeight if maxHeight < minHeight
+/// Default is 0.0f
+@property CGFloat minHeight;
+
+
 @end

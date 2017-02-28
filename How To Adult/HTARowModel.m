@@ -23,6 +23,9 @@
                                     saturation:0.3f
                                     brightness:1.0f
                                          alpha:1.0f];
+
+        self.proportionalHeight = 0.3f;
+        self.maxHeight = MIN(CGRectGetHeight(UIScreen.mainScreen.bounds), CGRectGetWidth(UIScreen.mainScreen.bounds));
     }
 
     return self;

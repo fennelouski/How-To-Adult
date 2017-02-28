@@ -10,6 +10,19 @@
 
 @implementation HTARowModel
 
+- (instancetype)init {
+    self = [super init];
+
+    if (self) {
+        self.backgroundColor = [UIColor colorWithHue:arc4random_uniform(1000) * 0.001f
+                                          saturation:1.0f
+                                          brightness:0.3f
+                                               alpha:1.0f];
+    }
+
+    return self;
+}
+
 - (NSString *)description {
     NSMutableString *description = [super description].mutableCopy;
 

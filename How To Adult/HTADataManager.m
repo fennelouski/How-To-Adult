@@ -59,12 +59,6 @@
         }
     }
 
-    NSLog(@"%@", primes);
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"HTADataManager rows: %@", HTADataManager.rows);
-    });
-
     for (NSNumber *prime in primes) {
         HTARowModel *row = HTARowModel.new;
         row.title = prime.description;

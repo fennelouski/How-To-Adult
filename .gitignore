@@ -12,3 +12,16 @@ backend/node_modules/
 backend/.vercel/
 backend/.env*
 !backend/.env.example
+
+# Keep diagnostic/superseded captures locally; publish only the final matrix.
+app-store-audit/2026-10-03-how-to-adult/raw/*
+!app-store-audit/2026-10-03-how-to-adult/raw/iphone-contrast-final/
+!app-store-audit/2026-10-03-how-to-adult/raw/ipad-contrast-final/
+!app-store-audit/2026-10-03-how-to-adult/raw/macos-contrast-final/
+app-store-audit/2026-10-03-how-to-adult/marketing/composed-iphone-ipad/
+app-store-audit/2026-10-03-how-to-adult/marketing/capture-manifest.pending.json
+app-store-audit/2026-10-03-how-to-adult/marketing/capture-manifest.iphone-ipad.json
+app-store-audit/2026-10-03-how-to-adult/native-inputs.json
+app-store-audit/2026-10-03-how-to-adult/native-inputs-final.json
+app-store-audit/2026-10-03-how-to-adult/release-verification.json
+app-store-audit/2026-10-03-how-to-adult/final-package-inspection.json

@@ -1,0 +1,237 @@
+{
+  "status": "PASS local file verification and independent visual review for scoped iPhone/iPad gallery",
+  "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+  "checkedAtUTC": "2026-10-03T06:30:28.345968Z",
+  "outputCount": 20,
+  "nativeSourceCount": 20,
+  "sourceBytesUnchanged": true,
+  "manifestHashMatchesReceipt": true,
+  "compositorHashMatchesReceipt": true,
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "minimumBytes": 258070,
+  "maximumBytes": 745524,
+  "checks": [
+    {
+      "platform": "iphone-6.9",
+      "id": "01-practical-guides",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 472467,
+      "sha256": "71636f7701a617dcf39058ad65e7a518937daba951842dd917b68dcf4555a9ca"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "02-clear-steps",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 470023,
+      "sha256": "d1582029bab4dc75822b599782c9078727d61cb74d9aec1353015509666380ec"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "03-saved-guides",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 322163,
+      "sha256": "1450441aa18a41a304b7721604e19e8a3aaf38accc5bca666df5ec188f1ef0b8"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "04-search",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 273054,
+      "sha256": "a4285478c5aef8226af4630e154f37c54336e6dff8ce930e7d09abb7751f96cf"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "05-us-money",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 514388,
+      "sha256": "8af44220e05a5511e607c33f55aacf6ffeef2b78d44addb7e72878ec46175564"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "06-original-sources",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 537987,
+      "sha256": "1ca084f6202b9aa4939c50cd4d480f423940ebd1b065b11fe54383aa54b71210"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "07-reminders",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 332016,
+      "sha256": "cae444981c387486ea49a75e5852c746e176697ce08ce76cf74b4a5cf9de83ed"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "08-optional-sound",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 258070,
+      "sha256": "6be06caa16658453a52f92d048acdb536d9ebc72de7d640481eb8822e74572a1"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "09-offline-guides",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 478112,
+      "sha256": "e027d3c4eb6267203ae0d27d5f09683087eaad205ab3f4a905372233afc57469"
+    },
+    {
+      "platform": "iphone-6.9",
+      "id": "10-progress",
+      "width": 1320,
+      "height": 2868,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 321607,
+      "sha256": "36040c3503181593decb3f2669d0e461429d9c5970113d87e7c40a35067edd57"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "01-practical-guides",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 745524,
+      "sha256": "d415457c9edd91beed9b5567472c7d93308373c43c9b70806d961daf607998c5"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "02-clear-steps",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 712694,
+      "sha256": "3125f95d879235f41a59f6314ec94751c1dfc5a1a77abf935040d2fbc2411c0e"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "03-saved-guides",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 707374,
+      "sha256": "4553a1c6785b8dcb552a32c5a197d2554a760ff2280560ff1895466215409ca2"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "04-search",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 512553,
+      "sha256": "0c98eb26c36adea0f935aae171bcab13e07f5791774beb6ab1eca3fa447d347f"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "05-us-money",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 643921,
+      "sha256": "d071250a4ced059bc89a90dba3e9276eb6d1da10edaabc127341406cc067cb02"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "06-original-sources",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 731715,
+      "sha256": "c0d1a510d629669caaa4779df8a520f8fc47a3ce09e81052a0544b17dad30d67"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "07-reminders",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 602496,
+      "sha256": "561dbf44c04fe73ee11eea6f82bdd4a2f85bc9634a5631c668b5670fab048ffa"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "08-optional-sound",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 506776,
+      "sha256": "335047f18f2ce8d09cf38b9c230d20e960f8d2888106485476dd2d020c8e4505"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "09-offline-guides",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 726568,
+      "sha256": "76e987c76e86b2ff6bb572d02dcec79a7e40e78d7d7ad2aae4aa9532d8033eb5"
+    },
+    {
+      "platform": "ipad-13",
+      "id": "10-progress",
+      "width": 2752,
+      "height": 2064,
+      "profile": "sRGB IEC61966-2.1",
+      "opaque": true,
+      "byteCount": 604387,
+      "sha256": "7608b675856dd0e2653204a424d91adc911ef6a45044bdd6959f0e1bddb2b41f"
+    }
+  ],
+  "nativeInputProofArchive": "native-inputs-at-capture.json",
+  "nativeInputProofArchiveSHA256": "559de9be82de4be8572574c2d999ae09e5e7b91d5cf6e23d022cca1fa9d2d578",
+  "nativeInputCount": 35,
+  "nativeInputsCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+  "nativeInputsMatchFrozenCommitAndCurrentBytes": true,
+  "visualReview": "Both contact sheets visually inspected. Whole centered headlines, upright centered heroes, outward fans and original native UI passed. All selected 20 original captures were separately inspected before composition.",
+  "nativeInputProofSerialization": "Python json.dumps(decoded files map, sort_keys=True), UTF-8",
+  "independentVisualReview": {
+    "reviewer": "/root/adult_finish_reviewer",
+    "reviewedAtUTC": "2026-10-03T06:35:07.265210Z",
+    "status": "approved scoped iPhone/iPad 20-image gallery",
+    "scope": "All 20 final JPEGs opened individually, plus both contact sheets. Mac gallery remains pending genuine evidence.",
+    "findings": "No material finding. Whole centered headlines, upright centered heroes, outward fans, original native proportions/content and honest feature claims passed. Phone reminder composition uses real form 08 as hero and selected reader 09 as support.",
+    "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "nativeInputsCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e"
+  }
+}

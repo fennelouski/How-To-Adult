@@ -1,0 +1,42 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "modelName" : "iPhone 17 Pro Max",
+        "osBuildNumber" : "23F77",
+        "osVersion" : "26.5",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 12,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1791008710.409,
+  "passedTests" : 12,
+  "result" : "Passed",
+  "skippedTests" : 0,
+  "startTime" : 1791008616.292,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 12
+}

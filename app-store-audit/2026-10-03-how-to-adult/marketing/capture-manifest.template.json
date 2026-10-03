@@ -1,0 +1,808 @@
+{
+  "schemaVersion": 1,
+  "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+  "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+  "outputDirectory": "composed",
+  "captures": [
+    {
+      "id": "iphone-6.9-01-guides",
+      "path": "../raw/iphone/01-guides.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "01-guides"
+      }
+    },
+    {
+      "id": "iphone-6.9-02-guide",
+      "path": "../raw/iphone/02-guide.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "02-guide"
+      }
+    },
+    {
+      "id": "iphone-6.9-03-steps",
+      "path": "../raw/iphone/03-steps.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "03-steps"
+      }
+    },
+    {
+      "id": "iphone-6.9-04-sources",
+      "path": "../raw/iphone/04-sources.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "04-sources"
+      }
+    },
+    {
+      "id": "iphone-6.9-05-saved",
+      "path": "../raw/iphone/05-saved.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "05-saved"
+      }
+    },
+    {
+      "id": "iphone-6.9-06-search",
+      "path": "../raw/iphone/06-search.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "06-search"
+      }
+    },
+    {
+      "id": "iphone-6.9-07-money",
+      "path": "../raw/iphone/07-money.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "07-money"
+      }
+    },
+    {
+      "id": "iphone-6.9-08-reminder",
+      "path": "../raw/iphone/08-reminder.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "08-reminder"
+      }
+    },
+    {
+      "id": "iphone-6.9-09-reminders",
+      "path": "../raw/iphone/09-reminders.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "09-reminders"
+      }
+    },
+    {
+      "id": "iphone-6.9-10-settings",
+      "path": "../raw/iphone/10-settings.png",
+      "platform": "iphone-6.9",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "iphone-6.9",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "10-settings"
+      }
+    },
+    {
+      "id": "ipad-13-01-guides",
+      "path": "../raw/ipad/01-guides.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "01-guides"
+      }
+    },
+    {
+      "id": "ipad-13-02-guide",
+      "path": "../raw/ipad/02-guide.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "02-guide"
+      }
+    },
+    {
+      "id": "ipad-13-03-steps",
+      "path": "../raw/ipad/03-steps.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "03-steps"
+      }
+    },
+    {
+      "id": "ipad-13-04-sources",
+      "path": "../raw/ipad/04-sources.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "04-sources"
+      }
+    },
+    {
+      "id": "ipad-13-05-saved",
+      "path": "../raw/ipad/05-saved.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "05-saved"
+      }
+    },
+    {
+      "id": "ipad-13-06-search",
+      "path": "../raw/ipad/06-search.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "06-search"
+      }
+    },
+    {
+      "id": "ipad-13-07-money",
+      "path": "../raw/ipad/07-money.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "07-money"
+      }
+    },
+    {
+      "id": "ipad-13-08-reminder",
+      "path": "../raw/ipad/08-reminder.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "08-reminder"
+      }
+    },
+    {
+      "id": "ipad-13-09-reminders",
+      "path": "../raw/ipad/09-reminders.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "09-reminders"
+      }
+    },
+    {
+      "id": "ipad-13-10-settings",
+      "path": "../raw/ipad/10-settings.png",
+      "platform": "ipad-13",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "ipad-13",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "10-settings"
+      }
+    },
+    {
+      "id": "mac-01-guides",
+      "path": "../raw/mac/01-guides.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "01-guides"
+      }
+    },
+    {
+      "id": "mac-02-guide",
+      "path": "../raw/mac/02-guide.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "02-guide"
+      }
+    },
+    {
+      "id": "mac-03-steps",
+      "path": "../raw/mac/03-steps.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "03-steps"
+      }
+    },
+    {
+      "id": "mac-04-sources",
+      "path": "../raw/mac/04-sources.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "04-sources"
+      }
+    },
+    {
+      "id": "mac-05-saved",
+      "path": "../raw/mac/05-saved.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "05-saved"
+      }
+    },
+    {
+      "id": "mac-06-search",
+      "path": "../raw/mac/06-search.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "06-search"
+      }
+    },
+    {
+      "id": "mac-07-money",
+      "path": "../raw/mac/07-money.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "07-money"
+      }
+    },
+    {
+      "id": "mac-08-reminder",
+      "path": "../raw/mac/08-reminder.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "08-reminder"
+      }
+    },
+    {
+      "id": "mac-09-reminders",
+      "path": "../raw/mac/09-reminders.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "09-reminders"
+      }
+    },
+    {
+      "id": "mac-10-settings",
+      "path": "../raw/mac/10-settings.png",
+      "platform": "mac",
+      "sha256": "REPLACE_WITH_ORIGINAL_CAPTURE_SHA256",
+      "nativeCapture": {
+        "kind": "native-screenshot",
+        "platform": "mac",
+        "revision": "REPLACE_WITH_FULL_NATIVE_GIT_REVISION",
+        "sourceBuildRef": "REPLACE_WITH_NATIVE_INPUTS_SHA256_OR_FROZEN_BUILD_REF",
+        "device": "REPLACE_WITH_NATIVE_DEVICE_NAME",
+        "deviceIdentifier": "REPLACE_WITH_DEVICE_IDENTIFIER",
+        "captureMethod": "XCUITest XCUIScreen screenshot, xcresulttool attachments export",
+        "capturedAtUTC": "REPLACE_WITH_XCRESULT_ATTACHMENT_UTC",
+        "workingTreeInputsPath": "../native-inputs-final.json",
+        "workingTreeInputsSHA256": "REPLACE_WITH_NATIVE_INPUTS_JSON_SHA256",
+        "xcresultPath": "REPLACE_WITH_ACTUAL_XCRESULT",
+        "attachmentName": "10-settings"
+      }
+    }
+  ],
+  "galleries": [
+    {
+      "platform": "iphone-6.9",
+      "images": [
+        {
+          "id": "01-practical-guides",
+          "headline": "56 guides. Real life.",
+          "hero": "iphone-6.9-01-guides",
+          "left": "iphone-6.9-02-guide",
+          "right": "iphone-6.9-07-money"
+        },
+        {
+          "id": "02-clear-steps",
+          "headline": "One step at a time",
+          "hero": "iphone-6.9-03-steps",
+          "left": "iphone-6.9-02-guide"
+        },
+        {
+          "id": "03-saved-guides",
+          "headline": "Save what you need",
+          "hero": "iphone-6.9-05-saved",
+          "left": "iphone-6.9-03-steps",
+          "right": "iphone-6.9-02-guide"
+        },
+        {
+          "id": "04-search",
+          "headline": "Find your next step",
+          "hero": "iphone-6.9-06-search"
+        },
+        {
+          "id": "05-us-money",
+          "headline": "US money basics, explained",
+          "hero": "iphone-6.9-07-money",
+          "left": "iphone-6.9-06-search"
+        },
+        {
+          "id": "06-original-sources",
+          "headline": "Go straight to the source",
+          "hero": "iphone-6.9-04-sources",
+          "left": "iphone-6.9-02-guide"
+        },
+        {
+          "id": "07-reminders",
+          "headline": "Remember your next step",
+          "hero": "iphone-6.9-09-reminders",
+          "left": "iphone-6.9-08-reminder"
+        },
+        {
+          "id": "08-optional-sound",
+          "headline": "Set a time. Sound optional.",
+          "hero": "iphone-6.9-08-reminder"
+        },
+        {
+          "id": "09-offline-guides",
+          "headline": "Your guides, even offline",
+          "hero": "iphone-6.9-02-guide",
+          "left": "iphone-6.9-10-settings",
+          "right": "iphone-6.9-05-saved"
+        },
+        {
+          "id": "10-progress",
+          "headline": "See how far you got",
+          "hero": "iphone-6.9-05-saved",
+          "left": "iphone-6.9-03-steps"
+        }
+      ]
+    },
+    {
+      "platform": "ipad-13",
+      "images": [
+        {
+          "id": "01-practical-guides",
+          "headline": "56 guides. Real life.",
+          "hero": "ipad-13-02-guide",
+          "left": "ipad-13-01-guides",
+          "right": "ipad-13-07-money"
+        },
+        {
+          "id": "02-clear-steps",
+          "headline": "One step at a time",
+          "hero": "ipad-13-03-steps",
+          "left": "ipad-13-02-guide"
+        },
+        {
+          "id": "03-saved-guides",
+          "headline": "Save what you need",
+          "hero": "ipad-13-05-saved",
+          "left": "ipad-13-03-steps",
+          "right": "ipad-13-02-guide"
+        },
+        {
+          "id": "04-search",
+          "headline": "Find your next step",
+          "hero": "ipad-13-06-search"
+        },
+        {
+          "id": "05-us-money",
+          "headline": "US money basics, explained",
+          "hero": "ipad-13-07-money",
+          "left": "ipad-13-06-search"
+        },
+        {
+          "id": "06-original-sources",
+          "headline": "Go straight to the source",
+          "hero": "ipad-13-04-sources",
+          "left": "ipad-13-02-guide"
+        },
+        {
+          "id": "07-reminders",
+          "headline": "Remember your next step",
+          "hero": "ipad-13-09-reminders",
+          "left": "ipad-13-08-reminder"
+        },
+        {
+          "id": "08-optional-sound",
+          "headline": "Set a time. Sound optional.",
+          "hero": "ipad-13-08-reminder"
+        },
+        {
+          "id": "09-offline-guides",
+          "headline": "Your guides, even offline",
+          "hero": "ipad-13-02-guide",
+          "left": "ipad-13-10-settings",
+          "right": "ipad-13-05-saved"
+        },
+        {
+          "id": "10-progress",
+          "headline": "See how far you got",
+          "hero": "ipad-13-05-saved",
+          "left": "ipad-13-03-steps"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "images": [
+        {
+          "id": "01-practical-guides",
+          "headline": "56 guides. Real life.",
+          "hero": "mac-02-guide",
+          "left": "mac-01-guides",
+          "right": "mac-07-money"
+        },
+        {
+          "id": "02-clear-steps",
+          "headline": "One step at a time",
+          "hero": "mac-03-steps",
+          "left": "mac-02-guide"
+        },
+        {
+          "id": "03-saved-guides",
+          "headline": "Save what you need",
+          "hero": "mac-05-saved",
+          "left": "mac-03-steps",
+          "right": "mac-02-guide"
+        },
+        {
+          "id": "04-search",
+          "headline": "Find your next step",
+          "hero": "mac-06-search"
+        },
+        {
+          "id": "05-us-money",
+          "headline": "US money basics, explained",
+          "hero": "mac-07-money",
+          "left": "mac-06-search"
+        },
+        {
+          "id": "06-original-sources",
+          "headline": "Go straight to the source",
+          "hero": "mac-04-sources",
+          "left": "mac-02-guide"
+        },
+        {
+          "id": "07-reminders",
+          "headline": "Remember your next step",
+          "hero": "mac-09-reminders",
+          "left": "mac-08-reminder"
+        },
+        {
+          "id": "08-optional-sound",
+          "headline": "Set a time. Sound optional.",
+          "hero": "mac-08-reminder"
+        },
+        {
+          "id": "09-offline-guides",
+          "headline": "Your guides, even offline",
+          "hero": "mac-02-guide",
+          "left": "mac-10-settings",
+          "right": "mac-05-saved"
+        },
+        {
+          "id": "10-progress",
+          "headline": "See how far you got",
+          "hero": "mac-05-saved",
+          "left": "mac-03-steps"
+        }
+      ]
+    }
+  ]
+}

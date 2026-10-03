@@ -1,3 +1,10 @@
+---
+version: 1
+slug: "app"
+primary_target: "Sources/AdultViews.swift"
+related_targets: ["Sources/App.swift", "Sources/AdultStore.swift", "Resources/Assets.xcassets/AccentColor.colorset/Contents.json", "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json"]
+---
+
 # How to Adult native app
 
 Mode: Read, with native controls for search, bookmarks, checklist steps and reminders.
@@ -16,6 +23,8 @@ FIRST VIEWPORT: A native search field and library title lead. One laundry guide 
 FORM: Public-library reference index, fifth grounded candidate, direction seed bdd43137. The full candidate and challenger record is in DESIGN.md.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Finish status, 2026-10-03: DESIGN.md and schema-2 design metadata now describe native freeze `ab95cedbe7401da1f11f52e5befeafbc0b04848d`, with its authored secondary-text contrast fix. iPhone and iPad each passed 10 model and two UI tests and produced 13 fresh native captures in `raw/iphone-contrast-final` and `raw/ipad-contrast-final`. Signed iOS/Mac package inspection passed for the same freeze. The fresh 20-image phone/tablet marketing set passed independent review with no material finding, recorded in `marketing/composed-contrast-final/review-status.json`. No assets were uploaded. The native finish review in `app-store-audit/2026-10-03-how-to-adult/design-finish-review.md` approved all 26 final phone/tablet captures with no material clipping finding and records overall disposition `recapture`. Original-bundle Mac runtime, 13 native Mac captures including resized-window verification, and ten Mac marketing images await existing-container sharing consent. This is missing evidence, not a Mac product-defect verdict. Older phone/tablet galleries and Mac captures are historical. The finish contract is not yet discharged.
 
 ## Signature interaction
 

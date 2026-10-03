@@ -14,7 +14,7 @@ Open a guide, follow its steps and keep useful answers for later. Guides include
 
 There is no account, subscription, in-app purchase, advertising or tracking SDK. Bookmarks, progress and reminders remain on each device. Cross-device sync is not implemented.
 
-The backend is implemented and has local verification, but it is not deployed. `AdultCatalogURL` is absent from both app configurations. This build uses its bundled library and does not claim live article updates, AI writing or a daily publishing schedule. Native QA and release preparation are underway; no build has been uploaded or submitted for App Review.
+The backend is implemented and its 49 local tests passed, but it is not deployed. `AdultCatalogURL` is absent from both app configurations. This build uses its bundled library and does not claim live article updates, AI writing or a daily publishing schedule. Signed packages and the phone/tablet galleries are prepared locally; no build has been uploaded or submitted for App Review.
 
 ## Build locally
 
@@ -61,6 +61,10 @@ Version 1.0, build 1 retains bundle identifier `com.nathanfennel.How-To-Adult` a
 
 The planned public privacy and support pages are `https://nathanfennel.com/how-to-adult/privacy.html` and `https://nathanfennel.com/how-to-adult/support.html`. They still need deployment and public URL verification. An unlisted privacy page must remain publicly accessible.
 
-The [draft listing and privacy reasoning](app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md) and [release checklist](app-store-audit/2026-10-03-how-to-adult/release-checklist.json) distinguish implemented work from final test, package, website and store evidence. The label proposal applies to the bundled build. Provider request retention must be reviewed before enabling a remote catalog.
+The native freeze is `ab95cedbe7401da1f11f52e5befeafbc0b04848d`. iPhone and iPad each passed 10 model and two UI tests. Both signed iOS and Mac exports were inspected against the same 35 native inputs and canonical SHA-256 `45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e`; the bundled catalog, icons, signatures and encryption key were verified. See [final package inspection](app-store-audit/2026-10-03-how-to-adult/final-package-inspection-contrast-final.json).
+
+The [independent finish review](app-store-audit/2026-10-03-how-to-adult/design-finish-review.md) approved all 26 final phone/tablet captures and the scoped galleries of ten genuine-capture images per device. Original-bundle Mac runtime verification, 13 Mac captures and ten Mac gallery images await the owner's existing-container sharing consent. Notification delivery, notification taps, permission denial and minimum-OS runtime checks also remain pending. The overall finish disposition is `recapture` because Mac evidence is missing.
+
+The two privacy/support pages are committed in the website repository at `416fd8fb62fa46c8e40b4634ffd6ac5c095c8615` and were previewed locally. Neither their required dual deployment nor their public URLs have been verified. The [draft listing and privacy reasoning](app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md) and [release checklist](app-store-audit/2026-10-03-how-to-adult/release-checklist.json) retain these hosting and store gaps. The label proposal applies to the inspected bundled build. Provider request retention must be reviewed before enabling a remote catalog.
 
 Native release scripts prepare local archives and App Store packages only after a frozen committed revision passes QA. They do not upload or submit a release. There is no visionOS target, and visionOS build, Simulator, upload and submission work remains disabled at the user's request.

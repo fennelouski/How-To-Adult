@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "status": "Frozen contrast-corrected iPhone/iPad visual evidence. Mac pending: no native Mac screenshots or marketing images included.",
+  "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+  "sourceBuildRef": "native-inputs-python-sorted-files-json-sha256:45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+  "nativeInputsManifestPath": "../native-inputs-contrast-final.json",
+  "nativeInputsManifestSHA256": "559de9be82de4be8572574c2d999ae09e5e7b91d5cf6e23d022cca1fa9d2d578",
+  "nativeInputsCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+  "manifestPath": "capture-manifest.contrast-final.json",
+  "manifestSHA256": "2740cb7963c4bf159619111e52af541c7d438ded1fbebdfd5bbc02475a625548",
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "claims": [
+    {
+      "imageID": "01-practical-guides",
+      "headline": "56 guides. Real life.",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-01-guides",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/2EFD68EC-C53D-40F9-B6EB-CC774FFC08CB.png",
+          "sha256": "e3db6fd148ca97cdc36b4475107affb14bb645815d55cd7bcb23eef6bf1b5054",
+          "capturedAtUTC": "2026-10-03T06:24:19.881000Z"
+        },
+        {
+          "captureID": "iphone-6.9-02-guide",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/DDEB7CED-8F81-441A-92E9-33303CDC8DAD.png",
+          "sha256": "d1fcc055689afa7337315d82c6e4913bd9984d40f2edaf741737e9d07e9e1927",
+          "capturedAtUTC": "2026-10-03T06:24:22.291000Z"
+        },
+        {
+          "captureID": "iphone-6.9-10-settings",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/6BA60396-1466-4456-8616-59F95514A763.png",
+          "sha256": "9d2c89377e8b6018a1620caa34bbc7a79b83cf29205858fbbe0f40cf9b23e7a7",
+          "capturedAtUTC": "2026-10-03T06:25:01.713000Z"
+        },
+        {
+          "captureID": "ipad-13-01-guides",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/DEB392B4-F60D-4305-A501-97D81496F93F.png",
+          "sha256": "5fc3c387a29c1cdaa5de74178e75dbe97ef4c713f75a28a584af646f9d88e664",
+          "capturedAtUTC": "2026-10-03T06:22:27.595000Z"
+        },
+        {
+          "captureID": "ipad-13-02-guide",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/B3B8DEBF-D231-4928-8F4D-8D976E180188.png",
+          "sha256": "4fa80aa01564fa09a39fbc185dc19b7ba78cdbd65901c4addd5e0e0262589273",
+          "capturedAtUTC": "2026-10-03T06:22:29.295000Z"
+        },
+        {
+          "captureID": "ipad-13-10-settings",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/D7A9CCFB-8064-4475-B324-6D3D3FBBDE05.png",
+          "sha256": "075135ddd46f33a0a2a3eecca594a704b5c7ca9aae9579f19fa784915babc119",
+          "capturedAtUTC": "2026-10-03T06:23:05.030000Z"
+        }
+      ],
+      "reviewNote": "Settings visibly reports 56 guides. Native guide lists and the laundry reader show practical guidance."
+    },
+    {
+      "imageID": "02-clear-steps",
+      "headline": "One step at a time",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-03-steps",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/E437577E-5A6F-46AF-899F-396F40D73211.png",
+          "sha256": "d1fcc055689afa7337315d82c6e4913bd9984d40f2edaf741737e9d07e9e1927",
+          "capturedAtUTC": "2026-10-03T06:24:22.532000Z"
+        },
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/7C2B2777-3E1A-4838-8807-73434F7FC3B0.png",
+          "sha256": "0ba40d5212c3bd33eeceb149ea6d2202043178cbfb1d238e6f0f75a5e6d365a2",
+          "capturedAtUTC": "2026-10-03T06:24:28.954000Z"
+        },
+        {
+          "captureID": "ipad-13-03-steps",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/64006843-EDC1-4EAD-9344-A555BC6AED4C.png",
+          "sha256": "4fa80aa01564fa09a39fbc185dc19b7ba78cdbd65901c4addd5e0e0262589273",
+          "capturedAtUTC": "2026-10-03T06:22:29.660000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/07C22DB3-4C39-4DB2-8720-CF49E66AC474.png",
+          "sha256": "48d417a979e7e8230303f849b11ba0d9e8c194c71a0550e6c5594f62c72549dc",
+          "capturedAtUTC": "2026-10-03T06:22:35.211000Z"
+        }
+      ],
+      "reviewNote": "The laundry reader shows circle step controls, with its first step checked. Saved shows 1 of 4 done."
+    },
+    {
+      "imageID": "03-saved-guides",
+      "headline": "Save what you need",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/7C2B2777-3E1A-4838-8807-73434F7FC3B0.png",
+          "sha256": "0ba40d5212c3bd33eeceb149ea6d2202043178cbfb1d238e6f0f75a5e6d365a2",
+          "capturedAtUTC": "2026-10-03T06:24:28.954000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/07C22DB3-4C39-4DB2-8720-CF49E66AC474.png",
+          "sha256": "48d417a979e7e8230303f849b11ba0d9e8c194c71a0550e6c5594f62c72549dc",
+          "capturedAtUTC": "2026-10-03T06:22:35.211000Z"
+        }
+      ],
+      "reviewNote": "Saved contains the laundry guide with 1 of 4 done. The iPad capture also has its populated guide detail selected."
+    },
+    {
+      "imageID": "04-search",
+      "headline": "Find your next step",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-06-search",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/4FDEA72A-F886-447C-A843-72CB37E02BC1.png",
+          "sha256": "8bcec5c1b0b833a13ccc1e9c0f23636a11468c153919c5157ea5b9fba3a25fea",
+          "capturedAtUTC": "2026-10-03T06:24:34.025000Z"
+        },
+        {
+          "captureID": "ipad-13-06-search",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/5935D236-4C6C-43E8-BC0C-ABFDC930B5BA.png",
+          "sha256": "af97085658fd62c31a181a16c3900ed7fbc2ea9c5c662fd46421f6e8353768bf",
+          "capturedAtUTC": "2026-10-03T06:22:40.160000Z"
+        }
+      ],
+      "reviewNote": "The actual query 401 shows two matching US 401(k) guides, without a keyboard covering results. The iPad retains the laundry detail while the sidebar search results change."
+    },
+    {
+      "imageID": "05-us-money",
+      "headline": "US money basics, explained",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-06-search",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/4FDEA72A-F886-447C-A843-72CB37E02BC1.png",
+          "sha256": "8bcec5c1b0b833a13ccc1e9c0f23636a11468c153919c5157ea5b9fba3a25fea",
+          "capturedAtUTC": "2026-10-03T06:24:34.025000Z"
+        },
+        {
+          "captureID": "iphone-6.9-07-money",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/E2A71099-23B4-4D93-8A9A-5682CBCE06E3.png",
+          "sha256": "7fe380653b40018144cd9e5e2ba0518390f89a3d6d7eb766f2e5a0d6ed6f48d7",
+          "capturedAtUTC": "2026-10-03T06:24:36.404000Z"
+        },
+        {
+          "captureID": "ipad-13-06-search",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/5935D236-4C6C-43E8-BC0C-ABFDC930B5BA.png",
+          "sha256": "af97085658fd62c31a181a16c3900ed7fbc2ea9c5c662fd46421f6e8353768bf",
+          "capturedAtUTC": "2026-10-03T06:22:40.160000Z"
+        },
+        {
+          "captureID": "ipad-13-07-money",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/3BF1A759-75A0-4CE7-9B97-8907414DB074.png",
+          "sha256": "7fa4e5eb8c09aaf9a257fd72fc339979a8c4c5cf4914a02b6d12f20dd6cc920b",
+          "capturedAtUTC": "2026-10-03T06:22:41.829000Z"
+        }
+      ],
+      "reviewNote": "Search results and the 401(k) reader label United States rules. The iPad money reader visibly includes its US Department of Labor source link."
+    },
+    {
+      "imageID": "06-original-sources",
+      "headline": "Go straight to the source",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-04-sources",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/CC29C9B6-063C-422D-935E-1EF339DCBB79.png",
+          "sha256": "54a71da841f365326e3fd0d88ca23e1bce0575faf3007ba6618b8b3a11356c29",
+          "capturedAtUTC": "2026-10-03T06:24:25.819000Z"
+        },
+        {
+          "captureID": "ipad-13-04-sources",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/0DD96DDA-F98D-4FC1-A13C-87AF21FBF3E8.png",
+          "sha256": "bfff95f7d0832f926c938cef9372f16d45ec17cd371e64ae7893d5bf8b45bcab",
+          "capturedAtUTC": "2026-10-03T06:22:31.950000Z"
+        }
+      ],
+      "reviewNote": "The native reader visibly shows the Whirlpool laundry basics link under Go to the source. External link navigation is outside this visual proof."
+    },
+    {
+      "imageID": "07-reminders",
+      "headline": "Remember your next step",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-08-reminder",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/81C49B9A-F8F4-48ED-86BC-DFF76E1DA6AD.png",
+          "sha256": "b570c5ea102bf7b94120259e187509cc10717bda19fab147fb418e73ec63308f",
+          "capturedAtUTC": "2026-10-03T06:24:38.702000Z"
+        },
+        {
+          "captureID": "iphone-6.9-09-reminders",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/43E079E7-2153-43A6-B12B-9567A172D667.png",
+          "sha256": "dcb560da0a23c75895c4d055c703da0d112ca97a2df6de41bfa536da65de53ba",
+          "capturedAtUTC": "2026-10-03T06:24:51.828000Z"
+        },
+        {
+          "captureID": "ipad-13-08-reminder",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/A4110B18-424F-4373-9BB8-CB4B1F63547A.png",
+          "sha256": "5364da22992d4eaf443a496ae8b11f0c8c0c713e3f4c9aef7746567a3a641767",
+          "capturedAtUTC": "2026-10-03T06:22:44.282000Z"
+        },
+        {
+          "captureID": "ipad-13-09-reminders",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/73AF32B8-45AA-4EBE-92EA-0EC6F696E63B.png",
+          "sha256": "0191411b8f7a23a36d1d6357cff9d761ee4cf407783069077c71a8851e36ae5a",
+          "capturedAtUTC": "2026-10-03T06:22:56.409000Z"
+        }
+      ],
+      "reviewNote": "The reminder form visibly has the guide, time controls, Save and Cancel. The iPad Reminders capture shows a saved dated row and selected guide detail. The phone 09 capture shows that selected guide detail with Reminders active; it is supporting imagery behind the form, not a claimed populated list."
+    },
+    {
+      "imageID": "08-optional-sound",
+      "headline": "Set a time. Sound optional.",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-08-reminder",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/81C49B9A-F8F4-48ED-86BC-DFF76E1DA6AD.png",
+          "sha256": "b570c5ea102bf7b94120259e187509cc10717bda19fab147fb418e73ec63308f",
+          "capturedAtUTC": "2026-10-03T06:24:38.702000Z"
+        },
+        {
+          "captureID": "ipad-13-08-reminder",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/A4110B18-424F-4373-9BB8-CB4B1F63547A.png",
+          "sha256": "5364da22992d4eaf443a496ae8b11f0c8c0c713e3f4c9aef7746567a3a641767",
+          "capturedAtUTC": "2026-10-03T06:22:44.282000Z"
+        }
+      ],
+      "reviewNote": "The form shows date and time controls plus the Play a sound toggle in its off state. This headline claims an optional sound toggle, not custom sounds."
+    },
+    {
+      "imageID": "09-offline-guides",
+      "headline": "Your guides, even offline",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-02-guide",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/DDEB7CED-8F81-441A-92E9-33303CDC8DAD.png",
+          "sha256": "d1fcc055689afa7337315d82c6e4913bd9984d40f2edaf741737e9d07e9e1927",
+          "capturedAtUTC": "2026-10-03T06:24:22.291000Z"
+        },
+        {
+          "captureID": "iphone-6.9-10-settings",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/6BA60396-1466-4456-8616-59F95514A763.png",
+          "sha256": "9d2c89377e8b6018a1620caa34bbc7a79b83cf29205858fbbe0f40cf9b23e7a7",
+          "capturedAtUTC": "2026-10-03T06:25:01.713000Z"
+        },
+        {
+          "captureID": "ipad-13-02-guide",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/B3B8DEBF-D231-4928-8F4D-8D976E180188.png",
+          "sha256": "4fa80aa01564fa09a39fbc185dc19b7ba78cdbd65901c4addd5e0e0262589273",
+          "capturedAtUTC": "2026-10-03T06:22:29.295000Z"
+        },
+        {
+          "captureID": "ipad-13-10-settings",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/D7A9CCFB-8064-4475-B324-6D3D3FBBDE05.png",
+          "sha256": "075135ddd46f33a0a2a3eecca594a704b5c7ca9aae9579f19fa784915babc119",
+          "capturedAtUTC": "2026-10-03T06:23:05.030000Z"
+        }
+      ],
+      "reviewNote": "Settings explicitly says guides and checked steps stay available offline. The native laundry reader shows stored guide content. This is visible UI evidence; runtime offline behavior is recorded by the native QA owner."
+    },
+    {
+      "imageID": "10-progress",
+      "headline": "See how far you got",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-03-steps",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/E437577E-5A6F-46AF-899F-396F40D73211.png",
+          "sha256": "d1fcc055689afa7337315d82c6e4913bd9984d40f2edaf741737e9d07e9e1927",
+          "capturedAtUTC": "2026-10-03T06:24:22.532000Z"
+        },
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-contrast-final/7C2B2777-3E1A-4838-8807-73434F7FC3B0.png",
+          "sha256": "0ba40d5212c3bd33eeceb149ea6d2202043178cbfb1d238e6f0f75a5e6d365a2",
+          "capturedAtUTC": "2026-10-03T06:24:28.954000Z"
+        },
+        {
+          "captureID": "ipad-13-03-steps",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/64006843-EDC1-4EAD-9344-A555BC6AED4C.png",
+          "sha256": "4fa80aa01564fa09a39fbc185dc19b7ba78cdbd65901c4addd5e0e0262589273",
+          "capturedAtUTC": "2026-10-03T06:22:29.660000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-contrast-final/07C22DB3-4C39-4DB2-8720-CF49E66AC474.png",
+          "sha256": "48d417a979e7e8230303f849b11ba0d9e8c194c71a0550e6c5594f62c72549dc",
+          "capturedAtUTC": "2026-10-03T06:22:35.211000Z"
+        }
+      ],
+      "reviewNote": "The checked laundry step and genuine Saved row with 1 of 4 done support progress tracking."
+    }
+  ],
+  "excludedCaptures": "All previous native revisions and all accessibility/dark captures 11-13 are excluded from these galleries.",
+  "unsupportedClaimsExcluded": [
+    "AI-generated guidance",
+    "daily publishing",
+    "cross-device sync",
+    "live backend additions",
+    "custom reminder sounds"
+  ],
+  "scope": "Visual observations support gallery text. Functional behavior and external source targets require the separate native QA record.",
+  "nativeInputCount": 35,
+  "nativeInputsCanonicalSerialization": "Python json.dumps(decoded files map, sort_keys=True), UTF-8",
+  "nativeQAReportedByOwner": {
+    "iphone": "10 model tests and 2 UI tests passed; /tmp/howtoadult-phone-contrast-final-20261003.xcresult",
+    "ipad": "10 model tests and 2 UI tests passed; /tmp/howtoadult-pad-contrast-final-20261003.xcresult",
+    "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d"
+  },
+  "independentGalleryReview": {
+    "reviewer": "/root/adult_finish_reviewer",
+    "reviewedAtUTC": "2026-10-03T06:35:07.265210Z",
+    "status": "approved scoped iPhone/iPad 20-image gallery",
+    "scope": "All 20 final JPEGs opened individually, plus both contact sheets. Mac gallery remains pending genuine evidence.",
+    "findings": "No material finding. Whole centered headlines, upright centered heroes, outward fans, original native proportions/content and honest feature claims passed. Phone reminder composition uses real form 08 as hero and selected reader 09 as support.",
+    "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "nativeInputsCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e"
+  }
+}

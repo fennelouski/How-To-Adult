@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-03T06:47:09.328610+00:00",
+  "status": "prepared_not_submitted",
+  "evidencePolicy": "Null and pending values are unresolved. Record a pass only with evidence for the final tested revision. Local preparation does not prove a live deployment or App Store action.",
+  "app": {
+    "name": "How to Adult",
+    "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+    "developmentTeam": "EJLR2RPSV2",
+    "version": "1.0",
+    "build": "1",
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "minimumVersions": {
+      "iOS": "17.0",
+      "iPadOS": "17.0",
+      "macOS": "14.0"
+    },
+    "visionOS": {
+      "enabled": false,
+      "reason": "User prohibited building, booting, running, screenshot capture, uploading and submitting visionOS. Preserve existing material."
+    },
+    "legacyPrototypePreserved": true
+  },
+  "content": {
+    "path": "Content/catalog.json",
+    "sha256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+    "revision": "2026-10-03-starter-1",
+    "guides": 56,
+    "topics": 7,
+    "steps": 224,
+    "language": "en",
+    "topicNames": [
+      "Home",
+      "Food",
+      "Money",
+      "Work",
+      "Wellbeing",
+      "People",
+      "Everyday"
+    ],
+    "jurisdictionLabels": [
+      "General",
+      "United States"
+    ],
+    "sourceLinksIncluded": true
+  },
+  "implemented": {
+    "bundledOfflineLibrary": true,
+    "localSearch": true,
+    "localBookmarks": true,
+    "localStepProgress": true,
+    "localReminders": {
+      "enabled": true,
+      "chosenDateAndTime": true,
+      "soundPreference": true,
+      "permissionTrigger": "Saving a reminder, not opening the app"
+    },
+    "systemShareMenu": true,
+    "cloudSync": false,
+    "remotePush": false,
+    "accounts": false,
+    "inAppPurchases": false,
+    "subscriptions": false,
+    "ads": false,
+    "trackingSDK": false,
+    "AIWriting": false,
+    "dailyArticleSchedule": false,
+    "remoteCatalogConfigured": false
+  },
+  "localStorage": {
+    "userLibrary": "Application Support/HowToAdult/UserLibrary-v1.json",
+    "catalogCache": "Application Support/HowToAdult/catalog-cache-v1.json",
+    "scope": "Per-device app container",
+    "legacyStoreOpenedOrModified": false
+  },
+  "nativeVerification": {
+    "status": "iPhone_and_iPad_passed_Mac_runtime_requires_owner_consent",
+    "frozenCommit": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "sourceHashes": "app-store-audit/2026-10-03-how-to-adult/native-inputs-contrast-final.json",
+    "iPhone": {
+      "status": "passed",
+      "modelTests": 10,
+      "UIFlowTests": 2,
+      "testResult": "/tmp/howtoadult-phone-contrast-final-20261003.xcresult",
+      "testSummary": "app-store-audit/2026-10-03-how-to-adult/iphone-test-summary.json",
+      "captureManifest": "app-store-audit/2026-10-03-how-to-adult/raw/iphone-contrast-final/manifest.json",
+      "sourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+      "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+      "runtime": {
+        "architecture": "arm64",
+        "deviceId": "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName": "HowToAdult-QA-Phone-20261003",
+        "modelName": "iPhone 17 Pro Max",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    },
+    "iPad": {
+      "status": "passed",
+      "modelTests": 10,
+      "UIFlowTests": 2,
+      "testResult": "/tmp/howtoadult-pad-contrast-final-20261003.xcresult",
+      "testSummary": "app-store-audit/2026-10-03-how-to-adult/ipad-test-summary.json",
+      "captureManifest": "app-store-audit/2026-10-03-how-to-adult/raw/ipad-contrast-final/manifest.json",
+      "sourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+      "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+      "runtime": {
+        "architecture": "arm64",
+        "deviceId": "3D300A1C-F339-4AE0-AD21-B3CDC8FF164C",
+        "deviceName": "HowToAdult-QA-Pad-20261003",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    },
+    "macOS": {
+      "status": "pending_owner_container_consent",
+      "testResult": null,
+      "captureManifest": null,
+      "frozenRuntimePassed": false,
+      "diagnosis": "The original bundle is blocked in macOS sandbox initialization while secinitd awaits CFUserNotification container-sharing consent. No native storage-code defect established.",
+      "diagnosticSamples": [
+        "/tmp/howtoadult-secinitd-sample-20261003.txt",
+        "/tmp/howtoadult-save-check-34820.txt"
+      ],
+      "systemDialogToolAccess": "UserNotificationCenter denied for safety reasons; owner must handle the prompt",
+      "oldMacCapturesSuperseded": true
+    },
+    "unitTests": {
+      "status": "10_model_tests_passed_on_each_final_iOS_Simulator_Mac_frozen_runtime_pending",
+      "resultBundles": [
+        "/tmp/howtoadult-phone-contrast-final-20261003.xcresult",
+        "/tmp/howtoadult-pad-contrast-final-20261003.xcresult"
+      ]
+    },
+    "checksRequired": [
+      "Local library loading and search",
+      "Saved guides and step persistence after relaunch",
+      "Reminders, sound preference, permission denial and notification tap",
+      "iPhone and iPad orientation with unclipped layout",
+      "Dark appearance and accessibility text size",
+      "Native Mac navigation and window resizing"
+    ],
+    "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+    "verifiedChecks": [
+      "Bundled guide library, local search and primary-source presentation",
+      "Bookmarks and checked-step progress after cold relaunch",
+      "Reminder save, chosen date, optional sound off retained after relaunch, reminder removal",
+      "Portrait iPhone and landscape iPad library/reader layout",
+      "Dark appearance and accessibility3 text with source links reachable",
+      "Malformed catalogs and corrupt personal storage preserve earlier data"
+    ],
+    "pendingChecks": [
+      "Original-bundle Mac working controls, persistence and window resizing after owner consent",
+      "Actual notification delivery and notification-tap routing",
+      "Permission-denied UI recovery",
+      "Runtime smoke test at minimum supported OS versions; current runtime checks were iOS26.5"
+    ],
+    "authoredTextContrast": {
+      "light": "#59595F on white, 6.96:1 measured in final iPad capture",
+      "dark": "#AEAEB8 on black, 9.55:1",
+      "nativeSearchPlaceholder": "OS-managed standard native control style retained; styled prompt does not override its rendered gray"
+    }
+  },
+  "packages": {
+    "status": "signed_App_Store_exports_verified_not_uploaded",
+    "releaseScript": "scripts/release-native.py",
+    "archiveExecuted": true,
+    "exportExecuted": true,
+    "record": "app-store-audit/2026-10-03-how-to-adult/release-verification-contrast-final.json",
+    "inspection": "app-store-audit/2026-10-03-how-to-adult/final-package-inspection-contrast-final.json",
+    "sourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+    "iOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/iOS/Export/How to Adult.ipa",
+      "bytes": 1310200,
+      "SHA256": "c565354753ca35722b2dabf9ed4aeed6b1b70952eeeeabc878f596f51c8d362f",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/iOS/Inspection/Payload/How to Adult.app",
+      "architectures": [
+        "arm64"
+      ],
+      "minimumOS": "17.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": false,
+      "URLScheme": "howtoadult",
+      "primaryIconVerified": true,
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "installerStatus": null,
+      "teamIdentifier": "EJLR2RPSV2",
+      "debugQALaunchArgumentsAbsent": true,
+      "testBundlesAbsent": true
+    },
+    "macOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/macOS/Export/How to Adult.pkg",
+      "bytes": 1535742,
+      "SHA256": "5d82fb6f94abd7eba8fa2c2b7179cec41fb3206ae4505e5bf43cfdc64205e0c4",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "minimumOS": "14.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": false,
+      "URLScheme": "howtoadult",
+      "primaryIconVerified": true,
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "installerStatus": "Status: signed by a developer certificate issued by Apple (Development)",
+      "teamIdentifier": "EJLR2RPSV2",
+      "debugQALaunchArgumentsAbsent": true,
+      "testBundlesAbsent": true
+    },
+    "runtimeVerificationSeparate": true
+  },
+  "marketing": {
+    "status": "iPhone_and_iPad_20_images_scoped_approved_Mac_pending",
+    "manifest": "app-store-audit/2026-10-03-how-to-adult/marketing/capture-manifest.contrast-final.json",
+    "provenance": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/marketing-provenance.json",
+    "reviewStatus": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/review-status.json",
+    "fileVerification": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/file-verification.json",
+    "featureEvidence": "app-store-audit/2026-10-03-how-to-adult/marketing/feature-evidence.json",
+    "reviewIndex": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/review-index.html",
+    "verifiedFinalCaptureRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+    "requiredComposition": "Stylized backgrounds, centered short headlines, upright centered hero and 1-3 genuine same-platform app screenshots with secondary images fanned outward. Native screenshot content preserved.",
+    "galleryCounts": {
+      "iPhone": 10,
+      "iPad": 10,
+      "macOS": 0
+    },
+    "dimensions": {
+      "iPhone": "1320x2868",
+      "iPad": "2752x2064",
+      "macOS": null
+    },
+    "independentReviewer": "/root/adult_finish_reviewer",
+    "wholeAppFinishDisposition": "recapture",
+    "wholeAppFinishReview": "app-store-audit/2026-10-03-how-to-adult/design-finish-review.md",
+    "MacGalleryStatus": "pending_original_bundle_runtime_and_genuine_captures",
+    "assetsUploaded": false,
+    "supersededGalleriesMustNotUpload": [
+      "marketing/composed-iphone-ipad"
+    ]
+  },
+  "backend": {
+    "implementation": "implemented_locally_not_live",
+    "documentation": "BACKEND.md",
+    "localEvidence": "backend/local-verification.json",
+    "deployed": false,
+    "configuredInNativeApp": false,
+    "sourceRevision": null,
+    "AWSURL": null,
+    "VercelURL": null,
+    "deploymentRecord": "backend/deployment-record.json",
+    "dualDeploymentVerified": false,
+    "AWSCLIAuthentication": "refresh_required",
+    "productionRouting": "No live API or routing verified",
+    "dailyPublisherEnabled": false,
+    "implementationSourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d"
+  },
+  "webPages": {
+    "status": "pending_dual_deployment_and_public_verification",
+    "proposedPrivacyURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+    "proposedSupportURL": "https://nathanfennel.com/how-to-adult/support.html",
+    "publiclyVerified": false,
+    "committedRevision": "416fd8fb62fa46c8e40b4634ffd6ac5c095c8615",
+    "AWSURL": null,
+    "VercelURL": null,
+    "verificationRecord": null,
+    "privacyPageVisibility": "Unlisted, but publicly accessible without authentication",
+    "localVerification": "app-store-audit/2026-10-03-how-to-adult/website-preview/"
+  },
+  "appStoreConnect": {
+    "authentication": "blocked",
+    "appRecordStatus": "unknown",
+    "appID": null,
+    "SKU": null,
+    "metadataDraft": "app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md",
+    "metadataSaved": false,
+    "buildUploaded": false,
+    "buildProcessed": false,
+    "buildSelected": false,
+    "privacyLabelPublished": false,
+    "ageRating": "unanswered",
+    "exportCompliance": "not_entered",
+    "reviewContact": "not_entered",
+    "submissionCreated": false,
+    "submittedForReview": false,
+    "submissionID": null,
+    "lastVerifiedAt": "2026-10-03T05:49:00Z"
+  },
+  "draftFieldValidation": {
+    "status": "local_character_limits_passed",
+    "characterLengths": {
+      "name": 12,
+      "subtitle": 27,
+      "promotionalText": 134,
+      "description": 1010,
+      "keywords": 94
+    },
+    "characterLimits": {
+      "name": 30,
+      "subtitle": 30,
+      "promotionalText": 170,
+      "keywords": 100,
+      "description": 4000
+    },
+    "AppleAccepted": false
+  },
+  "pricingAndAvailability": {
+    "intent": "Free in all eligible current countries and regions. Include newly available storefronts if offered.",
+    "price": 0,
+    "currency": "all_storefront_currencies",
+    "saved": false,
+    "verified": false,
+    "eligibleStorefrontCount": null,
+    "enabledStorefrontCount": null,
+    "territoryExceptions": null
+  },
+  "encryptionAssessment": {
+    "recommendedITSAppUsesNonExemptEncryption": false,
+    "status": "incorporated_and_verified_in_both_signed_exports",
+    "nativeUses": [
+      "Apple URLSession HTTPS",
+      "Apple CryptoKit SHA256 step text fingerprint"
+    ],
+    "customEncryptedStorage": false,
+    "thirdPartyRuntimeCrypto": false,
+    "encryptionDocumentationUploaded": false,
+    "complianceCode": null,
+    "officialGuidance": "https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations",
+    "finalExportPlistVerified": true
+  },
+  "privacy": {
+    "proposedLabel": "Data Not Collected",
+    "status": "draft_not_saved_or_published",
+    "scope": "Signed native build ab95cedbe7401da1f11f52e5befeafbc0b04848d with AdultCatalogURL absent; final binaries inspected. Apple privacy label has not been entered or published.",
+    "localUserDataOnly": true,
+    "automaticCatalogRequests": false,
+    "ownerPublishAttestation": "pending",
+    "officialDefinitions": "https://developer.apple.com/app-store/app-privacy-details/",
+    "officialManagementGuide": "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/",
+    "futureRemoteCatalog": {
+      "providerSettingsAuditRequired": true,
+      "APIgatewayAccessLogsEnabledInTemplate": false,
+      "lambdaCloudWatchRetentionDays": 7,
+      "lambdaHandlerLogs": "Generic failure and exception class. Runtime records can contain request IDs, timings and memory use.",
+      "hostingProcessesIPAndPathMetadata": true,
+      "VercelProviderLogRetentionVerified": false,
+      "IPRetentionDays": null,
+      "classifyRetainedIPByActualUse": true,
+      "identityLinkageAuditRequired": true,
+      "labelAndPublicPolicyMustMatchLivePractices": true
+    }
+  },
+  "remaining": [
+    "Handle the original Mac bundle container-sharing consent; complete Mac controls/persistence/window-resizing QA and capture its final 13 native screens.",
+    "Verify actual notification delivery/tap routing, permission-denied UI recovery and minimum-supported-OS runtime smoke checks.",
+    "Compose and independently review the ten Mac marketing images, then complete the whole-app finish review.",
+    "Authorize/complete AWS CLI authentication and verify AWS plus Vercel deployments from the same committed revision, including public privacy/support pages.",
+    "Inspect the existing App Store record after authentication; preserve its original identity.",
+    "Save listing metadata, free pricing and all eligible storefronts; record actual coverage.",
+    "Upload the inspected packages after required QA, verify processing and select the matching builds.",
+    "Complete age, export-compliance, review-contact and final privacy responses; owner publishing attestation remains pending.",
+    "Submit for App Review and record Apple receipt/status."
+  ],
+  "blockedOwnerActions": [
+    "Handle the macOS How to Adult container-sharing consent prompt",
+    "Authorize/complete AWS CLI credential refresh for fishbowl-head",
+    "Sign in to App Store Connect in the preserved handoff tab"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "verifiedAt": "2026-10-03T06:37:48.102750+00:00",
+  "CLI": "aws-cli/2.36.23 Python/3.14.6 Darwin/25.5.0 exe/arm64",
+  "profile": "fishbowl-head",
+  "authorized": false,
+  "credentialRefreshRequired": true
+}

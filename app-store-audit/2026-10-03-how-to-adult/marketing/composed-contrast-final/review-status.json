@@ -1,0 +1,24 @@
+{
+  "status": "approved-scoped-iphone-ipad-gallery",
+  "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+  "outputCount": 20,
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "assetsUploaded": false,
+  "nativeInputProofArchive": "native-inputs-at-capture.json",
+  "nativeInputProofArchiveSHA256": "559de9be82de4be8572574c2d999ae09e5e7b91d5cf6e23d022cca1fa9d2d578",
+  "independentVisualReview": {
+    "reviewer": "/root/adult_finish_reviewer",
+    "reviewedAtUTC": "2026-10-03T06:35:07.265210Z",
+    "status": "approved scoped iPhone/iPad 20-image gallery",
+    "scope": "All 20 final JPEGs opened individually, plus both contact sheets. Mac gallery remains pending genuine evidence.",
+    "findings": "No material finding. Whole centered headlines, upright centered heroes, outward fans, original native proportions/content and honest feature claims passed. Phone reminder composition uses real form 08 as hero and selected reader 09 as support.",
+    "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+    "nativeInputsCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e"
+  }
+}

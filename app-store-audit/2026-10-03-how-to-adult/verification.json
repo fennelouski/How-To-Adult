@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-03T06:47:09.328610+00:00",
+  "scope": "local final evidence consistency; no remote deployment or store action",
+  "nativeRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+  "nativeFileCount": 35,
+  "nativeCanonicalSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+  "nativeWorkingTreeAndFrozenCommitMatch": true,
+  "nativeInputProofSHA256": "559de9be82de4be8572574c2d999ae09e5e7b91d5cf6e23d022cca1fa9d2d578",
+  "deviceTests": {
+    "iphone": {
+      "passed": 12,
+      "failed": 0,
+      "captures": 13
+    },
+    "ipad": {
+      "passed": 12,
+      "failed": 0,
+      "captures": 13
+    }
+  },
+  "backendLocalTests": {
+    "passed": 49,
+    "sourceHashesStillMatch": true,
+    "remoteVerified": false
+  },
+  "signedPackages": {
+    "iOS": {
+      "sha256": "c565354753ca35722b2dabf9ed4aeed6b1b70952eeeeabc878f596f51c8d362f",
+      "bytes": 1310200,
+      "sourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+      "hashReverified": true
+    },
+    "macOS": {
+      "sha256": "5d82fb6f94abd7eba8fa2c2b7179cec41fb3206ae4505e5bf43cfdc64205e0c4",
+      "bytes": 1535742,
+      "sourceRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+      "hashReverified": true
+    }
+  },
+  "marketing": {
+    "outputCount": 20,
+    "selectedNativeSources": 20,
+    "sourceAndOutputHashesReverified": true,
+    "manifestAndCompositorHashesReverified": true,
+    "independentReview": "approved-scoped-iphone-ipad-gallery",
+    "receiptSHA256": "5c0c9e1a0502f99fcfe0eb85035f0c9030b71a824ae80772e21d4be1e4a25053",
+    "MacPending": true
+  },
+  "wholeAppFinish": "recapture: original Mac runtime/captures/gallery missing",
+  "deploymentVerified": false,
+  "AppStoreUploaded": false,
+  "AppReviewSubmitted": false,
+  "pendingNativeChecks": [
+    "Original-bundle Mac working controls, persistence and window resizing after owner consent",
+    "Actual notification delivery and notification-tap routing",
+    "Permission-denied UI recovery",
+    "Runtime smoke test at minimum supported OS versions; current runtime checks were iOS26.5"
+  ],
+  "websitePreparedCommit": "416fd8fb62fa46c8e40b4634ffd6ac5c095c8615",
+  "ownerActions": [
+    "Handle the macOS How to Adult container-sharing consent prompt",
+    "Authorize/complete AWS CLI credential refresh for fishbowl-head",
+    "Sign in to App Store Connect in the preserved handoff tab"
+  ],
+  "cleanup": {
+    "ownSimulatorsShutdown": true,
+    "SimulatorLeaseReturned": true,
+    "VisionOSUsed": false,
+    "otherSimulatorsOrContainersModified": false,
+    "ownWebsitePreviewServer": "stopped_verified_owned_process_with_SIGTERM",
+    "originalMacDebugBundle": "waiting_for_owner_system_consent; preserved",
+    "securityServicesAndPromptProcessesModified": false
+  }
+}

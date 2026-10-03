@@ -1,0 +1,73 @@
+{
+  "verifiedAt": "2026-10-03T06:25:04.722576+00:00",
+  "mode": "signed_package_inspection_no_upload_no_runtime_test",
+  "revision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+  "nativeSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+  "nativeInputFileCount": 35,
+  "releaseRecord": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/release-verification.json",
+  "uploaded": false,
+  "macOSRuntimeCaveat": "Original-bundle local runtime verification awaits the owner handling its existing-container sharing consent. This package inspection asserts no runtime test pass.",
+  "platforms": {
+    "iOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/iOS/Export/How to Adult.ipa",
+      "bytes": 1310200,
+      "SHA256": "c565354753ca35722b2dabf9ed4aeed6b1b70952eeeeabc878f596f51c8d362f",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/iOS/Inspection/Payload/How to Adult.app",
+      "architectures": [
+        "arm64"
+      ],
+      "minimumOS": "17.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": false,
+      "URLScheme": "howtoadult",
+      "primaryIconVerified": true,
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "installerStatus": null,
+      "teamIdentifier": "EJLR2RPSV2",
+      "debugQALaunchArgumentsAbsent": true,
+      "testBundlesAbsent": true
+    },
+    "macOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/macOS/Export/How to Adult.pkg",
+      "bytes": 1535742,
+      "SHA256": "5d82fb6f94abd7eba8fa2c2b7179cec41fb3206ae4505e5bf43cfdc64205e0c4",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ab95cedbe740-20261003T062155Z/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "minimumOS": "14.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": false,
+      "URLScheme": "howtoadult",
+      "primaryIconVerified": true,
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "installerStatus": "Status: signed by a developer certificate issued by Apple (Development)",
+      "teamIdentifier": "EJLR2RPSV2",
+      "debugQALaunchArgumentsAbsent": true,
+      "testBundlesAbsent": true
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T06:37:34.278153+00:00",
+  "title": "How to Adult native design",
+  "extensions": {
+    "platform": "SwiftUI for iOS, iPadOS and macOS",
+    "sourceAuthority": [
+      "Sources/AdultViews.swift",
+      "Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json",
+      "scripts/make-app-icon.swift"
+    ],
+    "units": "Frontmatter dimensions are native points. They are not a CSS preview or captured device measurements.",
+    "colorMeta": {
+      "action-light": {
+        "role": "primary",
+        "displayName": "Marine action, light",
+        "source": "Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+        "purpose": "Light-appearance native tint, links and progress."
+      },
+      "action-dark": {
+        "role": "primary",
+        "displayName": "Marine action, dark",
+        "source": "Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+        "purpose": "Dark-appearance native tint, links and progress."
+      },
+      "featured-guide": {
+        "role": "primary",
+        "displayName": "Featured marine ground",
+        "source": "Sources/AdultViews.swift",
+        "purpose": "Fixed ground for the first featured guide. Preserve its difference from AccentColor."
+      },
+      "secondary-text-light": {
+        "role": "neutral",
+        "displayName": "Secondary reading text, light",
+        "source": "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json",
+        "purpose": "Authored summaries, time estimates, review dates and supporting text."
+      },
+      "secondary-text-dark": {
+        "role": "neutral",
+        "displayName": "Secondary reading text, dark",
+        "source": "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json",
+        "purpose": "Dark appearance of authored secondary reading text."
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Featured text and icon pages",
+        "purpose": "White text on the featured ground and white icon artwork."
+      },
+      "icon-ground-start": {
+        "role": "primary",
+        "displayName": "Icon marine gradient start",
+        "source": "scripts/make-app-icon.swift",
+        "purpose": "Original app icon artwork only."
+      },
+      "icon-ground-end": {
+        "role": "primary",
+        "displayName": "Icon marine gradient end",
+        "source": "scripts/make-app-icon.swift",
+        "purpose": "Original app icon artwork only."
+      },
+      "icon-cover": {
+        "role": "neutral",
+        "displayName": "Icon pale-blue cover",
+        "source": "scripts/make-app-icon.swift",
+        "purpose": "Original app icon book cover."
+      },
+      "icon-bookmark": {
+        "role": "secondary",
+        "displayName": "Icon coral bookmark",
+        "source": "scripts/make-app-icon.swift",
+        "purpose": "Checked bookmark in original app icon artwork."
+      }
+    },
+    "nativeSemanticColors": {
+      "text": "Color.primary",
+      "iosReadingBackground": "Color(uiColor: .systemBackground)",
+      "iosSupportingBackground": "Color(uiColor: .secondarySystemBackground)",
+      "macReadingBackground": "Color(nsColor: .windowBackgroundColor)",
+      "macSupportingBackground": "Color(nsColor: .controlBackgroundColor)",
+      "topicColors": {
+        "teal": ".teal",
+        "orange": ".orange",
+        "green": ".green",
+        "rose": ".pink",
+        "purple": ".purple",
+        "indigo": ".indigo",
+        "default": "AdultPalette.accent"
+      },
+      "scope": "Platform semantic names, not a fixed hex palette. The OS resolves appearance and contrast behavior."
+    },
+    "nativeTextStyles": {
+      "display": {
+        "expression": ".system(.largeTitle, design: .serif, weight: .bold)",
+        "purpose": "Guide title and library introduction."
+      },
+      "section": {
+        "expression": ".title2.bold()",
+        "purpose": "Reading section headings and featured title."
+      },
+      "headline": {
+        "expression": ".headline",
+        "purpose": "Guide rows, step titles and prominent control labels."
+      },
+      "body": {
+        "expression": ".body",
+        "purpose": "Instructions, tools, cautions and source links."
+      },
+      "readerSummary": {
+        "expression": ".title3",
+        "purpose": "Guide summary."
+      },
+      "supporting": {
+        "expression": ".subheadline",
+        "purpose": "Index summaries, supporting settings text and time estimates."
+      },
+      "metadata": {
+        "expression": ".caption",
+        "purpose": "Timing, jurisdiction, review date and row progress."
+      },
+      "metrics": "Use platform TextStyle metrics and Dynamic Type. No fixed font size, tracking or line-height token was extracted."
+    },
+    "nativeLayout": {
+      "sidebarCondition": "macOS always; iOS horizontalSizeClass != .compact",
+      "filterReflow": "ViewThatFits(in: .horizontal), horizontal controls then vertical stack",
+      "readingAlignment": "Leading-aligned bounded column centered in available width",
+      "evidenceBoundary": "Source layout requests do not establish Mac resize verification.",
+      "maximumReadingWidth": {
+        "nativePoints": 760,
+        "expression": ".frame(maxWidth: 760)",
+        "scope": "Maximum content width; not a fixed frame width."
+      }
+    },
+    "nativeDepth": {
+      "authoredShadows": false,
+      "method": "Semantic supporting backgrounds, native bars, menus and sheets, plus system dividers.",
+      "tonalRamps": "None extracted. The icon gradient does not define an interface tonal scale."
+    },
+    "nativeMotion": {
+      "implementation": "Platform navigation and sheets",
+      "authoredDecorativeAnimation": false,
+      "authoredDurationOrEasingTokens": false,
+      "guidance": "Preserve platform behavior and Reduce Motion."
+    },
+    "previewPolicy": "Native source excerpts only. No HTML/CSS preview, redrawn native interface or screenshot evidence is supplied by this sidecar.",
+    "nativeComponents": [
+      {
+        "name": "Native navigation",
+        "kind": "nav",
+        "source": "Sources/AdultViews.swift:AdultRootView",
+        "description": "Compact iOS tabs with separate paths; wide iPad and Mac use a library/collection/reader split view.",
+        "swift": "    private var usesSidebar: Bool {\n        #if os(macOS)\n        true\n        #else\n        sizeClass != .compact\n        #endif\n    }"
+      },
+      {
+        "name": "Native search and filters",
+        "kind": "input",
+        "source": "Sources/AdultViews.swift:GuideCollectionView",
+        "description": "Native searchable field with topic and location menus. OS-managed placeholder contrast remains a review limitation.",
+        "swift": ".searchable(text: $query, prompt: Text(\"Laundry, money, making friends…\").foregroundColor(AdultPalette.secondaryText))"
+      },
+      {
+        "name": "Featured guide",
+        "kind": "card",
+        "refersTo": "featured-guide",
+        "source": "Sources/AdultViews.swift:GuideCollectionView.featured",
+        "description": "One marine reading action with white wrapping title, summary and SF Symbol; plain Button or NavigationLink by layout.",
+        "swift": "    private func featured(_ article: AdultArticle) -> some View {\n        HStack(alignment: .top, spacing: 18) {\n            VStack(alignment: .leading, spacing: 12) {\n                Text(article.title).font(.title2.bold()).fixedSize(horizontal: false, vertical: true)\n                Text(article.summary).font(.subheadline).fixedSize(horizontal: false, vertical: true)\n                Label(\"Open guide\", systemImage: \"arrow.right\").font(.headline)\n            }\n            Spacer(minLength: 0)\n            Image(systemName: article.symbol).font(.largeTitle).accessibilityHidden(true)\n        }\n        .foregroundStyle(.white).padding(22)\n        .frame(maxWidth: .infinity, alignment: .leading)\n        .background(Color(red: 0.07, green: 0.23, blue: 0.45), in: RoundedRectangle(cornerRadius: 16))\n        .accessibilityElement(children: .combine)\n    }"
+      },
+      {
+        "name": "Guide row",
+        "kind": "custom",
+        "source": "Sources/AdultViews.swift:GuideRow",
+        "description": "Topic symbol, wrapping title and summary, time, location and visible progress in a single combined row.",
+        "swift": "private struct GuideRow: View {\n    @Environment(AdultStore.self) private var store\n    let article: AdultArticle\n    let showsReminder: Bool\n\n    var body: some View {\n        HStack(alignment: .top, spacing: 14) {\n            Image(systemName: article.symbol)\n                .font(.title2.weight(.medium)).frame(width: 42, height: 48)\n                .foregroundStyle(AdultPalette.category(store.category(article)?.colorKey ?? \"blue\"))\n                .accessibilityHidden(true)\n            VStack(alignment: .leading, spacing: 7) {\n                Text(article.title).font(.headline).foregroundStyle(.primary)\n                Text(article.summary).font(.subheadline).foregroundStyle(AdultPalette.secondaryText)\n                if showsReminder, let date = store.progress(article.id).reminderDate {\n                    Label { Text(date, format: .dateTime.month(.abbreviated).day().hour().minute()) } icon: { Image(systemName: \"bell\") }\n                        .font(.caption).foregroundStyle(AdultPalette.accent)\n                } else {\n                    Text(\"About \\(article.minutes) min · \\(article.steps.count) steps\" + (article.jurisdiction == \"General\" ? \"\" : \" · \" + article.jurisdiction))\n                        .font(.caption).foregroundStyle(AdultPalette.secondaryText)\n                }\n                let completed = store.progress(article.id).completedCount(in: article)\n                if completed > 0 {\n                    Label(\"\\(completed) of \\(article.steps.count) done\", systemImage: completed == article.steps.count ? \"checkmark.circle.fill\" : \"checkmark.circle\")\n                        .font(.caption.weight(.semibold)).foregroundStyle(AdultPalette.accent)\n                }\n            }.fixedSize(horizontal: false, vertical: true)\n            Spacer(minLength: 0)\n            Image(systemName: \"chevron.right\").font(.caption.weight(.semibold)).foregroundStyle(.tertiary).padding(.top, 6).accessibilityHidden(true)\n        }\n        .padding(.vertical, 18).padding(.horizontal, 4)\n        .contentShape(Rectangle())\n        .accessibilityElement(children: .combine)\n        .accessibilityIdentifier(\"guide-\" + article.id)\n    }\n}"
+      },
+      {
+        "name": "Checkable instruction",
+        "kind": "button",
+        "source": "Sources/AdultViews.swift:GuideStepRow",
+        "description": "Whole-row plain button with visible completion shape and accessible value. Instruction text remains readable when checked.",
+        "swift": "private struct GuideStepRow: View {\n    @Environment(AdultStore.self) private var store\n    let article: AdultArticle\n    let step: GuideStep\n\n    var body: some View {\n        let checked = store.progress(article.id).isChecked(step)\n        Button { store.toggleStep(step, in: article) } label: {\n            HStack(alignment: .top, spacing: 16) {\n                Image(systemName: checked ? \"checkmark.circle.fill\" : \"circle\")\n                    .font(.title2).foregroundStyle(AdultPalette.accent).frame(width: 28)\n                VStack(alignment: .leading, spacing: 9) {\n                    Text(step.title).font(.headline).foregroundStyle(.primary)\n                    Text(step.body).font(.body).foregroundStyle(.primary)\n                }.fixedSize(horizontal: false, vertical: true)\n                Spacer(minLength: 0)\n            }.padding(.vertical, 20).contentShape(Rectangle())\n        }\n        .buttonStyle(.plain).disabled(!store.canSave)\n        .accessibilityLabel(step.title + \". \" + step.body)\n        .accessibilityValue(checked ? \"Completed\" : \"Not completed\")\n        .accessibilityHint(\"Double tap to change completion\")\n        .accessibilityIdentifier(\"step-\" + step.id)\n    }\n}"
+      },
+      {
+        "name": "Reminder form",
+        "kind": "custom",
+        "source": "Sources/AdultViews.swift:GuideReminderView",
+        "description": "Native date/time picker, sound toggle, shortcut actions and explicit Save/Cancel with visible scheduling failure.",
+        "swift": "                    DatePicker(\"When\", selection: $date, in: Date().addingTimeInterval(60)...)\n                    Toggle(\"Play a sound\", isOn: $sound)\n                }\n                Section {\n                    Button(\"In one hour\") { date = Date().addingTimeInterval(3_600) }\n                    Button(\"Tomorrow\") { date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date().addingTimeInterval(86_400) }\n                }"
+      },
+      {
+        "name": "Settings form",
+        "kind": "custom",
+        "source": "Sources/AdultViews.swift:AdultSettingsView",
+        "description": "Native library counts, offline guidance and support links; refresh action appears only with a configured endpoint.",
+        "swift": "                Section(\"Your library\") {\n                    LabeledContent(\"Guides\", value: \"\\(store.articles.count)\")\n                    LabeledContent(\"Saved\", value: \"\\(store.articles.filter { store.progress($0.id).isSaved }.count)\")\n                    Text(\"Guides and checked steps stay available offline.\").font(.subheadline).foregroundStyle(AdultPalette.secondaryText)\n                    if store.canRefresh {\n                        Button(store.isRefreshing ? \"Checking…\" : \"Check for new guides\") { Task { await store.refresh() } }\n                            .disabled(store.isRefreshing)\n                    }\n                    if let issue = store.updateIssue { Text(issue).font(.subheadline) }\n                    if let issue = store.storageIssue {\n                        Text(issue).font(.subheadline)\n                        Button(\"Retry opening saved guides\") { Task { store.reloadLocalFiles(); await store.activateNotifications() } }\n                    }\n                }"
+      }
+    ],
+    "decisionStatus": {
+      "direction": "Provisional implementation language, not a user-confirmed durable brand metaphor.",
+      "answerFirstOpening": "Provisional from optional questions on 2026-10-03.",
+      "USFirstLocationSpecificContent": "Provisional from optional questions on 2026-10-03.",
+      "directNativeImplementation": "Authorized for this work; no global workflow preference was changed."
+    },
+    "evidence": {
+      "nativeRevision": "ab95cedbe7401da1f11f52e5befeafbc0b04848d",
+      "nativeInputSHA256": "45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e",
+      "nativeInputCount": 35,
+      "nativeInputRecord": "app-store-audit/2026-10-03-how-to-adult/native-inputs-contrast-final.json",
+      "signedPackageInspection": "app-store-audit/2026-10-03-how-to-adult/final-package-inspection-contrast-final.json",
+      "iPhone": {
+        "modelTestsPassed": 10,
+        "UITestsPassed": 2,
+        "nativeCaptures": 13,
+        "captureManifest": "app-store-audit/2026-10-03-how-to-adult/raw/iphone-contrast-final/manifest.json",
+        "resultBundle": "/tmp/howtoadult-phone-contrast-final-20261003.xcresult"
+      },
+      "iPad": {
+        "modelTestsPassed": 10,
+        "UITestsPassed": 2,
+        "nativeCaptures": 13,
+        "captureManifest": "app-store-audit/2026-10-03-how-to-adult/raw/ipad-contrast-final/manifest.json",
+        "resultBundle": "/tmp/howtoadult-pad-contrast-final-20261003.xcresult"
+      },
+      "contrast": {
+        "authoredSecondaryLightOnWhite": 6.96,
+        "authoredSecondaryDarkOnBlack": 9.55,
+        "systemSearchPlaceholderApproximate": 3.23,
+        "placeholderOverrideVerified": false,
+        "wholeAppAccessibilityVerdict": "Not established by these ratios."
+      },
+      "macOSRuntime": "Pending existing-container sharing consent; signed-package inspection is not a runtime pass.",
+      "finishReview": {
+        "record": "app-store-audit/2026-10-03-how-to-adult/design-finish-review.md",
+        "disposition": "recapture",
+        "scopedNativeVisualApproval": "All 26 final iPhone/iPad captures approved; no remaining material clipping finding.",
+        "scopedMarketingApproval": "All 20 final iPhone/iPad JPEGs approved; no material finding.",
+        "missingEvidence": [
+          "Original signed macOS bundle runtime verification",
+          "13 genuine native macOS captures",
+          "10 macOS marketing images"
+        ],
+        "macOSDefectVerdict": "Not established. This is an evidence gap.",
+        "wholeAppFinishApproval": false
+      },
+      "marketing": "Fresh 20-image phone/tablet set independently reviewed and approved with no material finding. Mac gallery pending. No assets uploaded.",
+      "marketingProvenance": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/marketing-provenance.json",
+      "remoteCatalog": "Implemented and verified locally. No live deployment verified and no native endpoint configured.",
+      "releaseClaim": false,
+      "historicalEvidence": "Earlier raw/iphone-final, raw/ipad-final, Mac captures and composed-iphone-ipad are superseded for this freeze.",
+      "marketingReview": "app-store-audit/2026-10-03-how-to-adult/marketing/composed-contrast-final/review-status.json"
+    }
+  },
+  "narrative": {
+    "northStar": "Public-library reference desk, provisional implementation language",
+    "overview": "The working direction is a public-library reference desk. Topic symbols help someone scan the index, a guide title leads the reading page, and bookmarks and checked steps retain a place. This is the implementation's provisional design language, not a user-confirmed brand metaphor. The user requested a native pocket guide with minimal interface wording, clear color and hierarchy, and no clipped text.",
+    "keyCharacteristics": [
+      "Native navigation around a quiet reading page.",
+      "Marine actions and system serif display titles.",
+      "Visible progress, wrapping instructions and original-source links."
+    ],
+    "rules": [],
+    "dos": [
+      "Do use native text styles and allow titles, summaries and instructions to wrap.",
+      "Do keep the reader leading-aligned inside its centered, bounded column.",
+      "Do pair topic colors and completion state with symbols and readable labels.",
+      "Do retain one visible selection container and the native navigation structures.",
+      "Do put location-specific labels near the affected guide and retain its source links.",
+      "Do keep Save and Cancel explicit for reminder drafts, with visible failure and disabled states."
+    ],
+    "donts": [
+      "Don't invent fixed values for semantic platform colors, typography metrics or native control focus treatments.",
+      "Don't hide checked instructions, shorten important content with ellipses or add decorative motion around reading.",
+      "Don't claim the system search-placeholder styling override works or treat authored-text contrast as a whole-app accessibility verdict.",
+      "Don't use browser mockups, another platform's UI or historical captures as native evidence for the frozen build.",
+      "Don't claim Mac runtime verification, a live catalog, completed galleries or an App Store submission while those records remain pending."
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "9B6C033C-A0F1-4C96-AF62-165800329550.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "13-dark-large-sources_0_E0D5CA30-2800-4B55-8FD5-63FBFF4195A7.png",
+        "timestamp" : 1791008655.064
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "E7232FDA-F9A0-46AC-BE76-0F31A131A18A.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "12-dark-large-reader_0_7F730E71-A994-4423-8E07-DE43B39D7164.png",
+        "timestamp" : 1791008641.948
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "BBC1DC2A-8853-4DC2-B08B-8CC27CC1B00B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "11-dark-large-guides_0_B104EF4F-FAA3-4216-B57B-60B66516E4A0.png",
+        "timestamp" : 1791008639.338
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testDarkAppearanceAndAccessibilityText()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testDarkAppearanceAndAccessibilityText"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "6BA60396-1466-4456-8616-59F95514A763.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "10-settings_0_FE045388-B314-4D09-80B8-903A3C6AEFF3.png",
+        "timestamp" : 1791008701.713
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "43E079E7-2153-43A6-B12B-9567A172D667.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "09-reminders_0_52C3326D-96F7-4185-A83A-F2B572584346.png",
+        "timestamp" : 1791008691.828
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "81C49B9A-F8F4-48ED-86BC-DFF76E1DA6AD.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "08-reminder_0_A74B769F-665A-4FD3-8CFB-E251F8967D4E.png",
+        "timestamp" : 1791008678.702
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "E2A71099-23B4-4D93-8A9A-5682CBCE06E3.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "07-money_0_F40EFF85-7AB3-4415-8DC1-5358F7619714.png",
+        "timestamp" : 1791008676.404
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "4FDEA72A-F886-447C-A843-72CB37E02BC1.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-search_0_71FABEA7-5790-4DC2-94E1-5A0714435419.png",
+        "timestamp" : 1791008674.025
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "7C2B2777-3E1A-4838-8807-73434F7FC3B0.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-saved_0_7ED6F195-90A2-41EE-84F7-0AF3C3B19FD0.png",
+        "timestamp" : 1791008668.954
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "CC29C9B6-063C-422D-935E-1EF339DCBB79.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-sources_0_4A9B1CE0-3DB6-45DC-840D-8387D53F63C7.png",
+        "timestamp" : 1791008665.819
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "E437577E-5A6F-46AF-899F-396F40D73211.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-steps_0_A9EA2F83-36D1-4FAF-B7C1-0BD623486923.png",
+        "timestamp" : 1791008662.532
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "DDEB7CED-8F81-441A-92E9-33303CDC8DAD.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-guide_0_E197C3E0-BE01-4179-87B5-07434E4A9501.png",
+        "timestamp" : 1791008662.291
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "7304B0AA-F5CE-4E2B-A585-8BFD016B53DF",
+        "deviceName" : "HowToAdult-QA-Phone-20261003",
+        "exportedFileName" : "2EFD68EC-C53D-40F9-B6EB-CC774FFC08CB.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-guides_0_34B53B36-8EAF-448F-8BBD-6EA013CF78D2.png",
+        "timestamp" : 1791008659.881
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testGuidesSearchSaveProgressAndGallery()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testGuidesSearchSaveProgressAndGallery"
+  }
+]

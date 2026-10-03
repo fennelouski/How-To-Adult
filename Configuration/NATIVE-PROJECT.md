@@ -46,9 +46,10 @@ project's ability to compile.
 
 Codex's Run action calls `./script/build_and_run.sh`, using a separate
 `build/macos` directory. The script stops only a process whose executable path
-matches this checkout's local app, builds, applies a local ad hoc debug signature
-with the app's sandbox entitlements, and opens the new bundle. It supports
-`--debug`, `--logs`, `--telemetry` and `--verify`. A process that does not exit
+matches this checkout's local app, builds with Xcode's Apple Development signing,
+verifies the team, bundle identifier and nested signatures, and opens the bundle
+with its sandbox entitlements. It supports `--debug`, `--logs`, `--telemetry`,
+`--verify` and `--qa-dark-large` for app-scoped appearance/text checks. A process that does not exit
 after a normal termination signal is preserved; the script never force-quits it.
 
 ## Native release packages

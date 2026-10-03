@@ -175,7 +175,7 @@ struct GuideCollectionView: View {
         }
         .background(AdultPalette.background)
         .navigationTitle(section == .browse ? (isSidebar ? "Guides" : "How to Adult") : section.rawValue)
-        .searchable(text: $query, prompt: "Laundry, money, making friends…")
+        .searchable(text: $query, prompt: Text("Laundry, money, making friends…").foregroundColor(AdultPalette.secondaryText))
         .refreshable { await store.refresh() }
         .onChange(of: section) { _, _ in query = ""; categoryID = nil }
         .accessibilityIdentifier("guide-collection")
@@ -188,7 +188,7 @@ struct GuideCollectionView: View {
                 .foregroundStyle(AdultPalette.ink)
                 .fixedSize(horizontal: false, vertical: true)
             Text("A useful next step is closer than you think.")
-                .font(.body).foregroundStyle(.secondary)
+                .font(.body).foregroundStyle(AdultPalette.secondaryText)
             if let article = store.articles.first(where: { $0.id == "wash-your-first-load" }) ?? store.articles.first {
                 Group {
                     if isSidebar {
@@ -287,13 +287,13 @@ private struct GuideRow: View {
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 7) {
                 Text(article.title).font(.headline).foregroundStyle(.primary)
-                Text(article.summary).font(.subheadline).foregroundStyle(.secondary)
+                Text(article.summary).font(.subheadline).foregroundStyle(AdultPalette.secondaryText)
                 if showsReminder, let date = store.progress(article.id).reminderDate {
                     Label { Text(date, format: .dateTime.month(.abbreviated).day().hour().minute()) } icon: { Image(systemName: "bell") }
                         .font(.caption).foregroundStyle(AdultPalette.accent)
                 } else {
                     Text("About \(article.minutes) min · \(article.steps.count) steps" + (article.jurisdiction == "General" ? "" : " · " + article.jurisdiction))
-                        .font(.caption).foregroundStyle(.secondary)
+                        .font(.caption).foregroundStyle(AdultPalette.secondaryText)
                 }
                 let completed = store.progress(article.id).completedCount(in: article)
                 if completed > 0 {
@@ -323,8 +323,8 @@ struct GuideReaderView: View {
                     Image(systemName: article.symbol).font(.largeTitle).foregroundStyle(AdultPalette.category(store.category(article)?.colorKey ?? "blue"))
                         .accessibilityHidden(true)
                     Text(article.title).font(.system(.largeTitle, design: .serif, weight: .bold)).fixedSize(horizontal: false, vertical: true)
-                    Text(article.summary).font(.title3).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
-                    Text("About \(article.minutes) min · \(article.steps.count) steps").font(.subheadline).foregroundStyle(.secondary)
+                    Text(article.summary).font(.title3).foregroundStyle(AdultPalette.secondaryText).fixedSize(horizontal: false, vertical: true)
+                    Text("About \(article.minutes) min · \(article.steps.count) steps").font(.subheadline).foregroundStyle(AdultPalette.secondaryText)
                     if article.jurisdiction != "General" {
                         Label(article.jurisdiction + " rules", systemImage: "globe").font(.subheadline.bold())
                     }
@@ -364,7 +364,7 @@ struct GuideReaderView: View {
                         }
                     }
                 }
-                Text("Reviewed \(article.updatedAt)").font(.caption).foregroundStyle(.secondary)
+                Text("Reviewed \(article.updatedAt)").font(.caption).foregroundStyle(AdultPalette.secondaryText)
                 if let date = store.progress(article.id).reminderDate, date > Date() {
                     VStack(alignment: .leading, spacing: 10) {
                         Label { Text(date, format: .dateTime.month().day().hour().minute()) } icon: { Image(systemName: "bell.badge") }
@@ -476,7 +476,7 @@ private struct AdultSettingsView: View {
                 Section("Your library") {
                     LabeledContent("Guides", value: "\(store.articles.count)")
                     LabeledContent("Saved", value: "\(store.articles.filter { store.progress($0.id).isSaved }.count)")
-                    Text("Guides and checked steps stay available offline.").font(.subheadline).foregroundStyle(.secondary)
+                    Text("Guides and checked steps stay available offline.").font(.subheadline).foregroundStyle(AdultPalette.secondaryText)
                     if store.canRefresh {
                         Button(store.isRefreshing ? "Checking…" : "Check for new guides") { Task { await store.refresh() } }
                             .disabled(store.isRefreshing)
@@ -490,7 +490,7 @@ private struct AdultSettingsView: View {
                 Section("About") {
                     Text("A pocket guide for everyday life.")
                     Text("Rules vary by location. Guides identify US-specific information and link to original sources.")
-                        .font(.subheadline).foregroundStyle(.secondary)
+                        .font(.subheadline).foregroundStyle(AdultPalette.secondaryText)
                     Link("Privacy", destination: URL(string: "https://nathanfennel.com/how-to-adult/privacy.html")!)
                     Link("Support", destination: URL(string: "https://nathanfennel.com/how-to-adult/support.html")!)
                 }
@@ -503,6 +503,7 @@ private struct AdultSettingsView: View {
 
 private enum AdultPalette {
     static let accent = Color("AccentColor")
+    static let secondaryText = Color("SecondaryText")
     static let ink = Color.primary
     #if os(macOS)
     static let background = Color(nsColor: .windowBackgroundColor)

@@ -1,5 +1,5 @@
 #!/usr/bin/env swift
-// Explicit native-capture manifest → 30 composed App Store JPEGs.
+// Explicit native-capture manifest → complete ten-image platform galleries.
 // Usage: swift scripts/make-marketing-images.swift [--validate] MANIFEST.json
 //        swift scripts/make-marketing-images.swift --self-test
 // Relative paths resolve beside the manifest. No screenshot discovery or UI redrawing.
@@ -87,6 +87,7 @@ struct Manifest: Codable {
     var outputDirectory: String
     var captures: [Capture]
     var galleries: [Gallery]
+    var pendingPlatforms: [Platform]? = nil
 }
 struct LoadedCapture {
     let metadata: Capture
@@ -143,8 +144,15 @@ func validate(_ manifest: Manifest, beside base: URL, testOnly: Bool = false) th
     try require(!manifest.outputDirectory.isEmpty, "Missing outputDirectory.")
     let output = resolve(manifest.outputDirectory, beside: base)
     try require(testOnly || output.pathComponents.contains("app-store-audit"), "Outputs must be inside app-store-audit.")
-    try require(manifest.galleries.count == 3 && Set(manifest.galleries.map(\.platform)) == Set(Platform.allCases),
-                "Include exactly one gallery each for iphone-6.9, ipad-13 and mac.")
+    let included = Set(manifest.galleries.map(\.platform))
+    let pending = Set(manifest.pendingPlatforms ?? [])
+    try require(!included.isEmpty && included.count == manifest.galleries.count,
+                "Include one complete gallery per available platform, without duplicates.")
+    try require(pending.count == (manifest.pendingPlatforms ?? []).count
+                && pending == Set(Platform.allCases).subtracting(included),
+                "Explicitly list every unavailable platform in pendingPlatforms; omit it only for a complete three-platform export.")
+    try require(manifest.captures.allSatisfy { included.contains($0.platform) },
+                "Capture records must belong to an included gallery; keep pending sources in a separate draft manifest.")
     try require(Set(manifest.captures.map(\.id)).count == manifest.captures.count, "Duplicate capture IDs.")
     var loaded: [String: LoadedCapture] = [:]
     for capture in manifest.captures {
@@ -506,6 +514,9 @@ struct Receipt: Encodable {
     let compositorPath: String
     let compositorSHA256: String
     let coordinates: String
+    let exportStatus: String
+    let includedPlatforms: [Platform]
+    let pendingPlatforms: [Platform]
     let sources: [SourceProof]
     let outputs: [OutputProof]
 }
@@ -532,6 +543,10 @@ func writeReviewPacket(_ outputs: [OutputProof], manifest: Manifest, captures: [
     var sections = ""
     for platform in Platform.allCases {
         let images = outputs.filter { $0.platform == platform }
+        if images.isEmpty {
+            sections += "<section><h2>\(platform.rawValue) — pending</h2><p>Genuine native captures are pending. No marketing images have been exported for this platform.</p></section>"
+            continue
+        }
         let cards = images.map { output in
             let relative = "\(platform.rawValue)/\(output.id).jpg"
             let captureIDs = output.transforms.map { $0.captureID }.joined(separator: ", ")
@@ -587,7 +602,7 @@ func writeReviewPacket(_ outputs: [OutputProof], manifest: Manifest, captures: [
     .gallery{display:grid;gap:24px;align-items:start}.phone{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}.wide{grid-template-columns:repeat(auto-fill,minmax(440px,1fr))}
     article{min-width:0}img{display:block;width:100%;height:auto;border-radius:8px}small{color:#afc4dc;line-height:1.6;display:block}code{overflow-wrap:anywhere}details{margin-top:12px;font-size:14px}li{margin-bottom:12px}
     </style><main><h1>How to Adult marketing review</h1>
-    <p>30 composed JPEGs. Every app image comes from the capture platform shown in its gallery. Click any image for its full size.</p>
+    <p>\(outputs.count) composed JPEGs across \(manifest.galleries.count) complete ten-image galleries. Every app image comes from the capture platform shown in its gallery. Click any image for its full size.</p>
     <p>Native base revision <code>\(escapeHTML(manifest.revision))</code><br>Build reference <code>\(escapeHTML(manifest.sourceBuildRef))</code><br>
     <a href="marketing-provenance.json">Source hashes, native capture details and layout transforms</a></p>
     \(sections)</main></html>
@@ -610,7 +625,7 @@ func makeImages(manifestURL: URL, validateOnly: Bool) throws {
     }
     try require(!FileManager.default.fileExists(atPath: receiptURL.path), "Provenance already exists. Use a new outputDirectory.")
     if validateOnly {
-        print("Validated \(captures.count) native captures and 30 images; no outputs written.")
+        print("Validated \(captures.count) native captures and \(manifest.galleries.reduce(0) { $0 + $1.images.count }) images; no outputs written.")
         return
     }
     var outputs: [OutputProof] = []
@@ -652,6 +667,9 @@ func makeImages(manifestURL: URL, validateOnly: Bool) throws {
                           compositorPath: URL(fileURLWithPath: CommandLine.arguments[0]).standardizedFileURL.path,
                           compositorSHA256: digest(try Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[0]))),
                           coordinates: "Pixels; origin bottom-left; rotations recorded clockwise (CSS/screen convention). Layers are back-to-front.",
+                          exportStatus: (manifest.pendingPlatforms ?? []).isEmpty ? "complete-platform-export" : "partial-platform-export",
+                          includedPlatforms: manifest.galleries.map(\.platform),
+                          pendingPlatforms: manifest.pendingPlatforms ?? [],
                           sources: sources, outputs: outputs)
     let encoder = JSONEncoder()
     encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
@@ -756,6 +774,12 @@ func selfTest() throws {
     try rejected({ $0.captures[1].nativeCapture["device"] = .string("DIFFERENT TEST DEVICE") }, "cross-device fan")
     try rejected({ $0.galleries[0].images[0].hero = "mac-hero" }, "cross-platform layer")
     try rejected({ $0.galleries[0].images.removeLast() }, "incomplete gallery")
+    try rejected({ $0.galleries.removeLast(); $0.captures.removeAll { $0.platform == .mac } }, "unreported pending platform")
+    var partial = manifest
+    partial.galleries.removeAll { $0.platform == .mac }
+    partial.captures.removeAll { $0.platform == .mac }
+    partial.pendingPlatforms = [.mac]
+    _ = try validate(partial, beside: directory, testOnly: true)
     for gallery in galleries {
         let image = gallery.images[0]
         let transforms = layers(for: image, platform: gallery.platform, index: 0, captures: loaded)

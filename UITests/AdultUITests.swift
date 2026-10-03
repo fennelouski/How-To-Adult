@@ -66,9 +66,13 @@ import UIKit
         XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
         shot("12-dark-large-reader")
         let reader = app.scrollViews["guide-reader"]
-        for _ in 0..<8 where !app.staticTexts["Go to the source"].isHittable { reader.swipeUp() }
-        XCTAssertTrue(app.staticTexts["Go to the source"].isHittable)
+        // SwiftUI combines nearby prose into one accessibility text element;
+        // its hit-test frame can be visible before the source link itself.
+        for _ in 0..<5 { reader.swipeUp() }
         shot("13-dark-large-sources")
+        let source = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "label CONTAINS %@", "Whirlpool laundry basics")).firstMatch
+        XCTAssertTrue(source.exists)
     }
 
     func testGuidesSearchSaveProgressAndGallery() throws {

@@ -1,0 +1,24 @@
+{
+  "mode": "migration-pending",
+  "status": "Implemented and locally verified; no remote deployment attempted",
+  "verifiedRevision": null,
+  "awsURL": null,
+  "vercelURL": null,
+  "actualCutoverAt": null,
+  "targetCutoverAt": "2026-10-22T07:00:00Z",
+  "singleDataOwner": "AWS versioned private S3 catalog; Vercel public GET rewrites only",
+  "scheduledGenerationEnabled": false,
+  "productionDomainsChanged": false,
+  "commands": [
+    "python3 backend/deploy.py parallel"
+  ],
+  "checks": {
+    "localEvidence": "local-verification.json",
+    "backendTests": 49,
+    "backendPassed": 49,
+    "cloudFormationLint": "pass",
+    "starterCatalog": "56 guides validated",
+    "live": null
+  },
+  "readiness": "Live deploy, functional parity, repeat deployment, rollback and parallel observation pending"
+}

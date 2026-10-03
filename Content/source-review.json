@@ -1,0 +1,453 @@
+{
+  "catalogRevision": "2026-10-03-starter-1",
+  "reviewedAt": "2026-10-03T04:56:44.580826Z",
+  "articleCount": 56,
+  "stepCount": 224,
+  "sourceCount": 38,
+  "researchMethod": "Primary-source web search and targeted source reads on 2026-10-03, followed by direct public URL sample checks. Article wording is original. No source was treated as a license for personalized medical, legal or financial advice.",
+  "limitations": [
+    "HTTP success proves source availability, not the correctness or current applicability of every instruction.",
+    "Some official sites block automated retrieval. The individual records identify failures rather than claiming every link was fetched.",
+    "No qualified medical, legal or tax professional has separately reviewed this starter library. Sensitive guide changes require editorial review before publication.",
+    "No backend deployment or daily publishing schedule is implied by this record."
+  ],
+  "sources": [
+    {
+      "url": "https://consumer.ftc.gov/articles/free-credit-reports",
+      "title": "FTC free credit reports",
+      "articleIDs": [
+        "check-your-credit-report"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://consumer.ftc.gov/articles/free-credit-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges",
+      "title": "FTC using credit cards",
+      "articleIDs": [
+        "understand-a-credit-card-bill"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://docs.fcc.gov/public/attachments/DOC-401799A1.pdf",
+      "title": "FCC broadband consumer label fact sheet",
+      "articleIDs": [
+        "find-a-cheaper-phone-plan"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://docs.fcc.gov/public/attachments/DOC-401799A1.pdf",
+      "contentType": "application/pdf; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/cfpb_understanding-your-pay-stub_tool_2021-08.pdf",
+      "title": "CFPB understanding your pay stub",
+      "articleIDs": [
+        "check-your-first-pay-stub"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://odphp.health.gov/moveyourway/activity-planner/why-these-goals",
+      "title": "HHS Move Your Way activity goals",
+      "articleIDs": [
+        "try-strength-training"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://odphp.health.gov/moveyourway/activity-planner/why-these-goals",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 24350,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://tide.com/en-us/how-to-wash-clothes/how-to-remove-stains",
+      "title": "Tide stain treatment guidance",
+      "articleIDs": [
+        "treat-a-clothing-stain"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://tide.com/en-us/how-to-wash-clothes/how-to-remove-stains",
+      "contentType": "text/html",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/getting-started.html",
+      "title": "CDC getting started with physical activity",
+      "articleIDs": [
+        "start-a-walking-habit"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.cdc.gov/hygiene/about/cleaning-and-disinfecting-with-bleach.html",
+      "title": "CDC cleaning and disinfecting with bleach",
+      "articleIDs": [
+        "clean-a-bathroom"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+      "title": "CDC cleaning and disinfecting your home",
+      "articleIDs": [
+        "clean-a-bathroom"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "title": "CDC adult activity guidelines",
+      "articleIDs": [
+        "plan-an-active-week"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/chronic-health-conditions-and-disabilities.html",
+      "title": "CDC activity with chronic conditions and disabilities",
+      "articleIDs": [
+        "start-a-walking-habit",
+        "try-strength-training"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+      "title": "CFPB building an emergency fund",
+      "articleIDs": [
+        "start-an-emergency-fund"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.consumerfinance.gov/archive/blog/tools-to-help-pay-bills/",
+      "title": "CFPB tools for paying bills",
+      "articleIDs": [
+        "set-up-a-bill-calendar"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/",
+      "title": "CFPB Your Money, Your Goals budget tools",
+      "articleIDs": [
+        "make-a-first-budget"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/what-you-should-know-about-your-retirement-plan",
+      "title": "DOL understanding your retirement plan",
+      "articleIDs": [
+        "start-with-your-401k"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.dol.gov/node/63354",
+      "title": "DOL a look at 401(k) plan fees",
+      "articleIDs": [
+        "read-your-401k-fees"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.energy.gov/articles/5-tips-help-you-save-energy-bills-winter",
+      "title": "US Department of Energy energy-saving tips",
+      "articleIDs": [
+        "lower-home-energy-use"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://www.energy.gov/articles/5-tips-help-you-save-energy-bills-winter",
+      "contentType": "text/html; charset=utf-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+      "title": "FDA food allergies and cross-contact",
+      "articleIDs": [
+        "host-a-simple-dinner"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "title": "FoodSafety.gov safe cooking temperatures",
+      "articleIDs": [
+        "use-a-food-thermometer"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "title": "FoodSafety.gov four steps to food safety",
+      "articleIDs": [
+        "make-a-pantry-meal",
+        "roast-a-tray-of-vegetables",
+        "host-a-simple-dinner"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/eggs/shell-eggs-farm-table",
+      "title": "USDA shell egg safety",
+      "articleIDs": [
+        "make-scrambled-eggs"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/big-thaw-safe-defrosting-methods",
+      "title": "USDA safe defrosting methods",
+      "articleIDs": [
+        "thaw-food-safely"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety",
+      "title": "USDA leftovers and food safety",
+      "articleIDs": [
+        "cook-a-pot-of-rice",
+        "store-leftovers-safely"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text",
+      "title": "FTC clothing care instructions",
+      "articleIDs": [
+        "read-a-care-label"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.irs.gov/file-your-taxes-for-free",
+      "title": "IRS free tax filing options",
+      "articleIDs": [
+        "find-free-tax-filing-help"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.irs.gov/file-your-taxes-for-free",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.irs.gov/filing/gather-your-documents",
+      "title": "IRS gather your documents",
+      "articleIDs": [
+        "gather-tax-documents"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.irs.gov/filing/gather-your-documents",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.mouthhealthy.org/dental-care/questions-about-going-to-the-dentist",
+      "title": "American Dental Association dentist visit questions",
+      "articleIDs": [
+        "book-a-dentist-visit"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.mouthhealthy.org/dental-care/questions-about-going-to-the-dentist",
+      "contentType": "text/html; charset=utf-8",
+      "sampleBytes": 42428,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.myplate.gov/sites/default/files/2024-06/TipSheet-24-Meal-Planning.pdf",
+      "title": "USDA MyPlate meal planning",
+      "articleIDs": [
+        "plan-a-small-grocery-shop"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits",
+      "title": "NIH healthy sleep habits",
+      "articleIDs": [
+        "make-a-sleep-routine"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits",
+      "contentType": "text/html; charset=utf-8",
+      "sampleBytes": 65314,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.nhtsa.gov/recalls",
+      "title": "NHTSA vehicle recall lookup",
+      "articleIDs": [
+        "check-a-vehicle-recall"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.nhtsa.gov/summer-driving-tips",
+      "title": "NHTSA road trip and vehicle checks",
+      "articleIDs": [
+        "make-a-car-maintenance-plan"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.nhtsa.gov/vehicle-safety/tires",
+      "title": "NHTSA TireWise tire maintenance",
+      "articleIDs": [
+        "check-your-tire-pressure"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.nia.nih.gov/health/five-ways-get-most-out-your-doctors-visit",
+      "title": "NIH making the most of a doctor visit",
+      "articleIDs": [
+        "prepare-for-a-doctor-visit"
+      ],
+      "httpStatus": 405,
+      "verification": "Direct automated fetch failed; indexed primary-source excerpts were researched. Review in a normal browser before relying on new or changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.nimh.nih.gov/health/find-help",
+      "title": "NIMH finding mental health help",
+      "articleIDs": [
+        "find-mental-health-support"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://www.nimh.nih.gov/health/find-help",
+      "contentType": "text/html; charset=UTF-8",
+      "sampleBytes": 61280,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source page fetched through web research on 2026-10-03; relevant guidance reviewed."
+    },
+    {
+      "url": "https://www.usfa.fema.gov/downloads/fief/up_in_smoke_home_checklist.pdf",
+      "title": "US Fire Administration home fire safety checklist",
+      "articleIDs": [
+        "dry-clothes-with-care"
+      ],
+      "httpStatus": 206,
+      "finalURL": "https://www.usfa.fema.gov/downloads/fief/up_in_smoke_home_checklist.pdf",
+      "contentType": "application/pdf",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html",
+      "title": "US Fire Administration smoke alarms",
+      "articleIDs": [
+        "test-your-smoke-alarms"
+      ],
+      "httpStatus": 200,
+      "finalURL": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html",
+      "contentType": "text/html",
+      "sampleBytes": 65536,
+      "verification": "Fetched a public source sample; this is not a complete editorial accuracy check.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.whirlpool.com/blog/washers-and-dryers/dry-clothes-faster.html",
+      "title": "Whirlpool drying guidance",
+      "articleIDs": [
+        "dry-clothes-with-care"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; primary-source indexed excerpts were researched. Check the current page before relying on changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    },
+    {
+      "url": "https://www.whirlpool.com/blog/washers-and-dryers/how-to-do-laundry.html",
+      "title": "Whirlpool laundry basics",
+      "articleIDs": [
+        "wash-your-first-load"
+      ],
+      "httpStatus": 403,
+      "verification": "Direct automated fetch failed; primary-source indexed excerpts were researched. Check the current page before relying on changed claims.",
+      "webResearch": "Primary-source search excerpts reviewed on 2026-10-03."
+    }
+  ],
+  "keyChecks": [
+    "FoodSafety.gov chart confirms poultry, including ground poultry, is 74°C/165°F; other specified ground meats are 71°C/160°F.",
+    "USDA primary-source indexed guidance confirms leftovers within 2 hours, within 1 hour above 90°F, refrigeration for 3 to 4 days and reheating to 165°F.",
+    "DOL source confirms own 401(k) contributions are vested, employer money may have a vesting schedule, and fees matter alongside risk and objectives.",
+    "CDC adult guidance confirms 150 moderate minutes or 75 vigorous minutes or an equivalent mix, with strengthening at least 2 days weekly.",
+    "NIMH current primary page supports US 988 crisis contact and 911 for life-threatening situations.",
+    "IRS guide links current free-filing eligibility rather than storing volatile dollar limits or filing deadlines."
+  ]
+}

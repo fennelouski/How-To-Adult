@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+release-output/
+local-store/
+.vercel/
+

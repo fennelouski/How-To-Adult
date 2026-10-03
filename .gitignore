@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+DerivedData/
+build/
+*.xcresult
+*.xcarchive
+*.ipa
+*.pkg
+xcuserdata/
+*.xcuserstate
+backend/node_modules/
+backend/.vercel/
+backend/.env*
+!backend/.env.example

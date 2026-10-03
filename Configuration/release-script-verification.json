@@ -1,0 +1,31 @@
+{
+  "verifiedAt": "2026-10-03T05:16:04.233395+00:00",
+  "releaseScript": "scripts/release-native.py",
+  "checks": {
+    "pythonSyntax": "PASS",
+    "exportOptionsPlistLint": "PASS",
+    "exportOnlyMethodsAndTeam": "PASS",
+    "runScriptBashSyntax": "PASS",
+    "readOnlyHelpPaths": "PASS",
+    "changedNativeInputsRejected": "PASS",
+    "untrackedNativeInputsRejected": "PASS",
+    "wrongHeadRejected": "PASS",
+    "iosAndMacCommandPlans": "PASS"
+  },
+  "runAction": {
+    "path": ".codex/environments/environment.toml",
+    "command": "./script/build_and_run.sh",
+    "killScope": "same-user process with exact local app executable path; SIGTERM only"
+  },
+  "archiveExecuted": false,
+  "exportExecuted": false,
+  "uploadExecuted": false,
+  "appStoreConnectRecordCreated": false,
+  "guiLaunchExecuted": false,
+  "note": "Release execution awaits a frozen commit from the parent after native QA. Signed artifact inspection is implemented but has not yet run for How to Adult.",
+  "requiredReasonApiAudit": {
+    "source": "https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitype",
+    "matchedApiSymbols": [],
+    "interpretation": "No direct uses of listed required-reason APIs found in current native Sources; FileManager.fileExists(atPath:) is not listed in Apple\u2019s file-timestamp API category. Recheck if native APIs or SDKs change."
+  }
+}

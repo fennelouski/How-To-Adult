@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		CF8E697AD3C7FF66A2674976 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultCore.swift";
+			sourceTree = "<group>";
+		};
+		E8BFFC13605D8558DDB18199 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultStore.swift";
+			sourceTree = "<group>";
+		};
+		636B1AB0105B4EC4323FBC19 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultViews.swift";
+			sourceTree = "<group>";
+		};
+		12AC0F1A42CD7EF33B7D8F9C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App.swift";
+			sourceTree = "<group>";
+		};
+		96D1D999AC86052AD9E6D711 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultCoreTests.swift";
+			sourceTree = "<group>";
+		};
+		13BD6DCF6818C3FECDACCCB0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultUITests.swift";
+			sourceTree = "<group>";
+		};
+		8BF729FFE074CAEE622C0292 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "folder.assetcatalog";
+			path = "Assets.xcassets";
+			sourceTree = "<group>";
+		};
+		652F55016243BF1B9F1BBEA4 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.json";
+			path = "catalog.json";
+			sourceTree = "<group>";
+		};
+		05B3ABF2579A5EB66403CD78 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xml";
+			path = "PrivacyInfo.xcprivacy";
+			sourceTree = "<group>";
+		};
+		B5367E1165A83EC33AA89553 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "iOS-Info.plist";
+			sourceTree = "<group>";
+		};
+		F974B6584DBE051B16B4A38D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "macOS-Info.plist";
+			sourceTree = "<group>";
+		};
+		5747BFB130335458B26CEF24 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "iOS.entitlements";
+			sourceTree = "<group>";
+		};
+		F16C068B34C806F87F4D8D26 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "macOS.entitlements";
+			sourceTree = "<group>";
+		};
+		9FD9A21035C3179BC1DFA0D7 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "How to Adult.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		2B05C6321DDB659CC319DD8E = {
+			isa = "PBXBuildFile";
+			fileRef = "CF8E697AD3C7FF66A2674976";
+		};
+		49EEA09D899A6AB5DC6DC2AB = {
+			isa = "PBXBuildFile";
+			fileRef = "E8BFFC13605D8558DDB18199";
+		};
+		FE16BFF9DFE8F03C994A7A19 = {
+			isa = "PBXBuildFile";
+			fileRef = "636B1AB0105B4EC4323FBC19";
+		};
+		2774DA2D8D44B58F173005D5 = {
+			isa = "PBXBuildFile";
+			fileRef = "12AC0F1A42CD7EF33B7D8F9C";
+		};
+		B373DC6FA4E2354A01A2A131 = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF729FFE074CAEE622C0292";
+		};
+		62F47DDA671AB69427C6EF97 = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		FA5002AC873BA8128D4A03D8 = {
+			isa = "PBXBuildFile";
+			fileRef = "05B3ABF2579A5EB66403CD78";
+		};
+		60472100DB3D03EEBB12E513 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"2B05C6321DDB659CC319DD8E",
+				"49EEA09D899A6AB5DC6DC2AB",
+				"FE16BFF9DFE8F03C994A7A19",
+				"2774DA2D8D44B58F173005D5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A666746D3D8E67100422B56 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933F43E8174CF6167131BFAA = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"B373DC6FA4E2354A01A2A131",
+				"62F47DDA671AB69427C6EF97",
+				"FA5002AC873BA8128D4A03D8",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4EDCF5098D5ECC7A4561D48 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/iOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/iOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		C94F8E862FC9B1353C4AE521 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/iOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/iOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		8928A5BF0E9427C4639DC80C = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"B4EDCF5098D5ECC7A4561D48",
+				"C94F8E862FC9B1353C4AE521",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		67681DD7256373AE6DDFFE4B = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "8928A5BF0E9427C4639DC80C";
+			buildPhases = (
+				"60472100DB3D03EEBB12E513",
+				"1A666746D3D8E67100422B56",
+				"933F43E8174CF6167131BFAA",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HowToAdult-iOS";
+			productName = "How to Adult";
+			productReference = "9FD9A21035C3179BC1DFA0D7";
+			productType = "com.apple.product-type.application";
+		};
+		552AF03E5DBE9E00D96E6DFD = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultTests-iOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		51548C506FC8F59230AC08E6 = {
+			isa = "PBXBuildFile";
+			fileRef = "96D1D999AC86052AD9E6D711";
+		};
+		11D337EB63662E67F547D537 = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		7730F49F203BF2E999074AE4 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"51548C506FC8F59230AC08E6",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A21EA78166B95D95DA7FBE85 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E8817C5D506B4E9D2B93780 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"11D337EB63662E67F547D537",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39019131E74CE759D01E0E17 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "244210E48437B6556980A702";
+			proxyType = 1;
+			remoteGlobalIDString = "67681DD7256373AE6DDFFE4B";
+			remoteInfo = "HowToAdult-iOS";
+		};
+		9595C13FEFC848615955B568 = {
+			isa = "PBXTargetDependency";
+			target = "67681DD7256373AE6DDFFE4B";
+			targetProxy = "39019131E74CE759D01E0E17";
+		};
+		FAC254EB7805F2D6CEAC90EB = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.ios";
+				PRODUCT_NAME = "HowToAdultTests-iOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-iOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		AF35E072F1FD9E3F83901B13 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.ios";
+				PRODUCT_NAME = "HowToAdultTests-iOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-iOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		5BAAE5CF8F3B4884FA007E9F = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"FAC254EB7805F2D6CEAC90EB",
+				"AF35E072F1FD9E3F83901B13",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		FF05102871ACC311855A65B3 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "5BAAE5CF8F3B4884FA007E9F";
+			buildPhases = (
+				"7730F49F203BF2E999074AE4",
+				"A21EA78166B95D95DA7FBE85",
+				"9E8817C5D506B4E9D2B93780",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"9595C13FEFC848615955B568",
+			);
+			name = "HowToAdultTests-iOS";
+			productName = "HowToAdultTests-iOS";
+			productReference = "552AF03E5DBE9E00D96E6DFD";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0E6D7E6E769EA270D01DC7B = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultUITests-iOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		46230286BD920E8606AD1716 = {
+			isa = "PBXBuildFile";
+			fileRef = "13BD6DCF6818C3FECDACCCB0";
+		};
+		DE701865DC609F84C4408FA1 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"46230286BD920E8606AD1716",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BCF65D5C364FDC899DB0D32 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		115F9380AFEAEA69357AD236 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.ios";
+				PRODUCT_NAME = "HowToAdultUITests-iOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				TEST_TARGET_NAME = "HowToAdult-iOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		EBD4BD29B6C5E59E690F5E3A = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.ios";
+				PRODUCT_NAME = "HowToAdultUITests-iOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "iphoneos";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				TEST_TARGET_NAME = "HowToAdult-iOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		51828B7F9BEFCCD875465F3D = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"115F9380AFEAEA69357AD236",
+				"EBD4BD29B6C5E59E690F5E3A",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		0E8F18C181707EFD11C986A9 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "51828B7F9BEFCCD875465F3D";
+			buildPhases = (
+				"DE701865DC609F84C4408FA1",
+				"5BCF65D5C364FDC899DB0D32",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"9595C13FEFC848615955B568",
+			);
+			name = "HowToAdultUITests-iOS";
+			productName = "HowToAdultUITests-iOS";
+			productReference = "B0E6D7E6E769EA270D01DC7B";
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1BD4F3FF6530441628471663 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "How to Adult.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		DD3A25CE63B9349AD9B482CB = {
+			isa = "PBXBuildFile";
+			fileRef = "CF8E697AD3C7FF66A2674976";
+		};
+		B659604C39AF149D10F797BC = {
+			isa = "PBXBuildFile";
+			fileRef = "E8BFFC13605D8558DDB18199";
+		};
+		D781AB9508796526DEAE100E = {
+			isa = "PBXBuildFile";
+			fileRef = "636B1AB0105B4EC4323FBC19";
+		};
+		ABD930F4ECEA5C85DC3FAD84 = {
+			isa = "PBXBuildFile";
+			fileRef = "12AC0F1A42CD7EF33B7D8F9C";
+		};
+		94FB3DB7E341CD76AD986A6E = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF729FFE074CAEE622C0292";
+		};
+		60272C802125DC8605000AB7 = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		1E751FEB8A15A26EBAB51C6E = {
+			isa = "PBXBuildFile";
+			fileRef = "05B3ABF2579A5EB66403CD78";
+		};
+		99B48E6E08C2AA4A9B89DD9B = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"DD3A25CE63B9349AD9B482CB",
+				"B659604C39AF149D10F797BC",
+				"D781AB9508796526DEAE100E",
+				"ABD930F4ECEA5C85DC3FAD84",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0F26D332495B893E9830E54 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB338B5D2FEA221B969E211 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"94FB3DB7E341CD76AD986A6E",
+				"60272C802125DC8605000AB7",
+				"1E751FEB8A15A26EBAB51C6E",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70C9EACA5B7E3809B9037EB = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/macOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/macOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ENABLE_APP_SANDBOX = "YES";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				ARCHS = "$(ARCHS_STANDARD)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		CCB0FE37063885821A61562C = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/macOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/macOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ENABLE_APP_SANDBOX = "YES";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				ARCHS = "$(ARCHS_STANDARD)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		F472D29DD135ECD6D97B66B7 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"A70C9EACA5B7E3809B9037EB",
+				"CCB0FE37063885821A61562C",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		11B73290E14014E9497F3C60 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "F472D29DD135ECD6D97B66B7";
+			buildPhases = (
+				"99B48E6E08C2AA4A9B89DD9B",
+				"C0F26D332495B893E9830E54",
+				"1BB338B5D2FEA221B969E211",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HowToAdult-macOS";
+			productName = "How to Adult";
+			productReference = "1BD4F3FF6530441628471663";
+			productType = "com.apple.product-type.application";
+		};
+		FBE56483618FE116071CFB1C = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultTests-macOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		DE6CDD7D12CEF1FF63ACE886 = {
+			isa = "PBXBuildFile";
+			fileRef = "96D1D999AC86052AD9E6D711";
+		};
+		B403380705AF04D6C6D84ECD = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		9DFD1A8D7B24EFD0760F4A17 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"DE6CDD7D12CEF1FF63ACE886",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A234125B983A45F9AC89D4BB = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8ADC317998A96F5D986727D = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"B403380705AF04D6C6D84ECD",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEAB42C390154581DA932890 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "244210E48437B6556980A702";
+			proxyType = 1;
+			remoteGlobalIDString = "11B73290E14014E9497F3C60";
+			remoteInfo = "HowToAdult-macOS";
+		};
+		8C22F05E90211693CE9481D8 = {
+			isa = "PBXTargetDependency";
+			target = "11B73290E14014E9497F3C60";
+			targetProxy = "FEAB42C390154581DA932890";
+		};
+		E4432C4D811DCDF5D9828FC6 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.macos";
+				PRODUCT_NAME = "HowToAdultTests-macOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/Contents/MacOS/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-macOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		52D00029E404CF178B837E2C = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.macos";
+				PRODUCT_NAME = "HowToAdultTests-macOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/Contents/MacOS/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-macOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		A2A85BB3CEE8182E4DFA94AD = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"E4432C4D811DCDF5D9828FC6",
+				"52D00029E404CF178B837E2C",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		6DD0BEFB3BBF88760819E935 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "A2A85BB3CEE8182E4DFA94AD";
+			buildPhases = (
+				"9DFD1A8D7B24EFD0760F4A17",
+				"A234125B983A45F9AC89D4BB",
+				"A8ADC317998A96F5D986727D",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"8C22F05E90211693CE9481D8",
+			);
+			name = "HowToAdultTests-macOS";
+			productName = "HowToAdultTests-macOS";
+			productReference = "FBE56483618FE116071CFB1C";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B79F85B4EC08C061A8FF55B0 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultUITests-macOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		1D27CC9CC8EC4F83AFC3F2F2 = {
+			isa = "PBXBuildFile";
+			fileRef = "13BD6DCF6818C3FECDACCCB0";
+		};
+		AFB433FB4543A08545B8A1FD = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"1D27CC9CC8EC4F83AFC3F2F2",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D22ACC6824E5888D4165B36 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E6A50C97F1219D1BFD2EE86 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.macos";
+				PRODUCT_NAME = "HowToAdultUITests-macOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ARCHS = "$(ARCHS_STANDARD)";
+				TEST_TARGET_NAME = "HowToAdult-macOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		61BF8F3853DE680A26B63B4C = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.macos";
+				PRODUCT_NAME = "HowToAdultUITests-macOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SUPPORTED_PLATFORMS = "macosx";
+				ARCHS = "$(ARCHS_STANDARD)";
+				TEST_TARGET_NAME = "HowToAdult-macOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		5882D1E6BE6C974D03A34449 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"8E6A50C97F1219D1BFD2EE86",
+				"61BF8F3853DE680A26B63B4C",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		DBB989C380FF0A6D16E8ADFC = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "5882D1E6BE6C974D03A34449";
+			buildPhases = (
+				"AFB433FB4543A08545B8A1FD",
+				"1D22ACC6824E5888D4165B36",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"8C22F05E90211693CE9481D8",
+			);
+			name = "HowToAdultUITests-macOS";
+			productName = "HowToAdultUITests-macOS";
+			productReference = "B79F85B4EC08C061A8FF55B0";
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		21D3B380B3DAA02544E7A4A3 = {
+			isa = "PBXGroup";
+			children = (
+				"CF8E697AD3C7FF66A2674976",
+				"E8BFFC13605D8558DDB18199",
+				"636B1AB0105B4EC4323FBC19",
+				"12AC0F1A42CD7EF33B7D8F9C",
+			);
+			path = "Sources";
+			sourceTree = "<group>";
+		};
+		023752C49C9D198427E934E7 = {
+			isa = "PBXGroup";
+			children = (
+				"96D1D999AC86052AD9E6D711",
+			);
+			path = "Tests";
+			sourceTree = "<group>";
+		};
+		8A6AD1E06B06123DE9F4A03D = {
+			isa = "PBXGroup";
+			children = (
+				"13BD6DCF6818C3FECDACCCB0",
+			);
+			path = "UITests";
+			sourceTree = "<group>";
+		};
+		0DA65B7BC11ABE80827019A5 = {
+			isa = "PBXGroup";
+			children = (
+				"8BF729FFE074CAEE622C0292",
+			);
+			path = "Resources";
+			sourceTree = "<group>";
+		};
+		3E7CC394241DF2EBCF2539FF = {
+			isa = "PBXGroup";
+			children = (
+				"652F55016243BF1B9F1BBEA4",
+			);
+			path = "Content";
+			sourceTree = "<group>";
+		};
+		A15F74DB2759EF265D1A992A = {
+			isa = "PBXGroup";
+			children = (
+				"05B3ABF2579A5EB66403CD78",
+				"B5367E1165A83EC33AA89553",
+				"F974B6584DBE051B16B4A38D",
+				"5747BFB130335458B26CEF24",
+				"F16C068B34C806F87F4D8D26",
+			);
+			path = "Configuration";
+			sourceTree = "<group>";
+		};
+		5BAB63C60BF318DAB40A4F04 = {
+			isa = "PBXGroup";
+			name = "Products";
+			children = (
+				"9FD9A21035C3179BC1DFA0D7",
+				"552AF03E5DBE9E00D96E6DFD",
+				"B0E6D7E6E769EA270D01DC7B",
+				"1BD4F3FF6530441628471663",
+				"FBE56483618FE116071CFB1C",
+				"B79F85B4EC08C061A8FF55B0",
+			);
+			sourceTree = "<group>";
+		};
+		0035FE99EA2940F7FA633A58 = {
+			isa = "PBXGroup";
+			children = (
+				"21D3B380B3DAA02544E7A4A3",
+				"023752C49C9D198427E934E7",
+				"8A6AD1E06B06123DE9F4A03D",
+				"0DA65B7BC11ABE80827019A5",
+				"3E7CC394241DF2EBCF2539FF",
+				"A15F74DB2759EF265D1A992A",
+				"5BAB63C60BF318DAB40A4F04",
+			);
+			sourceTree = "<group>";
+		};
+		184B519F8E1416CCE38CFFD7 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		A824290273A346217D9BE6F4 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		1922B098E983995960BE56B0 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"184B519F8E1416CCE38CFFD7",
+				"A824290273A346217D9BE6F4",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		244210E48437B6556980A702 = {
+			isa = "PBXProject";
+			attributes = {
+				BuildIndependentTargetsInParallel = "YES";
+				LastUpgradeCheck = "2660";
+				TargetAttributes = {
+					67681DD7256373AE6DDFFE4B = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					FF05102871ACC311855A65B3 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					0E8F18C181707EFD11C986A9 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					11B73290E14014E9497F3C60 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					6DD0BEFB3BBF88760819E935 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					DBB989C380FF0A6D16E8ADFC = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+				};
+			};
+			buildConfigurationList = "1922B098E983995960BE56B0";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "en";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"en",
+				"Base",
+			);
+			mainGroup = "0035FE99EA2940F7FA633A58";
+			productRefGroup = "5BAB63C60BF318DAB40A4F04";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"67681DD7256373AE6DDFFE4B",
+				"FF05102871ACC311855A65B3",
+				"0E8F18C181707EFD11C986A9",
+				"11B73290E14014E9497F3C60",
+				"6DD0BEFB3BBF88760819E935",
+				"DBB989C380FF0A6D16E8ADFC",
+			);
+		};
+	};
+	rootObject = "244210E48437B6556980A702";
+}

@@ -1,0 +1,2774 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-10-03-starter-1",
+  "publishedAt": "2026-10-03T04:50:22Z",
+  "categories": [
+    {
+      "id": "home",
+      "title": "Home",
+      "symbol": "house",
+      "colorKey": "teal"
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "symbol": "fork.knife",
+      "colorKey": "orange"
+    },
+    {
+      "id": "money",
+      "title": "Money",
+      "symbol": "banknote",
+      "colorKey": "green"
+    },
+    {
+      "id": "work",
+      "title": "Work",
+      "symbol": "briefcase",
+      "colorKey": "blue"
+    },
+    {
+      "id": "wellbeing",
+      "title": "Wellbeing",
+      "symbol": "heart",
+      "colorKey": "rose"
+    },
+    {
+      "id": "people",
+      "title": "People",
+      "symbol": "person.2",
+      "colorKey": "purple"
+    },
+    {
+      "id": "everyday",
+      "title": "Everyday",
+      "symbol": "square.grid.2x2",
+      "colorKey": "indigo"
+    }
+  ],
+  "articles": [
+    {
+      "id": "read-a-care-label",
+      "title": "Read a clothing care label",
+      "summary": "Pick the right wash and dry settings before you start.",
+      "categoryID": "home",
+      "symbol": "tag",
+      "minutes": 3,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "laundry",
+        "clothes",
+        "care"
+      ],
+      "tools": [
+        "Clothing care label"
+      ],
+      "steps": [
+        {
+          "id": "read-a-care-label-step-1",
+          "title": "Find the tag",
+          "body": "Look inside a side seam or near the collar. Check the washing, drying and ironing instructions before treating a new garment."
+        },
+        {
+          "id": "read-a-care-label-step-2",
+          "title": "Translate one instruction",
+          "body": "A crossed-out action means avoid it. If a symbol is unfamiliar, use the garment maker's care guide rather than guessing from the fabric alone."
+        },
+        {
+          "id": "read-a-care-label-step-3",
+          "title": "Choose the gentler limit",
+          "body": "For a mixed load, separate anything whose instructions conflict. Follow the lowest permitted temperature and gentlest cycle for items that can be washed together."
+        },
+        {
+          "id": "read-a-care-label-step-4",
+          "title": "Keep the instructions",
+          "body": "Photograph a hard-to-read tag. If the label says dry clean only, set the item aside instead of experimenting with your regular wash."
+        }
+      ],
+      "cautions": [
+        "The garment label takes priority over a general laundry tip."
+      ],
+      "sources": [
+        {
+          "title": "FTC clothing care instructions",
+          "url": "https://www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text"
+        }
+      ]
+    },
+    {
+      "id": "wash-your-first-load",
+      "title": "Wash a load of laundry",
+      "summary": "Clean clothes without shrinking your favorites.",
+      "categoryID": "home",
+      "symbol": "washer",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "laundry",
+        "washing",
+        "routine"
+      ],
+      "tools": [
+        "Detergent",
+        "Hamper",
+        "Washing machine"
+      ],
+      "steps": [
+        {
+          "id": "wash-your-first-load-step-1",
+          "title": "Sort a small load",
+          "body": "Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label."
+        },
+        {
+          "id": "wash-your-first-load-step-2",
+          "title": "Set the machine",
+          "body": "Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit."
+        },
+        {
+          "id": "wash-your-first-load-step-3",
+          "title": "Measure detergent",
+          "body": "Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require."
+        },
+        {
+          "id": "wash-your-first-load-step-4",
+          "title": "Finish the job",
+          "body": "Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry."
+        }
+      ],
+      "cautions": [
+        "Keep detergent away from children and pets. Never combine cleaning chemicals."
+      ],
+      "sources": [
+        {
+          "title": "Whirlpool laundry basics",
+          "url": "https://www.whirlpool.com/blog/washers-and-dryers/how-to-do-laundry.html"
+        }
+      ]
+    },
+    {
+      "id": "treat-a-clothing-stain",
+      "title": "Treat a clothing stain",
+      "summary": "Give a spill a better chance of washing out.",
+      "categoryID": "home",
+      "symbol": "drop",
+      "minutes": 5,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "laundry",
+        "stain",
+        "clothes"
+      ],
+      "tools": [
+        "Clean cloth",
+        "Care label",
+        "Suitable stain treatment"
+      ],
+      "steps": [
+        {
+          "id": "treat-a-clothing-stain-step-1",
+          "title": "Lift the spill",
+          "body": "Remove loose material with a spoon or cloth. Blot gently with a clean cloth instead of grinding the stain into the fabric."
+        },
+        {
+          "id": "treat-a-clothing-stain-step-2",
+          "title": "Check compatibility",
+          "body": "Read the care label and treatment instructions. Test a suitable product on a hidden area before applying it to the stain."
+        },
+        {
+          "id": "treat-a-clothing-stain-step-3",
+          "title": "Treat and wash",
+          "body": "Follow the product's contact time, then wash using the garment's permitted method. For a delicate or valuable item, ask a cleaner first."
+        },
+        {
+          "id": "treat-a-clothing-stain-step-4",
+          "title": "Check before drying",
+          "body": "Look at the stain in good light. If it remains, repeat only a label-safe treatment before drying or ironing the garment."
+        }
+      ],
+      "cautions": [
+        "Avoid home-made chemical mixtures. A stain remover may damage some dyes and fabrics."
+      ],
+      "sources": [
+        {
+          "title": "Tide stain treatment guidance",
+          "url": "https://tide.com/en-us/how-to-wash-clothes/how-to-remove-stains"
+        }
+      ]
+    },
+    {
+      "id": "dry-clothes-with-care",
+      "title": "Dry clothes with care",
+      "summary": "Keep clothes and the dryer in good shape.",
+      "categoryID": "home",
+      "symbol": "wind",
+      "minutes": 5,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "laundry",
+        "dryer",
+        "air drying"
+      ],
+      "tools": [
+        "Care labels",
+        "Drying rack or dryer"
+      ],
+      "steps": [
+        {
+          "id": "dry-clothes-with-care-step-1",
+          "title": "Separate the exceptions",
+          "body": "Pull out items marked for flat drying or air drying. Follow their labels even if most of the load can tumble dry."
+        },
+        {
+          "id": "dry-clothes-with-care-step-2",
+          "title": "Prepare the dryer",
+          "body": "Clean the lint filter before each load. Check the dryer's instructions and do not block the exhaust or overload the drum."
+        },
+        {
+          "id": "dry-clothes-with-care-step-3",
+          "title": "Give air-dried clothes room",
+          "body": "Place permitted items on a rack with space between them. Reshape items that need flat drying and allow airflow around the rack."
+        },
+        {
+          "id": "dry-clothes-with-care-step-4",
+          "title": "Put away dry items",
+          "body": "Check seams and pockets for dampness. Fold or hang clothes only once dry. Arrange qualified service if drying takes unusually long or the machine overheats."
+        }
+      ],
+      "cautions": [
+        "Do not leave a dryer running when you leave home or go to sleep."
+      ],
+      "sources": [
+        {
+          "title": "US Fire Administration home fire safety checklist",
+          "url": "https://www.usfa.fema.gov/downloads/fief/up_in_smoke_home_checklist.pdf"
+        },
+        {
+          "title": "Whirlpool drying guidance",
+          "url": "https://www.whirlpool.com/blog/washers-and-dryers/dry-clothes-faster.html"
+        }
+      ]
+    },
+    {
+      "id": "reset-a-room-in-15-minutes",
+      "title": "Reset a room in 15 minutes",
+      "summary": "Make one space easier to use today.",
+      "categoryID": "home",
+      "symbol": "sparkles",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "tidying",
+        "home",
+        "quick win"
+      ],
+      "tools": [
+        "Timer",
+        "Rubbish bag",
+        "Basket"
+      ],
+      "steps": [
+        {
+          "id": "reset-a-room-in-15-minutes-step-1",
+          "title": "Pick one space",
+          "body": "Choose the place you need next, such as the table or bedroom floor. Set a 15-minute timer and leave other rooms for later."
+        },
+        {
+          "id": "reset-a-room-in-15-minutes-step-2",
+          "title": "Remove the obvious items",
+          "body": "Collect rubbish and dishes first. Put items that belong elsewhere in a basket so you are not walking back and forth."
+        },
+        {
+          "id": "reset-a-room-in-15-minutes-step-3",
+          "title": "Clear a useful surface",
+          "body": "Make enough space to eat, work or get dressed. Return things you use daily to a reachable home."
+        },
+        {
+          "id": "reset-a-room-in-15-minutes-step-4",
+          "title": "Stop with a next step",
+          "body": "Empty the basket if time remains. Otherwise choose one place for it and schedule a short follow-up. A usable room is a worthwhile finish."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "clean-a-bathroom",
+      "title": "Clean a bathroom",
+      "summary": "Work through surfaces without mixing products.",
+      "categoryID": "home",
+      "symbol": "shower",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cleaning",
+        "bathroom",
+        "home"
+      ],
+      "tools": [
+        "Surface-safe cleaner",
+        "Separate cloths",
+        "Gloves if the label requires"
+      ],
+      "steps": [
+        {
+          "id": "clean-a-bathroom-step-1",
+          "title": "Prepare the room",
+          "body": "Put away toiletries, open ventilation if available and read the cleaner label. Keep products in their original containers."
+        },
+        {
+          "id": "clean-a-bathroom-step-2",
+          "title": "Work from cleaner to dirtier",
+          "body": "Clean the mirror and sink, then the bath or shower with suitable products. Use a separate cloth for the toilet."
+        },
+        {
+          "id": "clean-a-bathroom-step-3",
+          "title": "Follow the label",
+          "body": "For routine cleaning, remove dirt with a suitable cleaner. If disinfecting is needed, clean first and follow the disinfectant's stated contact time."
+        },
+        {
+          "id": "clean-a-bathroom-step-4",
+          "title": "Finish the floor",
+          "body": "Clean the floor last and let it dry before walking on it. Wash reusable cloths as appropriate and wash your hands."
+        }
+      ],
+      "cautions": [
+        "Never mix bleach or any disinfectant with other cleaning products. Keep children and pets away while cleaning."
+      ],
+      "sources": [
+        {
+          "title": "CDC cleaning and disinfecting your home",
+          "url": "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html"
+        },
+        {
+          "title": "CDC cleaning and disinfecting with bleach",
+          "url": "https://www.cdc.gov/hygiene/about/cleaning-and-disinfecting-with-bleach.html"
+        }
+      ]
+    },
+    {
+      "id": "test-your-smoke-alarms",
+      "title": "Test your smoke alarms",
+      "summary": "Turn a small monthly check into a habit.",
+      "categoryID": "home",
+      "symbol": "sensor",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "home safety",
+        "smoke alarm",
+        "reminders"
+      ],
+      "tools": [
+        "Alarm instructions",
+        "Safe access to the test button"
+      ],
+      "steps": [
+        {
+          "id": "test-your-smoke-alarms-step-1",
+          "title": "Locate the alarms",
+          "body": "Identify each alarm and read its instructions. Ask the landlord or building manager about shared systems and responsibilities if you rent."
+        },
+        {
+          "id": "test-your-smoke-alarms-step-2",
+          "title": "Press the test button",
+          "body": "Test each smoke alarm using its button at least monthly. Let other occupants know first and use safe access instead of balancing on furniture."
+        },
+        {
+          "id": "test-your-smoke-alarms-step-3",
+          "title": "Resolve a failed test",
+          "body": "Follow the maker's instructions for batteries, faults and replacement. Arrange help promptly if an alarm fails or you cannot reach it safely."
+        },
+        {
+          "id": "test-your-smoke-alarms-step-4",
+          "title": "Record the next check",
+          "body": "Write down the test date and set a monthly reminder. Check the alarm's age and the maker's replacement instructions."
+        }
+      ],
+      "cautions": [
+        "A test button does not test every possible fault. Never remove a battery to silence a nuisance alarm."
+      ],
+      "sources": [
+        {
+          "title": "US Fire Administration smoke alarms",
+          "url": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html"
+        }
+      ]
+    },
+    {
+      "id": "lower-home-energy-use",
+      "title": "Lower home energy use",
+      "summary": "Start with changes you can check on your next bill.",
+      "categoryID": "home",
+      "symbol": "bolt",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "energy",
+        "bills",
+        "home"
+      ],
+      "tools": [
+        "Recent energy bill",
+        "Heating or cooling instructions"
+      ],
+      "steps": [
+        {
+          "id": "lower-home-energy-use-step-1",
+          "title": "Find your baseline",
+          "body": "Compare usage rather than just the bill total. Note the season, occupancy and tariff so you do not mistake a price change for saved energy."
+        },
+        {
+          "id": "lower-home-energy-use-step-2",
+          "title": "Choose one safe adjustment",
+          "body": "Use heating or cooling settings suitable for the home and its occupants. Check the system instructions before setting a schedule, especially for heat pumps."
+        },
+        {
+          "id": "lower-home-energy-use-step-3",
+          "title": "Check airflow",
+          "body": "Keep vents clear. Inspect accessible filters according to the system manual and arrange permitted cleaning or replacement when needed."
+        },
+        {
+          "id": "lower-home-energy-use-step-4",
+          "title": "Review the result",
+          "body": "Record the change and review future usage. Ask your landlord before making permanent changes or servicing equipment you do not own."
+        }
+      ],
+      "cautions": [
+        "Maintain safe indoor temperatures. Never use an oven or outdoor fuel-burning appliance to heat a room."
+      ],
+      "sources": [
+        {
+          "title": "US Department of Energy energy-saving tips",
+          "url": "https://www.energy.gov/articles/5-tips-help-you-save-energy-bills-winter"
+        }
+      ]
+    },
+    {
+      "id": "build-a-small-home-toolkit",
+      "title": "Build a small home toolkit",
+      "summary": "Buy a few useful tools before buying a whole workshop.",
+      "categoryID": "home",
+      "symbol": "wrench.and.screwdriver",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "tools",
+        "home",
+        "repair"
+      ],
+      "tools": [
+        "List of likely tasks"
+      ],
+      "steps": [
+        {
+          "id": "build-a-small-home-toolkit-step-1",
+          "title": "Name the jobs",
+          "body": "List small tasks you actually need to do, such as tightening a chair screw or measuring a shelf. Ask whether the landlord should handle the repair."
+        },
+        {
+          "id": "build-a-small-home-toolkit-step-2",
+          "title": "Start with basics",
+          "body": "Consider a tape measure, suitable screwdrivers, a small level and protective equipment for those tasks. Choose tools you can grip and use comfortably."
+        },
+        {
+          "id": "build-a-small-home-toolkit-step-3",
+          "title": "Store instructions together",
+          "body": "Keep tools, their instructions and spare fasteners in one reachable box. Label anything sharp and keep it away from children."
+        },
+        {
+          "id": "build-a-small-home-toolkit-step-4",
+          "title": "Know when to stop",
+          "body": "If a job involves wiring, gas, hidden pipes, structural damage or an unfamiliar power tool, arrange qualified help before starting."
+        }
+      ],
+      "cautions": [
+        "Check for hidden services before drilling. Follow the tool and fixture manufacturer's instructions."
+      ],
+      "sources": []
+    },
+    {
+      "id": "make-a-room-feel-like-yours",
+      "title": "Make a room feel like yours",
+      "summary": "Give a room a purpose before shopping for decorations.",
+      "categoryID": "home",
+      "symbol": "sofa",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "decorating",
+        "room",
+        "budget"
+      ],
+      "tools": [
+        "Tape measure",
+        "Paper or notes app"
+      ],
+      "steps": [
+        {
+          "id": "make-a-room-feel-like-yours-step-1",
+          "title": "Choose the main use",
+          "body": "Name what you want the room to help you do, such as rest, eat or work. Clear a comfortable path to that area."
+        },
+        {
+          "id": "make-a-room-feel-like-yours-step-2",
+          "title": "Plan before buying",
+          "body": "Measure the room and existing furniture. Sketch where large pieces might go, including enough space to open doors and drawers."
+        },
+        {
+          "id": "make-a-room-feel-like-yours-step-3",
+          "title": "Pick a small palette",
+          "body": "Choose a base color from something you already own and one accent you enjoy. Try rearranging textiles, lighting or art before adding more objects."
+        },
+        {
+          "id": "make-a-room-feel-like-yours-step-4",
+          "title": "Live with one change",
+          "body": "Move one item or add one useful piece. Use the room for a week before another purchase so you can see what is still missing."
+        }
+      ],
+      "cautions": [
+        "Keep exits, heaters and ventilation clear. Get permission before making changes to a rented home."
+      ],
+      "sources": []
+    },
+    {
+      "id": "plan-a-small-grocery-shop",
+      "title": "Plan a small grocery shop",
+      "summary": "Buy food for meals you will actually make.",
+      "categoryID": "food",
+      "symbol": "cart",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "groceries",
+        "meal planning",
+        "budget"
+      ],
+      "tools": [
+        "Fridge and cupboard check",
+        "Shopping list"
+      ],
+      "steps": [
+        {
+          "id": "plan-a-small-grocery-shop-step-1",
+          "title": "Check what is there",
+          "body": "Look in the fridge, freezer and cupboards. Note ingredients that need using soon and anything you have enough of already."
+        },
+        {
+          "id": "plan-a-small-grocery-shop-step-2",
+          "title": "Pick realistic meals",
+          "body": "Choose a few meals for the days you will eat at home. Include one easy option for a busy evening and plan how you will use extra ingredients."
+        },
+        {
+          "id": "plan-a-small-grocery-shop-step-3",
+          "title": "Write quantities",
+          "body": "Turn those meals into a list. Add amounts, check the package size and mark suitable substitutions before shopping."
+        },
+        {
+          "id": "plan-a-small-grocery-shop-step-4",
+          "title": "Shop to the plan",
+          "body": "Compare unit prices where available. Bring chilled food home promptly, store it appropriately and keep the list for your next shop."
+        }
+      ],
+      "cautions": [
+        "Check ingredient labels for allergies and dietary needs."
+      ],
+      "sources": [
+        {
+          "title": "USDA MyPlate meal planning",
+          "url": "https://www.myplate.gov/sites/default/files/2024-06/TipSheet-24-Meal-Planning.pdf"
+        }
+      ]
+    },
+    {
+      "id": "make-a-pantry-meal",
+      "title": "Make a pantry meal",
+      "summary": "Build a meal with a few ingredients you already have.",
+      "categoryID": "food",
+      "symbol": "takeoutbag.and.cup.and.straw",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "pantry",
+        "simple meal"
+      ],
+      "tools": [
+        "Cooked grain or bread",
+        "Canned beans or another ready-to-eat protein",
+        "Vegetables",
+        "Seasoning"
+      ],
+      "steps": [
+        {
+          "id": "make-a-pantry-meal-step-1",
+          "title": "Choose a base",
+          "body": "Start with bread or a cooked grain. Follow the package's preparation instructions if the base needs cooking."
+        },
+        {
+          "id": "make-a-pantry-meal-step-2",
+          "title": "Add a ready-to-eat protein",
+          "body": "Use a suitable canned or cooked ingredient. Check the label and use a safe, undamaged package. Drain or rinse only as appropriate for the food."
+        },
+        {
+          "id": "make-a-pantry-meal-step-3",
+          "title": "Add vegetables and flavor",
+          "body": "Use washed fresh vegetables or cook frozen ones as their packaging directs. Add a little oil, sauce or seasoning, then taste and adjust."
+        },
+        {
+          "id": "make-a-pantry-meal-step-4",
+          "title": "Serve a useful portion",
+          "body": "Make enough for the meal and only the leftovers you can safely store. Put unused ingredients away and wash the utensils."
+        }
+      ],
+      "cautions": [
+        "This method assumes ingredients are safe to eat and prepared as their labels require. Check allergies."
+      ],
+      "sources": [
+        {
+          "title": "FoodSafety.gov four steps to food safety",
+          "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"
+        }
+      ]
+    },
+    {
+      "id": "cook-a-pot-of-rice",
+      "title": "Cook a pot of rice",
+      "summary": "Use the packet to get the water and timing right.",
+      "categoryID": "food",
+      "symbol": "flame",
+      "minutes": 25,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "rice",
+        "basics"
+      ],
+      "tools": [
+        "Rice",
+        "Water",
+        "Pot with lid",
+        "Measuring cup"
+      ],
+      "steps": [
+        {
+          "id": "cook-a-pot-of-rice-step-1",
+          "title": "Read the packet",
+          "body": "Rice varieties need different water ratios and cooking times. Measure a portion and use the instructions for the rice you have."
+        },
+        {
+          "id": "cook-a-pot-of-rice-step-2",
+          "title": "Prepare and heat",
+          "body": "Rinse only if the packet recommends it. Add the measured water, bring it to the instructed heat and cover if directed."
+        },
+        {
+          "id": "cook-a-pot-of-rice-step-3",
+          "title": "Cook without constant stirring",
+          "body": "Reduce the heat as directed and keep track of the time. When done, rest the pot if the packet says to, then loosen the rice with a fork."
+        },
+        {
+          "id": "cook-a-pot-of-rice-step-4",
+          "title": "Serve or chill promptly",
+          "body": "Serve the rice after cooking. Divide leftovers into shallow containers and refrigerate promptly using the leftovers guide. Do not leave the pot on the counter overnight."
+        }
+      ],
+      "cautions": [
+        "Take care with steam and hot handles. Cooked rice also needs safe refrigeration."
+      ],
+      "sources": [
+        {
+          "title": "USDA leftovers and food safety",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+        }
+      ]
+    },
+    {
+      "id": "make-scrambled-eggs",
+      "title": "Make scrambled eggs",
+      "summary": "A simple hot meal in one pan.",
+      "categoryID": "food",
+      "symbol": "frying.pan",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "eggs",
+        "breakfast"
+      ],
+      "tools": [
+        "Eggs",
+        "Bowl",
+        "Fork",
+        "Pan",
+        "Spatula",
+        "Small amount of cooking fat"
+      ],
+      "steps": [
+        {
+          "id": "make-scrambled-eggs-step-1",
+          "title": "Prepare the eggs",
+          "body": "Crack eggs into a bowl and beat them. Wash your hands and clean anything that touched raw egg before using it for ready-to-eat food."
+        },
+        {
+          "id": "make-scrambled-eggs-step-2",
+          "title": "Warm the pan",
+          "body": "Heat a little cooking fat over moderate heat. Add the eggs and move them gently with a spatula as they begin to set."
+        },
+        {
+          "id": "make-scrambled-eggs-step-3",
+          "title": "Cook until firm",
+          "body": "Keep folding the eggs until they are firm with no runny liquid remaining. Move the pan off the heat when the eggs are cooked."
+        },
+        {
+          "id": "make-scrambled-eggs-step-4",
+          "title": "Serve and clean up",
+          "body": "Serve on toast or with a side you enjoy. Clean the bowl, fork and work surface, and refrigerate any leftovers promptly."
+        }
+      ],
+      "cautions": [
+        "USDA recommends thoroughly cooked eggs. Use pasteurized eggs for preparations that will not be thoroughly cooked."
+      ],
+      "sources": [
+        {
+          "title": "USDA shell egg safety",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/eggs/shell-eggs-farm-table"
+        }
+      ]
+    },
+    {
+      "id": "roast-a-tray-of-vegetables",
+      "title": "Roast a tray of vegetables",
+      "summary": "Turn a few vegetables into a useful side.",
+      "categoryID": "food",
+      "symbol": "carrot",
+      "minutes": 35,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "vegetables",
+        "oven"
+      ],
+      "tools": [
+        "Vegetables",
+        "Knife and board",
+        "Oil",
+        "Baking tray",
+        "Oven gloves"
+      ],
+      "steps": [
+        {
+          "id": "roast-a-tray-of-vegetables-step-1",
+          "title": "Prepare the vegetables",
+          "body": "Wash your hands and rinse produce under running water. Remove damaged areas. Cut similar-sized pieces so the tray cooks more evenly."
+        },
+        {
+          "id": "roast-a-tray-of-vegetables-step-2",
+          "title": "Make space on the tray",
+          "body": "Toss the pieces with a little oil and seasoning. Spread them in one layer rather than piling everything in the middle."
+        },
+        {
+          "id": "roast-a-tray-of-vegetables-step-3",
+          "title": "Roast and check",
+          "body": "Try 200°C or 400°F as a starting point, adjusting for your oven and vegetables. Check after 15 minutes, turn if needed and continue until tender."
+        },
+        {
+          "id": "roast-a-tray-of-vegetables-step-4",
+          "title": "Serve with something filling",
+          "body": "Pair the vegetables with a grain and a protein you like. Chill any leftovers promptly rather than leaving the tray out."
+        }
+      ],
+      "cautions": [
+        "Use oven gloves and a stable heat-safe surface. Check allergies and ingredient labels."
+      ],
+      "sources": [
+        {
+          "title": "FoodSafety.gov four steps to food safety",
+          "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"
+        }
+      ]
+    },
+    {
+      "id": "store-leftovers-safely",
+      "title": "Store leftovers safely",
+      "summary": "Label a portion now so tomorrow's meal is easy.",
+      "categoryID": "food",
+      "symbol": "refrigerator",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "leftovers",
+        "food safety"
+      ],
+      "tools": [
+        "Shallow containers",
+        "Fridge thermometer",
+        "Label"
+      ],
+      "steps": [
+        {
+          "id": "store-leftovers-safely-step-1",
+          "title": "Chill on time",
+          "body": "Refrigerate perishable leftovers within 2 hours of cooking or serving, or within 1 hour when the surrounding temperature is above 32°C or 90°F."
+        },
+        {
+          "id": "store-leftovers-safely-step-2",
+          "title": "Use small containers",
+          "body": "Divide large amounts into shallow containers for faster cooling. Keep the refrigerator at 4°C or 40°F or below and avoid crowding it."
+        },
+        {
+          "id": "store-leftovers-safely-step-3",
+          "title": "Label and plan",
+          "body": "Write the food and date on the container. USDA generally advises using refrigerated leftovers within 3 to 4 days or freezing them for later."
+        },
+        {
+          "id": "store-leftovers-safely-step-4",
+          "title": "Reheat thoroughly",
+          "body": "Heat leftovers to 74°C or 165°F, using a food thermometer. Stir food heated in a microwave and follow applicable standing-time instructions."
+        }
+      ],
+      "cautions": [
+        "Discard food left out too long. Smell and appearance cannot reliably tell you whether food is safe."
+      ],
+      "sources": [
+        {
+          "title": "USDA leftovers and food safety",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+        }
+      ]
+    },
+    {
+      "id": "thaw-food-safely",
+      "title": "Thaw food safely",
+      "summary": "Choose a method before the frozen food leaves the freezer.",
+      "categoryID": "food",
+      "symbol": "snowflake",
+      "minutes": 5,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "freezer",
+        "food safety"
+      ],
+      "tools": [
+        "Tray or leakproof bag",
+        "Fridge or cold water"
+      ],
+      "steps": [
+        {
+          "id": "thaw-food-safely-step-1",
+          "title": "Prefer the fridge",
+          "body": "Plan ahead and thaw in the refrigerator at 4°C or 40°F or below. Put raw food in a container that keeps drips away from other food."
+        },
+        {
+          "id": "thaw-food-safely-step-2",
+          "title": "Use cold water if needed",
+          "body": "Keep food in a leakproof package, submerge it in cold water and change the water every 30 minutes. Cook immediately after thawing this way."
+        },
+        {
+          "id": "thaw-food-safely-step-3",
+          "title": "Follow microwave instructions",
+          "body": "Use the appliance's defrost instructions and cook immediately afterward. Some areas may start cooking while the rest is still frozen."
+        },
+        {
+          "id": "thaw-food-safely-step-4",
+          "title": "Check the package",
+          "body": "Some foods can be cooked from frozen. Follow their specific preparation instructions and verify safe cooking temperatures when required."
+        }
+      ],
+      "cautions": [
+        "Do not thaw perishable food on the counter or in hot water."
+      ],
+      "sources": [
+        {
+          "title": "USDA safe defrosting methods",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/big-thaw-safe-defrosting-methods"
+        }
+      ]
+    },
+    {
+      "id": "use-a-food-thermometer",
+      "title": "Use a food thermometer",
+      "summary": "Check doneness with a temperature instead of a guess.",
+      "categoryID": "food",
+      "symbol": "thermometer.medium",
+      "minutes": 5,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "cooking",
+        "food safety",
+        "meat"
+      ],
+      "tools": [
+        "Food thermometer",
+        "Safe temperature chart"
+      ],
+      "steps": [
+        {
+          "id": "use-a-food-thermometer-step-1",
+          "title": "Find the required temperature",
+          "body": "Check the FoodSafety.gov chart for the food. Poultry, including ground poultry, requires 74°C or 165°F. Ground beef, pork, lamb or veal requires 71°C or 160°F. Whole cuts have different temperature and rest-time requirements."
+        },
+        {
+          "id": "use-a-food-thermometer-step-2",
+          "title": "Measure in the right place",
+          "body": "Follow the thermometer's instructions. Check the thickest area without touching bone, fat or gristle. Thin foods may need a side insertion."
+        },
+        {
+          "id": "use-a-food-thermometer-step-3",
+          "title": "Check more than one point",
+          "body": "Measure several areas in a large item. If a reading is too low, keep cooking and check again with the cleaned probe."
+        },
+        {
+          "id": "use-a-food-thermometer-step-4",
+          "title": "Clean and store",
+          "body": "Clean the probe as its maker directs before and after use. Follow any required rest time after the food reaches its safe temperature."
+        }
+      ],
+      "cautions": [
+        "Food color alone is not a safe test of doneness. Check the chart for the exact food."
+      ],
+      "sources": [
+        {
+          "title": "FoodSafety.gov safe cooking temperatures",
+          "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+        }
+      ]
+    },
+    {
+      "id": "make-a-first-budget",
+      "title": "Make a first budget",
+      "summary": "Find out what your next paycheck needs to cover.",
+      "categoryID": "money",
+      "symbol": "chart.pie",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "budget",
+        "money",
+        "payday"
+      ],
+      "tools": [
+        "Income estimate",
+        "Recent bills",
+        "Notes or spreadsheet"
+      ],
+      "steps": [
+        {
+          "id": "make-a-first-budget-step-1",
+          "title": "Start with take-home money",
+          "body": "Write what you realistically expect to receive, not a hopeful best month. For variable income, plan a cautious baseline and note when payments arrive."
+        },
+        {
+          "id": "make-a-first-budget-step-2",
+          "title": "List the essentials",
+          "body": "Write housing, utilities, food, transport and required payments. Include their due dates and divide predictable annual costs into smaller monthly amounts."
+        },
+        {
+          "id": "make-a-first-budget-step-3",
+          "title": "Give the remainder a job",
+          "body": "Choose amounts for savings and flexible spending that fit what remains. If essentials already exceed income, identify support or payment options before promising more."
+        },
+        {
+          "id": "make-a-first-budget-step-4",
+          "title": "Adjust after a week",
+          "body": "Compare the plan with real spending. Change categories that were unrealistic. A useful budget gets edited instead of abandoned."
+        }
+      ],
+      "cautions": [
+        "This is a planning method, not personal financial advice."
+      ],
+      "sources": [
+        {
+          "title": "CFPB Your Money, Your Goals budget tools",
+          "url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/"
+        }
+      ]
+    },
+    {
+      "id": "start-an-emergency-fund",
+      "title": "Start an emergency fund",
+      "summary": "Create a small buffer for an unexpected expense.",
+      "categoryID": "money",
+      "symbol": "umbrella",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "savings",
+        "emergency fund",
+        "money"
+      ],
+      "tools": [
+        "Recent expense history",
+        "Suitable savings account"
+      ],
+      "steps": [
+        {
+          "id": "start-an-emergency-fund-step-1",
+          "title": "Choose your first target",
+          "body": "Think of a plausible urgent cost, such as a repair or income gap. Pick a starter amount you can work toward without skipping essentials."
+        },
+        {
+          "id": "start-an-emergency-fund-step-2",
+          "title": "Keep it accessible",
+          "body": "Choose a separate place where the money is safe and available when needed. Compare fees, access restrictions and applicable deposit protection before opening an account."
+        },
+        {
+          "id": "start-an-emergency-fund-step-3",
+          "title": "Make a small repeatable deposit",
+          "body": "Pick an amount your budget can handle. Schedule it after income arrives, or move money manually when earnings vary. Monitor the balance to avoid overdraft."
+        },
+        {
+          "id": "start-an-emergency-fund-step-4",
+          "title": "Define when to use it",
+          "body": "Write what counts as an unexpected essential expense. After using the fund, restart contributions and review the target as your circumstances change."
+        }
+      ],
+      "cautions": [
+        "Account protections differ by country and provider. Investments can lose value and may be unsuitable for an urgent cash reserve."
+      ],
+      "sources": [
+        {
+          "title": "CFPB building an emergency fund",
+          "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+        }
+      ]
+    },
+    {
+      "id": "set-up-a-bill-calendar",
+      "title": "Set up a bill calendar",
+      "summary": "See what is due before the money leaves your account.",
+      "categoryID": "money",
+      "symbol": "calendar",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "bills",
+        "reminders",
+        "budget"
+      ],
+      "tools": [
+        "Recent bills",
+        "Calendar"
+      ],
+      "steps": [
+        {
+          "id": "set-up-a-bill-calendar-step-1",
+          "title": "List dates and amounts",
+          "body": "Record each bill, due date, expected amount and payment method. Add income dates so crowded weeks are easy to spot."
+        },
+        {
+          "id": "set-up-a-bill-calendar-step-2",
+          "title": "Choose useful reminders",
+          "body": "Set an advance reminder with enough time to check the amount and transfer funds. Add a separate check for bills whose amounts vary."
+        },
+        {
+          "id": "set-up-a-bill-calendar-step-3",
+          "title": "Review automatic payments",
+          "body": "Confirm the account, amount and timing for each autopay. Keep enough funds available and read the provider's cancellation and failed-payment terms."
+        },
+        {
+          "id": "set-up-a-bill-calendar-step-4",
+          "title": "Check after payday",
+          "body": "Look ahead to the next payday. If you cannot cover a bill, contact the provider early to ask about available options and record the response."
+        }
+      ],
+      "cautions": [
+        "A reminder does not make a payment. Check completed transactions and watch for fees."
+      ],
+      "sources": [
+        {
+          "title": "CFPB tools for paying bills",
+          "url": "https://www.consumerfinance.gov/archive/blog/tools-to-help-pay-bills/"
+        }
+      ]
+    },
+    {
+      "id": "understand-a-credit-card-bill",
+      "title": "Understand a credit card bill",
+      "summary": "Find the balance, deadline and cost before you pay.",
+      "categoryID": "money",
+      "symbol": "creditcard",
+      "minutes": 10,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "credit",
+        "bills",
+        "interest"
+      ],
+      "tools": [
+        "Credit card statement",
+        "Card agreement"
+      ],
+      "steps": [
+        {
+          "id": "understand-a-credit-card-bill-step-1",
+          "title": "Check the transactions",
+          "body": "Read the statement and compare unfamiliar charges with receipts. Use your issuer's official contact route to question a charge you do not recognize."
+        },
+        {
+          "id": "understand-a-credit-card-bill-step-2",
+          "title": "Find the key numbers",
+          "body": "Identify the statement balance, minimum due, due date and interest rates. The minimum keeps the payment requirement current but does not pay off the balance."
+        },
+        {
+          "id": "understand-a-credit-card-bill-step-3",
+          "title": "Choose a payment you can fund",
+          "body": "If the card has a purchase grace period and you meet its terms, paying the full statement balance by its deadline generally avoids purchase interest. Check your agreement."
+        },
+        {
+          "id": "understand-a-credit-card-bill-step-4",
+          "title": "Confirm the result",
+          "body": "Schedule a payment early enough for the issuer's rules and check it posted. If you cannot make the minimum, contact the issuer before the deadline."
+        }
+      ],
+      "cautions": [
+        "Cash advances and existing carried balances may have different interest rules. This guide describes US credit cards."
+      ],
+      "sources": [
+        {
+          "title": "FTC using credit cards",
+          "url": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges"
+        }
+      ]
+    },
+    {
+      "id": "check-your-credit-report",
+      "title": "Check your credit report",
+      "summary": "Review the information lenders may use about you.",
+      "categoryID": "money",
+      "symbol": "doc.text.magnifyingglass",
+      "minutes": 20,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "credit",
+        "identity",
+        "money"
+      ],
+      "tools": [
+        "Secure browser",
+        "Time to review your reports"
+      ],
+      "steps": [
+        {
+          "id": "check-your-credit-report-step-1",
+          "title": "Start at the official route",
+          "body": "For US reports, type AnnualCreditReport.com yourself or follow the FTC source link. Avoid advertisements and lookalike sites that sell a different service."
+        },
+        {
+          "id": "check-your-credit-report-step-2",
+          "title": "Review the entries",
+          "body": "Check your personal details, accounts, payment history and unfamiliar inquiries. A credit report is a record of information, not the same thing as a credit score."
+        },
+        {
+          "id": "check-your-credit-report-step-3",
+          "title": "Document an error",
+          "body": "Save the relevant entry and supporting records securely. Follow the reporting company's dispute instructions and contact the business that supplied incorrect information."
+        },
+        {
+          "id": "check-your-credit-report-step-4",
+          "title": "Keep a follow-up date",
+          "body": "Record when you submitted a dispute and check the response. Plan another review, especially before a major credit application."
+        }
+      ],
+      "cautions": [
+        "Do not send personal information through an unverified link. Credit reporting systems vary outside the US."
+      ],
+      "sources": [
+        {
+          "title": "FTC free credit reports",
+          "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+        }
+      ]
+    },
+    {
+      "id": "gather-tax-documents",
+      "title": "Gather tax documents",
+      "summary": "Create one folder before starting your US return.",
+      "categoryID": "money",
+      "symbol": "folder",
+      "minutes": 20,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "taxes",
+        "documents",
+        "admin"
+      ],
+      "tools": [
+        "Secure folder",
+        "Prior return if available"
+      ],
+      "steps": [
+        {
+          "id": "gather-tax-documents-step-1",
+          "title": "Choose the tax year",
+          "body": "Label a secure folder with the year you are filing. Collect the personal details and previous-return information the filing method requires."
+        },
+        {
+          "id": "gather-tax-documents-step-2",
+          "title": "Gather income records",
+          "body": "Collect W-2s, applicable 1099s and other income records. Keep records for freelance work and transactions even when a form has not arrived."
+        },
+        {
+          "id": "gather-tax-documents-step-3",
+          "title": "Gather supporting records",
+          "body": "Add documents for relevant credits, deductions and retirement contributions. Keep side-work expense records organized without assuming every expense is deductible."
+        },
+        {
+          "id": "gather-tax-documents-step-4",
+          "title": "Resolve missing information",
+          "body": "Compare your folder with the IRS document checklist. Ask the payer about a missing or incorrect form and check federal, state and local requirements before filing."
+        }
+      ],
+      "cautions": [
+        "US guidance only. Do not store Social Security numbers or tax documents in a public note or shared article checklist."
+      ],
+      "sources": [
+        {
+          "title": "IRS gather your documents",
+          "url": "https://www.irs.gov/filing/gather-your-documents"
+        }
+      ]
+    },
+    {
+      "id": "find-free-tax-filing-help",
+      "title": "Find free tax filing help",
+      "summary": "Check official options before paying to file a US return.",
+      "categoryID": "money",
+      "symbol": "building.columns",
+      "minutes": 15,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "taxes",
+        "filing",
+        "free help"
+      ],
+      "tools": [
+        "Income estimate",
+        "Current tax documents",
+        "Secure browser"
+      ],
+      "steps": [
+        {
+          "id": "find-free-tax-filing-help-step-1",
+          "title": "Start with IRS.gov",
+          "body": "Open the IRS free filing page for the filing season you need. Review current eligibility for guided Free File, fillable forms and volunteer assistance."
+        },
+        {
+          "id": "find-free-tax-filing-help-step-2",
+          "title": "Check the whole cost",
+          "body": "Read whether an offer covers your tax situation and state return. Free federal filing does not mean every state return or extra service is free."
+        },
+        {
+          "id": "find-free-tax-filing-help-step-3",
+          "title": "Match help to your situation",
+          "body": "Choose a tool you can use accurately or qualified help for a complex return. Confirm the current filing and payment deadlines with the relevant tax authority."
+        },
+        {
+          "id": "find-free-tax-filing-help-step-4",
+          "title": "Keep proof of filing",
+          "body": "Review the completed return, keep a secure copy and confirm acceptance. Separately check how any amount owed will be paid."
+        }
+      ],
+      "cautions": [
+        "Eligibility, deadlines and providers change. This guide is US-specific and does not determine your filing obligation."
+      ],
+      "sources": [
+        {
+          "title": "IRS free tax filing options",
+          "url": "https://www.irs.gov/file-your-taxes-for-free"
+        }
+      ]
+    },
+    {
+      "id": "start-with-your-401k",
+      "title": "Start with your 401(k)",
+      "summary": "Understand your employer's plan before choosing a contribution.",
+      "categoryID": "money",
+      "symbol": "chart.line.uptrend.xyaxis",
+      "minutes": 20,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "401k",
+        "retirement",
+        "work benefits"
+      ],
+      "tools": [
+        "Plan summary",
+        "Employer benefits portal"
+      ],
+      "steps": [
+        {
+          "id": "start-with-your-401k-step-1",
+          "title": "Read the plan basics",
+          "body": "Ask when you are eligible, how to enroll and where to find the Summary Plan Description. Check whether you are already enrolled automatically."
+        },
+        {
+          "id": "start-with-your-401k-step-2",
+          "title": "Understand the match",
+          "body": "Ask how employer matching works, when contributions count and when employer money becomes vested. Your own contributions are vested, but employer contributions may follow a schedule."
+        },
+        {
+          "id": "start-with-your-401k-step-3",
+          "title": "Check affordability and choices",
+          "body": "Choose a contribution you can support alongside essential expenses. Read the investment options, risks and fees rather than selecting only by a familiar name."
+        },
+        {
+          "id": "start-with-your-401k-step-4",
+          "title": "Review the first deduction",
+          "body": "Confirm the payroll deduction and account contribution. Check beneficiary details and plan an annual review or a review after a job or family change."
+        }
+      ],
+      "cautions": [
+        "US employer-plan education only. Tax treatment, limits and withdrawal restrictions require current plan and IRS guidance."
+      ],
+      "sources": [
+        {
+          "title": "DOL understanding your retirement plan",
+          "url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/what-you-should-know-about-your-retirement-plan"
+        }
+      ]
+    },
+    {
+      "id": "read-your-401k-fees",
+      "title": "Read your 401(k) fees",
+      "summary": "Know what the plan and its investments cost.",
+      "categoryID": "money",
+      "symbol": "magnifyingglass",
+      "minutes": 20,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "401k",
+        "retirement",
+        "fees"
+      ],
+      "tools": [
+        "Participant fee disclosure",
+        "Account statement"
+      ],
+      "steps": [
+        {
+          "id": "read-your-401k-fees-step-1",
+          "title": "Find the disclosure",
+          "body": "Ask the plan administrator for the participant fee disclosure and investment comparison information. Save the current version with your plan records."
+        },
+        {
+          "id": "read-your-401k-fees-step-2",
+          "title": "Separate fee types",
+          "body": "Identify plan administration fees, investment expenses and charges for optional services. Check whether they appear on statements or reduce investment returns."
+        },
+        {
+          "id": "read-your-401k-fees-step-3",
+          "title": "Compare like with like",
+          "body": "Compare costs alongside investment objectives, risk and services. A lower fee alone does not make an investment appropriate for your situation."
+        },
+        {
+          "id": "read-your-401k-fees-step-4",
+          "title": "Ask a specific question",
+          "body": "Write one question about an unclear charge and send it through the plan's official contact route. Recheck the disclosure when the plan changes."
+        }
+      ],
+      "cautions": [
+        "This guide does not recommend a fund or predict returns."
+      ],
+      "sources": [
+        {
+          "title": "DOL a look at 401(k) plan fees",
+          "url": "https://www.dol.gov/node/63354"
+        }
+      ]
+    },
+    {
+      "id": "check-your-first-pay-stub",
+      "title": "Check your first pay stub",
+      "summary": "Connect the work you did to the money you received.",
+      "categoryID": "work",
+      "symbol": "doc.plaintext",
+      "minutes": 10,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "paycheck",
+        "work",
+        "money"
+      ],
+      "tools": [
+        "Pay stub",
+        "Work-hour records"
+      ],
+      "steps": [
+        {
+          "id": "check-your-first-pay-stub-step-1",
+          "title": "Check the pay period",
+          "body": "Confirm the dates, pay rate and hours where shown. Compare them with your agreement and records rather than last month's bank balance."
+        },
+        {
+          "id": "check-your-first-pay-stub-step-2",
+          "title": "Separate gross and net",
+          "body": "Gross pay is before deductions. Net pay is what remains after deductions. Identify each line for taxes, benefits or other deductions."
+        },
+        {
+          "id": "check-your-first-pay-stub-step-3",
+          "title": "Match the deposit",
+          "body": "Compare net pay with the amount deposited or paid. Check whether reimbursements or multiple accounts explain a difference."
+        },
+        {
+          "id": "check-your-first-pay-stub-step-4",
+          "title": "Ask payroll promptly",
+          "body": "Write down anything you cannot explain and contact payroll through an official route. Keep a secure copy of the statement and response."
+        }
+      ],
+      "cautions": [
+        "This guide uses US pay-stub terminology. Deductions and worker protections depend on location and employment arrangement."
+      ],
+      "sources": [
+        {
+          "title": "CFPB understanding your pay stub",
+          "url": "https://files.consumerfinance.gov/f/documents/cfpb_understanding-your-pay-stub_tool_2021-08.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ask-about-work-benefits",
+      "title": "Ask about work benefits",
+      "summary": "Get the details you need before enrollment closes.",
+      "categoryID": "work",
+      "symbol": "briefcase",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "work",
+        "benefits",
+        "admin"
+      ],
+      "tools": [
+        "Benefits information",
+        "Enrollment dates"
+      ],
+      "steps": [
+        {
+          "id": "ask-about-work-benefits-step-1",
+          "title": "Collect the documents",
+          "body": "Ask where to find the current benefits summary and enrollment deadline. Note any action needed even if you plan to decline a benefit."
+        },
+        {
+          "id": "ask-about-work-benefits-step-2",
+          "title": "List your actual needs",
+          "body": "Think about likely care, dependents, leave and savings needs. Write the questions that would change your decision."
+        },
+        {
+          "id": "ask-about-work-benefits-step-3",
+          "title": "Ask about costs and limits",
+          "body": "Request the employee cost, coverage rules, waiting periods and what happens if you change or leave the job. Use the plan documents for the answer."
+        },
+        {
+          "id": "ask-about-work-benefits-step-4",
+          "title": "Keep confirmation",
+          "body": "Submit your choices by the stated deadline and keep confirmation. Check deductions and contact benefits staff if the selected coverage does not match."
+        }
+      ],
+      "cautions": [
+        "Benefits differ by employer and country. A summary is not a substitute for the full plan terms."
+      ],
+      "sources": []
+    },
+    {
+      "id": "make-a-small-job-search-plan",
+      "title": "Make a small job search plan",
+      "summary": "Turn a large search into a few repeatable actions.",
+      "categoryID": "work",
+      "symbol": "list.bullet.clipboard",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "job search",
+        "work",
+        "career"
+      ],
+      "tools": [
+        "Notes",
+        "Current resume"
+      ],
+      "steps": [
+        {
+          "id": "make-a-small-job-search-plan-step-1",
+          "title": "Choose a direction",
+          "body": "Name two or three kinds of roles you could explain an interest in. Record constraints such as location, hours, pay and accessibility needs."
+        },
+        {
+          "id": "make-a-small-job-search-plan-step-2",
+          "title": "Collect promising examples",
+          "body": "Save a handful of relevant vacancies and note common skills. Separate required qualifications from preferences so you can assess the fit honestly."
+        },
+        {
+          "id": "make-a-small-job-search-plan-step-3",
+          "title": "Set a repeatable session",
+          "body": "Choose a manageable block to find roles, adapt applications and follow up. Track the role, contact, deadline and next action in one place."
+        },
+        {
+          "id": "make-a-small-job-search-plan-step-4",
+          "title": "Review the response",
+          "body": "After several applications, check what is getting replies. Ask a trusted person to review the application and adjust the plan without inventing experience."
+        }
+      ],
+      "cautions": [
+        "Verify employers before sending sensitive documents or money. Legitimate-looking vacancies can still be scams."
+      ],
+      "sources": []
+    },
+    {
+      "id": "write-a-clear-resume",
+      "title": "Write a clear resume",
+      "summary": "Make your relevant experience easy to find.",
+      "categoryID": "work",
+      "symbol": "doc.text",
+      "minutes": 30,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "resume",
+        "job search",
+        "writing"
+      ],
+      "tools": [
+        "Experience notes",
+        "Job description"
+      ],
+      "steps": [
+        {
+          "id": "write-a-clear-resume-step-1",
+          "title": "Collect real examples",
+          "body": "List jobs, study, projects and volunteering with accurate dates. Note what you did and any results you can honestly support."
+        },
+        {
+          "id": "write-a-clear-resume-step-2",
+          "title": "Match the role",
+          "body": "Put the most relevant experience near the top. Use plain names for skills the vacancy asks for, without copying claims you cannot demonstrate."
+        },
+        {
+          "id": "write-a-clear-resume-step-3",
+          "title": "Make each bullet useful",
+          "body": "Describe an action and its result or purpose. For example, say you organized weekly stock checks instead of only writing responsible for stock."
+        },
+        {
+          "id": "write-a-clear-resume-step-4",
+          "title": "Check the final file",
+          "body": "Proofread names, dates and contact details. Export a readable file in the format requested and check that links work."
+        }
+      ],
+      "cautions": [
+        "Do not include unnecessary sensitive identifiers. Resume conventions differ by country and profession."
+      ],
+      "sources": []
+    },
+    {
+      "id": "prepare-for-a-job-interview",
+      "title": "Prepare for a job interview",
+      "summary": "Bring a few real examples and useful questions.",
+      "categoryID": "work",
+      "symbol": "person.crop.rectangle",
+      "minutes": 30,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "interview",
+        "career",
+        "job search"
+      ],
+      "tools": [
+        "Job description",
+        "Notes",
+        "Travel or call details"
+      ],
+      "steps": [
+        {
+          "id": "prepare-for-a-job-interview-step-1",
+          "title": "Understand the role",
+          "body": "Read the vacancy and the organization's own information. Prepare a short explanation of why the work interests you."
+        },
+        {
+          "id": "prepare-for-a-job-interview-step-2",
+          "title": "Prepare two examples",
+          "body": "Pick experiences that show relevant skills. Practice describing the situation, your action and what happened, including anything you would improve."
+        },
+        {
+          "id": "prepare-for-a-job-interview-step-3",
+          "title": "Prepare your questions",
+          "body": "Ask about day-to-day work, expectations and the hiring process. Choose questions whose answers would help you decide whether the role fits."
+        },
+        {
+          "id": "prepare-for-a-job-interview-step-4",
+          "title": "Check the logistics",
+          "body": "Confirm the time zone, location or call link. Test equipment and arrange any accessibility needs. Keep the contact details handy in case you are delayed."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "write-a-difficult-email",
+      "title": "Write a difficult email",
+      "summary": "Make the request clear without sending the first angry draft.",
+      "categoryID": "work",
+      "symbol": "envelope",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "email",
+        "communication",
+        "work"
+      ],
+      "tools": [
+        "Draft space"
+      ],
+      "steps": [
+        {
+          "id": "write-a-difficult-email-step-1",
+          "title": "Write the outcome first",
+          "body": "Decide what you need, such as a correction, decision or meeting. Keep the message focused on that outcome."
+        },
+        {
+          "id": "write-a-difficult-email-step-2",
+          "title": "State the facts",
+          "body": "Describe what happened and when using facts you can check. Leave out guesses about another person's motives."
+        },
+        {
+          "id": "write-a-difficult-email-step-3",
+          "title": "Make one clear request",
+          "body": "Ask for the next action and a reasonable response date if timing matters. Add the relevant document rather than retelling unrelated history."
+        },
+        {
+          "id": "write-a-difficult-email-step-4",
+          "title": "Review before sending",
+          "body": "Pause, reread and check recipients and attachments. If the topic is sensitive, consider an appropriate private conversation instead."
+        }
+      ],
+      "cautions": [
+        "Use the appropriate reporting route for safety, harassment or legal concerns. Do not share private information with unnecessary recipients."
+      ],
+      "sources": []
+    },
+    {
+      "id": "start-a-walking-habit",
+      "title": "Start a walking habit",
+      "summary": "Choose a short route you can repeat.",
+      "categoryID": "wellbeing",
+      "symbol": "figure.walk",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "exercise",
+        "walking",
+        "routine"
+      ],
+      "tools": [
+        "Comfortable footwear",
+        "Safe accessible route"
+      ],
+      "steps": [
+        {
+          "id": "start-a-walking-habit-step-1",
+          "title": "Pick a workable route",
+          "body": "Choose a route that suits your mobility, surroundings and weather. Walking, wheelchair rolling or another accessible movement can be a starting point."
+        },
+        {
+          "id": "start-a-walking-habit-step-2",
+          "title": "Start small",
+          "body": "Choose a short comfortable session, such as five minutes if that fits your ability. Begin slowly instead of trying to prove your fitness on the first day."
+        },
+        {
+          "id": "start-a-walking-habit-step-3",
+          "title": "Attach it to a routine",
+          "body": "Pick a time that already has a cue, such as after lunch. Keep the plan easy enough to repeat and allow a shorter version on a busy day."
+        },
+        {
+          "id": "start-a-walking-habit-step-4",
+          "title": "Build gradually",
+          "body": "Notice how you feel and increase time or challenge gradually. If you have a chronic condition, ask a health professional what activity is suitable."
+        }
+      ],
+      "cautions": [
+        "Stop if you feel unwell. Seek urgent care for serious symptoms such as chest pain or fainting."
+      ],
+      "sources": [
+        {
+          "title": "CDC getting started with physical activity",
+          "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/getting-started.html"
+        },
+        {
+          "title": "CDC activity with chronic conditions and disabilities",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/chronic-health-conditions-and-disabilities.html"
+        }
+      ]
+    },
+    {
+      "id": "plan-an-active-week",
+      "title": "Plan an active week",
+      "summary": "Make room for movement without doing it all at once.",
+      "categoryID": "wellbeing",
+      "symbol": "figure.run",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "exercise",
+        "planning",
+        "fitness"
+      ],
+      "tools": [
+        "Calendar",
+        "Activities you enjoy"
+      ],
+      "steps": [
+        {
+          "id": "plan-an-active-week-step-1",
+          "title": "Choose enjoyable movement",
+          "body": "Pick activities that suit your ability and access, such as brisk walking, cycling or swimming. Include options for bad weather or a busy day."
+        },
+        {
+          "id": "plan-an-active-week-step-2",
+          "title": "Use the adult guideline",
+          "body": "CDC guidance for adults is at least 150 minutes of moderate activity weekly, or 75 minutes vigorous activity, or an equivalent mix, plus strength activity on at least 2 days."
+        },
+        {
+          "id": "plan-an-active-week-step-3",
+          "title": "Split the time",
+          "body": "Spread activity through the week in manageable sessions. Some activity is better than none, so start below the guideline if needed and build gradually."
+        },
+        {
+          "id": "plan-an-active-week-step-4",
+          "title": "Review the plan",
+          "body": "Check what you enjoyed and what was hard to fit in. Adjust the next week and include appropriate recovery rather than making every session harder."
+        }
+      ],
+      "cautions": [
+        "These are general adult guidelines. Pregnancy, disability, illness and other circumstances may need tailored advice."
+      ],
+      "sources": [
+        {
+          "title": "CDC adult activity guidelines",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+        }
+      ]
+    },
+    {
+      "id": "try-strength-training",
+      "title": "Try strength training",
+      "summary": "Learn a few movements before chasing heavier weights.",
+      "categoryID": "wellbeing",
+      "symbol": "dumbbell",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "exercise",
+        "strength",
+        "beginner"
+      ],
+      "tools": [
+        "Suitable resistance equipment or bodyweight space"
+      ],
+      "steps": [
+        {
+          "id": "try-strength-training-step-1",
+          "title": "Choose support",
+          "body": "Consider an introductory session with a qualified instructor or an accessible beginner program. Ask for demonstrations and adaptations for your ability."
+        },
+        {
+          "id": "try-strength-training-step-2",
+          "title": "Learn a small set",
+          "body": "Choose movements that cover the major muscle groups. Start with resistance that lets you move under control, following the instructor or program's technique guidance."
+        },
+        {
+          "id": "try-strength-training-step-3",
+          "title": "Build a repeatable schedule",
+          "body": "General adult guidance includes muscle-strengthening activity on at least 2 days each week. Begin with what you can manage and allow appropriate recovery."
+        },
+        {
+          "id": "try-strength-training-step-4",
+          "title": "Record what you did",
+          "body": "Note the movements and resistance. Increase gradually only when the current work is manageable with good technique, and ask for help when it is not."
+        }
+      ],
+      "cautions": [
+        "Get tailored advice for chronic conditions or injuries. Stop and seek appropriate care if exercise causes concerning symptoms."
+      ],
+      "sources": [
+        {
+          "title": "HHS Move Your Way activity goals",
+          "url": "https://odphp.health.gov/moveyourway/activity-planner/why-these-goals"
+        },
+        {
+          "title": "CDC activity with chronic conditions and disabilities",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/chronic-health-conditions-and-disabilities.html"
+        }
+      ]
+    },
+    {
+      "id": "make-a-sleep-routine",
+      "title": "Make a sleep routine",
+      "summary": "Give bedtime a predictable lead-in.",
+      "categoryID": "wellbeing",
+      "symbol": "moon.zzz",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "sleep",
+        "routine",
+        "rest"
+      ],
+      "tools": [
+        "A realistic sleep schedule"
+      ],
+      "steps": [
+        {
+          "id": "make-a-sleep-routine-step-1",
+          "title": "Choose a consistent schedule",
+          "body": "Plan enough opportunity for sleep and keep bed and wake times fairly consistent. Choose something that fits your work and caring responsibilities."
+        },
+        {
+          "id": "make-a-sleep-routine-step-2",
+          "title": "Create a quiet lead-in",
+          "body": "Use the hour before bed for quieter activities. Lower bright light and avoid packing that time with work or a large meal."
+        },
+        {
+          "id": "make-a-sleep-routine-step-3",
+          "title": "Check the room",
+          "body": "Aim for a dark, quiet and comfortable sleep space. Make small changes you can sustain, such as covering a bright indicator light."
+        },
+        {
+          "id": "make-a-sleep-routine-step-4",
+          "title": "Notice persistent problems",
+          "body": "Track sleep and daytime tiredness if difficulties continue. Discuss persistent insomnia, loud snoring or other concerns with a health professional."
+        }
+      ],
+      "cautions": [
+        "A routine is not treatment for a sleep disorder. Avoid driving or hazardous work when sleepy."
+      ],
+      "sources": [
+        {
+          "title": "NIH healthy sleep habits",
+          "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits"
+        }
+      ]
+    },
+    {
+      "id": "prepare-for-a-doctor-visit",
+      "title": "Prepare for a doctor visit",
+      "summary": "Bring the questions you do not want to forget.",
+      "categoryID": "wellbeing",
+      "symbol": "stethoscope",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "health",
+        "appointments",
+        "admin"
+      ],
+      "tools": [
+        "Medication list",
+        "Symptom notes",
+        "Questions"
+      ],
+      "steps": [
+        {
+          "id": "prepare-for-a-doctor-visit-step-1",
+          "title": "Name the main concern",
+          "body": "Write what changed, when it started and how it affects you. Include a few concrete examples rather than trying to diagnose yourself."
+        },
+        {
+          "id": "prepare-for-a-doctor-visit-step-2",
+          "title": "Bring useful information",
+          "body": "List medicines, supplements, allergies and relevant health history. Bring requested documents and check any preparation instructions for the visit."
+        },
+        {
+          "id": "prepare-for-a-doctor-visit-step-3",
+          "title": "Ask the important questions",
+          "body": "Raise your main concern early. Ask what the plan means, what to do next and when or how you should get results."
+        },
+        {
+          "id": "prepare-for-a-doctor-visit-step-4",
+          "title": "Confirm the follow-up",
+          "body": "Repeat the next steps in your own words. Record appointments, instructions and whom to contact if the problem changes or you do not receive results."
+        }
+      ],
+      "cautions": [
+        "Do not wait for a routine appointment when you need urgent care. This guide does not diagnose symptoms."
+      ],
+      "sources": [
+        {
+          "title": "NIH making the most of a doctor visit",
+          "url": "https://www.nia.nih.gov/health/five-ways-get-most-out-your-doctors-visit"
+        }
+      ]
+    },
+    {
+      "id": "book-a-dentist-visit",
+      "title": "Book a dentist visit",
+      "summary": "Know the costs and questions before the appointment.",
+      "categoryID": "wellbeing",
+      "symbol": "mouth",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "health",
+        "dentist",
+        "appointments"
+      ],
+      "tools": [
+        "Clinic contact",
+        "Insurance details if applicable"
+      ],
+      "steps": [
+        {
+          "id": "book-a-dentist-visit-step-1",
+          "title": "Choose a suitable clinic",
+          "body": "Check location, accessibility and whether the clinic accepts your coverage or offers a payment explanation. Ask whether it is taking new patients."
+        },
+        {
+          "id": "book-a-dentist-visit-step-2",
+          "title": "Explain the reason",
+          "body": "Say whether you need a routine visit or have a specific problem. Describe any pain or injury so the clinic can advise how urgently you need care."
+        },
+        {
+          "id": "book-a-dentist-visit-step-3",
+          "title": "Ask what to bring",
+          "body": "Check expected costs, records, medicines and forms. Mention anxiety or access needs so the team can discuss suitable support."
+        },
+        {
+          "id": "book-a-dentist-visit-step-4",
+          "title": "Keep the appointment details",
+          "body": "Save the date, location and cancellation rules. After the visit, ask for a clear treatment plan and the dentist's recommended follow-up interval."
+        }
+      ],
+      "cautions": [
+        "Ask for prompt professional advice about pain, swelling or injury rather than waiting for a routine checkup."
+      ],
+      "sources": [
+        {
+          "title": "American Dental Association dentist visit questions",
+          "url": "https://www.mouthhealthy.org/dental-care/questions-about-going-to-the-dentist"
+        }
+      ]
+    },
+    {
+      "id": "find-mental-health-support",
+      "title": "Find mental health support",
+      "summary": "Take one concrete step toward help in the US.",
+      "categoryID": "wellbeing",
+      "symbol": "heart.text.square",
+      "minutes": 15,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "mental health",
+        "support",
+        "appointments"
+      ],
+      "tools": [
+        "Private place to call",
+        "Coverage information if applicable"
+      ],
+      "steps": [
+        {
+          "id": "find-mental-health-support-step-1",
+          "title": "Choose an entry point",
+          "body": "A primary care provider, mental health professional or your insurer's directory can help you find care. Check whether a service fits your needs and location."
+        },
+        {
+          "id": "find-mental-health-support-step-2",
+          "title": "Write a short description",
+          "body": "Note what you are struggling with, how long it has lasted and how it affects daily life. You do not need a diagnosis before asking for help."
+        },
+        {
+          "id": "find-mental-health-support-step-3",
+          "title": "Ask practical questions",
+          "body": "Ask about availability, qualifications, cost, privacy and remote or in-person appointments. Request another option if the first service cannot see you."
+        },
+        {
+          "id": "find-mental-health-support-step-4",
+          "title": "Use urgent support when needed",
+          "body": "In the US, call or text 988 for suicidal crisis or emotional distress. If there is immediate danger or a life-threatening emergency, call 911 or go to an emergency department."
+        }
+      ],
+      "cautions": [
+        "US crisis contacts only. Outside the US, use local emergency and crisis services. This app is not an emergency or treatment service."
+      ],
+      "sources": [
+        {
+          "title": "NIMH finding mental health help",
+          "url": "https://www.nimh.nih.gov/health/find-help"
+        }
+      ]
+    },
+    {
+      "id": "meet-people-through-an-activity",
+      "title": "Meet people through an activity",
+      "summary": "Choose a place where conversation has a natural starting point.",
+      "categoryID": "people",
+      "symbol": "person.2",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "friends",
+        "community",
+        "social"
+      ],
+      "tools": [
+        "Local activity listings"
+      ],
+      "steps": [
+        {
+          "id": "meet-people-through-an-activity-step-1",
+          "title": "Pick a shared interest",
+          "body": "Look for a class, walking group, game night or community activity you would enjoy even before you know anyone."
+        },
+        {
+          "id": "meet-people-through-an-activity-step-2",
+          "title": "Check the practical details",
+          "body": "Confirm cost, accessibility and whether beginners are welcome. A recurring group gives you another chance to meet the same people."
+        },
+        {
+          "id": "meet-people-through-an-activity-step-3",
+          "title": "Use a simple opener",
+          "body": "Ask something about the activity, such as how long someone has been attending. Share a little about yourself and let the conversation breathe."
+        },
+        {
+          "id": "meet-people-through-an-activity-step-4",
+          "title": "Return if it fits",
+          "body": "Give a comfortable group a few visits. If it is not a good fit, try another activity rather than treating one awkward evening as a verdict."
+        }
+      ],
+      "cautions": [
+        "Respect boundaries and choose a public, appropriate setting when meeting new people."
+      ],
+      "sources": []
+    },
+    {
+      "id": "follow-up-with-a-new-friend",
+      "title": "Follow up with a new friend",
+      "summary": "Turn a good conversation into a small invitation.",
+      "categoryID": "people",
+      "symbol": "bubble.left.and.bubble.right",
+      "minutes": 5,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "friends",
+        "messages",
+        "connection"
+      ],
+      "tools": [
+        "A contact route they agreed to share"
+      ],
+      "steps": [
+        {
+          "id": "follow-up-with-a-new-friend-step-1",
+          "title": "Use a real connection",
+          "body": "Mention something you enjoyed about the conversation or activity. Keep the message short and recognizable."
+        },
+        {
+          "id": "follow-up-with-a-new-friend-step-2",
+          "title": "Offer a specific plan",
+          "body": "Suggest a manageable activity and time, such as coffee after the next class. Make it easy to accept, suggest another time or decline."
+        },
+        {
+          "id": "follow-up-with-a-new-friend-step-3",
+          "title": "Give room to respond",
+          "body": "Avoid repeated follow-ups if they do not reply. A friendly invitation is enough, and people have different schedules and interest."
+        },
+        {
+          "id": "follow-up-with-a-new-friend-step-4",
+          "title": "Keep it mutual",
+          "body": "If you meet, listen and share without turning it into an interview. Let the connection grow through repeated ordinary contact."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "host-a-simple-dinner",
+      "title": "Host a simple dinner",
+      "summary": "Keep the meal easy enough to enjoy the company.",
+      "categoryID": "people",
+      "symbol": "fork.knife.circle",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "hosting",
+        "friends",
+        "food"
+      ],
+      "tools": [
+        "Guest count",
+        "Simple menu",
+        "Shopping list"
+      ],
+      "steps": [
+        {
+          "id": "host-a-simple-dinner-step-1",
+          "title": "Ask before planning",
+          "body": "Confirm who is coming and ask about allergies, dietary needs and access needs. Choose food you know how to prepare safely."
+        },
+        {
+          "id": "host-a-simple-dinner-step-2",
+          "title": "Keep the menu small",
+          "body": "Pick one main dish and a simple side. Use something you can prepare without spending the whole evening away from guests."
+        },
+        {
+          "id": "host-a-simple-dinner-step-3",
+          "title": "Set up before arrival",
+          "body": "Make seating, drinks and a place for coats easy to find. Check what can be done ahead and what needs cooking just before serving."
+        },
+        {
+          "id": "host-a-simple-dinner-step-4",
+          "title": "Make the evening comfortable",
+          "body": "Give guests a simple way to help if they want. Serve food promptly and store leftovers safely when the meal ends."
+        }
+      ],
+      "cautions": [
+        "Take allergies seriously and prevent cross-contact. Do not assume removing a visible ingredient makes food safe."
+      ],
+      "sources": [
+        {
+          "title": "FoodSafety.gov four steps to food safety",
+          "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"
+        },
+        {
+          "title": "FDA food allergies and cross-contact",
+          "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies"
+        }
+      ]
+    },
+    {
+      "id": "set-a-small-boundary",
+      "title": "Set a small boundary",
+      "summary": "Say what you can do and follow through.",
+      "categoryID": "people",
+      "symbol": "hand.raised",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "boundaries",
+        "relationships",
+        "communication"
+      ],
+      "tools": [
+        "A clear example"
+      ],
+      "steps": [
+        {
+          "id": "set-a-small-boundary-step-1",
+          "title": "Name the issue",
+          "body": "Identify the specific situation that needs to change. Choose a request about behavior rather than a label about the person."
+        },
+        {
+          "id": "set-a-small-boundary-step-2",
+          "title": "Say the limit plainly",
+          "body": "Use a short statement, such as I can talk tomorrow, but I cannot take calls after ten. Offer an alternative only if you want to."
+        },
+        {
+          "id": "set-a-small-boundary-step-3",
+          "title": "Avoid an endless defense",
+          "body": "Listen to the response and repeat your limit if needed. You do not need to add more explanations until the other person agrees."
+        },
+        {
+          "id": "set-a-small-boundary-step-4",
+          "title": "Follow your own plan",
+          "body": "Act consistently with the boundary. If the situation feels unsafe, prioritize support and safety rather than a perfectly worded conversation."
+        }
+      ],
+      "cautions": [
+        "For abuse or immediate danger, seek appropriate local support. A conversation may not be safe in every relationship."
+      ],
+      "sources": []
+    },
+    {
+      "id": "give-a-useful-apology",
+      "title": "Give a useful apology",
+      "summary": "Own the action and explain what will change.",
+      "categoryID": "people",
+      "symbol": "heart",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "apology",
+        "relationships",
+        "repair"
+      ],
+      "tools": [
+        "Time to reflect"
+      ],
+      "steps": [
+        {
+          "id": "give-a-useful-apology-step-1",
+          "title": "Name what you did",
+          "body": "State the specific action without blaming the other person for noticing it. Avoid beginning with if you were offended."
+        },
+        {
+          "id": "give-a-useful-apology-step-2",
+          "title": "Acknowledge the effect",
+          "body": "Say what you understand about the impact. Ask a short question if you need to understand better, then listen."
+        },
+        {
+          "id": "give-a-useful-apology-step-3",
+          "title": "Offer a repair",
+          "body": "Suggest a practical way to put something right and explain what you will change. Make only promises you can keep."
+        },
+        {
+          "id": "give-a-useful-apology-step-4",
+          "title": "Give them time",
+          "body": "Do not demand forgiveness or an immediate reply. Follow through on the repair and respect any boundary they set."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "make-a-roommate-agreement",
+      "title": "Make a roommate agreement",
+      "summary": "Discuss the everyday friction before it piles up.",
+      "categoryID": "people",
+      "symbol": "house.lodge",
+      "minutes": 25,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "roommates",
+        "home",
+        "communication"
+      ],
+      "tools": [
+        "Shared notes",
+        "Existing lease or house rules"
+      ],
+      "steps": [
+        {
+          "id": "make-a-roommate-agreement-step-1",
+          "title": "Choose a calm time",
+          "body": "Ask everyone to discuss how the home should work. Keep the discussion separate from a heated argument about yesterday's mess."
+        },
+        {
+          "id": "make-a-roommate-agreement-step-2",
+          "title": "Cover the recurring issues",
+          "body": "Discuss cleaning, shared supplies, bills, guests, quiet times and access to shared spaces. Ask what matters most to each person."
+        },
+        {
+          "id": "make-a-roommate-agreement-step-3",
+          "title": "Write specific arrangements",
+          "body": "Record who does what and when, how costs are handled and how changes will be discussed. Avoid vague promises such as keep everything tidy."
+        },
+        {
+          "id": "make-a-roommate-agreement-step-4",
+          "title": "Review together",
+          "body": "Agree on a check-in date after you have tried the arrangements. Revisit tasks when work hours, accessibility or other circumstances change."
+        }
+      ],
+      "cautions": [
+        "A household agreement does not override a lease, tenancy rights or local law."
+      ],
+      "sources": []
+    },
+    {
+      "id": "choose-a-volunteering-role",
+      "title": "Choose a volunteering role",
+      "summary": "Find a useful commitment that fits your time.",
+      "categoryID": "people",
+      "symbol": "hands.sparkles",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "community",
+        "volunteering",
+        "friends"
+      ],
+      "tools": [
+        "Interests",
+        "Available time"
+      ],
+      "steps": [
+        {
+          "id": "choose-a-volunteering-role-step-1",
+          "title": "Choose a purpose",
+          "body": "Name a cause or type of work you would like to help with. Include the skills you can offer and anything you need to avoid."
+        },
+        {
+          "id": "choose-a-volunteering-role-step-2",
+          "title": "Check the organization",
+          "body": "Use the organization's official information and ask about supervision, safeguarding and training. Confirm expenses, accessibility and time commitments."
+        },
+        {
+          "id": "choose-a-volunteering-role-step-3",
+          "title": "Try a manageable role",
+          "body": "Choose a clear first shift or small commitment. Ask what success looks like and who to contact if you need help."
+        },
+        {
+          "id": "choose-a-volunteering-role-step-4",
+          "title": "Review the fit",
+          "body": "After trying it, check whether the work and schedule suit you. Give reasonable notice if you cannot continue rather than disappearing."
+        }
+      ],
+      "cautions": [
+        "Follow safeguarding rules. Do not take on work that requires qualifications or checks you do not have."
+      ],
+      "sources": []
+    },
+    {
+      "id": "find-a-cheaper-phone-plan",
+      "title": "Find a cheaper phone plan",
+      "summary": "Compare the full cost with the service you use.",
+      "categoryID": "everyday",
+      "symbol": "iphone",
+      "minutes": 20,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "phone bill",
+        "savings",
+        "contracts"
+      ],
+      "tools": [
+        "Recent bills",
+        "Data usage",
+        "Current contract"
+      ],
+      "steps": [
+        {
+          "id": "find-a-cheaper-phone-plan-step-1",
+          "title": "Measure your real use",
+          "body": "Check recent bills, mobile data, roaming and any device repayments. Separate the cost of the phone from the service plan where possible."
+        },
+        {
+          "id": "find-a-cheaper-phone-plan-step-2",
+          "title": "Compare complete offers",
+          "body": "Check coverage where you spend time, data limits, recurring fees and what happens after a promotion. US broadband labels can help compare mobile broadband offers."
+        },
+        {
+          "id": "find-a-cheaper-phone-plan-step-3",
+          "title": "Check switching conditions",
+          "body": "Ask about device compatibility, unlocking, remaining repayments and number transfer. Get the new provider's transfer instructions before changing the existing service."
+        },
+        {
+          "id": "find-a-cheaper-phone-plan-step-4",
+          "title": "Save the agreement",
+          "body": "Keep the quoted price and terms. After switching, check the first bills and test calls and data in the places you need them."
+        }
+      ],
+      "cautions": [
+        "This guide uses US consumer-label resources. Check local switching rules and never assume a promotion is the ongoing price."
+      ],
+      "sources": [
+        {
+          "title": "FCC broadband consumer label fact sheet",
+          "url": "https://docs.fcc.gov/public/attachments/DOC-401799A1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "check-your-tire-pressure",
+      "title": "Check your tire pressure",
+      "summary": "Use the vehicle's recommended pressure, not the tire's maximum.",
+      "categoryID": "everyday",
+      "symbol": "car.side",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "car",
+        "tires",
+        "maintenance"
+      ],
+      "tools": [
+        "Tire pressure gauge",
+        "Vehicle manual",
+        "Suitable air pump"
+      ],
+      "steps": [
+        {
+          "id": "check-your-tire-pressure-step-1",
+          "title": "Find the specification",
+          "body": "Read the Tire and Loading Information label near the driver's door or the owner's manual. Use the vehicle's recommended pressure, not the maximum printed on the tire."
+        },
+        {
+          "id": "check-your-tire-pressure-step-2",
+          "title": "Check cold tires",
+          "body": "Check at least monthly and before a long trip. NHTSA defines cold tires as those on a car that has not been driven for at least 3 hours."
+        },
+        {
+          "id": "check-your-tire-pressure-step-3",
+          "title": "Measure and adjust",
+          "body": "Remove the valve cap, seat the gauge and read the pressure. Add or release air as needed using the pump instructions, recheck and replace the cap."
+        },
+        {
+          "id": "check-your-tire-pressure-step-4",
+          "title": "Look for damage",
+          "body": "Check for cuts, bulges or unusual wear and inspect the spare if applicable. Arrange professional inspection if a tire keeps losing air or looks damaged."
+        }
+      ],
+      "cautions": [
+        "Use a safe parked location. Do not drive on a visibly damaged or flat tire."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA TireWise tire maintenance",
+          "url": "https://www.nhtsa.gov/vehicle-safety/tires"
+        }
+      ]
+    },
+    {
+      "id": "make-a-car-maintenance-plan",
+      "title": "Make a car maintenance plan",
+      "summary": "Follow the schedule for your actual car.",
+      "categoryID": "everyday",
+      "symbol": "wrench.adjustable",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "car",
+        "maintenance",
+        "reminders"
+      ],
+      "tools": [
+        "Owner's manual",
+        "Mileage",
+        "Service history"
+      ],
+      "steps": [
+        {
+          "id": "make-a-car-maintenance-plan-step-1",
+          "title": "Find the right manual",
+          "body": "Use the model and year's owner instructions. Different cars and driving conditions have different service requirements, including electric vehicles."
+        },
+        {
+          "id": "make-a-car-maintenance-plan-step-2",
+          "title": "Record where you are",
+          "body": "Note mileage, service dates and outstanding work. Compare them with the manufacturer's time and mileage schedule."
+        },
+        {
+          "id": "make-a-car-maintenance-plan-step-3",
+          "title": "Schedule what is due",
+          "body": "Plan inspections and servicing with a suitable professional. Save a reminder before the expected date or mileage rather than using a universal oil-change interval."
+        },
+        {
+          "id": "make-a-car-maintenance-plan-step-4",
+          "title": "Keep a service record",
+          "body": "Store receipts and the work completed. Ask for an explanation of proposed extra work and update the next service reminder."
+        }
+      ],
+      "cautions": [
+        "Take warning lights and safety defects seriously. Check the manual and arrange help instead of continuing a journey with a serious fault."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA road trip and vehicle checks",
+          "url": "https://www.nhtsa.gov/summer-driving-tips"
+        }
+      ]
+    },
+    {
+      "id": "check-a-vehicle-recall",
+      "title": "Check a vehicle recall",
+      "summary": "Find and follow the instructions for an unrepaired US recall.",
+      "categoryID": "everyday",
+      "symbol": "exclamationmark.shield",
+      "minutes": 10,
+      "jurisdiction": "United States",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "car",
+        "recall",
+        "safety"
+      ],
+      "tools": [
+        "Vehicle Identification Number",
+        "Official manufacturer contact"
+      ],
+      "steps": [
+        {
+          "id": "check-a-vehicle-recall-step-1",
+          "title": "Find the VIN",
+          "body": "Look in the vehicle documentation or at the manufacturer's stated location. Copy it carefully and keep it private where practical."
+        },
+        {
+          "id": "check-a-vehicle-recall-step-2",
+          "title": "Use the official lookup",
+          "body": "Check NHTSA.gov/recalls for a US vehicle and read any result. A VIN lookup has limits, so also check manufacturer notices."
+        },
+        {
+          "id": "check-a-vehicle-recall-step-3",
+          "title": "Follow the recall instructions",
+          "body": "Contact the manufacturer or authorized dealer through an official route. Ask how the repair will be arranged and whether the notice says to stop driving or take other precautions."
+        },
+        {
+          "id": "check-a-vehicle-recall-step-4",
+          "title": "Keep confirmation",
+          "body": "Record the recall number, appointment and completed repair. Check periodically and keep your contact details current with the manufacturer."
+        }
+      ],
+      "cautions": [
+        "US recall system only. Outside the US, use the local vehicle safety authority and manufacturer."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA vehicle recall lookup",
+          "url": "https://www.nhtsa.gov/recalls"
+        }
+      ]
+    },
+    {
+      "id": "plan-a-public-transport-trip",
+      "title": "Plan a public transport trip",
+      "summary": "Check the route, fare and last connection before you leave.",
+      "categoryID": "everyday",
+      "symbol": "tram",
+      "minutes": 10,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "transport",
+        "travel",
+        "planning"
+      ],
+      "tools": [
+        "Official operator timetable",
+        "Payment method"
+      ],
+      "steps": [
+        {
+          "id": "plan-a-public-transport-trip-step-1",
+          "title": "Check the actual journey",
+          "body": "Use the operator's current route planner for your date and time. Check the stop names and the direction you need."
+        },
+        {
+          "id": "plan-a-public-transport-trip-step-2",
+          "title": "Confirm the fare",
+          "body": "Read ticket, payment and validation rules. Check transfers and whether the route requires a reservation or a different operator's ticket."
+        },
+        {
+          "id": "plan-a-public-transport-trip-step-3",
+          "title": "Plan for access and delays",
+          "body": "Check accessibility and service alerts. Give yourself enough transfer time and identify an alternative if the last connection is missed."
+        },
+        {
+          "id": "plan-a-public-transport-trip-step-4",
+          "title": "Keep the essentials handy",
+          "body": "Save the route and return plan where you can find them offline. Check the stop display or announcements as you travel."
+        }
+      ],
+      "cautions": [
+        "Timetables, fares and accessibility vary by operator. Use current official information."
+      ],
+      "sources": []
+    },
+    {
+      "id": "build-a-small-wardrobe",
+      "title": "Build a small wardrobe",
+      "summary": "Start with clothes that fit the life you actually have.",
+      "categoryID": "everyday",
+      "symbol": "tshirt",
+      "minutes": 25,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "style",
+        "clothes",
+        "budget"
+      ],
+      "tools": [
+        "Your current clothes",
+        "A mirror"
+      ],
+      "steps": [
+        {
+          "id": "build-a-small-wardrobe-step-1",
+          "title": "Look at a normal week",
+          "body": "List the occasions you dress for, including work, weather and activities. Notice which pieces you already wear comfortably."
+        },
+        {
+          "id": "build-a-small-wardrobe-step-2",
+          "title": "Try combinations",
+          "body": "Build a few outfits with clothes you own. Check fit while sitting, walking and reaching, not only while standing in front of a mirror."
+        },
+        {
+          "id": "build-a-small-wardrobe-step-3",
+          "title": "Find one real gap",
+          "body": "Choose a missing piece that would complete several outfits. Note its size, color and care needs before shopping."
+        },
+        {
+          "id": "build-a-small-wardrobe-step-4",
+          "title": "Buy and keep deliberately",
+          "body": "Try the piece with your existing clothes and read return rules. Repair or donate usable extras where appropriate instead of replacing everything at once."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "dress-for-an-occasion",
+      "title": "Dress for an occasion",
+      "summary": "Use the invitation and setting to choose an outfit.",
+      "categoryID": "everyday",
+      "symbol": "person.crop.rectangle.fill",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "style",
+        "clothes",
+        "events"
+      ],
+      "tools": [
+        "Invitation or event details",
+        "Weather forecast"
+      ],
+      "steps": [
+        {
+          "id": "dress-for-an-occasion-step-1",
+          "title": "Check the clues",
+          "body": "Read the dress code, location and activity. Ask the host what they mean by an unfamiliar dress code rather than buying from a guess."
+        },
+        {
+          "id": "dress-for-an-occasion-step-2",
+          "title": "Choose a comfortable base",
+          "body": "Pick clothes that suit the setting and let you sit, stand or move as needed. Consider weather and cultural or venue expectations."
+        },
+        {
+          "id": "dress-for-an-occasion-step-3",
+          "title": "Check the whole outfit",
+          "body": "Try the shoes, outer layer and bag together. Clean or repair what needs attention before the day of the event."
+        },
+        {
+          "id": "dress-for-an-occasion-step-4",
+          "title": "Prepare one fallback",
+          "body": "Set the outfit out in advance and have an alternative for a weather change or spill. Give yourself time to get dressed without rushing."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "find-your-next-book",
+      "title": "Find your next book",
+      "summary": "Use a small sample before committing to a whole book.",
+      "categoryID": "everyday",
+      "symbol": "book",
+      "minutes": 15,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "reading",
+        "books",
+        "leisure"
+      ],
+      "tools": [
+        "Library catalog or bookshop samples"
+      ],
+      "steps": [
+        {
+          "id": "find-your-next-book-step-1",
+          "title": "Name the mood",
+          "body": "Choose what you want now, such as a short mystery, practical nonfiction or a book about a place. Start with curiosity rather than a list of books you should read."
+        },
+        {
+          "id": "find-your-next-book-step-2",
+          "title": "Follow one useful clue",
+          "body": "Look up a book you enjoyed and browse similar authors or topics. Ask a librarian for a suggestion using what you liked about it."
+        },
+        {
+          "id": "find-your-next-book-step-3",
+          "title": "Read a sample",
+          "body": "Try a few pages or an audiobook sample. Check whether the voice, length and pace suit the way you want to read."
+        },
+        {
+          "id": "find-your-next-book-step-4",
+          "title": "Make it easy to start",
+          "body": "Borrow or obtain one book and choose a small reading slot. It is fine to stop a book that does not fit and try another."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    },
+    {
+      "id": "make-a-weekly-reset",
+      "title": "Make a weekly reset",
+      "summary": "Spend a few minutes making the next week less crowded.",
+      "categoryID": "everyday",
+      "symbol": "arrow.clockwise",
+      "minutes": 20,
+      "jurisdiction": "General",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "planning",
+        "reminders",
+        "routine"
+      ],
+      "tools": [
+        "Calendar",
+        "Task list"
+      ],
+      "steps": [
+        {
+          "id": "make-a-weekly-reset-step-1",
+          "title": "Look ahead",
+          "body": "Check the next week's appointments, travel and deadlines. Note anything that needs preparation before the day itself."
+        },
+        {
+          "id": "make-a-weekly-reset-step-2",
+          "title": "Choose the essentials",
+          "body": "Pick a few tasks that would remove real friction, such as groceries or a bill check. Keep the list shorter than the time you actually have."
+        },
+        {
+          "id": "make-a-weekly-reset-step-3",
+          "title": "Turn tasks into next actions",
+          "body": "Replace vague items with a concrete start, such as call the dentist instead of sort out health. Give time-sensitive tasks a useful reminder."
+        },
+        {
+          "id": "make-a-weekly-reset-step-4",
+          "title": "Leave room",
+          "body": "Keep some time unplanned and drop work that is no longer needed. Review unfinished tasks next week without copying everything forward automatically."
+        }
+      ],
+      "cautions": [],
+      "sources": []
+    }
+  ]
+}

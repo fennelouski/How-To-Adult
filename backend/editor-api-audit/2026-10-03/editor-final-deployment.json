@@ -7,9 +7,7 @@
   "vercelURL": "https://how-to-adult-guides.vercel.app",
   "actualCutoverAt": null,
   "commands": [
-    "backend/.venv/bin/python backend/deploy.py parallel --editor-key-file PRIVATE_CREDENTIAL_FILE --vercel /Users/nathan/.local/node/bin/vercel --receipt backend/release-output/editor-initial-deployment.json",
-    "backend/.venv/bin/python backend/deploy.py parallel --vercel /Users/nathan/.local/node/bin/vercel --receipt backend/release-output/editor-final-deployment.json",
-    "backend/.venv/bin/python backend/deploy.py parallel --vercel /Users/nathan/.local/node/bin/vercel --receipt backend/release-output/editor-repeat-deployment.json"
+    "python3 backend/deploy.py parallel"
   ],
   "checks": {
     "aws": {
@@ -53,67 +51,12 @@
         "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 wrong": 401
       },
       "illustrationManifest": 200
-    },
-    "backendTests": 66,
-    "backendPassed": 66,
-    "cloudFormationLint": "pass",
-    "authenticatedEditor": {
-      "verifiedAt": "2026-10-03T09:51:01.451569+00:00",
-      "checks": {
-        "https://how-to-adult-guides.vercel.app": {
-          "authenticatedStatus": 200,
-          "assetUploadRetry": 200,
-          "publicImageRoundTrip": 200,
-          "imageBytes": 40809,
-          "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
-          "originalGuidesPreserved": 56,
-          "exactRevisionManifest": 200,
-          "bothSuccessfulPublisherHistoriesPresent": true,
-          "staleWriteRejected": 412,
-          "catalogRevision": "2026-10-03-editor-verified-2-094423",
-          "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
-          "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
-          "keyPreservedAfterDeploymentWithoutKeyFile": true
-        },
-        "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
-          "authenticatedStatus": 200,
-          "assetUploadRetry": 200,
-          "publicImageRoundTrip": 200,
-          "imageBytes": 40809,
-          "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
-          "originalGuidesPreserved": 56,
-          "exactRevisionManifest": 200,
-          "bothSuccessfulPublisherHistoriesPresent": true,
-          "staleWriteRejected": 412,
-          "catalogRevision": "2026-10-03-editor-verified-2-094423",
-          "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
-          "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
-          "keyPreservedAfterDeploymentWithoutKeyFile": true
-        }
-      },
-      "secretPrinted": false,
-      "nativeImageRendering": "Backend image delivery ready; native sidecar rendering outside this change"
-    },
-    "repeatKeyVerification": {
-      "verifiedAt": "2026-10-03T09:55:14.435452+00:00",
-      "checks": {
-        "https://how-to-adult-guides.vercel.app": {
-          "authenticatedStatus": 200,
-          "catalogPreserved": true,
-          "keyPreserved": true
-        },
-        "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
-          "authenticatedStatus": 200,
-          "catalogPreserved": true,
-          "keyPreserved": true
-        }
-      }
     }
   },
   "singleDataOwner": "AWS versioned private S3; Vercel relays reads and restricted editor requests",
   "scheduledGenerationEnabled": false,
   "productionDomainsChanged": false,
-  "readiness": "Initial, final and repeat dual releases plus authenticated publishing and image delivery verified. Sustained parallel observation, compatible code rollback and actual cutover remain unverified.",
+  "readiness": "New API; repeat deployment, rollback and parallel observation remain pending",
   "sourceSHA256": {
     "backend/deploy.py": "4fc0c2dee9ad4b432eb51e05d96e5f55f2cc906bcf4bbf72831c985fc3819e2e",
     "backend/handler.py": "a165c667f5afbbb3cb099f6e187cb5a71f81b0b4692439216e473412aeb46176",
@@ -135,8 +78,8 @@
     "action": "existing-publication-preserved",
     "revision": "2026-10-03-editor-verified-2-094423"
   },
-  "vercelDeploymentURL": "https://how-to-adult-guides-ikh2tz3oe-nathan-fennels-projects.vercel.app",
-  "vercelDeploymentID": "dpl_3zPndJhPCHtnjtDkAy8iVLoa3kwx",
+  "vercelDeploymentURL": "https://how-to-adult-guides-l5oumx2j1-nathan-fennels-projects.vercel.app",
+  "vercelDeploymentID": "dpl_FSeeUxDpD8AV1ZyATELCVpoZDYDU",
   "vercelProject": "how-to-adult-guides",
   "vercelArtifactSHA256": {
     ".vercel/output/config.json": "3415ce6abc1e6020d642966a60ffdc96a669f3cc536757ed1df4dc48b3a64f6d",
@@ -145,19 +88,6 @@
     "vercel.json": "d8209115a448d5e218f94369a0a9703c7213cf26d71c967565b341d104100ea7"
   },
   "sameRevisionVerified": true,
-  "verifiedAt": "2026-10-03T09:52:03.348850+00:00",
-  "handlerSHA256": "a165c667f5afbbb3cb099f6e187cb5a71f81b0b4692439216e473412aeb46176",
-  "repeatDeploymentVerified": true,
-  "editorAPIProvisioned": true,
-  "productionRoutingOwner": "Vercel alias during parallel operation",
-  "cutoverVerified": false,
-  "credentialHandling": "Owner-only mode-0600 file outside Git; SHA-256 only in NoEcho infrastructure parameter; token never printed",
-  "editorScopes": [
-    "guides:upsert",
-    "assets:create"
-  ],
-  "implementationBranch": "codex/how-to-adult-remote-editor-20261003",
-  "nativeSourceChanged": false,
-  "nativeBuildsRun": false,
-  "nativeImageRendering": "Image delivery and revision manifests are implemented; native reader integration is outside this change"
+  "verifiedAt": "2026-10-03T09:49:34.990015+00:00",
+  "handlerSHA256": "a165c667f5afbbb3cb099f6e187cb5a71f81b0b4692439216e473412aeb46176"
 }

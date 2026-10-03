@@ -6,28 +6,28 @@
     "root": "backend",
     "localRoot": "/Users/nathan/Documents/GitHub/How-To-Adult",
     "productionBranch": "master",
-    "productionSha": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "productionSha": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
     "productionUrl": "how-to-adult-guides.vercel.app",
     "hasProduction": true,
     "framework": null,
     "environmentKeys": [],
-    "awsStatus": "Initial and repeat live dual deployment verified; one private versioned S3 publication store",
+    "awsStatus": "Restricted remote editor and image delivery verified on both hosts; repeat deploy preserves key and catalog",
     "deploymentMode": "parallel",
     "targetCutoverAt": "2026-10-22T07:00:00Z",
     "cutoverCompletedAt": null,
     "actualCutoverAt": null,
     "cutoverReady": false,
-    "verifiedDeploymentRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
-    "deploymentCommand": "AWS_PROFILE=fishbowl-head backend/.venv/bin/python backend/deploy.py parallel",
-    "deploymentEvidence": "/Users/nathan/Documents/GitHub/How-To-Adult/backend/deployment-record.json",
-    "lastVerifiedAt": "2026-10-03T08:47:58.190873+00:00",
+    "verifiedDeploymentRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+    "deploymentCommand": "backend/.venv/bin/python backend/deploy.py parallel --vercel /Users/nathan/.local/node/bin/vercel",
+    "deploymentEvidence": "/Users/nathan/.codex/artifacts/how-to-adult-editor-api-20261003/deployment-record.json",
+    "lastVerifiedAt": "2026-10-03T09:55:14.435452+00:00",
     "awsUrl": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com",
     "awsRegion": "us-west-2",
     "awsStack": "how-to-adult-guides-v1",
     "vercelUrl": "https://how-to-adult-guides.vercel.app",
-    "vercelDeploymentID": "dpl_DwuQybVfPpTDmjLaj8bb1SWPfGMU",
-    "vercelDeploymentURL": "https://how-to-adult-guides-27l74lk0e-nathan-fennels-projects.vercel.app",
-    "singleOwner": "AWS Lambda/API Gateway and versioned private S3 publication store; Vercel GET-only reader forwarding",
+    "vercelDeploymentID": "dpl_3zPndJhPCHtnjtDkAy8iVLoa3kwx",
+    "vercelDeploymentURL": "https://how-to-adult-guides-ikh2tz3oe-nathan-fennels-projects.vercel.app",
+    "singleOwner": "AWS versioned private S3; Vercel relays reads and restricted editor requests",
     "scheduledGenerationEnabled": false,
     "productionDomainsChanged": false,
     "productionRoutingOwner": "Vercel reader alias during parallel operation",
@@ -48,9 +48,18 @@
         "searchPagination": 200,
         "missingGuide": 404,
         "unauthenticatedPublication": 403,
-        "catalogRevision": "2026-10-03-starter-1",
-        "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
-        "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+        "catalogRevision": "2026-10-03-editor-verified-2-094423",
+        "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+        "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+        "restrictedEditor": {
+          "GET /v1/editor/status missing": 401,
+          "GET /v1/editor/status wrong": 401,
+          "POST /v1/editor/guides missing": 401,
+          "POST /v1/editor/guides wrong": 401,
+          "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 missing": 401,
+          "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 wrong": 401
+        },
+        "illustrationManifest": 200
       },
       "vercel": {
         "health": 200,
@@ -60,9 +69,70 @@
         "searchPagination": 200,
         "missingGuide": 404,
         "unauthenticatedPublication": 404,
-        "catalogRevision": "2026-10-03-starter-1",
-        "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
-        "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+        "catalogRevision": "2026-10-03-editor-verified-2-094423",
+        "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+        "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+        "restrictedEditor": {
+          "GET /v1/editor/status missing": 401,
+          "GET /v1/editor/status wrong": 401,
+          "POST /v1/editor/guides missing": 401,
+          "POST /v1/editor/guides wrong": 401,
+          "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 missing": 401,
+          "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 wrong": 401
+        },
+        "illustrationManifest": 200
+      },
+      "authenticatedEditor": {
+        "verifiedAt": "2026-10-03T09:51:01.451569+00:00",
+        "checks": {
+          "https://how-to-adult-guides.vercel.app": {
+            "authenticatedStatus": 200,
+            "assetUploadRetry": 200,
+            "publicImageRoundTrip": 200,
+            "imageBytes": 40809,
+            "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
+            "originalGuidesPreserved": 56,
+            "exactRevisionManifest": 200,
+            "bothSuccessfulPublisherHistoriesPresent": true,
+            "staleWriteRejected": 412,
+            "catalogRevision": "2026-10-03-editor-verified-2-094423",
+            "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+            "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+            "keyPreservedAfterDeploymentWithoutKeyFile": true
+          },
+          "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
+            "authenticatedStatus": 200,
+            "assetUploadRetry": 200,
+            "publicImageRoundTrip": 200,
+            "imageBytes": 40809,
+            "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
+            "originalGuidesPreserved": 56,
+            "exactRevisionManifest": 200,
+            "bothSuccessfulPublisherHistoriesPresent": true,
+            "staleWriteRejected": 412,
+            "catalogRevision": "2026-10-03-editor-verified-2-094423",
+            "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+            "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+            "keyPreservedAfterDeploymentWithoutKeyFile": true
+          }
+        },
+        "secretPrinted": false,
+        "nativeImageRendering": "Backend image delivery ready; native sidecar rendering outside this change"
+      },
+      "repeatKeyVerification": {
+        "verifiedAt": "2026-10-03T09:55:14.435452+00:00",
+        "checks": {
+          "https://how-to-adult-guides.vercel.app": {
+            "authenticatedStatus": 200,
+            "catalogPreserved": true,
+            "keyPreserved": true
+          },
+          "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
+            "authenticatedStatus": 200,
+            "catalogPreserved": true,
+            "keyPreserved": true
+          }
+        }
       }
     },
     "remainingChecks": [
@@ -72,6 +142,16 @@
     ],
     "agentInstructions": "/Users/nathan/Documents/GitHub/AGENTS.md",
     "providerPrivacyEvidence": "/Users/nathan/Documents/GitHub/How-To-Adult/backend/provider-privacy-verification.json",
-    "readiness": "Initial and repeat dual releases verified. Code rollback, sustained parallel observation and actual cutover remain unverified. No DNS, account cancellation or background-job changes."
+    "readiness": "Initial, final and repeat dual releases plus authenticated publishing and image delivery verified. Sustained parallel observation, compatible code rollback and actual cutover remain unverified.",
+    "editorAPIProvisioned": true,
+    "editorScopes": [
+      "guides:upsert",
+      "assets:create"
+    ],
+    "editorAPIContract": "https://github.com/fennelouski/How-To-Adult/blob/codex/how-to-adult-remote-editor-20261003/EDITOR-API.md",
+    "releaseBranch": "codex/how-to-adult-remote-editor-20261003",
+    "editorParallelStartedAt": "2026-10-03T09:49:34.990015+00:00",
+    "editorEarliestTwoWeekMilestone": "2026-10-17T09:49:34.990015+00:00",
+    "editorNativeRendering": "Backend assets ready; native image rendering outside the editor endpoint change"
   }
 ]

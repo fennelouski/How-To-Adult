@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-10-03T09:51:01.451569+00:00",
+  "checks": {
+    "https://how-to-adult-guides.vercel.app": {
+      "authenticatedStatus": 200,
+      "assetUploadRetry": 200,
+      "publicImageRoundTrip": 200,
+      "imageBytes": 40809,
+      "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
+      "originalGuidesPreserved": 56,
+      "exactRevisionManifest": 200,
+      "bothSuccessfulPublisherHistoriesPresent": true,
+      "staleWriteRejected": 412,
+      "catalogRevision": "2026-10-03-editor-verified-2-094423",
+      "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "keyPreservedAfterDeploymentWithoutKeyFile": true
+    },
+    "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
+      "authenticatedStatus": 200,
+      "assetUploadRetry": 200,
+      "publicImageRoundTrip": 200,
+      "imageBytes": 40809,
+      "imageSHA256": "8d7246dc339b3bd223f26e0500b73c11a6be4f6652938bfaf3f757f5ce88a277",
+      "originalGuidesPreserved": 56,
+      "exactRevisionManifest": 200,
+      "bothSuccessfulPublisherHistoriesPresent": true,
+      "staleWriteRejected": 412,
+      "catalogRevision": "2026-10-03-editor-verified-2-094423",
+      "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "keyPreservedAfterDeploymentWithoutKeyFile": true
+    }
+  },
+  "secretPrinted": false,
+  "nativeImageRendering": "Backend image delivery ready; native sidecar rendering outside this change"
+}

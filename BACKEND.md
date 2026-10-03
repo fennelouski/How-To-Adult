@@ -1,6 +1,6 @@
 # How to Adult content backend
 
-The backend is implemented and verified locally. It has **not been deployed**. AWS CLI sign-in needs to be renewed before the first live release. The app's `AdultCatalogURL` must stay empty until the exact live reader endpoint is verified.
+The guide API is deployed and verified on AWS and Vercel. Both hosts use the same private publication store. The independent authoring client uses a provisioned content-only key and needs no AWS login. See [EDITOR-API.md](EDITOR-API.md) for guide batches, image uploads and key handling, and [the authoring prompt](CONTENT-AGENT-PROMPT.md) for the content workflow.
 
 The app includes `Content/catalog.json`, so the starter guides work immediately without a network connection. Once configured, the app can download a new full catalog, validate it and retain its last valid copy. Reading, saved guides, checklist progress and reminders stay on the device.
 
@@ -8,9 +8,9 @@ The app includes `Content/catalog.json`, so the starter guides work immediately 
 
 An API Gateway HTTP API invokes a small Python Lambda. A private S3 bucket stores the current full catalog, immutable revision copies and S3 object versions. A complete publication replaces the current object atomically. The bucket blocks public access, requires HTTPS, encrypts its contents and is retained if the CloudFormation stack is deleted or replaced. The runtime cannot delete guides or previous object versions.
 
-The Lambda role has `s3:ListBucket` for this one editorial bucket so a missing first catalog produces a distinct missing-object response. `GetObject` does not supply a listing prefix, so that bucket-level grant has no `s3:prefix` condition. Object reads and writes remain limited to the published catalog and revision prefixes. Access denials propagate as service failures and never count as an empty library. [AWS GetObject permissions](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html).
+The Lambda role has `s3:ListBucket` for this one editorial bucket so a missing first catalog produces a distinct missing-object response. `GetObject` does not supply a listing prefix, so that bucket-level grant has no `s3:prefix` condition. Object reads and writes remain limited to published catalogs, immutable revisions, PNG assets and illustration manifests. Access denials propagate as service failures and never count as an empty library. [AWS GetObject permissions](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html).
 
-Vercel serves an explicit GET-only gateway to the AWS reader routes during parallel operation. It has no database, AWS credentials, publishing route, background task or generation scheduler. `/release.json` records its own committed source revision and handler hash. Both endpoints therefore read the same AWS publication.
+Vercel relays reader routes and the explicit restricted editor routes to AWS during parallel operation. It has no database, AWS credentials, full-catalog IAM publishing route, background task or generation scheduler. `/release.json` records its own committed source revision and handler hash. Both endpoints therefore read the same AWS publication.
 
 | Route | Method | Access | Result |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ The URL above is a placeholder, not a deployed endpoint. Use the exact verified 
 
 To restore older editorial content, retrieve an immutable `revisions/{revision}.json` from the retained S3 bucket using the owner's authenticated AWS access. Review it, give the restored publication a **new** revision and current `publishedAt`, then publish with the current live ETag. Do not bypass the API by writing directly to S3. Code rollback uses a clean checkout of a known prior committed backend revision and the appropriate guarded deployment command. Both content and code rollback still need live verification and a recorded receipt; local tests do not prove a production rollback.
 
-No daily generator or schedule is enabled. A later authoring loop can produce drafts, run the existing validators and submit explicitly reviewed publications through the same IAM endpoint.
+No daily generator or schedule is enabled. The remote authoring agent can produce drafts, run the existing validators and submit reviewed guide batches through the restricted Bearer endpoint. The IAM endpoint remains available to the owner for complete publications.
 
 ## Privacy and logs
 
@@ -118,7 +118,7 @@ AWS and Vercel process normal network request metadata, including IP addresses a
 
 On 2026-10-03, the 49 backend checks passed, including nine checks against the actual pinned boto3 service model, stubbed S3 conditional requests and the signed editorial client. First-publication permissions, interrupted publication retry, live-library preservation and rejected storage failures have regression coverage. Seven release tests cover frozen committed source, changed HEAD, untracked files, source edits hidden from Git status, artifact tampering and mutations before AWS, Vercel or publication writes. CloudFormation lint passed with cfn-lint 1.57.1 for the generated template. The real 56-guide starter catalog passed backend validation and actual loopback HTTP reader checks. These checks used an isolated environment on the user's Mac; no remote deployment, editorial publication, provider account or recurring job was created.
 
-Live authentication, AWS CloudFormation validation, initial publication, both public reader deployments, repeat deployment, production rollback and the parallel observation period remain unverified.
+The remote editor release was verified on 2026-10-03 at committed revision `26f82e669b4261a0e639e2d9d1cd949de38e0fde` on both hosts, followed by a successful repeat deployment. All 66 backend checks and CloudFormation lint passed. Real Bearer publications succeeded through both origins; stale updates and missing/wrong keys were rejected. The 56 original guides remained unchanged, and a reviewed room-reset diagram was uploaded, associated, downloaded byte-for-byte and served with exact-revision manifests. Normal deployment preserved the key. Sanitized receipts are in `backend/editor-api-audit/2026-10-03/`; the current deployment record links the checks. Compatible code rollback, sustained parallel observation and actual cutover remain unverified. Native image rendering has not been added in this backend change.
 
 ## Primary implementation references
 

@@ -14,7 +14,7 @@ Open a guide, follow its steps and keep useful answers for later. Guides include
 
 There is no account, subscription, in-app purchase, advertising or tracking SDK. Bookmarks, progress and reminders remain on each device. Cross-device sync is not implemented.
 
-The backend is implemented and its 49 local tests passed, but it is not deployed. `AdultCatalogURL` is absent from both app configurations. This build uses its bundled library and does not claim live article updates, AI writing or a daily publishing schedule. Signed packages and the phone/tablet galleries are prepared locally; no build has been uploaded or submitted for App Review.
+The content backend is deployed to AWS and Vercel, with one private publication store and a restricted remote editor that needs no AWS login. Guide publishing, immutable PNG uploads, exact-revision illustration manifests and repeat deployment are verified; 66 backend tests pass. See [EDITOR-API.md](EDITOR-API.md), [CONTENT-AGENT-PROMPT.md](CONTENT-AGENT-PROMPT.md) and the deployment record. Native release status remains in the app-store audit; this backend change does not build or submit apps or add native image rendering. No content-generation schedule is installed by the endpoint.
 
 ## Build locally
 

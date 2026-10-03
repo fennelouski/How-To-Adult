@@ -5,6 +5,7 @@
     <key>ITSAppUsesNonExemptEncryption</key><false/>
     <key>CFBundleDevelopmentRegion</key><string>en</string>
     <key>CFBundleDisplayName</key><string>How to Adult</string>
+    <key>AdultCatalogURL</key><string>https://how-to-adult-guides.vercel.app/v1/catalog</string>
     <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
     <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>

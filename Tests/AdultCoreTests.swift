@@ -74,6 +74,32 @@ final class AdultCoreTests: XCTestCase {
         XCTAssertFalse(second.progress(article.id).isChecked(step))
     }
 
+    @MainActor func testConfiguredLiveCatalogPreservesProgressAndColdCache() async throws {
+        try XCTSkipUnless(ProcessInfo.processInfo.environment["HOWTOADULT_VERIFY_LIVE_CATALOG"] == "1",
+                          "Live deployment verification runs explicitly; ordinary unit tests stay offline.")
+        let configured = try XCTUnwrap(Bundle.main.object(forInfoDictionaryKey: "AdultCatalogURL") as? String)
+        XCTAssertEqual(configured, "https://how-to-adult-guides.vercel.app/v1/catalog")
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let seed = directory.appendingPathComponent("seed.json")
+        try catalogData().write(to: seed)
+        let store = AdultStore(directory: directory, bundledURL: seed)
+        let article = try XCTUnwrap(store.articles.first)
+        let step = try XCTUnwrap(article.steps.first)
+        store.toggleSaved(article.id)
+        store.toggleStep(step, in: article)
+        XCTAssertTrue(store.canRefresh)
+        await store.refresh()
+        XCTAssertNil(store.updateIssue)
+        XCTAssertGreaterThanOrEqual(store.articles.count, 56)
+        XCTAssertTrue(FileManager.default.fileExists(atPath: directory.appendingPathComponent("catalog-cache-v1.json").path))
+        let reloaded = AdultStore(directory: directory, bundledURL: seed)
+        XCTAssertEqual(reloaded.catalog?.revision, store.catalog?.revision)
+        XCTAssertTrue(reloaded.progress(article.id).isSaved)
+        XCTAssertTrue(reloaded.progress(article.id).isChecked(step))
+    }
+
     @MainActor func testCorruptPersonalStorageIsPreservedAndWritesBlocked() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }

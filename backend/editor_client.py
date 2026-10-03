@@ -58,6 +58,8 @@ class EditorClient:
         if not path.startswith("/v1/") or "?" in path or "#" in path or ".." in path:
             raise ValueError("Use a supported versioned API path.")
         request_headers = {"User-Agent": "HowToAdultEditor/1.0", **(headers or {})}
+        if method == "GET" and not path.startswith("/v1/assets/"):
+            request_headers.setdefault("Cache-Control", "no-cache")
         if authenticated:
             if not path.startswith("/v1/editor/"):
                 raise ValueError("The editor key may only be sent to editor routes.")

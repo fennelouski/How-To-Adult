@@ -33,6 +33,7 @@ python3 backend/editor_client.py --credentials /secure/path/editor-credentials.j
 | `/v1/editor/assets/{sha256}` | PUT | Bearer key | Immutable PNG upload |
 | `/v1/assets/{sha256}` | GET | Public | Actual PNG bytes |
 | `/v1/illustrations` | GET | Public | Image associations for the live catalog revision |
+| `/v1/illustrations/{revision}` | GET | Public | Immutable image associations matching a specific published catalog |
 | `/v1/catalog` | GET | Public | Native schema-1 catalog and ETag |
 | `/v1/publication` | PUT | AWS IAM, direct AWS only | Owner's complete-catalog publisher |
 
@@ -78,7 +79,7 @@ Associate uploaded images through the batch's `illustrations` list, with at most
 
 An empty `stepID` selects the guide's hero image. Otherwise reference an actual step ID. One image occupies each guide/step slot. Omitted associations persist; explicit replacement updates a slot. Every image needs meaningful alt text, creator, license and provenance. Inspect the actual exported image before publishing.
 
-Illustrations live in a revision-bound sidecar so native schema 1 stays compatible. A failed or conflicting publication cannot switch the current illustration manifest. The existing native app does not yet render this sidecar; image assets and associations are ready for its next separately reviewed reader integration. Do not claim an image is visible in the current app solely because its upload succeeded.
+Illustrations live in a revision-bound sidecar so native schema 1 stays compatible. Read `/v1/illustrations/{catalog.revision}` to pair images with the exact catalog snapshot, including cached or historical catalogs. The mutable manifest revalidates its cache; the immutable revision route cannot expose a failed draft without a matching publication history. A failed or conflicting publication cannot switch the current illustration manifest. The existing native app does not yet render this sidecar; image assets and associations are ready for its next separately reviewed reader integration. Do not claim an image is visible in the current app solely because its upload succeeded.
 
 ## Owner operations
 

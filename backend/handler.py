@@ -476,6 +476,8 @@ def editor_publish(event, headers, store):
     validate_catalog(catalog)
     if timestamp(catalog["publishedAt"]) <= timestamp(previous["publishedAt"]):
         raise CatalogError("Use a publishedAt strictly later than the live publication.", 409)
+    if store.get_key("revisions/" + catalog["revision"] + ".json") is not None:
+        raise CatalogError("A publication revision has already been used. Prepare a new revision.", 409)
     manifest = merge_illustrations(store, catalog, previous, update["illustrations"])
     immutable_put(store, "illustrations/" + catalog["revision"] + ".json", canonical(manifest))
     etag = store.publish(catalog, expected)
@@ -526,6 +528,17 @@ def handle(event, store, source_revision="local", conditional_writes=True, edito
             result.update(body=base64.b64encode(stored[0]).decode("ascii"), isBase64Encoded=True)
             result["headers"]["content-type"] = "image/png"
             return result
+        manifest_revision = re.fullmatch(r"/v1/illustrations/([A-Za-z0-9][A-Za-z0-9._-]{0,95})", path)
+        if method == "GET" and manifest_revision:
+            if event.get("rawQueryString"):
+                raise CatalogError("Illustrations do not accept query parameters.", 400)
+            read = getattr(store, "get_key", lambda _: None)
+            historical = read("revisions/" + manifest_revision[1] + ".json")
+            if historical is None:
+                raise CatalogError("Publication not found.", 404)
+            value = illustrations(store, validate_catalog(decode_json(historical[0])))
+            etag = '"' + hashlib.sha256(canonical(value)).hexdigest() + '"'
+            return response(200, value, etag, source_revision, manifest_revision[1], cache="public, max-age=31536000, immutable")
         if method == "PUT" and path == "/v1/publication":
             iam = event.get("requestContext", {}).get("authorizer", {}).get("iam", {})
             if not iam.get("userArn"):
@@ -579,8 +592,10 @@ def handle(event, store, source_revision="local", conditional_writes=True, edito
                 raise CatalogError("Guide not found.", 404)
             etag = '"' + hashlib.sha256(canonical(value)).hexdigest() + '"'
         if cache_matches(headers.get("if-none-match", ""), etag):
-            return response(304, etag=etag, source_revision=source_revision, content_revision=catalog["revision"], cache="public, max-age=60, must-revalidate")
-        return response(200, value, etag, source_revision, catalog["revision"], cache="public, max-age=60, must-revalidate")
+            return response(304, etag=etag, source_revision=source_revision, content_revision=catalog["revision"],
+                            cache="no-cache" if path == "/v1/illustrations" else "public, max-age=60, must-revalidate")
+        return response(200, value, etag, source_revision, catalog["revision"],
+                        cache="no-cache" if path == "/v1/illustrations" else "public, max-age=60, must-revalidate")
     except CatalogError as error:
         return response(error.status, {"error": str(error)}, source_revision=source_revision)
 

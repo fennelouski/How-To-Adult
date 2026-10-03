@@ -117,6 +117,13 @@ class EditorTests(unittest.TestCase):
     def test_publication_time_must_advance(self):
         self.assertEqual(self.call("/v1/editor/guides", "POST", self.batch(publishedAt=fixture()["publishedAt"]))["statusCode"], 409)
 
+    def test_failed_revision_reuse_cannot_attach_images_to_old_history(self):
+        self.assertEqual(self.call("/v1/editor/guides", "POST", self.batch())["statusCode"], 200)
+        self.headers["If-Match"] = self.store.get()[1]
+        reused = self.batch(revision="fixture-1", publishedAt="2026-10-02T00:00:01Z")
+        self.assertEqual(self.call("/v1/editor/guides", "POST", reused)["statusCode"], 409)
+        self.assertIsNone(self.store.get_key("illustrations/fixture-1.json"))
+
     def test_parallel_publish_has_one_winner(self):
         def write(index):
             return self.call("/v1/editor/guides", "POST", self.batch(revision="parallel-" + str(index)))["statusCode"]
@@ -164,6 +171,11 @@ class EditorTests(unittest.TestCase):
         manifest = json.loads(self.call("/v1/illustrations", headers={})["body"])
         self.assertEqual(manifest["revision"], "iam-next")
         self.assertEqual(manifest["items"], [image])
+        historical = self.call("/v1/illustrations/" + value["revision"], headers={})
+        self.assertEqual(json.loads(historical["body"])["revision"], value["revision"])
+        self.assertEqual(json.loads(historical["body"])["items"], [image])
+        self.assertIn("immutable", historical["headers"]["cache-control"])
+        self.assertEqual(self.call("/v1/illustrations/unpublished-revision", headers={})["statusCode"], 404)
 
     def test_missing_asset_or_empty_alt_text_cannot_be_associated(self):
         image = {"guideID": "new-useful-guide", "stepID": "", "assetSHA256": "0" * 64,

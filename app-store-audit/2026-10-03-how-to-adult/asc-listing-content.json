@@ -1,0 +1,50 @@
+{
+  "appID": "6818756061",
+  "name": "How to Adult: Pocket Guide",
+  "nameResolution": "Apple rejected How to Adult as already in use; Pocket Guide preserves the product name and describes its purpose.",
+  "sku": "how-to-adult-2026",
+  "bundleID": "com.nathanfennel.How-To-Adult",
+  "platforms": [
+    "iOS",
+    "macOS"
+  ],
+  "locale": "en-US",
+  "subtitle": "Your guide to everyday life",
+  "promotionalText": "Laundry, cooking, money, work and the everyday things that come up. Find clear steps, save useful guides and set a reminder for later.",
+  "description": "Some things are easier once you have a starting point.\n\nHow to Adult is a pocket guide to everyday life, with 56 guides across Home, Food, Money, Work, Wellbeing, People and Everyday. Find a guide for the thing in front of you, then work through it one step at a time.\n\nWash a load of laundry. Cook a simple meal. Make a first budget. Understand your 401k. Check your car. Settle into a new room. Make plans with a friend.\n\nEach guide breaks the task into clear steps, with practical supplies, cautions and links to sources where needed. Guides that depend on United States rules say so.\n\n- Search the included library without an internet connection.\n- Check off steps as you go.\n- Save useful guides for another day.\n- Pick a date, time and sound preference for a local reminder.\n- Share a guide through your device's share menu.\n- Get published guide updates from the live library, with an offline copy kept on your device.\n\nUse the native app on iPhone, iPad or Mac. Your saved guides, progress and reminders stay on the device where you create them.\n\nNo account, ads, subscription or in-app purchases.",
+  "keywords": "adulting,laundry,cooking,budget,habits,home,maintenance,friendship,taxes,checklist,life skills",
+  "supportURL": "https://nathanfennel.com/how-to-adult/support.html",
+  "privacyURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+  "copyright": "2026 Nathan Fennel",
+  "reviewNotes": "No account or demo credentials are required. All 56 starter guides are bundled and available offline.\n\nOpen a topic or search the library. Open a guide, check a step and save the guide; progress persists locally. Use the bell to choose a future date, time and sound preference for a local reminder. Notification permission is requested when saving a reminder. Declining permission does not block reading or saving guides.\n\nSources appear below each sourced guide. United States-specific guides identify their scope. Sharing uses the system share menu.\n\nThe public editorial catalog updates over HTTPS, retaining the last valid downloaded library for offline use. Personal bookmarks, checked steps, reminders and local search queries are not uploaded. The same English library is available on iPhone, iPad and Mac; personal progress does not sync between devices.\n\nThere are no ads, purchases, subscriptions or remote push notifications.",
+  "privacyProposal": {
+    "dataType": "Other Diagnostic Data",
+    "purpose": "App Functionality",
+    "linked": true,
+    "tracking": false,
+    "basis": "Retained provider request metadata for hosting availability/security; IP anonymization is unverified. Local personal library data is not uploaded."
+  },
+  "created": true,
+  "metadataSaved": false,
+  "uploaded": true,
+  "submitted": false,
+  "iosMetadataSaved": true,
+  "iosBuildProcessed": true,
+  "iosBuildSelected": true,
+  "privacyLabelDraftComplete": true,
+  "privacyLabelPublished": false,
+  "marketingUploaded": {
+    "iphone6.9": 10,
+    "ipad13": 10
+  },
+  "marketingOrderVerifiedAfterReload": true,
+  "pricingSaved": true,
+  "allStorefrontsAvailable": 175,
+  "includeFutureStorefronts": true,
+  "appInformationSaved": true,
+  "primaryCategory": "Lifestyle",
+  "secondaryCategory": "Reference",
+  "ageRating": "13+",
+  "contentRights": "No third-party content within the app; original guides, system symbols, and external source links",
+  "licenseAgreement": "Apple Standard License Agreement"
+}

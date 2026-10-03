@@ -1,0 +1,63 @@
+{
+  "observedAt": "2026-10-03T10:51:31.591082+00:00",
+  "source": "App Store Connect live browser UI",
+  "appID": "6818756061",
+  "appInformationSaved": true,
+  "contentRights": "DOES_NOT_USE_THIRD_PARTY_CONTENT",
+  "contentRightsBasis": "56 original guides. Source titles and external system-browser links only; no third-party web reader, articles, images, or videos embedded. SF Symbols use native system frameworks.",
+  "ageRating": "13+ with regional variations",
+  "categories": [
+    "Lifestyle",
+    "Reference"
+  ],
+  "pricing": {
+    "freeStorefronts": 175,
+    "availableStorefronts": 175,
+    "includeFutureStorefronts": true
+  },
+  "ios": {
+    "version": "1.0",
+    "build": "1",
+    "buildID": "2a23e261-5a5d-4d6f-8509-5958896e55c5",
+    "metadataSaved": true,
+    "buildProcessed": true,
+    "buildSelected": true,
+    "screenshots": {
+      "iphone6.9": 10,
+      "ipad13": 10
+    },
+    "screenshotOrderVerifiedAfterReload": true,
+    "submitted": false
+  },
+  "macOS": {
+    "transportUploadSucceeded": true,
+    "buildProcessed": null,
+    "buildSelected": false,
+    "metadataSaved": false,
+    "screenshotsUploaded": 0,
+    "submitted": false
+  },
+  "privacy": {
+    "draftComplete": true,
+    "published": false,
+    "publishConfirmationPending": true
+  },
+  "proofImages": {
+    "howtoadult-asc-app-information-saved.png": {
+      "path": "asc-proof/howtoadult-asc-app-information-saved.png",
+      "sha256": "322915b3bbe4fc10665b78b67747eb80b48688c3f740556331222e1eadc27e13"
+    },
+    "howtoadult-asc-iphone-gallery-ordered.png": {
+      "path": "asc-proof/howtoadult-asc-iphone-gallery-ordered.png",
+      "sha256": "f5ee5f725b4b7e1d18e327c19156c9554ef405d3756a6ebb42a93a56a51e477c"
+    },
+    "howtoadult-asc-ipad-gallery-ordered.png": {
+      "path": "asc-proof/howtoadult-asc-ipad-gallery-ordered.png",
+      "sha256": "c4ff8d84fc9f73fe55ad0248ca692427b36f816c91dd10f3f2585f60957fbba8"
+    },
+    "howtoadult-privacy-publication-dialog.png": {
+      "path": "asc-proof/howtoadult-privacy-publication-dialog.png",
+      "sha256": "286a317a0eccc68c2f9a152f87a1221df16647108a0e4b303a2cbf4c3a673b5d"
+    }
+  }
+}

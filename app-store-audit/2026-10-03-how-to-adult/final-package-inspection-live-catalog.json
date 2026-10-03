@@ -1,0 +1,375 @@
+{
+  "verifiedAt": "2026-10-03T09:06:41.993470+00:00",
+  "mode": "signed_package_inspection_no_upload_no_runtime_test",
+  "revision": "00b817d46b25c02e4057f9fb018d1a9d31dd16a8",
+  "nativeSHA256": "368b77268ea5c0112c2c872b5ea2a499e646ba426ac6b025b220481b97f28d65",
+  "nativeInputFileCount": 35,
+  "nativeInputScope": "Existing release-native.py strict Sources/Configuration/Resources/Content/HowToAdult.xcodeproj/project.yml scope, including tracked docs. Test targets and backend/audit files are outside this native release-input scope.",
+  "sourceBefore": {
+    "verifiedAtUTC": "2026-10-03T09:01:58.302966+00:00",
+    "revision": "00b817d46b25c02e4057f9fb018d1a9d31dd16a8",
+    "nativeSHA256": "368b77268ea5c0112c2c872b5ea2a499e646ba426ac6b025b220481b97f28d65",
+    "nativeInputFileCount": 35,
+    "allFrozenSourceHashesMatch": true,
+    "nativeWorkingTreeClean": true
+  },
+  "sourceAfter": {
+    "verifiedAtUTC": "2026-10-03T09:06:41.993415+00:00",
+    "revision": "00b817d46b25c02e4057f9fb018d1a9d31dd16a8",
+    "nativeInputFileCount": 35,
+    "nativeSHA256": "368b77268ea5c0112c2c872b5ea2a499e646ba426ac6b025b220481b97f28d65",
+    "allFrozenSourceHashesMatch": true,
+    "nativeWorkingTreeClean": true
+  },
+  "releaseRecord": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/release-verification.json",
+  "releaseRecordSHA256": "5351a2478a0776419616e78f78c913471464fb85e653c6fae668375f8c7b4fad",
+  "releaseScriptSHA256": "b3ed45b2fb9372909296e966b76d608e36deb8fb545b839f37f6dae2154fcd19",
+  "releaseLauncherCommand": [
+    "python3",
+    "scripts/release-native.py",
+    "--revision",
+    "00b817d46b25c02e4057f9fb018d1a9d31dd16a8",
+    "--platform",
+    "both",
+    "--output",
+    "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640"
+  ],
+  "uploaded": false,
+  "appStoreConnectRegistrationAttempted": false,
+  "accountUIUsed": false,
+  "APIAuthenticationUsed": false,
+  "SimulatorBootOrRuntimePerformed": false,
+  "visionOSBuildOrRuntimePerformed": false,
+  "macOSAppLaunchPerformed": false,
+  "nativeSourceModified": false,
+  "oldPackageArtifactsAndAuditRecordsPreserved": true,
+  "ownedTemporaryDerivedDataRemovedAfterSuccess": true,
+  "macOSRuntimeCaveat": "Original-bundle local runtime verification awaits the owner handling its existing-container sharing consent. This package inspection asserts no runtime test pass and did not touch the existing debug process.",
+  "liveCatalogBackendEvidence": {
+    "recordPath": "backend/deployment-record.json",
+    "recordSHA256": "73b0f2fd607174fbb057b7fcb276950c339bed8876c7a201866b366dfe6a391e",
+    "verifiedBackendRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "recordedMode": "parallel",
+    "recordedStatus": "verified",
+    "recordedSameRevisionVerifiedOnBothHosts": true,
+    "recordedVerifiedAtUTC": "2026-10-03T08:47:58.190873+00:00",
+    "vercelCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+    "awsCatalogURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+    "nativeRevision": "00b817d46b25c02e4057f9fb018d1a9d31dd16a8",
+    "nativeAndBackendRevisionRecordedSeparately": true,
+    "nativeConfigurationMatchesVerifiedPublicReader": true,
+    "backendCatalogPublishedSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+    "bundledCatalogSourceMatchesBackendFrozenSource": true,
+    "backendDeploymentOrRepeatedHTTPChecksPerformedByPackagingTask": false
+  },
+  "platforms": {
+    "iOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/iOS/Export/How to Adult.ipa",
+      "bytes": 1310285,
+      "SHA256": "1ff10a727fc30f4571eefedf034ff04b381893327b95617a3df9080d97e983bd",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/iOS/Inspection/Payload/How to Adult.app",
+      "architectures": [
+        "arm64"
+      ],
+      "minimumOS": "17.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": true,
+      "AdultCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "AdultCatalogURLMatchesFrozenSourceAndVerifiedBackend": true,
+      "URLScheme": "howtoadult",
+      "supportedPlatforms": [
+        "iPhoneOS"
+      ],
+      "UIDeviceFamily": [
+        1,
+        2
+      ],
+      "primaryIconVerified": true,
+      "compiledIconRenditions": [
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "Idiom": "phone",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "Opaque": true
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "Idiom": "pad",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "Opaque": true
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "MultiSized Image",
+          "Idiom": "phone"
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "MultiSized Image",
+          "Idiom": "pad"
+        }
+      ],
+      "compiledIconPNGs": [
+        {
+          "filename": "AppIcon60x60@2x.png",
+          "pixelWidth": 120,
+          "pixelHeight": 120,
+          "sha256": "1147ca211416958401e156ee34726f4691cd436bac1d3605fb6503486b06f987"
+        },
+        {
+          "filename": "AppIcon76x76@2x~ipad.png",
+          "pixelWidth": 152,
+          "pixelHeight": 152,
+          "sha256": "927a3f8b27cff9f486292c0c96dd30637ea82aad461f850decaa43d2cddfd306"
+        }
+      ],
+      "AppIconICNS_SHA256": null,
+      "AssetsCAR_SHA256": "d58bf3a52512d74bebc7c6287c7f5e0f71bf55a3fe4d0ee8b2da19a88b538f82",
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacyManifest": {
+        "NSPrivacyTracking": false,
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyCollectedDataTypes": [],
+        "NSPrivacyAccessedAPITypes": []
+      },
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "signatureAppleRootAuthorityPresent": true,
+      "signingIdentityClass": "Apple Distribution",
+      "signedTeamMatchesFrozenSource": true,
+      "CodeDirectoryHash": "80443758bc54aee2e46e2032aaf92e8e08e28d67",
+      "signatureHashType": "sha256 size=32",
+      "entitlementKeys": [
+        "application-identifier",
+        "beta-reports-active",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "entitlementsEncodedSHA256": "2453038e941d4e4ed5efce3bc39a1045899b592844b5fcb993d7bf0e970ecba1",
+      "entitlementGetTaskAllow": false,
+      "entitlementApplicationIdentifierMatches": true,
+      "macAppSandbox": null,
+      "macNetworkClient": null,
+      "profileSHA256": "b03c47781d8393f111b2b6ea7c18946e0b3ffa78eefed14da0613323d1efc73a",
+      "profilePlatform": [
+        "iOS",
+        "xrOS",
+        "visionOS"
+      ],
+      "profileExpirationUTC": "2027-06-10T13:08:25+00:00",
+      "profileProvisionedDevicesPresent": false,
+      "profileProvisionsAllDevices": false,
+      "profileAllowsDebuggerAttachment": false,
+      "installer": null,
+      "debugQALaunchArgumentsAbsent": true,
+      "debugQAAppearanceClassAbsent": true,
+      "testBundlesAbsent": true,
+      "productionBuildSettings": {
+        "CONFIGURATION": "Release",
+        "ENABLE_TESTABILITY": "NO",
+        "TARGETED_DEVICE_FAMILY": "1,2",
+        "MARKETING_VERSION": "1.0",
+        "CURRENT_PROJECT_VERSION": "1",
+        "SUPPORTED_PLATFORMS": "iphoneos iphonesimulator",
+        "SDK_NAME": "iphoneos26.5",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "MACOSX_DEPLOYMENT_TARGET": "26.5",
+        "ENABLE_APP_SANDBOX": "NO",
+        "ENABLE_HARDENED_RUNTIME": "NO"
+      },
+      "InfoPlistSHA256": "abc72ea0ab04f678c5312366b0c9e5fd350ccbffb38ca3cea36afb6ada1a4705",
+      "executableSHA256": "5282fc0e7d06957e8d83301e57c0e4d69609d992336ea563ebab302462a9aa67",
+      "archiveLogSHA256": "9e9b155701048eb1b5429f0f3020c160eec37a64692b3d4dd344ccb58aa5a2f8",
+      "exportLogSHA256": "4164aca340dfe08f70ab367150166ac99af2921636ea13d261cf1da7e1f257e0",
+      "uploadPerformed": false
+    },
+    "macOS": {
+      "package": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/macOS/Export/How to Adult.pkg",
+      "bytes": 1535879,
+      "SHA256": "214e853583cdfd02bbb457ea1b030781e9f630dc8b075cb88a6858c9afae615c",
+      "app": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "minimumOS": "14.0",
+      "version": "1.0",
+      "build": "1",
+      "ITSAppUsesNonExemptEncryption": false,
+      "AdultCatalogURLPresent": true,
+      "AdultCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "AdultCatalogURLMatchesFrozenSourceAndVerifiedBackend": true,
+      "URLScheme": "howtoadult",
+      "supportedPlatforms": [
+        "MacOSX"
+      ],
+      "UIDeviceFamily": null,
+      "primaryIconVerified": true,
+      "compiledIconRenditions": [
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 16,
+          "PixelHeight": 16,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 32,
+          "PixelHeight": 32,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 32,
+          "PixelHeight": 32,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 64,
+          "PixelHeight": 64,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 128,
+          "PixelHeight": 128,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 256,
+          "PixelHeight": 256,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 256,
+          "PixelHeight": 256,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 512,
+          "PixelHeight": 512,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 512,
+          "PixelHeight": 512,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "Icon Image",
+          "PixelWidth": 1024,
+          "PixelHeight": 1024,
+          "Opaque": false
+        },
+        {
+          "Name": "AppIcon",
+          "AssetType": "MultiSized Image"
+        }
+      ],
+      "compiledIconPNGs": [],
+      "AppIconICNS_SHA256": "ac1f785b01aaff94f0abeaea30033399b32a6f97481ce892d855a9ce93da9858",
+      "AssetsCAR_SHA256": "b694134123845ad75f0be3693abf0d531f962b57bd8a71210f84a30983a2286b",
+      "compiledSecondaryTextColors": {
+        "light": "#59595F",
+        "dark": "#AEAEB8"
+      },
+      "catalogGuides": 56,
+      "catalogTopics": 7,
+      "catalogSteps": 224,
+      "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "privacyManifest": {
+        "NSPrivacyTracking": false,
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyCollectedDataTypes": [],
+        "NSPrivacyAccessedAPITypes": []
+      },
+      "privacySHA256": "406dbdc40977792d214b328631c9abc7236dfc9f81e2dffd123eb59999729335",
+      "distributionSignatureVerified": true,
+      "signatureAppleRootAuthorityPresent": true,
+      "signingIdentityClass": "Apple Distribution",
+      "signedTeamMatchesFrozenSource": true,
+      "CodeDirectoryHash": "158fb1482d42a80be58ac8f812bdc5eb7a56062f",
+      "signatureHashType": "sha256 size=32",
+      "entitlementKeys": [
+        "com.apple.application-identifier",
+        "com.apple.developer.team-identifier",
+        "com.apple.security.app-sandbox",
+        "com.apple.security.network.client"
+      ],
+      "entitlementsEncodedSHA256": "878879004070fd14ec345cbe5290c35f1162f8be10c5dd4279014758a0c6aac1",
+      "entitlementGetTaskAllow": false,
+      "entitlementApplicationIdentifierMatches": true,
+      "macAppSandbox": true,
+      "macNetworkClient": true,
+      "profileSHA256": "e2700f478d223b85ad9684d48f2fb4fbea6d6a5dbc7390f719028f470af7e051",
+      "profilePlatform": [
+        "OSX"
+      ],
+      "profileExpirationUTC": "2027-06-10T13:08:25+00:00",
+      "profileProvisionedDevicesPresent": false,
+      "profileProvisionsAllDevices": false,
+      "profileAllowsDebuggerAttachment": false,
+      "installer": {
+        "signatureVerified": true,
+        "AppleAppStoreInstallerAuthorityPresent": true,
+        "signatureStatus": "Status: signed by a developer certificate issued by Apple (Development)",
+        "checkCommand": [
+          "pkgutil",
+          "--check-signature",
+          "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-00b817d46b25-live-catalog-20261003T090158Z-38683640/macOS/Export/How to Adult.pkg"
+        ],
+        "installed": false
+      },
+      "debugQALaunchArgumentsAbsent": true,
+      "debugQAAppearanceClassAbsent": true,
+      "testBundlesAbsent": true,
+      "productionBuildSettings": {
+        "CONFIGURATION": "Release",
+        "ENABLE_TESTABILITY": "NO",
+        "MARKETING_VERSION": "1.0",
+        "CURRENT_PROJECT_VERSION": "1",
+        "SUPPORTED_PLATFORMS": "macosx",
+        "SDK_NAME": "macosx26.5",
+        "IPHONEOS_DEPLOYMENT_TARGET": "26.5",
+        "MACOSX_DEPLOYMENT_TARGET": "14.0",
+        "ENABLE_APP_SANDBOX": "YES",
+        "ENABLE_HARDENED_RUNTIME": "YES"
+      },
+      "InfoPlistSHA256": "7bc4484809163c975f7099f22f265860b7771af5f4e2eec878316988b2714b44",
+      "executableSHA256": "7073f98cb3abbb28fa45231ba54121770bbc260deccfd2ce6a38ae8c182289fd",
+      "archiveLogSHA256": "68adcaf43699e4c637c794ef825a425307b62457b4273beb20adfe60f0f0ad12",
+      "exportLogSHA256": "df95bf30772640053e8d95434c5d0e05f8435450446651439eab74f0d38f22dc",
+      "uploadPerformed": false
+    }
+  },
+  "freeBytesAfter": 6911266816,
+  "nextGate": "Root-owned runtime QA, authenticated App Store Connect history/build-number inspection and current privacy metadata before any upload/submission."
+}

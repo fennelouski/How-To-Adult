@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-scoped-phone-ipad-gallery",
+  "recordedAtUTC": "2026-10-03T09:41:35.918747+00:00",
+  "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+  "sourceBuildRef": "ca8edc4-Release-1.0-build1-SDK26.5",
+  "outputCount": 20,
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "assetsUploadedByThisAgent": false,
+  "AppStoreConnectGalleryAndOrderVerifiedByThisAgent": false,
+  "nativeInputProofArchive": "native-inputs-at-capture.json",
+  "nativeInputProofArchiveSHA256": "3125ec8c3eb9deace7c171a74bc27e9969385a83dd08ef8ab3e075a7681d3316",
+  "nativeBuildProofArchive": "native-builds-at-capture.json",
+  "nativeBuildProofArchiveSHA256": "b125f5583edb25fbc4d9babd88de9267c125aba0d1bd1d2e5b5ac6d0d63cbcc3",
+  "localFileVerification": {
+    "status": "passed",
+    "path": "file-verification.json",
+    "sha256": "e429e0a264076ae5721684aa21cfd7141686a0cebd03838b193c2e76f177c5e2"
+  },
+  "featureEvidence": {
+    "path": "../feature-evidence-live-privacy-final.json",
+    "sha256": "6b069180aa1db04cbb762e7ef69242004b443769f40ea488a07b0a0eaac9377d"
+  },
+  "authorVisualReview": {
+    "reviewer": "/root/wheels_final_packages",
+    "status": "no-material-gallery-finding",
+    "boundedPassCount": 1,
+    "contextRerun": false,
+    "scope": [
+      "all 26 native captures in two contact sheets",
+      "all 20 marketing outputs in two contact sheets",
+      "full-size phone 01 and iPad 01 marketing representatives",
+      "full-size current phone and iPad Settings captures"
+    ],
+    "findings": "Centered whole headlines, upright foreground heroes, outward supporting fans and visible native information hierarchy passed this bounded author review. Native scrolling viewports retain their real crop, iPad search retains its native keyboard, and selected-source pixels are unchanged. No cosmetic revision was needed.",
+    "caveat": "Captures 11\u201313 do not visually establish dark appearance or accessibility text size; excluded from marketing and retained untouched.",
+    "fixed": [
+      "Replaced the historical offline headline with Starter guides work offline for the live-catalog release."
+    ],
+    "suppressed": [],
+    "leftStanding": [
+      "Current native captures do not prove dark/accessibility-size traits.",
+      "Mac runtime, genuine captures and ten-image gallery remain pending owner consent.",
+      "Live App Store Connect displayed assets and order remain pending."
+    ]
+  },
+  "independentVisualReview": {
+    "status": "approved-scoped-phone-ipad-gallery",
+    "reviewer": "/root",
+    "approvalRecordedAtUTC": "2026-10-03T09:55:35.434019+00:00",
+    "authorizationEvidence": "Parent explicitly reported independent approval in this agent conversation.",
+    "scope": [
+      "both ten-image marketing contact sheets",
+      "full-size phone 01-practical-guides",
+      "full-size iPad 05-us-money"
+    ],
+    "findings": "Root approved the composition and current feature claims. iPad05 reader genuinely displays 401(k) steps. Source/provenance caveats remain preserved, including the excluded dark-large captures.",
+    "AppStoreConnectDisplayedGalleryAndOrder": "verified by root after both server reloads",
+    "macGallery": "pending genuine native captures"
+  },
+  "macEvidence": "No Mac gallery created or claimed ready.",
+  "appleDeliveryByRoot": {
+    "recordedAtUTC": "2026-10-03T10:53:06.725518+00:00",
+    "uploadedCounts": {
+      "iphone6.9": 10,
+      "ipad13": 10
+    },
+    "intendedOrderVerifiedAfterReload": true,
+    "proof": "../../asc-publication-progress.json",
+    "historicalAuthorObservationsPreserved": true
+  }
+}

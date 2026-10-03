@@ -1,0 +1,947 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-local-file-source-provenance-layout-checks",
+  "verifiedAtUTC": "2026-10-03T09:38:37.926561+00:00",
+  "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+  "sourceBuildRef": "ca8edc4-Release-1.0-build1-SDK26.5",
+  "manifestPath": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/capture-manifest.live-privacy-final.json",
+  "manifestSHA256": "ddbda4153f2ddc317d791791b2c42217e936bea7ceee6813fb7d5f2302a560cf",
+  "provenancePath": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/marketing-provenance.json",
+  "provenanceSHA256": "8086a2106c1f29c2bf3c8de2e0407606116981e940491c8ca1a54c0e9f76973c",
+  "compositorPath": "/Users/nathan/Documents/GitHub/How-To-Adult/scripts/make-marketing-images.swift",
+  "compositorSHA256": "0c72bf90efe6350c5eea41a41abf03f85ed162f432d21ba425c885c10b5c3081",
+  "nativeInputsCount": 35,
+  "nativeInputsCanonicalSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "nativeInputsCurrentBytesAndFrozenGitRevisionMatch": true,
+  "nativeInputsProofSHA256": "3125ec8c3eb9deace7c171a74bc27e9969385a83dd08ef8ab3e075a7681d3316",
+  "nativeBuildProofSHA256": "b125f5583edb25fbc4d9babd88de9267c125aba0d1bd1d2e5b5ac6d0d63cbcc3",
+  "sourceCaptureCount": 26,
+  "selectedNativeCaptureCount": 20,
+  "outputCount": 20,
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "outputByteRange": [
+    250177,
+    748200
+  ],
+  "decodedPixelHashSerialization": "SHA-256 of row-major RGB8 decoded bytes, without header; dimensions and channels recorded separately. Original PNG sources use standard EXIF orientation normalization before conversion to RGB8. JPEG outputs use native upright orientation. Pillow 11.3.0. These are decode verification hashes; source PNGs remain untouched.",
+  "colorSpaceVerification": "All JPEGs expose EXIF ColorSpace=1 (sRGB) and native macOS sips identifies sRGB IEC61966-2.1; no claim that an explicit ICC byte block is embedded.",
+  "backgroundSequence": [
+    "marineSpines",
+    "vermilionBookmarks",
+    "whiteReferenceGrid",
+    "navyWayfinding"
+  ],
+  "backgroundCountsPerPlatform": {
+    "marineSpines": 3,
+    "vermilionBookmarks": 3,
+    "whiteReferenceGrid": 2,
+    "navyWayfinding": 2
+  },
+  "sourceCaptureVerification": [
+    {
+      "id": "iphone-6.9-01-guides",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/1FF9BEC2-59A5-496C-ABB0-649368CEC0FC.png",
+      "byteSHA256": "a31c30be39637c50de44c3d72b8177ff39b4695ee2146f574fd1bccd3f602790",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "25f1004998e13599972838b6a112036d09020f48d9fea5ce8d8f0c1b010d3983",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-02-guide",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/71F54D40-2FC9-413B-8409-991A9AD17F0E.png",
+      "byteSHA256": "60faa6a399860601ca1d7c7316899b05f56680eb6b757242e17987c585d91a8b",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "1a0872cfb61e26fb9bf0e636c8ed5d55a665d9ed7543ea3c0a36d3241ccaa39c",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-03-steps",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/A1223C15-8510-4982-B88C-84F6340B75AC.png",
+      "byteSHA256": "cd97faf86ee36b5b9131f0bec4f53f0556cea2204fb2f7abde437b2d78d84de6",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "8ed9c8416cf10449fc145966dc5f5f736e07c67f22ae6bf5fe0d1cb3c9fa11ab",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-04-sources",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/6EB96781-51AA-4B01-8D89-231C612873B6.png",
+      "byteSHA256": "216b285da910b5cb3cd1022efcc14e1174c0bf236a806fb1e246dfa34d2b7f90",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "f7d88e64896eaa05938fa7a43f9ad2906b079e1accebfc811b70eea79ecc8778",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-05-saved",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/2760238E-433A-4EC0-BE02-ED927032CF2A.png",
+      "byteSHA256": "9e8d48fea3a33f4d42234512236299f8444ffbd34deb784824634dcf3f464783",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "0d4daa24d7e5a74782b5f9905ec8214cfe52e62b564551426c1fccd37d87fba1",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-06-search",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/7E601DED-43FC-4112-8011-84944923370E.png",
+      "byteSHA256": "13aa257c7ac7d2aaaae515efc462c86054cd8e01af87bb3cca68feefa6da974c",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "e008be055b7bec69e1b06bd83e61ebde24ad640b47946240a8607a3dadc1d19b",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-07-money",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/B5DAF433-4E73-46F8-940D-B3EDEEDE930B.png",
+      "byteSHA256": "65106a613cd504c49dee888c7a5121edfa35d78a2794e6960bf49a92d7ebd190",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "4fcc1e5e0784f124b3356f0f2220b6b6dce65d32e4bb9a9827e153fb105f08dd",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-08-reminder",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/FE466DBC-40DE-4B52-9943-5E326F99A64A.png",
+      "byteSHA256": "3db457b07de145256eef819a07c8c748d28d6a4b800221fa8abc67a57ff9070b",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "3e2eb160248aa75701832a51e3c157e80625bf03193a183715739c101fe2e4a7",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-09-reminders",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/79779922-04F0-4879-97B7-6B3FB908ADAA.png",
+      "byteSHA256": "23c363d59531c086197df83fb677492540813f94878cf89eb7e7f9ff9185018f",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "7aeb5cb6377ac9fca30145c98f52ee11bf350c8e0781070fe42c223b2bfc6145",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-10-settings",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/CE940C32-B66A-468F-82A5-7DA1CCA7DC55.png",
+      "byteSHA256": "653077ef9c91c144a13455f8f5740ccae748589e7f5ec37533085bd914526b5c",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "307eadb4d37343d79ef3d0d6e349504c22d514ac89ce91eea38193b7f2190a15",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-11-dark-large-guides",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/5E4E4703-F6C1-4DBC-B9BD-F1F7EAF18600.png",
+      "byteSHA256": "852254b1f911fda50d19429a34965211e92c589f278133ee900c7cd3cb22d00a",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "2cd92eee2fa2169b81049b221701e0fd41394ac2fd1a5afb0e24974fee4e5532",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-12-dark-large-reader",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/78B78B72-1FB6-4735-8D73-9984E9FE5D9D.png",
+      "byteSHA256": "60faa6a399860601ca1d7c7316899b05f56680eb6b757242e17987c585d91a8b",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "1a0872cfb61e26fb9bf0e636c8ed5d55a665d9ed7543ea3c0a36d3241ccaa39c",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "iphone-6.9-13-dark-large-sources",
+      "platform": "iphone-6.9",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/iphone-live-final/6FC6CA07-4530-4DF4-90C3-E62415F8E11B.png",
+      "byteSHA256": "3f00d4446b62580d7a63935b7521155494b3315b079fac3862d8cbc35a372d87",
+      "encodedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDimensions": [
+        1320,
+        2868
+      ],
+      "orientedDecodedRGBPixelSHA256": "1782917dab7cb2be057a59dd83109946c5cd27bd434241f5d429eb2036100736",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-01-guides",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/AD1A9DD2-F682-4D1B-AF50-ABB1D0BCF6FA.png",
+      "byteSHA256": "5c7ae5dba543a3a5fa46b27851f3be9d4a7ea478cabb013e6e9b50677ac6c08e",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "0d64d04c262214d41369c2bd068bc941a465014d675dd7ed86fdff3a55ccad66",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-02-guide",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/F700D891-58CA-460F-BCD6-3FBD656214C7.png",
+      "byteSHA256": "d52d68c38c38f42fb7ba235e8caeaab2d42951e1170b69da1cf400421b9e2d4f",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "fc61bbf0cb06bd0c0663cd19db836eae48f43a24bdcca61554523dfbc85dc408",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-03-steps",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/B8D5D850-7910-451F-9DF4-8FADC3A6EB0D.png",
+      "byteSHA256": "fa7b9ac8ce48fe2ccf85195f9e04c48cad5f93e9753bf5ab89aac3b6503f129c",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "a6817b373d145a7ca5d6c9c6d8a43a7f9d587608d0b996aa4c20ea3a0ea28118",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-04-sources",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/882993B6-5312-4F53-B1F6-A25F3AE3A7A0.png",
+      "byteSHA256": "0992feade0fcd25d12d3f6a6212e5bf1eeb3f61b14d274b5b35d1d1982e71440",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "27f882997a18fc17eee1fb0a0e49b1cdac90adf2d2bd4f837d4e37e1717e38cf",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-05-saved",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/F730D9F1-D555-4BF9-9F0F-3BB30307F714.png",
+      "byteSHA256": "929ff84f335e97ca9789b950beaa2c4b4cf9330c9cb8625d7eb1a0f9e12a6ce9",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "a58124473b2c4688172a4396d0226de1301fcd387cc77cae3688d7b9bcb07eb8",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-06-search",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/58C4FEA3-30CE-40F5-9846-D3428301EC0B.png",
+      "byteSHA256": "570e9904077ac78dfe1450904a87cbdaff3c1860a84ed1f88c1c6e6b26eeb763",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "778bca5a44d30a6884d36337d0a3a61a600c34680a074ac6cbe71063d518ffb7",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-07-money",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/F352BEC2-CEA7-4BEB-9A69-901BC3E3E068.png",
+      "byteSHA256": "2d0baa1c1f2dd4c45337e0bfafd23d13a7ef4d62a65b49296be9382e33f9f564",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "91cda4384170a066fa5b91ec500eed8c5d88b1ef276e3c722ac34cd2c9b84a8a",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-08-reminder",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/CE651C64-0861-4A75-95D7-AE5D1F6A2AE3.png",
+      "byteSHA256": "67f0397f14d41fb070583ce0d551b921389dca877a331dc12214aeeb739b0ad2",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "8c6ad3031fc47bea8c6b71db87101538594b206d80ddcbe8f5cec1b7b2882ce8",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-09-reminders",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/E62DD23B-0120-44FD-B05C-E34C7DBC2F6C.png",
+      "byteSHA256": "e3f3abf497da9cbbf4350a0446465f032d6d34a02179f7a553b661004bbfbc60",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "32deb9a035bb016808459521217581b5c90bf7e95129f18243a0869d4fd1172c",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-10-settings",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/9EF80D59-A5A9-4219-88D0-8CFBD7A04F13.png",
+      "byteSHA256": "5cc883c338d6f0c6c936d86ac5de09a0baf035617f7f59ffb74374092e327e73",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "2920c6d5ff5da5aa3de66d3085d696902326a4a1d2d544f5757a50bed5b409e3",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-11-dark-large-guides",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/D6B10991-D682-40D0-9813-954AB24C3C92.png",
+      "byteSHA256": "5c7ae5dba543a3a5fa46b27851f3be9d4a7ea478cabb013e6e9b50677ac6c08e",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "0d64d04c262214d41369c2bd068bc941a465014d675dd7ed86fdff3a55ccad66",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-12-dark-large-reader",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/2DAA9932-CC28-48DB-A6BA-E27D9B5696BA.png",
+      "byteSHA256": "d52d68c38c38f42fb7ba235e8caeaab2d42951e1170b69da1cf400421b9e2d4f",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "fc61bbf0cb06bd0c0663cd19db836eae48f43a24bdcca61554523dfbc85dc408",
+      "originalAttachmentMatched": true
+    },
+    {
+      "id": "ipad-13-13-dark-large-sources",
+      "platform": "ipad-13",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/raw/ipad-live-final/89170046-0A58-4577-90E4-8CE29C076BE3.png",
+      "byteSHA256": "b098565e16e290f2310f44ce32af90710c89104a8fadfb00861d19233a6f5408",
+      "encodedDimensions": [
+        2064,
+        2752
+      ],
+      "orientedDimensions": [
+        2752,
+        2064
+      ],
+      "orientedDecodedRGBPixelSHA256": "c668c2463d388fd83a93645ac70b3e032b4bd4e28acf8ac2d775d5e00f6234af",
+      "originalAttachmentMatched": true
+    }
+  ],
+  "outputs": [
+    {
+      "platform": "iphone-6.9",
+      "order": 1,
+      "imageID": "01-practical-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/01-practical-guides.jpg",
+      "headline": "56 guides. Real life.",
+      "background": "marineSpines",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 470224,
+      "byteSHA256": "4878b591440237e22f26565fc833ca6c667d70447f1761c174bed159279a7f08",
+      "decodedRGBPixelSHA256": "3df5e9741720cecde985131f8491a679e299fd094c1bfc682fa990a60fc9a033",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 2,
+      "imageID": "02-clear-steps",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/02-clear-steps.jpg",
+      "headline": "One step at a time",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 466672,
+      "byteSHA256": "e702067ef603e1a5c6ee5d9eda8a085503c58846540971ccb8bc0b1748528bdd",
+      "decodedRGBPixelSHA256": "d828442d7e7ab3813327d4f16e2ae07f2dfa322238545f7b6dac53a769c156e0",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 3,
+      "imageID": "03-saved-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/03-saved-guides.jpg",
+      "headline": "Save what you need",
+      "background": "whiteReferenceGrid",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 311581,
+      "byteSHA256": "4b9e5e31bfda3ea03e482ff6650f7f4c8a1ef33d97a3e4716b1f6020bcd264ff",
+      "decodedRGBPixelSHA256": "7b36f22ba348cf6e836e23ab71f2d89d7949af2a07144716f0ebd116235179d7",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 4,
+      "imageID": "04-search",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/04-search.jpg",
+      "headline": "Find your next step",
+      "background": "navyWayfinding",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 266765,
+      "byteSHA256": "cc90160b2185fc4a157d07bd690b6ed4c7b12a85302cc3e29d55665d4bccb3e9",
+      "decodedRGBPixelSHA256": "e1eb81bbd587068cad6ff2717865094c1cb82fbe2bc8a0f88962232571c70d4d",
+      "samePlatformNativeCaptureCount": 1,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 5,
+      "imageID": "05-us-money",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/05-us-money.jpg",
+      "headline": "US money basics, explained",
+      "background": "marineSpines",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 507344,
+      "byteSHA256": "a416377385fcfa1cc64169b22bfa4cf76da06370c77c81a29b50fe3c258d17e4",
+      "decodedRGBPixelSHA256": "89e8a2cb1d276f67c19a72186118c519db0a983b2fda1ef1ddca1b9d5086a899",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 6,
+      "imageID": "06-original-sources",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/06-original-sources.jpg",
+      "headline": "Go straight to the source",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 533902,
+      "byteSHA256": "8f6e6fb74667cd0a41393f57ebe79eaee2fa14f9de2e9999c64afb7bb46cba52",
+      "decodedRGBPixelSHA256": "cbd92e2170ac3c10033733c2700c5131573caf969e9b8962f17ebf6b74280cfd",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 7,
+      "imageID": "07-reminders",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/07-reminders.jpg",
+      "headline": "Remember your next step",
+      "background": "whiteReferenceGrid",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 329844,
+      "byteSHA256": "e8c55a4a785aa38fc956bb52e2574ff3a0373751d4bdfdfe3ba4a1b02adb912c",
+      "decodedRGBPixelSHA256": "99a39af802082c5270b7aa5994418d4783ae833784f9a18ebc4242e69e702699",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 8,
+      "imageID": "08-optional-sound",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/08-optional-sound.jpg",
+      "headline": "Set a time. Sound optional.",
+      "background": "navyWayfinding",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 250177,
+      "byteSHA256": "9eff71a557fb1be3bd21134006eddbfc636479318d6b3e9078a784c83d2d992c",
+      "decodedRGBPixelSHA256": "f2c41fa080d28a68f544f2fe03485703aeb7648c88a530410109e8355d8b5bad",
+      "samePlatformNativeCaptureCount": 1,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 9,
+      "imageID": "09-offline-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/09-offline-guides.jpg",
+      "headline": "Starter guides work offline",
+      "background": "marineSpines",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 489068,
+      "byteSHA256": "0c15548a652b6241ab4f8e05d687cbd7589f0c3893e4df421066bf37e18558f2",
+      "decodedRGBPixelSHA256": "0c8a2dacde68c8305e2e324afc092f357a078e05873aec241ab1f9dce2413ad4",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "iphone-6.9",
+      "order": 10,
+      "imageID": "10-progress",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/10-progress.jpg",
+      "headline": "See how far you got",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 318911,
+      "byteSHA256": "828c2a1e52cd770edf142d9be24a0edfb623a60b876ff3ad4a93ed7c54675eaf",
+      "decodedRGBPixelSHA256": "842396ad2ad368103e48db10a3b39aff8dc2eddde8ab5b63904e940477fb1070",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 1,
+      "imageID": "01-practical-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/01-practical-guides.jpg",
+      "headline": "56 guides. Real life.",
+      "background": "marineSpines",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 748200,
+      "byteSHA256": "a79f1ace473ee30b3697308e4bea5ab8b8d50630b1fbb53dac823f4807f875dc",
+      "decodedRGBPixelSHA256": "9539902eaf2bd01d5bb6b0f04966b1720d2f993ddb06d6dd2bd9e38109d8c7ff",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 2,
+      "imageID": "02-clear-steps",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/02-clear-steps.jpg",
+      "headline": "One step at a time",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 710078,
+      "byteSHA256": "f64cfca44790ec927cde310ffc6e5c33492ab619d704f335ec89efc1eb9fa70c",
+      "decodedRGBPixelSHA256": "4514db50778d7ce722d8396a7895f482c2a6ef5cfa9c87e24b9b52ce462a5389",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 3,
+      "imageID": "03-saved-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/03-saved-guides.jpg",
+      "headline": "Save what you need",
+      "background": "whiteReferenceGrid",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 709089,
+      "byteSHA256": "6cdbcaaf5901aa6bc9408270b8ed7449b7b6111a8899f959e9c66ab5375b1fdb",
+      "decodedRGBPixelSHA256": "32438749966be63b646192afbd3090473649fc0ab49c3ec452fdf28169066ab6",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 4,
+      "imageID": "04-search",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/04-search.jpg",
+      "headline": "Find your next step",
+      "background": "navyWayfinding",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 522546,
+      "byteSHA256": "44abf7644519d63f25ee400ccd40c2d30cccebc93b7cb3b1cdeaa56ca22e9558",
+      "decodedRGBPixelSHA256": "966c34f3dc1c4f31744bd825bd1808fdfc63a24f7d4f3e25f7430d6b313b6fef",
+      "samePlatformNativeCaptureCount": 1,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 5,
+      "imageID": "05-us-money",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/05-us-money.jpg",
+      "headline": "US money basics, explained",
+      "background": "marineSpines",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 649947,
+      "byteSHA256": "e095bb3019e45787409c865cf50db67265777d3b0849296bbbac0e3729acbacf",
+      "decodedRGBPixelSHA256": "3cbb1d8af3ac73198eaa80ff4e2e9d41260edd58a6f8be59c9e34ad273934f89",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 6,
+      "imageID": "06-original-sources",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/06-original-sources.jpg",
+      "headline": "Go straight to the source",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 733545,
+      "byteSHA256": "6f94a816ef045a40111057629d18825f49887435aaae558ef11b203d0618db05",
+      "decodedRGBPixelSHA256": "e5b63739207c47aac5fc2db30dabd810f3a29dff233cfe061d9f373f44d1194c",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 7,
+      "imageID": "07-reminders",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/07-reminders.jpg",
+      "headline": "Remember your next step",
+      "background": "whiteReferenceGrid",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 604070,
+      "byteSHA256": "705559c82e8c241d26d5c4e8e5e6997049a8495f6c213c3a4d82d0a258c5f9f6",
+      "decodedRGBPixelSHA256": "b36e5aa9689d7dcceb9fccb7226182cafcaa4478c93ba9a4415d6de748803273",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 8,
+      "imageID": "08-optional-sound",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/08-optional-sound.jpg",
+      "headline": "Set a time. Sound optional.",
+      "background": "navyWayfinding",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 509425,
+      "byteSHA256": "aacdaee9dc12b9310ae3222514fc335a7f35ebcf0aaca6cbf655e31367a3e30d",
+      "decodedRGBPixelSHA256": "b21b7babd37c797a61f6e0d38f5688a3776022b3be4b75f64f661f8164e43bca",
+      "samePlatformNativeCaptureCount": 1,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 9,
+      "imageID": "09-offline-guides",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/09-offline-guides.jpg",
+      "headline": "Starter guides work offline",
+      "background": "marineSpines",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 737705,
+      "byteSHA256": "4b5185525069e109ab5e4fba79e55e9b27441200473cf84070aaee56c5f017ff",
+      "decodedRGBPixelSHA256": "3124ea0cc2c0a6585dabb8e378bb3d6dfb646b3295b0e642154f1c7ecb8cdda9",
+      "samePlatformNativeCaptureCount": 3,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    },
+    {
+      "platform": "ipad-13",
+      "order": 10,
+      "imageID": "10-progress",
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/10-progress.jpg",
+      "headline": "See how far you got",
+      "background": "vermilionBookmarks",
+      "dimensions": [
+        2752,
+        2064
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "opaque": true,
+      "nativeSipsProfile": "sRGB IEC61966-2.1",
+      "EXIFColorSpace": 1,
+      "byteCount": 606571,
+      "byteSHA256": "7c61042004cd5d5d473e08494c0257d73d835446a54faa14630c257bb6bba844",
+      "decodedRGBPixelSHA256": "38957dbf32f85902b86406e74057daaea1d965ce1d7b733c59d771527a9702a0",
+      "samePlatformNativeCaptureCount": 2,
+      "heroCenteredUprightForeground": true,
+      "supportingCapturesFannedOutward": true,
+      "uniformAspectPreserved": true
+    }
+  ],
+  "scope": "Local technical verification and one author visual batch. Independent review and actual App Store Connect displayed gallery/order are pending; no Mac gallery is present."
+}

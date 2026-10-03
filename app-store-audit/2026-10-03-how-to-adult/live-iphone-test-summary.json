@@ -1,0 +1,46 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "62D995A4-02B6-4C2F-BF3B-4AF9E48193B5",
+        "deviceName" : "HowToAdult-Live-QA-Phone-20261003",
+        "modelName" : "iPhone 16 Pro Max",
+        "osBuildNumber" : "22G86",
+        "osVersion" : "18.6",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 13,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1791018813.321,
+  "passedTests" : 13,
+  "result" : "Passed",
+  "skippedTests" : 0,
+  "startTime" : 1791018730.677,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "98% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 3.74s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 13
+}

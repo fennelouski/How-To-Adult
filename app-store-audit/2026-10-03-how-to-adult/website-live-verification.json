@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "verified-on-both-hosts",
+  "sourceRevision": "5c00d3f8ddbc48fa62f8504c527128a0ae8fa75b",
+  "verifiedAt": "2026-10-03T08:31:36.683890+00:00",
+  "sameRevisionVerifiedOnBothHosts": true,
+  "command": "npm exec --yes --package=node@22 -- python3 scripts/deploy-app-privacy.py",
+  "sourceRecord": "/Users/nathan/Documents/GitHub/nathanfennel.com/docs/app-policy-pages-deployment-2026-10-03.json",
+  "sourceRecordSHA256": "61cd562c864eef930d253829ca947d4d538e1aa7c5baadeafb00aa8563e0bafc",
+  "checks": [
+    {
+      "host": "aws",
+      "page": "how-to-adult/privacy.html",
+      "canonicalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/privacy.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+      "matchesCommittedBytes": true,
+      "server": "AmazonS3",
+      "objectGitRevision": "5c00d3f8ddbc48fa62f8504c527128a0ae8fa75b"
+    },
+    {
+      "host": "vercel",
+      "page": "how-to-adult/privacy.html",
+      "canonicalURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+      "matchesCommittedBytes": true,
+      "server": "Vercel",
+      "vercelHeaderPresent": true
+    },
+    {
+      "host": "aws",
+      "page": "how-to-adult/support.html",
+      "canonicalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/support.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+      "matchesCommittedBytes": true,
+      "server": "AmazonS3",
+      "objectGitRevision": "5c00d3f8ddbc48fa62f8504c527128a0ae8fa75b"
+    },
+    {
+      "host": "vercel",
+      "page": "how-to-adult/support.html",
+      "canonicalURL": "https://nathanfennel.com/how-to-adult/support.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+      "matchesCommittedBytes": true,
+      "server": "Vercel",
+      "vercelHeaderPresent": true
+    }
+  ],
+  "productionRouting": {
+    "checkedAtUTC": "2026-10-03T08:28:21.407081+00:00",
+    "url": "https://nathanfennel.com",
+    "HTTPStatus": 200,
+    "responseServer": "Vercel",
+    "vercelHeaderPresent": true
+  },
+  "privacyPageVisibility": "Unlisted, publicly accessible without authentication; noindex/nofollow/noarchive and absent from app-site navigation",
+  "fullSiteAWSMigration": "pending",
+  "actualCutoverAt": null,
+  "DNSOrBackgroundJobOwnershipChanged": false
+}

@@ -1,0 +1,67 @@
+{
+  "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+  "sourceBuildRef": "ca8edc4-Release-1.0-build1-SDK26.5",
+  "nativeInputsSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "recordedAtUTC": "2026-10-03T09:24:54.789855+00:00",
+  "appPath": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "version": "1.0",
+  "build": "1",
+  "families": [
+    1,
+    2
+  ],
+  "minimumOS": "17.0",
+  "catalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+  "executableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba",
+  "buildLog": "/tmp/howtoadult-live-phone-build-valid-20261003.log",
+  "buildLogSHA256": "8680e3beaa403c68a84b7591b04abe0869203b5b1794e0a3ce601177fa5f25a0",
+  "xctestrun": "/tmp/howtoadult-live-phone-20261003/Build/Products/HowToAdult-Live-QA.xctestrun",
+  "xctestrunSHA256": "08066bc6553d14c997a9de9fa1ba23f995234da9663b4561858559625d1df91d",
+  "testEnvironment": {
+    "HOWTOADULT_VERIFY_LIVE_CATALOG": "1"
+  },
+  "testability": "YES for XCTest host only; signed distribution exports use NO",
+  "runs": [
+    {
+      "platform": "iPhone",
+      "resultBundle": "/tmp/howtoadult-live-phone-final-20261003.xcresult",
+      "summaryPath": "app-store-audit/2026-10-03-how-to-adult/live-iphone-test-summary.json",
+      "summarySHA256": "6be23d22a70cb7409d3f42b9de9a3c44ee68797589894c4e36347478647860dd",
+      "nativeAttachments": "raw/iphone-live-final/manifest.json",
+      "nativeAttachmentManifestSHA256": "239371e7e08bde21fe53687c689adb4f52a90670a4e2f08b17903d279407fa89",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "62D995A4-02B6-4C2F-BF3B-4AF9E48193B5",
+        "deviceName": "HowToAdult-Live-QA-Phone-20261003",
+        "modelName": "iPhone 16 Pro Max",
+        "osBuildNumber": "22G86",
+        "osVersion": "18.6",
+        "platform": "iOS Simulator"
+      }
+    },
+    {
+      "platform": "iPad",
+      "resultBundle": "/tmp/howtoadult-live-ipad-final-20261003.xcresult",
+      "summaryPath": "app-store-audit/2026-10-03-how-to-adult/live-ipad-test-summary.json",
+      "summarySHA256": "e4fc036afa76bd16d3263869f80b936c01f9d5ad8b18f69b79b3192660b4a2fa",
+      "nativeAttachments": "raw/ipad-live-final/manifest.json",
+      "nativeAttachmentManifestSHA256": "b30ed46f309a798861d3df71778685b24a9d9951de5e7a1cdf15eb4b10fde354",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "C8D3D5C2-0149-4D4D-8E4F-42E0FED0FAF5",
+        "deviceName": "HWvH QA iPad 20261003",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "status": "Current frozen native phone/iPad evidence; local technical and bounded author visual checks passed; root independently approved scoped gallery; Mac absent.",
+  "recordedAtUTC": "2026-10-03T09:41:35.918747+00:00",
+  "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+  "sourceBuildRef": "ca8edc4-Release-1.0-build1-SDK26.5",
+  "nativeInputCount": 35,
+  "nativeInputsCanonicalSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "nativeInputsCanonicalSerialization": "Python json.dumps(decoded files map, sort_keys=True), UTF-8",
+  "nativeInputsManifestPath": "../native-inputs-live-privacy-final.json",
+  "nativeInputsManifestSHA256": "3125ec8c3eb9deace7c171a74bc27e9969385a83dd08ef8ab3e075a7681d3316",
+  "nativeBuildProofPath": "../native-builds-live-privacy-final.json",
+  "nativeBuildProofSHA256": "b125f5583edb25fbc4d9babd88de9267c125aba0d1bd1d2e5b5ac6d0d63cbcc3",
+  "manifestPath": "capture-manifest.live-privacy-final.json",
+  "manifestSHA256": "ddbda4153f2ddc317d791791b2c42217e936bea7ceee6813fb7d5f2302a560cf",
+  "includedPlatforms": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "pendingPlatforms": [
+    "mac"
+  ],
+  "claims": [
+    {
+      "imageID": "01-practical-guides",
+      "headline": "56 guides. Real life.",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-01-guides",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/1FF9BEC2-59A5-496C-ABB0-649368CEC0FC.png",
+          "sha256": "a31c30be39637c50de44c3d72b8177ff39b4695ee2146f574fd1bccd3f602790",
+          "capturedAtUTC": "2026-10-03T09:12:49.847000Z"
+        },
+        {
+          "captureID": "iphone-6.9-02-guide",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/71F54D40-2FC9-413B-8409-991A9AD17F0E.png",
+          "sha256": "60faa6a399860601ca1d7c7316899b05f56680eb6b757242e17987c585d91a8b",
+          "capturedAtUTC": "2026-10-03T09:12:51.719000Z"
+        },
+        {
+          "captureID": "iphone-6.9-10-settings",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/CE940C32-B66A-468F-82A5-7DA1CCA7DC55.png",
+          "sha256": "653077ef9c91c144a13455f8f5740ccae748589e7f5ec37533085bd914526b5c",
+          "capturedAtUTC": "2026-10-03T09:13:26.915000Z"
+        },
+        {
+          "captureID": "ipad-13-01-guides",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/AD1A9DD2-F682-4D1B-AF50-ABB1D0BCF6FA.png",
+          "sha256": "5c7ae5dba543a3a5fa46b27851f3be9d4a7ea478cabb013e6e9b50677ac6c08e",
+          "capturedAtUTC": "2026-10-03T09:21:44.988000Z"
+        },
+        {
+          "captureID": "ipad-13-02-guide",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F700D891-58CA-460F-BCD6-3FBD656214C7.png",
+          "sha256": "d52d68c38c38f42fb7ba235e8caeaab2d42951e1170b69da1cf400421b9e2d4f",
+          "capturedAtUTC": "2026-10-03T09:21:46.732000Z"
+        },
+        {
+          "captureID": "ipad-13-10-settings",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/9EF80D59-A5A9-4219-88D0-8CFBD7A04F13.png",
+          "sha256": "5cc883c338d6f0c6c936d86ac5de09a0baf035617f7f59ffb74374092e327e73",
+          "capturedAtUTC": "2026-10-03T09:22:29.452000Z"
+        }
+      ],
+      "reviewNote": "Settings visibly reports 56 guides. Native guide lists and the laundry reader show practical guidance. The bundled catalog contains 56 articles across seven categories."
+    },
+    {
+      "imageID": "02-clear-steps",
+      "headline": "One step at a time",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-03-steps",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/A1223C15-8510-4982-B88C-84F6340B75AC.png",
+          "sha256": "cd97faf86ee36b5b9131f0bec4f53f0556cea2204fb2f7abde437b2d78d84de6",
+          "capturedAtUTC": "2026-10-03T09:12:52.844000Z"
+        },
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/2760238E-433A-4EC0-BE02-ED927032CF2A.png",
+          "sha256": "9e8d48fea3a33f4d42234512236299f8444ffbd34deb784824634dcf3f464783",
+          "capturedAtUTC": "2026-10-03T09:12:58.296000Z"
+        },
+        {
+          "captureID": "ipad-13-03-steps",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/B8D5D850-7910-451F-9DF4-8FADC3A6EB0D.png",
+          "sha256": "fa7b9ac8ce48fe2ccf85195f9e04c48cad5f93e9753bf5ab89aac3b6503f129c",
+          "capturedAtUTC": "2026-10-03T09:21:49.073000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F730D9F1-D555-4BF9-9F0F-3BB30307F714.png",
+          "sha256": "929ff84f335e97ca9789b950beaa2c4b4cf9330c9cb8625d7eb1a0f9e12a6ce9",
+          "capturedAtUTC": "2026-10-03T09:21:55.089000Z"
+        }
+      ],
+      "reviewNote": "The native laundry reader shows discrete instructions and circle step controls. Saved shows 1 of 4 done; the headline claims checkable steps, without promising a fixed instruction count for every guide."
+    },
+    {
+      "imageID": "03-saved-guides",
+      "headline": "Save what you need",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/2760238E-433A-4EC0-BE02-ED927032CF2A.png",
+          "sha256": "9e8d48fea3a33f4d42234512236299f8444ffbd34deb784824634dcf3f464783",
+          "capturedAtUTC": "2026-10-03T09:12:58.296000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F730D9F1-D555-4BF9-9F0F-3BB30307F714.png",
+          "sha256": "929ff84f335e97ca9789b950beaa2c4b4cf9330c9cb8625d7eb1a0f9e12a6ce9",
+          "capturedAtUTC": "2026-10-03T09:21:55.089000Z"
+        }
+      ],
+      "reviewNote": "Saved contains the laundry guide with 1 of 4 done. The iPad capture also has its populated guide detail selected."
+    },
+    {
+      "imageID": "04-search",
+      "headline": "Find your next step",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-06-search",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/7E601DED-43FC-4112-8011-84944923370E.png",
+          "sha256": "13aa257c7ac7d2aaaae515efc462c86054cd8e01af87bb3cca68feefa6da974c",
+          "capturedAtUTC": "2026-10-03T09:13:05.169000Z"
+        },
+        {
+          "captureID": "ipad-13-06-search",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/58C4FEA3-30CE-40F5-9846-D3428301EC0B.png",
+          "sha256": "570e9904077ac78dfe1450904a87cbdaff3c1860a84ed1f88c1c6e6b26eeb763",
+          "capturedAtUTC": "2026-10-03T09:22:01.872000Z"
+        }
+      ],
+      "reviewNote": "The actual query 401 shows matching US 401(k) guides. The iPad includes its real keyboard and retains the laundry detail while collection results change; these native pixels have not been retouched."
+    },
+    {
+      "imageID": "05-us-money",
+      "headline": "US money basics, explained",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-06-search",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/7E601DED-43FC-4112-8011-84944923370E.png",
+          "sha256": "13aa257c7ac7d2aaaae515efc462c86054cd8e01af87bb3cca68feefa6da974c",
+          "capturedAtUTC": "2026-10-03T09:13:05.169000Z"
+        },
+        {
+          "captureID": "iphone-6.9-07-money",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/B5DAF433-4E73-46F8-940D-B3EDEEDE930B.png",
+          "sha256": "65106a613cd504c49dee888c7a5121edfa35d78a2794e6960bf49a92d7ebd190",
+          "capturedAtUTC": "2026-10-03T09:13:06.998000Z"
+        },
+        {
+          "captureID": "ipad-13-06-search",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/58C4FEA3-30CE-40F5-9846-D3428301EC0B.png",
+          "sha256": "570e9904077ac78dfe1450904a87cbdaff3c1860a84ed1f88c1c6e6b26eeb763",
+          "capturedAtUTC": "2026-10-03T09:22:01.872000Z"
+        },
+        {
+          "captureID": "ipad-13-07-money",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F352BEC2-CEA7-4BEB-9A69-901BC3E3E068.png",
+          "sha256": "2d0baa1c1f2dd4c45337e0bfafd23d13a7ef4d62a65b49296be9382e33f9f564",
+          "capturedAtUTC": "2026-10-03T09:22:03.761000Z"
+        }
+      ],
+      "reviewNote": "The native 401(k) reader labels United States rules. The wording describes the visible educational guide, without promising individualized financial advice or worldwide tax coverage."
+    },
+    {
+      "imageID": "06-original-sources",
+      "headline": "Go straight to the source",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-04-sources",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/6EB96781-51AA-4B01-8D89-231C612873B6.png",
+          "sha256": "216b285da910b5cb3cd1022efcc14e1174c0bf236a806fb1e246dfa34d2b7f90",
+          "capturedAtUTC": "2026-10-03T09:12:55.565000Z"
+        },
+        {
+          "captureID": "ipad-13-04-sources",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/882993B6-5312-4F53-B1F6-A25F3AE3A7A0.png",
+          "sha256": "0992feade0fcd25d12d3f6a6212e5bf1eeb3f61b14d274b5b35d1d1982e71440",
+          "capturedAtUTC": "2026-10-03T09:21:51.521000Z"
+        }
+      ],
+      "reviewNote": "The native reader visibly shows an original-source link under Go to the source. External website navigation is outside this visual proof."
+    },
+    {
+      "imageID": "07-reminders",
+      "headline": "Remember your next step",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-08-reminder",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/FE466DBC-40DE-4B52-9943-5E326F99A64A.png",
+          "sha256": "3db457b07de145256eef819a07c8c748d28d6a4b800221fa8abc67a57ff9070b",
+          "capturedAtUTC": "2026-10-03T09:13:08.977000Z"
+        },
+        {
+          "captureID": "iphone-6.9-09-reminders",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/79779922-04F0-4879-97B7-6B3FB908ADAA.png",
+          "sha256": "23c363d59531c086197df83fb677492540813f94878cf89eb7e7f9ff9185018f",
+          "capturedAtUTC": "2026-10-03T09:13:19.124000Z"
+        },
+        {
+          "captureID": "ipad-13-08-reminder",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/CE651C64-0861-4A75-95D7-AE5D1F6A2AE3.png",
+          "sha256": "67f0397f14d41fb070583ce0d551b921389dca877a331dc12214aeeb739b0ad2",
+          "capturedAtUTC": "2026-10-03T09:22:07.846000Z"
+        },
+        {
+          "captureID": "ipad-13-09-reminders",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/E62DD23B-0120-44FD-B05C-E34C7DBC2F6C.png",
+          "sha256": "e3f3abf497da9cbbf4350a0446465f032d6d34a02179f7a553b661004bbfbc60",
+          "capturedAtUTC": "2026-10-03T09:22:21.333000Z"
+        }
+      ],
+      "reviewNote": "The real reminder form has guide, date/time, Save and Cancel controls. The iPad Reminders capture shows a saved dated row and selected guide detail. Phone capture 09 shows guide detail with Reminders active; the phone hero is the genuine reminder form 08. This is not proof of actual notification delivery."
+    },
+    {
+      "imageID": "08-optional-sound",
+      "headline": "Set a time. Sound optional.",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-08-reminder",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/FE466DBC-40DE-4B52-9943-5E326F99A64A.png",
+          "sha256": "3db457b07de145256eef819a07c8c748d28d6a4b800221fa8abc67a57ff9070b",
+          "capturedAtUTC": "2026-10-03T09:13:08.977000Z"
+        },
+        {
+          "captureID": "ipad-13-08-reminder",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/CE651C64-0861-4A75-95D7-AE5D1F6A2AE3.png",
+          "sha256": "67f0397f14d41fb070583ce0d551b921389dca877a331dc12214aeeb739b0ad2",
+          "capturedAtUTC": "2026-10-03T09:22:07.846000Z"
+        }
+      ],
+      "reviewNote": "The reminder form shows date/time controls and the Play a sound toggle. The headline claims an optional sound toggle, without custom sounds or notification delivery assertions."
+    },
+    {
+      "imageID": "09-offline-guides",
+      "headline": "Starter guides work offline",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-02-guide",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/71F54D40-2FC9-413B-8409-991A9AD17F0E.png",
+          "sha256": "60faa6a399860601ca1d7c7316899b05f56680eb6b757242e17987c585d91a8b",
+          "capturedAtUTC": "2026-10-03T09:12:51.719000Z"
+        },
+        {
+          "captureID": "iphone-6.9-10-settings",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/CE940C32-B66A-468F-82A5-7DA1CCA7DC55.png",
+          "sha256": "653077ef9c91c144a13455f8f5740ccae748589e7f5ec37533085bd914526b5c",
+          "capturedAtUTC": "2026-10-03T09:13:26.915000Z"
+        },
+        {
+          "captureID": "ipad-13-02-guide",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F700D891-58CA-460F-BCD6-3FBD656214C7.png",
+          "sha256": "d52d68c38c38f42fb7ba235e8caeaab2d42951e1170b69da1cf400421b9e2d4f",
+          "capturedAtUTC": "2026-10-03T09:21:46.732000Z"
+        },
+        {
+          "captureID": "ipad-13-10-settings",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/9EF80D59-A5A9-4219-88D0-8CFBD7A04F13.png",
+          "sha256": "5cc883c338d6f0c6c936d86ac5de09a0baf035617f7f59ffb74374092e327e73",
+          "capturedAtUTC": "2026-10-03T09:22:29.452000Z"
+        }
+      ],
+      "reviewNote": "The starter catalog is bundled in the app, and the native reader shows stored guide content. Settings says guides and checked steps stay available offline and now visibly includes Check for new guides. The narrower headline makes no claim that future unpublished guides arrive offline. The configured live catalog, progress retention and cold cache are covered by the separate native QA record."
+    },
+    {
+      "imageID": "10-progress",
+      "headline": "See how far you got",
+      "observedNativeEvidence": [
+        {
+          "captureID": "iphone-6.9-03-steps",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/A1223C15-8510-4982-B88C-84F6340B75AC.png",
+          "sha256": "cd97faf86ee36b5b9131f0bec4f53f0556cea2204fb2f7abde437b2d78d84de6",
+          "capturedAtUTC": "2026-10-03T09:12:52.844000Z"
+        },
+        {
+          "captureID": "iphone-6.9-05-saved",
+          "platform": "iphone-6.9",
+          "path": "../raw/iphone-live-final/2760238E-433A-4EC0-BE02-ED927032CF2A.png",
+          "sha256": "9e8d48fea3a33f4d42234512236299f8444ffbd34deb784824634dcf3f464783",
+          "capturedAtUTC": "2026-10-03T09:12:58.296000Z"
+        },
+        {
+          "captureID": "ipad-13-03-steps",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/B8D5D850-7910-451F-9DF4-8FADC3A6EB0D.png",
+          "sha256": "fa7b9ac8ce48fe2ccf85195f9e04c48cad5f93e9753bf5ab89aac3b6503f129c",
+          "capturedAtUTC": "2026-10-03T09:21:49.073000Z"
+        },
+        {
+          "captureID": "ipad-13-05-saved",
+          "platform": "ipad-13",
+          "path": "../raw/ipad-live-final/F730D9F1-D555-4BF9-9F0F-3BB30307F714.png",
+          "sha256": "929ff84f335e97ca9789b950beaa2c4b4cf9330c9cb8625d7eb1a0f9e12a6ce9",
+          "capturedAtUTC": "2026-10-03T09:21:55.089000Z"
+        }
+      ],
+      "reviewNote": "The genuine Saved row displays 1 of 4 done, paired with the reader\u2019s checkable steps. The native cold-reload and live-catalog tests cover retained checked steps."
+    }
+  ],
+  "nativeQARecordedByOwner": [
+    {
+      "platform": "iPhone",
+      "resultBundle": "/tmp/howtoadult-live-phone-final-20261003.xcresult",
+      "summaryPath": "app-store-audit/2026-10-03-how-to-adult/live-iphone-test-summary.json",
+      "summarySHA256": "6be23d22a70cb7409d3f42b9de9a3c44ee68797589894c4e36347478647860dd",
+      "nativeAttachments": "raw/iphone-live-final/manifest.json",
+      "nativeAttachmentManifestSHA256": "239371e7e08bde21fe53687c689adb4f52a90670a4e2f08b17903d279407fa89",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "62D995A4-02B6-4C2F-BF3B-4AF9E48193B5",
+        "deviceName": "HowToAdult-Live-QA-Phone-20261003",
+        "modelName": "iPhone 16 Pro Max",
+        "osBuildNumber": "22G86",
+        "osVersion": "18.6",
+        "platform": "iOS Simulator"
+      }
+    },
+    {
+      "platform": "iPad",
+      "resultBundle": "/tmp/howtoadult-live-ipad-final-20261003.xcresult",
+      "summaryPath": "app-store-audit/2026-10-03-how-to-adult/live-ipad-test-summary.json",
+      "summarySHA256": "e4fc036afa76bd16d3263869f80b936c01f9d5ad8b18f69b79b3192660b4a2fa",
+      "nativeAttachments": "raw/ipad-live-final/manifest.json",
+      "nativeAttachmentManifestSHA256": "b30ed46f309a798861d3df71778685b24a9d9951de5e7a1cdf15eb4b10fde354",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "C8D3D5C2-0149-4D4D-8E4F-42E0FED0FAF5",
+        "deviceName": "HWvH QA iPad 20261003",
+        "modelName": "iPad Pro 13-inch (M5)",
+        "osBuildNumber": "23F77",
+        "osVersion": "26.5",
+        "platform": "iOS Simulator"
+      }
+    }
+  ],
+  "functionalEvidence": {
+    "testEnvironment": {
+      "HOWTOADULT_VERIFY_LIVE_CATALOG": "1"
+    },
+    "modelTests": [
+      "testBundledLibraryIsCompleteAndValidated",
+      "testBookmarksAndChecksSurviveColdReload",
+      "testConfiguredLiveCatalogPreservesProgressAndColdCache",
+      "testBadDownloadedCatalogFallsBackToEmbeddedGuides"
+    ],
+    "scope": "Owner recorded 11 model tests and two UI tests passing per device; byte hashes of the build, executable, xctestrun and result summaries are verified. The current visual pass does not infer dark appearance or accessibility-size success from the test name."
+  },
+  "excludedCaptures": [
+    {
+      "captureID": "iphone-6.9-11-dark-large-guides",
+      "path": "../raw/iphone-live-final/5E4E4703-F6C1-4DBC-B9BD-F1F7EAF18600.png",
+      "sha256": "852254b1f911fda50d19429a34965211e92c589f278133ee900c7cd3cb22d00a",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    },
+    {
+      "captureID": "iphone-6.9-12-dark-large-reader",
+      "path": "../raw/iphone-live-final/78B78B72-1FB6-4735-8D73-9984E9FE5D9D.png",
+      "sha256": "60faa6a399860601ca1d7c7316899b05f56680eb6b757242e17987c585d91a8b",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    },
+    {
+      "captureID": "iphone-6.9-13-dark-large-sources",
+      "path": "../raw/iphone-live-final/6FC6CA07-4530-4DF4-90C3-E62415F8E11B.png",
+      "sha256": "3f00d4446b62580d7a63935b7521155494b3315b079fac3862d8cbc35a372d87",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    },
+    {
+      "captureID": "ipad-13-11-dark-large-guides",
+      "path": "../raw/ipad-live-final/D6B10991-D682-40D0-9813-954AB24C3C92.png",
+      "sha256": "5c7ae5dba543a3a5fa46b27851f3be9d4a7ea478cabb013e6e9b50677ac6c08e",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    },
+    {
+      "captureID": "ipad-13-12-dark-large-reader",
+      "path": "../raw/ipad-live-final/2DAA9932-CC28-48DB-A6BA-E27D9B5696BA.png",
+      "sha256": "d52d68c38c38f42fb7ba235e8caeaab2d42951e1170b69da1cf400421b9e2d4f",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    },
+    {
+      "captureID": "ipad-13-13-dark-large-sources",
+      "path": "../raw/ipad-live-final/89170046-0A58-4577-90E4-8CE29C076BE3.png",
+      "sha256": "b098565e16e290f2310f44ce32af90710c89104a8fadfb00861d19233a6f5408",
+      "reason": "The test attachment name contains dark-large but current pixels visibly show light appearance and ordinary text size. Preserved as original evidence, excluded from marketing; no dark/accessibility-size claim is made."
+    }
+  ],
+  "unsupportedClaimsExcluded": [
+    "AI-generated guidance",
+    "automatic daily publication",
+    "cross-device personal-data sync",
+    "custom reminder sounds",
+    "verified notification delivery",
+    "widgets",
+    "worldwide jurisdiction-specific coverage",
+    "validated dark/accessibility-size trait rendering for this final capture set",
+    "Mac gallery or Mac runtime completion"
+  ],
+  "scope": "Capture observations support these marketing headlines. Source and owner QA records support bounded functional statements. App Store Connect displayed assets/order remain unverified by this agent.",
+  "independentGalleryReview": {
+    "status": "approved-scoped-phone-ipad-gallery",
+    "reviewer": "/root",
+    "approvalRecordedAtUTC": "2026-10-03T09:55:35.434019+00:00",
+    "authorizationEvidence": "Parent explicitly reported independent approval in this agent conversation.",
+    "scope": [
+      "both ten-image marketing contact sheets",
+      "full-size phone 01-practical-guides",
+      "full-size iPad 05-us-money"
+    ],
+    "findings": "Root approved the composition and current feature claims. iPad05 reader genuinely displays 401(k) steps. Source/provenance caveats remain preserved, including the excluded dark-large captures.",
+    "AppStoreConnectDisplayedGalleryAndOrder": "pending root inspection",
+    "macGallery": "pending genuine native captures"
+  }
+}

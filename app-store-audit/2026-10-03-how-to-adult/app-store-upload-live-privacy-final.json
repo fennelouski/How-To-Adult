@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-03T09:28:22.270166+00:00",
+  "status": "Both upload transports succeeded; live App Store Connect processing remains for root verification.",
+  "app": "How to Adult: Pocket Guide",
+  "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+  "AppStoreConnectAppIDReportedByRoot": "6818756061",
+  "AppStoreSKUReportedByRoot": "how-to-adult-2026",
+  "AppStoreRecordHistoryReportedByRoot": "Newly created iOS and Mac app record; no existing builds at the upload gate.",
+  "nativeSourceRevision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+  "nativeSourceInputsSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "sourceProof": "final-package-inspection-live-privacy-final.json",
+  "sourceProofSHA256": "ce576997d471549a4fe40aafbcb41a834fd19b74e480e7557400f710df2c4f25",
+  "version": "1.0",
+  "buildNumber": "1",
+  "runtimeQAGateReportedByRoot": "ca8edc4 real iOS18.6, 13 tests: 11 models including configured live catalog and progress/cold cache, 2 UI flows, 13 captures.",
+  "authorization": "Parent authorizes executing both prepared destination-upload commands after successful real Phone QA, saved iOS metadata and authenticated app record creation; user has authorized uploading and resolving upload errors. No final review submission or account/security/terms UI is authorized here.",
+  "method": "xcodebuild -exportArchive, app-store-connect destination upload, automatic provisioning using existing Xcode account.",
+  "manualAPIKeysCreatedOrUsed": false,
+  "accountOrAgreementUIUsed": false,
+  "rebuildPerformed": false,
+  "sourceOrVersionFilesModifiedByUploadTask": false,
+  "visionOSBuildBootRunCaptureUploadSubmissionPerformed": false,
+  "SimulatorOrNativeAppLaunchPerformed": false,
+  "finalAppReviewSubmissionPerformed": false,
+  "rawExecutionRecordPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/upload-execution-live-privacy-final.json",
+  "preparedPlanPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/upload-preparation-live-privacy-final.json",
+  "preparedPlanSHA256": "4f426cd5ef36de4fd25f7aa31a81e1492cc1d724639f62326c0c5f71d11e56da",
+  "platforms": [
+    {
+      "platform": "iOS",
+      "nativeSourceRevision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+      "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+      "version": "1.0",
+      "buildNumber": "1",
+      "UIDeviceFamily": [
+        1,
+        2
+      ],
+      "supportedPlatforms": [
+        "iPhoneOS"
+      ],
+      "selectedArchivePath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive",
+      "selectedArchiveFileCount": 14,
+      "selectedArchiveContentsSHA256BeforeUpload": "008d0f01a0552d65f5ed4af120147111e5e29722d8005fb11479979e419556b6",
+      "selectedArchiveContentsSHA256AfterUpload": "8d92f0dd686abd7d9c84797cdf5e8db4a6121548a4e526f3b45c0a4c725924db",
+      "selectedArchiveContentsUnchangedAfterUpload": false,
+      "archiveFilesModifiedSinceUploadStarted": [
+        "Info.plist"
+      ],
+      "archiveMetadataChange": "Xcode annotated the outer xcarchive Info.plist during successful upload. The signed app CodeDirectory hash remains identical to the pre-upload archive signature log.",
+      "archiveOuterInfoPlistSHA256AfterUpload": "3d66d04c0da49ab35898a09edd235dd2ebe621a42014d88c62b736ed7af14f7d",
+      "signedAppCodeDirectoryHashBeforeAndAfter": "94b912f06e2c0c66d27c7c562c61427f1a7a9d4f",
+      "selectedSignedAppSignatureReverifiedAfterUploadAllArchitectures": true,
+      "signedAppCodeDirectoryHashMatchesPreUpload": true,
+      "AdultCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba",
+      "originalVerifiedLocalPackagePath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Export/How to Adult.ipa",
+      "originalVerifiedLocalPackageSHA256": "1b5d869bd3d373c45152aef86dab4ee75b427720340fb738a110b243ea8f3d7f",
+      "originalLocalPackageUnchangedAfterUpload": true,
+      "originalLocalPackageClaimedAsExactUploadedPayloadBytes": false,
+      "uploadDestinationRetainedLocalPayload": false,
+      "exactUploadPayloadSHA256NotReportedByCLI": true,
+      "uploadCommand": [
+        "xcodebuild",
+        "-exportArchive",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive",
+        "-exportPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Upload",
+        "-exportOptionsPlist",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/UploadOptions-iOS.plist",
+        "-allowProvisioningUpdates"
+      ],
+      "uploadOptionsPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/UploadOptions-iOS.plist",
+      "uploadOptionsSHA256": "05f7140c14bb3fa81c9a7ef6caed599c6177a9dcebdfe6d292a873a7d2dd51d9",
+      "manageAppVersionAndBuildNumber": false,
+      "APIAuthenticationArgumentsUsed": false,
+      "exitCode": 0,
+      "startedAtUTC": "2026-10-03T09:20:37.399592+00:00",
+      "finishedAtUTC": "2026-10-03T09:22:03.867376+00:00",
+      "actualSuccessMarkers": [
+        "Upload succeeded",
+        "Uploaded package is processing",
+        "** EXPORT SUCCEEDED **"
+      ],
+      "uploadTransportSucceeded": true,
+      "exportSucceeded": true,
+      "rawUploadLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/upload.log",
+      "rawUploadLogSHA256": "ca0c0742b546deb52dd8f43b5e08848668c279b75276426f2eb68b33a6c545b9",
+      "rawDistributionLogPaths": [
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs"
+      ],
+      "explicitTransportIdentifiers": [
+        {
+          "kind": "uploadID",
+          "value": "c5c2a7d0-bf0b-11f1-b7c0-46392635e0b1",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "uploadID",
+          "value": "d2e255f0-bf0b-11f1-9edc-667d916f13c7",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "uploadID",
+          "value": "e2a055a0-bf0b-11f1-86c6-6cfe54bb9889",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "deliveryUUID",
+          "value": "2a23e261-5a5d-4d6f-8509-5958896e55c5",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        }
+      ],
+      "AppStoreConnectBuildIDReturnedByCLI": null,
+      "liveAppStoreConnectProcessingVerified": false,
+      "finalReviewSubmissionPerformed": false
+    },
+    {
+      "platform": "macOS",
+      "nativeSourceRevision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+      "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+      "version": "1.0",
+      "buildNumber": "1",
+      "UIDeviceFamily": null,
+      "supportedPlatforms": [
+        "MacOSX"
+      ],
+      "selectedArchivePath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive",
+      "selectedArchiveFileCount": 13,
+      "selectedArchiveContentsSHA256BeforeUpload": "268aa6dd234d38e9d052eb5b0bcdb3f5e7d51788c0174c5abe36c520d4f1026c",
+      "selectedArchiveContentsSHA256AfterUpload": "30efa90c964a9b8b525b1f637415bd62f58db54f3c46f93908443876388055f6",
+      "selectedArchiveContentsUnchangedAfterUpload": false,
+      "archiveFilesModifiedSinceUploadStarted": [
+        "Info.plist"
+      ],
+      "archiveMetadataChange": "Xcode annotated the outer xcarchive Info.plist during successful upload. The signed app CodeDirectory hash remains identical to the pre-upload archive signature log.",
+      "archiveOuterInfoPlistSHA256AfterUpload": "22ade0fa01ef81cd1ecf1f05e2d399debece2bce69d5ddb4b76b1fd023e2474d",
+      "signedAppCodeDirectoryHashBeforeAndAfter": "274589b524ccd8775840ac12eb04bf0a8cbd469c",
+      "selectedSignedAppSignatureReverifiedAfterUploadAllArchitectures": true,
+      "signedAppCodeDirectoryHashMatchesPreUpload": true,
+      "AdultCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba",
+      "originalVerifiedLocalPackagePath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Export/How to Adult.pkg",
+      "originalVerifiedLocalPackageSHA256": "eeb6e5b7d48da00e9b11948cdd53c9718dc87a46652179ed4a2c20d280859d2b",
+      "originalLocalPackageUnchangedAfterUpload": true,
+      "originalLocalPackageClaimedAsExactUploadedPayloadBytes": false,
+      "uploadDestinationRetainedLocalPayload": false,
+      "exactUploadPayloadSHA256NotReportedByCLI": true,
+      "uploadCommand": [
+        "xcodebuild",
+        "-exportArchive",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive",
+        "-exportPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Upload",
+        "-exportOptionsPlist",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/UploadOptions-macOS.plist",
+        "-allowProvisioningUpdates"
+      ],
+      "uploadOptionsPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/UploadPreparation/UploadOptions-macOS.plist",
+      "uploadOptionsSHA256": "05f7140c14bb3fa81c9a7ef6caed599c6177a9dcebdfe6d292a873a7d2dd51d9",
+      "manageAppVersionAndBuildNumber": false,
+      "APIAuthenticationArgumentsUsed": false,
+      "exitCode": 0,
+      "startedAtUTC": "2026-10-03T09:22:03.896518+00:00",
+      "finishedAtUTC": "2026-10-03T09:23:22.242150+00:00",
+      "actualSuccessMarkers": [
+        "Upload succeeded",
+        "Uploaded package is processing",
+        "** EXPORT SUCCEEDED **"
+      ],
+      "uploadTransportSucceeded": true,
+      "exportSucceeded": true,
+      "rawUploadLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/upload.log",
+      "rawUploadLogSHA256": "66544ec45d604f665e2d500b81a3fe981e20d25ddedbe53b2dd7553c1eec0640",
+      "rawDistributionLogPaths": [
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs"
+      ],
+      "explicitTransportIdentifiers": [
+        {
+          "kind": "uploadID",
+          "value": "f734bc90-bf0b-11f1-bcb4-46439fff3a83",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "uploadID",
+          "value": "034bd450-bf0c-11f1-95f1-7ad77f620abf",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "uploadID",
+          "value": "12340d70-bf0c-11f1-9efe-660e484f71af",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        },
+        {
+          "kind": "deliveryUUID",
+          "value": "4b8f3c9d-692d-4200-8ef5-c5d66281d5a9",
+          "sourceLogPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/UploadLogs-20261003T091953Z/distribution.xcdistributionlogs/ContentDelivery.log"
+        }
+      ],
+      "AppStoreConnectBuildIDReturnedByCLI": null,
+      "liveAppStoreConnectProcessingVerified": false,
+      "finalReviewSubmissionPerformed": false
+    }
+  ],
+  "noProcessedOrVALIDClaim": "CLI reported Uploaded package is processing. The coordinator must confirm actual build IDs and processing states in authenticated App Store Connect before build selection or review submission.",
+  "MacRuntimeStatus": "Upload success does not verify Mac runtime. Existing owner container-sharing consent and Mac screenshots remain owned by the coordinator."
+}

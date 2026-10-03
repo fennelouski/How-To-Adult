@@ -1,0 +1,46 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "C8D3D5C2-0149-4D4D-8E4F-42E0FED0FAF5",
+        "deviceName" : "HWvH QA iPad 20261003",
+        "modelName" : "iPad Pro 13-inch (M5)",
+        "osBuildNumber" : "23F77",
+        "osVersion" : "26.5",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 13,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1791019357.305,
+  "passedTests" : 13,
+  "result" : "Passed",
+  "skippedTests" : 0,
+  "startTime" : 1791019254.39,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "93% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 0.56s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 13
+}

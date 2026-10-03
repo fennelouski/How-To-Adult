@@ -1,0 +1,478 @@
+{
+  "source": {
+    "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+    "files": {
+      "Configuration/ExportOptions-iOS.plist": "70e56d3d35fe0d69e66fb07b279547ffef96c7f574ffe3fa4e3db45640baa0bc",
+      "Configuration/ExportOptions-macOS.plist": "f994368057a2133e55da9db78efaec764647be2ebb4e65a0bedb431fe4ad73b6",
+      "Configuration/NATIVE-PROJECT.md": "e5a5eb93f80c2b9153a74277afe27b4758f4aa5116d20315704bf34bfe120ad6",
+      "Configuration/PrivacyInfo.xcprivacy": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba",
+      "Configuration/iOS-Info.plist": "f8879a677715f004ae75387b0b1b165062f84f0cad9ae10bd03ccc00fe0ee1fd",
+      "Configuration/iOS.entitlements": "55a9c3dbd2e3925788619684eace456de8fcbdd4e0afb681237cdcff36d6bda9",
+      "Configuration/macOS-Info.plist": "de343673031cb50dbc721a477243491b82a6d16bf9c3e317aa4d7cf9641cf2db",
+      "Configuration/macOS.entitlements": "f1d6f59c4f9b163dbfb55695ca3251f87173f855ca893f0e8804d895ea76299e",
+      "Configuration/release-script-verification.json": "711ba7533b7e418a8f44f9288f7ea3ba48a07efaa8dca4524f0142cc2bc51bf3",
+      "Content/catalog.json": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "Content/source-review.json": "a9c449c5c2da48a7ebf2eaeca620220b4bea97656a92c0cfe9ec05f435f2e172",
+      "HowToAdult.xcodeproj/project.pbxproj": "816f6d76f89ab479d1b9f48488696da86197672f9ea0dc1277ff419d7c9a82d4",
+      "HowToAdult.xcodeproj/xcshareddata/xcschemes/HowToAdult-iOS.xcscheme": "d7fdbb5aee0f6cce663c97b559d1b552d71c79a5dce4bd32e9df5d9ce6b5bcbd",
+      "HowToAdult.xcodeproj/xcshareddata/xcschemes/HowToAdult-macOS.xcscheme": "39c92252f19d6e91340faef1d665a874dbb3b6dff527739c3f9996e7c31bfeeb",
+      "Resources/Assets.xcassets/AccentColor.colorset/Contents.json": "d80ab800e9b166137e7134340e3e951b6ea2e9da565c49ba0381f416d5eb0e8d",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-iOS-1024.png": "157835c2c48f5c9ee191b935c38bc92010721097a42363c6f3aadabb7e0a0094",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-128@1x.png": "683c8ddadd3f3b0752d845bc90c3fe3fda39b4a96a52c887f497eb5a4a701a35",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-128@2x.png": "74f29512ebb93fe5e6b0e2e9711c11bd268eec934cc1e2a288ae9eddec6a999f",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-16@1x.png": "6fb3c057094658a26ce16ed369c1d0d12e435eca67b937874aa60147ab308e8b",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-16@2x.png": "fabb9eb300ab9c9003f22fe56d2414c8fb73ba8657d3199e2d6eb7ecfd2f2592",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-256@1x.png": "74f29512ebb93fe5e6b0e2e9711c11bd268eec934cc1e2a288ae9eddec6a999f",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-256@2x.png": "264e1dc5b05d9c15a65fbd7d4b5ebaa7829119289e51d5a70244218137ed3951",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-32@1x.png": "fabb9eb300ab9c9003f22fe56d2414c8fb73ba8657d3199e2d6eb7ecfd2f2592",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-32@2x.png": "4b69907bab462c60bcfa6a2dde840ca6cbfbb4b3ed3f8a6debd8af1a653bdc6b",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-512@1x.png": "264e1dc5b05d9c15a65fbd7d4b5ebaa7829119289e51d5a70244218137ed3951",
+      "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-512@2x.png": "308aba4ccb028fb8a1b75b399e539a17d93bff0d7f7619c04aad0d10a8d81431",
+      "Resources/Assets.xcassets/AppIcon.appiconset/Contents.json": "609ea9aa7b7eec53c3c6851abdf96a162247c4e017e0f5850b67b291667b5a25",
+      "Resources/Assets.xcassets/Contents.json": "10e3b5dc202f1cd9fad1f688c8fc9fe9e9669bf3f8295e67d216b10fd99b6f49",
+      "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json": "941c4bc3c355c364a71220608f3285aec749fd2bff78528d60edffc4b4ad0235",
+      "Resources/app-icon-provenance.md": "9d654e3ca93a6805a00211b411e403f9c3268da4742d8031fe6ce9ea9befc08a",
+      "Sources/AdultCore.swift": "eca187dfcdd8551ddf2466e1b6c00cb858b6902335fc34e15c492840f8cc8d84",
+      "Sources/AdultStore.swift": "9b8966e17397f4b5d07666c6de8d18a27f767159e916e58ddf2eb07c0bf8a321",
+      "Sources/AdultViews.swift": "b04bd9e7728112911392c69da0c5c8d567b97b7e9373df95b9205768d9b683ff",
+      "Sources/App.swift": "bbe078edbf90e5e31e81aa7ab5baf481fc6b19d0f4a13b7d9231b91854752e09",
+      "project.yml": "17ae419e934afe2596fd98943469cea0d130bf82efe297117c703cef4e37e851"
+    },
+    "sha256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df"
+  },
+  "output": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a",
+  "mode": "local-app-store-export",
+  "uploaded": false,
+  "appStoreConnectRegistrationAttempted": false,
+  "platforms": {
+    "iOS": {
+      "archive": {
+        "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive/Products/Applications/How to Adult.app",
+        "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+        "version": "1.0",
+        "build": "1",
+        "minimumOS": "17.0",
+        "architectures": [
+          "arm64"
+        ],
+        "distributionSignature": false,
+        "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+        "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba"
+      },
+      "export": {
+        "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Export/How to Adult.ipa",
+        "bytes": 1310385,
+        "sha256": "1b5d869bd3d373c45152aef86dab4ee75b427720340fb738a110b243ea8f3d7f",
+        "app": {
+          "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Inspection/Payload/How to Adult.app",
+          "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+          "version": "1.0",
+          "build": "1",
+          "minimumOS": "17.0",
+          "architectures": [
+            "arm64"
+          ],
+          "distributionSignature": true,
+          "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+          "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba"
+        }
+      }
+    },
+    "macOS": {
+      "archive": {
+        "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive/Products/Applications/How to Adult.app",
+        "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+        "version": "1.0",
+        "build": "1",
+        "minimumOS": "14.0",
+        "architectures": [
+          "x86_64",
+          "arm64"
+        ],
+        "distributionSignature": false,
+        "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+        "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba"
+      },
+      "export": {
+        "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Export/How to Adult.pkg",
+        "bytes": 1535966,
+        "sha256": "eeb6e5b7d48da00e9b11948cdd53c9718dc87a46652179ed4a2c20d280859d2b",
+        "app": {
+          "path": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app",
+          "bundleIdentifier": "com.nathanfennel.How-To-Adult",
+          "version": "1.0",
+          "build": "1",
+          "minimumOS": "14.0",
+          "architectures": [
+            "x86_64",
+            "arm64"
+          ],
+          "distributionSignature": true,
+          "catalogSHA256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+          "privacyManifestSHA256": "5fa874eec9865d981d0cabd018c9c5ced18000bb2e757da081fa3ca767076eba"
+        }
+      }
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "xcodebuild",
+        "-project",
+        "/Users/nathan/Documents/GitHub/How-To-Adult/HowToAdult.xcodeproj",
+        "-scheme",
+        "HowToAdult-iOS",
+        "-configuration",
+        "Release",
+        "-destination",
+        "generic/platform=iOS",
+        "-derivedDataPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/DerivedData",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive",
+        "-allowProvisioningUpdates",
+        "DEVELOPMENT_TEAM=<configured project team>",
+        "archive"
+      ],
+      "startedAt": "2026-10-03T09:11:29.056416+00:00",
+      "completedAt": "2026-10-03T09:11:35.845990+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/archive.log"
+    },
+    {
+      "command": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive/Products/Applications/How to Adult.app/How to Adult"
+      ],
+      "startedAt": "2026-10-03T09:11:35.848714+00:00",
+      "completedAt": "2026-10-03T09:11:35.860668+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/archive-architectures.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:35.860852+00:00",
+      "completedAt": "2026-10-03T09:11:35.873710+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/archive-signature-verify.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-dvvv",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:35.873915+00:00",
+      "completedAt": "2026-10-03T09:11:35.886934+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/archive-signature-details.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-d",
+        "--entitlements",
+        ":-",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:35.887124+00:00",
+      "completedAt": "2026-10-03T09:11:35.899662+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/archive-entitlements.log"
+    },
+    {
+      "command": [
+        "xcodebuild",
+        "-exportArchive",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/How to Adult.xcarchive",
+        "-exportPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Export",
+        "-exportOptionsPlist",
+        "/Users/nathan/Documents/GitHub/How-To-Adult/Configuration/ExportOptions-iOS.plist",
+        "-allowProvisioningUpdates"
+      ],
+      "startedAt": "2026-10-03T09:11:35.945007+00:00",
+      "completedAt": "2026-10-03T09:11:53.914480+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/export.log"
+    },
+    {
+      "command": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Inspection/Payload/How to Adult.app/How to Adult"
+      ],
+      "startedAt": "2026-10-03T09:11:53.930383+00:00",
+      "completedAt": "2026-10-03T09:11:53.943597+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/export-architectures.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Inspection/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:53.943773+00:00",
+      "completedAt": "2026-10-03T09:11:53.954927+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/export-signature-verify.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-dvvv",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Inspection/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:53.955119+00:00",
+      "completedAt": "2026-10-03T09:11:53.967853+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/export-signature-details.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-d",
+        "--entitlements",
+        ":-",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Inspection/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:11:53.968042+00:00",
+      "completedAt": "2026-10-03T09:11:53.980083+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Logs/export-entitlements.log"
+    },
+    {
+      "command": [
+        "xcodebuild",
+        "-project",
+        "/Users/nathan/Documents/GitHub/How-To-Adult/HowToAdult.xcodeproj",
+        "-scheme",
+        "HowToAdult-macOS",
+        "-configuration",
+        "Release",
+        "-destination",
+        "generic/platform=macOS",
+        "-derivedDataPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/DerivedData",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive",
+        "-allowProvisioningUpdates",
+        "DEVELOPMENT_TEAM=<configured project team>",
+        "archive"
+      ],
+      "startedAt": "2026-10-03T09:11:54.042953+00:00",
+      "completedAt": "2026-10-03T09:12:05.827114+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/archive.log"
+    },
+    {
+      "command": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive/Products/Applications/How to Adult.app/Contents/MacOS/How to Adult"
+      ],
+      "startedAt": "2026-10-03T09:12:05.832456+00:00",
+      "completedAt": "2026-10-03T09:12:05.846257+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/archive-architectures.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:05.846476+00:00",
+      "completedAt": "2026-10-03T09:12:05.862679+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/archive-signature-verify.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-dvvv",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:05.862931+00:00",
+      "completedAt": "2026-10-03T09:12:05.876384+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/archive-signature-details.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-d",
+        "--entitlements",
+        ":-",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive/Products/Applications/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:05.876603+00:00",
+      "completedAt": "2026-10-03T09:12:05.890460+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/archive-entitlements.log"
+    },
+    {
+      "command": [
+        "xcodebuild",
+        "-exportArchive",
+        "-archivePath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/How to Adult.xcarchive",
+        "-exportPath",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Export",
+        "-exportOptionsPlist",
+        "/Users/nathan/Documents/GitHub/How-To-Adult/Configuration/ExportOptions-macOS.plist",
+        "-allowProvisioningUpdates"
+      ],
+      "startedAt": "2026-10-03T09:12:05.964042+00:00",
+      "completedAt": "2026-10-03T09:12:24.524632+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/export.log"
+    },
+    {
+      "command": [
+        "pkgutil",
+        "--check-signature",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Export/How to Adult.pkg"
+      ],
+      "startedAt": "2026-10-03T09:12:24.526007+00:00",
+      "completedAt": "2026-10-03T09:12:24.761836+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/installer-signature.log"
+    },
+    {
+      "command": [
+        "pkgutil",
+        "--expand-full",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Export/How to Adult.pkg",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package"
+      ],
+      "startedAt": "2026-10-03T09:12:24.762098+00:00",
+      "completedAt": "2026-10-03T09:12:24.796144+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/installer-expansion.log"
+    },
+    {
+      "command": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app/Contents/MacOS/How to Adult"
+      ],
+      "startedAt": "2026-10-03T09:12:24.798520+00:00",
+      "completedAt": "2026-10-03T09:12:24.807028+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/export-architectures.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:24.807336+00:00",
+      "completedAt": "2026-10-03T09:12:24.827947+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/export-signature-verify.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-dvvv",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:24.828142+00:00",
+      "completedAt": "2026-10-03T09:12:24.841113+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/export-signature-details.log"
+    },
+    {
+      "command": [
+        "codesign",
+        "-d",
+        "--entitlements",
+        ":-",
+        "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Inspection/expanded-package/com.nathanfennel.How-To-Adult.pkg/Payload/How to Adult.app"
+      ],
+      "startedAt": "2026-10-03T09:12:24.841317+00:00",
+      "completedAt": "2026-10-03T09:12:24.855003+00:00",
+      "exitCode": 0,
+      "log": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/macOS/Logs/export-entitlements.log"
+    }
+  ],
+  "completedAt": "2026-10-03T09:12:24.932312+00:00",
+  "operationalCommandRedactions": [
+    "DEVELOPMENT_TEAM argument value; actual script invocation and team verification are preserved in the local raw record."
+  ],
+  "rawReleaseRecordPath": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/release-verification.json",
+  "rawReleaseRecordSHA256": "f8e6b64d1a97285e03761ab3d91964e1280f82f9b6ea082497d112c4d5e6846d",
+  "sourceBefore": {
+    "verifiedAtUTC": "2026-10-03T09:10:57.327492+00:00",
+    "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+    "nativeSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+    "nativeInputFileCount": 35,
+    "allFrozenSourceHashesMatch": true,
+    "nativeWorkingTreeClean": true
+  },
+  "sourceAfter": {
+    "verifiedAtUTC": "2026-10-03T09:15:57.805556+00:00",
+    "revision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+    "nativeInputFileCount": 35,
+    "nativeSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+    "allFrozenSourceHashesMatch": true,
+    "nativeWorkingTreeClean": true
+  },
+  "AdultCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+  "finalPrivacyManifest": {
+    "NSPrivacyTracking": false,
+    "NSPrivacyTrackingDomains": [],
+    "NSPrivacyCollectedDataTypes": [
+      {
+        "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeOtherDiagnosticData",
+        "NSPrivacyCollectedDataTypeLinked": true,
+        "NSPrivacyCollectedDataTypeTracking": false,
+        "NSPrivacyCollectedDataTypePurposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+        ]
+      }
+    ],
+    "NSPrivacyAccessedAPITypes": []
+  },
+  "liveCatalogBackendEvidence": {
+    "recordPath": "backend/deployment-record.json",
+    "recordSHA256": "73b0f2fd607174fbb057b7fcb276950c339bed8876c7a201866b366dfe6a391e",
+    "verifiedBackendRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "recordedMode": "parallel",
+    "recordedStatus": "verified",
+    "recordedSameRevisionVerifiedOnBothHosts": true,
+    "recordedVerifiedAtUTC": "2026-10-03T08:47:58.190873+00:00",
+    "vercelCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+    "awsCatalogURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+    "nativeRevision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+    "nativeAndBackendRevisionRecordedSeparately": true,
+    "nativeConfigurationMatchesVerifiedPublicReader": true,
+    "backendCatalogPublishedSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+    "bundledCatalogSourceMatchesBackendFrozenSource": true,
+    "backendDeploymentOrRepeatedHTTPChecksPerformedByPackagingTask": false
+  },
+  "ownedTemporaryDerivedDataRemovedAfterSuccess": true,
+  "finalInspectionAuditPath": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/final-package-inspection-live-privacy-final.json",
+  "supersedesNativePackageRevision": "00b817d46b25c02e4057f9fb018d1a9d31dd16a8"
+}

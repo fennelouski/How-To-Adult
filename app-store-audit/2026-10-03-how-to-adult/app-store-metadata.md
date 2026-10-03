@@ -1,6 +1,6 @@
 # How to Adult App Store release details
 
-Current native source: `ca8edc4e786d25504b06fa177468f42adde376fd`. Both signed platform packages have uploaded successfully. App Store Connect has processed and selected the iOS 1.0 build 1; its listing and 20 marketing images are saved. Neither platform is submitted for review yet. The completed privacy draft is awaiting the owner's confirmation of Apple's final publishing agreement.
+Current native source: `ca8edc4e786d25504b06fa177468f42adde376fd`. Both signed platform packages have uploaded successfully. App Store Connect has processed and selected both platform 1.0 build 1 packages; both listings and 20 iPhone/iPad marketing images are saved. Neither platform is submitted for review yet. The completed privacy draft is awaiting the owner's confirmation of Apple's final publishing agreement.
 
 [Live browser observations](asc-publication-progress.json), [listing fields](asc-listing-content.json) and [release checklist](release-checklist.json) are the current authority. The earlier offline-only draft is preserved in [historical preparation](app-store-metadata-offline-preparation-history.md).
 
@@ -21,7 +21,7 @@ Current native source: `ca8edc4e786d25504b06fa177468f42adde376fd`. Both signed p
 | Content rights | Original guides; no embedded third-party reader or media |
 | License | Apple's Standard License Agreement |
 
-The current description, keywords, promotional text, copyright, reviewer notes and owner-provided reviewer contact are saved for iOS. The exact copy is retained in `asc-listing-content.json`; Mac version fields still need to be completed independently.
+The current description, keywords, promotional text, copyright, reviewer notes and owner-provided reviewer contact are saved for both platform versions. The exact copy is retained in `asc-listing-content.json`; Mac screenshots and final review validation remain pending.
 
 The app bundles 56 original guides across seven topics and 224 practical steps. It reads the live editorial catalog over HTTPS and keeps the last valid library for offline use. Bookmarks, checked steps, reminders and search queries remain local; there is no personal-device sync, account, ads, purchases, remote push service or daily content-generation job. Source references open in the system browser.
 
@@ -31,4 +31,4 @@ Both exported bundles contain `ITSAppUsesNonExemptEncryption=false`. The native 
 
 The iPhone 18.6 and iPad 26.5 current-source runs each passed 11 model tests and two UI flows, including actual live catalog decoding. Dark/large-text capture labels did not match rendered traits, so those captures were excluded from marketing and those visual checks remain pending. Notification delivery/tap and permission-denied recovery also remain pending. No installed iOS 17 runtime was available for a minimum-runtime smoke check.
 
-The original signed Mac app is waiting on an owner-handled container consent. Automatic approval review rejected native automation access to that system dialog; no bypass was used. Mac native capture, gallery, metadata, build selection and final review checks remain incomplete. No visionOS work is authorized.
+The original signed Mac app is waiting on an owner-handled container consent. Automatic approval review rejected native automation access to that system dialog; no bypass was used. Mac native capture, gallery and final review checks remain incomplete; its metadata and processed build selection are saved. No visionOS work is authorized.

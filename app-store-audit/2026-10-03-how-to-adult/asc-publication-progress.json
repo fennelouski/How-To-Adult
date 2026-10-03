@@ -1,5 +1,5 @@
 {
-  "observedAt": "2026-10-03T10:51:31.591082+00:00",
+  "observedAt": "2026-10-03T11:02:29.656734+00:00",
   "source": "App Store Connect live browser UI",
   "appID": "6818756061",
   "appInformationSaved": true,
@@ -31,11 +31,14 @@
   },
   "macOS": {
     "transportUploadSucceeded": true,
-    "buildProcessed": null,
-    "buildSelected": false,
-    "metadataSaved": false,
+    "buildProcessed": true,
+    "buildSelected": true,
+    "metadataSaved": true,
     "screenshotsUploaded": 0,
-    "submitted": false
+    "submitted": false,
+    "version": "1.0",
+    "build": "1",
+    "buildID": "4b8f3c9d-692d-4200-8ef5-c5d66281d5a9"
   },
   "privacy": {
     "draftComplete": true,
@@ -58,6 +61,10 @@
     "howtoadult-privacy-publication-dialog.png": {
       "path": "asc-proof/howtoadult-privacy-publication-dialog.png",
       "sha256": "286a317a0eccc68c2f9a152f87a1221df16647108a0e4b303a2cbf4c3a673b5d"
+    },
+    "howtoadult-asc-mac-build-selected.png": {
+      "path": "asc-proof/howtoadult-asc-mac-build-selected.png",
+      "sha256": "c6c9681a0468c54b0743e7861940de30acbf5632411a5c738193b3ee71d61d08"
     }
   }
 }

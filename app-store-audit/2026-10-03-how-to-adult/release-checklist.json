@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-03T10:51:31.591082+00:00",
+  "updatedAt": "2026-10-03T11:02:29.656734+00:00",
   "status": "uploaded_iOS_processed_selected_not_submitted",
   "evidencePolicy": "Null and pending values are unresolved. Record a pass only with evidence for the final tested revision. Local preparation does not prove a live deployment or App Store action.",
   "app": {
@@ -642,10 +642,10 @@
     "appID": "6818756061",
     "SKU": "how-to-adult-2026",
     "metadataDraft": "app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md",
-    "metadataSaved": false,
+    "metadataSaved": true,
     "buildUploaded": true,
-    "buildProcessed": false,
-    "buildSelected": false,
+    "buildProcessed": true,
+    "buildSelected": true,
     "privacyLabelPublished": false,
     "ageRating": "13+ saved",
     "exportCompliance": "ITSAppUsesNonExemptEncryption=false in both processed upload sources",
@@ -653,25 +653,26 @@
     "submissionCreated": false,
     "submittedForReview": false,
     "submissionID": null,
-    "lastVerifiedAt": "2026-10-03T10:51:31.591082+00:00",
+    "lastVerifiedAt": "2026-10-03T11:02:29.656734+00:00",
     "metadataSavedByPlatform": {
       "iOS": true,
-      "macOS": false
+      "macOS": true
     },
     "buildProcessedByPlatform": {
       "iOS": true,
-      "macOS": null
+      "macOS": true
     },
     "buildSelectedByPlatform": {
       "iOS": true,
-      "macOS": false
+      "macOS": true
     },
     "selectedIOSBuildID": "2a23e261-5a5d-4d6f-8509-5958896e55c5",
     "privacyLabelDraftComplete": true,
     "privacyPublishDialogAwaitingUserConfirmation": true,
     "appInformationSaved": true,
     "contentRightsSaved": true,
-    "licenseAgreement": "Apple Standard License Agreement"
+    "licenseAgreement": "Apple Standard License Agreement",
+    "selectedMacBuildID": "4b8f3c9d-692d-4200-8ef5-c5d66281d5a9"
   },
   "draftFieldValidation": {
     "status": "local_character_limits_passed",
@@ -742,7 +743,7 @@
     "Verify notification delivery/tap and permission denial; verify dark/large-text rendering and minimum-runtime caveats.",
     "Submit iOS for App Review and record Apple receipt/status when its checks and required confirmations are complete.",
     "Handle original Mac bundle container-sharing consent, then verify Mac controls/persistence/resizing, capture native screens and compose ten Mac marketing images.",
-    "Complete Mac metadata and build selection, then submit Mac after its native checks and required confirmations."
+    "Complete the Mac gallery and final review validation, then submit Mac after its native checks and required confirmations."
   ],
   "blockedOwnerActions": [
     "Confirm completed App Store privacy publication dialog",

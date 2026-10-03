@@ -25,7 +25,7 @@
     "basis": "Retained provider request metadata for hosting availability/security; IP anonymization is unverified. Local personal library data is not uploaded."
   },
   "created": true,
-  "metadataSaved": false,
+  "metadataSaved": true,
   "uploaded": true,
   "submitted": false,
   "iosMetadataSaved": true,
@@ -46,5 +46,9 @@
   "secondaryCategory": "Reference",
   "ageRating": "13+",
   "contentRights": "No third-party content within the app; original guides, system symbols, and external source links",
-  "licenseAgreement": "Apple Standard License Agreement"
+  "licenseAgreement": "Apple Standard License Agreement",
+  "macMetadataSaved": true,
+  "macBuildProcessed": true,
+  "macBuildSelected": true,
+  "macBuildID": "4b8f3c9d-692d-4200-8ef5-c5d66281d5a9"
 }

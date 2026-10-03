@@ -1,0 +1,77 @@
+[
+  {
+    "project": "how-to-adult-guides",
+    "projectId": "prj_HMYPRmjiTOPqPs9swxP2eqtjku1G",
+    "repository": "fennelouski/How-To-Adult",
+    "root": "backend",
+    "localRoot": "/Users/nathan/Documents/GitHub/How-To-Adult",
+    "productionBranch": "master",
+    "productionSha": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "productionUrl": "how-to-adult-guides.vercel.app",
+    "hasProduction": true,
+    "framework": null,
+    "environmentKeys": [],
+    "awsStatus": "Initial and repeat live dual deployment verified; one private versioned S3 publication store",
+    "deploymentMode": "parallel",
+    "targetCutoverAt": "2026-10-22T07:00:00Z",
+    "cutoverCompletedAt": null,
+    "actualCutoverAt": null,
+    "cutoverReady": false,
+    "verifiedDeploymentRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "deploymentCommand": "AWS_PROFILE=fishbowl-head backend/.venv/bin/python backend/deploy.py parallel",
+    "deploymentEvidence": "/Users/nathan/Documents/GitHub/How-To-Adult/backend/deployment-record.json",
+    "lastVerifiedAt": "2026-10-03T08:47:58.190873+00:00",
+    "awsUrl": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com",
+    "awsRegion": "us-west-2",
+    "awsStack": "how-to-adult-guides-v1",
+    "vercelUrl": "https://how-to-adult-guides.vercel.app",
+    "vercelDeploymentID": "dpl_DwuQybVfPpTDmjLaj8bb1SWPfGMU",
+    "vercelDeploymentURL": "https://how-to-adult-guides-27l74lk0e-nathan-fennels-projects.vercel.app",
+    "singleOwner": "AWS Lambda/API Gateway and versioned private S3 publication store; Vercel GET-only reader forwarding",
+    "scheduledGenerationEnabled": false,
+    "productionDomainsChanged": false,
+    "productionRoutingOwner": "Vercel reader alias during parallel operation",
+    "nativeCatalogURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+    "parallelStartedAt": "2026-10-03T08:46:28.162881+00:00",
+    "earliestTwoWeekMilestone": "2026-10-17T08:46:28.162881+00:00",
+    "repeatDeploymentVerified": true,
+    "rollbackVerification": {
+      "status": "unverified",
+      "reason": "This is the first deployed backend implementation. No earlier compatible deployed code revision has been rolled back; repeated identical deployment does not prove code rollback."
+    },
+    "verification": {
+      "aws": {
+        "health": 200,
+        "catalog": 200,
+        "etagRevalidation": 304,
+        "individualGuide": 200,
+        "searchPagination": 200,
+        "missingGuide": 404,
+        "unauthenticatedPublication": 403,
+        "catalogRevision": "2026-10-03-starter-1",
+        "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+        "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+      },
+      "vercel": {
+        "health": 200,
+        "catalog": 200,
+        "etagRevalidation": 304,
+        "individualGuide": 200,
+        "searchPagination": 200,
+        "missingGuide": 404,
+        "unauthenticatedPublication": 404,
+        "catalogRevision": "2026-10-03-starter-1",
+        "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+        "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+      }
+    },
+    "remainingChecks": [
+      "Execute and verify a compatible code rollback without replacing the retained catalog.",
+      "Observe at least two weeks of successful parallel operation before readiness review.",
+      "Record and verify any production cutover and Vercel deployment-trigger changes."
+    ],
+    "agentInstructions": "/Users/nathan/Documents/GitHub/AGENTS.md",
+    "providerPrivacyEvidence": "/Users/nathan/Documents/GitHub/How-To-Adult/backend/provider-privacy-verification.json",
+    "readiness": "Initial and repeat dual releases verified. Code rollback, sustained parallel observation and actual cutover remain unverified. No DNS, account cancellation or background-job changes."
+  }
+]

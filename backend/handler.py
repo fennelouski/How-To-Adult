@@ -2,12 +2,15 @@
 import base64
 from datetime import date, datetime, timezone
 import hashlib
+import hmac
 import ipaddress
 import json
 import logging
 import os
 import re
+import struct
 import unicodedata
+import zlib
 from urllib.parse import parse_qs, urlsplit
 
 MAX_BYTES = 4 * 1024 * 1024
@@ -17,6 +20,9 @@ SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 REVISION = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,95}\Z")
 ETAG = re.compile(r'"[A-Za-z0-9-]+"\Z')
 COLOR_KEYS = {"teal", "orange", "green", "blue", "rose", "purple", "indigo"}
+MAX_IMAGE_BYTES = 2 * 1024 * 1024
+SHA256 = re.compile(r"[0-9a-f]{64}\Z")
+EDITOR_TOKEN = re.compile(r"hta_ed_[A-Za-z0-9_-]{43}\Z")
 
 
 class CatalogError(Exception):
@@ -219,13 +225,14 @@ class S3CatalogStore:
     def get(self):
         return self.get_key(CURRENT_KEY)
 
-    def conditional_put(self, key, data, expected=None, create=False):
+    def conditional_put(self, key, data, expected=None, create=False,
+                        content_type="application/json; charset=utf-8", cache="no-cache"):
         condition = {"IfNoneMatch": "*"} if create else {"IfMatch": expected}
         # S3 has no modeled PreconditionFailed subclass; its generated ClientError
         # is handled only for the two conditional-write outcomes we can resolve.
         try:
             response = self.client.put_object(Bucket=self.bucket, Key=key, Body=data,
-                ContentType="application/json; charset=utf-8", CacheControl="no-cache",
+                ContentType=content_type, CacheControl=cache,
                 ServerSideEncryption="AES256", **condition)
         except self.client.exceptions.ClientError as error:
             code = error.response.get("Error", {}).get("Code")
@@ -243,6 +250,15 @@ class S3CatalogStore:
             previous_catalog = validate_catalog(decode_json(current[0]))
             if timestamp(catalog["publishedAt"]) < timestamp(previous_catalog["publishedAt"]):
                 raise CatalogError("A new publication cannot have an earlier publishedAt than the live library.", 409)
+            # IAM publication also carries forward compatible image associations.
+            sidecar = "illustrations/" + catalog["revision"] + ".json"
+            if self.get_key(sidecar) is None:
+                previous = illustrations(self, previous_catalog)
+                article_ids = {article["id"]: {step["id"] for step in article["steps"]} for article in catalog["articles"]}
+                previous["items"] = [item for item in previous["items"] if item["guideID"] in article_ids and
+                    (not item["stepID"] or item["stepID"] in article_ids[item["guideID"]])]
+                previous["revision"] = catalog["revision"]
+                immutable_put(self, sidecar, canonical(previous))
         history_key = "revisions/" + catalog["revision"] + ".json"
         try:
             self.conditional_put(history_key, data, create=True)
@@ -307,11 +323,209 @@ def article_summaries(catalog, query):
             "nextOffset": offset + limit if offset + limit < len(matches) else None}
 
 
-def handle(event, store, source_revision="local", conditional_writes=True):
+def request_bytes(event, maximum=MAX_BYTES):
+    raw = event.get("body", "")
+    if not isinstance(raw, str) or len(raw) > maximum * 2:
+        raise CatalogError("Request exceeds its supported size.", 413)
+    try:
+        data = base64.b64decode(raw, validate=True) if event.get("isBase64Encoded") else raw.encode("utf-8")
+    except (ValueError, UnicodeError) as error:
+        raise CatalogError("Invalid request body.") from error
+    if len(data) > maximum:
+        raise CatalogError("Request exceeds its supported size.", 413)
+    return data
+
+
+def authorize_editor(headers, key_sha256):
+    value = headers.get("authorization", "")
+    token = value[7:] if value.startswith("Bearer ") else ""
+    if not SHA256.fullmatch(key_sha256 or "") or not EDITOR_TOKEN.fullmatch(token) or not hmac.compare_digest(
+            hashlib.sha256(token.encode("ascii")).hexdigest(), key_sha256):
+        raise CatalogError("A valid content editor key is required.", 401)
+
+
+def immutable_put(store, key, data, **options):
+    try:
+        return store.conditional_put(key, data, create=True, **options)
+    except CatalogError as error:
+        previous = store.get_key(key) if error.status == 412 else None
+        if previous is None or previous[0] != data:
+            raise CatalogError("This immutable asset or revision already has different content.", 409) from error
+        return previous[1]
+
+
+def png_dimensions(data):
+    if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+        raise CatalogError("Upload a PNG image.", 415)
+    offset, dimensions, compressed, ended, after_idat = 8, None, bytearray(), False, False
+    while offset < len(data):
+        if offset + 12 > len(data):
+            raise CatalogError("Incomplete PNG image.")
+        size = struct.unpack("!I", data[offset:offset + 4])[0]
+        kind = data[offset + 4:offset + 8]
+        end = offset + 12 + size
+        if end > len(data) or not re.fullmatch(b"[A-Za-z]{4}", kind):
+            raise CatalogError("Invalid PNG chunk.")
+        payload = data[offset + 8:end - 4]
+        if zlib.crc32(kind + payload) & 0xffffffff != struct.unpack("!I", data[end - 4:end])[0]:
+            raise CatalogError("PNG checksum mismatch.")
+        if dimensions is None:
+            if kind != b"IHDR" or size != 13:
+                raise CatalogError("PNG must start with its image header.")
+            width, height, depth, color, compression, filtering, interlace = struct.unpack("!IIBBBBB", payload)
+            if not (1 <= width <= 4096 and 1 <= height <= 4096 and depth == 8 and color in (2, 6)
+                    and compression == filtering == interlace == 0):
+                raise CatalogError("Use a non-interlaced 8-bit RGB or RGBA PNG, at most 4096 × 4096.")
+            dimensions = width, height, 3 if color == 2 else 4
+        elif kind == b"IDAT":
+            if after_idat:
+                raise CatalogError("PNG image chunks must be consecutive.")
+            compressed.extend(payload)
+        elif kind == b"IEND":
+            if size or end != len(data) or not compressed:
+                raise CatalogError("Invalid PNG ending.")
+            ended = True
+        else:
+            if kind == b"IHDR" or not kind[0] & 32:
+                raise CatalogError("Unsupported PNG critical chunk.")
+            after_idat = bool(compressed)
+        offset = end
+    if not ended:
+        raise CatalogError("PNG needs a complete image and ending.")
+    width, height, channels = dimensions
+    expected = (width * channels + 1) * height
+    try:
+        decoder = zlib.decompressobj()
+        pixels = decoder.decompress(bytes(compressed), expected + 1)
+        if len(pixels) != expected or not decoder.eof or decoder.unused_data or decoder.unconsumed_tail:
+            raise ValueError("invalid pixel length")
+        if any(pixels[start] > 4 for start in range(0, expected, width * channels + 1)):
+            raise ValueError("invalid row filter")
+    except (zlib.error, ValueError) as error:
+        raise CatalogError("PNG pixel data is incomplete or invalid.") from error
+    return width, height
+
+
+def illustrations(store, catalog):
+    read = getattr(store, "get_key", lambda _: None)("illustrations/" + catalog["revision"] + ".json")
+    return decode_json(read[0]) if read else {"schemaVersion": 1, "revision": catalog["revision"], "items": []}
+
+
+def merge_illustrations(store, catalog, previous_catalog, items):
+    if not isinstance(items, list) or len(items) > 100:
+        raise CatalogError("A batch can associate at most 100 illustrations.")
+    articles = {article["id"]: article for article in catalog["articles"]}
+    merged = {(item["guideID"], item["stepID"]): item for item in illustrations(store, previous_catalog)["items"]}
+    seen = set()
+    for item in items:
+        fields(item, {"guideID", "stepID", "assetSHA256", "altText", "caption", "creator", "license", "provenance"}, "Illustration")
+        slug(item["guideID"], "Illustration guide ID")
+        article = articles.get(item["guideID"])
+        if article is None or not isinstance(item["stepID"], str) or (item["stepID"] and item["stepID"] not in {step["id"] for step in article["steps"]}):
+            raise CatalogError("Illustrations must reference a current guide and optional step ID.")
+        key = item["guideID"], item["stepID"]
+        if key in seen:
+            raise CatalogError("Use each guide/step illustration slot once per batch.")
+        seen.add(key)
+        digest = item["assetSHA256"]
+        if not isinstance(digest, str) or not SHA256.fullmatch(digest) or store.get_key("assets/" + digest + ".png") is None:
+            raise CatalogError("Upload the PNG before associating its SHA-256 with a guide.")
+        for field, maximum in (("altText", 500), ("caption", 500), ("creator", 200), ("license", 300), ("provenance", 2000)):
+            text(item[field], "Illustration " + field, maximum, allow_empty=field == "caption")
+        merged[key] = item
+    # Do not retain a step illustration after that step was explicitly removed.
+    values = [value for key, value in sorted(merged.items()) if key[0] in articles and
+              (not key[1] or key[1] in {step["id"] for step in articles[key[0]]["steps"]})]
+    result = {"schemaVersion": 1, "revision": catalog["revision"], "items": values}
+    if len(canonical(result)) > MAX_BYTES:
+        raise CatalogError("The illustration manifest exceeds 4 MB.", 413)
+    return result
+
+
+def editor_publish(event, headers, store):
+    expected = headers.get("if-match", "")
+    if not ETAG.fullmatch(expected) or "if-none-match" in headers:
+        raise CatalogError("Review the live catalog and send its quoted ETag in If-Match.", 428)
+    if headers.get("content-type", "").split(";")[0].strip().lower() != "application/json":
+        raise CatalogError("Publish an application/json guide batch.", 415)
+    update = decode_json(request_bytes(event))
+    fields(update, {"revision", "publishedAt", "articles", "categories", "replaceExisting", "illustrations"}, "Editor batch")
+    if type(update["replaceExisting"]) is not bool or not isinstance(update["articles"], list) or not 1 <= len(update["articles"]) <= 25:
+        raise CatalogError("Use 1–25 guides and a boolean replaceExisting.")
+    if not isinstance(update["categories"], list) or len(update["categories"]) > 10:
+        raise CatalogError("A batch may add at most 10 categories.")
+    current = store.get()
+    if current is None or current[1] != expected:
+        raise CatalogError("The catalog changed. Fetch the current ETag and review your update.", 412)
+    previous = validate_catalog(decode_json(current[0]))
+    if update["revision"] == previous["revision"]:
+        raise CatalogError("Use a new unique publication revision.", 409)
+    catalog = decode_json(current[0])
+    catalog.update(revision=update["revision"], publishedAt=update["publishedAt"])
+    for key in ("categories", "articles"):
+        merged = {item["id"]: item for item in catalog[key]}
+        seen = set()
+        for item in update[key]:
+            if not isinstance(item, dict) or not isinstance(item.get("id"), str) or item["id"] in seen:
+                raise CatalogError("Batch IDs must be present and unique.")
+            seen.add(item["id"])
+            if item["id"] in merged and item != merged[item["id"]] and (key == "categories" or not update["replaceExisting"]):
+                raise CatalogError("Existing guides need replaceExisting: true; existing categories cannot be changed.", 409)
+            merged[item["id"]] = item
+        catalog[key] = list(merged.values())
+    validate_catalog(catalog)
+    if timestamp(catalog["publishedAt"]) <= timestamp(previous["publishedAt"]):
+        raise CatalogError("Use a publishedAt strictly later than the live publication.", 409)
+    manifest = merge_illustrations(store, catalog, previous, update["illustrations"])
+    immutable_put(store, "illustrations/" + catalog["revision"] + ".json", canonical(manifest))
+    etag = store.publish(catalog, expected)
+    return catalog, etag
+
+
+def handle(event, store, source_revision="local", conditional_writes=True, editor_key_sha256=""):
     method = event.get("requestContext", {}).get("http", {}).get("method", "GET")
     path = event.get("rawPath", "")
     headers = {key.casefold(): value for key, value in event.get("headers", {}).items()}
     try:
+        if path.startswith("/v1/editor/"):
+            authorize_editor(headers, editor_key_sha256)
+            if event.get("rawQueryString"):
+                raise CatalogError("Editor routes do not accept query parameters.", 400)
+            if method == "GET" and path == "/v1/editor/status":
+                current = store.get()
+                catalog = validate_catalog(decode_json(current[0])) if current else None
+                return response(200, {"schemaVersion": 1, "scopes": ["guides:upsert", "assets:create"],
+                    "maxGuidesPerBatch": 25, "maxImageBytes": MAX_IMAGE_BYTES, "imageFormat": "PNG RGB/RGBA 8-bit non-interlaced",
+                    "catalogRevision": catalog["revision"] if catalog else None,
+                    "conditionalWritesSupported": conditional_writes}, source_revision=source_revision)
+            if not conditional_writes:
+                raise CatalogError("Storage needs conditional-write support before editing.", 503)
+            asset = re.fullmatch(r"/v1/editor/assets/([0-9a-f]{64})", path)
+            if method == "PUT" and asset:
+                if headers.get("content-type", "").lower() != "image/png":
+                    raise CatalogError("Upload with Content-Type: image/png.", 415)
+                data = request_bytes(event, MAX_IMAGE_BYTES)
+                digest = hashlib.sha256(data).hexdigest()
+                if digest != asset[1]:
+                    raise CatalogError("The asset path must match the PNG SHA-256.")
+                width, height = png_dimensions(data)
+                etag = immutable_put(store, "assets/" + digest + ".png", data, content_type="image/png", cache="public, max-age=31536000, immutable")
+                return response(200, {"assetSHA256": digest, "path": "/v1/assets/" + digest, "width": width, "height": height}, etag, source_revision)
+            if method == "POST" and path == "/v1/editor/guides":
+                catalog, etag = editor_publish(event, headers, store)
+                return response(200, {"revision": catalog["revision"], "articles": len(catalog["articles"]), "publishedAt": catalog["publishedAt"]}, etag, source_revision, catalog["revision"])
+            raise CatalogError("Route not found.", 404)
+        asset = re.fullmatch(r"/v1/assets/([0-9a-f]{64})", path)
+        if method == "GET" and asset:
+            if event.get("rawQueryString"):
+                raise CatalogError("Asset routes do not accept query parameters.", 400)
+            stored = getattr(store, "get_key", lambda _: None)("assets/" + asset[1] + ".png")
+            if stored is None:
+                raise CatalogError("Illustration not found.", 404)
+            result = response(200, etag=stored[1], source_revision=source_revision, cache="public, max-age=31536000, immutable")
+            result.update(body=base64.b64encode(stored[0]).decode("ascii"), isBase64Encoded=True)
+            result["headers"]["content-type"] = "image/png"
+            return result
         if method == "PUT" and path == "/v1/publication":
             iam = event.get("requestContext", {}).get("authorizer", {}).get("iam", {})
             if not iam.get("userArn"):
@@ -333,7 +547,7 @@ def handle(event, store, source_revision="local", conditional_writes=True):
             catalog = validate_catalog(decode_json(data))
             etag = store.publish(catalog, expected, create)
             return response(200, {"revision": catalog["revision"], "articles": len(catalog["articles"]), "publishedAt": catalog["publishedAt"]}, etag, source_revision, catalog["revision"])
-        if method != "GET" or path not in {"/health", "/v1/catalog", "/v1/articles"} and not re.fullmatch(r"/v1/articles/[a-z0-9]+(?:-[a-z0-9]+)*", path):
+        if method != "GET" or path not in {"/health", "/v1/catalog", "/v1/articles", "/v1/illustrations"} and not re.fullmatch(r"/v1/articles/[a-z0-9]+(?:-[a-z0-9]+)*", path):
             raise CatalogError("Route not found.", 404)
         current = store.get()
         if path == "/health":
@@ -348,6 +562,11 @@ def handle(event, store, source_revision="local", conditional_writes=True):
             if event.get("rawQueryString"):
                 raise CatalogError("The full catalog does not accept search parameters.", 400)
             value, etag = catalog, current[1]
+        elif path == "/v1/illustrations":
+            if event.get("rawQueryString"):
+                raise CatalogError("Illustrations do not accept query parameters.", 400)
+            value = illustrations(store, catalog)
+            etag = '"' + hashlib.sha256(canonical(value)).hexdigest() + '"'
         elif path == "/v1/articles":
             value = article_summaries(catalog, query_params(event))
             etag = '"' + hashlib.sha256(canonical(value)).hexdigest() + '"'
@@ -382,7 +601,7 @@ def main(event, context):
             members = client.meta.service_model.operation_model("PutObject").input_shape.members
             _conditional_writes = {"IfMatch", "IfNoneMatch"}.issubset(members)
             _store = S3CatalogStore(client, os.environ["CATALOG_BUCKET"])
-        return handle(event, _store, revision, _conditional_writes)
+        return handle(event, _store, revision, _conditional_writes, os.environ.get("EDITOR_KEY_SHA256", ""))
     except Exception as error:
         # Log the exception type only. Never log request URLs, bodies, IAM credentials,
         # search text, catalog text, personal app activity, or provider exception data.

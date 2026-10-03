@@ -22,6 +22,7 @@ CUTOFF = datetime(2026, 10, 22, 7, tzinfo=timezone.utc)
 ACCOUNT = "074861507225"
 RELEASE_FILES = ("backend/deploy.py", "backend/handler.py", "backend/infrastructure.py", "backend/publish.py",
                  "backend/local.py", "backend/tests/test_backend.py", "backend/tests/__init__.py", "backend/requirements-dev.txt", "Content/catalog.json")
+RELEASE_FILES += ("backend/editor_client.py", "backend/provision_editor.py", "backend/tests/test_editor.py")
 
 
 def command(args, cwd=ROOT, checked=True, timeout=180):
@@ -84,7 +85,7 @@ def assert_artifacts(hashes):
 def prepare(revision, output, handler_source=None, frozen=None):
     body = template(revision, handler_source=handler_source)
     path = output / "cloudformation.json"
-    data = (json.dumps(body, indent=2) + "\n").encode("utf-8")
+    data = (json.dumps(body, separators=(",", ":")) + "\n").encode("utf-8")
     if len(data) > 51200:
         raise RuntimeError("CloudFormation inline template exceeds its supported request size.")
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -105,12 +106,20 @@ def deploy_aws(revision, options, output, frozen, path):
         raise RuntimeError("Could not inspect the existing AWS stack; refusing to replace or recreate it.")
     status = json.loads(existing.stdout)["Stacks"][0]["StackStatus"] if existing.returncode == 0 else None
     kind = "CREATE" if status in {None, "REVIEW_IN_PROGRESS"} else "UPDATE"
+    parameters = []
+    if getattr(options, "editor_key_file", None):
+        from editor_client import load_credentials
+        credential = load_credentials(options.editor_key_file)
+        digest = hashlib.sha256(credential["HOWTOADULT_EDITOR_API_KEY"].encode("ascii")).hexdigest()
+        parameters = ["--parameters", "ParameterKey=EditorKeySHA256,ParameterValue=" + digest]
+    elif kind == "UPDATE" and any(parameter["ParameterKey"] == "EditorKeySHA256" for parameter in json.loads(existing.stdout)["Stacks"][0].get("Parameters", [])):
+        parameters = ["--parameters", "ParameterKey=EditorKeySHA256,UsePreviousValue=true"]
     name = "release-" + revision[:12] + "-" + str(int(time.time()))
     assert_release_source(frozen)
     assert_artifacts(artifact)
     changes = aws(["cloudformation", "create-change-set", "--stack-name", options.stack, "--change-set-name", name,
         "--change-set-type", kind, "--capabilities", "CAPABILITY_IAM", "--template-body", "file://" + str(path),
-        "--description", "How to Adult source revision " + revision], options)
+        "--description", "How to Adult source revision " + revision, *parameters], options)
     details = {}
     for _ in range(80):
         details = aws(["cloudformation", "describe-change-set", "--change-set-name", changes["Id"]], options)
@@ -247,6 +256,16 @@ def verify(base, revision, expected_catalog, vercel=False, handler_sha256=None):
     unauthorized = probe(base, "/v1/publication", {"Content-Type": "application/json"}, "PUT", b"{}")
     if unauthorized[0] not in ({404, 405} if vercel else {403}):
         raise RuntimeError("Unauthenticated publication was not rejected by " + base)
+    editor_checks = {}
+    for method, path in (("GET", "/v1/editor/status"), ("POST", "/v1/editor/guides"), ("PUT", "/v1/editor/assets/" + "0" * 64)):
+        for label, headers in (("missing", {}), ("wrong", {"Authorization": "Bearer hta_ed_" + "a" * 43})):
+            result = probe(base, path, headers, method, None if method == "GET" else b"{}")
+            if result[0] != 401:
+                raise RuntimeError("Restricted editor did not reject " + label + " credentials for " + base)
+            editor_checks[method + " " + path + " " + label] = 401
+    artwork = probe(base, "/v1/illustrations")
+    if artwork[0] != 200 or artwork[1].get("revision") != expected_catalog["revision"]:
+        raise RuntimeError("Illustration manifest does not match the live catalog.")
     if vercel:
         manifest = probe(base, "/release.json")
         expected_sha = handler_sha256 or hashlib.sha256((BACKEND / "handler.py").read_bytes()).hexdigest()
@@ -254,7 +273,8 @@ def verify(base, revision, expected_catalog, vercel=False, handler_sha256=None):
             raise RuntimeError("Vercel artifact provenance check failed.")
     return {"health": 200, "catalog": 200, "etagRevalidation": 304, "individualGuide": 200, "searchPagination": 200,
             "missingGuide": 404, "unauthenticatedPublication": unauthorized[0], "catalogRevision": expected_catalog["revision"],
-            "catalogSHA256": hashlib.sha256(canonical(expected_catalog)).hexdigest(), "sourceRevision": revision}
+            "catalogSHA256": hashlib.sha256(canonical(expected_catalog)).hexdigest(), "sourceRevision": revision,
+            "restrictedEditor": editor_checks, "illustrationManifest": 200}
 
 
 def main():
@@ -265,6 +285,7 @@ def main():
     parser.add_argument("--stack", default="how-to-adult-guides-v1")
     parser.add_argument("--project", default="how-to-adult-guides")
     parser.add_argument("--vercel", default=os.getenv("VERCEL_BIN", "vercel"))
+    parser.add_argument("--editor-key-file", type=Path, help="Private credential JSON; deploy only its SHA-256. Omit to preserve the existing key.")
     parser.add_argument("--receipt", type=Path, default=BACKEND / "release-output" / "deployment-record.json")
     options = parser.parse_args()
     state = publication_state()
@@ -301,7 +322,7 @@ def main():
     assert_release_source(frozen)
     receipt = {"mode": options.mode, "status": "in-progress", "sourceRevision": revision, "verifiedRevision": None,
         "awsURL": None, "vercelURL": None, "actualCutoverAt": state.get("actualCutoverAt"), "commands": ["python3 backend/deploy.py " + options.mode],
-        "checks": {}, "singleDataOwner": "AWS versioned private S3; Vercel public GET rewrites only", "scheduledGenerationEnabled": False,
+        "checks": {}, "singleDataOwner": "AWS versioned private S3; Vercel relays reads and restricted editor requests", "scheduledGenerationEnabled": False,
         "productionDomainsChanged": False, "readiness": "New API; repeat deployment, rollback and parallel observation remain pending"}
     receipt["sourceSHA256"] = {name: item["sha256"] for name, item in frozen["files"].items()}
     receipt["templateSHA256"] = frozen["templateSHA256"]

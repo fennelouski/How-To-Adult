@@ -1,24 +1,112 @@
 {
-  "mode": "migration-pending",
-  "status": "Implemented and locally verified; no remote deployment attempted",
-  "verifiedRevision": null,
-  "awsURL": null,
-  "vercelURL": null,
+  "mode": "parallel",
+  "status": "verified",
+  "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+  "verifiedRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+  "awsURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com",
+  "vercelURL": "https://how-to-adult-guides.vercel.app",
   "actualCutoverAt": null,
-  "targetCutoverAt": "2026-10-22T07:00:00Z",
-  "singleDataOwner": "AWS versioned private S3 catalog; Vercel public GET rewrites only",
-  "scheduledGenerationEnabled": false,
-  "productionDomainsChanged": false,
   "commands": [
     "python3 backend/deploy.py parallel"
   ],
   "checks": {
-    "localEvidence": "local-verification.json",
+    "aws": {
+      "health": 200,
+      "catalog": 200,
+      "etagRevalidation": 304,
+      "individualGuide": 200,
+      "searchPagination": 200,
+      "missingGuide": 404,
+      "unauthenticatedPublication": 403,
+      "catalogRevision": "2026-10-03-starter-1",
+      "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+      "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+    },
+    "vercel": {
+      "health": 200,
+      "catalog": 200,
+      "etagRevalidation": 304,
+      "individualGuide": 200,
+      "searchPagination": 200,
+      "missingGuide": 404,
+      "unauthenticatedPublication": 404,
+      "catalogRevision": "2026-10-03-starter-1",
+      "catalogSHA256": "bd33c03e3feb02c26446f44b8f0e3229c6a41a59e4f530599501e0d7021e9b4d",
+      "sourceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365"
+    }
+  },
+  "singleDataOwner": "AWS versioned private S3; Vercel public GET rewrites only",
+  "scheduledGenerationEnabled": false,
+  "productionDomainsChanged": false,
+  "readiness": "Initial and repeat dual releases verified. Code rollback, sustained parallel observation and actual cutover remain unverified. No DNS, account cancellation or background-job changes.",
+  "sourceSHA256": {
+    "backend/deploy.py": "cdb9cc0d7e5b907e6419c455033abd18b2e73ed98b54b7c2ac932934632f3eca",
+    "backend/handler.py": "939cdd8a4ddb5948862e10b7b6679f02dcd8d1cb8acc4cb99954df76ea577ddd",
+    "backend/infrastructure.py": "1b36d4c1440a4aa050fa823e8f997cc1be52f31cf7a930ee4dae031413ece935",
+    "backend/publish.py": "fa203faf07494323e740b68e2c7d9421574fdebe3eaa1b2e954e34ddabe59cc3",
+    "backend/local.py": "36642a2756fa453384df883e1d5e2759f442896acbef712666c1f48a0d721e0f",
+    "backend/tests/test_backend.py": "3580896f08106a6e323abb3012dffcde7d206c1b55aee6d210fdbad81dba5ead",
+    "backend/tests/__init__.py": "cee83210b5021d7fea63ccc810f252330c7210a5ad8363c26aaf65e5a88410ad",
+    "backend/requirements-dev.txt": "5dbb6c765d30ff104ecd032ef9ac17ae7a5de2085405339e65dfc5759272f049",
+    "Content/catalog.json": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e"
+  },
+  "templateSHA256": "bf9f4b84131ffdd7c24f31d9cec10ddabfc91812398d8a3e05cdbc45e2e81567",
+  "awsRegion": "us-west-2",
+  "stack": "how-to-adult-guides-v1",
+  "bootstrap": {
+    "action": "existing-publication-preserved",
+    "revision": "2026-10-03-starter-1"
+  },
+  "vercelDeploymentURL": "https://how-to-adult-guides-27l74lk0e-nathan-fennels-projects.vercel.app",
+  "vercelDeploymentID": "dpl_DwuQybVfPpTDmjLaj8bb1SWPfGMU",
+  "vercelProject": "how-to-adult-guides",
+  "vercelArtifactSHA256": {
+    ".vercel/output/config.json": "34f2348562ed054e931f3acd605270f4861c8c8ad5e8b957cca6c978163a611c",
+    ".vercel/output/static/release.json": "a847a251212754ddbfd2b9684f9e9b57ee051fd3ea6e202bfc2ef139bb207ad6",
+    ".vercel/output/static/index.html": "2aaf7c13773b67af6fba15b2df454e6c284e8c35c3b5e1cb721f558817587951",
+    "vercel.json": "d8209115a448d5e218f94369a0a9703c7213cf26d71c967565b341d104100ea7"
+  },
+  "sameRevisionVerified": true,
+  "verifiedAt": "2026-10-03T08:47:58.190873+00:00",
+  "handlerSHA256": "939cdd8a4ddb5948862e10b7b6679f02dcd8d1cb8acc4cb99954df76ea577ddd",
+  "schemaVersion": 1,
+  "targetCutoverAt": "2026-10-22T07:00:00Z",
+  "parallelStartedAt": "2026-10-03T08:46:28.162881+00:00",
+  "earliestTwoWeekMilestone": "2026-10-17T08:46:28.162881+00:00",
+  "productionRoutingOwner": "Vercel public reader alias during parallel operation",
+  "cutoverVerified": false,
+  "cutoverReady": false,
+  "localVerification": {
     "backendTests": 49,
     "backendPassed": 49,
     "cloudFormationLint": "pass",
-    "starterCatalog": "56 guides validated",
-    "live": null
+    "starterGuides": 56,
+    "localOwnedComputer": true,
+    "paidBuildComputeCreated": false
   },
-  "readiness": "Live deploy, functional parity, repeat deployment, rollback and parallel observation pending"
+  "repeatDeployment": {
+    "status": "verified",
+    "sameCommittedRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "firstReceipt": "deployment-evidence/2026-10-03-first-release.json",
+    "repeatReceipt": "deployment-evidence/2026-10-03-repeat-release.json",
+    "existingPublicationPreserved": true,
+    "stableAWSURLPreserved": true,
+    "stableVercelAliasPreserved": true,
+    "publishedS3VersionCountAfterRepeat": 1,
+    "existingDataDeleted": false
+  },
+  "rollbackVerification": {
+    "status": "unverified",
+    "reason": "This is the first deployed backend implementation. No earlier compatible deployed code revision has been rolled back; repeated identical deployment does not prove code rollback."
+  },
+  "runtimeConfig": "Native AdultCatalogURL now points to the verified Vercel /v1/catalog at source 00b817d. New native test/package verification is owned by the release coordinator.",
+  "providerPrivacyEvidence": "provider-privacy-verification.json",
+  "resources": {
+    "stack": "how-to-adult-guides-v1",
+    "region": "us-west-2",
+    "catalogBucket": "how-to-adult-guides-v1-catalog-inauowmnt5cm",
+    "functionName": "how-to-adult-guides-v1-catalog",
+    "versionedEncryptedPrivateCatalogVerified": true,
+    "publishedS3VersionCount": 1
+  }
 }

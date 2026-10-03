@@ -514,6 +514,13 @@ class S3SDKTests(unittest.TestCase):
         data = canonical(value)
         with Stubber(self.client) as stub:
             stub.add_response("get_object", {"Body": io.BytesIO(canonical({**value, "revision": "fixture-0"})), "ETag": '"old"'})
+            stub.add_client_error("get_object", service_error_code="NoSuchKey", http_status_code=404,
+                expected_params={"Bucket": "editorial-fixture-bucket", "Key": "illustrations/fixture-1.json"})
+            stub.add_client_error("get_object", service_error_code="NoSuchKey", http_status_code=404,
+                expected_params={"Bucket": "editorial-fixture-bucket", "Key": "illustrations/fixture-0.json"})
+            stub.add_response("put_object", {"ETag": '"images"'}, {"Bucket": "editorial-fixture-bucket", "Key": "illustrations/fixture-1.json",
+                "Body": canonical({"schemaVersion": 1, "revision": "fixture-1", "items": []}),
+                "ContentType": "application/json; charset=utf-8", "CacheControl": "no-cache", "ServerSideEncryption": "AES256", "IfNoneMatch": "*"})
             stub.add_response("put_object", {"ETag": '"history"'}, {"Bucket": "editorial-fixture-bucket", "Key": "revisions/fixture-1.json", "Body": data,
                 "ContentType": "application/json; charset=utf-8", "CacheControl": "no-cache", "ServerSideEncryption": "AES256", "IfNoneMatch": "*"})
             stub.add_response("put_object", {"ETag": '"new"'}, {"Bucket": "editorial-fixture-bucket", "Key": "published/catalog.json", "Body": data,
@@ -533,6 +540,8 @@ class S3SDKTests(unittest.TestCase):
         data = canonical(fixture())
         with Stubber(self.client) as stub:
             stub.add_response("get_object", {"Body": io.BytesIO(canonical({**fixture(), "revision": "fixture-0"})), "ETag": '"current"'})
+            stub.add_response("get_object", {"Body": io.BytesIO(canonical({"schemaVersion": 1, "revision": "fixture-1", "items": []})), "ETag": '"images"'},
+                {"Bucket": "editorial-fixture-bucket", "Key": "illustrations/fixture-1.json"})
             stub.add_client_error("put_object", service_error_code="PreconditionFailed", http_status_code=412)
             stub.add_response("get_object", {"Body": io.BytesIO(b"{}"), "ETag": '"history"'})
             with self.assertRaises(CatalogError) as error:

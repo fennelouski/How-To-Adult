@@ -4,9 +4,21 @@ import SwiftUI
 struct HowToAdultApp: App {
     @State private var store: AdultStore?
     @State private var assistant: AdultAssistantController?
+    #if DEBUG
+    @State private var passportReview: AdultPassportReviewSession?
+    #endif
 
     init() {
         #if DEBUG
+        if let argument = ProcessInfo.processInfo.arguments.first(where: { $0.hasPrefix("--adult-passport-review") }) {
+            _store = State(initialValue: nil)
+            _assistant = State(initialValue: nil)
+            if argument.hasPrefix("--adult-passport-review="),
+               let id = UUID(uuidString: String(argument.dropFirst("--adult-passport-review=".count))) {
+                _passportReview = State(initialValue: try? AdultPassportReviewSession(id: id))
+            }
+            return
+        }
         // Test hosts must branch before touching the normal library, preferences or Keychain.
         let privateArgument = ProcessInfo.processInfo.arguments.first(where: { $0.hasPrefix("--adult-private-qa") })
         if ProcessInfo.processInfo.environment["ADULT_QA_BLANK_HOST"] == "1" && privateArgument == nil {
@@ -49,10 +61,14 @@ struct HowToAdultApp: App {
     var body: some Scene {
         WindowGroup(id: "library") {
             Group {
-                if let store, let assistant {
-                    AdultRootView()
-                        .environment(store).environment(assistant)
-                } else { Color.clear.accessibilityIdentifier("adult-blank-test-host") }
+                #if DEBUG
+                if let passportReview {
+                    AdultPassportReviewRoot()
+                        .environment(passportReview.guides).environment(passportReview.assistant).environment(passportReview.passport)
+                } else { ordinaryRoot }
+                #else
+                ordinaryRoot
+                #endif
             }
                 #if DEBUG
                 .modifier(AdultQAAppearance())
@@ -97,6 +113,12 @@ struct HowToAdultApp: App {
             return WindowPlacement(.leading(library))
         }
         #endif
+    }
+
+    @ViewBuilder private var ordinaryRoot: some View {
+        if let store, let assistant {
+            AdultRootView().environment(store).environment(assistant)
+        } else { Color.clear.accessibilityIdentifier("adult-blank-test-host") }
     }
 }
 

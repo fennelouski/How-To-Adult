@@ -395,6 +395,7 @@ struct GuideReaderView: View {
     let article: AdultArticle
     let onReminder: () -> Void
     var isDetached = false
+    var isPassportReview = false
     @State private var editingNotes = false
     #if os(visionOS)
     @Environment(\.openWindow) private var openWindow
@@ -413,7 +414,7 @@ struct GuideReaderView: View {
                     if article.jurisdiction != "General" {
                         Label(article.jurisdiction + " rules", systemImage: "globe").font(.subheadline.bold())
                     }
-                    Button {
+                    if !isPassportReview { Button {
                         assistant.prepare(article)
                         #if os(visionOS)
                         openWindow(id: "assistant")
@@ -421,7 +422,7 @@ struct GuideReaderView: View {
                     } label: {
                         Label("Help me do this", systemImage: "sparkles").font(.headline)
                             .padding(.vertical, 7).frame(maxWidth: .infinity)
-                    }.buttonStyle(.borderedProminent).accessibilityIdentifier("guide-assistant")
+                    }.buttonStyle(.borderedProminent).accessibilityIdentifier("guide-assistant") }
                 }
                 if let illustration = store.illustration(for: article), let revision = store.catalog?.revision {
                     GuideIllustrationView(illustration: illustration, revision: revision).id(revision)
@@ -531,9 +532,10 @@ struct GuideReaderView: View {
             Button { store.toggleSaved(article.id) } label: {
                 Label(store.progress(article.id).isSaved ? "Unsave guide" : "Save guide", systemImage: store.progress(article.id).isSaved ? "bookmark.fill" : "bookmark")
             }.disabled(!store.canSave).accessibilityIdentifier("save-guide")
-            Button(action: onReminder) { Label("Remind me", systemImage: "bell") }
+            if !isPassportReview { Button(action: onReminder) { Label("Remind me", systemImage: "bell") }
                 .disabled(!store.canSave).accessibilityIdentifier("remind-guide")
             ShareLink(item: article.shareText)
+            }
         }
     }
 }

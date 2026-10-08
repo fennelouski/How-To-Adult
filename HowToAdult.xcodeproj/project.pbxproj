@@ -5,10 +5,70 @@
 	};
 	objectVersion = 56;
 	objects = {
+		2A7350DD54DAD4FADBE8C834 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAIConnection.swift";
+			sourceTree = "<group>";
+		};
+		5DAD4187415F760EB8BAE4F1 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAIService.swift";
+			sourceTree = "<group>";
+		};
+		5A0A73220128E01B2600670A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultActionExecutor.swift";
+			sourceTree = "<group>";
+		};
+		425382A5C51AF1338CC16406 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantController.swift";
+			sourceTree = "<group>";
+		};
+		4F478116E91F5F84998ABA9C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantIntents.swift";
+			sourceTree = "<group>";
+		};
+		7A991E065710F5966B371C50 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantLibrary.swift";
+			sourceTree = "<group>";
+		};
+		6CE34C7240FD108DCE67A5F2 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantModels.swift";
+			sourceTree = "<group>";
+		};
+		6BC944CA59ED42E6494052ED = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantSettingsView.swift";
+			sourceTree = "<group>";
+		};
+		F9158C5E39346C9508C9A38A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantViews.swift";
+			sourceTree = "<group>";
+		};
 		CF8E697AD3C7FF66A2674976 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultCore.swift";
+			sourceTree = "<group>";
+		};
+		2B8F529F7FCEF5F0CD8C2B58 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultNotificationBudget.swift";
 			sourceTree = "<group>";
 		};
 		E8BFFC13605D8558DDB18199 = {
@@ -29,10 +89,46 @@
 			path = "App.swift";
 			sourceTree = "<group>";
 		};
+		6F989F3F69F5D43BA6A0700E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAIServiceTests.swift";
+			sourceTree = "<group>";
+		};
+		263739C8BD4D6C23BF7E175A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultActionExecutorTests.swift";
+			sourceTree = "<group>";
+		};
+		E9BD26C0D363977B30AA5C03 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantControllerTests.swift";
+			sourceTree = "<group>";
+		};
+		8BF29D0726B6773D0D011D7B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantTests.swift";
+			sourceTree = "<group>";
+		};
 		96D1D999AC86052AD9E6D711 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultCoreTests.swift";
+			sourceTree = "<group>";
+		};
+		637F41F301BB63A88E922DDB = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultNotificationBudgetTests.swift";
+			sourceTree = "<group>";
+		};
+		D1F0873ED88A9AF5273F370D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultAssistantUITests.swift";
 			sourceTree = "<group>";
 		};
 		13BD6DCF6818C3FECDACCCB0 = {
@@ -71,6 +167,12 @@
 			path = "macOS-Info.plist";
 			sourceTree = "<group>";
 		};
+		8B8F2C2E0107E5103B9E80DA = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "visionOS-Info.plist";
+			sourceTree = "<group>";
+		};
 		5747BFB130335458B26CEF24 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "text.plist.xml";
@@ -83,6 +185,12 @@
 			path = "macOS.entitlements";
 			sourceTree = "<group>";
 		};
+		A36BE8DA2076D8D964D31692 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "visionOS.entitlements";
+			sourceTree = "<group>";
+		};
 		9FD9A21035C3179BC1DFA0D7 = {
 			isa = "PBXFileReference";
 			explicitFileType = "wrapper.application";
@@ -90,9 +198,49 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		9F0FDCFA5DF232D137DF0A18 = {
+			isa = "PBXBuildFile";
+			fileRef = "2A7350DD54DAD4FADBE8C834";
+		};
+		D882F02187E75532CA2A2C0F = {
+			isa = "PBXBuildFile";
+			fileRef = "5DAD4187415F760EB8BAE4F1";
+		};
+		6EF021E3CA9B8D0E4828D567 = {
+			isa = "PBXBuildFile";
+			fileRef = "5A0A73220128E01B2600670A";
+		};
+		083AAED8A56987B30D3BB1A0 = {
+			isa = "PBXBuildFile";
+			fileRef = "425382A5C51AF1338CC16406";
+		};
+		E2F6ABA6D8EB967A4F2AC4A5 = {
+			isa = "PBXBuildFile";
+			fileRef = "4F478116E91F5F84998ABA9C";
+		};
+		98FA59DA5768E2A32436AB3C = {
+			isa = "PBXBuildFile";
+			fileRef = "7A991E065710F5966B371C50";
+		};
+		C5C0BCFA9E17D2A351A211FE = {
+			isa = "PBXBuildFile";
+			fileRef = "6CE34C7240FD108DCE67A5F2";
+		};
+		48B05EBBFC78229B6FFE5D93 = {
+			isa = "PBXBuildFile";
+			fileRef = "6BC944CA59ED42E6494052ED";
+		};
+		24E6F71D8BC1C943A371AFCA = {
+			isa = "PBXBuildFile";
+			fileRef = "F9158C5E39346C9508C9A38A";
+		};
 		2B05C6321DDB659CC319DD8E = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
+		};
+		4BFE6E628C20ECEA3BDD20AC = {
+			isa = "PBXBuildFile";
+			fileRef = "2B8F529F7FCEF5F0CD8C2B58";
 		};
 		49EEA09D899A6AB5DC6DC2AB = {
 			isa = "PBXBuildFile";
@@ -122,7 +270,17 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"9F0FDCFA5DF232D137DF0A18",
+				"D882F02187E75532CA2A2C0F",
+				"6EF021E3CA9B8D0E4828D567",
+				"083AAED8A56987B30D3BB1A0",
+				"E2F6ABA6D8EB967A4F2AC4A5",
+				"98FA59DA5768E2A32436AB3C",
+				"C5C0BCFA9E17D2A351A211FE",
+				"48B05EBBFC78229B6FFE5D93",
+				"24E6F71D8BC1C943A371AFCA",
 				"2B05C6321DDB659CC319DD8E",
+				"4BFE6E628C20ECEA3BDD20AC",
 				"49EEA09D899A6AB5DC6DC2AB",
 				"FE16BFF9DFE8F03C994A7A19",
 				"2774DA2D8D44B58F173005D5",
@@ -253,9 +411,29 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		6380BF892A5AAE72A98F4DA5 = {
+			isa = "PBXBuildFile";
+			fileRef = "6F989F3F69F5D43BA6A0700E";
+		};
+		DCCF803A160B4503608DFD01 = {
+			isa = "PBXBuildFile";
+			fileRef = "263739C8BD4D6C23BF7E175A";
+		};
+		24366C58F517ABC032476F79 = {
+			isa = "PBXBuildFile";
+			fileRef = "E9BD26C0D363977B30AA5C03";
+		};
+		BA816DFFD602C328C59D18AD = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF29D0726B6773D0D011D7B";
+		};
 		51548C506FC8F59230AC08E6 = {
 			isa = "PBXBuildFile";
 			fileRef = "96D1D999AC86052AD9E6D711";
+		};
+		E4144E7E80C9874C3C2C642E = {
+			isa = "PBXBuildFile";
+			fileRef = "637F41F301BB63A88E922DDB";
 		};
 		11D337EB63662E67F547D537 = {
 			isa = "PBXBuildFile";
@@ -265,7 +443,12 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"6380BF892A5AAE72A98F4DA5",
+				"DCCF803A160B4503608DFD01",
+				"24366C58F517ABC032476F79",
+				"BA816DFFD602C328C59D18AD",
 				"51548C506FC8F59230AC08E6",
+				"E4144E7E80C9874C3C2C642E",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +585,10 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		A2015DFF9FA48D13A3769291 = {
+			isa = "PBXBuildFile";
+			fileRef = "D1F0873ED88A9AF5273F370D";
+		};
 		46230286BD920E8606AD1716 = {
 			isa = "PBXBuildFile";
 			fileRef = "13BD6DCF6818C3FECDACCCB0";
@@ -410,6 +597,7 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"A2015DFF9FA48D13A3769291",
 				"46230286BD920E8606AD1716",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,9 +710,49 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		8C4BB7FCFE4FA6CD076A449B = {
+			isa = "PBXBuildFile";
+			fileRef = "2A7350DD54DAD4FADBE8C834";
+		};
+		30FE659D6620E8BA10F88BC1 = {
+			isa = "PBXBuildFile";
+			fileRef = "5DAD4187415F760EB8BAE4F1";
+		};
+		2A7C57E49B6E98743210B4D9 = {
+			isa = "PBXBuildFile";
+			fileRef = "5A0A73220128E01B2600670A";
+		};
+		2B63C877DC3A43ABF768121C = {
+			isa = "PBXBuildFile";
+			fileRef = "425382A5C51AF1338CC16406";
+		};
+		3315BA0F5DCA3D8675F9D803 = {
+			isa = "PBXBuildFile";
+			fileRef = "4F478116E91F5F84998ABA9C";
+		};
+		5B4DC1E1C2E11E893B7FF6C1 = {
+			isa = "PBXBuildFile";
+			fileRef = "7A991E065710F5966B371C50";
+		};
+		EACE0D5D345292DF5C4368A5 = {
+			isa = "PBXBuildFile";
+			fileRef = "6CE34C7240FD108DCE67A5F2";
+		};
+		E96DA1C391962136DEC2C8FE = {
+			isa = "PBXBuildFile";
+			fileRef = "6BC944CA59ED42E6494052ED";
+		};
+		84EEBB175041CF621996578F = {
+			isa = "PBXBuildFile";
+			fileRef = "F9158C5E39346C9508C9A38A";
+		};
 		DD3A25CE63B9349AD9B482CB = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
+		};
+		12E9DF03153C6C8C9DF7CF77 = {
+			isa = "PBXBuildFile";
+			fileRef = "2B8F529F7FCEF5F0CD8C2B58";
 		};
 		B659604C39AF149D10F797BC = {
 			isa = "PBXBuildFile";
@@ -554,7 +782,17 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"8C4BB7FCFE4FA6CD076A449B",
+				"30FE659D6620E8BA10F88BC1",
+				"2A7C57E49B6E98743210B4D9",
+				"2B63C877DC3A43ABF768121C",
+				"3315BA0F5DCA3D8675F9D803",
+				"5B4DC1E1C2E11E893B7FF6C1",
+				"EACE0D5D345292DF5C4368A5",
+				"E96DA1C391962136DEC2C8FE",
+				"84EEBB175041CF621996578F",
 				"DD3A25CE63B9349AD9B482CB",
+				"12E9DF03153C6C8C9DF7CF77",
 				"B659604C39AF149D10F797BC",
 				"D781AB9508796526DEAE100E",
 				"ABD930F4ECEA5C85DC3FAD84",
@@ -683,9 +921,29 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		7642666052AC5792F13307BE = {
+			isa = "PBXBuildFile";
+			fileRef = "6F989F3F69F5D43BA6A0700E";
+		};
+		B12AFF87D5BD2284AFBD04C8 = {
+			isa = "PBXBuildFile";
+			fileRef = "263739C8BD4D6C23BF7E175A";
+		};
+		753F04A0A392575A939E95E3 = {
+			isa = "PBXBuildFile";
+			fileRef = "E9BD26C0D363977B30AA5C03";
+		};
+		96477F5791DDBEBEF88A7FE3 = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF29D0726B6773D0D011D7B";
+		};
 		DE6CDD7D12CEF1FF63ACE886 = {
 			isa = "PBXBuildFile";
 			fileRef = "96D1D999AC86052AD9E6D711";
+		};
+		70BDC7741536CB5CD6A5CE2D = {
+			isa = "PBXBuildFile";
+			fileRef = "637F41F301BB63A88E922DDB";
 		};
 		B403380705AF04D6C6D84ECD = {
 			isa = "PBXBuildFile";
@@ -695,7 +953,12 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"7642666052AC5792F13307BE",
+				"B12AFF87D5BD2284AFBD04C8",
+				"753F04A0A392575A939E95E3",
+				"96477F5791DDBEBEF88A7FE3",
 				"DE6CDD7D12CEF1FF63ACE886",
+				"70BDC7741536CB5CD6A5CE2D",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +1089,10 @@
 			sourceTree = "BUILT_PRODUCTS_DIR";
 			includeInIndex = 0;
 		};
+		4E98437FC389DC719EEC4364 = {
+			isa = "PBXBuildFile";
+			fileRef = "D1F0873ED88A9AF5273F370D";
+		};
 		1D27CC9CC8EC4F83AFC3F2F2 = {
 			isa = "PBXBuildFile";
 			fileRef = "13BD6DCF6818C3FECDACCCB0";
@@ -834,6 +1101,7 @@
 			isa = "PBXSourcesBuildPhase";
 			buildActionMask = 2147483647;
 			files = (
+				"4E98437FC389DC719EEC4364",
 				"1D27CC9CC8EC4F83AFC3F2F2",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -933,10 +1201,526 @@
 			productReference = "B79F85B4EC08C061A8FF55B0";
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4A66ABBA3DD4CC952C11E8F0 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "How to Adult.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		8FEC08A8C1D7DC2954257F3E = {
+			isa = "PBXBuildFile";
+			fileRef = "2A7350DD54DAD4FADBE8C834";
+		};
+		54742C2A79B2070324D2B59C = {
+			isa = "PBXBuildFile";
+			fileRef = "5DAD4187415F760EB8BAE4F1";
+		};
+		009DC7D9B014284BA94A94D4 = {
+			isa = "PBXBuildFile";
+			fileRef = "5A0A73220128E01B2600670A";
+		};
+		124706A12706577F43364B8E = {
+			isa = "PBXBuildFile";
+			fileRef = "425382A5C51AF1338CC16406";
+		};
+		FFE922DA0431C9E071697384 = {
+			isa = "PBXBuildFile";
+			fileRef = "4F478116E91F5F84998ABA9C";
+		};
+		45F1C1D20AF790C209381209 = {
+			isa = "PBXBuildFile";
+			fileRef = "7A991E065710F5966B371C50";
+		};
+		CC4C510814AC8FD277B952DC = {
+			isa = "PBXBuildFile";
+			fileRef = "6CE34C7240FD108DCE67A5F2";
+		};
+		5088BFC249CD4755D3C545B6 = {
+			isa = "PBXBuildFile";
+			fileRef = "6BC944CA59ED42E6494052ED";
+		};
+		69A554D9CF4CD768F04E7A2E = {
+			isa = "PBXBuildFile";
+			fileRef = "F9158C5E39346C9508C9A38A";
+		};
+		8CCEDF70A379E7A0A54475BF = {
+			isa = "PBXBuildFile";
+			fileRef = "CF8E697AD3C7FF66A2674976";
+		};
+		664204236A952CFDEDFED271 = {
+			isa = "PBXBuildFile";
+			fileRef = "2B8F529F7FCEF5F0CD8C2B58";
+		};
+		051F9E84AA51ABCFA391A333 = {
+			isa = "PBXBuildFile";
+			fileRef = "E8BFFC13605D8558DDB18199";
+		};
+		F6920C7E9FC723F6D412C913 = {
+			isa = "PBXBuildFile";
+			fileRef = "636B1AB0105B4EC4323FBC19";
+		};
+		CE163256CE8542449A44ECB5 = {
+			isa = "PBXBuildFile";
+			fileRef = "12AC0F1A42CD7EF33B7D8F9C";
+		};
+		D65442B637A9968E82AB46FC = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF729FFE074CAEE622C0292";
+		};
+		4C51B8BDC607FE1B5DCBD93B = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		BFD7B3A7438F0A41872B0405 = {
+			isa = "PBXBuildFile";
+			fileRef = "05B3ABF2579A5EB66403CD78";
+		};
+		4C1F88689C2583996D06F7E6 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"8FEC08A8C1D7DC2954257F3E",
+				"54742C2A79B2070324D2B59C",
+				"009DC7D9B014284BA94A94D4",
+				"124706A12706577F43364B8E",
+				"FFE922DA0431C9E071697384",
+				"45F1C1D20AF790C209381209",
+				"CC4C510814AC8FD277B952DC",
+				"5088BFC249CD4755D3C545B6",
+				"69A554D9CF4CD768F04E7A2E",
+				"8CCEDF70A379E7A0A54475BF",
+				"664204236A952CFDEDFED271",
+				"051F9E84AA51ABCFA391A333",
+				"F6920C7E9FC723F6D412C913",
+				"CE163256CE8542449A44ECB5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A34D6BB9CA88F1F47EB3FAD = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B71686D246F383BE418DE5 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"D65442B637A9968E82AB46FC",
+				"4C51B8BDC607FE1B5DCBD93B",
+				"BFD7B3A7438F0A41872B0405",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01162448489C97A0C3F23AB3 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/visionOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/visionOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "VisionIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		A939C6D966D42C8561E5490E = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-Adult";
+				PRODUCT_NAME = "How to Adult";
+				PRODUCT_MODULE_NAME = "HowToAdult";
+				INFOPLIST_FILE = "Configuration/visionOS-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Configuration/visionOS.entitlements";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "VisionIcon";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor";
+				GENERATE_INFOPLIST_FILE = "NO";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		0AFA0A63777960F7821ABD76 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"01162448489C97A0C3F23AB3",
+				"A939C6D966D42C8561E5490E",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		8C501786301FAF2F2A279BD3 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "0AFA0A63777960F7821ABD76";
+			buildPhases = (
+				"4C1F88689C2583996D06F7E6",
+				"3A34D6BB9CA88F1F47EB3FAD",
+				"C0B71686D246F383BE418DE5",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HowToAdult-visionOS";
+			productName = "How to Adult";
+			productReference = "4A66ABBA3DD4CC952C11E8F0";
+			productType = "com.apple.product-type.application";
+		};
+		9B6E56A9C5A3B6AE91DCA072 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultTests-visionOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		69394FD3F874B8A6449744E0 = {
+			isa = "PBXBuildFile";
+			fileRef = "6F989F3F69F5D43BA6A0700E";
+		};
+		1501EA871367993B110C13E2 = {
+			isa = "PBXBuildFile";
+			fileRef = "263739C8BD4D6C23BF7E175A";
+		};
+		D00B18CD7DD0390847980D16 = {
+			isa = "PBXBuildFile";
+			fileRef = "E9BD26C0D363977B30AA5C03";
+		};
+		F880B9A68C9C3C56141BD5B4 = {
+			isa = "PBXBuildFile";
+			fileRef = "8BF29D0726B6773D0D011D7B";
+		};
+		C1DDFE23E9A8BCE766C1741C = {
+			isa = "PBXBuildFile";
+			fileRef = "96D1D999AC86052AD9E6D711";
+		};
+		578ECA2DAC9F2DF38509999F = {
+			isa = "PBXBuildFile";
+			fileRef = "637F41F301BB63A88E922DDB";
+		};
+		B457F8CFD145CF8B254C9389 = {
+			isa = "PBXBuildFile";
+			fileRef = "652F55016243BF1B9F1BBEA4";
+		};
+		0A14200227A195B6D1C316B6 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"69394FD3F874B8A6449744E0",
+				"1501EA871367993B110C13E2",
+				"D00B18CD7DD0390847980D16",
+				"F880B9A68C9C3C56141BD5B4",
+				"C1DDFE23E9A8BCE766C1741C",
+				"578ECA2DAC9F2DF38509999F",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37F2B2708C926507273B8F3 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23621C41D605F0B9A5A3BAB5 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"B457F8CFD145CF8B254C9389",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9849B90B9B3DA0F0C33C498 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "244210E48437B6556980A702";
+			proxyType = 1;
+			remoteGlobalIDString = "8C501786301FAF2F2A279BD3";
+			remoteInfo = "HowToAdult-visionOS";
+		};
+		DA4BC34FE7420FDC3177FEBE = {
+			isa = "PBXTargetDependency";
+			target = "8C501786301FAF2F2A279BD3";
+			targetProxy = "E9849B90B9B3DA0F0C33C498";
+		};
+		E0ABA56BFAC22E95A5B4F7A8 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.visionos";
+				PRODUCT_NAME = "HowToAdultTests-visionOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-visionOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		28E670BEBE61EF43FBC9D80C = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultTests.visionos";
+				PRODUCT_NAME = "HowToAdultTests-visionOS";
+				PRODUCT_MODULE_NAME = "HowToAdultTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult";
+				TEST_TARGET_NAME = "HowToAdult-visionOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		3749E145F2212612B8E6E75F = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"E0ABA56BFAC22E95A5B4F7A8",
+				"28E670BEBE61EF43FBC9D80C",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		7808B495422F37050F0CF6B3 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "3749E145F2212612B8E6E75F";
+			buildPhases = (
+				"0A14200227A195B6D1C316B6",
+				"D37F2B2708C926507273B8F3",
+				"23621C41D605F0B9A5A3BAB5",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"DA4BC34FE7420FDC3177FEBE",
+			);
+			name = "HowToAdultTests-visionOS";
+			productName = "HowToAdultTests-visionOS";
+			productReference = "9B6E56A9C5A3B6AE91DCA072";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BC8F5F7F8C93D5A702E5519 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "HowToAdultUITests-visionOS.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		A94DD717E6CF52F052791A52 = {
+			isa = "PBXBuildFile";
+			fileRef = "D1F0873ED88A9AF5273F370D";
+		};
+		1C83920F61F32917CE5B9D54 = {
+			isa = "PBXBuildFile";
+			fileRef = "13BD6DCF6818C3FECDACCCB0";
+		};
+		3036E37BBE94DE66EB87F66E = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+				"A94DD717E6CF52F052791A52",
+				"1C83920F61F32917CE5B9D54",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A855235BEA7E1329942765 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26412595078E67AEFE71325E = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.visionos";
+				PRODUCT_NAME = "HowToAdultUITests-visionOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				TEST_TARGET_NAME = "HowToAdult-visionOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Debug";
+		};
+		BF8FB2566061F89DFE7777F7 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				DEVELOPMENT_TEAM = "EJLR2RPSV2";
+				CODE_SIGN_STYLE = "Automatic";
+				SWIFT_VERSION = "6.0";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				MARKETING_VERSION = "1.0";
+				CURRENT_PROJECT_VERSION = "1";
+				ENABLE_USER_SCRIPT_SANDBOXING = "YES";
+				GCC_C_LANGUAGE_STANDARD = "gnu17";
+				GCC_WARN_UNUSED_VARIABLE = "YES";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = "YES_AGGRESSIVE";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanfennel.How-To-AdultUITests.visionos";
+				PRODUCT_NAME = "HowToAdultUITests-visionOS";
+				PRODUCT_MODULE_NAME = "HowToAdultUITests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = "xros";
+				XROS_DEPLOYMENT_TARGET = "2.0";
+				TARGETED_DEVICE_FAMILY = "7";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = "NO";
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = "NO";
+				TEST_TARGET_NAME = "HowToAdult-visionOS";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		4CB08D2AEB8772DE1827238F = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"26412595078E67AEFE71325E",
+				"BF8FB2566061F89DFE7777F7",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		7796F118AC42F0B9EB347852 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "4CB08D2AEB8772DE1827238F";
+			buildPhases = (
+				"3036E37BBE94DE66EB87F66E",
+				"89A855235BEA7E1329942765",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"DA4BC34FE7420FDC3177FEBE",
+			);
+			name = "HowToAdultUITests-visionOS";
+			productName = "HowToAdultUITests-visionOS";
+			productReference = "0BC8F5F7F8C93D5A702E5519";
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		21D3B380B3DAA02544E7A4A3 = {
 			isa = "PBXGroup";
 			children = (
+				"2A7350DD54DAD4FADBE8C834",
+				"5DAD4187415F760EB8BAE4F1",
+				"5A0A73220128E01B2600670A",
+				"425382A5C51AF1338CC16406",
+				"4F478116E91F5F84998ABA9C",
+				"7A991E065710F5966B371C50",
+				"6CE34C7240FD108DCE67A5F2",
+				"6BC944CA59ED42E6494052ED",
+				"F9158C5E39346C9508C9A38A",
 				"CF8E697AD3C7FF66A2674976",
+				"2B8F529F7FCEF5F0CD8C2B58",
 				"E8BFFC13605D8558DDB18199",
 				"636B1AB0105B4EC4323FBC19",
 				"12AC0F1A42CD7EF33B7D8F9C",
@@ -947,7 +1731,12 @@
 		023752C49C9D198427E934E7 = {
 			isa = "PBXGroup";
 			children = (
+				"6F989F3F69F5D43BA6A0700E",
+				"263739C8BD4D6C23BF7E175A",
+				"E9BD26C0D363977B30AA5C03",
+				"8BF29D0726B6773D0D011D7B",
 				"96D1D999AC86052AD9E6D711",
+				"637F41F301BB63A88E922DDB",
 			);
 			path = "Tests";
 			sourceTree = "<group>";
@@ -955,6 +1744,7 @@
 		8A6AD1E06B06123DE9F4A03D = {
 			isa = "PBXGroup";
 			children = (
+				"D1F0873ED88A9AF5273F370D",
 				"13BD6DCF6818C3FECDACCCB0",
 			);
 			path = "UITests";
@@ -982,8 +1772,10 @@
 				"05B3ABF2579A5EB66403CD78",
 				"B5367E1165A83EC33AA89553",
 				"F974B6584DBE051B16B4A38D",
+				"8B8F2C2E0107E5103B9E80DA",
 				"5747BFB130335458B26CEF24",
 				"F16C068B34C806F87F4D8D26",
+				"A36BE8DA2076D8D964D31692",
 			);
 			path = "Configuration";
 			sourceTree = "<group>";
@@ -998,6 +1790,9 @@
 				"1BD4F3FF6530441628471663",
 				"FBE56483618FE116071CFB1C",
 				"B79F85B4EC08C061A8FF55B0",
+				"4A66ABBA3DD4CC952C11E8F0",
+				"9B6E56A9C5A3B6AE91DCA072",
+				"0BC8F5F7F8C93D5A702E5519",
 			);
 			sourceTree = "<group>";
 		};
@@ -1101,6 +1896,21 @@
 						DevelopmentTeam = "EJLR2RPSV2";
 						ProvisioningStyle = "Automatic";
 					};
+					8C501786301FAF2F2A279BD3 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					7808B495422F37050F0CF6B3 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
+					7796F118AC42F0B9EB347852 = {
+						CreatedOnToolsVersion = "26.6";
+						DevelopmentTeam = "EJLR2RPSV2";
+						ProvisioningStyle = "Automatic";
+					};
 				};
 			};
 			buildConfigurationList = "1922B098E983995960BE56B0";
@@ -1122,6 +1932,9 @@
 				"11B73290E14014E9497F3C60",
 				"6DD0BEFB3BBF88760819E935",
 				"DBB989C380FF0A6D16E8ADFC",
+				"8C501786301FAF2F2A279BD3",
+				"7808B495422F37050F0CF6B3",
+				"7796F118AC42F0B9EB347852",
 			);
 		};
 	};

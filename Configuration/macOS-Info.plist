@@ -6,6 +6,9 @@
     <key>CFBundleDevelopmentRegion</key><string>en</string>
     <key>CFBundleDisplayName</key><string>How to Adult</string>
     <key>AdultCatalogURL</key><string>https://how-to-adult-guides.vercel.app/v1/catalog</string>
+    <key>NSCalendarsWriteOnlyAccessUsageDescription</key><string>Add calendar events from plans you approve.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key><string>Choose a calendar for events from plans you approve.</string>
+    <key>NSRemindersFullAccessUsageDescription</key><string>Add planned tasks to the Reminders list you choose.</string>
     <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
     <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>

@@ -1,5 +1,6 @@
 import Foundation
 import CryptoKit
+import ImageIO
 
 struct AdultCatalog: Codable, Sendable {
     let schemaVersion: Int
@@ -98,6 +99,10 @@ struct AdultArticle: Codable, Identifiable, Hashable, Sendable {
     let cautions: [String]
     let sources: [GuideSource]
 
+    var adviceNotice: String? {
+        categoryID == "money" || categoryID == "wellbeing" || jurisdiction != "General" ? "General guidance, not professional financial, legal or medical advice." : nil
+    }
+
     func matches(_ query: String) -> Bool {
         let tokens = query.split(whereSeparator: \.isWhitespace)
         let haystack = ([title, summary, jurisdiction] + tags + steps.map { $0.title + " " + $0.body }).joined(separator: " ")
@@ -106,6 +111,7 @@ struct AdultArticle: Codable, Identifiable, Hashable, Sendable {
 
     var shareText: String {
         var parts = [title, summary]
+        if let adviceNotice { parts.append(adviceNotice) }
         if jurisdiction != "General" { parts.append(jurisdiction + " rules") }
         if !tools.isEmpty { parts.append("Before you start\n" + tools.joined(separator: "\n")) }
         parts.append(steps.map { $0.title + "\n" + $0.body }.joined(separator: "\n\n"))
@@ -137,6 +143,8 @@ struct ArticleProgress: Codable, Equatable, Sendable {
     var checkedSteps: [String: String] = [:]
     var reminderDate: Date?
     var reminderSound = true
+    var personalNotes: String?
+    var rating: Int?
 
     func isChecked(_ step: GuideStep) -> Bool { checkedSteps[step.id] == step.fingerprint }
     func completedCount(in article: AdultArticle) -> Int { article.steps.filter(isChecked).count }
@@ -150,14 +158,89 @@ struct UserLibrary: Codable, Equatable, Sendable {
         guard data.count <= AdultCatalog.maximumBytes else { throw CatalogError.tooLarge }
         let library = try JSONDecoder().decode(UserLibrary.self, from: data)
         guard library.schemaVersion == 1 else { throw CatalogError.invalid }
+        guard library.articles.values.allSatisfy({ ($0.personalNotes?.count ?? 0) <= 50_000 && ($0.rating.map { (1...5).contains($0) } ?? true) }) else { throw CatalogError.invalid }
         return library
     }
 }
 
 enum AdultSection: String, CaseIterable, Identifiable {
-    case browse = "Guides", saved = "Saved", reminders = "Reminders"
+    case browse = "Guides", assistant = "Assistant", saved = "Saved", reminders = "Reminders"
     var id: Self { self }
     var symbol: String {
-        switch self { case .browse: "books.vertical"; case .saved: "bookmark"; case .reminders: "bell" }
+        switch self { case .browse: "books.vertical"; case .assistant: "sparkles"; case .saved: "bookmark"; case .reminders: "bell" }
+    }
+}
+
+// Artwork is an optional sidecar to a specific published guide revision.
+struct GuideIllustration: Codable, Hashable, Sendable {
+    let guideID: String
+    let stepID: String
+    let assetSHA256: String
+    let altText: String
+    let caption: String
+    let creator: String
+    let license: String
+    let provenance: String
+
+    static let maximumImageBytes = 2 * 1_024 * 1_024
+    var slot: String { guideID + "\u{0}" + stepID }
+
+    static func digest(_ data: Data) -> String {
+        SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
+    }
+
+    static func image(_ data: Data, expectedDigest: String) throws -> CGImage {
+        guard data.count <= maximumImageBytes, digest(data) == expectedDigest,
+              let source = CGImageSourceCreateWithData(data as CFData, nil),
+              CGImageSourceGetType(source) as String? == "public.png",
+              CGImageSourceGetCount(source) == 1,
+              let properties = CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any],
+              let width = properties[kCGImagePropertyPixelWidth] as? Int,
+              let height = properties[kCGImagePropertyPixelHeight] as? Int,
+              (1...4_096).contains(width), (1...4_096).contains(height),
+              let image = CGImageSourceCreateThumbnailAtIndex(source, 0, [
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceThumbnailMaxPixelSize: 2_000,
+                kCGImageSourceCreateThumbnailWithTransform: true
+              ] as CFDictionary) else { throw CatalogError.invalid }
+        return image
+    }
+}
+
+struct GuideIllustrationManifest: Codable, Sendable {
+    let schemaVersion: Int
+    let revision: String
+    let items: [GuideIllustration]
+    static let maximumBytes = 4 * 1_024 * 1_024
+
+    static func decode(_ data: Data, for catalog: AdultCatalog) throws -> Self {
+        guard data.count <= maximumBytes else { throw CatalogError.tooLarge }
+        let manifest = try JSONDecoder().decode(Self.self, from: data)
+        try manifest.validate(for: catalog)
+        return manifest
+    }
+
+    func validate(for catalog: AdultCatalog) throws {
+        guard schemaVersion == 1, revision == catalog.revision,
+              revision.range(of: "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$", options: .regularExpression) != nil,
+              items.count <= catalog.articles.reduce(0, { $0 + $1.steps.count + 1 }),
+              Set(items.map(\.slot)).count == items.count else { throw CatalogError.invalid }
+        let articles = Dictionary(uniqueKeysWithValues: catalog.articles.map { ($0.id, $0) })
+        for item in items {
+            guard let article = articles[item.guideID],
+                  item.stepID.isEmpty || article.steps.contains(where: { $0.id == item.stepID }),
+                  item.assetSHA256.range(of: "^[0-9a-f]{64}$", options: .regularExpression) != nil else { throw CatalogError.invalid }
+            for (text, limit, canBeEmpty) in [(item.altText, 500, false), (item.caption, 500, true),
+                (item.creator, 200, false), (item.license, 300, false), (item.provenance, 2_000, false)] {
+                guard text.count <= limit, canBeEmpty || !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                      !text.unicodeScalars.contains(where: { CharacterSet.controlCharacters.contains($0) && $0 != "\n" && $0 != "\t" }) else { throw CatalogError.invalid }
+            }
+        }
+    }
+
+    static func catalogFingerprint(_ catalog: AdultCatalog) throws -> String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .sortedKeys
+        return GuideIllustration.digest(try encoder.encode(catalog))
     }
 }

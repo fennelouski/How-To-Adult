@@ -57,7 +57,7 @@ ui_tests = [file(f"uiTest:{name}", name, "sourcecode.swift") for name in ui_test
 assets = file("assets", "Assets.xcassets", "folder.assetcatalog")
 catalog = file("catalog", "catalog.json", "text.json")
 manifest = file("manifest", "PrivacyInfo.xcprivacy", "text.xml")
-config_files = [manifest] + [file(f"config:{name}", name, "text.plist.xml") for name in ["iOS-Info.plist", "macOS-Info.plist", "iOS.entitlements", "macOS.entitlements"]]
+config_files = [manifest] + [file(f"config:{name}", name, "text.plist.xml") for name in ["iOS-Info.plist", "macOS-Info.plist", "visionOS-Info.plist", "iOS.entitlements", "macOS.entitlements", "visionOS.entitlements"]]
 products = []
 targets = []
 schemes = []
@@ -91,16 +91,18 @@ shared = {
     "CLANG_WARN_UNGUARDED_AVAILABILITY": "YES_AGGRESSIVE",
 }
 
-for platform in ["iOS", "macOS"]:
+for platform in ["iOS", "macOS", "visionOS"]:
     target_name = f"HowToAdult-{platform}"
     product = obj(f"product:{platform}", "PBXFileReference", explicitFileType="wrapper.application", path="How to Adult.app", sourceTree="BUILT_PRODUCTS_DIR", includeInIndex=0)
     products.append(product)
     build_sources = [obj(f"build:{platform}:{ref}", "PBXBuildFile", fileRef=ref) for ref in sources]
     resources = [obj(f"resource:{platform}:{ref}", "PBXBuildFile", fileRef=ref) for ref in [assets, catalog, manifest]]
     phases = [obj(f"phase:{platform}:sources", "PBXSourcesBuildPhase", buildActionMask=2147483647, files=build_sources, runOnlyForDeploymentPostprocessing=0), obj(f"phase:{platform}:frameworks", "PBXFrameworksBuildPhase", buildActionMask=2147483647, files=[], runOnlyForDeploymentPostprocessing=0), obj(f"phase:{platform}:resources", "PBXResourcesBuildPhase", buildActionMask=2147483647, files=resources, runOnlyForDeploymentPostprocessing=0)]
-    settings = {**shared, "PRODUCT_BUNDLE_IDENTIFIER": "com.nathanfennel.How-To-Adult", "PRODUCT_NAME": "How to Adult", "PRODUCT_MODULE_NAME": "HowToAdult", "INFOPLIST_FILE": f"Configuration/{platform}-Info.plist", "CODE_SIGN_ENTITLEMENTS": f"Configuration/{platform}.entitlements", "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon", "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor", "GENERATE_INFOPLIST_FILE": "NO", "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path/Frameworks" if platform == "iOS" else "$(inherited) @executable_path/../Frameworks"}
+    settings = {**shared, "PRODUCT_BUNDLE_IDENTIFIER": "com.nathanfennel.How-To-Adult", "PRODUCT_NAME": "How to Adult", "PRODUCT_MODULE_NAME": "HowToAdult", "INFOPLIST_FILE": f"Configuration/{platform}-Info.plist", "CODE_SIGN_ENTITLEMENTS": f"Configuration/{platform}.entitlements", "ASSETCATALOG_COMPILER_APPICON_NAME": "VisionIcon" if platform == "visionOS" else "AppIcon", "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor", "GENERATE_INFOPLIST_FILE": "NO", "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path/../Frameworks" if platform == "macOS" else "$(inherited) @executable_path/Frameworks"}
     if platform == "iOS":
         settings.update(SDKROOT="iphoneos", IPHONEOS_DEPLOYMENT_TARGET="17.0", TARGETED_DEVICE_FAMILY="1,2", SUPPORTED_PLATFORMS="iphoneos iphonesimulator", SUPPORTS_MACCATALYST="NO", SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD="NO", SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD="NO")
+    elif platform == "visionOS":
+        settings.update(SDKROOT="xros", XROS_DEPLOYMENT_TARGET="2.0", TARGETED_DEVICE_FAMILY="7", SUPPORTED_PLATFORMS="xros xrsimulator", SUPPORTS_MACCATALYST="NO", SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD="NO")
     else:
         settings.update(SDKROOT="macosx", MACOSX_DEPLOYMENT_TARGET="14.0", SUPPORTED_PLATFORMS="macosx", ENABLE_APP_SANDBOX="YES", ENABLE_HARDENED_RUNTIME="YES", ARCHS="$(ARCHS_STANDARD)")
     target = obj(f"target:{platform}", "PBXNativeTarget", buildConfigurationList=configuration_list(target_name, settings), buildPhases=phases, buildRules=[], dependencies=[], name=target_name, productName="How to Adult", productReference=product, productType="com.apple.product-type.application")
@@ -115,7 +117,7 @@ for platform in ["iOS", "macOS"]:
     proxy = obj(f"testProxy:{platform}", "PBXContainerItemProxy", containerPortal=uid("project"), proxyType=1, remoteGlobalIDString=target, remoteInfo=target_name)
     dependency = obj(f"testDependency:{platform}", "PBXTargetDependency", target=target, targetProxy=proxy)
     test_settings = {key: val for key, val in settings.items() if key not in ["INFOPLIST_FILE", "CODE_SIGN_ENTITLEMENTS", "ASSETCATALOG_COMPILER_APPICON_NAME", "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME", "ENABLE_APP_SANDBOX", "ENABLE_HARDENED_RUNTIME"]}
-    test_settings.update(PRODUCT_NAME=test_name, PRODUCT_MODULE_NAME="HowToAdultTests", PRODUCT_BUNDLE_IDENTIFIER=f"com.nathanfennel.How-To-AdultTests.{platform.lower()}", GENERATE_INFOPLIST_FILE="YES", BUNDLE_LOADER="$(TEST_HOST)", TEST_HOST="$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult" if platform == "iOS" else "$(BUILT_PRODUCTS_DIR)/How to Adult.app/Contents/MacOS/How to Adult", TEST_TARGET_NAME=target_name)
+    test_settings.update(PRODUCT_NAME=test_name, PRODUCT_MODULE_NAME="HowToAdultTests", PRODUCT_BUNDLE_IDENTIFIER=f"com.nathanfennel.How-To-AdultTests.{platform.lower()}", GENERATE_INFOPLIST_FILE="YES", BUNDLE_LOADER="$(TEST_HOST)", TEST_HOST="$(BUILT_PRODUCTS_DIR)/How to Adult.app/Contents/MacOS/How to Adult" if platform == "macOS" else "$(BUILT_PRODUCTS_DIR)/How to Adult.app/How to Adult", TEST_TARGET_NAME=target_name)
     test_target = obj(f"testTarget:{platform}", "PBXNativeTarget", buildConfigurationList=configuration_list(test_name, test_settings), buildPhases=test_phases, buildRules=[], dependencies=[dependency], name=test_name, productName=test_name, productReference=test_product, productType="com.apple.product-type.bundle.unit-test")
     targets.append(test_target)
     ui_test_name = f"HowToAdultUITests-{platform}"
@@ -150,7 +152,7 @@ for target_name, target, test_name, test_target, ui_test_name, ui_test_target in
     <BuildActionEntry buildForTesting="YES" buildForRunning="NO" buildForProfiling="NO" buildForArchiving="NO" buildForAnalyzing="NO">{test_ref}</BuildActionEntry>
     <BuildActionEntry buildForTesting="YES" buildForRunning="NO" buildForProfiling="NO" buildForArchiving="NO" buildForAnalyzing="NO">{ui_test_ref}</BuildActionEntry>
   </BuildActionEntries></BuildAction>
-  <TestAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv="YES"><Testables><TestableReference skipped="NO">{test_ref}</TestableReference><TestableReference skipped="NO">{ui_test_ref}</TestableReference></Testables></TestAction>
+  <TestAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv="NO"><Testables><TestableReference skipped="NO">{test_ref}</TestableReference><TestableReference skipped="NO">{ui_test_ref}</TestableReference></Testables><EnvironmentVariables><EnvironmentVariable key="ADULT_QA_BLANK_HOST" value="1" isEnabled="YES"/></EnvironmentVariables></TestAction>
   <LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="NO"><BuildableProductRunnable runnableDebuggingMode="0">{app_ref}</BuildableProductRunnable></LaunchAction>
   <ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" savedToolIdentifier="" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES"><BuildableProductRunnable runnableDebuggingMode="0">{app_ref}</BuildableProductRunnable></ProfileAction>
   <AnalyzeAction buildConfiguration="Debug"/>
@@ -158,4 +160,4 @@ for target_name, target, test_name, test_target, ui_test_name, ui_test_target in
 </Scheme>
 '''
     (scheme_dir / f"{target_name}.xcscheme").write_text(scheme)
-print(f"Generated {PROJECT.name}: {len(sources)} Swift sources, {len(tests)} unit-test sources, {len(ui_tests)} UI-test sources, iOS + macOS only.")
+print(f"Generated {PROJECT.name}: {len(sources)} Swift sources, {len(tests)} unit-test sources, {len(ui_tests)} UI-test sources, iOS + macOS + native visionOS.")

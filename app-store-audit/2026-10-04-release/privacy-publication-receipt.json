@@ -1,0 +1,16 @@
+{
+  "recordedAtUTC": "2026-10-04T10:31:25.131917+00:00",
+  "appleID": "6818756061",
+  "status": "Published",
+  "dataType": "Other Diagnostic Data",
+  "purpose": "App Functionality",
+  "linkedToUser": true,
+  "usedForTracking": false,
+  "basis": "Guide backend retains connection metadata; existing completed label unchanged",
+  "ownerAuthorization": "Current user explicitly answered Yes to privacy publication and needed Apple review actions on2026-10-04",
+  "proofDOM": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/published-privacy-label.txt",
+  "proofPNG": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/published-privacy-label.png",
+  "proofDOMSHA256": "4f4539f1c2bf1117b48ca5a75e747c1c42aa5bb7b9ed9bf6cdf9d600d69f1a6e",
+  "proofPNGSHA256": "4ce442151305d0ce680b28b7c3dc0873a60f19dc95636d0121030f9f3b38c6ea",
+  "reviewState": "iOS1.0 and macOS1.0 Prepare for Submission, not submitted"
+}

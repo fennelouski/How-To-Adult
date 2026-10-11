@@ -1,0 +1,46 @@
+{
+  "preparedAtUTC": "2026-10-04T11:52:09.895224+00:00",
+  "status": "Prepared exact source patch/plan. Root explicitly retains serialized slot for this bounded Apps-route follow-up only.",
+  "sourceFreeze": "ios-notification-apps-r5-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "bbc06426fa032ec203b5e7e01c9340a9556eb93ed3753faf798f27370eacdc2e",
+  "previousTestSHA256": "8c1b901ccb41f1877a4fe5db45836ae776f6d0646e95b62cf99aaf65f657551d",
+  "patch": "ios-notification-apps-r5-test-only.patch",
+  "patchSHA256": "0285c46f83d95d71299ddd185a0f015ddc4a4a3e4ca78f5dac698af74f6d6670",
+  "scripts": {
+    "build-ios-notification-apps-r5-runner.py": "b7a9d8ebf78371189d963eea02fe2dc1308dd2cbe9f056f702d14d6c9664df25",
+    "run-ios-notification-apps-r5.py": "f9f3bb3d1ed1c1d6e7e4ee0e2fb78960d31eaa2b26570c46fc03a523bd173b23"
+  },
+  "onlyMethod": "AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance",
+  "repeatR4Tail": false,
+  "tailPassedGuard": "ios-denied-tail-r4-summary.json must have1processed/1passed/0failed before boot",
+  "observedAppsID": "com.apple.settings.apps",
+  "route": [
+    "Capture actual Settings root before selecting unique visible Apps ID.",
+    "Capture actual Apps list, resolve unique observed How to Adult cell.",
+    "Capture actual app settings page before resolving any Notifications control; absent/ambiguous stops.",
+    "Capture actual own-app notifications page and unique known0/1 Allow Notifications switch before toggling only this app.",
+    "Capture actual compact time child, expand and capture native controls.",
+    "Use only actual unique PopoverDismissRegion if exposed, then actual hittable Cancel and same-reader verification. Never Save or change time."
+  ],
+  "rootReviewedEvidence": [
+    "ios-notification-settings-r4-attachments/8402F41A-5B76-4A82-97A7-11F0B834C12E.txt",
+    "ios-notification-settings-r4-attachments/75CA62A4-DDE0-43B3-9E80-63E5B848BD01.png"
+  ],
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "productionChanges": 0,
+  "permissionDatabaseChanges": 0,
+  "syntheticNotifications": 0,
+  "schedulingOrDeliveryClaim": false,
+  "buildBootRuntimeDuringPreparation": 0,
+  "retainedFailures": [
+    "ios-notification-settings-r4-summary.json",
+    "ios-share-dismissal-r3-summary.json"
+  ],
+  "noOtherSettingsChanges": true
+}

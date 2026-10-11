@@ -1,0 +1,91 @@
+{
+  "recordedAtUTC": "2026-10-04T11:59:26.081606+00:00",
+  "scope": "Observed native Settings Apps\u2192How to Adult\u2192Notifications route only; test stopped at incorrect navbar assertion before any permission mutation.",
+  "summary": "ios-notification-apps-r5-summary.json",
+  "summarySHA256": "76e07f4c8712711f0db4f2d83d66e5ac47969dda3bcebbe2fbecece2c4c754c5",
+  "processed": 1,
+  "passed": 0,
+  "failed": 1,
+  "runtimeReceipt": "ios-notification-apps-r5-runtime-receipt.json",
+  "runtimeReceiptSHA256": "ff752ee2f297c49040e1467d6ae523f145eb3addf82dfb915ef886da95734767",
+  "buildReceipt": "ios-notification-apps-r5-build-receipt.json",
+  "buildReceiptSHA256": "2751492fd1331bc249959ca793203c5329d055f0ba8875fdab06af4338d7ba46",
+  "testSHA256": "bbc06426fa032ec203b5e7e01c9340a9556eb93ed3753faf798f27370eacdc2e",
+  "allNativePNGs": [
+    {
+      "file": "ios-notification-apps-r5-attachments/1CCB5AFF-FB51-4DC1-8F19-0FD4CE842E56.png",
+      "sha256": "42501b255ff1a2db459041abe00d7430964a3b4e274c7ec655f3e6f0f2fa5ef7",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/2A92A1AA-47F9-429B-9F6C-6D57AA3639B1.png",
+      "sha256": "3088855852faf6e867e86f146bbf29eed0a3cc5cb9a9ad95294a30c3ad103ad6",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/373F5076-0B65-4154-9510-6055D52BF905.png",
+      "sha256": "e72642151244118404f7829b7423357716d7749b4bdae5a6457dde41cb051dec",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/55711F8B-66AE-439D-9D67-FB28703792F3.png",
+      "sha256": "2de4401f0f613095a43df80856f393448b789ebe049c2165cbc0a7956a643f9a",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/C87471A2-5453-4D1A-9374-929C4CB7331C.png",
+      "sha256": "62b6f3afebdf2d4a36b991265206bc698d957974e43900e5a7a2b931ed2d3a7e",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/DE16BB0F-63EE-4803-9B4D-E4062565A75B.png",
+      "sha256": "2de4401f0f613095a43df80856f393448b789ebe049c2165cbc0a7956a643f9a",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-apps-r5-attachments/E23E119A-4D18-4F8D-B368-2E314F2E7957.png",
+      "sha256": "bddf5b3979235061afe72b135f00c77cec1708eb4ed9465db13df90b14d6c96b",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    }
+  ],
+  "actualNotificationPage": {
+    "png": "ios-notification-apps-r5-attachments/373F5076-0B65-4154-9510-6055D52BF905.png",
+    "pngSHA256": "e72642151244118404f7829b7423357716d7749b4bdae5a6457dde41cb051dec",
+    "ax": "ios-notification-apps-r5-attachments/C5D38F22-6CAC-45A6-811B-EBEEF350BF6A.txt",
+    "axSHA256": "3d7f7a49958698aca5672bba1018b804b853f1a336ec588da4051fc106b68ef9",
+    "navbar": "Notifications",
+    "ownAppBackButton": "How to Adult",
+    "switchLabel": "Allow Notifications",
+    "actualSwitchValue": "0",
+    "actualSwitchFrame": "{{349.0,124.7},{51.0,31.0}}"
+  },
+  "observedFailure": "AdultUITests.swift:246 expected How to Adult NavigationBar after opening Notifications; actual own-app link is back button under Notifications navbar.",
+  "suggestedExactTestCorrection": "Require Notifications navbar and its How to Adult back button at the same stage; retain preceding actual app-page navbar assertion.",
+  "permissionChangeActions": 0,
+  "pickerReached": false,
+  "saveOrTimeEditActions": 0,
+  "notificationDeliveryOrTapClaim": false,
+  "visualLimits": [
+    "22b-native-how-to-adult-settings PNG E23E119A catches row-navigation transition; following AX/app-page assertion and later Notifications page prove context.",
+    "22c-native-app-notifications-control PNG 2A92A1AA catches outgoing app-page transition; final Notifications PNG is stable and readable."
+  ],
+  "finallyDeviceState": "Shutdown",
+  "finallyAppearance": "light",
+  "finallyContentSize": "large",
+  "shipping35Original45RunnerPlanNormalHostUnchanged": true,
+  "rootReviewAndAnyNextRunPending": true
+}

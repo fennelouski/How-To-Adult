@@ -1,0 +1,25 @@
+{
+  "preparedAtUTC": "2026-10-04T11:50:10.522160+00:00",
+  "status": "Prepare-only proposal from observed Settings Apps route; no source edit/build/boot/runtime.",
+  "heldShipping35": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "onlyMethod": "AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance",
+  "repeatRecoveryTail": false,
+  "observedRootButton": {
+    "id": "com.apple.settings.apps",
+    "label": "Apps",
+    "AX": "ios-notification-settings-r4-attachments/8402F41A-5B76-4A82-97A7-11F0B834C12E.txt",
+    "PNG": "ios-notification-settings-r4-attachments/75CA62A4-DDE0-43B3-9E80-63E5B848BD01.png"
+  },
+  "actions": [
+    "Use recorded native Apps identifier, require one hittable control and capture current root AX before selection.",
+    "Capture actual Apps list; locate unique How to Adult row using app\u2019s observed display name, scrolling only boundedly if needed.",
+    "Capture app settings page before selecting a Notifications control; stop on absent/ambiguous entry without writes.",
+    "Only after actual Notifications page evidence, require exact own-app navigation title and one visible Allow Notifications switch with known0/1 value; enable this app only.",
+    "Open actual app reminder, tap uniquely observed time child, capture expanded time selector; no time edit or Save."
+  ],
+  "normalDataAndEffects": "Only owned Simulator system app permission; no Mac/system host, other devices, permission database or push injection.",
+  "finally": "Owned Shutdown/light/large restoration and native35/original45/source/runner/normal-host guards.",
+  "pendingRootRunApproval": true,
+  "deliveryStage": "Still requires actual expanded picker evidence and exact root approval before Save or scheduling."
+}

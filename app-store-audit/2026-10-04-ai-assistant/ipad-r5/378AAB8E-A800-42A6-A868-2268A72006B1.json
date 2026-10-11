@@ -1,0 +1,20 @@
+{
+  "privateSessionID" : "511BD331-0B48-461D-AC13-8F5AB4A0ABCC",
+  "qualification" : "Actual AX bounds and screenshots; AX labels alone do not prove rendered text is untruncated.",
+  "targets" : [
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 79.5,
+        "width" : 420,
+        "x" : 590,
+        "y" : 826.5
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "A calmer Sunday, 0 of 4 ready or done",
+      "type" : 9
+    }
+  ]
+}

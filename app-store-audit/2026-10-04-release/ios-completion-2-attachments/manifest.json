@@ -1,0 +1,89 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "1675F03B-E03D-4113-8323-003E5EB57830.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "App UI hierarchy for com.nathanfennel_0_F2810484-2771-4286-935F-0D2D82971684.How-To-Adult",
+        "timestamp" : 1791110377.118
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "236C50A8-5D01-4007-869D-450F50CDBDB2",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-10-04 at 12.39.37 PM",
+        "timestamp" : 1791110377.118
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "8B542F5D-0E27-448E-A19E-C00A32F96A95.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"Share\" Button`_0_6AF71241-AA34-478F-8D8A-CD5C341E810F.txt",
+        "timestamp" : 1791110377.056
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "0F1CE405-75C6-472D-8012-2818D3280ED6.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"Share\" Button`_0_3337DE8E-4E39-46DC-BDF0-46AF1780961F.txt",
+        "timestamp" : 1791110376.117
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "3379B39E-ABA8-4867-A053-FFC9CBA26746.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"Share\" Button`_0_32B31667-EF73-429F-A22E-1DCB629FB6A3.txt",
+        "timestamp" : 1791110375.11
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "02739C21-8FA2-4612-A04D-EB9DF3E931A6.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"Share\" Button`_0_A56CE07B-D8FA-4559-B710-0DA6A9F7ADA1.txt",
+        "timestamp" : 1791110374.108
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "17E92D84-0D6A-4A6D-AB0B-9151A1E232A6.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"Share\" Button`_0_589CD014-EE19-4B2B-83D0-2BF57C43D02A.txt",
+        "timestamp" : 1791110373.102
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "395B96E9-2161-4EBD-9867-E552FBB13853",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 12.39.30 PM",
+        "timestamp" : 1791110370.519
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "5C20AC40-5D0E-48C6-93B1-4FD072044C74.mp4",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Screen Recording 2026-10-04 at 12.39.26 PM.mp4",
+        "timestamp" : 1791110366.211
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testNativeShareAndNotificationDenialRecovery()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testNativeShareAndNotificationDenialRecovery"
+  }
+]

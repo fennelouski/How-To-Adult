@@ -1,0 +1,81 @@
+{
+  "recordedAtUTC": "2026-10-04T12:01:32.809755+00:00",
+  "scope": "Fresh read-only6 live endpoints; no deployment invoked",
+  "privacySupportDeployedRevision": "9e2058d195bf3c8ef1e6630267e815a1346349d3",
+  "backendCommittedDeploymentRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+  "canonicalDomainRoutingUnchanged": true,
+  "results": [
+    {
+      "name": "privacy-canonical",
+      "url": "https://nathanfennel.com/how-to-adult/privacy.html",
+      "finalURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+      "status": 200,
+      "bytes": 3719,
+      "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+      "matchesCurrentLocal": true
+    },
+    {
+      "name": "privacy-aws",
+      "url": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/privacy.html",
+      "finalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/privacy.html",
+      "status": 200,
+      "bytes": 3719,
+      "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+      "matchesCurrentLocal": true
+    },
+    {
+      "name": "support-canonical",
+      "url": "https://nathanfennel.com/how-to-adult/support.html",
+      "finalURL": "https://nathanfennel.com/how-to-adult/support.html",
+      "status": 200,
+      "bytes": 2774,
+      "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+      "matchesCurrentLocal": true
+    },
+    {
+      "name": "support-aws",
+      "url": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/support.html",
+      "finalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/support.html",
+      "status": 200,
+      "bytes": 2774,
+      "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+      "matchesCurrentLocal": true
+    },
+    {
+      "name": "catalog-vercel",
+      "url": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "finalURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "status": 200,
+      "bytes": 80232,
+      "sha256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "rootKeys": [
+        "articles",
+        "categories",
+        "publishedAt",
+        "revision",
+        "schemaVersion"
+      ],
+      "articleCount": 56,
+      "categoryCount": 7,
+      "revision": "2026-10-03-editor-verified-2-094423"
+    },
+    {
+      "name": "catalog-aws",
+      "url": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+      "finalURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+      "status": 200,
+      "bytes": 80232,
+      "sha256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "rootKeys": [
+        "articles",
+        "categories",
+        "publishedAt",
+        "revision",
+        "schemaVersion"
+      ],
+      "articleCount": 56,
+      "categoryCount": 7,
+      "revision": "2026-10-03-editor-verified-2-094423"
+    }
+  ]
+}

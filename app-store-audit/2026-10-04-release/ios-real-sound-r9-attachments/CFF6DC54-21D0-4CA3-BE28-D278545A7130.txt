@@ -1,0 +1,115 @@
+Attributes: Application, 0x104437100, pid: 85460, label: 'How to Adult'
+Element subtree:
+ →Application, 0x104437100, pid: 85460, label: 'How to Adult'
+    Window (Main), 0x104436c40, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x104437460, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x104435060, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x104428820, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x104436600, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x10442ee00, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x10442ef20, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x10442f040, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x10442f160, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x10442f280, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x10442f3a0, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x10442f4c0, {{0.0, 0.0}, {440.0, 956.0}}
+                            NavigationBar, 0x10442f5e0, {{0.0, 56.3}, {440.0, 148.0}}, identifier: 'How to Adult'
+                              Button, 0x10442f700, {{382.0, 56.3}, {46.0, 44.0}}, identifier: 'open-settings', label: 'Settings'
+                              StaticText, 0x10442f820, {{20.0, 104.0}, {203.3, 40.7}}, label: 'How to Adult'
+                              SearchField, 0x10442f940, {{20.0, 153.3}, {400.0, 36.0}}, label: 'Laundry, money, making friends…', placeholderValue: 'Laundry, money, making friends…'
+                                Image, 0x10442fa60, {{26.0, 161.7}, {20.3, 18.7}}, identifier: 'magnifyingglass', label: 'Search'
+                            Other, 0x10442fb80, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x10442fca0, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x10442fdc0, {{0.0, 0.0}, {440.0, 956.0}}
+                                  Other, 0x10442fee0, {{0.0, 0.0}, {440.0, 956.0}}
+                                    ScrollView, 0x104430000, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-collection'
+                                      Other, 0x104430120, {{0.0, 204.3}, {440.0, 7526.0}}
+                                        StaticText, 0x104430240, {{20.0, 226.3}, {252.3, 81.7}}, label: 'Life comes with questions.'
+                                        StaticText, 0x104430360, {{20.0, 324.0}, {320.0, 20.3}}, label: 'A useful next step is closer than you think.'
+                                        Button, 0x104430480, {{20.0, 360.3}, {400.0, 152.7}}, identifier: 'featured-guide', label: 'Wash a load of laundry, Clean clothes without shrinking your favorites., Open guide'
+                                          StaticText, 0x1044305a0, {{42.0, 382.3}, {231.3, 26.3}}, label: 'Wash a load of laundry'
+                                          StaticText, 0x1044306c0, {{42.0, 420.7}, {218.7, 38.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                          Image, 0x1044307e0, {{44.0, 474.3}, {16.0, 13.3}}, identifier: 'arrow.right', label: 'Right'
+                                          StaticText, 0x104430900, {{44.0, 470.7}, {117.3, 20.3}}, label: 'Open guide'
+                                          Image, 0x104430a20, {{365.0, 384.7}, {35.0, 37.0}}, identifier: 'washer', label: 'washer'
+                                        Button, 0x104430b40, {{20.0, 541.0}, {101.7, 40.3}}, identifier: 'category-filter', label: 'All topics'
+                                          Button, 0x104430c60, {{20.0, 541.0}, {101.7, 40.3}}
+                                            Other, 0x104430d80, {{20.0, 541.0}, {101.7, 40.3}}
+                                              Image, 0x104430ea0, {{21.3, 552.7}, {17.3, 17.3}}, identifier: 'line.3.horizontal.decrease.circle', label: 'Filter'
+                                              StaticText, 0x104430fc0, {{20.0, 541.0}, {101.7, 40.3}}, label: 'All topics'
+                                        Button, 0x1044310e0, {{322.3, 542.3}, {97.7, 38.0}}, identifier: 'region-filter', label: 'All regions'
+                                          Button, 0x104431200, {{322.3, 542.3}, {97.7, 38.0}}
+                                            Other, 0x104431320, {{322.3, 542.3}, {97.7, 38.0}}
+                                              Image, 0x104431440, {{323.7, 554.0}, {15.0, 15.0}}, identifier: 'globe', label: 'Globe'
+                                              StaticText, 0x104431560, {{322.3, 542.3}, {97.7, 38.0}}, label: 'All regions'
+                                        Other, 0x104431680, {{20.0, 609.3}, {400.0, 1026.7}}
+                                          Button, 0x1044317a0, {{20.0, 609.3}, {400.0, 122.7}}, identifier: 'guide-read-a-care-label', label: 'Read a clothing care label, Pick the right wash and dry settings before you start., About 3 min · 4 steps'
+                                            Image, 0x1044318c0, {{32.3, 639.0}, {25.0, 25.0}}, identifier: 'tag', label: 'Tag'
+                                            StaticText, 0x1044319e0, {{80.0, 627.3}, {203.3, 20.3}}, label: 'Read a clothing care label'
+                                            StaticText, 0x104431b00, {{80.0, 654.7}, {297.3, 38.0}}, label: 'Pick the right wash and dry settings before you start.'
+                                            StaticText, 0x104431c20, {{80.0, 699.7}, {121.0, 14.3}}, label: 'About 3 min · 4 steps'
+                                            Image, 0x104431d40, {{409.0, 634.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104431e60, {{20.0, 732.3}, {400.0, 122.7}}, identifier: 'guide-wash-your-first-load', label: 'Wash a load of laundry, Clean clothes without shrinking your favorites., About 10 min · 4 steps'
+                                            Image, 0x104431f80, {{35.3, 762.0}, {23.7, 24.7}}, identifier: 'washer', label: 'washer'
+                                            StaticText, 0x1044320a0, {{80.0, 750.3}, {180.0, 20.3}}, label: 'Wash a load of laundry'
+                                            StaticText, 0x1044321c0, {{80.0, 777.7}, {218.7, 38.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                            StaticText, 0x1044322e0, {{80.0, 822.7}, {126.7, 14.3}}, label: 'About 10 min · 4 steps'
+                                            Image, 0x104432400, {{409.0, 757.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104432520, {{20.0, 855.3}, {400.0, 102.7}}, identifier: 'guide-treat-a-clothing-stain', label: 'Treat a clothing stain, Give a spill a better chance of washing out., About 5 min · 4 steps'
+                                            Image, 0x104432640, {{37.3, 886.3}, {15.3, 22.3}}, identifier: 'drop', label: 'drop'
+                                            StaticText, 0x104432760, {{80.0, 873.3}, {166.0, 20.3}}, label: 'Treat a clothing stain'
+                                            StaticText, 0x104432880, {{80.0, 900.7}, {293.7, 18.0}}, label: 'Give a spill a better chance of washing out.'
+                                            StaticText, 0x1044329a0, {{80.0, 925.7}, {121.0, 14.3}}, label: 'About 5 min · 4 steps'
+                                            Image, 0x104432ac0, {{409.0, 880.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104432be0, {{20.0, 958.3}, {400.0, 102.7}}, identifier: 'guide-dry-clothes-with-care', label: 'Dry clothes with care, Keep clothes and the dryer in good shape., About 5 min · 4 steps'
+                                            Image, 0x104432d00, {{34.0, 990.7}, {22.7, 19.7}}, identifier: 'wind', label: 'Breezy'
+                                            StaticText, 0x104432e20, {{80.0, 976.3}, {168.0, 20.3}}, label: 'Dry clothes with care'
+                                            StaticText, 0x104432f40, {{80.0, 1003.7}, {289.3, 18.0}}, label: 'Keep clothes and the dryer in good shape.'
+                                            StaticText, 0x104433060, {{80.0, 1028.7}, {121.0, 14.3}}, label: 'About 5 min · 4 steps'
+                                            Image, 0x104433180, {{409.0, 983.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x1044332a0, {{20.0, 1061.3}, {400.0, 102.7}}, identifier: 'guide-reset-a-room-in-15-minutes', label: 'Reset a room in 15 minutes, Make one space easier to use today., About 15 min · 4 steps'
+                                            Image, 0x1044333c0, {{35.0, 1091.0}, {20.3, 25.0}}, identifier: 'sparkles', label: 'Sparkle'
+                                            StaticText, 0x1044334e0, {{80.0, 1079.3}, {213.0, 20.3}}, label: 'Reset a room in 15 minutes'
+                                            StaticText, 0x104433600, {{80.0, 1106.7}, {248.3, 18.0}}, label: 'Make one space easier to use today.'
+                                            StaticText, 0x104433720, {{80.0, 1131.7}, {126.7, 14.3}}, label: 'About 15 min · 4 steps'
+                                            Image, 0x104433840, {{409.0, 1086.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104433960, {{20.0, 1164.3}, {400.0, 122.7}}, identifier: 'guide-clean-a-bathroom', label: 'Clean a bathroom, Work through surfaces without mixing products., About 20 min · 4 steps'
+                                            Image, 0x104433a80, {{36.0, 1194.3}, {18.0, 24.0}}, identifier: 'shower', label: 'shower'
+                                            StaticText, 0x104433ba0, {{80.0, 1182.3}, {140.3, 20.3}}, label: 'Clean a bathroom'
+                                            StaticText, 0x104433cc0, {{80.0, 1209.7}, {215.7, 38.0}}, label: 'Work through surfaces without mixing products.'
+                                            StaticText, 0x104433de0, {{80.0, 1254.7}, {128.3, 14.3}}, label: 'About 20 min · 4 steps'
+                                            Image, 0x104433f00, {{409.0, 1189.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104434020, {{20.0, 1287.3}, {400.0, 102.7}}, identifier: 'guide-test-your-smoke-alarms', label: 'Test your smoke alarms, Turn a small monthly check into a habit., About 10 min · 4 steps'
+                                            Image, 0x104434140, {{31.7, 1320.0}, {26.7, 19.0}}, identifier: 'sensor', label: 'sensor'
+                                            StaticText, 0x104434260, {{80.0, 1305.3}, {188.0, 20.3}}, label: 'Test your smoke alarms'
+                                            StaticText, 0x104434380, {{80.0, 1332.7}, {271.3, 18.0}}, label: 'Turn a small monthly check into a habit.'
+                                            StaticText, 0x1044344a0, {{80.0, 1357.7}, {126.7, 14.3}}, label: 'About 10 min · 4 steps'
+                                            Image, 0x1044345c0, {{409.0, 1312.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104437880, {{20.0, 1390.3}, {400.0, 122.7}}, identifier: 'guide-lower-home-energy-use', label: 'Lower home energy use, Start with changes you can check on your next bill., About 15 min · 4 steps'
+                                            Image, 0x1044379a0, {{37.3, 1419.7}, {15.7, 25.7}}, identifier: 'bolt', label: 'Flash'
+                                            StaticText, 0x104437ac0, {{80.0, 1408.3}, {188.7, 20.3}}, label: 'Lower home energy use'
+                                            StaticText, 0x104437be0, {{80.0, 1435.7}, {290.3, 38.0}}, label: 'Start with changes you can check on your next bill.'
+                                            StaticText, 0x104437d00, {{80.0, 1480.7}, {126.7, 14.3}}, label: 'About 15 min · 4 steps'
+                                            Image, 0x104437e20, {{409.0, 1415.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                          Button, 0x104437f40, {{20.0, 1513.3}, {400.0, 122.7}}, identifier: 'guide-build-a-small-home-toolkit', label: 'Build a small home toolkit, Buy a few useful tools before buying a whole workshop., About 15 min · 4 steps'
+                                            Image, 0x104438060, {{31.7, 1542.0}, {27.0, 26.7}}, identifier: 'wrench.and.screwdriver', label: 'wrench.and.screwdriver'
+                                            StaticText, 0x104438180, {{80.0, 1531.3}, {202.7, 20.3}}, label: 'Build a small home toolkit'
+                                            StaticText, 0x1044382a0, {{80.0, 1558.7}, {264.7, 38.0}}, label: 'Buy a few useful tools before buying a whole workshop.'
+                                            StaticText, 0x1044383c0, {{80.0, 1603.7}, {126.7, 14.3}}, label: 'About 15 min · 4 steps'
+                                            Image, 0x1044384e0, {{409.0, 1538.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                      Other, 0x104438600, {{407.0, 106.0}, {30.0, 767.0}}, label: 'Vertical scroll bar, 12 pages', value: 0%
+                                        Other, 0x104438720, {{434.0, 207.3}, {3.0, 78.7}}
+                                      Other, 0x104438840, {{407.0, 106.0}, {30.0, 767.0}}, label: 'Vertical scroll bar, 12 pages', value: 0%
+                                        Other, 0x104438960, {{434.0, 207.3}, {3.0, 78.7}}
+                TabBar, 0x104438a80, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar'
+                  Button, 0x104438ba0, {{2.0, 874.0}, {143.0, 48.0}}, label: 'Guides', Selected
+                    Image, 0x104438cc0, {{56.7, 876.7}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                  Button, 0x104438de0, {{149.0, 874.0}, {142.0, 48.0}}, label: 'Saved'
+                  Button, 0x104438f00, {{295.0, 874.0}, {143.0, 48.0}}, label: 'Reminders'
+Path to element:
+ →Application, 0x104437100, pid: 85460, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x104210150, pid: 85460, label: 'How to Adult'
+  }

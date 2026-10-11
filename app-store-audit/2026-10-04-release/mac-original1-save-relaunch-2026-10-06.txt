@@ -1,0 +1,54 @@
+Window: "Saved", App: How to Adult.
+0 standard window Saved, Secondary Actions: Raise, ID: SwiftUI.ModifiedContent<SwiftUI.ModifiedContent<HowToAdult.AdultRootView, SwiftUI._EnvironmentKeyWritingModifier<Swift.Optional<HowToAdult.AdultStore>>>, SwiftUI._FlexFrameLayout>-1-AppWindow-1
+	1 split group SwiftUI.ModifiedContent<SwiftUI.ModifiedContent<HowToAdult.AdultRootView, SwiftUI._EnvironmentKeyWritingModifier<Swift.Optional<HowToAdult.AdultStore>>>, SwiftUI._FlexFrameLayout>-1-AppWindow-1, SidebarNavigationSplitView
+		2 scroll area
+			3 list Sidebar
+				4 row (selectable) Guides
+				5 row (selected) Saved
+				6 row (selectable) Reminders
+		7 splitter (disabled, settable, float) 228
+		8 scroll area guide-collection
+			9 menu button All topics, ID: category-filter
+			10 menu button All regions, ID: region-filter
+			11 list Secondary Actions: AXScrollToTop, AXScrollToBottom
+				12 button ID: guide-wash-your-first-load, Description: Wash a load of laundry, Clean clothes without shrinking your favorites., About 10 min · 4 steps, 1 of 4 done
+		13 splitter (disabled, settable, float) 410
+		14 scroll area ID: guide-reader, Secondary Actions: Scroll Up, Scroll Down, Cancel
+			15 text Wash a load of laundry Clean clothes without shrinking your favorites. About 10 min · 4 steps Before you start Detergent Hamper Washing machine One step at a time
+			16 button (selected) Help: Double tap to change completion, Value: Completed, ID: step-wash-your-first-load-step-1, Description: Sort a small load. Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.
+			17 button Help: Double tap to change completion, Value: Not completed, ID: step-wash-your-first-load-step-2, Description: Set the machine. Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.
+			18 button Help: Double tap to change completion, Value: Not completed, ID: step-wash-your-first-load-step-3, Description: Measure detergent. Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.
+			19 button Help: Double tap to change completion, Value: Not completed, ID: step-wash-your-first-load-step-4, Description: Finish the job. Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.
+			20 text Good to know Keep detergent away from children and pets. Never combine cleaning chemicals. Go to the source
+			21 link Description: Whirlpool laundry basics, Value: whirlpool.com/blog/washers-and-dryers/how-to-do-laundry.html
+			22 text Reviewed 2026-10-03
+			23 scroll bar (settable, float) 0
+				24 value indicator (settable, float) 0
+				25 increment arrow button
+				26 decrement arrow button
+				27 increment page button
+				28 decrement page button
+	29 toolbar
+		30 button Description: Settings, ID: open-settings, Secondary Actions: Increment, Decrement, Delete, Cancel, Move previous, Move next, Remove from toolbar
+		31 button Description: Hide Sidebar, Secondary Actions: Increment, Decrement, Delete, Cancel
+		32 button Description: Unsave guide, ID: save-guide, Secondary Actions: Increment, Decrement, Delete, Cancel, Move previous, Move next, Remove from toolbar
+		33 button Description: Remind me, ID: remind-guide, Secondary Actions: Increment, Decrement, Delete, Cancel, Move previous, Move next, Remove from toolbar
+		34 button Description: Share…, Secondary Actions: Increment, Decrement, Delete, Cancel, Move previous, Move next, Remove from toolbar
+		35 search text field (settable) Laundry, money, making friends…
+			36 button Search
+	37 close button
+	38 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	39 minimize button
+	40 text Saved
+41 menu bar
+	42 How to Adult
+	43 File
+	44 Edit
+	45 View
+	46 Window
+	47 Help
+
+Selected:
+	5 row (selected)
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

@@ -1,0 +1,158 @@
+- banner "App Store Connect":
+  - heading "App Store Connect" [level=1]:
+    - link "App Store Connect":
+      - /url: /
+  - navigation "Global":
+    - list:
+      - link "Apps":
+        - /url: /apps
+      - link "Xcode Cloud":
+        - /url: /teams/69a6de85-2c3b-47e3-e053-5b8c7c11a4d1/xcode-cloud
+      - link "Trends":
+        - /url: /trends
+      - link "Reports":
+        - /url: /itc/payments_and_financial_reports
+      - link "Business":
+        - /url: /business
+      - link "Users and Access":
+        - /url: /access/users
+  - button "Nathan Fennel Nathan Fennel Account name menu":
+    - generic: Nathan Fennel
+    - generic: Nathan Fennel
+- 'button "Apps menu, How to Adult: Pocket Guide, selected"':
+  - 'generic "How to Adult: Pocket Guide"':
+    - 'img "How to Adult: Pocket Guide"'
+  - generic: "How to Adult: Pocket Guide"
+- navigation "Apps":
+  - list:
+    - link "Distribution":
+      - /url: /apps/6818756061/distribution
+    - link "Analytics":
+      - /url: /apps/6818756061/analytics
+    - link "TestFlight":
+      - /url: /teams/69a6de85-2c3b-47e3-e053-5b8c7c11a4d1/apps/6818756061/testflight
+- main:
+  - navigation "Distribution":
+    - list:
+      - heading "iOS App" [level=2]
+      - list:
+        - link "1.0 Prepare for Submission":
+          - /url: /apps/6818756061/distribution/ios/version/inflight
+          - text: 1.0 Prepare for Submission
+      - heading "macOS App" [level=2]
+      - list:
+        - link "1.0 Prepare for Submission":
+          - /url: /apps/6818756061/distribution/macos/version/inflight
+          - text: 1.0 Prepare for Submission
+      - button "Add Platform"
+      - separator
+      - heading "General" [level=2]
+      - list:
+        - link "App Information":
+          - /url: /apps/6818756061/distribution/info
+          - generic: App Information
+        - link "App Review":
+          - /url: /apps/6818756061/distribution/reviewsubmissions
+          - generic: App Review
+        - link "History":
+          - /url: /apps/6818756061/distribution/activity/ios/versions
+          - generic: History
+      - separator
+      - heading "App Store" [level=2]
+      - heading "Trust & Safety" [level=3]
+      - list:
+        - link "App Privacy":
+          - /url: /apps/6818756061/distribution/privacy
+          - generic: App Privacy
+        - link "App Accessibility":
+          - /url: /apps/6818756061/distribution/accessibility
+          - generic: App Accessibility
+        - link "Ratings and Reviews":
+          - /url: /apps/6818756061/distribution/ratings/ios
+          - generic: Ratings and Reviews
+      - heading "Growth & Marketing" [level=3]
+      - list:
+        - link "In-App Events":
+          - /url: /apps/6818756061/distribution/events
+          - generic: In-App Events
+        - link "Custom Product Pages":
+          - /url: /apps/6818756061/distribution/productpages
+          - generic: Custom Product Pages
+        - link "Product Page Optimization":
+          - /url: /apps/6818756061/distribution/optimization
+          - generic: Product Page Optimization
+        - link "Promo Codes":
+          - /url: /apps/6818756061/distribution/promo_codes/generate
+          - generic: Promo Codes
+        - link "Game Center":
+          - /url: /apps/6818756061/distribution/gamecenter
+          - generic: Game Center
+      - heading "Monetization" [level=3]
+      - list:
+        - link "Pricing and Availability":
+          - /url: /apps/6818756061/distribution/pricing
+          - generic: Pricing and Availability
+        - link "In-App Purchases":
+          - /url: /apps/6818756061/distribution/iaps
+          - generic: In-App Purchases
+        - link "Subscriptions":
+          - /url: /apps/6818756061/distribution/subscriptions
+          - generic: Subscriptions
+      - heading "Featuring" [level=3]
+      - list:
+        - link "Nominations":
+          - /url: /apps/6818756061/distribution/nominations
+          - generic: Nominations
+  - heading "App Privacy" [level=2]
+  - button "Publish"
+  - separator
+  - heading "Privacy Policy" [level=3]
+  - button "Edit"
+  - button "English (U.S.)" [disabled]
+  - button "?"
+  - generic: Privacy Policy URL
+  - button "More information": "?"
+  - paragraph: https://nathanfennel.com/how-to-adult/privacy.html
+  - generic: User Privacy Choices URL
+  - paragraph: (Optional)
+  - button "More information": "?"
+  - paragraph: –
+  - separator
+  - heading "Product Page Preview" [level=3]
+  - button "See Details"
+  - paragraph: Data Linked to You
+  - paragraph: "The following data may be collected and linked to your identity:"
+  - paragraph: Diagnostics
+  - separator
+  - heading "Data Types" [level=3]
+  - button "Edit"
+  - list:
+    - listitem: "1 data type collected from this app: Other Diagnostic Data"
+  - separator
+  - paragraph: Diagnostics
+  - paragraph: Other Diagnostic Data
+  - button "More information": "?"
+  - button "Edit"
+  - list:
+    - listitem: Used for App Functionality
+    - listitem: Linked to the user's identity
+- dialog "Publish Your App Privacy Responses?" [active]:
+  - document:
+    - heading "Publish Your App Privacy Responses?" [level=2]
+    - paragraph: This privacy information will appear on your app's product page. By publishing, you agree that your responses are accurate, in compliance with App Store Review Guidelines and applicable law, and that you will promptly update your responses if your data practices change.
+    - button "Cancel"
+    - button "Publish"
+- contentinfo:
+  - list:
+    - link "App Store Connect":
+      - /url: /apps
+  - list:
+    - listitem: Copyright © 2026 Apple Inc. All rights reserved. |
+    - link "Terms of Service":
+      - /url: /WebObjects/iTunesConnect.woa/wa/termsOfService
+    - text: "|"
+    - link "Privacy Policy":
+      - /url: https://www.apple.com/legal/privacy
+    - text: "|"
+    - link "Contact Us":
+      - /url: /contact-us

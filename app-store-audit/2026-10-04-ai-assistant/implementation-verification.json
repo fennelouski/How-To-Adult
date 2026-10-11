@@ -1,0 +1,135 @@
+{
+  "recordedAtUTC": "2026-10-04T17:17:31.070167+00:00",
+  "scope": "New Assistant implementation and bounded QA; unshipped working tree, no archive/upload/new review submission",
+  "dedicatedAssistant": true,
+  "baseRevision": "42232bb51f32b24971932efadf142f1e50591243",
+  "nativeInputInventory": "candidate-native-inputs.json",
+  "nativeInputCanonicalSHA256": "c2c01b42e764285c57984228086ff2b7e2468228e7ec0cfbd8c9aae332ac5810",
+  "builds": [
+    {
+      "platform": "iOS Simulator",
+      "scheme": "HowToAdult-iOS",
+      "operation": "build-for-testing",
+      "exitCode": 0,
+      "log": "verification/ios-build-r6.log",
+      "derivedData": "/tmp/how-to-adult-ai-20261004-ios",
+      "jobs": 2
+    },
+    {
+      "platform": "macOS",
+      "scheme": "HowToAdult-macOS",
+      "operation": "Release build, CODE_SIGNING_ALLOWED=NO",
+      "exitCode": 0,
+      "log": "verification/mac-release-final.log",
+      "derivedData": "/tmp/how-to-adult-ai-20261004-mac-final",
+      "jobs": 2,
+      "launched": false
+    }
+  ],
+  "phone": {
+    "result": "Passed",
+    "total": 78,
+    "passed": 77,
+    "skipped": 1,
+    "failed": 0,
+    "unitMethods": 77,
+    "unitPassed": 76,
+    "unitSkipped": 1,
+    "uiMethods": 1,
+    "resultBundle": "/tmp/how-to-adult-ai-20261004-final.xcresult",
+    "summary": "verification/phone-final-test-summary.json",
+    "attachments": "phone-final/manifest.json",
+    "uiScope": "Private UUID composer, saved fixture plan, disabled Calendar button, Settings open/close, another task and return. Scheduling/AI disabled in fixture."
+  },
+  "ipad": {
+    "result": "Passed",
+    "total": 1,
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "resultBundle": "/tmp/how-to-adult-ai-20261004-ipad-final.xcresult",
+    "summary": "verification/ipad-final-test-summary.json",
+    "attachments": "ipad-final/manifest.json",
+    "uiScope": "Same one private UUID flow with native sidebar/content/detail."
+  },
+  "onDevice": {
+    "performed": true,
+    "exitCode": 0,
+    "provider": "Apple FoundationModels",
+    "host": "Current Mac",
+    "script": "verification/local-probe.swift",
+    "output": "verification/local-probe-r2.log",
+    "scope": "Actual service inference of a harmless desk task; one pending checklist with three concrete steps. Standalone executable never initializes app Store/Runtime/Keychain or native writes. Initial weak meta-planning answer retained at verification/local-probe.log; prompt improved before successful rerun.",
+    "openAIRequest": false
+  },
+  "failureHistory": [
+    {
+      "resultBundle": "/tmp/how-to-adult-ai-20261004-unit.xcresult",
+      "exitCode": 65,
+      "issue": "Malformed CRLF key-header validation test assertions, fixed Unicode scalar allowlist",
+      "log": "verification/unit.log"
+    },
+    {
+      "resultBundle": "/tmp/how-to-adult-ai-20261004-verified.xcresult",
+      "exitCode": 65,
+      "issue": "77 unit methods clean, private UI blocked by top QA banner overlaying toolbar. Marker moved into native scroll/Form content; final rerun passes.",
+      "log": "verification/verified.log",
+      "attachments": "phone-r3-all/manifest.json"
+    }
+  ],
+  "privacy": {
+    "manifestUpdated": true,
+    "declarations": [
+      "OtherDiagnosticData",
+      "OtherUserContent",
+      "SearchHistory",
+      "UserID"
+    ],
+    "allLinked": true,
+    "purposes": [
+      "AppFunctionality"
+    ],
+    "tracking": false,
+    "requiredReason": "UserDefaults CA92.1",
+    "publicPolicyPublished": false,
+    "appStoreNewDisclosuresPublished": false
+  },
+  "release": {
+    "existingIOS": "1.0 (1) Waiting for Review per saved actual earlier receipt",
+    "existingIOSReceipt": "../2026-10-04-release/ios-submission-receipt.json",
+    "newVersionOrBuild": false,
+    "newArchive": false,
+    "newUpload": false,
+    "newSubmission": false,
+    "commitPerformed": false,
+    "MacRuntimeVerified": false,
+    "ChatGPTAccessApproval": "pending"
+  },
+  "cleanup": {
+    "recordedAtUTC": "2026-10-04T17:16:07.271056+00:00",
+    "ownedDevices": [
+      {
+        "udid": "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "name": "HowToAdult Assistant Private QA 20261004",
+        "state": "Shutdown"
+      },
+      {
+        "udid": "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "name": "HowToAdultAssistantPrivateQAiPad20261004",
+        "state": "Shutdown"
+      }
+    ],
+    "allOwnedShutdown": true,
+    "otherDevicesTouched": false,
+    "SimulatorAppOpened": false,
+    "visionOSOperations": false
+  },
+  "limits": [
+    "No live OpenAI API key/model/web-search request verified. No ChatGPT subscription-backed inference or OAuth implemented.",
+    "Native executor unit coverage uses injected systems; private fixtures perform no live Calendar or notification write. Closed-app Shortcuts, killed-app routes and real calendar receipts require runtime verification.",
+    "No integrated merchant checkout, purchase/order/payment API. Shopping prepares/shares lists, research and seller links.",
+    "No exhaustive accessibility/dark/landscape/minimum-OS UI claim for new Assistant; Mac compiled and standalone on-device service tested, not app GUI.",
+    "No web/backend deployment, public policy update or new App Store release this turn. Earlier iOS guide release remains intact.",
+    "No visionOS build/boot/runtime/capture/upload/submission and no Simulator.app opening. Only two owned private iOS devices used; both Shutdown."
+  ]
+}

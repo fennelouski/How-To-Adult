@@ -1,0 +1,78 @@
+Optional(Attributes: Application, 0x107e159a0, pid: 73916, label: 'How to Adult'
+Element subtree:
+ →Application, 0x107e159a0, pid: 73916, label: 'How to Adult'
+    Window (Main), 0x107e16a00, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x107e17500, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x107e17620, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x107e17260, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x107e17380, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x107e17740, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x107e17860, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x107e17980, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x107e17aa0, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x107e17bc0, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x107e17ce0, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x107e17e00, {{0.0, 0.0}, {440.0, 956.0}}
+                            NavigationBar, 0x107e17f20, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Guide'
+                              Button, 0x107e18040, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult'
+                              StaticText, 0x107e18160, {{196.7, 68.0}, {46.7, 20.3}}, label: 'Guide'
+                              Button, 0x107e18280, {{277.3, 56.3}, {44.3, 44.0}}, identifier: 'save-guide', label: 'Save guide'
+                              Button, 0x107e183a0, {{329.7, 56.3}, {47.0, 44.0}}, identifier: 'remind-guide', label: 'Remind me'
+                              Button, 0x107e184c0, {{384.7, 56.3}, {43.3, 44.0}}, label: 'Share…'
+                            Other, 0x107e185e0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x107e18700, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x107e18820, {{0.0, 0.0}, {440.0, 956.0}}
+                                  Other, 0x107e18940, {{0.0, 0.0}, {440.0, 956.0}}
+                                    ScrollView, 0x107e18a60, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-reader'
+                                      Other, 0x107e18b80, {{0.0, 100.3}, {440.0, 1367.7}}
+                                        StaticText, 0x107e18ca0, {{24.0, 181.0}, {381.0, 40.7}}, label: 'Wash a load of laundry'
+                                        StaticText, 0x107e18dc0, {{24.0, 236.7}, {278.3, 49.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                        StaticText, 0x107e18ee0, {{24.0, 300.7}, {153.3, 18.0}}, label: 'About 10 min · 4 steps'
+                                        StaticText, 0x107e19000, {{24.0, 348.7}, {163.7, 26.3}}, label: 'Before you start'
+                                        StaticText, 0x107e19120, {{26.0, 387.0}, {105.3, 20.3}}, label: 'Detergent'
+                                        StaticText, 0x107e19240, {{26.0, 419.3}, {89.7, 20.3}}, label: 'Hamper'
+                                        StaticText, 0x107e19360, {{26.0, 451.7}, {163.0, 20.3}}, label: 'Washing machine'
+                                        StaticText, 0x107e19480, {{24.0, 502.0}, {184.7, 26.3}}, label: 'One step at a time'
+                                        Button, 0x107e195a0, {{24.0, 544.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-1', label: 'Sort a small load. Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.', value: Not completed
+                                          Image, 0x107e196c0, {{27.0, 566.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x107e197e0, {{68.0, 564.3}, {131.7, 20.3}}, label: 'Sort a small load'
+                                          StaticText, 0x107e19900, {{68.0, 593.7}, {332.0, 86.3}}, label: 'Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.'
+                                        Button, 0x107e19a20, {{24.0, 700.3}, {392.0, 133.7}}, identifier: 'step-wash-your-first-load-step-2', label: 'Set the machine. Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.', value: Not completed
+                                          Image, 0x107e19b40, {{27.0, 722.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x107e19c60, {{68.0, 720.3}, {128.7, 20.3}}, label: 'Set the machine'
+                                          StaticText, 0x107e19d80, {{68.0, 749.7}, {332.0, 64.3}}, label: 'Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.'
+                                        Button, 0x107e19ea0, {{24.0, 834.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-3', label: 'Measure detergent. Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.', value: Not completed
+                                          Image, 0x107e19fc0, {{27.0, 856.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x107e1a0e0, {{68.0, 854.3}, {151.3, 20.3}}, label: 'Measure detergent'
+                                          StaticText, 0x107e1a200, {{68.0, 883.7}, {320.7, 86.3}}, label: 'Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.'
+                                        Button, 0x107e1a320, {{24.0, 990.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-4', label: 'Finish the job. Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.', value: Not completed
+                                          Image, 0x107e1a440, {{27.0, 1012.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x107e1a560, {{68.0, 1010.3}, {105.7, 20.3}}, label: 'Finish the job'
+                                          StaticText, 0x107e1a680, {{68.0, 1039.7}, {330.3, 86.3}}, label: 'Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.'
+                                        StaticText, 0x107e1a7a0, {{46.3, 1196.3}, {174.7, 26.3}}, label: 'Good to know'
+                                        StaticText, 0x107e1a8c0, {{44.0, 1236.7}, {344.7, 42.3}}, label: 'Keep detergent away from children and pets. Never combine cleaning chemicals.'
+                                        StaticText, 0x107e1a9e0, {{24.0, 1329.0}, {168.0, 26.3}}, label: 'Go to the source'
+                                        Button, 0x107e1ab00, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                          Image, 0x107e1ac20, {{26.0, 1377.0}, {15.3, 15.3}}, identifier: 'arrow.up.right.square', label: 'arrow.up.right.square'
+                                          StaticText, 0x107e1ad40, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                        StaticText, 0x107e1ae60, {{24.0, 1429.7}, {126.7, 14.3}}, label: 'Reviewed 2026-10-03'
+                                      Other, 0x107e1af80, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x107e1b0a0, {{434.0, 109.0}, {3.0, 469.0}}
+                                      Other, 0x107e1b1c0, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x107e1b2e0, {{434.0, 109.0}, {3.0, 469.0}}
+                TabBar, 0x107e1b400, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar'
+                  Button, 0x107e1b520, {{2.0, 874.0}, {143.0, 48.0}}, label: 'Guides', Selected
+                    Image, 0x107e1b640, {{56.7, 876.7}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                  Button, 0x107e1b760, {{149.0, 874.0}, {142.0, 48.0}}, label: 'Saved'
+                  Button, 0x107e1b880, {{295.0, 874.0}, {143.0, 48.0}}, label: 'Reminders'
+    Window, 0x107e1b9a0, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x107e1bac0, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x107e1bbe0, {{0.0, 0.0}, {440.0, 956.0}}
+Path to element:
+ →Application, 0x107e159a0, pid: 73916, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x107d1da30, pid: 73916, label: 'How to Adult'
+  }
+)

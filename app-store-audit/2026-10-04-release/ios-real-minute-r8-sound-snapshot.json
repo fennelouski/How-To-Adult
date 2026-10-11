@@ -1,0 +1,75 @@
+{
+  "source": "Read-only decode of native XCTest recorded NSKeyedArchiver snapshot; no reconstructed UI/pixels",
+  "snapshots": [
+    {
+      "actualSnapshot": "ios-real-minute-r8-attachments/407357D1-7B67-42A5-9A9B-7883307B0BFC",
+      "sha256": "8c6b4372afe478a2d3c1b91e942dcfcdbb1162a96a85112e1da3b15402b0d71c",
+      "nativeSwitchNodes": [
+        {
+          "archiveObjectIndex": 1527,
+          "elementType": "Switch",
+          "label": "Play a sound",
+          "value": "1",
+          "frame": "{{20, 303.33333333333331}, {400, 44}}",
+          "childrenArchiveIndices": [
+            1544,
+            1557
+          ],
+          "additionalAttributes": {
+            "5034": true,
+            "5004": "UIResponder",
+            "2129": false
+          }
+        },
+        {
+          "archiveObjectIndex": 1557,
+          "elementType": "Switch",
+          "label": "",
+          "value": "1",
+          "frame": "{{351, 310}, {51, 31}}",
+          "childrenArchiveIndices": [],
+          "additionalAttributes": {
+            "5034": true,
+            "5004": "UISwitch",
+            "2129": false
+          }
+        }
+      ]
+    },
+    {
+      "actualSnapshot": "ios-real-minute-r8-attachments/2612B6D0-D4F4-446F-9AF8-668E555BD227",
+      "sha256": "8c6b4372afe478a2d3c1b91e942dcfcdbb1162a96a85112e1da3b15402b0d71c",
+      "nativeSwitchNodes": [
+        {
+          "archiveObjectIndex": 1527,
+          "elementType": "Switch",
+          "label": "Play a sound",
+          "value": "1",
+          "frame": "{{20, 303.33333333333331}, {400, 44}}",
+          "childrenArchiveIndices": [
+            1544,
+            1557
+          ],
+          "additionalAttributes": {
+            "5034": true,
+            "5004": "UIResponder",
+            "2129": false
+          }
+        },
+        {
+          "archiveObjectIndex": 1557,
+          "elementType": "Switch",
+          "label": "",
+          "value": "1",
+          "frame": "{{351, 310}, {51, 31}}",
+          "childrenArchiveIndices": [],
+          "additionalAttributes": {
+            "5034": true,
+            "5004": "UISwitch",
+            "2129": false
+          }
+        }
+      ]
+    }
+  ]
+}

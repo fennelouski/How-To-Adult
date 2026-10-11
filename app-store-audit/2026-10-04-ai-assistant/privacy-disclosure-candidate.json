@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "preparedAtUTC": "2026-10-04T17:16:23.824417+00:00",
+  "app": {
+    "name": "How to Adult",
+    "appleID": "6818756061",
+    "platformScope": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "candidate": "unshipped AI Assistant update"
+  },
+  "status": "proposed_unpublished_disclosure_for_next_release",
+  "authority": "Local drafting evidence only. No App Store Connect answers were changed or published by this work.",
+  "policyCandidate": {
+    "path": "app-store-audit/2026-10-04-ai-assistant/privacy-policy-candidate.md",
+    "sha256": "ffc626d3644ada51583f5baec229dc2ed8d6bd3fa302d9f5610182ea4f9fbcc8",
+    "targetExistingURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+    "deployed": false
+  },
+  "existingPublishedLabel": {
+    "recordedAtUTC": "2026-10-04T10:31:25.131917+00:00",
+    "category": "Other Diagnostic Data",
+    "purpose": "App Functionality",
+    "linkedToUser": true,
+    "usedForTracking": false,
+    "receiptPath": "app-store-audit/2026-10-04-release/privacy-publication-receipt.json",
+    "receiptSHA256": "0d5193fe71ad3fdfa9419d8023e6cdd0bd3de2d76e96a931093ee8d505b42bbe",
+    "scope": "Historical earlier guide-app label; its original reviewState is historical. This draft does not relabel the previously submitted binary."
+  },
+  "proposedCollectionAnswer": true,
+  "proposedCategories": [
+    {
+      "category": "Other Diagnostic Data",
+      "manifestIdentifier": "NSPrivacyCollectedDataTypeOtherDiagnosticData",
+      "change": "retain existing published category",
+      "basis": "Catalog hosting receives operational request metadata. Historical provider evidence records AWS function log retention, disabled API access logs and Vercel limitations. No inference that absence of an app account anonymizes IP or request metadata.",
+      "recipients": [
+        "Vercel catalog hosting",
+        "AWS catalog backend"
+      ],
+      "dataExamples": [
+        "Request IP and path processed by hosting",
+        "Operational request identifiers, timing and generic error types"
+      ],
+      "evidence": [
+        "Sources/AdultStore.swift: public HTTPS catalog GET",
+        "Configuration/iOS-Info.plist: AdultCatalogURL",
+        "backend/provider-privacy-verification.json",
+        "app-store-audit/2026-10-04-release/privacy-publication-receipt.json"
+      ],
+      "decisionConfidence": "existing published owner assessment; historical provider verification retained, not refreshed",
+      "purposes": [
+        "App Functionality"
+      ],
+      "linkedToUser": true,
+      "usedForTracking": false,
+      "optionalFeature": false
+    },
+    {
+      "category": "Other User Content",
+      "manifestIdentifier": "NSPrivacyCollectedDataTypeOtherUserContent",
+      "change": "proposed addition for optional OpenAI processing",
+      "basis": "User-entered task content, action queries/items and selected guide or research context are transmitted for requested generation/research. The authenticated API account can link requests to its owner. Output plans and receipts are local unless the person later requests processing or sharing of that material.",
+      "recipients": [
+        "OpenAI API"
+      ],
+      "dataExamples": [
+        "Task text",
+        "Selected guide title, jurisdiction, cautions and text excerpts",
+        "Research answer context reused in a requested plan",
+        "Shopping action title/query and list items"
+      ],
+      "evidence": [
+        "Sources/AdultAIService.swift: context, makePlan, research and baseBody",
+        "Sources/AdultAssistantController.swift: researchShopping"
+      ],
+      "decisionConfidence": "source-backed proposed classification; live provider handling not inspected",
+      "purposes": [
+        "App Functionality"
+      ],
+      "linkedToUser": true,
+      "usedForTracking": false,
+      "optionalFeature": true
+    },
+    {
+      "category": "Search History",
+      "manifestIdentifier": "NSPrivacyCollectedDataTypeSearchHistory",
+      "change": "proposed addition for optional OpenAI research",
+      "basis": "Requested research queries and shopping-research query/items go to the provider web-search tool. Local guide-library searches do not go to the catalog server and are excluded from this addition. An external Google search is separately opened at the person's request.",
+      "recipients": [
+        "OpenAI API and its web-search service"
+      ],
+      "dataExamples": [
+        "Research before making a plan: task used as search query",
+        "Research with OpenAI: action query",
+        "Find options with OpenAI: query/title and shopping items"
+      ],
+      "evidence": [
+        "Sources/AdultAIService.swift: research uses web_search, completed-search and annotation checks",
+        "Sources/AdultAssistantController.swift: research and researchShopping",
+        "Sources/AdultAssistantViews.swift: external Google search link"
+      ],
+      "decisionConfidence": "source-backed proposed classification; exact live search-provider retention not verified",
+      "purposes": [
+        "App Functionality"
+      ],
+      "linkedToUser": true,
+      "usedForTracking": false,
+      "optionalFeature": true
+    },
+    {
+      "category": "User ID",
+      "manifestIdentifier": "NSPrivacyCollectedDataTypeUserID",
+      "change": "proposed addition for optional OpenAI account credential",
+      "basis": "The saved API credential is an account-linked authentication credential and goes to OpenAI in the Authorization header, including model-access testing. There is no How to Adult login, profile, collected email address or app-account server. This is a conservative account-identifier classification; it does not assert that raw secrets are retained in provider logs.",
+      "recipients": [
+        "OpenAI API"
+      ],
+      "dataExamples": [
+        "Account-linked API authorization credential"
+      ],
+      "evidence": [
+        "Sources/AdultAIConnection.swift: AdultAPIKeyStore, apiKey",
+        "Sources/AdultAIService.swift: request and testConnection Authorization headers"
+      ],
+      "decisionConfidence": "proposed account-linkage classification; confirm exact live Apple category selection before publication",
+      "purposes": [
+        "App Functionality"
+      ],
+      "linkedToUser": true,
+      "usedForTracking": false,
+      "optionalFeature": true
+    }
+  ],
+  "manifestObservation": {
+    "path": "Configuration/PrivacyInfo.xcprivacy",
+    "sha256": "64407d8a0815b81500ae4a24f62bf4659a2d4348838a29f958eeb560a3ca13e9",
+    "matchesFourProposedTypesPurposesAndLinkage": true,
+    "meaning": "The current native candidate manifest is aligned with these proposed choices. A manifest is not proof of App Store Connect publication or a shipped update."
+  },
+  "dataFlows": [
+    {
+      "name": "on-device plan generation",
+      "trigger": "Person chooses On device and makes a plan, or invokes configured Make a life plan through Shortcuts",
+      "processor": "Apple SystemLanguageModel.default through FoundationModels LanguageModelSession",
+      "content": "Task plus current time/timezone and selected guide context",
+      "appTransmitsToOpenAI": false,
+      "scope": "On-device availability is checked; no silent paid fallback. Explicit OpenAI research remains a separate optional flow."
+    },
+    {
+      "name": "OpenAI plan generation",
+      "trigger": "Person connects a key, chooses OpenAI and requests a plan, including through the configured App Shortcut",
+      "endpoint": "https://api.openai.com/v1/responses",
+      "content": [
+        "Task",
+        "Current ISO8601 time and local timezone",
+        "Selected guide excerpts, jurisdiction and cautions",
+        "Optional prior research answer"
+      ],
+      "authentication": "Bearer API key from device-only Keychain",
+      "accountBilling": "The connected OpenAI API account, separately from ChatGPT subscription",
+      "responseStoreParameter": false,
+      "zeroRetentionClaim": false,
+      "wholeLibraryUpload": false
+    },
+    {
+      "name": "OpenAI connection test",
+      "trigger": "Test connection in Assistant settings",
+      "endpointPattern": "https://api.openai.com/v1/models/{selected-model}",
+      "content": [
+        "Selected model identifier",
+        "Account-linked Authorization credential"
+      ],
+      "includesTaskOrGuide": false
+    },
+    {
+      "name": "OpenAI live research",
+      "trigger": [
+        "Research before making a plan setting plus requested plan",
+        "Research with OpenAI action",
+        "Find options with OpenAI action"
+      ],
+      "endpoint": "https://api.openai.com/v1/responses",
+      "tools": [
+        "web_search"
+      ],
+      "content": [
+        "Task or action query",
+        "Shopping query/title and items when requested"
+      ],
+      "responseStoreParameter": false,
+      "localResult": [
+        "Source answer",
+        "Validated URL citations",
+        "Checked-at time"
+      ],
+      "verificationLimit": "Injected offline tests and source contracts do not prove live provider/model/search access."
+    },
+    {
+      "name": "catalog update",
+      "trigger": "App checks for public guide updates",
+      "configuredURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+      "backend": "AWS public content service during documented parallel hosting",
+      "content": "Public catalog request and ordinary network metadata; no local guide search, bookmarks, checked steps, reminder dates, API key or Assistant library",
+      "providerEvidenceDate": "2026-10-03T08:51:34.251824+00:00",
+      "freshProviderCredentialCheck": false
+    },
+    {
+      "name": "local notifications",
+      "trigger": "Reviewed Schedule reminder or opt-in Schedule reminders on newly generated future-dated actions; existing guide reminders retained",
+      "nativeService": "UNUserNotificationCenter",
+      "content": [
+        "Title",
+        "Details",
+        "Schedule/repeat pattern",
+        "Sound preference",
+        "App-owned action or guide identifier"
+      ],
+      "remotePushProvider": false,
+      "lockScreenVisibility": "Controlled by system notification settings",
+      "receipt": "OS scheduling identifier stored locally"
+    },
+    {
+      "name": "calendar event creation",
+      "trigger": "Reviewed Add to Calendar or opt-in Add calendar events on new eligible plans",
+      "nativeService": "EventKit system default calendar",
+      "permission": "write-only event access requested",
+      "content": [
+        "Action title",
+        "Details and app-owned action UUID in notes",
+        "Start/end time",
+        "Timezone",
+        "Optional repeat rule"
+      ],
+      "existingEventContentsRead": false,
+      "sync": "Created native events follow the user's calendar-account settings; the app's local plan library is not cloud-synced"
+    },
+    {
+      "name": "external sites and sharing",
+      "trigger": "Person opens guide/research links, Find items on the web, or Share plan/list/guide",
+      "destinations": [
+        "Chosen source or merchant website",
+        "Google search with query in URL",
+        "User-chosen system share destination"
+      ],
+      "merchantIntegration": false,
+      "ordersOrPayments": false,
+      "websitePolicies": "External sites handle user-chosen visits under their own practices; this is not an app-owned checkout."
+    }
+  ],
+  "localStorage": {
+    "guideProgress": "UserLibrary-v1.json in app Application Support",
+    "assistantPlans": "AssistantLibrary-v1.json in app Application Support",
+    "assistantFields": [
+      "Task",
+      "Actions and edits",
+      "Checklists and shopping items",
+      "Research answers and source citations",
+      "Action status and timestamps",
+      "Real native scheduling identifiers and local completion receipts",
+      "Automation preferences"
+    ],
+    "connectionChoices": "Local UserDefaults provider/model/research preferences",
+    "credential": {
+      "store": "Keychain",
+      "synchronizable": false,
+      "accessibility": "kSecAttrAccessibleWhenUnlockedThisDeviceOnly",
+      "notInPlansOrCatalog": true,
+      "transmittedToOpenAIForAuthentication": true
+    },
+    "cloudSyncImplemented": false,
+    "backupLimit": "System backups may include app files. Device-only Keychain accessibility is distinct from backing up ordinary app files.",
+    "deletion": "Delete plan removes local plan/evidence/receipts only; already-created native events and scheduled notifications remain. Disconnect removes key and resets connection, leaving saved plans/native items intact. Provider and shared copies have separate controls."
+  },
+  "permissionsAndAutomation": {
+    "settingsLabels": [
+      "Your AI",
+      "Connection",
+      "Research before making a plan",
+      "Schedule reminders",
+      "Add calendar events",
+      "Reminder sound",
+      "Shortcuts"
+    ],
+    "automaticRemindersDefault": false,
+    "automaticCalendarDefault": false,
+    "settingsOptInRequestsPermissionOnly": true,
+    "autoAppliesOldPlans": false,
+    "appShortcut": "Make a life plan",
+    "shortcutInstallsSchedule": false,
+    "hostedAIBackgroundScheduler": false,
+    "contactsIntegration": false,
+    "calendarContentsSentToAI": false,
+    "remindersUI": "Default app notifications, no Apple Reminders list picker",
+    "executorOnlyCapabilities": "Executor supports a supplied calendar identifier with already-full event access and supplied Apple Reminders list with full Reminders access. The current interface exposes neither destination selector; do not market those as available integrations.",
+    "declaredUsageDescriptions": [
+      "NSCalendarsWriteOnlyAccessUsageDescription",
+      "NSCalendarsFullAccessUsageDescription",
+      "NSRemindersFullAccessUsageDescription"
+    ],
+    "macSandboxCalendarEntitlement": true
+  },
+  "providerRetention": {
+    "source": "https://developers.openai.com/api/docs/guides/your-data",
+    "checkedDate": "2026-10-04",
+    "summary": "store:false does not establish zero retention. API training is opt-in. Standard abuse-monitoring content retention can be up to 30 days with legal/service-protection exceptions; account controls and feature rules apply.",
+    "accountZeroDataRetentionVerified": false,
+    "searchSpecificLiveRetentionVerified": false
+  },
+  "assessmentLimits": [
+    "The four category choices are proposed source-backed answers, not a completed live provider privacy audit or published Apple label.",
+    "Optional AI use is still disclosed conservatively because provider retention may extend beyond servicing the request.",
+    "No app account or advertising identifier is created. User ID refers to the provider-account credential; local action UUIDs and native receipts are not asserted to be collected device identifiers.",
+    "Freeform task text can contain personal information. No dedicated contact, location, health or financial-record ingestion is implemented; do not treat the absence of dedicated fields as proof users cannot type such information. Reassess data categories if intended or actual collection requires it.",
+    "Opening external sites and user-initiated sharing are distinguished from app-owned collection or an integrated merchant/order service.",
+    "Native manifest, test success and on-device availability do not prove live OpenAI model compatibility, search access, provider retention or category approval."
+  ],
+  "publicationChecks": [
+    "Check this draft against the exact source frozen for the new release, including any new permissions or integrations.",
+    "Retain accurate named-provider disclosure and explicit user permission for sending task/guide content before the transfer; inspect the released Settings and Shortcut flow.",
+    "Confirm actual live category wording and final collection/purpose/linkage answers against the connected provider practices.",
+    "Publish the revised privacy page through the repository's required hosting policy and verify its canonical URL. This document performs no deployment.",
+    "Update App Store privacy answers for the new practices separately from the earlier submitted-build evidence. Standing user publication/submission authorization remains applicable; this draft requests no new approval."
+  ],
+  "officialSources": [
+    {
+      "title": "Apple App privacy details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/",
+      "checkedDate": "2026-10-04",
+      "supports": "Off-device retained collection, category definitions, linkage and purpose assessment; local-only processing is distinct."
+    },
+    {
+      "title": "Apple App Review Guidelines 5.1.2",
+      "url": "https://developer.apple.com/app-store/review/guidelines/#data-use-and-sharing",
+      "checkedDate": "2026-10-04",
+      "supports": "Name third-party AI sharing and obtain explicit permission before transferring personal data."
+    },
+    {
+      "title": "Apple SystemLanguageModel",
+      "url": "https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel",
+      "checkedDate": "2026-10-04",
+      "retrieval": "Read official documentation JSON at https://developer.apple.com/tutorials/data/documentation/foundationmodels/systemlanguagemodel.json",
+      "supports": "This model is the on-device Apple Foundation Model; availability must be checked."
+    },
+    {
+      "title": "OpenAI API data controls",
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "checkedDate": "2026-10-04",
+      "supports": "Account data controls, standard abuse-monitoring retention and training defaults; store:false alone is not zero retention."
+    }
+  ],
+  "sourceObservation": {
+    "gitHEAD": "42232bb51f32b24971932efadf142f1e50591243",
+    "isUncommittedCandidate": true,
+    "notAShippingFreeze": true,
+    "hashAlgorithm": "SHA256 of UTF-8 canonical JSON of relative-path to SHA256 map, keys sorted, compact separators",
+    "observedInputAggregateSHA256": "57f0716f0d4900922130ffd93ccc6cb1f98b91ddb49e4002d67d1c613edc1cb5",
+    "files": {
+      "Sources/AdultAIConnection.swift": "e579da8868bc57ef0a0a5ef8e1ae6ddf41e6e05f3eeb5f0b9286d4ef510e0b71",
+      "Sources/AdultAIService.swift": "047829aa3f84b96433a7fff9adc2bb127249550d9befd5580a5ed98b967f6b25",
+      "Sources/AdultAssistantController.swift": "41b2f9fa90f49fa777ab4dce461d5abe1c126a21ed4db21ba6485e443362dc79",
+      "Sources/AdultAssistantIntents.swift": "aad2e1d0be3aee2e8c887529bb6c44d615590a71c1494d8dba761fa84170ac98",
+      "Sources/AdultAssistantSettingsView.swift": "ad30dc697702ad3ff78fb5b42026d308073cca808206d880bd4109b7baf172d3",
+      "Sources/AdultAssistantViews.swift": "9d6224946af4760df4ffe6d90b920f2badc952f5e6a179ab543611c929dbd2a2",
+      "Sources/AdultAssistantLibrary.swift": "e8d973af10d81ccea26c1e26499e2dc1a079f739328e72e3e1ccae0a2fdd0811",
+      "Sources/AdultAssistantModels.swift": "b9ea7f66ac2118e9dba513c733290bcb6224322c4dd4b8121a949bd21f780f05",
+      "Sources/AdultActionExecutor.swift": "801d56f41b20390ba8d197c077b535e2532be0aea18949ae986f326cc8e3df34",
+      "Sources/AdultNotificationBudget.swift": "c77bee42dcd1c5e372faa8f98c6469a1ceb820e783950e98c76a9b3ff56c296a",
+      "Sources/AdultStore.swift": "008f7c0209f3da7419a9ce6223977f05831eb03770bea8fbc6c5157822b77045",
+      "Sources/AdultCore.swift": "ae03dabd15d12b16f2415c7f4fec9e4f9e157868896d4de923606ae539cca30d",
+      "Sources/AdultViews.swift": "80853fd71f57d907fcce9121cdab4a41770ad32288e27ced446d1928e6979049",
+      "Sources/App.swift": "cb4507e313542707171cc4efddc45350b62618270a221ce2225e38af005e43a3",
+      "Configuration/PrivacyInfo.xcprivacy": "64407d8a0815b81500ae4a24f62bf4659a2d4348838a29f958eeb560a3ca13e9",
+      "Configuration/iOS-Info.plist": "46b4262019cdc526a569677d56e48ac2d51de5a874e28711eea3e4dc6c024087",
+      "Configuration/macOS-Info.plist": "4a7cfd37c99cbadd325371ae8b6da3c5bf599d89fa6ac11a1ccfefeb12ef244f",
+      "Configuration/macOS.entitlements": "b57aa036717039841abcb1e08db6c724daa4d671af6b55430fd58ae64f8e6ab1",
+      "backend/provider-privacy-verification.json": "1dcd239ae29bcc8e96f7eee00db46f88ea08ad35f42e8663b8d804534ee23378",
+      "BACKEND.md": "a7cdc727e544bc70259f2e7ce701549a0caf37b93a78e0c9f57bc990c06ba723",
+      "app-store-audit/2026-10-04-ai-assistant/feature-and-privacy-notes.md": "9d327347dcbb752fc6243c0b446860515ce44bec41a81ca022bd2612dbb59120",
+      "app-store-audit/2026-10-04-release/privacy-publication-receipt.json": "0d5193fe71ad3fdfa9419d8023e6cdd0bd3de2d76e96a931093ee8d505b42bbe"
+    }
+  },
+  "workPerformed": {
+    "createdFilesOnly": [
+      "app-store-audit/2026-10-04-ai-assistant/privacy-policy-candidate.md",
+      "app-store-audit/2026-10-04-ai-assistant/privacy-disclosure-candidate.json"
+    ],
+    "sourceEdits": false,
+    "keysRead": false,
+    "liveOpenAICalls": false,
+    "nativeBuildsOrRuns": false,
+    "deviceActions": false,
+    "webDeployment": false,
+    "appStoreConnectMutation": false,
+    "published": false
+  }
+}

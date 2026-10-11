@@ -1,0 +1,118 @@
+- banner "App Store Connect":
+  - heading "App Store Connect" [level=1]:
+    - link "App Store Connect":
+      - /url: /
+  - navigation "Global":
+    - list:
+      - link "Apps":
+        - /url: /apps
+      - link "Xcode Cloud":
+        - /url: /teams/69a6de85-2c3b-47e3-e053-5b8c7c11a4d1/xcode-cloud
+      - link "Trends":
+        - /url: /trends
+      - link "Reports":
+        - /url: /itc/payments_and_financial_reports
+      - link "Business":
+        - /url: /business
+      - link "Users and Access":
+        - /url: /access/users
+  - button "Nathan Fennel Nathan Fennel Account name menu":
+    - generic: Nathan Fennel
+    - generic: Nathan Fennel
+- 'button "Apps menu, How to Adult: Pocket Guide, selected"':
+  - 'generic "How to Adult: Pocket Guide"':
+    - 'img "How to Adult: Pocket Guide"'
+  - generic: "How to Adult: Pocket Guide"
+- navigation "Apps":
+  - list:
+    - link "Distribution":
+      - /url: /apps/6818756061/distribution
+    - link "Analytics":
+      - /url: /apps/6818756061/analytics
+    - link "TestFlight":
+      - /url: /teams/69a6de85-2c3b-47e3-e053-5b8c7c11a4d1/apps/6818756061/testflight
+- main:
+  - link "App Review":
+    - /url: /apps/6818756061/distribution/reviewsubmissions
+    - text: App Review
+  - heading "iOS Submission" [level=2]
+  - button "Resubmit to App Review" [disabled]
+  - paragraph:
+    - text: Unresolved Issues
+  - paragraph: Your app version was rejected and no other items submitted can be accepted or approved. You can make edits to your app version below.
+  - heading "Items Submitted (1)" [level=3]
+  - generic: You can review and make edits to your items below, or communicate with Apple. Accepted items won't be available for release until all items with issues are resubmitted and accepted. You can also remove those items and resubmit them later.
+  - table:
+    - rowgroup:
+      - row "Item Type Review Status Action":
+        - columnheader "Item":
+          - generic: Item
+        - columnheader "Type":
+          - generic: Type
+        - columnheader "Review Status":
+          - generic: Review Status
+        - columnheader "Action":
+          - generic: Action
+        - columnheader
+    - rowgroup:
+      - 'row "App Icon iOS App 1.0 1.0 (1) App Version Rejected 4.3.0 Design: Spam Edit Delete"':
+        - cell "App Icon iOS App 1.0 1.0 (1)":
+          - generic "App Icon":
+            - img "App Icon"
+          - paragraph: iOS App 1.0
+          - paragraph:
+            - link "1.0 (1)":
+              - /url: /apps/6818756061/testflight/ios/2a23e261-5a5d-4d6f-8509-5958896e55c5/metadata
+          - paragraph
+        - cell "App Version":
+          - generic: App Version
+        - 'cell "Rejected 4.3.0 Design: Spam"':
+          - text: Rejected
+          - paragraph: "4.3.0 Design: Spam"
+        - cell "Edit":
+          - link "Edit":
+            - /url: /apps/6818756061/distribution/ios/version/inflight
+        - cell "Delete":
+          - button "Delete":
+  - heading "Messages (1)" [level=3]
+  - button "AppleYesterday 11:26 PM" [expanded]:
+    - heading "AppleYesterday 11:26 PM" [level=6]
+  - region "AppleYesterday 11:26 PM":
+    - heading "Guidelines 4.3 - Spam and 4.2.6 - App Generation Services" [level=3]
+    - text: "Issue Description The app does not appear to meet App Store requirements to prevent the distribution of spam submissions. Specifically, the app appears to match one or more of the following kinds of spam, which make it harder for users to find the apps they want: - Apps that duplicate content or functionality already on the App Store. See guideline 4.3(a). - Apps that are indistinguishable from what's already widely available or is an opportunistic variant of an existing category or popular app. See guideline 4.3(b). - Apps that are created from a commercialized template or app generation service but are not submitted directly by the provider of the app’s content. See guideline 4.2.6. Next Steps If any of the above descriptions apply to this submission, do not resubmit for review until significant changes have been made to resolve this issue. If the app is resubmitted without substantial improvements, it will be rejected again, and may be rejected for additional issues. If you believe the app already meets the requirements of guidelines 4.3(a), 4.3(b) and 4.2.6, do not resubmit the app. Instead, reply to this message and answer all of the following questions in full: 1. Describe in detail what this app does and the primary problem it solves for users. Do not use the App Store marketing description as your response. 2. Who is the intended user of this app? Provide a detailed description of the specific target audience. 3. What need or gap in the market does this app address that existing apps do not currently address, or address less effectively? Provide a detailed, substantive explanation. 4. What beta testing did you conduct before submitting the app for review? Provide examples of user feedback provided in beta that was applied to the production build. 5. Is this app intended to function as a standalone product, or is it part of a suite of related apps published under your developer account? If part of a suite, provide a detailed description of how this app's scope and functionality differ from each other app in the suite. 6. Could the functionality of this app be fully delivered as an in-app purchase, feature expansion, or content addition within any other app on your developer account? If so, provide a detailed explanation of why this functionality was not consolidated into that existing app. 7. Does this app's binary share any significant code, frameworks, or assets with any other app on your developer account, beyond standard third-party frameworks? If so, identify each shared component and describe its role in detail. 8. Does this app share any codebase, SDK, or content library with any third-party app, beyond standard third-party frameworks? If so, identify the shared component and provide a detailed explanation of the original functionality this app adds beyond it. 9. Was this app created for a client, partner, or other third party who provided the app's content, concept, or branding? If so, identify who provided the content and provide a detailed explanation of why the app is submitted under your developer account rather than theirs. Note that guideline 4.2.6 requires apps built from a commercial template or app generation service to be submitted directly by the provider of the app's content, not on their behalf by the template or service provider. Resources - Learn more about requirements to prevent spam on the App Store in"
+    - link "guideline 4.3":
+      - /url: https://developer.apple.com/app-store/review/guidelines/#4.3
+    - text: . - Learn more about requirements for apps created from a template or app generation service in
+    - link "guideline 4.2.6":
+      - /url: https://developer.apple.com/app-store/review/guidelines/#4.2.6
+    - text: . - Use
+    - link "TestFlight":
+      - /url: https://developer.apple.com/testflight/
+    - text: to share the app with beta testers and gather feedback before resubmitting.
+    - separator
+    - paragraph:
+      - button "Reply to App Review":
+        - generic: Reply to App Review
+  - generic: Date Submitted
+  - generic: Oct 4, 2026 at 2:44 PM
+  - generic: Submission ID
+  - generic: 69e6815f-801c-49b8-bb0f-41be9dd97694
+  - generic: Submitted By
+  - generic: Nathan Fennel
+  - generic: Last Updated By
+  - generic: Apple
+  - button "Cancel Submission"
+- contentinfo:
+  - list:
+    - link "App Store Connect":
+      - /url: /apps
+  - list:
+    - listitem: Copyright © 2026 Apple Inc. All rights reserved. |
+    - link "Terms of Service":
+      - /url: /WebObjects/iTunesConnect.woa/wa/termsOfService
+    - text: "|"
+    - link "Privacy Policy":
+      - /url: https://www.apple.com/legal/privacy
+    - text: "|"
+    - link "Contact Us":
+      - /url: /contact-us

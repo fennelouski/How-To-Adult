@@ -1,0 +1,186 @@
+{
+  "recordedAtUTC": "2026-10-04T12:44:03.095637+00:00",
+  "status": "Bounded iOS remaining native QA complete; parent visual/release decision required.",
+  "shipping": {
+    "count": 35,
+    "aggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+    "changes": 0,
+    "originalAppFileCount": 45,
+    "originalAppFilesUnchanged": true,
+    "originalAppPath": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+    "originalExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+    "testFileSHA256": "5e922f5d7a042206f5317698ebcfbf17af98edf38bfbd005d00b5625ca886ee7",
+    "normalHostUnchanged": true
+  },
+  "rounds": [
+    {
+      "summary": "ios-completion-1-summary.json",
+      "sha256": "4110aa687c794f43be96d5b643e28e3df8ecfe7e8fe38512255f29c4f56dbcba",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Real dark/largest system traits; home/search, full title/summary, lower steps; current Sources viewport/link tapping not demonstrated."
+    },
+    {
+      "summary": "ios-completion-2-summary.json",
+      "sha256": "752e5ae22e71826827ab21420352f6e86e81ae33806d6984827e09b34a54c89b",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Native Share… label differs from test Share."
+    },
+    {
+      "summary": "ios-share-selector-r2-summary.json",
+      "sha256": "55205354769034e7351ca167e86f89d40e9343597bf09ea9c9b4f3cc6ba6d732",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual chooser opened; guessed dismissal labels absent."
+    },
+    {
+      "summary": "ios-share-dismissal-r3-summary.json",
+      "sha256": "5f16fe7d83a0b8637f870daa9100c0052a0bd56842637cb86c9998a8e1e5ad65",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual chooser opened/dismissed and real permission denied; test expected Save behind real error alert."
+    },
+    {
+      "summary": "ios-denied-tail-r4-summary.json",
+      "sha256": "a4d0769806bb961402bccf0367af9376a3b33ba54caae0ad1a5b77a0170084bd",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Actual OK alert recovery then reopen, Save enabled/no Remove and Cancel back to same guide."
+    },
+    {
+      "summary": "ios-notification-settings-r4-summary.json",
+      "sha256": "a620158d071fb4e07de55d5991bd10f6647d2fcefecfbd3ea51fb81e881c6620",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Test expected Notifications at actual Settings root; Apps route required."
+    },
+    {
+      "summary": "ios-notification-apps-r5-summary.json",
+      "sha256": "76e07f4c8712711f0db4f2d83d66e5ac47969dda3bcebbe2fbecece2c4c754c5",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual app Notifications page reached; test used wrong navbar guard."
+    },
+    {
+      "summary": "ios-notification-header-r6-summary.json",
+      "sha256": "7f8441ff07c3320ca673b81a3fd09b51b1f0f61470a4ff6c8b6c1034728e3606",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Observed own-app Allow Notifications enabled; native time popup opened/dismissed; Cancel, no Save."
+    },
+    {
+      "summary": "ios-real-notification-r7-summary.json",
+      "sha256": "b0d88ec9c00404aec7f17d495e3c99395e6127bf754c4a781efa4b675fd4173b",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Spoken minute setter rejected; actual 00…59 list retained; no Save."
+    },
+    {
+      "summary": "ios-real-minute-r8-summary.json",
+      "sha256": "e4981e4adb6224474bfcb3a78d0cf5c74680621ef1b6286e15ea9e143068c078",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual numeric time selection passed; outer sound row tap did not disable nested knob; no Save."
+    },
+    {
+      "summary": "ios-real-sound-r9-summary.json",
+      "sha256": "42a4ec66efc42653d86a686438c25ff25362289f41bb50513abcd8b36e75a9df",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Exact nested knob corrected; one actual future Save, real native delivery/banner tap/reader route passed."
+    }
+  ],
+  "successfulScopes": [
+    "Real dark/largest system trait reflow and preserved actions (original completion1).",
+    "Real native ShareLink chooser open/dismiss and real permission denial (observed r3, overall method retained FAIL).",
+    "Denied-notification alert recovery and unsaved reminder editor cancellation (r4 tail1PASS).",
+    "Genuine own-app Settings permission recovery; native time picker expansion/dismiss/Cancel without scheduling (r6 1PASS).",
+    "Genuine DatePicker future scheduling, pending record, app background, actual SpringBoard delivery and banner tap opening the correct guide (r9 1PASS)."
+  ],
+  "finalVisualReceipt": {
+    "file": "ios-real-sound-r9-visual-observation.json",
+    "sha256": "cc4dc745ba8a97350244deb391f2eca2d133cd9e36d51447782275ff0aa45240"
+  },
+  "keyEvidence": {
+    "preSave": {
+      "file": "ios-real-sound-r9-attachments/91483A48-0417-4005-A590-33C3310D36B3.txt",
+      "sha256": "24b9e64233216c23f5f799a35e6a3ed5160fedaf8d200683316c6ea023aae89e"
+    },
+    "deliveredPNG": {
+      "file": "ios-real-sound-r9-attachments/9CC97C4B-2619-46DC-AFBA-A8CD1D4DF891.png",
+      "sha256": "76a93852c4ee04569c87026f4391afefdc6851c2de68bd8a3933937e0d348022"
+    },
+    "deliveredFullSpringBoardAX": {
+      "file": "ios-real-sound-r9-attachments/BED1F360-195B-4BF3-BBEF-776908AD9255.txt",
+      "sha256": "6cbf409ffdd9e4a435eedcc651f25f28b31cfedf09f704977e54d7cc85fcafd0"
+    },
+    "deliveryMetadata": {
+      "file": "ios-real-sound-r9-attachments/D39F6C66-F576-462B-A132-9E8344FA4608.txt",
+      "sha256": "a3248d964010501f95adac87132f33b3d5a74d339592d1bc9a832e6dbe21eb1e"
+    },
+    "actualTapTarget": {
+      "file": "ios-real-sound-r9-attachments/D8C2D20A-D3AD-464F-9C84-A077D76B96D0.txt",
+      "sha256": "1653e0605fa1c13f97bec4636953323f8063a4945cf3993786fccf6367ded0a8"
+    },
+    "routedReaderPNG": {
+      "file": "ios-real-sound-r9-attachments/5C690FD6-61CB-420C-A2A3-36DB76A37583.png",
+      "sha256": "78e10fc43b1de31bf4fa1921253931e523735b8aebc2f4f66f9a47b6073c9f59"
+    },
+    "routedReaderFullAX": {
+      "file": "ios-real-sound-r9-attachments/1406FFD8-58A8-4EFE-AFC4-809B2F6509EA.txt",
+      "sha256": "2ffa5d2b593cdc5e95ab9d74a0d178169cb9305de2fa773a205a1c71b7573354"
+    },
+    "routeMetadata": {
+      "file": "ios-real-sound-r9-attachments/E6FAD891-7A32-4C98-97E3-518135023412.txt",
+      "sha256": "d2b23169658cded0cdb51303e2e54e66eb8366425d00c67bd12700cfd45dceec"
+    },
+    "cleanupOutcome": {
+      "file": "ios-real-sound-r9-attachments/8773A124-D8CB-4805-A4CE-FDD385C76ACE.txt",
+      "sha256": "f785bbe66374cf30822c2cead5e27c02c37b6717210f9e47519d0de59cbec3e6"
+    }
+  },
+  "finalDevice": {
+    "udid": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "state": "Shutdown",
+    "traits": {
+      "appearance": "light",
+      "content_size": "large"
+    },
+    "shutdownExit": 0,
+    "shutdownLoggedAtUTC": "2026-10-04T12:35:15.244302+00:00",
+    "serializedBuildRuntimeSlotReleased": true
+  },
+  "limitations": [
+    "Simulator native behavior, not physical-device sound/haptic feel or every notification display mode.",
+    "No source edits, fabricated UI, synthetic notifications, icon/deeplink route or permission database changes.",
+    "Intermediate wheel screenshot is a transitional diagnostic; stable selected-time proof and pre-Save snapshot are used for assertions.",
+    "Current dark/largest third capture labels Sources but depicts lower guide steps, so it does not establish Sources visibility or link tapping.",
+    "Historical Phone/Pad13/13 scopes remain separate. Current completion rounds do not establish new iPad or Mac notification behavior.",
+    "Mac native QA remains held with root; this handoff does not authorize or claim Mac submission.",
+    "No ASC, hosting deployment, commit or provider changes performed."
+  ],
+  "priorHistoricalProof": "../2026-10-03-how-to-adult/native-inputs-live-privacy-final.json and native-builds-live-privacy-final.json; Phone13/13 and Pad13/13 retained separately."
+}

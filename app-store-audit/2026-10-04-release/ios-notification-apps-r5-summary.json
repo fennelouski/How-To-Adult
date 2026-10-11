@@ -1,0 +1,49 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "modelName" : "iPhone 16 Pro Max",
+        "osBuildNumber" : "22G86",
+        "osVersion" : "18.6",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 0,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1791115049.529,
+  "passedTests" : 0,
+  "result" : "Failed",
+  "skippedTests" : 0,
+  "startTime" : 1791115014.108,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "XCTAssertTrue failed",
+      "targetName" : "HowToAdultUITests-iOS",
+      "testIdentifier" : 1,
+      "testIdentifierString" : "AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance()",
+      "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance",
+      "testName" : "testNativeNotificationSettingsAndPickerReconnaissance()"
+    }
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 1
+}

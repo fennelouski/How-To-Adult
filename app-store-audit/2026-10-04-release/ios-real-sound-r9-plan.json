@@ -1,0 +1,32 @@
+{
+  "preparedAtUTC": "2026-10-04T12:29:35.391761+00:00",
+  "status": "Rootapprovedsolefreshmatchingjobs2runner/exactphaseCruntimeafteractualr8Shutdownandexports",
+  "sourceFreeze": "ios-real-sound-r9-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "5e922f5d7a042206f5317698ebcfbf17af98edf38bfbd005d00b5625ca886ee7",
+  "previousTestSHA256": "3e50c5c8e5c65df529848fbed467b56f76c0dfbba91c7079777c3d59475f351e",
+  "patch": "ios-real-sound-r9-test-only.patch",
+  "patchSHA256": "3e065239203c148bea9f187cb5b19dcb6d5bf78d3129aef88641f0639cd5142f",
+  "scripts": {
+    "build-ios-real-sound-r9-runner.py": "44000d49d6524eb7cea52d06c8722bddc17c739f6a436f1f94c7471fee7388fd",
+    "run-ios-real-sound-r9.py": "dc8a4d962f06753f0e2cf6ff71f1ec7a610e58d38cfc0f05afb3cbb1d853f614"
+  },
+  "onlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "onlyCorrection": "Actualunique nestedSwitchrole51x31\u00b11pt known0/1/hittable; taponly1, waitinner+outer0<=5sec, actualAX/PNGcaptureandfuture>=120guardbeforeoneSave",
+  "actualEvidence": "ios-real-minute-r8-sound-snapshot.json",
+  "numericTimeVerifiedEvidence": "ios-real-minute-r8-attachments/293FD133-9F35-469A-8934-57883DA99179.png",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "retainedFailures": [
+    "ios-real-minute-r8-summary.json",
+    "ios-real-notification-r7-summary.json"
+  ],
+  "futureSavePolicy": "Same-dayceil(now+240sec), actualspokenwheel/compactdate/timematch, reminderSound0, >=120sec remaining",
+  "originalBuildAppAndOldMethodsUnchanged": true,
+  "noSyntheticNotifications": true,
+  "buildBootRuntimeDuringPreparation": 0
+}

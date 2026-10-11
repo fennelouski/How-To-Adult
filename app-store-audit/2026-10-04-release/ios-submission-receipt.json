@@ -1,0 +1,334 @@
+{
+  "recordedAtUTC": "2026-10-04T12:49:26.786565+00:00",
+  "appleID": "6818756061",
+  "app": "How to Adult: Pocket Guide",
+  "scope": "Authoritative completed iOS App Review submission; actual final normal App Store Connect confirmation/details, not an inference from upload. Mac remains held.",
+  "actor": "Root performed final Apple submission; portable_marketing reconciled saved evidence and updated only this global ledger entry.",
+  "authorization": {
+    "standingRecord": {
+      "path": "/Users/nathan/Documents/GitHub/app-release-audit/apple-review-standing-authorization.md",
+      "sha256": "c2a7df95ed6762dd1fa4d2879ade973484e255353520f459656ed47f8b6ebdc4"
+    },
+    "ordinaryReviewActionsAuthorized": true
+  },
+  "iOS": {
+    "version": "1.0",
+    "build": "1",
+    "status": "Waiting for Review",
+    "submitted": true,
+    "submissionID": "69e6815f-801c-49b8-bb0f-41be9dd97694",
+    "appleBuildID": "2a23e261-5a5d-4d6f-8509-5958896e55c5",
+    "appleSubmittedLocal": "Oct 4, 2026 at 2:44 PM",
+    "localTimeZone": "Europe/Amsterdam",
+    "submittedAtUTCMinute": "2026-10-04T12:44:00Z",
+    "timestampPrecision": "Apple UI provides minute precision; seconds are not claimed.",
+    "submittedBy": "Nathan Fennel",
+    "reviewURL": "https://appstoreconnect.apple.com/apps/6818756061/distribution/reviewsubmissions/details/69e6815f-801c-49b8-bb0f-41be9dd97694",
+    "proof": [
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/submitted-ios-1.0-1-confirmation.txt",
+        "sha256": "d4b8c83c3aefb6fdfe47b8ec3d6f1ea5c6fee101d29f92780f95d2533ce3c402"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/submitted-ios-1.0-1-details.txt",
+        "sha256": "e6fd621462012808f194441a15100881e58e451773d14c3e29b4bb9e09a39400"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/submitted-ios-1.0-1-details.png",
+        "sha256": "f1f029e00b513d98ef351bea4497b7215c2554e782313316ea770e518d747c9b"
+      }
+    ]
+  },
+  "source": {
+    "localPath": "/Users/nathan/Documents/GitHub/How-To-Adult",
+    "nativeReleaseRevision": "ca8edc4e786d25504b06fa177468f42adde376fd",
+    "currentRepositoryRevision": "42232bb51f32b24971932efadf142f1e50591243",
+    "qualification": "Later audit/documentation commits; all 35 frozen shipping inputs still match the native release revision. Test-only QA edits are outside shipping input scope.",
+    "frozenInputs": 35,
+    "aggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+    "allFrozenNativeInputsMatchNow": true,
+    "proof": [
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/root-final-ios-source-package-check.json",
+        "sha256": "87c304335eb35be5704c004b87da848a7d3f4f04ef9226874978c1f0a6f9a826"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/native-inputs-live-privacy-final.json",
+        "sha256": "3125ec8c3eb9deace7c171a74bc27e9969385a83dd08ef8ab3e075a7681d3316"
+      }
+    ]
+  },
+  "packageAndUpload": {
+    "localDistributionIPA": "/Users/nathan/Library/Application Support/CodexReleaseArtifacts/HowToAdult/Revision-ca8edc4e786d-live-privacy-20261003T091057Z-945bab7a/iOS/Export/How to Adult.ipa",
+    "localDistributionIPASHA256": "1b5d869bd3d373c45152aef86dab4ee75b427720340fb738a110b243ea8f3d7f",
+    "packageSignatureVerifiedInOriginalInspection": true,
+    "version": "1.0",
+    "build": "1",
+    "families": [
+      1,
+      2
+    ],
+    "nonExemptEncryption": false,
+    "appIconVerified": true,
+    "uploadExit": 0,
+    "uploadFinishedAtUTC": "2026-10-03T09:22:03.867376+00:00",
+    "uploadReceipt": {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/app-store-upload-live-privacy-final.json",
+      "sha256": "b3a37ed3c7acf06c5c755358a2ebad33d453ee6b27418e730f36435a659ebff2"
+    },
+    "packageInspection": {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/final-package-inspection-live-privacy-final.json",
+      "sha256": "ce576997d471549a4fe40aafbcb41a834fd19b74e480e7557400f710df2c4f25"
+    },
+    "uploadPayloadByteHashClaimed": false,
+    "qualification": "The verified local IPA is not asserted to be the exact bytes sent by Xcode upload. The original upload receipt preserves archive metadata annotation and signed-app signature checks. Live selected build and final submitted item are established separately by actual ASC proof."
+  },
+  "privacy": {
+    "status": "Published",
+    "dataType": "Other Diagnostic Data",
+    "purpose": "App Functionality",
+    "linkedToUser": true,
+    "tracking": false,
+    "proof": [
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/privacy-publication-receipt.json",
+        "sha256": "0d5193fe71ad3fdfa9419d8023e6cdd0bd3de2d76e96a931093ee8d505b42bbe"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/published-privacy-label.txt",
+        "sha256": "4f4539f1c2bf1117b48ca5a75e747c1c42aa5bb7b9ed9bf6cdf9d600d69f1a6e"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/privacy-current-final-check.txt",
+        "sha256": "fd2479cbbf349e2e722e14b427292fdb9ccb46ed864973f39017d1e74ee93cd5"
+      }
+    ],
+    "historicalPublicationReceiptStatePreserved": "Original publication receipt still records the then-current Prepare for Submission state; this new final receipt supersedes that state for iOS only."
+  },
+  "commercial": {
+    "zeroPriceCountries": 175,
+    "availableOnReleaseCountries": 175,
+    "all181CountryGroupFutureCheckboxesSelected": true,
+    "futureCountriesEnabled": true,
+    "release": "Automatically release after App Review",
+    "signInRequired": false,
+    "proof": [
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/current-worldwide-price-rows.json",
+        "sha256": "5862ca3b42ba7fc613184755e8c792d1721678c2fafe165498a82d4ac1dee660"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/current-worldwide-availability-rows.json",
+        "sha256": "9fd2c62933f6f1c5b5402cbea8213c3eb3a7dca00d4cfed40333dd99b7a73086"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/availability-selected-checks.json",
+        "sha256": "c9bd8c61284c8a92c823cb59bd68b8df18d4844dd50fe41e15a8e04ddf986e01"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/pre-add-review-final-listing.txt",
+        "sha256": "394b3913a97b0262a46dba6e9e53eb309582e34398d7d9314f469e89d49e6744"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-copy-platform-accuracy-saved.txt",
+        "sha256": "394b3913a97b0262a46dba6e9e53eb309582e34398d7d9314f469e89d49e6744"
+      }
+    ]
+  },
+  "gallery": {
+    "iPhone": 10,
+    "iPad": 10,
+    "order": "01..10",
+    "rootApprovedActualAppleHostedImages": 20,
+    "dimensions": {
+      "iPhone": [
+        1320,
+        2868
+      ],
+      "iPad": [
+        2752,
+        2064
+      ]
+    },
+    "visualContentAndOrderMatch": true,
+    "exactDecodedPixelMatches": 0,
+    "exactByteOrDecodedPixelIdentityClaimed": false,
+    "qualification": "Apple PNG preview decoded pixels differ slightly from supplied JPG files; actual per-channel mean absolute differences all below0.2/255, edge max45/255. Images match visually and in dimensions, layout/content/order. No exact byte/pixel identity claim.",
+    "proof": [
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded-marketing-pixel-verification.json",
+        "sha256": "688416dbafd9619f1c99f926e778d4151237c49b697016bf94e86af365c43b76"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded-iphone-media.json",
+        "sha256": "ee95dbf74e26726a9030f6d740861f63baf8c2c58d12fafb5c9b3730fc78c663"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded-ipad-media.json",
+        "sha256": "438412f20cfa7fb73a017d3082d1e6ed934e02e17eb1925d7750fc69fc82381d"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/media-iphone-persisted-order.txt",
+        "sha256": "b7dcc505ef706df8a3891931b74887941ba5f08a89b927bf64448524ef8111f4"
+      },
+      {
+        "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/media-ipad-persisted-order.txt",
+        "sha256": "7874643af09744f4cd6a665d03213961ea31349007844fe05f292891d240e3cc"
+      }
+    ]
+  },
+  "nativeQA": {
+    "originalHistoricalPhoneAndPad": "13/13 each retained separately in Oct3 live-privacy receipts; no new broad suite claim.",
+    "currentCompletion": {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-completion-final-handoff.json",
+      "sha256": "93a56fbae7aa8229fef45104392823b704a395f4657e5fef2768de6b1d35ddab"
+    },
+    "finalRealDelivery": {
+      "method": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+      "processed": 1,
+      "passed": 1,
+      "failed": 0,
+      "targetUTC": "2026-10-04T12:35:00Z",
+      "actualNativeBannerTapped": true,
+      "actualForegroundCorrectReader": true,
+      "proof": [
+        {
+          "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-real-sound-r9-summary.json",
+          "sha256": "42a4ec66efc42653d86a686438c25ff25362289f41bb50513abcd8b36e75a9df"
+        },
+        {
+          "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-real-sound-r9-runtime-receipt.json",
+          "sha256": "f81ca8da5be530e5e9cb0a9c752fa5cd1eb4ba8fb8838e11ea80b42f88c96525"
+        },
+        {
+          "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-real-sound-r9-visual-observation.json",
+          "sha256": "cc4dc745ba8a97350244deb391f2eca2d133cd9e36d51447782275ff0aa45240"
+        }
+      ]
+    },
+    "rootFinalNativeApproval": {
+      "source": "Parent /root explicit final submission handoff message in this chat, 2026-10-04",
+      "reviewer": "root",
+      "read": [
+        "ios-real-sound-r9-summary.json",
+        "ios-real-sound-r9-runtime-receipt.json",
+        "ios-real-sound-r9-attachments/BED1F360-195B-4BF3-BBEF-776908AD9255.txt",
+        "ios-real-sound-r9-attachments/D8C2D20A-D3AD-464F-9C84-A077D76B96D0.txt",
+        "ios-real-sound-r9-attachments/1406FFD8-58A8-4EFE-AFC4-809B2F6509EA.txt"
+      ],
+      "viewed": [
+        "ios-real-sound-r9-attachments/9CC97C4B-2619-46DC-AFBA-A8CD1D4DF891.png",
+        "ios-real-sound-r9-attachments/5C690FD6-61CB-420C-A2A3-36DB76A37583.png"
+      ],
+      "decision": "Approved the genuine one processed / one passed native scheduling, delivery and tap-route result before final Apple submission."
+    },
+    "darkLargestScope": "Actual system-trait test1PASS and root visual approval; lower-steps screenshot named Sources is not source-link visibility/tap proof.",
+    "noShippingChangeToFixDriver": true,
+    "allPriorFailedRoundsPreserved": true
+  },
+  "liveWebsiteAndCatalog": {
+    "verification": {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/live-policy-support-catalog-verification.json",
+      "sha256": "3a03ff183949bd49a97a39c1b668b05e339c9356a29a50223a2e6f9d5e59bd40"
+    },
+    "verifiedAtUTC": "2026-10-04T12:01:32.809755+00:00",
+    "privacySupportSourceRevision": "9e2058d195bf3c8ef1e6630267e815a1346349d3",
+    "backendCommittedDeploymentRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+    "canonicalProductionRoutingUnchanged": true,
+    "results": [
+      {
+        "name": "privacy-canonical",
+        "url": "https://nathanfennel.com/how-to-adult/privacy.html",
+        "finalURL": "https://nathanfennel.com/how-to-adult/privacy.html",
+        "status": 200,
+        "bytes": 3719,
+        "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+        "matchesCurrentLocal": true
+      },
+      {
+        "name": "privacy-aws",
+        "url": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/privacy.html",
+        "finalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/privacy.html",
+        "status": 200,
+        "bytes": 3719,
+        "sha256": "26eaeadf3fd98751730419ac79361493dc3905b31000ea3e4914b2e21da4012a",
+        "matchesCurrentLocal": true
+      },
+      {
+        "name": "support-canonical",
+        "url": "https://nathanfennel.com/how-to-adult/support.html",
+        "finalURL": "https://nathanfennel.com/how-to-adult/support.html",
+        "status": 200,
+        "bytes": 2774,
+        "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+        "matchesCurrentLocal": true
+      },
+      {
+        "name": "support-aws",
+        "url": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/support.html",
+        "finalURL": "https://nfbucketforstuff.s3.us-west-2.amazonaws.com/app-support/how-to-adult/support.html",
+        "status": 200,
+        "bytes": 2774,
+        "sha256": "c342546c088804317a40c57c4a9638613fa1b31fc408d6818c7b4ba28c50b5ec",
+        "matchesCurrentLocal": true
+      },
+      {
+        "name": "catalog-vercel",
+        "url": "https://how-to-adult-guides.vercel.app/v1/catalog",
+        "finalURL": "https://how-to-adult-guides.vercel.app/v1/catalog",
+        "status": 200,
+        "bytes": 80232,
+        "sha256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+        "rootKeys": [
+          "articles",
+          "categories",
+          "publishedAt",
+          "revision",
+          "schemaVersion"
+        ],
+        "articleCount": 56,
+        "categoryCount": 7,
+        "revision": "2026-10-03-editor-verified-2-094423"
+      },
+      {
+        "name": "catalog-aws",
+        "url": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+        "finalURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com/v1/catalog",
+        "status": 200,
+        "bytes": 80232,
+        "sha256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+        "rootKeys": [
+          "articles",
+          "categories",
+          "publishedAt",
+          "revision",
+          "schemaVersion"
+        ],
+        "articleCount": 56,
+        "categoryCount": 7,
+        "revision": "2026-10-03-editor-verified-2-094423"
+      }
+    ],
+    "scope": "Saved fresh read-only endpoint verification, canonical and AWS both200 with matching bodies. No new deployment or new endpoint request performed by this final reconciliation."
+  },
+  "macOS": {
+    "version": "1.0",
+    "status": "Prepare for Submission",
+    "submitted": false,
+    "held": true,
+    "blockers": [
+      "Original-bundle native Mac runtime/window QA and native gallery remain unverified."
+    ],
+    "proof": {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/submitted-ios-1.0-1-confirmation.txt",
+      "sha256": "d4b8c83c3aefb6fdfe47b8ec3d6f1ea5c6fee101d29f92780f95d2533ce3c402"
+    }
+  },
+  "limits": [
+    "Waiting for Review is not Apple approval or public storefront availability.",
+    "No Mac submission or full native Mac readiness claim.",
+    "No visionOS build, boot, runtime, capture, upload or submission.",
+    "No new native build, device operation, browser mutation, web deployment, account/key operation or commit performed in this reconciliation.",
+    "Historical release-checklist and upload/publication receipts are preserved; their earlier statuses are not silently rewritten."
+  ]
+}

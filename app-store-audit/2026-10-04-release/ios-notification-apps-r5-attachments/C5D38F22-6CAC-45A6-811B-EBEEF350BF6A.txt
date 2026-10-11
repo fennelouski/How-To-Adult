@@ -1,0 +1,36 @@
+Attributes: Application, 0x105d28b40, pid: 77057, label: 'Settings'
+Element subtree:
+ →Application, 0x105d28b40, pid: 77057, label: 'Settings'
+    Window (Main), 0x105d0bce0, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x105d12720, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x105d17340, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x105d25820, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x105d27460, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x105d1f520, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x105d19820, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x105d1aa60, {{0.0, 0.0}, {440.0, 956.0}}
+                    NavigationBar, 0x105d21930, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Notifications'
+                      Button, 0x105d21cb0, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult'
+                      StaticText, 0x105d14d60, {{169.3, 68.0}, {101.3, 20.3}}, label: 'Notifications'
+                    Other, 0x105d176d0, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x105d107b0, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x105d16fc0, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x105d11e00, {{0.0, 0.0}, {440.0, 956.0}}
+                            Other, 0x105d12180, {{0.0, 0.0}, {440.0, 956.0}}
+                              Table, 0x105d14300, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x105d100a0, {{0.0, 100.3}, {440.0, 17.7}}
+                                Cell, 0x105d0ef10, {{20.0, 118.0}, {400.0, 44.0}}, label: 'Allow Notifications', value: 0
+                                  StaticText, 0x105d29960, {{40.0, 130.0}, {141.3, 20.3}}, identifier: 'ALLOW_NOTIFICATIONS_ID', label: 'Allow Notifications'
+                                  Switch, 0x105d0cbd0, {{349.0, 124.7}, {51.0, 31.0}}, label: 'Allow Notifications', value: 0
+                                Other, 0x105d19490, {{0.0, 162.0}, {440.0, 17.3}}
+                                Other, 0x105d1a6c0, {{407.0, 100.3}, {30.0, 799.7}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                                  Other, 0x105d1c410, {{434.0, 826.0}, {3.0, 71.0}}
+                                Other, 0x105d1c7b0, {{56.0, 923.0}, {328.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                  Other, 0x105d20570, {{59.0, 950.0}, {322.0, 3.0}}
+Path to element:
+ →Application, 0x105d28b40, pid: 77057, label: 'Settings'
+Query chain:
+ →Find: Application 'com.apple.Preferences'
+  Output: {
+    Application, 0x105e0c090, pid: 77057, label: 'Settings'
+  }

@@ -1,0 +1,376 @@
+{
+  "recordedAtUTC": "2026-10-04T12:44:03.095637+00:00",
+  "scope": "Bounded iOS reminder delivery and tap-route proof, original Release1.0(1), private iOS18.6 Phone; no shipping edit or release claim.",
+  "processedResult": {
+    "method": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "summary": "ios-real-sound-r9-summary.json",
+    "summarySHA256": "42a4ec66efc42653d86a686438c25ff25362289f41bb50513abcd8b36e75a9df"
+  },
+  "reviewer": "portable_marketing; all 15 genuine native PNGs individually viewed, complete critical AX and JSON metadata read. Parent final visual/release approval remains separate.",
+  "shippingGuard": {
+    "count": 35,
+    "aggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+    "changes": 0,
+    "originalAppFileCount": 45,
+    "originalAppFilesUnchanged": true,
+    "originalAppPath": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+    "originalExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+    "testFileSHA256": "5e922f5d7a042206f5317698ebcfbf17af98edf38bfbd005d00b5625ca886ee7",
+    "normalHostUnchanged": true
+  },
+  "actualReminder": {
+    "guideID": "wash-your-first-load",
+    "title": "Wash a load of laundry",
+    "timeZone": "Europe/Amsterdam",
+    "nativeSelectedDate": "Oct 4, 2026",
+    "nativeSelectedTime": "2:35 PM",
+    "targetUTC": "2026-10-04T12:35:00Z",
+    "secondsRemainingImmediatelyBeforeSave": 250.87108099460602,
+    "sound": false,
+    "saveCount": 1,
+    "pendingRecordProof": "Native future Remove reminder control and dated Reminders row, not direct permission-database manipulation.",
+    "awayBeforeDelivery": "Returned to Home with guide-reader absent, then XCUIDevice Home button; actual background state recorded.",
+    "observedDeliveryUTC": "2026-10-04T12:35:00Z",
+    "nativeTapTarget": {
+      "elementType": "83",
+      "frame": "(8.0, 56.0, 424.0, 66.0)",
+      "identifier": "NotificationShortLookView",
+      "label": "HOW TO ADULT, now, Wash a load of laundry, Your guide is ready when you are."
+    },
+    "actualRoute": {
+      "foreground": "true",
+      "guideReader": "true",
+      "iconOrDeepLinkLaunch": "false",
+      "syntheticNotification": "false",
+      "title": "Wash a load of laundry"
+    },
+    "cleanup": {
+      "action": "No still-future native Remove control; cancelled editor, preserved expired/delivered evidence"
+    }
+  },
+  "keyEvidence": {
+    "preSave": {
+      "file": "ios-real-sound-r9-attachments/91483A48-0417-4005-A590-33C3310D36B3.txt",
+      "sha256": "24b9e64233216c23f5f799a35e6a3ed5160fedaf8d200683316c6ea023aae89e"
+    },
+    "deliveredPNG": {
+      "file": "ios-real-sound-r9-attachments/9CC97C4B-2619-46DC-AFBA-A8CD1D4DF891.png",
+      "sha256": "76a93852c4ee04569c87026f4391afefdc6851c2de68bd8a3933937e0d348022"
+    },
+    "deliveredFullSpringBoardAX": {
+      "file": "ios-real-sound-r9-attachments/BED1F360-195B-4BF3-BBEF-776908AD9255.txt",
+      "sha256": "6cbf409ffdd9e4a435eedcc651f25f28b31cfedf09f704977e54d7cc85fcafd0"
+    },
+    "deliveryMetadata": {
+      "file": "ios-real-sound-r9-attachments/D39F6C66-F576-462B-A132-9E8344FA4608.txt",
+      "sha256": "a3248d964010501f95adac87132f33b3d5a74d339592d1bc9a832e6dbe21eb1e"
+    },
+    "actualTapTarget": {
+      "file": "ios-real-sound-r9-attachments/D8C2D20A-D3AD-464F-9C84-A077D76B96D0.txt",
+      "sha256": "1653e0605fa1c13f97bec4636953323f8063a4945cf3993786fccf6367ded0a8"
+    },
+    "routedReaderPNG": {
+      "file": "ios-real-sound-r9-attachments/5C690FD6-61CB-420C-A2A3-36DB76A37583.png",
+      "sha256": "78e10fc43b1de31bf4fa1921253931e523735b8aebc2f4f66f9a47b6073c9f59"
+    },
+    "routedReaderFullAX": {
+      "file": "ios-real-sound-r9-attachments/1406FFD8-58A8-4EFE-AFC4-809B2F6509EA.txt",
+      "sha256": "2ffa5d2b593cdc5e95ab9d74a0d178169cb9305de2fa773a205a1c71b7573354"
+    },
+    "routeMetadata": {
+      "file": "ios-real-sound-r9-attachments/E6FAD891-7A32-4C98-97E3-518135023412.txt",
+      "sha256": "d2b23169658cded0cdb51303e2e54e66eb8366425d00c67bd12700cfd45dceec"
+    },
+    "cleanupOutcome": {
+      "file": "ios-real-sound-r9-attachments/8773A124-D8CB-4805-A4CE-FDD385C76ACE.txt",
+      "sha256": "f785bbe66374cf30822c2cead5e27c02c37b6717210f9e47519d0de59cbec3e6"
+    }
+  },
+  "images": [
+    {
+      "file": "ios-real-sound-r9-attachments/92815C19-BF1A-4CD2-AE1C-2880DA11951A.png",
+      "sha256": "7457d97a0c4d740b01613ce1f33a039d36e5ba76c4b13b388f63253f94bc4e25",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "49-native-private-reminder-cleanup_0_E4899669-3058-4ACC-A5AC-CCDD91439E29.png",
+      "captureTimestamp": 1791117311.872,
+      "individuallyViewed": true,
+      "observation": "Post-expiry cleanup inspection: no still-future Remove control; untouched default new reminder 3:35 PM, sound remains off. Cancel used; no second Save."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/5C690FD6-61CB-420C-A2A3-36DB76A37583.png",
+      "sha256": "78e10fc43b1de31bf4fa1921253931e523735b8aebc2f4f66f9a47b6073c9f59",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "44-real-notification-routed-guide_0_9A761E9F-7F40-43EC-ABE2-B7D82E3AAA5F.png",
+      "captureTimestamp": 1791117303.755,
+      "individuallyViewed": true,
+      "observation": "Tapping the actual banner opens foreground app directly to laundry guide reader at 2:35 PM."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/9CC97C4B-2619-46DC-AFBA-A8CD1D4DF891.png",
+      "sha256": "76a93852c4ee04569c87026f4391afefdc6851c2de68bd8a3933937e0d348022",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "42-real-native-notification-observation_0_C0C2A164-DEE5-44D8-86BE-E16E74A6CAAA.png",
+      "captureTimestamp": 1791117300.553,
+      "individuallyViewed": true,
+      "observation": "Actual SpringBoard banner at 2:35 PM displays HOW TO ADULT, Wash a load of laundry and the genuine reminder body."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/777930D0-811C-4793-B54A-603B5A7C3016.png",
+      "sha256": "ca6f741ad550badec206aece88eeab6cb06ddfc0ffed4b85ea7e0425b14756d8",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "41-real-springboard-before-delivery_0_8015DF6E-1593-40D4-84FC-4B30477762B8.png",
+      "captureTimestamp": 1791117062.081,
+      "individuallyViewed": true,
+      "observation": "Actual SpringBoard at 2:31 PM while app is in background; no delivery yet."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/A6B9C934-CB5E-4775-81D3-CEA148E335CD.png",
+      "sha256": "37523350aadb08bb982b1b943cf7e9dd4079212948e1d6efd1cca0439169ed97",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "40-real-reminder-away-from-reader_0_8AD5C82B-7416-432B-A7E7-7B93151BA830.png",
+      "captureTimestamp": 1791117060.219,
+      "individuallyViewed": true,
+      "observation": "App navigated away from the guide reader to real Home before backgrounding."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/7CB5668B-BAB3-422B-BE59-CED942940570.png",
+      "sha256": "ef9426c85bc2dc1b9ffb63d1566cdb8f71eee7eeb9ef714f51985dcbcb91495f",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "39-real-reminders-list_0_90D42291-F750-4631-8E52-A5F911FAD527.png",
+      "captureTimestamp": 1791117057.448,
+      "individuallyViewed": true,
+      "observation": "Actual Reminders list shows laundry guide scheduled Oct 4, 2026 at 2:35 PM."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/6573216B-DD5D-4D89-9CE9-EC5824603EF0.png",
+      "sha256": "ef2c56ad15e08e390998f8c8f17f1d405d1b88daad1c834190e0925450bbbc76",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "38-real-reminder-pending-record_0_F5002B34-E245-478B-B6C5-FAA26461DFD2.png",
+      "captureTimestamp": 1791117053.369,
+      "individuallyViewed": true,
+      "observation": "Reopened reminder has actual future 2:35 PM date, sound off and native Remove reminder control, proving saved record."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/379825C2-80BD-4F54-8A0C-EAA761032A8F.png",
+      "sha256": "f6c482af151c2a3a79a95bca0d8605f00185164f0e7919d33751feb43891fb34",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "37-real-reminder-save-result_0_92D0B3E7-BB43-4B2B-9B58-2E1555C59F92.png",
+      "captureTimestamp": 1791117051.337,
+      "individuallyViewed": true,
+      "observation": "Actual reader after reminder save, full laundry title and toolbar actions."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/88559363-8994-4224-9842-C6060A01735D.png",
+      "sha256": "e5180831074e64e2e765f8355426252aa444659e63de1f1397e7a7c1c85da5e8",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "36-real-reminder-before-save_0_BBA8035A-A80B-41D9-BBD4-B1D764CC4DA8.png",
+      "captureTimestamp": 1791117049.183,
+      "individuallyViewed": true,
+      "observation": "Immediate pre-Save date/time 2:35 PM and sound off; full Cancel/Save visible."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/D49AEB0F-7A37-4C28-8173-315D500BBBF2.png",
+      "sha256": "e5180831074e64e2e765f8355426252aa444659e63de1f1397e7a7c1c85da5e8",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "35b-real-reminder-actual-sound-result_0_231E78CC-E52C-481D-B886-1523985F85D1.png",
+      "captureTimestamp": 1791117048.867,
+      "individuallyViewed": true,
+      "observation": "Actual gray native sound switch off; final selected date/time intact."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/91DA4923-448C-45B1-8F14-85CF4F9BBCDB.png",
+      "sha256": "52566e5569af0ebf8560d78a173026e530356ade6c0f26cb34f823347427d806",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "35a-real-reminder-actual-sound-control_0_3CD1BDED-3442-4A62-AC9D-946BDF37FEC2.png",
+      "captureTimestamp": 1791117046.752,
+      "individuallyViewed": true,
+      "observation": "Selected Oct 4, 2026 / 2:35 PM before actual nested sound knob is disabled."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/717D7AAB-C40F-42F0-A669-132624AFB19B.png",
+      "sha256": "1c43c6cd23ed0b8c3dd849573217764b82029ff429e6501a043e48ca16867bc2",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "34-real-reminder-selected-time_0_D93D00CE-DEAF-4D06-9C2F-753B0C8BFBD1.png",
+      "captureTimestamp": 1791117045.768,
+      "individuallyViewed": true,
+      "observation": "Stable final native wheel and compact control both show 2:35 PM."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/DEB2B2C9-1C2F-4A89-8C90-12B481A42AA1.png",
+      "sha256": "1861076bb4645bd9ecb64a7eaa66c50cb4a2197ab8a89208aaa6de22b9e23974",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "33-real-reminder-minute-selection_0_ABC80102-1027-464A-9C5A-928F6868333D.png",
+      "captureTimestamp": 1791117045.386,
+      "individuallyViewed": true,
+      "observation": "Intermediate wheel selection capture is transitional: compact value 3:33 PM while wheel still depicts 3:30. Not final selected-time proof or a marketing screenshot."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/4441613A-4F74-43D2-A9C9-0830D208A6FA.png",
+      "sha256": "65f611d15b1ed4d6dd303f730817c1a88ef899e9b87695abf65f6d82f47c611d",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "32-real-reminder-observed-wheels_0_9793C096-3A69-4CA5-B9DD-EEED0A1841BF.png",
+      "captureTimestamp": 1791117044.917,
+      "individuallyViewed": true,
+      "observation": "Native time popover with genuine hour/minute/AM-PM columns."
+    },
+    {
+      "file": "ios-real-sound-r9-attachments/8CC336CA-E80E-43FD-BAB1-ECEA01F2FBFE.png",
+      "sha256": "2137dc4c7c5c39866182eb788ba8645b476eb6c4f76fd94b8e82c73506e04cdb",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "captureName": "31-real-reminder-initial-date_0_08B52073-C7DC-4002-BCAC-6835B9E34990.png",
+      "captureTimestamp": 1791117043.774,
+      "individuallyViewed": true,
+      "observation": "Initial native reminder sheet; Oct 4, 2026 and 3:30 PM, sound on; Cancel and Save fit."
+    }
+  ],
+  "attachmentManifest": {
+    "file": "ios-real-sound-r9-attachments/manifest.json",
+    "sha256": "9c3504ba34c251fe5aa501c70995a44ce9419bde183525f4f5e0d22fc8cff2f8",
+    "attachments": 36,
+    "pngs": 15
+  },
+  "finalDevice": {
+    "udid": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "state": "Shutdown",
+    "traits": {
+      "appearance": "light",
+      "content_size": "large"
+    },
+    "shutdownExit": 0,
+    "shutdownLoggedAtUTC": "2026-10-04T12:35:15.244302+00:00",
+    "serializedBuildRuntimeSlotReleased": true
+  },
+  "runtimeReceipt": {
+    "file": "ios-real-sound-r9-runtime-receipt.json",
+    "sha256": "f81ca8da5be530e5e9cb0a9c752fa5cd1eb4ba8fb8838e11ea80b42f88c96525"
+  },
+  "priorRoundsPreserved": [
+    {
+      "summary": "ios-completion-1-summary.json",
+      "sha256": "4110aa687c794f43be96d5b643e28e3df8ecfe7e8fe38512255f29c4f56dbcba",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Real dark/largest system traits; home/search, full title/summary, lower steps; current Sources viewport/link tapping not demonstrated."
+    },
+    {
+      "summary": "ios-completion-2-summary.json",
+      "sha256": "752e5ae22e71826827ab21420352f6e86e81ae33806d6984827e09b34a54c89b",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Native Share… label differs from test Share."
+    },
+    {
+      "summary": "ios-share-selector-r2-summary.json",
+      "sha256": "55205354769034e7351ca167e86f89d40e9343597bf09ea9c9b4f3cc6ba6d732",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual chooser opened; guessed dismissal labels absent."
+    },
+    {
+      "summary": "ios-share-dismissal-r3-summary.json",
+      "sha256": "5f16fe7d83a0b8637f870daa9100c0052a0bd56842637cb86c9998a8e1e5ad65",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual chooser opened/dismissed and real permission denied; test expected Save behind real error alert."
+    },
+    {
+      "summary": "ios-denied-tail-r4-summary.json",
+      "sha256": "a4d0769806bb961402bccf0367af9376a3b33ba54caae0ad1a5b77a0170084bd",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Actual OK alert recovery then reopen, Save enabled/no Remove and Cancel back to same guide."
+    },
+    {
+      "summary": "ios-notification-settings-r4-summary.json",
+      "sha256": "a620158d071fb4e07de55d5991bd10f6647d2fcefecfbd3ea51fb81e881c6620",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Test expected Notifications at actual Settings root; Apps route required."
+    },
+    {
+      "summary": "ios-notification-apps-r5-summary.json",
+      "sha256": "76e07f4c8712711f0db4f2d83d66e5ac47969dda3bcebbe2fbecece2c4c754c5",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual app Notifications page reached; test used wrong navbar guard."
+    },
+    {
+      "summary": "ios-notification-header-r6-summary.json",
+      "sha256": "7f8441ff07c3320ca673b81a3fd09b51b1f0f61470a4ff6c8b6c1034728e3606",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Observed own-app Allow Notifications enabled; native time popup opened/dismissed; Cancel, no Save."
+    },
+    {
+      "summary": "ios-real-notification-r7-summary.json",
+      "sha256": "b0d88ec9c00404aec7f17d495e3c99395e6127bf754c4a781efa4b675fd4173b",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Spoken minute setter rejected; actual 00…59 list retained; no Save."
+    },
+    {
+      "summary": "ios-real-minute-r8-summary.json",
+      "sha256": "e4981e4adb6224474bfcb3a78d0cf5c74680621ef1b6286e15ea9e143068c078",
+      "totalTestCount": 1,
+      "passedTests": 0,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "scope": "Actual numeric time selection passed; outer sound row tap did not disable nested knob; no Save."
+    },
+    {
+      "summary": "ios-real-sound-r9-summary.json",
+      "sha256": "42a4ec66efc42653d86a686438c25ff25362289f41bb50513abcd8b36e75a9df",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "scope": "Exact nested knob corrected; one actual future Save, real native delivery/banner tap/reader route passed."
+    }
+  ],
+  "limits": [
+    "Simulator native behavior, not physical-device sound/haptic feel or every notification display mode.",
+    "No source edits, fabricated UI, synthetic notifications, icon/deeplink route or permission database changes.",
+    "Intermediate wheel screenshot is a transitional diagnostic; stable selected-time proof and pre-Save snapshot are used for assertions.",
+    "Current dark/largest third capture labels Sources but depicts lower guide steps, so it does not establish Sources visibility or link tapping.",
+    "Historical Phone/Pad13/13 scopes remain separate. Current completion rounds do not establish new iPad or Mac notification behavior.",
+    "Mac native QA remains held with root; this handoff does not authorize or claim Mac submission.",
+    "No ASC, hosting deployment, commit or provider changes performed."
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "A99E7C23-6278-4432-9B3A-941A5CF9B883.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "20-denied-recovery-cancel-same-reader-tree_0_C3CCA5B1-F688-4A84-9801-928A57E01FC4.txt",
+        "timestamp" : 1791114316.808
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "61D05F08-CAEA-43EE-B87B-0BFE0DAA2F17.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "20-denied-recovery-cancel-same-reader_0_DA30EB41-5D9B-42C9-8B2C-0F0D9C701AB2.png",
+        "timestamp" : 1791114316.699
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "327E3241-2857-47F2-9FCB-0B5CB26E4572.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "19-denied-reminder-available-tree_0_DF71A4A8-36CC-40EF-8FF0-4F519FC944A8.txt",
+        "timestamp" : 1791114314.703
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "A45D105D-0B3D-4DC6-B17F-7F514A753FA2.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "19-denied-reminder-available_0_BBF13876-838A-4B9B-A490-203E5AFC44FC.png",
+        "timestamp" : 1791114314.498
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "441D4A11-6CFA-4791-872E-52599F607362.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "18-denied-alert-closed-state-tree_0_E2E390B3-4522-4B25-A971-3C76D590FFD0.txt",
+        "timestamp" : 1791114312.523
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "BE58935E-0A14-469F-9729-87CB879C7B6B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "18-denied-alert-closed-state_0_3DCA5BE4-D8E9-4C4A-8C61-0D557DE5BB9D.png",
+        "timestamp" : 1791114312.406
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "9474A0CA-9B1D-4FA6-8E27-9EC2ADBD1613.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "17-already-denied-native-alert-tree_0_62C41CFB-F613-41B2-B703-EE1F9AE4003B.txt",
+        "timestamp" : 1791114310.648
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "75FCBB02-D06D-48D5-8EF8-0FFC08D52C88.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "17-already-denied-native-alert_0_E50A3540-44F1-4F68-B930-ED06E647C8A2.png",
+        "timestamp" : 1791114310.482
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testNotificationDeniedRecoveryTail()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testNotificationDeniedRecoveryTail"
+  }
+]

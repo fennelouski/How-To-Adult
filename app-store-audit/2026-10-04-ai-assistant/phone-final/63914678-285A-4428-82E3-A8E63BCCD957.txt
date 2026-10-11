@@ -1,0 +1,255 @@
+Attributes: Application, 0x11282fac0, pid: 86516, label: 'How to Adult'
+Element subtree:
+ →Application, 0x11282fac0, pid: 86516, label: 'How to Adult'
+    Window (Main), 0x11282fc00, {{0.0, 0.0}, {393.0, 852.0}}
+      Other, 0x112837c00, {{0.0, 0.0}, {393.0, 852.0}}
+        Other, 0x112837d40, {{0.0, 0.0}, {393.0, 852.0}}
+          Other, 0x112837e80, {{-393.0, -852.0}, {1179.0, 2556.0}}
+          Other, 0x112d00000, {{0.0, 0.0}, {393.0, 852.0}}
+            Other, 0x112d00a00, {{0.0, 0.0}, {393.0, 852.0}}
+              Other, 0x112d80000, {{0.0, 0.0}, {393.0, 852.0}}
+                Other, 0x112d80140, {{0.0, 0.0}, {393.0, 852.0}}
+                  Other, 0x112d80280, {{0.0, 0.0}, {393.0, 852.0}}
+                    Other, 0x112d803c0, {{0.0, 0.0}, {393.0, 852.0}}
+                      Other, 0x112d80500, {{0.0, 0.0}, {393.0, 852.0}}
+                        Other, 0x112d80640, {{0.0, 0.0}, {393.0, 852.0}}
+                          Other, 0x112d80780, {{0.0, 0.0}, {393.0, 852.0}}
+                            NavigationBar, 0x112d808c0, {{0.0, 59.0}, {393.0, 54.0}}, identifier: 'Assistant'
+                              StaticText, 0x112d80a00, {{159.3, 70.7}, {74.3, 20.7}}, label: 'Assistant'
+                              Button, 0x112d80b40, {{337.0, 63.0}, {36.0, 36.0}}, identifier: 'assistant-settings', label: 'Assistant settings'
+                            Other, 0x112d80c80, {{0.0, 0.0}, {393.0, 852.0}}
+                              Other, 0x112d80dc0, {{0.0, 0.0}, {393.0, 852.0}}
+                                Other, 0x112d80f00, {{0.0, 0.0}, {393.0, 852.0}}
+                                  Other, 0x112d81040, {{0.0, 0.0}, {393.0, 852.0}}
+                                    ScrollView, 0x112d81180, {{0.0, 0.0}, {393.0, 852.0}}, identifier: 'assistant-screen'
+                                      Other, 0x112d812c0, {{0.0, 0.0}, {393.0, 852.0}}
+                                        Other, 0x112d81400, {{0.0, 0.0}, {393.0, 167.8}}
+                                        Other, 0x112d81540, {{0.0, 704.2}, {393.0, 147.8}}
+                                      Other, 0x112d81680, {{0.0, 0.0}, {393.0, 852.0}}
+                                        Other, 0x112d817c0, {{0.0, 704.2}, {393.0, 147.8}}
+                                          Image, 0x112d81900, {{-120.0, 709.0}, {633.0, 286.0}}, identifier: 'AdditionalDimmingOverlay'
+                                          Other, 0x112d81a40, {{0.0, 704.2}, {393.0, 147.8}}
+                                            Other, 0x112d81b80, {{0.0, 704.2}, {393.0, 147.8}}
+                                          Other, 0x112d81cc0, {{0.0, 704.2}, {393.0, 147.8}}
+                                            Other, 0x112d81e00, {{0.0, 704.2}, {393.0, 147.8}}
+                                            Other, 0x112d81f40, {{0.0, 704.2}, {393.0, 147.8}}
+                                      Other, 0x112d82080, {{0.0, 113.0}, {393.0, 1530.3}}
+                                        StaticText, 0x112d821c0, {{22.0, 135.0}, {349.0, 50.3}}, identifier: 'adult-private-qa-marker', label: 'Private QA · A32B5564-76CB-41BE-A5C1-B31890F21159
+Scheduling and AI disabled'
+                                        StaticText, 0x112d82300, {{22.0, 211.3}, {278.7, 40.7}}, label: 'A calmer Sunday'
+                                        StaticText, 0x112d82440, {{22.0, 273.9}, {326.7, 49.0}}, label: 'Three small steps to make next week feel lighter.'
+                                        StaticText, 0x112d82580, {{23.3, 346.3}, {79.3, 14.8}}, label: 'On device'
+                                        Button, 0x112d826c0, {{114.7, 345.0}, {84.3, 16.7}}, label: 'Share plan'
+                                          Image, 0x112d82800, {{116.0, 346.0}, {11.0, 14.7}}, identifier: 'square.and.arrow.up', label: 'Share'
+                                          StaticText, 0x112d82940, {{114.7, 345.0}, {84.3, 16.7}}, label: 'Share plan'
+                                        StaticText, 0x112d82a80, {{84.0, 401.6}, {66.0, 14.3}}, label: 'CALENDAR'
+                                        Button, 0x112d82bc0, {{327.7, 409.7}, {17.3, 15.3}}, identifier: 'pencil', label: 'Edit Make room for a weekly reset'
+                                        StaticText, 0x112d82d00, {{84.0, 423.0}, {152.0, 49.0}}, label: 'Make room for a weekly reset'
+                                        StaticText, 0x112d82e40, {{40.0, 486.0}, {300.7, 42.3}}, label: 'A quiet half hour to plan meals and tidy one room.'
+                                        StaticText, 0x112d82f80, {{41.3, 542.3}, {181.0, 18.0}}, label: 'Oct 5, 2026 at 7:11 PM'
+                                        StaticText, 0x112d830c0, {{40.0, 574.4}, {63.3, 14.3}}, label: '30 minutes'
+                                        Button, 0x112d83200, {{40.0, 602.7}, {173.0, 34.3}}, label: 'Add to Calendar', Disabled
+                                          Image, 0x112d83340, {{54.0, 613.0}, {14.0, 14.0}}, identifier: 'plus', label: 'Add', Disabled
+                                          StaticText, 0x112d83480, {{40.0, 602.7}, {173.0, 34.3}}, label: 'Add to Calendar', Disabled
+                                        StaticText, 0x112d835c0, {{84.0, 695.0}, {63.3, 14.3}}, label: 'REMINDER'
+                                        Button, 0x112d83700, {{327.7, 703.0}, {17.3, 15.3}}, identifier: 'pencil', label: 'Edit Move the laundry to the dryer'
+                                        StaticText, 0x112d83840, {{84.0, 716.4}, {186.0, 49.0}}, label: 'Move the laundry to the dryer'
+                                        StaticText, 0x112d83980, {{40.0, 779.4}, {300.7, 42.3}}, label: 'Check the care label before choosing a heat setting.'
+                                        StaticText, 0x112d83ac0, {{41.3, 835.7}, {182.7, 18.0}}, label: 'Oct 4, 2026 at 8:11 PM'
+                                        Button, 0x112d83c00, {{40.0, 867.7}, {193.7, 34.3}}, label: 'Schedule reminder', Disabled
+                                          Image, 0x112d83d40, {{54.0, 878.0}, {14.0, 14.0}}, identifier: 'plus', label: 'Add', Disabled
+                                          StaticText, 0x112d83e80, {{40.0, 867.7}, {193.7, 34.3}}, label: 'Schedule reminder', Disabled
+                                        StaticText, 0x113ee0000, {{84.0, 960.1}, {64.3, 14.3}}, label: 'SHOPPING'
+                                        Button, 0x113ee0140, {{327.7, 968.0}, {17.3, 15.3}}, identifier: 'pencil', label: 'Edit Keep dinner simple'
+                                        StaticText, 0x113ee0280, {{84.0, 981.4}, {174.7, 24.0}}, label: 'Keep dinner simple'
+                                        StaticText, 0x113ee03c0, {{47.0, 1019.4}, {6.0, 14.3}}, label: '1'
+                                        StaticText, 0x113ee0500, {{70.0, 1019.4}, {79.7, 20.3}}, label: 'Chickpeas'
+                                        StaticText, 0x113ee0640, {{46.2, 1053.7}, {7.7, 14.3}}, label: '2'
+                                        StaticText, 0x113ee0780, {{70.0, 1053.7}, {33.0, 20.3}}, label: 'Rice'
+                                        StaticText, 0x113ee08c0, {{46.0, 1088.1}, {8.0, 14.3}}, label: '3'
+                                        StaticText, 0x113ee0a00, {{70.0, 1088.1}, {167.3, 20.3}}, label: 'A vegetable you enjoy'
+                                        Button, 0x113ee0b40, {{40.0, 1122.3}, {196.3, 36.3}}, label: 'Share shopping list'
+                                          Image, 0x113ee0c80, {{54.0, 1130.3}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share'
+                                          StaticText, 0x113ee0dc0, {{40.0, 1122.3}, {196.3, 36.3}}, label: 'Share shopping list'
+                                        Button, 0x113ee0f00, {{40.0, 1172.7}, {194.3, 20.3}}, label: 'Find items on the web'
+                                          Image, 0x113ee1040, {{42.0, 1175.3}, {15.3, 15.3}}, identifier: 'arrow.up.right.square', label: 'arrow.up.right.square'
+                                          StaticText, 0x113ee1180, {{40.0, 1172.7}, {194.3, 20.3}}, label: 'Find items on the web'
+                                        StaticText, 0x113ee12c0, {{40.0, 1207.1}, {309.7, 14.3}}, label: 'Check the seller, total and delivery details at checkout.'
+                                        Button, 0x113ee1400, {{40.0, 1235.3}, {100.7, 20.3}}, label: 'List prepared'
+                                        StaticText, 0x113ee1540, {{84.0, 1313.7}, {69.0, 14.3}}, label: 'CHECKLIST'
+                                        Button, 0x113ee1680, {{327.7, 1321.7}, {17.3, 15.3}}, identifier: 'pencil', label: 'Edit Give tomorrow a head start'
+                                        StaticText, 0x113ee17c0, {{84.0, 1335.1}, {154.3, 49.0}}, label: 'Give tomorrow a head start'
+                                        StaticText, 0x113ee1900, {{47.0, 1398.1}, {6.0, 14.3}}, label: '1'
+                                        StaticText, 0x113ee1a40, {{70.0, 1398.1}, {134.3, 20.3}}, label: 'Clear one surface'
+                                        StaticText, 0x113ee1b80, {{46.2, 1432.4}, {7.7, 14.3}}, label: '2'
+                                        StaticText, 0x113ee1cc0, {{70.0, 1432.4}, {204.3, 20.3}}, label: 'Set out tomorrow’s clothes'
+                                        Button, 0x113ee1e00, {{40.0, 1466.7}, {132.7, 34.3}}, label: 'Mark done'
+                                          Image, 0x113ee1f40, {{53.3, 1475.3}, {17.0, 17.0}}, identifier: 'checkmark.circle', label: 'Selected', Selected
+                                          StaticText, 0x113ee2080, {{40.0, 1466.7}, {132.7, 34.3}}, label: 'Mark done'
+                                        Button, 0x113ee21c0, {{22.0, 1541.0}, {77.7, 18.0}}, label: 'Delete plan'
+                                        Button, 0x113ee2300, {{22.0, 1585.0}, {130.3, 36.3}}, identifier: 'assistant-another-task', label: 'Another task'
+                                          Image, 0x113ee2440, {{23.3, 1594.7}, {17.3, 17.3}}, identifier: 'plus.circle.fill', label: 'Add'
+                                          StaticText, 0x113ee2580, {{22.0, 1585.0}, {130.3, 36.3}}, label: 'Another task'
+                                      Other, 0x113ee26c0, {{360.0, 113.0}, {30.0, 656.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                        Other, 0x113ee2800, {{387.0, 116.0}, {3.0, 320.7}}
+                                      Other, 0x113ee2940, {{360.0, 113.0}, {30.0, 656.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                        Other, 0x113ee2a80, {{387.0, 116.0}, {3.0, 320.7}}
+                            Other, 0x113ee2bc0, {{0.0, 0.0}, {393.0, 852.0}}
+                              Other, 0x113ee2d00, {{0.0, 0.0}, {393.0, 852.0}}
+                Other, 0x113ee2e40, {{0.0, 769.0}, {393.0, 83.0}}
+                  Other, 0x113ee2f80, {{0.0, 0.0}, {393.0, 852.0}}
+                    TabBar, 0x113ee30c0, {{0.0, 769.0}, {393.0, 83.0}}, label: 'Tab Bar'
+                      Other, 0x113ee3200, {{21.0, 769.0}, {351.0, 62.0}}
+                        Other, 0x113ee3340, {{21.0, 769.0}, {92.8, 54.0}}
+                        Other, 0x113ee3480, {{21.0, 769.0}, {351.0, 62.0}}
+                          Button, 0x113ee35c0, {{25.0, 773.0}, {92.8, 54.0}}, label: 'Guides'
+                            Image, 0x113ee3700, {{55.0, 778.0}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                          Button, 0x113ee3840, {{108.4, 773.0}, {92.7, 54.0}}, label: 'Assistant', Selected
+                            Image, 0x113ee3980, {{141.4, 777.0}, {26.0, 30.0}}, identifier: 'sparkles', label: 'sparkle'
+                          Button, 0x113ee3ac0, {{191.8, 773.0}, {92.8, 54.0}}, label: 'Saved'
+                            Image, 0x113ee3c00, {{225.8, 778.7}, {24.3, 28.7}}, identifier: 'bookmark.fill', label: 'bookmark'
+                          Button, 0x113ee3d40, {{275.2, 773.0}, {92.8, 54.0}}, label: 'Reminders'
+                            Image, 0x113ee3e80, {{308.2, 779.0}, {26.3, 28.0}}, identifier: 'bell.fill', label: 'notifications'
+                        Other, 0x113ee4000, {{108.4, 773.0}, {92.7, 54.0}}
+                          Other, 0x113ee4140, {{108.4, 773.0}, {92.7, 54.0}}
+                            Other, 0x113ee4280, {{108.4, 773.0}, {92.7, 54.0}}
+                            Other, 0x113ee43c0, {{108.4, 773.0}, {92.7, 54.0}}
+                              Other, 0x113ee4500, {{108.4, 773.0}, {92.7, 54.0}}
+                                Other, 0x113ee4640, {{108.4, 773.0}, {92.7, 54.0}}
+                                  Other, 0x113ee4780, {{108.4, 773.0}, {92.7, 54.0}}
+                                Other, 0x113ee48c0, {{108.4, 773.0}, {92.7, 54.0}}
+                              Other, 0x113ee4a00, {{108.4, 773.0}, {92.7, 54.0}}
+                  Other, 0x113ee4b40, {{0.0, 769.0}, {393.0, 83.0}}
+                    Other, 0x113ee4c80, {{0.0, 769.0}, {393.0, 83.0}}
+                      Other, 0x113ee4dc0, {{0.0, 769.0}, {393.0, 83.0}}
+                        Other, 0x113ee4f00, {{0.0, 769.0}, {393.0, 83.0}}
+                          Other, 0x113ee5040, {{0.0, 769.0}, {393.0, 83.0}}
+                            Other, 0x113ee5180, {{0.0, 769.0}, {393.0, 83.0}}
+      Other, 0x113ee52c0, {{0.0, 0.0}, {393.0, 852.0}}
+        Other, 0x113ee5400, {{-393.0, -852.0}, {1179.0, 2556.0}}
+        Other, 0x113ee5540, {{0.0, 59.0}, {393.0, 793.0}}
+          Other, 0x113ee5680, {{0.0, 59.0}, {393.0, 793.0}}
+            Other, 0x113ee57c0, {{0.0, 59.0}, {393.0, 793.0}}
+              Other, 0x113ee5900, {{0.0, 59.0}, {393.0, 793.0}}
+                Other, 0x113ee5a40, {{0.0, 59.0}, {393.0, 793.0}}
+                  Other, 0x113ee5b80, {{0.0, 59.0}, {393.0, 793.0}}, identifier: 'assistant-settings-screen'
+                    NavigationBar, 0x113ee5cc0, {{0.0, 75.0}, {393.0, 106.0}}, identifier: 'Assistant settings'
+                      Other, 0x113ee5e00, {{307.3, 79.0}, {65.7, 36.0}}, label: 'Done'
+                        Other, 0x113ee5f40, {{307.3, 79.0}, {65.7, 36.0}}
+                          Button, 0x113ee6080, {{307.3, 79.0}, {65.7, 36.0}}, label: 'Done'
+                      StaticText, 0x113ee61c0, {{16.0, 132.7}, {286.0, 40.7}}, label: 'Assistant settings'
+                    Other, 0x113ee6300, {{0.0, 59.0}, {393.0, 793.0}}
+                      Other, 0x113ee6440, {{0.0, 59.0}, {393.0, 793.0}}
+                        Other, 0x113ee6580, {{0.0, 59.0}, {393.0, 793.0}}
+                          Other, 0x113ee66c0, {{0.0, 59.0}, {393.0, 793.0}}
+                            CollectionView, 0x113ee6800, {{0.0, 59.0}, {393.0, 793.0}}
+                              Other, 0x113ee6940, {{-16.0, -1405.0}, {425.0, 1700.0}}
+                              Other, 0x113ee6a80, {{0.0, 59.0}, {393.0, 793.0}}
+                              Other, 0x113ee6bc0, {{0.0, 59.0}, {393.0, 793.0}}
+                              Cell, 0x113ee6d00, {{16.0, 181.0}, {361.0, 96.3}}
+                                Other, 0x113ee6e40, {{16.0, 181.0}, {361.0, 96.3}}
+                                  Other, 0x113ee6f80, {{16.0, 181.0}, {361.0, 96.3}}
+                                Other, 0x113ee70c0, {{16.0, 181.0}, {361.0, 96.3}}
+                                  Other, 0x113ee7200, {{16.0, 181.0}, {361.0, 96.3}}
+                                    Other, 0x113ee7340, {{16.0, 181.0}, {361.0, 96.3}}
+                                      StaticText, 0x113ee7480, {{16.0, 181.0}, {361.0, 96.3}}, identifier: 'adult-private-qa-marker', label: 'Private QA · A32B5564-76CB-41BE-A5C1-B31890F21159
+Scheduling and AI disabled'
+                              Other, 0x113ee75c0, {{-16.0, 295.0}, {425.0, 250.0}}
+                              Cell, 0x113ee7700, {{16.0, 295.0}, {361.0, 40.3}}
+                                Other, 0x113ee7840, {{16.0, 295.0}, {361.0, 40.3}}
+                                Other, 0x113ee7980, {{16.0, 295.0}, {361.0, 40.3}}
+                                  Other, 0x113ee7ac0, {{16.0, 295.0}, {361.0, 40.3}}
+                                    Other, 0x113ee7c00, {{16.0, 295.0}, {361.0, 40.3}}
+                                      StaticText, 0x113ee7d40, {{16.0, 295.0}, {361.0, 40.3}}, label: 'Your AI'
+                              Cell, 0x113ee7e80, {{16.0, 335.3}, {361.0, 52.0}}
+                                Other, 0x113ee8000, {{16.0, 335.3}, {361.0, 52.0}}
+                                  Other, 0x113ee8140, {{16.0, 335.3}, {361.0, 52.0}}
+                                Other, 0x113ee8280, {{16.0, 335.3}, {361.0, 52.0}}
+                                  Other, 0x113ee83c0, {{16.0, 335.3}, {361.0, 52.0}}
+                                    Other, 0x113ee8500, {{16.0, 335.3}, {361.0, 52.0}}
+                                      StaticText, 0x113ee8640, {{32.0, 351.2}, {87.7, 20.3}}, label: 'Connection'
+                                      Button, 0x113ee8780, {{32.0, 344.3}, {329.0, 34.3}}, label: 'Connection, On device'
+                                        StaticText, 0x113ee88c0, {{268.0, 351.3}, {76.7, 20.3}}, label: 'On device'
+                              Cell, 0x113ee8a00, {{16.0, 387.3}, {361.0, 52.0}}
+                                Other, 0x113ee8b40, {{16.0, 387.3}, {361.0, 52.0}}
+                                  Other, 0x113ee8c80, {{16.0, 387.3}, {361.0, 52.0}}
+                                Other, 0x113ee8dc0, {{16.0, 387.3}, {361.0, 52.0}}
+                                  Other, 0x113ee8f00, {{16.0, 387.3}, {361.0, 52.0}}
+                                    Other, 0x113ee9040, {{16.0, 387.3}, {361.0, 52.0}}
+                                      Image, 0x113ee9180, {{33.3, 402.7}, {21.7, 21.7}}, identifier: 'checkmark.circle.fill', label: 'Selected', Selected
+                                      StaticText, 0x113ee92c0, {{16.0, 387.3}, {361.0, 52.0}}, label: 'Apple Intelligence is ready'
+                              Other, 0x113ee9400, {{32.0, 386.3}, {329.0, 1.0}}
+                              Cell, 0x113ee9540, {{16.0, 439.3}, {361.0, 88.0}}
+                                Other, 0x113ee9680, {{16.0, 439.3}, {361.0, 88.0}}
+                                  Other, 0x113ee97c0, {{16.0, 439.3}, {361.0, 88.0}}
+                                Other, 0x113ee9900, {{16.0, 439.3}, {361.0, 88.0}}
+                                  Other, 0x113ee9a40, {{16.0, 439.3}, {361.0, 88.0}}
+                                    Other, 0x113ee9b80, {{16.0, 439.3}, {361.0, 88.0}}
+                                      StaticText, 0x113ee9cc0, {{16.0, 439.3}, {361.0, 88.0}}, label: 'Plans are generated on this device. Requires iOS or macOS 26 and Apple Intelligence enabled.'
+                              Other, 0x113ee9e00, {{72.0, 438.3}, {289.0, 1.0}}
+                              Other, 0x113ee9f40, {{-16.0, 544.7}, {425.0, 306.0}}
+                              Cell, 0x113eea080, {{16.0, 544.7}, {361.0, 40.3}}
+                                Other, 0x113eea1c0, {{16.0, 544.7}, {361.0, 40.3}}
+                                Other, 0x113eea300, {{16.0, 544.7}, {361.0, 40.3}}
+                                  Other, 0x113eea440, {{16.0, 544.7}, {361.0, 40.3}}
+                                    Other, 0x113eea580, {{16.0, 544.7}, {361.0, 40.3}}
+                                      StaticText, 0x113eea6c0, {{16.0, 544.7}, {361.0, 40.3}}, label: 'Apply new plans automatically', Disabled
+                              Cell, 0x113eea800, {{16.0, 585.0}, {361.0, 52.0}}
+                                Other, 0x113eea940, {{16.0, 585.0}, {361.0, 52.0}}
+                                  Other, 0x113eeaa80, {{16.0, 585.0}, {361.0, 52.0}}
+                                Other, 0x113eeabc0, {{16.0, 585.0}, {361.0, 52.0}}
+                                  Other, 0x113eead00, {{16.0, 585.0}, {361.0, 52.0}}
+                                    Other, 0x113eeae40, {{16.0, 585.0}, {361.0, 52.0}}
+                                      Switch, 0x113eeaf80, {{16.0, 585.0}, {361.0, 52.0}}, label: 'Schedule reminders', value: 0, Disabled
+                                        StaticText, 0x113eeb0c0, {{72.0, 600.8}, {151.7, 20.3}}, label: 'Schedule reminders', Disabled
+                                        Switch, 0x113eeb200, {{300.0, 597.0}, {63.0, 28.0}}, value: 0, Disabled
+                                        Image, 0x113eeb340, {{34.0, 599.3}, {20.7, 23.3}}, identifier: 'bell.badge', label: 'bell.badge', Disabled
+                              Cell, 0x113eeb480, {{16.0, 637.0}, {361.0, 52.0}}
+                                Other, 0x113eeb5c0, {{16.0, 637.0}, {361.0, 52.0}}
+                                  Other, 0x113eeb700, {{16.0, 637.0}, {361.0, 52.0}}
+                                Other, 0x113eeb840, {{16.0, 637.0}, {361.0, 52.0}}
+                                  Other, 0x113eeb980, {{16.0, 637.0}, {361.0, 52.0}}
+                                    Other, 0x113eebac0, {{16.0, 637.0}, {361.0, 52.0}}
+                                      Switch, 0x113eebc00, {{16.0, 637.0}, {361.0, 52.0}}, label: 'Add calendar events', value: 0, Disabled
+                                        StaticText, 0x113eebd40, {{72.0, 652.8}, {155.3, 20.3}}, label: 'Add calendar events', Disabled
+                                        Switch, 0x113eebe80, {{300.0, 649.0}, {63.0, 28.0}}, value: 0, Disabled
+                                        Image, 0x113eec000, {{33.3, 651.7}, {27.3, 23.0}}, identifier: 'calendar.badge.plus', label: 'Add To Calendar', Disabled
+                              Other, 0x113eec140, {{72.0, 636.0}, {289.0, 1.0}}
+                              Cell, 0x113eec280, {{16.0, 689.0}, {361.0, 52.0}}
+                                Other, 0x113eec3c0, {{16.0, 689.0}, {361.0, 52.0}}
+                                  Other, 0x113eec500, {{16.0, 689.0}, {361.0, 52.0}}
+                                Other, 0x113eec640, {{16.0, 689.0}, {361.0, 52.0}}
+                                  Other, 0x113eec780, {{16.0, 689.0}, {361.0, 52.0}}
+                                    Other, 0x113eec8c0, {{16.0, 689.0}, {361.0, 52.0}}
+                                      Switch, 0x113eeca00, {{16.0, 689.0}, {361.0, 52.0}}, label: 'Reminder sound', value: 1, Disabled
+                                        StaticText, 0x113eecb40, {{32.0, 704.8}, {124.3, 20.3}}, label: 'Reminder sound', Disabled
+                                        Switch, 0x113eecc80, {{300.0, 701.0}, {63.0, 28.0}}, value: 1, Disabled
+                              Other, 0x113eecdc0, {{72.0, 688.0}, {289.0, 1.0}}
+                              Cell, 0x113eecf00, {{16.0, 741.0}, {361.0, 92.3}}
+                                Other, 0x113eed040, {{16.0, 741.0}, {361.0, 92.3}}
+                                  Other, 0x113eed180, {{16.0, 741.0}, {361.0, 92.3}}
+                                Other, 0x113eed2c0, {{16.0, 741.0}, {361.0, 92.3}}
+                                  Other, 0x113eed400, {{16.0, 741.0}, {361.0, 92.3}}
+                                    Other, 0x113eed540, {{16.0, 741.0}, {361.0, 92.3}}
+                                      StaticText, 0x113eed680, {{16.0, 741.0}, {361.0, 92.3}}, label: 'Only new plans with a future date are applied. Calendar uses your default calendar; reminders appear as app notifications. Turning these off keeps items already scheduled.', Disabled
+                              Other, 0x113eed7c0, {{32.0, 740.0}, {329.0, 1.0}}
+                              Other, 0x113eed900, {{-16.0, 850.7}, {425.0, 214.0}}
+                              Cell, 0x113eeda40, {{16.0, 850.7}, {361.0, 40.3}}
+                                Other, 0x113eedb80, {{16.0, 850.7}, {361.0, 40.3}}
+                                Other, 0x113eedcc0, {{16.0, 850.7}, {361.0, 40.3}}
+                                  Other, 0x113eede00, {{16.0, 850.7}, {361.0, 40.3}}
+                                    Other, 0x113eedf40, {{16.0, 850.7}, {361.0, 40.3}}
+                                      StaticText, 0x113eee080, {{16.0, 850.7}, {361.0, 40.3}}, label: 'Shortcuts'
+                              Other, 0x113eee1c0, {{360.0, 113.0}, {30.0, 684.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                Other, 0x113eee300, {{387.0, 801.0}, {3.0, 7.0}}
+                              Other, 0x113eee440, {{360.0, 113.0}, {30.0, 684.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                Other, 0x113eee580, {{387.0, 801.0}, {3.0, 7.0}}
+                    Other, 0x113eee6c0, {{0.0, 59.0}, {393.0, 793.0}}
+                      Other, 0x113eee800, {{0.0, 59.0}, {393.0, 793.0}}
+Path to element:
+ →Application, 0x11282fac0, pid: 86516, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x113eee940, pid: 86516, label: 'How to Adult'
+  }

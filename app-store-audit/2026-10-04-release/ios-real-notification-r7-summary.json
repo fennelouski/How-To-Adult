@@ -1,0 +1,49 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "modelName" : "iPhone 16 Pro Max",
+        "osBuildNumber" : "22G86",
+        "osVersion" : "18.6",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 0,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1791116301.645,
+  "passedTests" : 0,
+  "result" : "Failed",
+  "skippedTests" : 0,
+  "startTime" : 1791116270.241,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "Requested adjust to value '23 minutes' which is not one of the possible values 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 for the picker wheel \"17 minutes\" PickerWheel",
+      "targetName" : "HowToAdultUITests-iOS",
+      "testIdentifier" : 1,
+      "testIdentifierString" : "AdultUITests/testRealReminderDeliveryAndTapRoute()",
+      "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testRealReminderDeliveryAndTapRoute",
+      "testName" : "testRealReminderDeliveryAndTapRoute()"
+    }
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 1
+}

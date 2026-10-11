@@ -1,0 +1,166 @@
+{
+  "recordedAtUTC": "2026-10-04T11:50:10.522160+00:00",
+  "status": "Denied recovery tail passed; phase B stopped safely before any permission mutation because Notifications is absent at this Simulator Settings root.",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "testSHA256": "8c1b901ccb41f1877a4fe5db45836ae776f6d0646e95b62cf99aaf65f657551d",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "nativeSourceOrAppChanges": 0,
+  "tail": {
+    "summary": "ios-denied-tail-r4-summary.json",
+    "processed": 1,
+    "passed": 1,
+    "failed": 0,
+    "captures": [
+      {
+        "state": "denied alert",
+        "image": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/75FCBB02-D06D-48D5-8EF8-0FFC08D52C88.png",
+        "imageSHA256": "732df5b1eaf8b10743de4783da4b3c35eda8d9a38095a655e9d374dd41941a93",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/9474A0CA-9B1D-4FA6-8E27-9EC2ADBD1613.txt",
+        "AXSHA256": "d08a15c786d12576c05778e834605aae6c7854aa91834ae7d03fe047e0a18f47",
+        "individuallyViewed": true
+      },
+      {
+        "state": "actual post-OK reader",
+        "image": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/BE58935E-0A14-469F-9729-87CB879C7B6B.png",
+        "imageSHA256": "ae81f8223c9aced910722fd0b3a98ca4c5044a976224a6fc102cb7854afa3c61",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/441D4A11-6CFA-4791-872E-52599F607362.txt",
+        "AXSHA256": "c4cde81c209aac7be9d9987a50eb1c09991f6bc43469c6f0415f8143a18e198d",
+        "individuallyViewed": true
+      },
+      {
+        "state": "reopened available reminder",
+        "image": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/A45D105D-0B3D-4DC6-B17F-7F514A753FA2.png",
+        "imageSHA256": "d2edb8aec3999200419c59cfa1f02696b8e2e35c3a4951d0bc748c93575241da",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/327E3241-2857-47F2-9FCB-0B5CB26E4572.txt",
+        "AXSHA256": "4d375094a19f946e342766d9bfaa907cee85472bdf8f476fa535aa6fed0f63f6",
+        "individuallyViewed": true
+      },
+      {
+        "state": "Cancel returned same guide",
+        "image": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/61D05F08-CAEA-43EE-B87B-0BFE0DAA2F17.png",
+        "imageSHA256": "ae81f8223c9aced910722fd0b3a98ca4c5044a976224a6fc102cb7854afa3c61",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-denied-tail-r4-attachments/A99E7C23-6278-4432-9B3A-941A5CF9B883.txt",
+        "AXSHA256": "4dad8178b783debd49445ad8f9e7e4db2338313a39b52ff33718f69808afb970",
+        "individuallyViewed": true
+      }
+    ],
+    "scope": "Real denied Save \u2192 actual OK \u2192 reader \u2192 actual Remind me \u2192 enabled Save/no Remove \u2192 Cancel\u2192same laundry guide. No fresh permission prompt reset or repetition."
+  },
+  "phaseB": {
+    "summary": "ios-notification-settings-r4-summary.json",
+    "processed": 1,
+    "passed": 0,
+    "failed": 1,
+    "captures": [
+      {
+        "state": "root0",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/B9627508-13FA-4360-8D9C-E46ADC72DE6C.png",
+        "imageSHA256": "722211e293d1cde4f63ace488f6f1a7eb608996c8b7c51c7f7dd0a78e8e990e4",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/3A0709CA-4454-4B25-8ED1-320A27666476.txt",
+        "AXSHA256": "2a39210637e616c7dc27f43a021e884bc43135b40db105eb3ea29a4e9ad7f493",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root1",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/6B28BE18-68E0-4F03-871B-26BC027A26C5.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/662EBF92-ECB9-4EC7-8A98-A92808557599.txt",
+        "AXSHA256": "c7502139eb02166c4c432d3c127fcc7310da8f91ff87c5b152891f2183006e02",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root2",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/3FAB26F1-CCF2-4866-AF5D-A119EBC98641.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/240B7FFB-9B2B-4731-BD2F-30BF609FC380.txt",
+        "AXSHA256": "a3277448d7baf887ca193ef012e3b027f29ef227c66ee9faaebd11915c9f1ac3",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root3",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/0F8D2451-07FA-49E6-B509-DBE3E22A50AE.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/474C215A-F90F-4260-8ED8-A47D7CDBEE79.txt",
+        "AXSHA256": "2e138c397083ecb9fc4230569a73365ac433cf32dcd5f894212bf586ee3dd300",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root4",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/F49F197E-5566-41DA-A82E-CA066ACB3946.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/5B2C1216-0A8E-47E7-8B3E-95C3F9EA8C95.txt",
+        "AXSHA256": "b8efdb8c9577954f767080b9abb5d7b71015e500ca101fbbed1da2609209f146",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root5",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/5F93CA3B-AA32-4E1E-A7D8-62D36659F6A9.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/512E0A4E-E020-4781-81E8-2482B8199091.txt",
+        "AXSHA256": "f58b231375249418b513cf7a962931e3da2234bba32f415d473cf00f19f6c038",
+        "individuallyViewed": true
+      },
+      {
+        "state": "root6",
+        "image": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/75CA62A4-DDE0-43B3-9E80-63E5B848BD01.png",
+        "imageSHA256": "2d12abc1173c78aacff7c15f9c4f222055e0b8b0c3c19bb4f63d0ed61cda7860",
+        "width": 1320,
+        "height": 2868,
+        "AX": "app-store-audit/2026-10-04-release/ios-notification-settings-r4-attachments/8402F41A-5B76-4A82-97A7-11F0B834C12E.txt",
+        "AXSHA256": "86c8489eb1c054581bcbe492a87ec41ef29ef59ac22d41e27982bd9a437c4215",
+        "individuallyViewed": true
+      }
+    ],
+    "observedFailure": "Native Settings has no Notifications root row. Bounded driver stopped AdultQAObserveNativeSettingsCell before opening app settings, changing permission or opening picker.",
+    "observedAlternative": "Button com.apple.settings.apps, label Apps, genuine visible final frame {{20,778.7},{400,44}}.",
+    "permissionMutation": 0,
+    "pickerReached": false,
+    "schedulingOrDelivery": 0
+  },
+  "actualDevice": "Owned1E5F4647-2BA3-4F26-8E75-9803F528D1BA iOS18.6; final Shutdown/light/large unchanged after both methods.",
+  "guardOutcome": "Both wrappers verified shipping35/original45 app/matching runner and exact single-method plan hashes unchanged; host production normal-store snapshots unchanged.",
+  "receiptHashes": {
+    "ios-denied-tail-r4-freeze.json": "2a0f5304fd706cd67b779a2dfddc63a5096946a7450cee56f26eacf61f67e96a",
+    "ios-denied-tail-r4-build-receipt.json": "4809096ee90ab1fcad9062a2bd46c220812fbedb348e510f8f1229e9030507d0",
+    "ios-denied-tail-r4-runtime-receipt.json": "b7cc3e468be4a7aee979ce378eba9b77ab0d103955b1fe7940f2110dd688abd8",
+    "ios-denied-tail-r4-summary.json": "a4d0769806bb961402bccf0367af9376a3b33ba54caae0ad1a5b77a0170084bd",
+    "ios-notification-settings-r4-runtime-receipt.json": "3900aea445b9faed52a882e293af0b37664c83b43a075fc2e7b1c8c7335f1737",
+    "ios-notification-settings-r4-summary.json": "a620158d071fb4e07de55d5991bd10f6647d2fcefecfbd3ea51fb81e881c6620"
+  },
+  "slotReleased": "Explicit parent message after final Shutdown and sequential summaries/attachments exports.",
+  "retainedPriorFailures": [
+    "Share label mismatch",
+    "Share close label mismatch",
+    "Save assertion while actual denied alert visible"
+  ],
+  "excluded": [
+    "Phase B pass",
+    "Notifications enabled",
+    "Expanded time picker observed",
+    "Real reminder delivery",
+    "Notification tap routing",
+    "Mac checks",
+    "Sources visible/tapped in current Dark capture"
+  ],
+  "ownerVisualApproval": "Root approval of these new images pending."
+}

@@ -1,0 +1,42 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "modelName" : "iPhone 16",
+        "osBuildNumber" : "23F77",
+        "osVersion" : "26.5",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 77,
+      "skippedTests" : 1,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "HowToAdult-iOS · Built with macOS 26.5.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1791133931.061,
+  "passedTests" : 77,
+  "result" : "Passed",
+  "skippedTests" : 1,
+  "startTime" : 1791133890.2,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - HowToAdult-iOS",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 78
+}

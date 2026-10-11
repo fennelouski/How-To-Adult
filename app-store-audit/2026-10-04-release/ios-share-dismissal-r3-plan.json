@@ -1,0 +1,122 @@
+{
+  "preparedAtUTC": "2026-10-04T11:08:34.243306+00:00",
+  "status": "Prepared only. Wait behind root Fendoku archive for explicit continuation slot.",
+  "shippingFreeze": "../2026-10-03-how-to-adult/native-inputs-live-privacy-final.json",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "shippingInputCount": 35,
+  "shippingChanges": 0,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "originalReleaseAppFileCount": 45,
+  "testOnlyFreeze": "ios-share-dismissal-r3-freeze.json",
+  "testSHA256": "488331210bd0ad0089d20a7e45dd5e546472215d0c6bc72519faf5a8b04ef04c",
+  "buildScript": "build-ios-share-dismissal-r3-runner.py",
+  "buildScriptSHA256": "b89d2f76cbd06e4034ed607ac383224a273fd06ca084e6b9876ee814583acef2",
+  "proposedBuildCommand": [
+    "python3",
+    "app-store-audit/2026-10-04-release/build-ios-share-dismissal-r3-runner.py"
+  ],
+  "compileScope": "Separate fresh Release QA derived data; UI-only xctestrun points back to the exact original 45-file Release app. Jobs2, no native app/source changes.",
+  "ownedPhone": {
+    "udid": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "name": "HowToAdult-Completion-QA-Phone-20261004-123824",
+    "runtime": "iOS18.6",
+    "expectedInitialState": "Shutdown",
+    "appearance": "light",
+    "contentSize": "large",
+    "notificationPermission": "Undecided, per root and previous failure before Save. Verify actual fresh prompt, do not silently reset."
+  },
+  "nextRun": {
+    "method": "AdultUITests/testNativeShareAndNotificationDenialRecovery",
+    "repeatDarkMethod": false,
+    "preflight": [
+      "Verify held35 source files, all45 original app files and matching new runner/plan hashes.",
+      "Verify exact owned UUID/name/runtime/Shutdown; read appearance/content size and require light/large.",
+      "Record host production app-store hashes without reading payload contents.",
+      "Boot only the allocated UUID headlessly; no Simulator.app, Mac foreground or other device actions.",
+      "Enumerate enabled UI tests using the observed CLI grammar, then select only the failed method."
+    ],
+    "actions": [
+      "Tap native Share\u2026 from the exact recorded AX evidence.",
+      "Require genuine ActivityListView; retain original screenshot and actual AX.",
+      "Dismiss using the recorded ActivityListView header.closeButton, label close. Preserve chooser screenshot and AX before asserting or selecting dismissal.",
+      "Capture actual reminder DatePicker/sheet screenshot and AX before asserting Save is available.",
+      "Capture actual SpringBoard permission screenshot and AX before testing the deny control; deny only this private app/device prompt.",
+      "Verify visible turned-off explanation, Save still available, no Remove reminder entry, then Cancel restores reader."
+    ],
+    "postflight": [
+      "Finally shut down the exact owned device regardless of success.",
+      "Read final appearance/content size; compare original values, no trait changes planned.",
+      "Verify source/app/runner hashes and host normal-store equality.",
+      "Only after Shutdown export actual xcresult count and genuine attachments."
+    ],
+    "pendingNativeChooser": true,
+    "pendingNotificationDenial": true
+  },
+  "deliveryFollowup": {
+    "status": "Plan only; driver selectors depend on the actual picker/permission AX collected by the next run. No synthetic notification is acceptable.",
+    "permissionRecovery": "Enable notifications only through the allocated Simulator app settings using observed native controls; denied requestAuthorization cannot re-prompt. No production Mac preference changes.",
+    "schedule": "Use the observed real DatePicker to select at least three minutes ahead, soundOff, then normal Save. The native UNCalendar trigger uses minute precision; record the exact displayed due minute.",
+    "background": "Move to a different guide or Home before backgrounding with owned XCUIDevice.home so a later tap proves a route change.",
+    "delivery": "Wait for the real scheduled title/body in owned SpringBoard, record first observed delivery time/AX/capture; no simctl push, request injection, DB write, arbitrary deep link or synthetic callback.",
+    "tapRoute": "Tap the actual delivered notification, verify guide-reader and the unique scheduled article title; inspect real userInfo-driven route only through production UI.",
+    "cleanup": "Remove only the created private reminder through native Remove reminder. Keep history evidence and final owned Shutdown.",
+    "claimLimit": "Scheduling/reminder rows alone do not establish delivery or notification-tap routing."
+  },
+  "retainedDarkActualReceipt": {
+    "summary": "ios-completion-1-summary.json",
+    "processed": 1,
+    "passed": 1,
+    "visualOwner": "Root explicit review of three native images",
+    "actualTraits": [
+      "dark",
+      "accessibility-extra-extra-extra-large"
+    ],
+    "visualScope": "Home/search, full reader title/summary and lower step text reflow with toolbar/tab actions intact.",
+    "excluded": "AC20208C labeled13-sources shows lower steps, not a Sources viewport. No source-link tap or visible Sources claim.",
+    "ownerScopeReceipt": "Root reviewed true dark/largest home/search, full reader header and lower guide steps; Sources/tap not shown."
+  },
+  "priorFailure": {
+    "summary": "ios-completion-2-summary.json",
+    "processed": 1,
+    "failed": 1,
+    "cause": "Test queried Share instead of actual native Share\u2026",
+    "AXEvidence": "ios-completion-2-attachments/1675F03B-E03D-4113-8323-003E5EB57830.txt",
+    "preserved": true
+  },
+  "deviceBuildRuntimeActionsDuringPreparation": 0,
+  "runtimeWrapper": "run-ios-share-dismissal-r3.py",
+  "runtimeWrapperSHA256": "905a67100be81d7d2592bd296cae2705acc620f99772523bc05c4cc0d43e4918",
+  "slot": "Released to root after final Shutdown and sequential exports.",
+  "buildStatus": "New runner build succeeded0; original exact Release app unchanged.",
+  "currentStatus": "Run completed with one failed tail assertion after genuine chooser, picker, permission and denied explanation; preserve failure.",
+  "runtimeReceipt": "ios-share-dismissal-r3-runtime-receipt.json",
+  "runtimeProcessedCount": 1,
+  "currentPhoneState": "Final Shutdown, light/large, notification denied by actual dialog; all guards unchanged.",
+  "proposedNextTestOnlyDelta": "Applied exact chooser.buttons[\"header.closeButton\"] and before-assertion evidence capture; no shipping changes.",
+  "nextContinuation": "Root explicitly queued corrected sole-method rerun after Fendoku archive; wait for grant before build/boot.",
+  "priorRounds": [
+    {
+      "prefix": "ios-completion-2",
+      "processed": 1,
+      "passed": 0,
+      "failed": 1,
+      "cause": "Share vs native Share\u2026 selector"
+    },
+    {
+      "prefix": "ios-share-selector-r2",
+      "processed": 1,
+      "passed": 0,
+      "failed": 1,
+      "cause": "Close/Cancel/Done vs native close/header.closeButton"
+    }
+  ],
+  "completedRuntimeRuns": 1,
+  "actualRuntimeCounts": {
+    "processed": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "visualObservation": "ios-share-dismissal-r3-visual-observation.json",
+  "boundedFollowupProposal": "ios-notification-followup-plan.r3.json"
+}

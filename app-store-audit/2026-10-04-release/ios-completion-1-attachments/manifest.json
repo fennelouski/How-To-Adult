@@ -1,0 +1,35 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "AC20208C-53E4-4251-9381-D0E6FC700438.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "13-dark-large-sources_0_0D1D2BD3-1955-452D-A505-496D12AB36F2.png",
+        "timestamp" : 1791110361.654
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "318270A1-61AA-4694-BDBF-B83660C32AC4.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "12-dark-large-reader_0_9A92F1DB-8352-4EB0-982B-C377C08D9B9D.png",
+        "timestamp" : 1791110348.51
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "29A556D2-7AD7-4D23-AAA6-2A7EB216EB7D.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "11-dark-large-guides_0_A8965138-A2F2-43C4-B8D0-C76701F2BE99.png",
+        "timestamp" : 1791110346.422
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testDarkAppearanceAndAccessibilityText()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testDarkAppearanceAndAccessibilityText"
+  }
+]

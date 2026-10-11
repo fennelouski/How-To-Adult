@@ -1,0 +1,29 @@
+{
+  "preparedAtUTC": "2026-10-04T12:22:38.347915+00:00",
+  "status": "Rootexplicitlyauthorizedfreshmatchingjobs2runner/solephaseCnow",
+  "sourceFreeze": "ios-real-minute-r8-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "3e50c5c8e5c65df529848fbed467b56f76c0dfbba91c7079777c3d59475f351e",
+  "previousTestSHA256": "7a335ff7af590b5edc5a8defb2f81af3f7d17cbecfe83e44233c3eee6105dedc",
+  "patch": "ios-real-minute-r8-test-only.patch",
+  "patchSHA256": "9787979a15026891970e1f1acaeae454925cc0bcb15884a8fb19b9b3bc012b57",
+  "scripts": {
+    "build-ios-real-minute-r8-runner.py": "1efbe358fe8980578299af051d914780236a1ec67ed29195ba2510dc26b77f26",
+    "run-ios-real-minute-r8.py": "b2e17eaa7882ec42b71a6dedfff0d5c8f039f043254405a8706c19ccabd63548"
+  },
+  "onlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "onlyCorrection": "Minute paddednumeric fromactual00\u202659acceptedlist; hourString(hour12) root-approvedboundedexperimentfromactualvisiblehourcolumnnumerals. ActualspokenvaluesandcompacttargetguardmustmatchbeforeSave.",
+  "actualEvidence": "ios-real-notification-r7-attachments/DBAF8816-81B0-4600-B240-39B52B4C8341.txt",
+  "unobservedHourOptions": "RawhouracceptedAPIliststillunproven; numericsetterboundedexperiment, failclosedandpreserveactualerrorifAPIrejects.",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "buildBootRuntimeActions": 0,
+  "retainedPriorFailure": "ios-real-notification-r7-summary.json",
+  "noShippingChanges": true,
+  "noSyntheticNotifications": true,
+  "rootReviewedHourNumeralsPNG": "ios-real-notification-r7-attachments/57C3D127-BEC5-4221-83AA-E4991B9C4187.png"
+}

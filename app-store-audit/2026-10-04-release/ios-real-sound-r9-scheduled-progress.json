@@ -1,0 +1,34 @@
+{
+  "recordedAtUTC": "2026-10-04T12:32:13.046362+00:00",
+  "scope": "ActualoneSave/pendingrecord/backgroundprogressonly; runtime notyetcompleted, no delivery/tapclaim",
+  "actualLog": "ios-real-sound-r9-runtime.log",
+  "actualLogPartialSHA256": "80da10dc2a4309a0ccf9f313479f0f0a5453e50cb8d5896f1b994714c5563e5b",
+  "records": [
+    {
+      "stage": "36-real-reminder-before-save",
+      "actualRunnerMetadata": {
+        "calendarTimeZone": "Europe/Amsterdam",
+        "dateLabel": "Oct 4, 2026",
+        "guideID": "wash-your-first-load",
+        "secondsRemaining": "250.87108099460602",
+        "sound": "0",
+        "targetUTC": "2026-10-04T12:35:00Z",
+        "timeLabel": "2:35\u202fPM"
+      }
+    },
+    {
+      "stage": "41-real-reminder-background-wait",
+      "actualRunnerMetadata": {
+        "appState": "3",
+        "startedUTC": "2026-10-04T12:31:01Z",
+        "targetUTC": "2026-10-04T12:35:00Z"
+      }
+    }
+  ],
+  "oneSaveObserved": true,
+  "actualPendingEditorCaptured": true,
+  "actualRemindersListCaptured": true,
+  "actualAwayFromReaderCaptured": true,
+  "inProgress": true,
+  "nativeDeliveryOrTapClaim": false
+}

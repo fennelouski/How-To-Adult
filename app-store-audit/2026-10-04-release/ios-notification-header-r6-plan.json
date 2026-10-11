@@ -1,0 +1,36 @@
+{
+  "preparedAtUTC": "2026-10-04T12:00:14.733213+00:00",
+  "status": "Root approved actual notification navbar/back button correction and retained serialized slot for sole B method.",
+  "sourceFreeze": "ios-notification-header-r6-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "a0020af1d2b01f34c113db56e5356ad0811eb921aa4f9a2cbe3df38b32a9ec41",
+  "previousTestSHA256": "bbc06426fa032ec203b5e7e01c9340a9556eb93ed3753faf798f27370eacdc2e",
+  "patch": "ios-notification-header-r6-test-only.patch",
+  "patchSHA256": "64907f30d02e9de3b90b80aa8415fae0917e1ccf6ab074330e625ad1685c7edf",
+  "scripts": {
+    "build-ios-notification-header-r6-runner.py": "5a9b0c0ec864ce820285ae49772149b1549e0b58e6b5fda797c52495828ff636",
+    "run-ios-notification-header-r6.py": "36ba4a4e32cd59d031c8b58e89dd36ac57a44e18a8ae4f1338a65ea7a8d02b26"
+  },
+  "onlyMethod": "AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance",
+  "tailPassedGuard": "ios-denied-tail-r4-summary.json requires actual1processed/1PASS/0FAIL before boot",
+  "nativeControlProof": "ios-notification-apps-r5-attachments/C5D38F22-6CAC-45A6-811B-EBEEF350BF6A.txt",
+  "observedNavbar": "Notifications",
+  "observedOwnAppBackButton": "How to Adult",
+  "observedAllowNotificationsSwitch": "0",
+  "onlyDelta": "Wrong navbar assertion replaced; all other methods, route, switch, DatePicker and Cancel actions unchanged.",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "noSaveOrTimeEdit": true,
+  "noSchedulingOrDelivery": true,
+  "noOtherSettingsChanges": true,
+  "retainedFailures": [
+    "ios-notification-apps-r5-summary.json",
+    "ios-notification-settings-r4-summary.json",
+    "ios-share-dismissal-r3-summary.json"
+  ],
+  "buildBootRuntimeDuringPreparation": 0
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "E371C277-AACB-47DB-8814-85FA4C71FD53.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer-actual-bounds_0_9D305E48-F420-420A-95E9-7281D3B4842D.json",
+        "timestamp" : 1791133700.73
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "DB37DF52-61D3-4C97-899B-B315D74E5368.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer-native-tree_0_04ED71B1-8B49-475F-BE34-C43BD2908336.txt",
+        "timestamp" : 1791133700.428
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "2F727999-53AF-45F7-9054-57E1FCEF8C68.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer_0_695C972A-1D11-41D7-AFA4-C1671D1FF9AA.png",
+        "timestamp" : 1791133700.17
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "BEAC6A01-A3AB-4F11-9F69-7F77D488FF90.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target-actual-bounds_0_5C36BE95-0B77-427C-B534-BE2C128D42C8.json",
+        "timestamp" : 1791133696.777
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "8CD65A2B-A233-4DB7-BBDC-645955C23311.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target-native-tree_0_DD921581-C22F-491E-B88B-0F0C2754BF7A.txt",
+        "timestamp" : 1791133696.344
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "5FF3BEC8-8948-413D-BCC4-2F4744AACAFA.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target_0_FA1EE9E3-5C03-404D-AA69-67E4A4687B76.png",
+        "timestamp" : 1791133696.032
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "E1B23AB9-6184-4BFB-996F-F11ACB0F4EC8.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings-actual-bounds_0_2A6A4586-F71D-4CEB-942D-EF727B3C0048.json",
+        "timestamp" : 1791133690.027
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "85DD5654-339A-42AE-A478-7ABDA30A0496.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings-native-tree_0_1C93CE03-B362-49AE-B3B7-65DB30B5D7DD.txt",
+        "timestamp" : 1791133688.981
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "235DE0E2-0BE5-4547-BDA1-E285E3A4D41D.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings_0_C14686EB-97A4-4588-89E0-1FD6F2BD7476.png",
+        "timestamp" : 1791133688.515
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "8CCDA43C-5C19-41CB-8D24-5CA5B7EF6433.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-actual-bounds_0_F5886637-D536-45DD-A578-A544963F41E6.json",
+        "timestamp" : 1791133686.017
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "BB7AE90C-D4C3-4773-BC2A-68393AFECBB4.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-native-tree_0_7D7BEDB1-296C-4EFF-B80E-F0C3656DC28C.txt",
+        "timestamp" : 1791133685.049
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "38D2C1E5-6D16-4104-AEE0-05F5F6AD5E4B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar_0_F7D495BB-3849-41C6-BDC3-EA6F10CE3FF5.png",
+        "timestamp" : 1791133684.748
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "378AAB8E-A800-42A6-A868-2268A72006B1.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-actual-bounds_0_3C71396C-413F-49E6-BB95-E3A34DD8E4EB.json",
+        "timestamp" : 1791133681.399
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "3BF42F8D-C351-4D6A-B67A-AB6B81AD223C.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-native-tree_0_CE3E5B95-ACDB-482C-92A1-8F168C79DAAC.txt",
+        "timestamp" : 1791133681.071
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "034F7D0B-A577-43CE-9D91-F59998881951.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target_0_F2EEF9EA-055C-47F4-8B25-B94D645DE021.png",
+        "timestamp" : 1791133680.807
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "F67EA9AC-F004-4BE8-80E3-9E0A118C1E46.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-actual-bounds_0_D09CE6DB-9B8C-4CAA-8AA3-D7E15D683DB4.json",
+        "timestamp" : 1791133679.226
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "E532AA52-E829-44D6-BBC7-69020FE71F2B.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-native-tree_0_86AC3C52-36FA-4C79-B1DB-F367DD4B8DE3.txt",
+        "timestamp" : 1791133678.924
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+        "deviceName" : "HowToAdultAssistantPrivateQAiPad20261004",
+        "exportedFileName" : "765D026A-5D46-4781-AC40-61E4BA4D2AC9.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer_0_66FB61EC-DAD2-413D-BCA2-291B6C48FA18.png",
+        "timestamp" : 1791133678.625
+      }
+    ],
+    "testIdentifier" : "AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn"
+  }
+]

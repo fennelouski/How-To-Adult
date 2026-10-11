@@ -1,0 +1,1 @@
+{"foreground":"true","guideReader":"true","iconOrDeepLinkLaunch":"false","syntheticNotification":"false","title":"Wash a load of laundry"}

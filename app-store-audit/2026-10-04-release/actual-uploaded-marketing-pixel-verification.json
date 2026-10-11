@@ -1,0 +1,481 @@
+{
+  "recordedAtUTC": "2026-10-04T11:59:38.183083+00:00",
+  "scope": "Downloaded from visible Apple full-preview image elements; comparison with approved original JPG composition",
+  "count": 20,
+  "exactPixelMatches": 0,
+  "entries": [
+    {
+      "platform": "iphone",
+      "filename": "01-practical-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/01-practical-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/01-practical-guides.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "76d79e9465bc08fc18ddc3059e05479ef37dd5477268ed83a86a22282b29d4f5",
+      "sourceSHA256": "4878b591440237e22f26565fc833ca6c667d70447f1761c174bed159279a7f08",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.042314621106462114,
+        0.027438612062043025,
+        0.13536172393389967
+      ],
+      "perChannelMaxDifference": [
+        28,
+        11,
+        23
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "02-clear-steps.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/02-clear-steps.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/02-clear-steps.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "ebdd36c7000361da8fee3187aaa82d107caed526030508bbe4ff001f27d64d1e",
+      "sourceSHA256": "e702067ef603e1a5c6ee5d9eda8a085503c58846540971ccb8bc0b1748528bdd",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.15673735260555344,
+        0.060015690376569036,
+        0.058524840454756775
+      ],
+      "perChannelMaxDifference": [
+        33,
+        15,
+        25
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "03-saved-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/03-saved-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/03-saved-guides.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "d7bdb0a5d062772f21d4b7180437acfe555796c51593f98e0574d1f97e083d66",
+      "sourceSHA256": "4b9e5e31bfda3ea03e482ff6650f7f4c8a1ef33d97a3e4716b1f6020bcd264ff",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.02090993618190271,
+        0.01717858501331305,
+        0.024341743797810744
+      ],
+      "perChannelMaxDifference": [
+        22,
+        9,
+        27
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "04-search.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/04-search.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/04-search.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "06317c0621678ec8365dfd38c2f532ff0634b2622fc124a94c2ebb7b8f0a7ff7",
+      "sourceSHA256": "cc90160b2185fc4a157d07bd690b6ed4c7b12a85302cc3e29d55665d4bccb3e9",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.025344712818562192,
+        0.01870879295042475,
+        0.04858839440429399
+      ],
+      "perChannelMaxDifference": [
+        31,
+        20,
+        21
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "05-us-money.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/05-us-money.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/05-us-money.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "d217adca17212f0ad2d83e4350e2cac813aa61e2a3049b1ba665b874883e1247",
+      "sourceSHA256": "a416377385fcfa1cc64169b22bfa4cf76da06370c77c81a29b50fe3c258d17e4",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.03684412112759393,
+        0.026869637800600144,
+        0.126039685558514
+      ],
+      "perChannelMaxDifference": [
+        28,
+        18,
+        24
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "06-original-sources.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/06-original-sources.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/06-original-sources.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "672838823c60254c955de616f25103123375465431886751cee1b917b8b0c365",
+      "sourceSHA256": "8f6e6fb74667cd0a41393f57ebe79eaee2fa14f9de2e9999c64afb7bb46cba52",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.13445939520730316,
+        0.056243396306157815,
+        0.05938147161996534
+      ],
+      "perChannelMaxDifference": [
+        37,
+        14,
+        25
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "07-reminders.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/07-reminders.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/07-reminders.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "ead02cab2d36e12106402de478a3baf4b307f78971769cb8c232623f0eec1265",
+      "sourceSHA256": "e8c55a4a785aa38fc956bb52e2574ff3a0373751d4bdfdfe3ba4a1b02adb912c",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.025645312962258568,
+        0.03375385655720384,
+        0.034676788808587974
+      ],
+      "perChannelMaxDifference": [
+        25,
+        15,
+        25
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "08-optional-sound.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/08-optional-sound.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/08-optional-sound.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "1991cf5c3a59cb69f4e53a5ca3287839de49bfa0f22dfd8cd77b5098e71270a6",
+      "sourceSHA256": "9eff71a557fb1be3bd21134006eddbfc636479318d6b3e9078a784c83d2d992c",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.027929398588394404,
+        0.019963758928194075,
+        0.05252472422974515
+      ],
+      "perChannelMaxDifference": [
+        27,
+        18,
+        20
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "09-offline-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/09-offline-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/09-offline-guides.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "6eea537ee9b77ee229f754602442e3ec66484f3d850adf5c173a77fcb93251fb",
+      "sourceSHA256": "0c15548a652b6241ab4f8e05d687cbd7589f0c3893e4df421066bf37e18558f2",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.03194814251299607,
+        0.022708518236760913,
+        0.11125533578462449
+      ],
+      "perChannelMaxDifference": [
+        27,
+        10,
+        23
+      ]
+    },
+    {
+      "platform": "iphone",
+      "filename": "10-progress.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/iphone/10-progress.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/iphone-6.9/10-progress.jpg",
+      "size": [
+        1320,
+        2868
+      ],
+      "actualSHA256": "b7fdb7ad9548b5f5681a7a1933ad44ac104bf64e56f3f8d7280e83ff46479cf6",
+      "sourceSHA256": "828c2a1e52cd770edf142d9be24a0edfb623a60b876ff3ad4a93ed7c54675eaf",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.1354898355944381,
+        0.05701814166772326,
+        0.051760280630573516
+      ],
+      "perChannelMaxDifference": [
+        39,
+        16,
+        24
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "01-practical-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/01-practical-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/01-practical-guides.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "8eb938687998707e4db887f910cd705509e44f006558c513bc7b02f635c997f0",
+      "sourceSHA256": "a79f1ace473ee30b3697308e4bea5ab8b8d50630b1fbb53dac823f4807f875dc",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.034649747329637645,
+        0.02736311576077159,
+        0.11616991729763837
+      ],
+      "perChannelMaxDifference": [
+        40,
+        17,
+        23
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "02-clear-steps.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/02-clear-steps.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/02-clear-steps.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "a6e6e9a7d7e038f27b8d48b2b11dd4d6842f32afc89109a77030faecf2216e96",
+      "sourceSHA256": "f64cfca44790ec927cde310ffc6e5c33492ab619d704f335ec89efc1eb9fa70c",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.1482320468834505,
+        0.08156295069406887,
+        0.06437847879484405
+      ],
+      "perChannelMaxDifference": [
+        37,
+        16,
+        27
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "03-saved-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/03-saved-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/03-saved-guides.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "d240ce7cc78ce100d3cfae0cd23353d521049ac401a4b37984e21a36e6ccfeb9",
+      "sourceSHA256": "6cdbcaaf5901aa6bc9408270b8ed7449b7b6111a8899f959e9c66ab5375b1fdb",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.030027316285830177,
+        0.03187745064899946,
+        0.037132437860555256
+      ],
+      "perChannelMaxDifference": [
+        40,
+        16,
+        25
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "04-search.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/04-search.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/04-search.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "c975ecc49e6be9c8c0bbda9474cab62202d52c093af37ffa0133c75ca6f34282",
+      "sourceSHA256": "44abf7644519d63f25ee400ccd40c2d30cccebc93b7cb3b1cdeaa56ca22e9558",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.025306295914458266,
+        0.024471807677573464,
+        0.050578085564268974
+      ],
+      "perChannelMaxDifference": [
+        27,
+        18,
+        20
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "05-us-money.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/05-us-money.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/05-us-money.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "4cff38770fb570a96459484b7ed630db8016da288c9e6117feed9f221901eef3",
+      "sourceSHA256": "e095bb3019e45787409c865cf50db67265777d3b0849296bbbac0e3729acbacf",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.029508137844780964,
+        0.026444122385974402,
+        0.10381332955877051
+      ],
+      "perChannelMaxDifference": [
+        29,
+        18,
+        24
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "06-original-sources.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/06-original-sources.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/06-original-sources.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "8f7e5e1497d1ee3013ccc16674495db2f72aaf514966a1e8b03a7086aea3b202",
+      "sourceSHA256": "6f94a816ef045a40111057629d18825f49887435aaae558ef11b203d0618db05",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.1498270813615468,
+        0.0839306790269515,
+        0.06449731414503335
+      ],
+      "perChannelMaxDifference": [
+        42,
+        16,
+        25
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "07-reminders.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/07-reminders.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/07-reminders.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "86663928aa24253988785b92cf9bb02106b26756fe46829d969ed787979b2b85",
+      "sourceSHA256": "705559c82e8c241d26d5c4e8e5e6997049a8495f6c213c3a4d82d0a258c5f9f6",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.027462585350189292,
+        0.04400024083964305,
+        0.03648174829862989
+      ],
+      "perChannelMaxDifference": [
+        26,
+        17,
+        25
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "08-optional-sound.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/08-optional-sound.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/08-optional-sound.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "61359a7c55b95928a37b1cf720e8b63d39a8dc6c6de32caf9eb74f5125b74431",
+      "sourceSHA256": "aacdaee9dc12b9310ae3222514fc335a7f35ebcf0aaca6cbf655e31367a3e30d",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.029242298765098252,
+        0.029337543097620336,
+        0.06539183624031007
+      ],
+      "perChannelMaxDifference": [
+        30,
+        19,
+        20
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "09-offline-guides.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/09-offline-guides.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/09-offline-guides.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "db9509c94cf0d47d7407ca6f54597514a8d38f5e96825a8a142b9d0194898aaf",
+      "sourceSHA256": "4b5185525069e109ab5e4fba79e55e9b27441200473cf84070aaee56c5f017ff",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.033756633653326124,
+        0.026295358132774473,
+        0.1091670821502614
+      ],
+      "perChannelMaxDifference": [
+        44,
+        18,
+        24
+      ]
+    },
+    {
+      "platform": "ipad",
+      "filename": "10-progress.jpg",
+      "actualAppleImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/actual-uploaded/ipad/10-progress.png",
+      "sourceMarketingImage": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-03-how-to-adult/marketing/composed-live-privacy-final/ipad-13/10-progress.jpg",
+      "size": [
+        2752,
+        2064
+      ],
+      "actualSHA256": "127433d5d60fcb3978ae651b8e9c75dff8c8dbf4b149a0a1ff26219c78ac43aa",
+      "sourceSHA256": "7c61042004cd5d5d473e08494c0257d73d835446a54faa14630c257bb6bba844",
+      "decodedPixelsEqual": false,
+      "perChannelMeanAbsoluteDifference": [
+        0.14070105462412114,
+        0.07472454846087975,
+        0.055665823023706505
+      ],
+      "perChannelMaxDifference": [
+        45,
+        18,
+        27
+      ]
+    }
+  ],
+  "rootVisualReview": {
+    "recordedAtUTC": "2026-10-04T12:00:16.161821+00:00",
+    "reviewedSheets": [
+      "actual-iphone-01-05.jpg",
+      "actual-iphone-06-10.jpg",
+      "actual-ipad-01-05.jpg",
+      "actual-ipad-06-10.jpg"
+    ],
+    "count": 20,
+    "decision": "Approve all20 actual Apple-hosted full images. Correct01-10 saved order, centered short headlines, four backgrounds, genuine uncropped or intentionally bottom-cropped native heroes with outward fans; original-source/reminder/library/privacy-sensitive assertions are truthful.",
+    "pixelComparisonLimit": "Apple PNG preview decoded pixels differ slightly from supplied JPG files; actual per-channel mean absolute differences all below0.2/255, edge max45/255. Images match visually and in dimensions, layout/content/order. No exact byte/pixel identity claim.",
+    "newMacGalleryOrRuntimeClaim": false
+  }
+}

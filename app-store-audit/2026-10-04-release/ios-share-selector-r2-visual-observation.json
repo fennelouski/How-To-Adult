@@ -1,0 +1,31 @@
+{
+  "recordedAtUTC": "2026-10-04T11:05:35.136114+00:00",
+  "sourceReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "executableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "runtimeReceipt": "ios-share-selector-r2-runtime-receipt.json",
+  "actualProcessedTests": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1
+  },
+  "nativePixelScope": "Actual iOS18.6 native Share chooser presented for the laundry guide. Text payload title matches the real guide. No share destination selected. Whole method remains failed at dismissal-selector observation.",
+  "reviewer": "portable_marketing, viewed actual PNG with filesystem view_image",
+  "chooserScreenshot": {
+    "path": "ios-share-selector-r2-attachments/902E239A-54AE-408B-8B5F-CD6C72CDF244.png",
+    "sha256": "fe66f015fde223ea2b6707f4c0429fa241f2671e97512ce8b54408e74051efc9"
+  },
+  "nativeAX": {
+    "path": "ios-share-selector-r2-attachments/89E3BBB8-083A-46A4-B515-20179B3E191A.txt",
+    "sha256": "bb145d9da165a5d38b083db625ac1a6a47852c3e61d5da7e8bcd184685b91e0c",
+    "observedDismissalIdentifier": "header.closeButton",
+    "observedDismissalLabel": "close"
+  },
+  "claimsExcluded": [
+    "Native chooser dismissal",
+    "Reminder picker interaction",
+    "Notification permission denial/recovery",
+    "Actual scheduled notification delivery/tap routing"
+  ],
+  "originalDarkSourceLabels": "Third earlier dark source labeled13-sources is lower guide steps. No visible source-link or source-tap claim."
+}

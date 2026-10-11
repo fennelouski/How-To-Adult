@@ -1,0 +1,20 @@
+{
+  "privateSessionID" : "B4BA59F0-C9F6-4838-9F66-C7B649A5C2F6",
+  "qualification" : "Actual AX bounds and screenshots; AX labels alone do not prove rendered text is untruncated.",
+  "targets" : [
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 37,
+        "width" : 131,
+        "x" : 590,
+        "y" : 1297
+      },
+      "hittable" : true,
+      "identifier" : "assistant-another-task",
+      "label" : "Another task",
+      "type" : 9
+    }
+  ]
+}

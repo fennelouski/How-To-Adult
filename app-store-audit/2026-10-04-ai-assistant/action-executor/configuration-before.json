@@ -1,0 +1,17 @@
+{
+  "Configuration/iOS-Info.plist": {
+    "sha256": "f8879a677715f004ae75387b0b1b165062f84f0cad9ae10bd03ccc00fe0ee1fd",
+    "bytes": 2001,
+    "baseline": "/Users/nathan/Documents/GitHub/how-to-adult/app-store-audit/2026-10-04-ai-assistant/action-executor/before-iOS-Info.plist"
+  },
+  "Configuration/macOS-Info.plist": {
+    "sha256": "de343673031cb50dbc721a477243491b82a6d16bf9c3e317aa4d7cf9641cf2db",
+    "bytes": 1450,
+    "baseline": "/Users/nathan/Documents/GitHub/how-to-adult/app-store-audit/2026-10-04-ai-assistant/action-executor/before-macOS-Info.plist"
+  },
+  "Configuration/macOS.entitlements": {
+    "sha256": "f1d6f59c4f9b163dbfb55695ca3251f87173f855ca893f0e8804d895ea76299e",
+    "bytes": 295,
+    "baseline": "/Users/nathan/Documents/GitHub/how-to-adult/app-store-audit/2026-10-04-ai-assistant/action-executor/before-macOS.entitlements"
+  }
+}

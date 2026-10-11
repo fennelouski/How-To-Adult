@@ -1,0 +1,98 @@
+{
+  "recordedAtUTC": "2026-10-04T11:27:15.101487+00:00",
+  "result": "Failed, one actual processed method; successful earlier steps are scoped observations, not a passed method.",
+  "processed": 1,
+  "passed": 0,
+  "failed": 1,
+  "failure": {
+    "line": 133,
+    "assertion": "app.buttons[\"save-reminder\"].exists after denied notification",
+    "actualState": "Root alert over guide-reader; native reminder sheet absent.",
+    "sourceContext": [
+      "Sources/AdultViews.swift:70 root actionIssue alert",
+      "Sources/AdultViews.swift:449 inline actionIssue text",
+      "Sources/AdultViews.swift:456 only success dismisses reminder",
+      "Sources/AdultStore.swift:194 denied authorization returns false with explanation"
+    ],
+    "nextCorrectionRequiresRootAuthorization": true
+  },
+  "actualNativeCaptures": [
+    {
+      "state": "nativeShareChooser",
+      "image": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/D9A8874B-62AE-4159-9676-77E8DD90F72E.png",
+      "imageSHA256": "4328042771e3158a34990d68ce1aec281bfc5637af9b453009dc2432a52e0341",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "AX": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/CD9895A7-9BA8-4D41-A5AD-A99B3CCF7477.txt",
+      "AXSHA256": "06647bd692bf9f4de21367a1ae066306f472c9ede15f764f690d43218e2029f3",
+      "individuallyViewed": true,
+      "observation": "Actual native ShareLink chooser, full laundry guide text preview; header close control visible. Closed using header.closeButton without choosing a destination."
+    },
+    {
+      "state": "actualReminderPicker",
+      "image": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/FA601F57-8FCC-47C6-8C45-1CD765622F7D.png",
+      "imageSHA256": "df7619aed87c126139ede2f88dd559290f3c073061ab99ce1688917d45f58027",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "AX": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/88B2DF85-9F4E-4D7F-B24D-9E17C69B49E7.txt",
+      "AXSHA256": "42f9c3297f4e96e3b5ea45d8c56fc4c374f247ee4e01f4a4e05efb557fd71b27",
+      "individuallyViewed": true,
+      "observation": "Native Remind me sheet shows full guide title, actual date/time, sound switch and Save/Cancel. No due-time change or scheduling success claimed."
+    },
+    {
+      "state": "actualNotificationPermission",
+      "image": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/979C8DC9-D6D7-4BB2-B68B-8BF8B528EAB4.png",
+      "imageSHA256": "5c869fb7505fadff078c8a80ea449d7c8aa96e4eea25b4f4438dca29fbfc0965",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "AX": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/9D8C8345-B2FA-447F-91A6-53747F37D4DC.txt",
+      "AXSHA256": "bba51f329a83e973ecea3dcee776ad1e413429d0d5395d95c05d3d2a652212bd",
+      "individuallyViewed": true,
+      "observation": "Genuine system notification permission alert over reminder picker. Don\u2019t Allow was tapped; no synthetic permission injection."
+    },
+    {
+      "state": "actualDeniedAlert",
+      "image": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/A8BD11E3-0490-412F-AF19-9F78734B13F4.png",
+      "imageSHA256": "eb6ba15f90b4f94f2a921543fb9d6b97083050288159318c2202fed09fa6f3df",
+      "encodedWidth": 1320,
+      "encodedHeight": 2868,
+      "AX": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/A30D8B6D-7CF2-46D1-B4A2-B91FC54D600A.txt",
+      "AXSHA256": "d23fafac870dd264ce60c39a458e86085e40bf5a7ad781040246c8dc0d35c613",
+      "individuallyViewed": true,
+      "observation": "Actual root Couldn\u2019t finish alert, full turned-off explanation and OK over original reader. Reminder sheet is absent at this captured stage. No new reminder row or scheduled delivery claimed."
+    }
+  ],
+  "sourceProof": "ios-share-dismissal-r3-freeze.json",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "testSHA256": "488331210bd0ad0089d20a7e45dd5e546472215d0c6bc72519faf5a8b04ef04c",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "preservedReceiptHashes": {
+    "ios-share-dismissal-r3-freeze.json": "915bbf2ad7b46912ba7991fbfa5306c5ea08c349bbc9713173eaff7228a73066",
+    "ios-share-dismissal-r3-build-receipt.json": "1802609dbc2aa526ec65b11ff1a67d66945cde0017153e4d2b2358b134cb25b6",
+    "ios-share-dismissal-r3-runtime-receipt.json": "fdcbc43454a0114dde6281b16bb1608aca05af6886625cae90f264b497c02c15",
+    "ios-share-dismissal-r3-summary.json": "5f16fe7d83a0b8637f870daa9100c0052a0bd56842637cb86c9998a8e1e5ad65"
+  },
+  "finalDevice": "Owned 1E5F4647-2BA3-4F26-8E75-9803F528D1BA Shutdown; light/large unchanged.",
+  "guardOutcome": "All held35 shipping inputs, original45 Release app files, matching runner/plan and normal-host store snapshots unchanged.",
+  "permissionEvidence": "Actual private device Don\u2019t Allow action observed; subsequent notification permission is denied. Not read from a private permission database.",
+  "scopedVerifiedStages": [
+    "ShareLink chooser opened",
+    "Exact header.closeButton dismissed chooser",
+    "Same guide reader restored",
+    "Real reminder sheet/DatePicker rendered",
+    "Real system notification prompt shown",
+    "Actual Don\u2019t Allow tapped",
+    "Visible actionable notification-denied explanation"
+  ],
+  "excluded": [
+    "Whole method pass",
+    "Denied alert OK dismissed",
+    "Reminder reopened after denial",
+    "New reminder successfully scheduled",
+    "Actual delivered notification",
+    "Notification tap routing",
+    "Sources viewport/link tap",
+    "Mac or other devices"
+  ],
+  "ownerReview": "Root visual review pending."
+}

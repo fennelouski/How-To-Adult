@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-04T10:58:08.443431+00:00",
+  "reviewer": "root",
+  "runtime_receipt": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-completion-runtime-receipt.json",
+  "native_input_sha256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "actual_system_traits": {
+    "appearance": "dark",
+    "content_size": "accessibility-extra-extra-extra-large"
+  },
+  "actual_ui_test_result": "testDarkAppearanceAndAccessibilityText 1 executed, 1 passed",
+  "visual_findings": "Home and search, guide heading and summary, and scrolled step text reflow legibly. Toolbar and tab controls remain intact. Screens are scrollable; captured viewport boundaries do not show inaccessible text clipping.",
+  "scope_limit": "The third attachment is named 13-sources but shows lower guide steps. This visual review does not establish Sources viewport visibility or source-link taps.",
+  "captures": [
+    {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-completion-1-attachments/29A556D2-7AD7-4D23-AAA6-2A7EB216EB7D.png",
+      "sha256": "75e10442114fae05925d98ce7bb5a184096a7bbd88ab43527d564f39ff8895a0"
+    },
+    {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-completion-1-attachments/318270A1-61AA-4694-BDBF-B83660C32AC4.png",
+      "sha256": "38d7bf4c1cdad6055047fba78b9a480cfd9222bea20e723b70eae575581b360b"
+    },
+    {
+      "path": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-completion-1-attachments/AC20208C-53E4-4251-9381-D0E6FC700438.png",
+      "sha256": "46132b7f62c288b22dbedc6bf1d3f3f8090ce110361428f7f7da88b8f9495b99"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "preparedAtUTC": "2026-10-04T10:11:36.372225+00:00",
+  "productionFreeze": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "productionInputChanges": 0,
+  "scope": "Narrow iOS native dark/accessibility3+Share chooser+notification denial completion checks",
+  "basis": "Prior 13/13 phone and Pad ran Release; DEBUG trait flags were inactive, so earlier labels did not prove actual traits. New flow runs original Release app with real isolated Simulator appearance/content_size settings and restores them. Existing production/AppStore source unchanged.",
+  "testEdit": "Add one genuine native Share chooser presentation/dismissal and actual notification-denial recovery method; existing two methods/helpers retained exactly",
+  "device": "A fresh dedicated iPhone QA device to keep per-device app/notification storage isolated. No existing user/QA devices changed. Exact UUID allocation/creation deferred until serialized Watch run hands back slot.",
+  "runtimeSlot": "After HW then Watch; no current build/test/device actions",
+  "pendingChecks": [
+    "Actual native Share chooser/dismissal",
+    "Actual Dark and large content_size rendered capture",
+    "Permission denial UI and safe recovery",
+    "Notification delivery/tap follow-up based actual captured native picker controls",
+    "Mac native app container-sharing consent and scoped runtime/gallery"
+  ],
+  "limits": [
+    "No minimum iOS17 runtime installed; existing18.6 +compileavailability checks",
+    "No macOS foreground launch permitted during these iOS checks",
+    "Privacy publication awaits owner final-agreement confirmation"
+  ]
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "89E3BBB8-083A-46A4-B515-20179B3E191A.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "14-actual-native-share-tree_0_E2DF3044-1F7F-4862-8935-DF1233A52D57.txt",
+        "timestamp" : 1791111800.093
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "902E239A-54AE-408B-8B5F-CD6C72CDF244.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "14-actual-native-share_0_0BE9B5D7-76C7-4C5A-8A67-C87EB894F130.png",
+        "timestamp" : 1791111799.872
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "5D1DA4AC-CFCD-415B-9E99-7C7DF565CDEA",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 01.03.18 PM",
+        "timestamp" : 1791111798.401
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "75A99F18-F1BF-4B27-9CBB-DE88152DB4C8",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 01.03.15 PM",
+        "timestamp" : 1791111795.397
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "CA864564-BD5E-490E-90ED-0CCAE34E08EB.mp4",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Screen Recording 2026-10-04 at 01.03.10 PM.mp4",
+        "timestamp" : 1791111790.601
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testNativeShareAndNotificationDenialRecovery()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testNativeShareAndNotificationDenialRecovery"
+  }
+]

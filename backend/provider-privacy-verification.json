@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T08:51:34.251824+00:00",
+  "serviceRevision": "7b6a116dc1e10ce002d3293be68c347d0939e365",
+  "AWS": {
+    "checkedAt": "2026-10-03T08:51:34.251824+00:00",
+    "stackStatus": "CREATE_COMPLETE",
+    "apiGatewayAccessLogSettings": null,
+    "stageAutoDeploy": true,
+    "lambdaLogRetentionDays": [
+      7
+    ],
+    "s3Versioning": {
+      "Status": "Enabled"
+    },
+    "s3Encryption": {
+      "ServerSideEncryptionConfiguration": {
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            },
+            "BucketKeyEnabled": false,
+            "BlockedEncryptionTypes": {
+              "EncryptionType": [
+                "SSE-C"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "s3PublicAccessBlock": {
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    "s3AccessLoggingEnabled": false,
+    "publishedVersionCount": 1,
+    "publishedDeleteMarkerCount": 0,
+    "catalogBucket": "how-to-adult-guides-v1-catalog-inauowmnt5cm",
+    "functionName": "how-to-adult-guides-v1-catalog",
+    "publishedCurrentETag": "\"439e5279e9cba9bbf3f960b6c3bb34fb\""
+  },
+  "Vercel": {
+    "projectID": "prj_HMYPRmjiTOPqPs9swxP2eqtjku1G",
+    "projectName": "how-to-adult-guides",
+    "teamPlan": "pro",
+    "observabilityPlusEnabled": false,
+    "observabilityPlusEvidence": "Authenticated GET /v1/observability/manage/configuration/projects returned explicit 404: Observability Plus is not enabled",
+    "configuredDrains": 0,
+    "configuredLegacyLogDrains": 0,
+    "runtimeLogDocumentedPlanRetentionHours": 24,
+    "runtimeRetentionEvidence": "Current Vercel official runtime logs table combined with actual Pro plan and Plus-not-enabled response. This describes ordinary visible runtime logs, not all provider security retention.",
+    "hideIPAddressSetting": null,
+    "IPAnonymizationVerified": false,
+    "runtimeLogRowsRetrieved": 0,
+    "absenceOfRowsProvesNoCollection": false,
+    "webAnalyticsSDKPresent": false,
+    "nativeAppSends": "Public catalog GET only; no account, bookmarks, checked steps, reminders, location or local search query",
+    "requestMetadata": "Hosting can process or retain request IP, user agent, path, request identifiers, status, timing and edge region; no identity anonymization claim",
+    "externalRewritesHaveProviderLogging": true
+  },
+  "appPrivacyAssessment": {
+    "offlineLabelIsHistorical": true,
+    "newRemoteLabelNeedsOwnerAssessmentAndAttestation": true,
+    "doNotInferUnlinkedFromNoAccount": true,
+    "doNotInferNoCollectionFromNoCustomAnalytics": true,
+    "IPClassification": "Apple says to classify stored IP by its actual use. Hosting security/uptime/diagnostics fits App Functionality and applicable diagnostics; location requires actual derivation/use.",
+    "tracking": "No app tracking code, ads, data broker or advertising identifiers. Provider operational/security logging is distinct from cross-app ad tracking.",
+    "labelPublished": false
+  },
+  "sources": {
+    "vercelRuntimeLogs": "https://vercel.com/docs/logs/runtime",
+    "vercelExternalRewrites": "https://vercel.com/docs/routing/rewrites",
+    "vercelTeamAPI": "https://vercel.com/docs/rest-api/teams/get-a-team",
+    "vercelDrainsSDK": "https://github.com/vercel/sdk/blob/main/docs/sdks/drains/README.md",
+    "applePrivacyDefinitions": "https://developer.apple.com/app-store/app-privacy-details/"
+  }
+}

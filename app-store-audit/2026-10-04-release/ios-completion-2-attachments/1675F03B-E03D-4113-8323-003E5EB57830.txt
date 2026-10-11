@@ -1,0 +1,65 @@
+Application, 0x10561f070, pid: 56389, label: 'How to Adult' <App element pid: 56389>
+  Window (Main), 0x10560ee90, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4390416928.4>
+    Other, 0x105626020, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4387430400.5>
+      Other, 0x10561ea50, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4387431328.6>
+        Other, 0x105625ed0, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4360009152.7>
+          Other, 0x105621ba0, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 105553169761536.8>
+            Other, 0x10561eb70, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4389529552.9>
+              Other, 0x10561ec90, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4389487936.10>
+                Other, 0x10561ff50, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4389663504.12>
+                  Other, 0x105620070, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4389478096.16>
+                    Other, 0x105620190, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 105553169862400.18>
+                      Other, 0x1056202b0, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 105553169862240.19>
+                        Other, 0x1056203d0, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4388545504.20>
+                          NavigationBar, 0x1056204f0, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Guide' <AX element pid: 56389, elementOrHash.elementID: 4387429344.21>
+                            Button, 0x105620610, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult' <AX element pid: 56389, elementOrHash.elementID: 105553140419200.111>
+                            StaticText, 0x105620730, {{196.7, 68.0}, {46.7, 20.3}}, label: 'Guide' <AX element pid: 56389, elementOrHash.elementID: 4356989056.112>
+                            Button, 0x105620850, {{277.3, 56.3}, {44.3, 44.0}}, identifier: 'save-guide', label: 'Save guide' <AX element pid: 56389, elementOrHash.elementID: 4357029088.113>
+                            Button, 0x105620cb0, {{329.7, 56.3}, {47.0, 44.0}}, identifier: 'remind-guide', label: 'Remind me' <AX element pid: 56389, elementOrHash.elementID: 4357038944.114>
+                            Button, 0x105620dd0, {{384.7, 56.3}, {43.3, 44.0}}, label: 'Share…' <AX element pid: 56389, elementOrHash.elementID: 4357048928.115>
+                          Other, 0x105620ef0, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4388545936.22>
+                            Other, 0x105621010, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4387578512.26>
+                              Other, 0x105621130, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 4359145168.116>
+                                Other, 0x105621250, {{0.0, 0.0}, {440.0, 956.0}} <AX element pid: 56389, elementOrHash.elementID: 105553169934656.117>
+                                  ScrollView, 0x105621370, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-reader' <AX element pid: 56389, elementOrHash.elementID: 4371054080.118>
+                                    Other, 0x1056225d0, {{0.0, 100.3}, {440.0, 1367.7}} <AX element pid: 56389, elementOrHash.elementID: 4359237632.119>
+                                      StaticText, 0x1056226f0, {{24.0, 181.0}, {381.0, 40.7}}, label: 'Wash a load of laundry' <AX element pid: 56389, elementOrHash.elementID: 105553169928736.121>
+                                      StaticText, 0x105622810, {{24.0, 236.7}, {278.3, 49.0}}, label: 'Clean clothes without shrinking your favorites.' <AX element pid: 56389, elementOrHash.elementID: 105553169928896.122>
+                                      StaticText, 0x105622930, {{24.0, 300.7}, {153.3, 18.0}}, label: 'About 10 min · 4 steps' <AX element pid: 56389, elementOrHash.elementID: 105553169929056.123>
+                                      StaticText, 0x105622a50, {{24.0, 348.7}, {163.7, 26.3}}, label: 'Before you start' <AX element pid: 56389, elementOrHash.elementID: 105553169929216.124>
+                                      StaticText, 0x105622b70, {{26.0, 387.0}, {105.3, 20.3}}, label: 'Detergent' <AX element pid: 56389, elementOrHash.elementID: 105553169929536.125>
+                                      StaticText, 0x105622c90, {{26.0, 419.3}, {89.7, 20.3}}, label: 'Hamper' <AX element pid: 56389, elementOrHash.elementID: 105553169929856.126>
+                                      StaticText, 0x105622db0, {{26.0, 451.7}, {163.0, 20.3}}, label: 'Washing machine' <AX element pid: 56389, elementOrHash.elementID: 105553169930176.127>
+                                      StaticText, 0x105622ed0, {{24.0, 502.0}, {184.7, 26.3}}, label: 'One step at a time' <AX element pid: 56389, elementOrHash.elementID: 105553169930336.128>
+                                      Button, 0x105622ff0, {{24.0, 544.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-1', label: 'Sort a small load. Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.', value: Not completed <AX element pid: 56389, elementOrHash.elementID: 105553169930976.129>
+                                        Image, 0x105623110, {{27.0, 566.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle' <AX element pid: 56389, elementOrHash.elementID: 105553169930496.139>
+                                        StaticText, 0x105623610, {{68.0, 564.3}, {131.7, 20.3}}, label: 'Sort a small load' <AX element pid: 56389, elementOrHash.elementID: 105553169930656.140>
+                                        StaticText, 0x105623730, {{68.0, 593.7}, {332.0, 86.3}}, label: 'Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.' <AX element pid: 56389, elementOrHash.elementID: 105553169930816.141>
+                                      Button, 0x105623850, {{24.0, 700.3}, {392.0, 133.7}}, identifier: 'step-wash-your-first-load-step-2', label: 'Set the machine. Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.', value: Not completed <AX element pid: 56389, elementOrHash.elementID: 105553169931616.130>
+                                        Image, 0x105623970, {{27.0, 722.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle' <AX element pid: 56389, elementOrHash.elementID: 105553169931136.142>
+                                        StaticText, 0x105623c10, {{68.0, 720.3}, {128.7, 20.3}}, label: 'Set the machine' <AX element pid: 56389, elementOrHash.elementID: 105553169931296.143>
+                                        StaticText, 0x105623d30, {{68.0, 749.7}, {332.0, 64.3}}, label: 'Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.' <AX element pid: 56389, elementOrHash.elementID: 105553169931456.144>
+                                      Button, 0x105623e50, {{24.0, 834.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-3', label: 'Measure detergent. Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.', value: Not completed <AX element pid: 56389, elementOrHash.elementID: 105553169932256.131>
+                                        Image, 0x105623f70, {{27.0, 856.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle' <AX element pid: 56389, elementOrHash.elementID: 105553169931776.145>
+                                        StaticText, 0x105624090, {{68.0, 854.3}, {151.3, 20.3}}, label: 'Measure detergent' <AX element pid: 56389, elementOrHash.elementID: 105553169931936.146>
+                                        StaticText, 0x1056241b0, {{68.0, 883.7}, {320.7, 86.3}}, label: 'Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.' <AX element pid: 56389, elementOrHash.elementID: 105553169932096.147>
+                                      Button, 0x1056242d0, {{24.0, 990.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-4', label: 'Finish the job. Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.', value: Not completed <AX element pid: 56389, elementOrHash.elementID: 105553169932896.132>
+                                        Image, 0x1056245f0, {{27.0, 1012.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle' <AX element pid: 56389, elementOrHash.elementID: 105553169932416.148>
+                                        StaticText, 0x105624710, {{68.0, 1010.3}, {105.7, 20.3}}, label: 'Finish the job' <AX element pid: 56389, elementOrHash.elementID: 105553169932576.149>
+                                        StaticText, 0x105624830, {{68.0, 1039.7}, {330.3, 86.3}}, label: 'Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.' <AX element pid: 56389, elementOrHash.elementID: 105553169932736.150>
+                                      StaticText, 0x105624950, {{46.3, 1196.3}, {174.7, 26.3}}, label: 'Good to know' <AX element pid: 56389, elementOrHash.elementID: 105553169933216.133>
+                                      StaticText, 0x105624a70, {{44.0, 1236.7}, {344.7, 42.3}}, label: 'Keep detergent away from children and pets. Never combine cleaning chemicals.' <AX element pid: 56389, elementOrHash.elementID: 105553169933376.134>
+                                      StaticText, 0x105624b90, {{24.0, 1329.0}, {168.0, 26.3}}, label: 'Go to the source' <AX element pid: 56389, elementOrHash.elementID: 105553169933536.135>
+                                      Button, 0x105624cb0, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics' <AX element pid: 56389, elementOrHash.elementID: 105553169934016.136>
+                                        Image, 0x105624dd0, {{26.0, 1377.0}, {15.3, 15.3}}, identifier: 'arrow.up.right.square', label: 'arrow.up.right.square' <AX element pid: 56389, elementOrHash.elementID: 105553169933696.151>
+                                        StaticText, 0x105625160, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics' <AX element pid: 56389, elementOrHash.elementID: 105553169933856.152>
+                                      StaticText, 0x105625280, {{24.0, 1429.7}, {126.7, 14.3}}, label: 'Reviewed 2026-10-03' <AX element pid: 56389, elementOrHash.elementID: 105553169934176.137>
+                                    Other, 0x1056253a0, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0% <AX element pid: 56389, elementOrHash.elementID: 4356969472.120>
+                                      Other, 0x1056254c0, {{434.0, 109.0}, {3.0, 469.0}} <AX element pid: 56389, elementOrHash.elementID: 4356969904.138>
+                                    Other, 0x105626330, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0% <AX element pid: 56389, elementOrHash.elementID: 4356969472.120>
+                                      Other, 0x105626450, {{434.0, 109.0}, {3.0, 469.0}} <AX element pid: 56389, elementOrHash.elementID: 4356969904.138>
+              TabBar, 0x105626570, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar' <AX element pid: 56389, elementOrHash.elementID: 4389518288.11>
+                Button, 0x1056269d0, {{2.0, 874.0}, {143.0, 48.0}}, label: 'Guides', Selected <AX element pid: 56389, elementOrHash.elementID: 4389387312.13>
+                  Image, 0x105626af0, {{56.7, 876.7}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf' <AX element pid: 56389, elementOrHash.elementID: 4389603408.17>
+                Button, 0x105626c10, {{149.0, 874.0}, {142.0, 48.0}}, label: 'Saved' <AX element pid: 56389, elementOrHash.elementID: 4389619632.14>
+                Button, 0x105626d30, {{295.0, 874.0}, {143.0, 48.0}}, label: 'Reminders' <AX element pid: 56389, elementOrHash.elementID: 4389642288.15>

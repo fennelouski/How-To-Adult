@@ -1,0 +1,1 @@
+{"elementType":"83","frame":"(8.0, 56.0, 424.0, 66.0)","identifier":"NotificationShortLookView","label":"HOW TO ADULT, now, Wash a load of laundry, Your guide is ready when you are."}

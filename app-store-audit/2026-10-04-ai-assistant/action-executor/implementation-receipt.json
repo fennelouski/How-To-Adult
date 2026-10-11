@@ -1,0 +1,94 @@
+{
+  "recordedAtUTC": "2026-10-04T16:18:52.526144+00:00",
+  "status": "Implemented; compilation and execution not allocated",
+  "ownedFiles": {
+    "Sources/AdultActionExecutor.swift": {
+      "sha256": "801d56f41b20390ba8d197c077b535e2532be0aea18949ae986f326cc8e3df34",
+      "bytes": 20005
+    },
+    "Tests/AdultActionExecutorTests.swift": {
+      "sha256": "104737a60d21ff326ad38f54cf17727a04361b397d5074b4c4b51959d2d6851b",
+      "bytes": 17453
+    },
+    "Configuration/iOS-Info.plist": {
+      "sha256": "46b4262019cdc526a569677d56e48ac2d51de5a874e28711eea3e4dc6c024087",
+      "bytes": 2362
+    },
+    "Configuration/macOS-Info.plist": {
+      "sha256": "4a7cfd37c99cbadd325371ae8b6da3c5bf599d89fa6ac11a1ccfefeb12ef244f",
+      "bytes": 1811
+    },
+    "Configuration/macOS.entitlements": {
+      "sha256": "b57aa036717039841abcb1e08db6c724daa4d671af6b55430fd58ae64f8e6ab1",
+      "bytes": 367
+    }
+  },
+  "ownedAggregateRecipe": "SHA256 of JSON sorted owned path-to-hash mapping using Python default separators; UTF-8; no trailing newline",
+  "ownedAggregateSHA256": "3eabbd0da3ca7b03b588aeef782fca52bb6c80965aa07a51cf27ea0970f2a5b7",
+  "configurationChecks": {
+    "Configuration/iOS-Info.plist": {
+      "onlyAuthorizedAddition": true,
+      "inverseEqualsSavedBaseline": true
+    },
+    "Configuration/macOS-Info.plist": {
+      "onlyAuthorizedAddition": true,
+      "inverseEqualsSavedBaseline": true
+    },
+    "Configuration/macOS.entitlements": {
+      "onlyAuthorizedAddition": true,
+      "inverseEqualsSavedBaseline": true
+    }
+  },
+  "trailingWhitespaceCheck": "PASS",
+  "preparedInjectedTests": [
+    "testPermissionOptInDoesNotCreateAnItem",
+    "testDeniedPermissionAndPermissionFailureHaveNoWriteOutcome",
+    "testOnlyDurablyRunningActionsCanExecute",
+    "testDisabledAutomationAndInvalidScheduleDoNotAskPermission",
+    "testRunningReminderReturnsItsStableNativeIdentifier",
+    "testAllPendingNotificationsShareTheSixtyRequestBudget",
+    "testAnExistingStableNotificationCanBeReplacedAtTheBudget",
+    "testDistantRecurringNotificationCannotFireBeforeItsPlannedStart",
+    "testNextDailyOccurrenceCanBeScheduled",
+    "testCalendarRecurrenceComponentsPreserveLocalTimeAndSkipMissingMonthDays",
+    "testCalendarAndChosenRemindersListReturnActualReceipts",
+    "testUnknownWriteAndMissingReceiptRequireReview",
+    "testKnownCalendarPermissionFailureRemainsSafeToRetry",
+    "testDateIsCheckedAgainAfterPermissionWait",
+    "testCancellationBeforeExecutionCreatesNoItem"
+  ],
+  "preparedTestCount": 15,
+  "testsExecuted": 0,
+  "sharedInputsObservedOnly": {
+    "Sources/AdultAssistantModels.swift": "7434725abd81e4b51cee2b61004dbc709f01c1f61431be074743c348d065c1c1",
+    "Sources/AdultAssistantLibrary.swift": "5b8288bdaf44f7370696934633b6235af17c521e32a10592d27c4afe0d6c2431",
+    "Sources/AdultNotificationBudget.swift": "0547b7fefb03baaac9d645ed1c993da80690d9890ca69b16e5476376c53f4dd3"
+  },
+  "permissionsAPI": "requestPermission(for:preferences:) async throws; no external item creation",
+  "executionAPI": "execute(action:preferences:) async throws -> String; requires durable running snapshot",
+  "effectsDuringImplementation": {
+    "build": false,
+    "runtime": false,
+    "systemPermissionRequest": false,
+    "calendarAccess": false,
+    "remindersAccess": false,
+    "notificationScheduling": false,
+    "providerAccess": false,
+    "storeMutation": false
+  },
+  "scope": "Only the five owned source/test/configuration paths and this audit leaf were edited by this agent. Other agents own UI, storage, providers, notification routing/budget and project integration.",
+  "remainingValidation": [
+    "Root integration and matching iOS/macOS compile",
+    "Run injected offline tests in approved private host",
+    "Separately authorized real notification delivery/tap check; no real Calendar/Reminders data used in tests"
+  ],
+  "limits": [
+    "Write-only events cannot be reread; unknown saves require manual review, never automatic retry",
+    "Explicit calendar identifier requires already-full calendar access; default-calendar creation uses write-only",
+    "Apple Reminders export requires chosen list and full access",
+    "Repeating UN reminder must start at its next matching occurrence; later starting dates are rejected",
+    "Monthly local-calendar day 29-31 skips months without that date",
+    "Completed or review-needed actions are rejected; caller must begin durable execution before every attempt",
+    "A real native write followed by receipt persistence failure must remain running/needsReview; never label safe failure"
+  ]
+}

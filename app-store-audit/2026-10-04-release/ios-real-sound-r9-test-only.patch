@@ -1,0 +1,31 @@
+--- r8/UITests/AdultUITests.swift
++++ r9/UITests/AdultUITests.swift
+@@ -427,8 +427,26 @@
+               ["0", "1"].contains(soundValue) else {
+             throw NSError(domain: "AdultQARealReminderActualSoundSwitch", code: 1)
+         }
+-        if soundValue == "1" { sound.firstMatch.tap() }
+-        XCTAssertEqual(sound.firstMatch.value as? String, "0")
++        evidence("35a-real-reminder-actual-sound-control", app)
++        let soundKnobs = sound.firstMatch.switches
++        guard soundKnobs.count == 1, soundKnobs.firstMatch.elementType == .switch,
++              soundKnobs.firstMatch.isHittable,
++              (50...52).contains(soundKnobs.firstMatch.frame.width),
++              (30...32).contains(soundKnobs.firstMatch.frame.height),
++              let knobValue = soundKnobs.firstMatch.value as? String,
++              ["0", "1"].contains(knobValue) else {
++            throw NSError(domain: "AdultQARealReminderActualSoundKnob", code: 1)
++        }
++        if knobValue == "1" { soundKnobs.firstMatch.tap() }
++        let silent = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
++            (soundKnobs.firstMatch.value as? String) == "0" &&
++            (sound.firstMatch.value as? String) == "0"
++        }, object: nil)
++        let silentReady = XCTWaiter.wait(for: [silent], timeout: 5) == .completed
++        evidence("35b-real-reminder-actual-sound-result", app)
++        guard silentReady, target.timeIntervalSinceNow >= 120 else {
++            throw NSError(domain: "AdultQARealReminderSilentFutureGuard", code: 1)
++        }
+         let iso = ISO8601DateFormatter()
+         record("36-real-reminder-before-save", ["targetUTC": iso.string(from: target),
+             "calendarTimeZone": calendar.timeZone.identifier, "dateLabel": expectedDate,

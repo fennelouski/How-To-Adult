@@ -1,0 +1,50 @@
+Attributes: Application, 0x104031030, pid: 85460, label: 'How to Adult'
+Element subtree:
+ →Application, 0x104031030, pid: 85460, label: 'How to Adult'
+    Window (Main), 0x10403dbf0, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x104035d30, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x104035e50, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x104035a90, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x104035bb0, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x104035f70, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x104036090, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x1040361b0, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x1040362d0, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x1040363f0, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x104036510, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x104036630, {{0.0, 0.0}, {440.0, 956.0}}
+                            NavigationBar, 0x104036750, {{0.0, 56.3}, {440.0, 148.0}}, identifier: 'Reminders'
+                              Button, 0x104036870, {{382.0, 56.3}, {46.0, 44.0}}, identifier: 'open-settings', label: 'Settings'
+                              StaticText, 0x104036990, {{20.0, 104.0}, {170.0, 40.7}}, label: 'Reminders'
+                              SearchField, 0x104036ab0, {{20.0, 153.3}, {400.0, 36.0}}, label: 'Laundry, money, making friends…', placeholderValue: 'Laundry, money, making friends…'
+                                Image, 0x104036bd0, {{26.0, 161.7}, {20.3, 18.7}}, identifier: 'magnifyingglass', label: 'Search'
+                            Other, 0x104036cf0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x104036e10, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x104036f30, {{0.0, 0.0}, {440.0, 956.0}}
+                                  Other, 0x104037050, {{0.0, 0.0}, {440.0, 956.0}}
+                                    ScrollView, 0x104037170, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-collection'
+                                      Other, 0x104037290, {{0.0, 204.3}, {440.0, 168.0}}
+                                        Other, 0x1040373b0, {{20.0, 226.3}, {400.0, 122.7}}
+                                          Button, 0x1040374d0, {{20.0, 226.3}, {400.0, 122.7}}, identifier: 'guide-wash-your-first-load', label: 'Wash a load of laundry, Clean clothes without shrinking your favorites., Oct 4 at 2:35 PM'
+                                            Image, 0x1040375f0, {{35.3, 256.0}, {23.7, 24.7}}, identifier: 'washer', label: 'washer'
+                                            StaticText, 0x104037710, {{80.0, 244.3}, {180.0, 20.3}}, label: 'Wash a load of laundry'
+                                            StaticText, 0x104037830, {{80.0, 271.7}, {218.7, 38.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                            Image, 0x104037950, {{81.3, 317.3}, {11.3, 12.3}}, identifier: 'bell', label: 'Notifications'
+                                            StaticText, 0x104037a70, {{81.3, 316.7}, {115.7, 14.3}}, label: 'Oct 4 at 2:35 PM'
+                                            Image, 0x104037b90, {{409.0, 251.3}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                      Other, 0x104037cb0, {{407.0, 204.3}, {30.0, 668.7}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                                        Other, 0x104037dd0, {{434.0, 708.0}, {3.0, 162.0}}
+                                      Other, 0x104037ef0, {{407.0, 204.3}, {30.0, 668.7}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                                        Other, 0x104038010, {{434.0, 708.0}, {3.0, 162.0}}
+                TabBar, 0x104038130, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar'
+                  Button, 0x104038250, {{2.0, 874.0}, {143.0, 48.0}}, label: 'Guides'
+                  Button, 0x104038370, {{149.0, 874.0}, {142.0, 48.0}}, label: 'Saved'
+                  Button, 0x104038490, {{295.0, 874.0}, {143.0, 48.0}}, label: 'Reminders', Selected
+                    Image, 0x1040385b0, {{353.0, 877.7}, {26.3, 28.0}}, identifier: 'bell.fill', label: 'notifications'
+Path to element:
+ →Application, 0x104031030, pid: 85460, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x1040386d0, pid: 85460, label: 'How to Adult'
+  }

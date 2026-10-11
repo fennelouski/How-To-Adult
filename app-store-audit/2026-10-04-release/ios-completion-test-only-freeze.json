@@ -1,0 +1,21 @@
+{
+  "recordedAtUTC": "2026-10-04T10:22:20.816032+00:00",
+  "nativeInputCount": 35,
+  "nativeInputsSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "allShippingInputsUnchanged": true,
+  "shippingVersion": "1.0",
+  "shippingBuild": "1",
+  "UITestFile": "UITests/AdultUITests.swift",
+  "UITestSHA256": "0e7e9b4418695ff3e14dfc54723549d942484705e3717fff1adc768f13bd8ad8",
+  "existingMethodsAndHelpersByteIdentical": true,
+  "onlyAddedMethod": "testNativeShareAndNotificationDenialRecovery",
+  "buildDeviceRuntimeActions": 0,
+  "notificationPermissionState": "fresh dedicated QA device required, existing devices untouched",
+  "remainingChecks": [
+    "actual system Dark/largest content size on Release",
+    "native share chooser and safe dismissal",
+    "notification denial recovery",
+    "notification delivery and actual tap route",
+    "native macOS consent/runtime/gallery"
+  ]
+}

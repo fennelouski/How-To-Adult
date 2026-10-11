@@ -1,0 +1,63 @@
+{
+  "preparedAtUTC": "2026-10-04T12:05:29.473723+00:00",
+  "status": "PROPOSAL ONLY: root must review current expanded DatePicker evidence and authorize phaseC before any new test/source/build/boot/Save.",
+  "proposedOnlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "shipping35Original45UnchangedRequired": true,
+  "originalExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "prerequisite": "Actual phaseB1PASS with own-app permission0\u21921 and all prior evidence retained.",
+  "pickerEvidence": {
+    "png": "ios-notification-header-r6-attachments/24DD698F-92CF-43DF-9EA8-0352E7FA0490.png",
+    "pngSHA256": "ea501fe34628594ed0b439342dc6b7a561cfd565479a7e8e8536d46a9b736479",
+    "ax": "ios-notification-header-r6-attachments/1B1481E0-C8E8-4E5F-9D62-5A41FD0FB838.txt",
+    "axSHA256": "bcc6d8be626fd39106db5b1d058cf267e3a58cf55c98a75405a3cb7e16be2401",
+    "observedDate": "Oct 4, 2026",
+    "observedTime": "3:01 PM",
+    "actualWheels": [
+      "3 o\u2019clock",
+      "01 minute",
+      "PM"
+    ],
+    "actualDismissalIdentifier": "PopoverDismissRegion"
+  },
+  "realDriver": [
+    "Open actual laundry guide\u2192Remind me; capture exact current date/time and require no existing reminder.",
+    "Compute future calendar minute by ceiling(Date()+240s), using actual runner Calendar.current; record ISO8601 time/timezone and components. Stop before Save if target crosses day/month/year beyond already observed compact date UI.",
+    "Expand actual compact time child. Require actual3ordered PickerWheels by known value forms o\u2019clock/minute/AMorPM; derive target12-hour numeric, two-digit minute and period. Adjust only actual native wheels to matching observed textual values and wait/capture each actualvalue.",
+    "Dismiss only unique exposed PopoverDismissRegion. Require compact picker time to match target and current date to match targetday; date must remain >=120s in future before Save.",
+    "Switch actual Play a sound from1\u21920 only inside this reminder; capture value0. Never change system Sounds setting.",
+    "Tap actual save-reminder once; capture returned reader/Reminders list and the pending own-app reminder for wash-your-first-load. Native UNCalendarNotificationTrigger must produce the reminder; no fake delivery injection.",
+    "Return to actual home/different guide, record wrong reader absent, then pressHome inside owned simulator to background app.",
+    "Bounded real-time wait until scheduledminute+90s (no more than400s), checking actual SpringBoard own-app notification title Wash a load of laundry and exact body Your guide is ready when you are.; capture complete actual nativeAX/PNG before deriving any tap.",
+    "If native body/title is missing or ambiguous stop with evidence and leave delivery/tap unverified. If a unique hittable own-app notification is genuinely present, root-approved dynamic selection may tap only its actual body/title/container, with no destination or externalrecipient.",
+    "Require app returnsForeground, actual guide-reader and laundry title after notification tap, not merely icon/deeplink launch. Capture actual destination and requested route evidence.",
+    "Cleanup only through actual native app reminder controls if a pending record still exists, preserve actual delivered proof, then finallyShutdown/light/large and all source/app/normal-host guards."
+  ],
+  "controlsAlreadyObserved": [
+    "3timePickerWheels",
+    "unique PopoverDismissRegion",
+    "Play a sound value1",
+    "save-reminder",
+    "Cancel",
+    "guide-reader",
+    "remind-guide"
+  ],
+  "newControlsYetUnobserved": [
+    "Scheduled reminder list row",
+    "Actual SpringBoard delivered notification container/tap target"
+  ],
+  "stopConditions": [
+    "Native picker labels differ from observed forms",
+    "Target crossesdate boundary",
+    "Selected time failsactual-value verification",
+    "Save does notdismiss normally or alert reportsfailure",
+    "Notificationmissing/ambiguous",
+    "Native notificationtap targetnotuniquelyobserved"
+  ],
+  "syntheticNotificationOrPermissionDatabaseActions": 0,
+  "sourceChanges": 0,
+  "phaseCBuildBootRuntimeActions": 0,
+  "scheduledOrDeliveredClaim": false,
+  "permissionFinalCurrent": "authorized on private1E5 only; no production account/preferences touched",
+  "boundedWaiting": "Runtime wrapper remains nonblocking to agent via1s shell session yields; progress commentary atmost60s gaps."
+}

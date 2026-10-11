@@ -1,0 +1,15 @@
+--- r7/UITests/AdultUITests.swift
++++ r8/UITests/AdultUITests.swift
+@@ -393,10 +393,10 @@
+             throw NSError(domain: "AdultQARealReminderActualWheelForms", code: 1)
+         }
+         // Set minutes first so reducing the default +1-hour selection does not transiently cross the minimum date.
+-        let minuteValue = String(format: "%02d", minute) + (minute == 1 ? " minute" : " minutes")
++        let minuteValue = String(format: "%02d", minute) // Actual selectable options00…59 from r7 failure.
+         wheels.element(boundBy: 1).adjust(toPickerWheelValue: minuteValue)
+         evidence("33-real-reminder-minute-selection", app)
+-        wheels.element(boundBy: 0).adjust(toPickerWheelValue: "\(hour12) o’clock")
++        wheels.element(boundBy: 0).adjust(toPickerWheelValue: String(hour12))
+         if (wheels.element(boundBy: 2).value as? String) != period {
+             wheels.element(boundBy: 2).adjust(toPickerWheelValue: period)
+         }

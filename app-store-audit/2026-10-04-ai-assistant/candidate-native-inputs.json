@@ -1,0 +1,297 @@
+{
+  "scope": "Current uncommitted Assistant native/test inputs, not an uploaded shipping build. Historical receipts unchanged. AdultUITests.swift includes earlier owner work: compiled into the test target but not executed by this selection.",
+  "sourceFiles": 14,
+  "unitTestFiles": 6,
+  "inputs": [
+    {
+      "path": "Configuration/ExportOptions-iOS.plist",
+      "sha256": "70e56d3d35fe0d69e66fb07b279547ffef96c7f574ffe3fa4e3db45640baa0bc",
+      "bytes": 588
+    },
+    {
+      "path": "Configuration/ExportOptions-macOS.plist",
+      "sha256": "f994368057a2133e55da9db78efaec764647be2ebb4e65a0bedb431fe4ad73b6",
+      "bytes": 535
+    },
+    {
+      "path": "Configuration/NATIVE-PROJECT.md",
+      "sha256": "e5a5eb93f80c2b9153a74277afe27b4758f4aa5116d20315704bf34bfe120ad6",
+      "bytes": 4023
+    },
+    {
+      "path": "Configuration/PrivacyInfo.xcprivacy",
+      "sha256": "64407d8a0815b81500ae4a24f62bf4659a2d4348838a29f958eeb560a3ca13e9",
+      "bytes": 2137
+    },
+    {
+      "path": "Configuration/iOS-Info.plist",
+      "sha256": "46b4262019cdc526a569677d56e48ac2d51de5a874e28711eea3e4dc6c024087",
+      "bytes": 2362
+    },
+    {
+      "path": "Configuration/iOS.entitlements",
+      "sha256": "55a9c3dbd2e3925788619684eace456de8fcbdd4e0afb681237cdcff36d6bda9",
+      "bytes": 179
+    },
+    {
+      "path": "Configuration/macOS-Info.plist",
+      "sha256": "4a7cfd37c99cbadd325371ae8b6da3c5bf599d89fa6ac11a1ccfefeb12ef244f",
+      "bytes": 1811
+    },
+    {
+      "path": "Configuration/macOS.entitlements",
+      "sha256": "b57aa036717039841abcb1e08db6c724daa4d671af6b55430fd58ae64f8e6ab1",
+      "bytes": 367
+    },
+    {
+      "path": "Configuration/release-script-verification.json",
+      "sha256": "711ba7533b7e418a8f44f9288f7ea3ba48a07efaa8dca4524f0142cc2bc51bf3",
+      "bytes": 1428
+    },
+    {
+      "path": "Content/catalog.json",
+      "sha256": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+      "bytes": 105625
+    },
+    {
+      "path": "HowToAdult.xcodeproj/project.pbxproj",
+      "sha256": "362c68d2d843b4c8af57e2dde1ed609917ba670def12bd0b9438b6c69cff0919",
+      "bytes": 42824
+    },
+    {
+      "path": "HowToAdult.xcodeproj/xcshareddata/xcschemes/HowToAdult-iOS.xcscheme",
+      "sha256": "995ca3de4994bb7a52890540cb288505aa2599064e8acff2213023acb2e3b25f",
+      "bytes": 3567
+    },
+    {
+      "path": "HowToAdult.xcodeproj/xcshareddata/xcschemes/HowToAdult-macOS.xcscheme",
+      "sha256": "4a93fb929947cb0593388fc8201759157b617e0f5954152e4e4db38d51851278",
+      "bytes": 3589
+    },
+    {
+      "path": "Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "sha256": "d80ab800e9b166137e7134340e3e951b6ea2e9da565c49ba0381f416d5eb0e8d",
+      "bytes": 389
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-iOS-1024.png",
+      "sha256": "157835c2c48f5c9ee191b935c38bc92010721097a42363c6f3aadabb7e0a0094",
+      "bytes": 612387
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-128@1x.png",
+      "sha256": "683c8ddadd3f3b0752d845bc90c3fe3fda39b4a96a52c887f497eb5a4a701a35",
+      "bytes": 13700
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-128@2x.png",
+      "sha256": "74f29512ebb93fe5e6b0e2e9711c11bd268eec934cc1e2a288ae9eddec6a999f",
+      "bytes": 46300
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-16@1x.png",
+      "sha256": "6fb3c057094658a26ce16ed369c1d0d12e435eca67b937874aa60147ab308e8b",
+      "bytes": 731
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-16@2x.png",
+      "sha256": "fabb9eb300ab9c9003f22fe56d2414c8fb73ba8657d3199e2d6eb7ecfd2f2592",
+      "bytes": 1713
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-256@1x.png",
+      "sha256": "74f29512ebb93fe5e6b0e2e9711c11bd268eec934cc1e2a288ae9eddec6a999f",
+      "bytes": 46300
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-256@2x.png",
+      "sha256": "264e1dc5b05d9c15a65fbd7d4b5ebaa7829119289e51d5a70244218137ed3951",
+      "bytes": 163595
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-32@1x.png",
+      "sha256": "fabb9eb300ab9c9003f22fe56d2414c8fb73ba8657d3199e2d6eb7ecfd2f2592",
+      "bytes": 1713
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-32@2x.png",
+      "sha256": "4b69907bab462c60bcfa6a2dde840ca6cbfbb4b3ed3f8a6debd8af1a653bdc6b",
+      "bytes": 4454
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-512@1x.png",
+      "sha256": "264e1dc5b05d9c15a65fbd7d4b5ebaa7829119289e51d5a70244218137ed3951",
+      "bytes": 163595
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-mac-512@2x.png",
+      "sha256": "308aba4ccb028fb8a1b75b399e539a17d93bff0d7f7619c04aad0d10a8d81431",
+      "bytes": 594510
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "609ea9aa7b7eec53c3c6851abdf96a162247c4e017e0f5850b67b291667b5a25",
+      "bytes": 1487
+    },
+    {
+      "path": "Resources/Assets.xcassets/AssistantCalendar.colorset/Contents.json",
+      "sha256": "2b41f6082194b8562474cef57dc315d2e93e3a60b2be2f04972d00ed4da00e2d",
+      "bytes": 666
+    },
+    {
+      "path": "Resources/Assets.xcassets/AssistantChecklist.colorset/Contents.json",
+      "sha256": "511ff7c0f29dba2d850fae3d041a5ac00d3735cf186753b4b578424d9a967731",
+      "bytes": 666
+    },
+    {
+      "path": "Resources/Assets.xcassets/AssistantReminder.colorset/Contents.json",
+      "sha256": "1f6af1db152d060a1813a1e1b42280b13a58136ff2867b59ebb2a75593f5d061",
+      "bytes": 666
+    },
+    {
+      "path": "Resources/Assets.xcassets/AssistantResearch.colorset/Contents.json",
+      "sha256": "609544fcd002704e3123763d5cd01cc083c7b334cf57385644708267f1d4881b",
+      "bytes": 666
+    },
+    {
+      "path": "Resources/Assets.xcassets/AssistantShopping.colorset/Contents.json",
+      "sha256": "7b28177bbbaed1a6839ab080ed7e82e151d5bdb0a101853c7af4ba92912435d5",
+      "bytes": 666
+    },
+    {
+      "path": "Resources/Assets.xcassets/Contents.json",
+      "sha256": "10e3b5dc202f1cd9fad1f688c8fc9fe9e9669bf3f8295e67d216b10fd99b6f49",
+      "bytes": 40
+    },
+    {
+      "path": "Resources/Assets.xcassets/SecondaryText.colorset/Contents.json",
+      "sha256": "941c4bc3c355c364a71220608f3285aec749fd2bff78528d60edffc4b4ad0235",
+      "bytes": 472
+    },
+    {
+      "path": "Sources/AdultAIConnection.swift",
+      "sha256": "e579da8868bc57ef0a0a5ef8e1ae6ddf41e6e05f3eeb5f0b9286d4ef510e0b71",
+      "bytes": 5805
+    },
+    {
+      "path": "Sources/AdultAIService.swift",
+      "sha256": "047829aa3f84b96433a7fff9adc2bb127249550d9befd5580a5ed98b967f6b25",
+      "bytes": 20171
+    },
+    {
+      "path": "Sources/AdultActionExecutor.swift",
+      "sha256": "801d56f41b20390ba8d197c077b535e2532be0aea18949ae986f326cc8e3df34",
+      "bytes": 20005
+    },
+    {
+      "path": "Sources/AdultAssistantController.swift",
+      "sha256": "41b2f9fa90f49fa777ab4dce461d5abe1c126a21ed4db21ba6485e443362dc79",
+      "bytes": 9592
+    },
+    {
+      "path": "Sources/AdultAssistantIntents.swift",
+      "sha256": "aad2e1d0be3aee2e8c887529bb6c44d615590a71c1494d8dba761fa84170ac98",
+      "bytes": 1427
+    },
+    {
+      "path": "Sources/AdultAssistantLibrary.swift",
+      "sha256": "e8d973af10d81ccea26c1e26499e2dc1a079f739328e72e3e1ccae0a2fdd0811",
+      "bytes": 13989
+    },
+    {
+      "path": "Sources/AdultAssistantModels.swift",
+      "sha256": "b9ea7f66ac2118e9dba513c733290bcb6224322c4dd4b8121a949bd21f780f05",
+      "bytes": 13764
+    },
+    {
+      "path": "Sources/AdultAssistantSettingsView.swift",
+      "sha256": "ad30dc697702ad3ff78fb5b42026d308073cca808206d880bd4109b7baf172d3",
+      "bytes": 8792
+    },
+    {
+      "path": "Sources/AdultAssistantViews.swift",
+      "sha256": "9d6224946af4760df4ffe6d90b920f2badc952f5e6a179ab543611c929dbd2a2",
+      "bytes": 25441
+    },
+    {
+      "path": "Sources/AdultCore.swift",
+      "sha256": "ae03dabd15d12b16f2415c7f4fec9e4f9e157868896d4de923606ae539cca30d",
+      "bytes": 6888
+    },
+    {
+      "path": "Sources/AdultNotificationBudget.swift",
+      "sha256": "c77bee42dcd1c5e372faa8f98c6469a1ceb820e783950e98c76a9b3ff56c296a",
+      "bytes": 1675
+    },
+    {
+      "path": "Sources/AdultStore.swift",
+      "sha256": "008f7c0209f3da7419a9ce6223977f05831eb03770bea8fbc6c5157822b77045",
+      "bytes": 14929
+    },
+    {
+      "path": "Sources/AdultViews.swift",
+      "sha256": "80853fd71f57d907fcce9121cdab4a41770ad32288e27ced446d1928e6979049",
+      "bytes": 27750
+    },
+    {
+      "path": "Sources/App.swift",
+      "sha256": "cb4507e313542707171cc4efddc45350b62618270a221ce2225e38af005e43a3",
+      "bytes": 4215
+    },
+    {
+      "path": "Tests/AdultAIServiceTests.swift",
+      "sha256": "7e98127d97137894bf14914526e9e418d79f3de268f65a153e14e162db5abb34",
+      "bytes": 27259
+    },
+    {
+      "path": "Tests/AdultActionExecutorTests.swift",
+      "sha256": "104737a60d21ff326ad38f54cf17727a04361b397d5074b4c4b51959d2d6851b",
+      "bytes": 17453
+    },
+    {
+      "path": "Tests/AdultAssistantControllerTests.swift",
+      "sha256": "ae5c09812acb83b84cea0371dfd3e42ae3eee80ac9534db6f9706cb09a1a5625",
+      "bytes": 20603
+    },
+    {
+      "path": "Tests/AdultAssistantTests.swift",
+      "sha256": "da5b02c0c74ff5c94c56e4e56b8fbcf97bd51502709abd85aff9a8dbde5f03cd",
+      "bytes": 34090
+    },
+    {
+      "path": "Tests/AdultCoreTests.swift",
+      "sha256": "681c675319a09909f12b1c93b49ef9a93359bef98f1e09e6f80224df5669d309",
+      "bytes": 9190
+    },
+    {
+      "path": "Tests/AdultNotificationBudgetTests.swift",
+      "sha256": "4ae574277af169a33f89be2aae75661316068975158c06d29ef73190f95ce795",
+      "bytes": 6408
+    },
+    {
+      "path": "UITests/AdultAssistantUITests.swift",
+      "sha256": "dd874fe2f4dfc6f860a302c1b65157545cf1cbed689c32bd2b6dac1bff0ec380",
+      "bytes": 7473
+    },
+    {
+      "path": "UITests/AdultUITests.swift",
+      "sha256": "5e922f5d7a042206f5317698ebcfbf17af98edf38bfbd005d00b5625ca886ee7",
+      "bytes": 32950
+    },
+    {
+      "path": "project.yml",
+      "sha256": "17ae419e934afe2596fd98943469cea0d130bf82efe297117c703cef4e37e851",
+      "bytes": 1734
+    },
+    {
+      "path": "scripts/generate-native-project.py",
+      "sha256": "5b5873a9932695b7c0772e6843a0b5f0133725ad8d0ddf583b7bbe145db5f81f",
+      "bytes": 13997
+    }
+  ],
+  "baseRevision": "42232bb51f32b24971932efadf142f1e50591243",
+  "recordedAtUTC": "2026-10-04T17:16:07.130187+00:00",
+  "uiTestFiles": 2,
+  "allInputsMatchNow": true,
+  "canonicalSHA256": "c2c01b42e764285c57984228086ff2b7e2468228e7ec0cfbd8c9aae332ac5810"
+}

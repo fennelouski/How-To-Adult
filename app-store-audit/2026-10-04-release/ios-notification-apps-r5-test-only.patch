@@ -1,0 +1,55 @@
+--- r4/UITests/AdultUITests.swift
++++ r5/UITests/AdultUITests.swift
+@@ -222,10 +222,26 @@
+         }
+         app.terminate()
+         settings.launch()
+-        let notifications = try observedCell("Notifications", "21-native-settings-root")
++        evidence("21-native-settings-apps-route", settings)
++        let apps = settings.buttons.matching(identifier: "com.apple.settings.apps")
++        for index in 0..<7 {
++            evidence("21b-observed-apps-control-" + String(index), settings)
++            guard apps.count <= 1 else {
++                throw NSError(domain: "AdultQAAmbiguousNativeAppsControl", code: 1)
++            }
++            if apps.count == 1 && apps.firstMatch.isHittable { break }
++            if index < 6 { settings.swipeUp() }
++        }
++        guard apps.count == 1 && apps.firstMatch.isHittable else {
++            throw NSError(domain: "AdultQAObserveNativeAppsControl", code: 1)
++        }
++        apps.firstMatch.tap()
++        let appRow = try observedCell("How to Adult", "22-native-apps-list")
++        appRow.tap()
++        evidence("22b-native-how-to-adult-settings", settings)
++        XCTAssertTrue(settings.navigationBars["How to Adult"].exists)
++        let notifications = try observedCell("Notifications", "22c-native-app-notifications-control")
+         notifications.tap()
+-        let appRow = try observedCell("How to Adult", "22-native-notification-list")
+-        appRow.tap()
+         evidence("23-native-app-notification-controls", settings)
+         XCTAssertTrue(settings.navigationBars["How to Adult"].exists)
+         let switches = settings.switches.matching(NSPredicate(format: "label == %@", "Allow Notifications"))
+@@ -263,7 +279,21 @@
+         }
+         timeControls.firstMatch.tap()
+         evidence("26-expanded-native-time-picker", app)
+-        // Reconnaissance stops here. No value edit, Save, scheduling or synthetic delivery.
++        // Dismiss only a genuinely exposed unique popover control before Cancel.
++        let regions = app.descendants(matching: .any).matching(identifier: "PopoverDismissRegion")
++        if regions.count == 1 && regions.firstMatch.isHittable { regions.firstMatch.tap() }
++        evidence("27-current-time-picker-dismissal-state", app)
++        let cancel = app.buttons["Cancel"]
++        guard cancel.exists && cancel.isHittable else {
++            throw NSError(domain: "AdultQAObserveReminderCancel", code: 1)
++        }
++        cancel.tap()
++        let cancelled = app.buttons["save-reminder"].waitForNonExistence(timeout: 5)
++        evidence("28-reminder-cancelled-same-guide", app)
++        XCTAssertTrue(cancelled)
++        XCTAssertTrue(app.scrollViews["guide-reader"].exists)
++        XCTAssertTrue(app.staticTexts["Wash a load of laundry"].exists)
++        // No value edit, Save, scheduling or synthetic delivery.
+     }
+     #endif
+ 

@@ -1,0 +1,20 @@
+{
+  "privateSessionID" : "58D5527F-88AC-4DF8-BF66-D72B10494E0A",
+  "qualification" : "Actual AX bounds and screenshots; AX labels alone do not prove rendered text is untruncated.",
+  "targets" : [
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 96,
+        "width" : 329,
+        "x" : 32,
+        "y" : 153.66666666666663
+      },
+      "hittable" : true,
+      "identifier" : "assistant-goal",
+      "label" : "Task for your assistant",
+      "type" : 52
+    }
+  ]
+}

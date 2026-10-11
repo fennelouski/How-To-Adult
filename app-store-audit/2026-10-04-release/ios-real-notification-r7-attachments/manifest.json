@@ -1,0 +1,97 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "87621CD9-D9C2-4B0B-8218-BCCC2590639F.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "32-real-reminder-observed-wheels-tree_0_54B3BE9A-5913-4C1D-8388-7608DA77D8CE.txt",
+        "timestamp" : 1791116281.185
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "57C3D127-BEC5-4221-83AA-E4991B9C4187.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "32-real-reminder-observed-wheels_0_56D52E5A-C56C-4A08-BC8E-F9B754057311.png",
+        "timestamp" : 1791116280.946
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "7CD6946E-77AD-4B95-BABB-57760DBB2326",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-10-04 at 02.18.00 PM",
+        "timestamp" : 1791116280.274
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "0468C1C3-64C2-4700-BC07-60DAC55A5999",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 02.18.00 PM",
+        "timestamp" : 1791116280.569
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "FE4A48B5-AF5C-4CD5-B8BE-FEBB86934613.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "31-real-reminder-initial-date-tree_0_79E06502-4741-4633-A126-21136D6C56D4.txt",
+        "timestamp" : 1791116280.03
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "F1228AD6-F1CD-4253-8ED9-827AE4A71835.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "31-real-reminder-initial-date_0_81D23E76-CE8F-446A-AB12-12840B89A831.png",
+        "timestamp" : 1791116279.807
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "B9E28001-8FE0-48D8-9BE5-2533CDBC38B9",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 02.17.58 PM",
+        "timestamp" : 1791116278.194
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "860F0461-E842-4838-BB8D-73838628F259",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 02.17.56 PM",
+        "timestamp" : 1791116276.266
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "649CEC62-E071-4EE8-82F8-CFC1677869BF.mp4",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Screen Recording 2026-10-04 at 02.17.51 PM.mp4",
+        "timestamp" : 1791116271.767
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "deviceName" : "HowToAdult-Completion-QA-Phone-20261004-123824",
+        "exportedFileName" : "DBAF8816-81B0-4600-B240-39B52B4C8341.txt",
+        "isAssociatedWithFailure" : true,
+        "suggestedHumanReadableName" : "Complete Issue Description.txt"
+      }
+    ],
+    "testIdentifier" : "AdultUITests/testRealReminderDeliveryAndTapRoute()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultUITests/testRealReminderDeliveryAndTapRoute"
+  }
+]

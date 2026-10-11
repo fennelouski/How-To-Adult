@@ -1,0 +1,170 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "A26314FF-30B4-4384-8C02-7ACC31C0F334.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer-actual-bounds_0_FF502A7A-86D1-4342-9EC1-051C88B6B7BB.json",
+        "timestamp" : 1791133532.84
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "4BA3EE3C-42E0-4A1B-BD3D-5BFDFC4E06B4.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer-native-tree_0_5619D737-4735-4D27-89B4-D4FDFF6F5B42.txt",
+        "timestamp" : 1791133532.621
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "D89C6907-E824-4C33-8EB6-CE27A8ABEA0E.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "06-private-assistant-return-composer_0_B72830A2-CA0B-4C7C-A80D-1E4F222FA871.png",
+        "timestamp" : 1791133532.46
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "5AD06218-636A-4AFB-83C1-30D2D3471F2F.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target-actual-bounds_0_80573A26-05D0-4F72-BD2F-006C59F2A4C6.json",
+        "timestamp" : 1791133528.852
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "D41B8061-F7D1-4D6D-A252-46AA540B0BAA.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target-native-tree_0_08476281-79D1-4330-B77B-AE5914F26BD3.txt",
+        "timestamp" : 1791133528.482
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "204316FD-C7B3-4F05-AB45-F378BDBF96E4.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "05-private-another-task-target_0_99855714-C4D1-49FE-AEB0-B8A74D766EB6.png",
+        "timestamp" : 1791133528.288
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "44ECFB8B-5FF7-4853-B26B-2902A803FC60.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings-actual-bounds_0_F2EBB5C6-1E67-4C54-82A4-5360B9F4C467.json",
+        "timestamp" : 1791133519.684
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "B385044A-E8BE-48D0-9F4F-9C2BAF76A00E.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings-native-tree_0_646797F7-BACE-43BB-930A-40DEB1416038.txt",
+        "timestamp" : 1791133519.074
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "DB79C9BF-0015-4667-BCDC-F47A1453FA3A.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "04-private-assistant-settings_0_36E05C99-F730-4300-81C6-4824C41366A8.png",
+        "timestamp" : 1791133518.683
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "F053D705-DF5B-4CAA-9A69-4968653AD67E.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-actual-bounds_0_769B4501-0ED5-4B31-83F9-AA938693A9D5.json",
+        "timestamp" : 1791133516.273
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "93A5E382-057D-4A42-8FB4-3E26E7A4E6B5.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-native-tree_0_50A54626-1CF0-4A9B-B632-1F2566B85B77.txt",
+        "timestamp" : 1791133515.433
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "AE1219F9-150C-4B78-9FE8-9861117ED9AC.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar_0_B48D9CEF-45C5-4FDD-8607-F1256D4EDD40.png",
+        "timestamp" : 1791133515.225
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "C1EB0B94-ACAE-4EEA-8C6D-43168D0CF70F.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-actual-bounds_0_9CE1A73E-C0A9-41DF-92BC-BCE6E342B72F.json",
+        "timestamp" : 1791133510.19
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "96678634-DD0A-4A80-B2B5-F263CDB54213.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-native-tree_0_2A970ADC-E711-4C4F-A921-2E43C5FD2393.txt",
+        "timestamp" : 1791133509.94
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "4A4A9F50-01D7-4AEB-B304-8EDD0DCCE36B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target_0_CDBFA280-5A05-4375-A2EE-695988B475F8.png",
+        "timestamp" : 1791133509.768
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "AB1738D7-6070-4020-A159-912A00E24133.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-actual-bounds_0_CD0DA818-2C28-492A-B74F-399E6E8E4FE5.json",
+        "timestamp" : 1791133506.351
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "22DD12EC-76DB-4509-B0D2-49FE4A79D271.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-native-tree_0_0667BFA6-B668-4DA4-BBFB-7DBEA97FC4B1.txt",
+        "timestamp" : 1791133506.116
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "48FC8C99-460B-4503-A5C4-AAB4C782CB03.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer_0_DA1B978D-F0C5-4FA9-957E-459FF2E698BB.png",
+        "timestamp" : 1791133505.939
+      }
+    ],
+    "testIdentifier" : "AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn"
+  }
+]

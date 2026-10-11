@@ -1,6 +1,6 @@
 # How to Adult content backend
 
-The backend is implemented and verified locally. It has **not been deployed**. AWS CLI sign-in needs to be renewed before the first live release. The app's `AdultCatalogURL` must stay empty until the exact live reader endpoint is verified.
+The content service is live on AWS and Vercel. Initial and repeat releases on October 3, 2026 passed both-host verification at committed revision `7b6a116dc1e10ce002d3293be68c347d0939e365`. The publication contains the 56 starter guides. The native reader is configured to use [the Vercel catalog](https://how-to-adult-guides.vercel.app/v1/catalog) during parallel operation; native tests and packages must be verified again after that configuration change. See [the deployment receipt](backend/deployment-record.json).
 
 The app includes `Content/catalog.json`, so the starter guides work immediately without a network connection. Once configured, the app can download a new full catalog, validate it and retain its last valid copy. Reading, saved guides, checklist progress and reminders stay on the device.
 
@@ -68,16 +68,17 @@ backend/.venv/bin/python backend/local.py --port 8769
 
 The server binds to `127.0.0.1`, exposes only reads and seeds its separate `backend/local-store` once. It never reads or modifies native user data. Delete only this disposable backend test store if you want to reseed a local test. Stop the owned server when checks are finished.
 
-## First live release
+## Live release and repeat deployment
 
 Read the workspace `deployment-audit/deployment-policy.md` and `deployment-audit/parallel-deployments.json` before deploying. Through 2026-10-22 07:00 UTC, the same committed revision must be deployed and verified on AWS and Vercel. A push is not a deployment check. This is a new API with no production domain to move.
 
-After sign-in, from a clean committed checkout:
+The existing `fishbowl-head` profile was authenticated and matched the authorized account for this release. From a clean committed checkout:
 
 ```sh
-aws login --profile fishbowl-head
-backend/.venv/bin/python backend/deploy.py parallel
+AWS_PROFILE=fishbowl-head backend/.venv/bin/python backend/deploy.py parallel
 ```
+
+Renew CLI sign-in only if its actual credential check fails. The public reader origins are `https://how-to-adult-guides.vercel.app` and `https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com`. The existing publication is preserved by repeat deployment.
 
 The command verifies the repository origin, the authorized AWS account, local tests and catalog validation before deployment. It freezes handler and catalog content from the exact committed Git blobs, then records hashes for the generated AWS template and Vercel files. It checks HEAD, checkout cleanliness, source hashes and relevant artifacts before remote release phases and the final receipt. Changes during a release stop it from being recorded as complete.
 
@@ -97,10 +98,10 @@ Download and review the live catalog and its ETag before publishing. The editor'
 
 ```sh
 backend/.venv/bin/python backend/publish.py --check --catalog Content/catalog.json
-backend/.venv/bin/python backend/publish.py --api-url https://VERIFIED_API_ID.execute-api.us-west-2.amazonaws.com --expected-etag '"REVIEWED_ETAG"'
+backend/.venv/bin/python backend/publish.py --api-url https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com --expected-etag '"REVIEWED_ETAG"'
 ```
 
-The URL above is a placeholder, not a deployed endpoint. Use the exact verified AWS API origin from the release receipt. The publication client signs with the owner's AWS profile, accepts only an AWS API origin in the selected region and never prints credentials. A stale edit must be reviewed against the new live library before retrying.
+The URL above is the verified AWS API origin. Replace the ETag placeholder with the exact current tag after downloading and reviewing the live publication. The publication client signs with the owner's AWS profile, accepts only an AWS API origin in the selected region and never prints credentials. A stale edit must be reviewed against the new live library before retrying.
 
 To restore older editorial content, retrieve an immutable `revisions/{revision}.json` from the retained S3 bucket using the owner's authenticated AWS access. Review it, give the restored publication a **new** revision and current `publishedAt`, then publish with the current live ETag. Do not bypass the API by writing directly to S3. Code rollback uses a clean checkout of a known prior committed backend revision and the appropriate guarded deployment command. Both content and code rollback still need live verification and a recorded receipt; local tests do not prove a production rollback.
 
@@ -110,15 +111,17 @@ No daily generator or schedule is enabled. A later authoring loop can produce dr
 
 The API contains public editorial guides only. It does not accept reader identities, bookmarks, checklist progress, reminders, location, device tokens, contacts or private notes. No custom analytics or advertising code is installed.
 
-API Gateway access logging is disabled in this template. Lambda retains operational CloudWatch logs for seven days. The handler logs only a generic failure and its exception class; it never logs request URLs, queries, bodies, IAM credentials, catalog text or personal activity. AWS runtime records can include request IDs, execution timing and memory usage.
+Live AWS checks confirmed API Gateway request-access logging and S3 access logging are disabled. The Lambda log group actually retains operational CloudWatch logs for seven days. The handler logs only a generic failure and its exception class; it never logs request URLs, queries, bodies, IAM credentials, catalog text or personal activity. AWS runtime records can include request IDs, execution timing and memory usage.
 
-AWS and Vercel process normal network request metadata, including IP addresses and requested paths, to provide hosting and security. Vercel may retain ordinary provider request logs under its account settings; this implementation does not claim that provider logging is disabled. Calling the optional server search route would transmit its query text to the hosting providers, while the native app's local search does not. There is no tracking identifier or private user activity store. The app privacy policy should disclose ordinary hosting requests before a live endpoint is enabled.
+AWS and Vercel process normal network request metadata, including IP addresses and requested paths, to provide hosting and security. The actual Vercel account uses Pro and its authenticated API reports Observability Plus is not enabled. Current [runtime-log documentation](https://vercel.com/docs/logs/runtime) specifies one day for normal Pro runtime logs; this is not a promise about all provider security retention. No new or legacy log drain is configured. IP anonymization was not verified, and an empty log query is not proof that the provider collects nothing. [The provider privacy evidence](backend/provider-privacy-verification.json) preserves these limits. Calling the optional server search route would transmit its query text to the hosting providers, while the native app's local search does not. There is no tracking identifier or private user activity store. The app privacy policy should disclose ordinary hosting requests before a live endpoint is enabled.
 
-## Local evidence and remaining verification
+## Verification and migration status
 
-On 2026-10-03, the 49 backend checks passed, including nine checks against the actual pinned boto3 service model, stubbed S3 conditional requests and the signed editorial client. First-publication permissions, interrupted publication retry, live-library preservation and rejected storage failures have regression coverage. Seven release tests cover frozen committed source, changed HEAD, untracked files, source edits hidden from Git status, artifact tampering and mutations before AWS, Vercel or publication writes. CloudFormation lint passed with cfn-lint 1.57.1 for the generated template. The real 56-guide starter catalog passed backend validation and actual loopback HTTP reader checks. These checks used an isolated environment on the user's Mac; no remote deployment, editorial publication, provider account or recurring job was created.
+On 2026-10-03, the 49 backend checks passed, including nine checks against the actual pinned boto3 service model, stubbed S3 conditional requests and the signed editorial client. First-publication permissions, interrupted publication retry, live-library preservation and rejected storage failures have regression coverage. Seven release tests cover frozen committed source, changed HEAD, untracked files, source edits hidden from Git status, artifact tampering and mutations before AWS, Vercel or publication writes. CloudFormation lint passed with cfn-lint 1.57.1 for the generated template. The real 56-guide starter catalog passed backend validation and actual loopback HTTP reader checks. Those local checks used an isolated environment on the user's Mac. The later live release used a clean local clone of the same committed source and existing AWS/Vercel accounts. No paid build compute or recurring job was created.
 
-Live authentication, AWS CloudFormation validation, initial publication, both public reader deployments, repeat deployment, production rollback and the parallel observation period remain unverified.
+The initial release created one publication with IAM-signed conditional writes. Both public hosts passed health/revision checks, identical catalog content, ETag revalidation, guide retrieval, filtered pagination, missing-guide responses and rejection of unauthenticated publication. A second release preserved the catalog, S3 object version and public origins. The deployed original CloudFormation template and Vercel provenance matched their frozen source artifacts. Live settings confirmed private encrypted versioned storage.
+
+Code rollback remains unverified. Repeating identical code does not prove rollback. The required sustained parallel observation period began at `2026-10-03T08:46:28.162881+00:00`; its earliest fourteen-day milestone is October 17. Readiness review remains October 20 and target cutover remains October 22 at 07:00 UTC. No cutover, DNS change or Vercel cancellation has occurred.
 
 ## Primary implementation references
 

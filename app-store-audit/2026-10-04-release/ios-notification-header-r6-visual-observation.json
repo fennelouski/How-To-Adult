@@ -1,0 +1,149 @@
+{
+  "recordedAtUTC": "2026-10-04T12:05:29.471443+00:00",
+  "scope": "Actual app-specific notification Settings recovery and native DatePicker expansion/dismissal/Cancel only.",
+  "summary": "ios-notification-header-r6-summary.json",
+  "summarySHA256": "7f8441ff07c3320ca673b81a3fd09b51b1f0f61470a4ff6c8b6c1034728e3606",
+  "processed": 1,
+  "passed": 1,
+  "failed": 0,
+  "runtimeReceipt": "ios-notification-header-r6-runtime-receipt.json",
+  "runtimeReceiptSHA256": "f31aa34354e7fadb34d9bc4afd0e9c2754b1c393b387a4f0609cf082e73d1a05",
+  "buildReceipt": "ios-notification-header-r6-build-receipt.json",
+  "buildReceiptSHA256": "b9984e3502725045319ddb3ffd51500a1c2ef01d03ac169e3bb4471b7c3d1a34",
+  "testSHA256": "a0020af1d2b01f34c113db56e5356ad0811eb921aa4f9a2cbe3df38b32a9ec41",
+  "allNativePNGs": [
+    {
+      "file": "ios-notification-header-r6-attachments/1CFA97DB-E02F-49B2-9940-6D19F06C3FAD.png",
+      "sha256": "c9013cfe619e4ca97ec0979d6a565747d47f488d2d7fcc36ed5bb12bbc0ef057",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/23527F63-3701-4EFB-B3C0-7EE34F2E5732.png",
+      "sha256": "64a91ee65eb2aae75355e8aded62b874c300776a79fd6c48b0e6e6139afcf18c",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/24DD698F-92CF-43DF-9EA8-0352E7FA0490.png",
+      "sha256": "ea501fe34628594ed0b439342dc6b7a561cfd565479a7e8e8536d46a9b736479",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/39378FE6-A402-4F37-A136-61EF8F8B7D4B.png",
+      "sha256": "39f6ee911d72b34db3a1ab6b704e040253575b9c9328f3ea77beb8398e333c08",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/580A21DC-DC0D-4F78-8A65-8E9FE601F929.png",
+      "sha256": "39f6ee911d72b34db3a1ab6b704e040253575b9c9328f3ea77beb8398e333c08",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/8DB5C533-0F01-41AF-AFBF-C002652A7DE0.png",
+      "sha256": "ebe2733924a1d7d56df307a6118a948592d808cb66b720dd03b08be157388cc9",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/A457B1FF-6AD6-4D2C-974C-055133B86860.png",
+      "sha256": "2d692ee00d5be73bbf8f67e6553bd029e144d3aff9cf058c697fdbd24b3d7626",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/B08FD81A-EB55-466B-81F7-8E206A9D93DF.png",
+      "sha256": "85ea99f81812052158ab1897012b9973fa85b4e08adcdd81aff195a6702b8d79",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/D572DF36-2C1E-4644-8E12-2ABAF094078F.png",
+      "sha256": "b12a29a3ede3f625eb0ee1d47eb585a6d4e10b04e08058974606eab3a42b8ec9",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/D9ABD738-20C5-4034-A732-2509B9ADFCDB.png",
+      "sha256": "27d9961fa7c75438eb66fcad075e704bb128c6de1be529f8f772bf4596209333",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/DE01F990-DDF3-4527-9823-97EDB25169E5.png",
+      "sha256": "71f6ee25260257bc16394f96a8c9327b04be1fdf8bc26371c847599d4d0e5bcb",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-notification-header-r6-attachments/EB22AB87-601E-4310-89C6-1E6870F0F8DA.png",
+      "sha256": "76044dc1a629cdf4442851401f60f354e769d662ac4aea5a8a1def4572141ee1",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    }
+  ],
+  "actualOwnAppPermission": {
+    "beforePNG": "ios-notification-header-r6-attachments/D572DF36-2C1E-4644-8E12-2ABAF094078F.png",
+    "beforeAX": "ios-notification-header-r6-attachments/8BEFDACD-2482-4E8B-A24C-F40A5B258923.txt",
+    "afterPNG": "ios-notification-header-r6-attachments/8DB5C533-0F01-41AF-AFBF-C002652A7DE0.png",
+    "afterAX": "ios-notification-header-r6-attachments/FCE1226A-B713-4EDF-BD46-4543BA3C00E8.txt",
+    "switch": "Allow Notifications",
+    "beforeValue": "0",
+    "afterValue": "1",
+    "onlySettingsMutation": "This private Simulator app-specific notification permission0\u21921"
+  },
+  "actualExpandedTimePicker": {
+    "png": "ios-notification-header-r6-attachments/24DD698F-92CF-43DF-9EA8-0352E7FA0490.png",
+    "pngSHA256": "ea501fe34628594ed0b439342dc6b7a561cfd565479a7e8e8536d46a9b736479",
+    "ax": "ios-notification-header-r6-attachments/1B1481E0-C8E8-4E5F-9D62-5A41FD0FB838.txt",
+    "axSHA256": "bcc6d8be626fd39106db5b1d058cf267e3a58cf55c98a75405a3cb7e16be2401",
+    "observedDate": "Oct 4, 2026",
+    "observedTime": "3:01 PM",
+    "actualWheels": [
+      "3 o\u2019clock",
+      "01 minute",
+      "PM"
+    ],
+    "actualDismissalIdentifier": "PopoverDismissRegion"
+  },
+  "cancelledSameGuide": {
+    "png": "ios-notification-header-r6-attachments/A457B1FF-6AD6-4D2C-974C-055133B86860.png",
+    "ax": "ios-notification-header-r6-attachments/ED6CC8B0-60FB-41EC-8B70-12B1CBBFC414.txt",
+    "reader": "guide-reader",
+    "title": "Wash a load of laundry",
+    "SaveAbsentAfterCancel": true
+  },
+  "saveOrTimeEditActions": 0,
+  "notificationSchedulingOrDeliveryOrTapClaim": false,
+  "visualLimits": [
+    "App-row/app-page captures23527F63 andD9ABD738 show native navigation transitions, not stable stills. Actual page AX and final notification page prove app context.",
+    "27-current-time-picker-dismissal-state EB22AB87 includes faint departing native popup; actual Cancel and same-reader endpoint passed."
+  ],
+  "finallyDeviceState": "Shutdown",
+  "finallyAppearance": "light",
+  "finallyContentSize": "large",
+  "shipping35Original45RunnerPlanNormalHostUnchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "serializedSlotReleasedAfterSequentialExports": true,
+  "retainedPriorFailures": [
+    "ios-notification-apps-r5-summary.json",
+    "ios-notification-settings-r4-summary.json",
+    "ios-share-dismissal-r3-summary.json"
+  ]
+}

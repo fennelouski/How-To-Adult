@@ -1,0 +1,180 @@
+Attributes: Application, 0x1081220f0, pid: 77057, label: 'Settings'
+Element subtree:
+ →Application, 0x1081220f0, pid: 77057, label: 'Settings'
+    Window (Main), 0x108120dd0, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x108121cd0, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x1081213b0, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x108113340, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x108122620, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x1081234f0, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x108124800, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x108124920, {{0.0, 0.0}, {440.0, 956.0}}
+                    NavigationBar, 0x108124a40, {{0.0, 56.3}, {440.0, 148.0}}, identifier: 'Settings'
+                      StaticText, 0x108124b60, {{20.0, 104.0}, {133.0, 40.7}}, label: 'Settings'
+                      SearchField, 0x108124c80, {{20.0, 153.3}, {400.0, 36.0}}, label: 'Search', placeholderValue: 'Search'
+                        Button, 0x108124da0, {{394.7, 160.3}, {17.3, 22.0}}, identifier: 'Dictate', label: 'Dictate'
+                        Image, 0x108124ec0, {{26.0, 161.7}, {20.3, 18.7}}, identifier: 'magnifyingglass', label: 'Search'
+                        Button, 0x108124fe0, {{394.7, 160.3}, {17.3, 22.0}}, identifier: 'Dictate', label: 'Dictate'
+                    Other, 0x108125100, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x108125220, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x108125340, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x108125460, {{0.0, 0.0}, {440.0, 956.0}}
+                            Other, 0x108125580, {{0.0, 204.3}, {440.0, 717.7}}
+                            CollectionView, 0x1081256a0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x1081257c0, {{-20.0, -1707.7}, {480.0, 2012.0}}
+                              Cell, 0x1081258e0, {{20.0, 204.3}, {400.0, 82.3}}
+                                Other, 0x108125a00, {{20.0, 204.3}, {400.0, 82.3}}
+                                  Other, 0x108125b20, {{20.0, 204.3}, {400.0, 82.3}}
+                                Other, 0x108125c40, {{20.0, 204.3}, {400.0, 82.3}}
+                                  Other, 0x108125d60, {{20.0, 204.3}, {400.0, 82.3}}
+                                    Other, 0x108125e80, {{20.0, 204.3}, {400.0, 82.3}}
+                                      Button, 0x108125fa0, {{20.0, 204.3}, {400.0, 82.3}}, identifier: 'com.apple.settings.primaryAppleAccount', label: 'Apple Account, Sign in to access your iCloud data, the App Store, Apple services, and more.'
+                                        Image, 0x1081260c0, {{40.0, 215.3}, {60.0, 60.3}}, identifier: 'apple.id', label: 'apple.id'
+                                        StaticText, 0x1081261e0, {{108.0, 215.3}, {134.7, 24.0}}, label: 'Apple Account'
+                                        StaticText, 0x108126300, {{108.0, 242.0}, {264.0, 33.7}}, label: 'Sign in to access your iCloud data, the App Store, Apple services, and more.'
+                                        Image, 0x108126420, {{392.3, 239.3}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x108126540, {{-20.0, 304.3}, {480.0, 387.3}}
+                              Cell, 0x108126660, {{20.0, 322.0}, {400.0, 44.0}}
+                                Other, 0x108126780, {{20.0, 322.0}, {400.0, 44.0}}
+                                  Other, 0x1081268a0, {{20.0, 322.0}, {400.0, 44.0}}
+                                Other, 0x1081269c0, {{20.0, 322.0}, {400.0, 44.0}}
+                                  Other, 0x108126ae0, {{20.0, 322.0}, {400.0, 44.0}}
+                                    Other, 0x108126c00, {{20.0, 322.0}, {400.0, 44.0}}
+                                      Button, 0x108126d20, {{20.0, 322.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.general', label: 'General'
+                                        Image, 0x108126e40, {{39.7, 329.7}, {29.0, 29.0}}
+                                        StaticText, 0x108126f60, {{39.7, 329.7}, {103.7, 29.0}}, label: 'General'
+                                        Image, 0x108127080, {{392.3, 338.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Cell, 0x1081271a0, {{20.0, 366.0}, {400.0, 44.0}}
+                                Other, 0x1081272c0, {{20.0, 366.0}, {400.0, 44.0}}
+                                  Other, 0x1081273e0, {{20.0, 366.0}, {400.0, 44.0}}
+                                Other, 0x108127500, {{20.0, 366.0}, {400.0, 44.0}}
+                                  Other, 0x108127620, {{20.0, 366.0}, {400.0, 44.0}}
+                                    Other, 0x108127740, {{20.0, 366.0}, {400.0, 44.0}}
+                                      Button, 0x108127860, {{20.0, 366.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.accessibility', label: 'Accessibility'
+                                        Image, 0x108127980, {{39.7, 373.7}, {29.0, 29.0}}
+                                        StaticText, 0x108127aa0, {{39.7, 373.7}, {139.0, 29.0}}, label: 'Accessibility'
+                                        Image, 0x108127bc0, {{392.3, 382.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x108127ce0, {{84.0, 365.7}, {336.0, 0.3}}
+                              Cell, 0x108127e00, {{20.0, 410.0}, {400.0, 44.0}}
+                                Other, 0x108127f20, {{20.0, 410.0}, {400.0, 44.0}}
+                                  Other, 0x108128040, {{20.0, 410.0}, {400.0, 44.0}}
+                                Other, 0x108128160, {{20.0, 410.0}, {400.0, 44.0}}
+                                  Other, 0x108128280, {{20.0, 410.0}, {400.0, 44.0}}
+                                    Other, 0x1081283a0, {{20.0, 410.0}, {400.0, 44.0}}
+                                      Button, 0x1081284c0, {{20.0, 410.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.actionButton', label: 'Action Button'
+                                        Image, 0x1081285e0, {{39.7, 417.7}, {29.0, 29.0}}
+                                        StaticText, 0x108128700, {{39.7, 417.7}, {148.0, 29.0}}, label: 'Action Button'
+                                        Image, 0x108128820, {{392.3, 426.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x108128940, {{84.0, 409.7}, {336.0, 0.3}}
+                              Cell, 0x108128a60, {{20.0, 454.0}, {400.0, 44.0}}
+                                Other, 0x108128b80, {{20.0, 454.0}, {400.0, 44.0}}
+                                  Other, 0x108128ca0, {{20.0, 454.0}, {400.0, 44.0}}
+                                Other, 0x108128dc0, {{20.0, 454.0}, {400.0, 44.0}}
+                                  Other, 0x108128ee0, {{20.0, 454.0}, {400.0, 44.0}}
+                                    Other, 0x108129000, {{20.0, 454.0}, {400.0, 44.0}}
+                                      Button, 0x108129120, {{20.0, 454.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.siri', label: 'Apple Intelligence & Siri'
+                                        Image, 0x108129240, {{39.7, 461.7}, {29.0, 29.0}}
+                                        StaticText, 0x108129360, {{39.7, 461.7}, {224.3, 29.0}}, label: 'Apple Intelligence & Siri'
+                                        Image, 0x108129480, {{392.3, 470.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x1081295a0, {{84.0, 453.7}, {336.0, 0.3}}
+                              Cell, 0x1081296c0, {{20.0, 498.0}, {400.0, 44.0}}
+                                Other, 0x1081297e0, {{20.0, 498.0}, {400.0, 44.0}}
+                                  Other, 0x108129900, {{20.0, 498.0}, {400.0, 44.0}}
+                                Other, 0x108129a20, {{20.0, 498.0}, {400.0, 44.0}}
+                                  Other, 0x108129b40, {{20.0, 498.0}, {400.0, 44.0}}
+                                    Other, 0x108129c60, {{20.0, 498.0}, {400.0, 44.0}}
+                                      Button, 0x108129d80, {{20.0, 498.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.camera', label: 'Camera'
+                                        Image, 0x108129ea0, {{39.7, 505.7}, {29.0, 29.0}}
+                                        StaticText, 0x108129fc0, {{39.7, 505.7}, {103.7, 29.0}}, label: 'Camera'
+                                        Image, 0x10812a0e0, {{392.3, 514.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812a200, {{84.0, 497.7}, {336.0, 0.3}}
+                              Cell, 0x10812a320, {{20.0, 542.0}, {400.0, 44.0}}
+                                Other, 0x10812a440, {{20.0, 542.0}, {400.0, 44.0}}
+                                  Other, 0x10812a560, {{20.0, 542.0}, {400.0, 44.0}}
+                                Other, 0x10812a680, {{20.0, 542.0}, {400.0, 44.0}}
+                                  Other, 0x10812a7a0, {{20.0, 542.0}, {400.0, 44.0}}
+                                    Other, 0x10812a8c0, {{20.0, 542.0}, {400.0, 44.0}}
+                                      Button, 0x10812a9e0, {{20.0, 542.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.homeScreen', label: 'Home Screen & App Library'
+                                        Image, 0x10812ab00, {{39.7, 549.7}, {29.0, 29.0}}
+                                        StaticText, 0x10812ac20, {{39.7, 549.7}, {256.0, 29.0}}, label: 'Home Screen & App Library'
+                                        Image, 0x10812ad40, {{392.3, 558.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812ae60, {{84.0, 541.7}, {336.0, 0.3}}
+                              Cell, 0x10812af80, {{20.0, 586.0}, {400.0, 44.0}}
+                                Other, 0x10812b0a0, {{20.0, 586.0}, {400.0, 44.0}}
+                                  Other, 0x10812b1c0, {{20.0, 586.0}, {400.0, 44.0}}
+                                Other, 0x10812b2e0, {{20.0, 586.0}, {400.0, 44.0}}
+                                  Other, 0x10812b400, {{20.0, 586.0}, {400.0, 44.0}}
+                                    Other, 0x10812b520, {{20.0, 586.0}, {400.0, 44.0}}
+                                      Button, 0x10812b640, {{20.0, 586.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.search', label: 'Search'
+                                        Image, 0x10812b760, {{39.7, 593.7}, {29.0, 29.0}}
+                                        StaticText, 0x10812b880, {{39.7, 593.7}, {97.7, 29.0}}, label: 'Search'
+                                        Image, 0x10812b9a0, {{392.3, 602.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812bac0, {{84.0, 585.7}, {336.0, 0.3}}
+                              Cell, 0x10812bbe0, {{20.0, 630.0}, {400.0, 44.0}}
+                                Other, 0x10812bd00, {{20.0, 630.0}, {400.0, 44.0}}
+                                  Other, 0x10812be20, {{20.0, 630.0}, {400.0, 44.0}}
+                                Other, 0x10812bf40, {{20.0, 630.0}, {400.0, 44.0}}
+                                  Other, 0x10812c060, {{20.0, 630.0}, {400.0, 44.0}}
+                                    Other, 0x10812c180, {{20.0, 630.0}, {400.0, 44.0}}
+                                      Button, 0x10812c2a0, {{20.0, 630.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.standBy', label: 'StandBy'
+                                        Image, 0x10812c3c0, {{39.7, 637.7}, {29.0, 29.0}}
+                                        StaticText, 0x10812c4e0, {{39.7, 637.7}, {108.7, 29.0}}, label: 'StandBy'
+                                        Image, 0x10812c600, {{392.3, 646.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812c720, {{84.0, 629.7}, {336.0, 0.3}}
+                              Other, 0x10812c840, {{-20.0, 691.7}, {480.0, 79.3}}
+                              Cell, 0x10812c960, {{20.0, 709.3}, {400.0, 44.0}}
+                                Other, 0x10812ca80, {{20.0, 709.3}, {400.0, 44.0}}
+                                  Other, 0x10812cba0, {{20.0, 709.3}, {400.0, 44.0}}
+                                Other, 0x10812ccc0, {{20.0, 709.3}, {400.0, 44.0}}
+                                  Other, 0x10812cde0, {{20.0, 709.3}, {400.0, 44.0}}
+                                    Other, 0x10812cf00, {{20.0, 709.3}, {400.0, 44.0}}
+                                      Button, 0x10812d020, {{20.0, 709.3}, {400.0, 44.0}}, identifier: 'com.apple.settings.screenTime', label: 'Screen Time'
+                                        Image, 0x10812d140, {{39.7, 717.0}, {29.0, 29.0}}
+                                        StaticText, 0x10812d260, {{39.7, 717.0}, {139.7, 29.0}}, label: 'Screen Time'
+                                        Image, 0x10812d380, {{392.3, 725.3}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812d4a0, {{-20.0, 771.0}, {480.0, 79.3}}
+                              Cell, 0x10812d5c0, {{20.0, 788.7}, {400.0, 44.0}}
+                                Other, 0x10812d6e0, {{20.0, 788.7}, {400.0, 44.0}}
+                                  Other, 0x10812d800, {{20.0, 788.7}, {400.0, 44.0}}
+                                Other, 0x10812d920, {{20.0, 788.7}, {400.0, 44.0}}
+                                  Other, 0x10812da40, {{20.0, 788.7}, {400.0, 44.0}}
+                                    Other, 0x10812db60, {{20.0, 788.7}, {400.0, 44.0}}
+                                      Button, 0x10812dc80, {{20.0, 788.7}, {400.0, 44.0}}, identifier: 'com.apple.settings.privacyAndSecurity', label: 'Privacy & Security'
+                                        Image, 0x10812dda0, {{39.7, 796.3}, {29.0, 29.0}}
+                                        StaticText, 0x10812dec0, {{39.7, 796.3}, {183.0, 29.0}}, label: 'Privacy & Security'
+                                        Image, 0x10812dfe0, {{392.3, 804.7}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812e100, {{-20.0, 850.3}, {480.0, 167.3}}
+                              Cell, 0x10812e220, {{20.0, 868.0}, {400.0, 44.0}}
+                                Other, 0x10812e340, {{20.0, 868.0}, {400.0, 44.0}}
+                                  Other, 0x10812e460, {{20.0, 868.0}, {400.0, 44.0}}
+                                Other, 0x10812e580, {{20.0, 868.0}, {400.0, 44.0}}
+                                  Other, 0x10812e6a0, {{20.0, 868.0}, {400.0, 44.0}}
+                                    Other, 0x10812e7c0, {{20.0, 868.0}, {400.0, 44.0}}
+                                      Button, 0x10812e8e0, {{20.0, 868.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.gameCenter', label: 'Game Center'
+                                        Image, 0x10812ea00, {{39.7, 875.7}, {29.0, 29.0}}
+                                        StaticText, 0x10812eb20, {{39.7, 875.7}, {145.0, 29.0}}, label: 'Game Center'
+                                        Image, 0x10812ec40, {{392.3, 884.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Cell, 0x10812ed60, {{20.0, 912.0}, {400.0, 44.0}}
+                                Other, 0x10812ee80, {{20.0, 912.0}, {400.0, 44.0}}
+                                  Other, 0x10812efa0, {{20.0, 912.0}, {400.0, 44.0}}
+                                Other, 0x10812f0c0, {{20.0, 912.0}, {400.0, 44.0}}
+                                  Other, 0x10812f1e0, {{20.0, 912.0}, {400.0, 44.0}}
+                                    Other, 0x10812f300, {{20.0, 912.0}, {400.0, 44.0}}
+                                      Button, 0x10812f420, {{20.0, 912.0}, {400.0, 44.0}}, identifier: 'com.apple.settings.iCloud', label: 'iCloud'
+                                        Image, 0x10812f540, {{39.7, 919.7}, {29.0, 29.0}}
+                                        StaticText, 0x10812f660, {{39.7, 919.7}, {93.0, 29.0}}, label: 'iCloud'
+                                        Image, 0x10812f780, {{392.3, 928.0}, {7.0, 12.0}}, identifier: 'chevron.forward'
+                              Other, 0x10812f8a0, {{84.0, 911.7}, {336.0, 0.3}}
+                              Other, 0x10812f9c0, {{84.0, 955.7}, {336.0, 0.3}}
+                              Other, 0x10812fc30, {{407.0, 106.0}, {30.0, 794.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                Other, 0x10812fd50, {{434.0, 826.7}, {3.0, 70.3}}
+                              Other, 0x10812fe70, {{407.0, 106.0}, {30.0, 794.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                Other, 0x10812ff90, {{434.0, 826.7}, {3.0, 70.3}}
+                            Other, 0x1081302b0, {{220.0, 563.2}, {0.0, 0.0}}
+Path to element:
+ →Application, 0x1081220f0, pid: 77057, label: 'Settings'
+Query chain:
+ →Find: Application 'com.apple.Preferences'
+  Output: {
+    Application, 0x105e0c090, pid: 77057, label: 'Settings'
+  }

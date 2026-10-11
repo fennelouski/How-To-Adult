@@ -1,0 +1,19 @@
+{
+  "recordedAtUTC": "2026-10-04T17:16:07.271056+00:00",
+  "ownedDevices": [
+    {
+      "udid": "0447C953-95E0-457F-8797-434BE6BB12DB",
+      "name": "HowToAdult Assistant Private QA 20261004",
+      "state": "Shutdown"
+    },
+    {
+      "udid": "2C79A885-0D81-4301-BFC4-DCDD63F05955",
+      "name": "HowToAdultAssistantPrivateQAiPad20261004",
+      "state": "Shutdown"
+    }
+  ],
+  "allOwnedShutdown": true,
+  "otherDevicesTouched": false,
+  "SimulatorAppOpened": false,
+  "visionOSOperations": false
+}

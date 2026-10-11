@@ -13,7 +13,9 @@ func color(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat = 1) -> CGColo
     CGColor(colorSpace: rgb, components: [r / 255, g / 255, b / 255, a])!
 }
 
-func makeIcon(size: Int, mac: Bool, name: String) throws {
+enum IconLayer { case full, background, foreground }
+
+func makeIcon(size: Int, mac: Bool, name: String, layer: IconLayer = .full, destination: URL? = nil) throws {
     let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: size, pixelsHigh: size, bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
     let context = NSGraphicsContext(bitmapImageRep: bitmap)!.cgContext
     context.scaleBy(x: CGFloat(size) / 1024, y: CGFloat(size) / 1024)
@@ -25,9 +27,12 @@ func makeIcon(size: Int, mac: Bool, name: String) throws {
         context.addPath(CGPath(roundedRect: CGRect(x: 0, y: 0, width: 1024, height: 1024), cornerWidth: 204, cornerHeight: 204, transform: nil))
         context.clip()
     }
-    let gradient = CGGradient(colorsSpace: rgb, colors: [color(18, 60, 114), color(29, 83, 147)] as CFArray, locations: [0, 1])!
-    context.drawLinearGradient(gradient, start: CGPoint(x: 160, y: 0), end: CGPoint(x: 864, y: 1024), options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
+    if layer != .foreground {
+        let gradient = CGGradient(colorsSpace: rgb, colors: [color(18, 60, 114), color(29, 83, 147)] as CFArray, locations: [0, 1])!
+        context.drawLinearGradient(gradient, start: CGPoint(x: 160, y: 0), end: CGPoint(x: 864, y: 1024), options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
+    }
 
+    if layer != .background {
     let cover = CGMutablePath()
     cover.move(to: CGPoint(x: 229, y: 734))
     cover.addQuadCurve(to: CGPoint(x: 510, y: 700), control: CGPoint(x: 382, y: 799))
@@ -85,10 +90,18 @@ func makeIcon(size: Int, mac: Bool, name: String) throws {
     context.addLine(to: CGPoint(x: 659, y: 637))
     context.addLine(to: CGPoint(x: 695, y: 680))
     context.strokePath()
+    }
+
+    if layer == .foreground {
+        precondition(bitmap.colorAt(x: 0, y: 0)!.alphaComponent == 0, "Vision foreground must leave the background visible")
+        precondition(bitmap.colorAt(x: size / 3, y: size / 2)!.alphaComponent > 0.95, "Vision book must remain visible")
+    } else if layer == .background {
+        precondition(bitmap.colorAt(x: 0, y: 0)!.alphaComponent > 0.95, "Vision background must be opaque")
+    }
 
     // iOS icons must have no alpha channel, even though every rendered pixel is opaque.
     let output: NSBitmapImageRep
-    if mac {
+    if mac || layer == .foreground {
         output = bitmap
     } else {
         output = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: size, pixelsHigh: size, bitsPerSample: 8, samplesPerPixel: 3, hasAlpha: false, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 24)!
@@ -103,7 +116,7 @@ func makeIcon(size: Int, mac: Bool, name: String) throws {
         }
     }
     guard let png = output.representation(using: .png, properties: [:]) else { fatalError("Unable to encode app icon") }
-    try png.write(to: folder.appendingPathComponent(name))
+    try png.write(to: (destination ?? folder).appendingPathComponent(name))
 }
 
 try makeIcon(size: 1024, mac: false, name: "AppIcon-iOS-1024.png")
@@ -118,4 +131,17 @@ for nominal in [16, 32, 128, 256, 512] {
 }
 let json = try JSONSerialization.data(withJSONObject: ["images": entries, "info": ["author": "xcode", "version": 1]], options: [.prettyPrinted, .sortedKeys])
 try json.write(to: folder.appendingPathComponent("Contents.json"))
-print("Original app icon rendered: iOS full bleed + macOS 10 required sizes.")
+let stack = root.appendingPathComponent("Resources/Assets.xcassets/VisionIcon.solidimagestack", isDirectory: true)
+for (name, layer) in [("Back", IconLayer.background), ("Front", IconLayer.foreground)] {
+    let layerFolder = stack.appendingPathComponent(name + ".solidimagestacklayer", isDirectory: true)
+    let images = layerFolder.appendingPathComponent("Content.imageset", isDirectory: true)
+    try FileManager.default.createDirectory(at: images, withIntermediateDirectories: true)
+    try makeIcon(size: 1024, mac: false, name: "Layer.png", layer: layer, destination: images)
+    let info: [String: Any] = ["info": ["author": "xcode", "version": 1]]
+    try JSONSerialization.data(withJSONObject: info, options: [.prettyPrinted, .sortedKeys]).write(to: layerFolder.appendingPathComponent("Contents.json"))
+    let content: [String: Any] = ["info": info["info"]!, "images": [["filename": "Layer.png", "idiom": "vision", "scale": "2x"]]]
+    try JSONSerialization.data(withJSONObject: content, options: [.prettyPrinted, .sortedKeys]).write(to: images.appendingPathComponent("Contents.json"))
+}
+let stackContents: [String: Any] = ["info": ["author": "xcode", "version": 1], "layers": [["filename": "Front.solidimagestacklayer"], ["filename": "Back.solidimagestacklayer"]]]
+try JSONSerialization.data(withJSONObject: stackContents, options: [.prettyPrinted, .sortedKeys]).write(to: stack.appendingPathComponent("Contents.json"))
+print("Original app icon rendered: iOS, macOS, and separate book/background visionOS layers. Layer alpha checks passed.")

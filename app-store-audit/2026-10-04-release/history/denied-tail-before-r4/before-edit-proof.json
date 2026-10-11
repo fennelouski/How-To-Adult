@@ -1,0 +1,8 @@
+{
+  "recordedAtUTC": "2026-10-04T11:29:21.570183+00:00",
+  "previousTestSHA256": "488331210bd0ad0089d20a7e45dd5e546472215d0c6bc72519faf5a8b04ef04c",
+  "r3RuntimeSHA256": "fdcbc43454a0114dde6281b16bb1608aca05af6886625cae90f264b497c02c15",
+  "r3SummarySHA256": "5f16fe7d83a0b8637f870daa9100c0052a0bd56842637cb86c9998a8e1e5ad65",
+  "r3VisualSHA256": "d1400738f08b642d9a2eece857303a56822a91f0e8be2eb8693e61cb05c5f1ec",
+  "authorization": "Root authorized preparation only of exact denied-recovery tail, no build/boot while Watch owns slot."
+}

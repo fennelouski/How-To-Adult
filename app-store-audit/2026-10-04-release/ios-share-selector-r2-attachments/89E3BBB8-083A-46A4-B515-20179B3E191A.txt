@@ -1,0 +1,158 @@
+Optional(Attributes: Application, 0x105812ec0, pid: 62753, label: 'How to Adult'
+Element subtree:
+ →Application, 0x105812ec0, pid: 62753, label: 'How to Adult'
+    Window (Main), 0x105833b60, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x105828780, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x10583cf40, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x10583fc20, {{-440.0, -956.0}, {1320.0, 2868.0}}, identifier: 'PopoverDismissRegion', label: 'dismiss popup'
+          Other, 0x1058277d0, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x10583acf0, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x10581ec30, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x10581f6d0, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x105827280, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x10583c450, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x105838160, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x105836d80, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x1058311e0, {{0.0, 0.0}, {440.0, 956.0}}
+                            NavigationBar, 0x10582d720, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Guide'
+                              Button, 0x10582b090, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult'
+                              StaticText, 0x10582b410, {{196.7, 68.0}, {46.7, 20.3}}, label: 'Guide'
+                              Button, 0x105824370, {{277.3, 56.3}, {44.3, 44.0}}, identifier: 'save-guide', label: 'Save guide'
+                              Button, 0x105822f70, {{329.7, 56.3}, {47.0, 44.0}}, identifier: 'remind-guide', label: 'Remind me'
+                              Button, 0x105821650, {{384.7, 56.3}, {43.3, 44.0}}, label: 'Share…'
+                            Other, 0x1058219a0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x10581d050, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x10581c400, {{0.0, 0.0}, {440.0, 956.0}}
+                                  Other, 0x10581bb30, {{0.0, 0.0}, {440.0, 956.0}}
+                                    ScrollView, 0x10581bea0, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-reader'
+                                      Other, 0x10581abf0, {{0.0, 100.3}, {440.0, 1367.7}}
+                                        StaticText, 0x10581af50, {{24.0, 181.0}, {381.0, 40.7}}, label: 'Wash a load of laundry'
+                                        StaticText, 0x105819c70, {{24.0, 236.7}, {278.3, 49.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                        StaticText, 0x105817720, {{24.0, 300.7}, {153.3, 18.0}}, label: 'About 10 min · 4 steps'
+                                        StaticText, 0x105817a80, {{24.0, 348.7}, {163.7, 26.3}}, label: 'Before you start'
+                                        StaticText, 0x105817e00, {{26.0, 387.0}, {105.3, 20.3}}, label: 'Detergent'
+                                        StaticText, 0x105818170, {{26.0, 419.3}, {89.7, 20.3}}, label: 'Hamper'
+                                        StaticText, 0x105816c90, {{26.0, 451.7}, {163.0, 20.3}}, label: 'Washing machine'
+                                        StaticText, 0x105816fe0, {{24.0, 502.0}, {184.7, 26.3}}, label: 'One step at a time'
+                                        Button, 0x105815170, {{24.0, 544.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-1', label: 'Sort a small load. Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.', value: Not completed
+                                          Image, 0x1058154f0, {{27.0, 566.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x105815880, {{68.0, 564.3}, {131.7, 20.3}}, label: 'Sort a small load'
+                                          StaticText, 0x105815e60, {{68.0, 593.7}, {332.0, 86.3}}, label: 'Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.'
+                                        Button, 0x1058204e0, {{24.0, 700.3}, {392.0, 133.7}}, identifier: 'step-wash-your-first-load-step-2', label: 'Set the machine. Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.', value: Not completed
+                                          Image, 0x1058260c0, {{27.0, 722.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x105828070, {{68.0, 720.3}, {128.7, 20.3}}, label: 'Set the machine'
+                                          StaticText, 0x10582e000, {{68.0, 749.7}, {332.0, 64.3}}, label: 'Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.'
+                                        Button, 0x10582f560, {{24.0, 834.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-3', label: 'Measure detergent. Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.', value: Not completed
+                                          Image, 0x105830520, {{27.0, 856.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x105830890, {{68.0, 854.3}, {151.3, 20.3}}, label: 'Measure detergent'
+                                          StaticText, 0x105832820, {{68.0, 883.7}, {320.7, 86.3}}, label: 'Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.'
+                                        Button, 0x105839b10, {{24.0, 990.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-4', label: 'Finish the job. Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.', value: Not completed
+                                          Image, 0x10583f670, {{27.0, 1012.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x105840660, {{68.0, 1010.3}, {105.7, 20.3}}, label: 'Finish the job'
+                                          StaticText, 0x105841a00, {{68.0, 1039.7}, {330.3, 86.3}}, label: 'Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.'
+                                        StaticText, 0x105841d80, {{46.3, 1196.3}, {174.7, 26.3}}, label: 'Good to know'
+                                        StaticText, 0x105842120, {{44.0, 1236.7}, {344.7, 42.3}}, label: 'Keep detergent away from children and pets. Never combine cleaning chemicals.'
+                                        StaticText, 0x105842480, {{24.0, 1329.0}, {168.0, 26.3}}, label: 'Go to the source'
+                                        Button, 0x105842800, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                          Image, 0x105842b80, {{26.0, 1377.0}, {15.3, 15.3}}, identifier: 'arrow.up.right.square', label: 'arrow.up.right.square'
+                                          StaticText, 0x105842ef0, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                        StaticText, 0x105843290, {{24.0, 1429.7}, {126.7, 14.3}}, label: 'Reviewed 2026-10-03'
+                                      Other, 0x105843610, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x105843970, {{434.0, 109.0}, {3.0, 469.0}}
+                                      Other, 0x105843cc0, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x1058447d0, {{434.0, 109.0}, {3.0, 469.0}}
+                TabBar, 0x105844b20, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar'
+                  Button, 0x105844e90, {{2.0, 874.0}, {143.0, 48.0}}, identifier: 'books.vertical', label: 'Guides', Selected
+                    Image, 0x1058451d0, {{56.7, 876.7}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                  Button, 0x105845520, {{149.0, 874.0}, {142.0, 48.0}}, identifier: 'bookmark', label: 'Saved'
+                  Button, 0x105845890, {{295.0, 874.0}, {143.0, 48.0}}, identifier: 'bell', label: 'Reminders'
+      Other, 0x105845c00, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x105845f50, {{-440.0, -956.0}, {1320.0, 2868.0}}, identifier: 'PopoverDismissRegion', label: 'dismiss popup'
+        Other, 0x1058462b0, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x105846610, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x105846970, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x105846cd0, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'ActivityListView'
+                Other, 0x105847030, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'ShareSheet.RemoteContainerView'
+                  Other, 0x1058473d0, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x105847770, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x105847af0, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x105847e70, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x1058481e0, {{0.0, 446.0}, {440.0, 510.0}}
+                            Image, 0x105848580, {{-150.0, 296.0}, {740.0, 810.0}}
+                            Other, 0x1058488f0, {{0.0, 446.0}, {440.0, 510.0}}
+                              Other, 0x105848c50, {{0.0, 446.0}, {440.0, 510.0}}
+                                Other, 0x105848fb0, {{0.0, 446.0}, {440.0, 510.0}}
+                                  NavigationBar, 0x105849320, {{0.0, 446.0}, {440.0, 72.0}}, identifier: 'UIActivityContentView'
+                                    Button, 0x1058496a0, {{385.0, 452.0}, {43.0, 44.0}}, identifier: 'header.closeButton', label: 'close'
+                                      Image, 0x105849a30, {{393.0, 459.7}, {30.0, 30.0}}, identifier: 'UICloseButtonBackground'
+                                    Other, 0x105849da0, {{68.0, 464.5}, {293.0, 34.0}}, label: 'Wash a load of laundry
+
+Clean clothes without shrinking your favorites.
+
+Before you start Detergent Hamper Washing machine
+
+Sort a small load Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.
+
+Set the machine Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.
+
+Measure detergent Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.
+
+Finish the job Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.
+
+Good to know Keep detergent away from children and pets. Never combine cleaning chemicals.
+
+Sources Whirlpool laundry basics https://www.whirlpool.com/blog/washers-and-dryers/how-to-do-laundry.html
+
+Reviewed 2026-10-03 How to Adult'
+                                  Other, 0x10584a120, {{0.0, 446.0}, {440.0, 510.0}}
+                                    Other, 0x105844240, {{0.0, 446.0}, {440.0, 510.0}}
+                                      Other, 0x10581de20, {{0.0, 446.0}, {440.0, 510.0}}, identifier: 'shareSheet.activity.contentView'
+                                        Other, 0x10583ea00, {{0.0, 446.0}, {440.0, 510.0}}
+                                          Other, 0x1058355c0, {{0.0, 446.0}, {440.0, 510.0}}
+                                        CollectionView, 0x105819fb0, {{0.0, 446.0}, {440.0, 510.0}}, identifier: 'activityCollectionView'
+                                          ScrollView, 0x10582e380, {{10.0, 518.0}, {420.0, 128.0}}
+                                            Cell, 0x105824bc0, {{10.0, 518.0}, {78.0, 128.0}}, identifier: 'shareCell', label: 'Reminders'
+                                              Other, 0x10583ef50, {{10.0, 518.0}, {78.0, 128.0}}
+                                                Other, 0x105826b70, {{10.0, 605.0}, {78.0, 13.3}}
+                                                  Other, 0x10582d1c0, {{10.0, 605.0}, {78.0, 13.3}}
+                                                StaticText, 0x105840300, {{10.0, 605.0}, {78.0, 13.3}}, identifier: 'cellTitleLabel', label: 'Reminders'
+                                                Image, 0x105819990, {{19.0, 540.0}, {60.0, 60.0}}, identifier: 'activityImageView'
+                                            Cell, 0x10581c780, {{110.0, 518.0}, {78.0, 128.0}}, identifier: 'shareCell', label: 'More'
+                                              Other, 0x10582ab30, {{110.0, 518.0}, {78.0, 128.0}}
+                                                Other, 0x10582ec60, {{110.0, 605.0}, {78.0, 13.3}}
+                                                  Other, 0x10583b640, {{110.0, 605.0}, {78.0, 13.3}}
+                                                StaticText, 0x1058414c0, {{110.0, 605.0}, {78.0, 13.3}}, identifier: 'cellTitleLabel', label: 'More'
+                                                Image, 0x10584a890, {{119.0, 540.0}, {60.0, 60.0}}, identifier: 'activityImageView'
+                                          Cell, 0x10582b9c0, {{20.0, 646.0}, {400.0, 50.3}}, identifier: 'actionGroupCell', label: 'Copy'
+                                            Other, 0x1058184f0, {{20.0, 646.0}, {400.0, 50.3}}
+                                              Other, 0x10584cc90, {{20.0, 646.0}, {400.0, 50.3}}
+                                            Other, 0x10584cdb0, {{20.0, 646.0}, {400.0, 50.3}}
+                                              Other, 0x1058246f0, {{20.0, 646.0}, {400.0, 50.3}}
+                                                Other, 0x105824810, {{20.0, 646.0}, {400.0, 50.3}}
+                                              Other, 0x105835af0, {{40.0, 661.0}, {321.7, 20.3}}, identifier: 'titleStackView'
+                                                StaticText, 0x105835c10, {{40.0, 661.0}, {321.7, 20.3}}, identifier: 'titleLabel', label: 'Copy'
+                                              Other, 0x10584d300, {{40.0, 661.0}, {321.7, 20.3}}
+                                              Other, 0x10584d420, {{377.7, 655.3}, {32.0, 32.0}}, identifier: 'imageStackView'
+                                                Image, 0x10584d540, {{377.7, 650.0}, {32.0, 42.7}}, identifier: 'activityImageView', label: 'copy'
+                                          Cell, 0x10584d660, {{20.0, 706.3}, {400.0, 50.3}}, identifier: 'actionGroupCell', label: 'Save to Files'
+                                            Other, 0x10584d780, {{20.0, 706.3}, {400.0, 50.3}}
+                                              Other, 0x10584d8a0, {{20.0, 706.3}, {400.0, 50.3}}
+                                            Other, 0x10584d9c0, {{20.0, 706.3}, {400.0, 50.3}}
+                                              Other, 0x10584db60, {{20.0, 706.3}, {400.0, 50.3}}
+                                                Other, 0x10584dc80, {{20.0, 706.3}, {400.0, 50.3}}
+                                              Other, 0x10584dda0, {{40.0, 721.3}, {321.7, 20.3}}, identifier: 'titleStackView'
+                                                StaticText, 0x10584dec0, {{40.0, 721.3}, {321.7, 20.3}}, identifier: 'titleLabel', label: 'Save to Files'
+                                              Other, 0x10584dfe0, {{40.0, 721.3}, {321.7, 20.3}}
+                                              Other, 0x10584e100, {{377.7, 715.7}, {32.0, 32.0}}, identifier: 'imageStackView'
+                                                Image, 0x10584e220, {{377.7, 715.7}, {32.0, 32.0}}, identifier: 'activityImageView'
+                                          Other, 0x10584e340, {{20.0, 756.7}, {400.0, 59.0}}, identifier: 'collectionView.footerEditView'
+                                            Button, 0x10584e460, {{40.0, 766.7}, {360.0, 33.0}}, identifier: 'editButton', label: 'Edit Actions…'
+                                              StaticText, 0x10584e580, {{40.0, 772.7}, {104.0, 21.0}}, label: 'Edit Actions…'
+Path to element:
+ →Application, 0x105812ec0, pid: 62753, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x101915d50, pid: 62753, label: 'How to Adult'
+  }
+)

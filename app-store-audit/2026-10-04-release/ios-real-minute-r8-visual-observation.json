@@ -1,0 +1,75 @@
+{
+  "recordedAtUTC": "2026-10-04T12:28:24.742672+00:00",
+  "scope": "Native actualnumeric wheel setters andcompactdate verification passed; soundrowcenter tap did nottoggle beforeSave.",
+  "processed": 1,
+  "passed": 0,
+  "failed": 1,
+  "summary": "ios-real-minute-r8-summary.json",
+  "summarySHA256": "e4981e4adb6224474bfcb3a78d0cf5c74680621ef1b6286e15ea9e143068c078",
+  "runtimeReceipt": "ios-real-minute-r8-runtime-receipt.json",
+  "runtimeReceiptSHA256": "8a54bd6faad8ce8401b3383e331c5da4b012accca3144a2b3b455bf479f9e27b",
+  "buildReceipt": "ios-real-minute-r8-build-receipt.json",
+  "buildReceiptSHA256": "e9e6b6d497a1fd8ecb4eff6958f43bcbd1aeff5392ce4ebb9fbdb0ea2b1ae8ab",
+  "actualSelectedTimePNG": "ios-real-minute-r8-attachments/293FD133-9F35-469A-8934-57883DA99179.png",
+  "actualSelectedTimePNGSHA256": "e019557b491b40143e2d827ce60ca38bcb130c73faa5dbd87b0c8d8999ef4a9f",
+  "actualSelectedTimeAX": "ios-real-minute-r8-attachments/6422C1E6-E7D3-49F8-AFB4-4C23CE33BF02.txt",
+  "actualSelectedTimeAXSHA256": "dfe5d8710caad818089a81795e3eb99005faf613ac5c45f535af599a640c6c9c",
+  "actualSelectedValues": [
+    "2 o\u2019clock",
+    "29 minutes",
+    "PM"
+  ],
+  "compactDate": "Oct 4, 2026",
+  "compactTime": "2:29 PM",
+  "actualSuccessfulAPIRequests": [
+    "minute29",
+    "hour2"
+  ],
+  "hourAcceptedAPIOptionsEntireListNotClaimed": true,
+  "observedFailure": "AdultUITests.swift:431 outer full-row composed Switch value remained1 aftercenter tap; noSave.",
+  "nativeSoundSnapshot": "ios-real-minute-r8-sound-snapshot.json",
+  "nativeSoundSnapshotSHA256": "b773260490b901d901728723ee8c1267503e61a3d0edc5b7dffe9d42f96f6daf",
+  "actualContainedSoundSwitchFrame": "{{351,310},{51,31}}",
+  "actualContainedSoundSwitchValue": "1",
+  "allNativePNGs": [
+    {
+      "file": "ios-real-minute-r8-attachments/0E5E84F1-C4CB-44BB-AADC-C867C3033C89.png",
+      "sha256": "84083420f0ac94ce2a7e2c81882dde3dc1836c5b2ea5b02c3e4533a15a2a230a",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-real-minute-r8-attachments/1DF8116B-33AB-430E-BAB9-B340D6022AE1.png",
+      "sha256": "0d63f91e0c6c60d396ae35608f2d74795bbca4e6afe0fb4aa2997ed45710646c",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-real-minute-r8-attachments/293FD133-9F35-469A-8934-57883DA99179.png",
+      "sha256": "e019557b491b40143e2d827ce60ca38bcb130c73faa5dbd87b0c8d8999ef4a9f",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    },
+    {
+      "file": "ios-real-minute-r8-attachments/66B86579-A43A-405D-BA99-2D9CC32F20C7.png",
+      "sha256": "61a76668d647d9a4e470ae89ffb7744ef3b9395da00ee16b206f4cb0b977bb02",
+      "width": 1320,
+      "height": 2868,
+      "individuallyViewed": true
+    }
+  ],
+  "visualLimits": [
+    "33-minute-selection PNG1DF8116B shows nativewheel transition whilecompacttime alreadychanged; final34selectedtime stable.",
+    "No post-sound assertion screenshot; actualrecordednativefailure snapshot andlog record bothouter andactualinnerSwitch1."
+  ],
+  "SaveActions": 0,
+  "notificationSchedulingDeliveryTapClaim": false,
+  "finallyDeviceState": "Shutdown",
+  "finallyAppearance": "light",
+  "finallyContentSize": "large",
+  "shipping35Original45RunnerPlanNormalHostUnchanged": true,
+  "serializedSlotReleasedAfterSequentialExports": true
+}

@@ -1,0 +1,40 @@
+{
+  "preparedAtUTC": "2026-10-04T12:16:51.935836+00:00",
+  "status": "Root approved phaseC sole test/runner/build/runtime; sourceheldbeforematchingbuild",
+  "sourceFreeze": "ios-real-notification-r7-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "7a335ff7af590b5edc5a8defb2f81af3f7d17cbecfe83e44233c3eee6105dedc",
+  "previousTestSHA256": "a0020af1d2b01f34c113db56e5356ad0811eb921aa4f9a2cbe3df38b32a9ec41",
+  "patch": "ios-real-notification-r7-test-only.patch",
+  "patchSHA256": "29c051bfe088a413b3e885bd40d9a372def9578943d7881c76474177f357a2f9",
+  "scripts": {
+    "build-ios-real-notification-r7-runner.py": "f05844ae9cc80264e24623717177f73532f01841793ed3d27d8484276dfc0856",
+    "run-ios-real-notification-r7.py": "c6255dd0f1910a538a9dd73f10fd3f045140b386d3ba7f9ca20d8c9668ad8890"
+  },
+  "onlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "prerequisites": [
+    "r4deniedtail1processed/1PASS/0FAIL",
+    "r6nativeSettings/picker1processed/1PASS/0FAIL"
+  ],
+  "parentReviewedProposal": "ios-real-notification-delivery-plan.r6.json",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "futureCalendarMinute": "ceil(Date()+240sec) with same-dayactualdateguard and >=120sec remaining beforeoneSave",
+  "actualPendingRecordProof": "Native reminder editorRemove control and genuineReminders guide row afterSave",
+  "realDeliveryTap": "Backgroundfromhome withguide-readerabsent; realSpringBoard title/body app-nameuniqueobservablehittarget; noicon/deeplink/injection",
+  "notificationSound": "Only reminderPlayasound switchOff; no systemSoundschange",
+  "nativeCleanup": "Only this privateQAapp nativeRemovecontrolifstillfuture, otherwiseCancel preserveexpired evidence",
+  "shippingChanges": 0,
+  "permissionDatabaseActions": 0,
+  "syntheticNotifications": 0,
+  "buildBootRuntimeDuringPreparation": 0,
+  "retainedFailures": [
+    "ios-notification-apps-r5-summary.json",
+    "ios-notification-settings-r4-summary.json",
+    "ios-share-dismissal-r3-summary.json"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "preparedAtUTC": "2026-10-04T12:28:24.743808+00:00",
+  "status": "PREPARE ONLY; root mustreviewactualnative childSwitch evidence and allocatenextbuild/runtime",
+  "onlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "onlyTestDriverCorrection": [
+    "Require outerSwitchunique/hittable then resolve its uniqueactualdescendantUISwitch, value0or1/hittable.",
+    "IfactualinnerSwitch1tap thatnativecontrol, notcenter ofcomposedrow.",
+    "WaitactualinnerSwitchvalue0 (5sec), captureactualAX+PNGbeforeassertion, verifyouterbindingvalue0.",
+    "Rechecktargetremaining>=120sec immediatelybeforeoneSave; ifanycheckfailscapture/stopbeforeSave."
+  ],
+  "actualEvidence": [
+    "ios-real-minute-r8-sound-snapshot.json",
+    "ios-real-minute-r8-attachments/6422C1E6-E7D3-49F8-AFB4-4C23CE33BF02.txt"
+  ],
+  "unchanged": [
+    "Originalshipping35/app45",
+    "Allothermethods/helpers",
+    "Actualnumeric hour/minute selection andspoken/compactverification",
+    "NativePendingrecord/Home/background/realdelivery/taproute/privatecleanup"
+  ],
+  "noSourceBuildBootRuntimeDuringPreparation": true,
+  "retainedFailures": [
+    "ios-real-minute-r8-summary.json",
+    "ios-real-notification-r7-summary.json"
+  ],
+  "proposedControlCode": "let knobs = sound.firstMatch.switches; guard knobs.count == 1, knobs.firstMatch.isHittable, let value = knobs.firstMatch.value as? String, [\"0\",\"1\"].contains(value) else { throw actualControlFailure }; if value == \"1\" { knobs.firstMatch.tap() }; waitForActualValue0; captureBeforeAssert; verifyouterValue0; guard target.timeIntervalSinceNow >=120 else { captureStop }; Saveonce."
+}

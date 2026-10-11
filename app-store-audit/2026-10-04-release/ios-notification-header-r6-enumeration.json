@@ -1,0 +1,29 @@
+{
+  "errors" : [
+
+  ],
+  "values" : [
+    {
+      "disabledTests" : [
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testDarkAppearanceAndAccessibilityText()"
+        },
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testGuidesSearchSaveProgressAndGallery()"
+        },
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testNativeShareAndNotificationDenialRecovery()"
+        },
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testNotificationDeniedRecoveryTail()"
+        }
+      ],
+      "enabledTests" : [
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance()"
+        }
+      ],
+      "testPlan" : "HowToAdult-iOS"
+    }
+  ]
+}

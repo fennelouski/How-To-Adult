@@ -1,0 +1,75 @@
+Attributes: Application, 0x105b1dc70, pid: 78608, label: 'Settings'
+Element subtree:
+ →Application, 0x105b1dc70, pid: 78608, label: 'Settings'
+    Window (Main), 0x105b1a4a0, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x105b1f920, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x105b1fa40, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x105b1f7d0, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x105b1a5c0, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x105b1fb60, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x105b1fc80, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x105b1fda0, {{0.0, 0.0}, {440.0, 956.0}}
+                    NavigationBar, 0x105b1fec0, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Notifications'
+                      Button, 0x105b1ffe0, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult'
+                      StaticText, 0x105b20100, {{169.3, 68.0}, {101.3, 20.3}}, label: 'Notifications'
+                    Other, 0x105b20220, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x105b20340, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x105b20460, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x105b20580, {{0.0, 0.0}, {440.0, 956.0}}
+                            Other, 0x105b206a0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Table, 0x105b207c0, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x105b208e0, {{0.0, 100.3}, {440.0, 17.7}}
+                                Cell, 0x105b20a00, {{20.0, 118.0}, {400.0, 44.0}}, label: 'Allow Notifications', value: 1
+                                  StaticText, 0x105b20b20, {{40.0, 130.0}, {141.3, 20.3}}, identifier: 'ALLOW_NOTIFICATIONS_ID', label: 'Allow Notifications'
+                                  Switch, 0x105b20c40, {{349.0, 124.7}, {51.0, 31.0}}, label: 'Allow Notifications', value: 1
+                                Other, 0x105b20d60, {{0.0, 162.0}, {440.0, 17.3}}
+                                Other, 0x105b20e80, {{0.0, 179.3}, {440.0, 38.0}}, identifier: 'ALERTS'
+                                  Other, 0x105b20fa0, {{0.0, 179.3}, {440.0, 38.0}}, label: 'ALERTS'
+                                Cell, 0x105b210c0, {{20.0, 217.3}, {400.0, 181.0}}
+                                  Button, 0x105b211e0, {{20.0, 241.3}, {133.3, 141.0}}, identifier: 'Lock Screen', label: 'Allow on Lock Screen', Selected
+                                    Image, 0x105b21300, {{74.0, 356.7}, {25.7, 25.7}}, identifier: 'circle', label: 'circle'
+                                    Image, 0x105b21420, {{74.0, 356.7}, {25.7, 25.7}}, identifier: 'checkmark.circle.fill', label: 'selected'
+                                  Other, 0x105b21540, {{40.0, 398.0}, {380.0, 0.3}}
+                                  Button, 0x105b21660, {{153.3, 241.3}, {133.3, 141.0}}, identifier: 'Notification Center', label: 'Allow in Notification Center', Selected
+                                    Image, 0x105b21780, {{200.3, 241.3}, {39.0, 80.0}}, identifier: 'iphone-D7x-history'
+                                    Image, 0x105b218a0, {{207.3, 356.7}, {25.7, 25.7}}, identifier: 'circle', label: 'circle'
+                                    Image, 0x105b219c0, {{207.3, 356.7}, {25.7, 25.7}}, identifier: 'checkmark.circle.fill', label: 'selected'
+                                  Button, 0x105b21ae0, {{286.7, 241.3}, {133.3, 141.0}}, identifier: 'Banners', label: 'Allow as Banner', Selected
+                                    Image, 0x105b21c00, {{333.7, 241.3}, {39.0, 80.0}}, identifier: 'iphone-D7x-banners'
+                                    Image, 0x105b21d20, {{340.7, 356.7}, {25.7, 25.7}}, identifier: 'circle', label: 'circle'
+                                    Image, 0x105b21e40, {{340.7, 356.7}, {25.7, 25.7}}, identifier: 'checkmark.circle.fill', label: 'selected'
+                                Cell, 0x105b21f60, {{20.0, 398.3}, {400.0, 44.0}}, label: 'Banner Style', value: Temporary
+                                  StaticText, 0x105b22080, {{40.0, 410.3}, {96.7, 20.3}}, identifier: 'BANNER_STYLE_ID', label: 'Banner Style'
+                                  Other, 0x105b221a0, {{40.0, 442.0}, {380.0, 0.3}}
+                                  StaticText, 0x105b222c0, {{299.7, 410.3}, {82.0, 20.3}}, label: 'Temporary'
+                                  Button, 0x105b223e0, {{389.7, 413.3}, {10.3, 14.0}}, label: 'chevron', Disabled
+                                Cell, 0x105b22500, {{20.0, 442.3}, {400.0, 44.0}}, label: 'Sounds', value: 1
+                                  StaticText, 0x105b22620, {{40.0, 454.3}, {57.7, 20.3}}, identifier: 'SOUNDS_ID', label: 'Sounds'
+                                  Switch, 0x105b22740, {{349.0, 449.0}, {51.0, 31.0}}, label: 'Sounds', value: 1
+                                Other, 0x105b22860, {{0.0, 486.3}, {440.0, 17.3}}
+                                Other, 0x105b22980, {{0.0, 503.7}, {440.0, 38.0}}, identifier: 'LOCK SCREEN APPEARANCE'
+                                  Other, 0x105b22aa0, {{0.0, 503.7}, {440.0, 38.0}}, label: 'LOCK SCREEN APPEARANCE'
+                                Cell, 0x105b22bc0, {{20.0, 541.7}, {400.0, 44.0}}, label: 'Show Previews', value: Always (Default)
+                                  StaticText, 0x105b22ce0, {{40.0, 553.7}, {114.7, 20.3}}, identifier: 'SHOW_PREVIEW_APP_ID', label: 'Show Previews'
+                                  Other, 0x105b22e00, {{40.0, 585.3}, {380.0, 0.3}}
+                                  StaticText, 0x105b22f20, {{257.3, 553.7}, {124.3, 20.3}}, label: 'Always (Default)'
+                                  Button, 0x105b23040, {{389.7, 556.7}, {10.3, 14.0}}, label: 'chevron', Disabled
+                                Cell, 0x105b23160, {{20.0, 585.7}, {400.0, 44.0}}, label: 'Notification Grouping', value: Automatic
+                                  StaticText, 0x105b23280, {{40.0, 597.7}, {162.3, 20.3}}, identifier: 'NOTIFICATION_GROUPING_APP_ID', label: 'Notification Grouping'
+                                  Other, 0x105b233a0, {{20.0, 629.3}, {400.0, 0.3}}
+                                  StaticText, 0x105b234c0, {{304.3, 597.7}, {77.3, 20.3}}, label: 'Automatic'
+                                  Button, 0x105b235e0, {{389.7, 600.7}, {10.3, 14.0}}, label: 'chevron', Disabled
+                                Other, 0x105b23700, {{0.0, 629.7}, {440.0, 17.3}}
+                                Other, 0x105b23820, {{0.0, 647.0}, {440.0, 17.7}}
+                                Other, 0x105b23940, {{0.0, 664.7}, {440.0, 17.3}}
+                                Other, 0x105b23a60, {{407.0, 100.3}, {30.0, 799.7}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                                  Other, 0x105b23b80, {{434.0, 323.3}, {3.0, 573.7}}
+                                Other, 0x105b23ca0, {{56.0, 923.0}, {328.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                  Other, 0x105b23dc0, {{59.0, 950.0}, {322.0, 3.0}}
+Path to element:
+ →Application, 0x105b1dc70, pid: 78608, label: 'Settings'
+Query chain:
+ →Find: Application 'com.apple.Preferences'
+  Output: {
+    Application, 0x101f09120, pid: 78608, label: 'Settings'
+  }

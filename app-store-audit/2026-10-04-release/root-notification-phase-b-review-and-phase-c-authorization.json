@@ -1,0 +1,26 @@
+{
+  "recordedAtUTC": "2026-10-04T12:13:56.164304+00:00",
+  "reviewer": "root",
+  "readNativeAX": "ios-notification-header-r6-attachments/1B1481E0-C8E8-4E5F-9D62-5A41FD0FB838.txt",
+  "viewedNativePNG": "ios-notification-header-r6-attachments/24DD698F-92CF-43DF-9EA8-0352E7FA0490.png",
+  "observedPickerWheels": [
+    "3 o\u2019clock",
+    "01 minute",
+    "PM"
+  ],
+  "uniqueDismissalIdentifier": "PopoverDismissRegion",
+  "phaseB": "1 processed,1 passed,0 failed; permission enabled only owned app on owned private phone; Cancel returned same guide; shipping inputs and original release simulator app unchanged",
+  "approvedPhaseCPlan": "ios-real-notification-delivery-plan.r6.json",
+  "allocation": "sole serialized native build and runtime owner portable_marketing, headless owned phone1E5F4647-2BA3-4F26-8E75-9803F528D1BA, jobs2",
+  "requiredGate": "native future calendar reminder at ceil(now+240sec), same day,>=120sec beforeSave; soundOff; oneSave; different guide/home/background; actualSpringBoardAX/PNG unique delivered title/body before derivedtap; actualforegroundguide-reader laundry; privateQAcleanup finallyShutdown/light/large andnormal/sourceguards",
+  "syntheticNotificationAllowed": false,
+  "phaseCScheduledOrDeliveredInThisReceipt": false,
+  "evidenceSHA256": {
+    "ios-real-notification-delivery-plan.r6.json": "a910042aecdcdd775d258a1cb355d0c131148387101d7566c71d530a280c9feb",
+    "ios-notification-header-r6-summary.json": "7f8441ff07c3320ca673b81a3fd09b51b1f0f61470a4ff6c8b6c1034728e3606",
+    "ios-notification-header-r6-runtime-receipt.json": "f31aa34354e7fadb34d9bc4afd0e9c2754b1c393b387a4f0609cf082e73d1a05",
+    "ios-notification-header-r6-visual-observation.json": "4496a6c972ce778737986c8fdaf892d2a962e6b7d00f95b951b900720cba2ea8",
+    "ios-notification-header-r6-attachments/1B1481E0-C8E8-4E5F-9D62-5A41FD0FB838.txt": "bcc6d8be626fd39106db5b1d058cf267e3a58cf55c98a75405a3cb7e16be2401",
+    "ios-notification-header-r6-attachments/24DD698F-92CF-43DF-9EA8-0352E7FA0490.png": "ea501fe34628594ed0b439342dc6b7a561cfd565479a7e8e8536d46a9b736479"
+  }
+}

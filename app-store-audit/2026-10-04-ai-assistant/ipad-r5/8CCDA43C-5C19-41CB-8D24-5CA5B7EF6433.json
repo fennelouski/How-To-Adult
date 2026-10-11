@@ -1,0 +1,48 @@
+{
+  "privateSessionID" : "511BD331-0B48-461D-AC13-8F5AB4A0ABCC",
+  "qualification" : "Actual AX bounds and screenshots; AX labels alone do not prove rendered text is untruncated.",
+  "targets" : [
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 41,
+        "width" : 279,
+        "x" : 590,
+        "y" : 184.510986328125
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "A calmer Sunday",
+      "type" : 48
+    },
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 24,
+        "width" : 267.5,
+        "x" : 652,
+        "y" : 397.010986328125
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "Make room for a weekly reset",
+      "type" : 48
+    },
+    {
+      "enabled" : false,
+      "exists" : true,
+      "frame" : {
+        "height" : 34.5,
+        "width" : 173,
+        "x" : 608,
+        "y" : 530.5
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "Add to Calendar",
+      "type" : 9
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+--- r5/UITests/AdultUITests.swift
++++ r6/UITests/AdultUITests.swift
+@@ -243,7 +243,9 @@
+         let notifications = try observedCell("Notifications", "22c-native-app-notifications-control")
+         notifications.tap()
+         evidence("23-native-app-notification-controls", settings)
+-        XCTAssertTrue(settings.navigationBars["How to Adult"].exists)
++        let notificationBar = settings.navigationBars["Notifications"]
++        XCTAssertTrue(notificationBar.exists)
++        XCTAssertTrue(notificationBar.buttons["How to Adult"].exists)
+         let switches = settings.switches.matching(NSPredicate(format: "label == %@", "Allow Notifications"))
+         guard switches.count == 1 else {
+             throw NSError(domain: "AdultQAObserveNativeAllowNotifications", code: 1)

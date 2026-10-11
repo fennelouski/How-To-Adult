@@ -1,0 +1,86 @@
+{
+  "preparedAtUTC": "2026-10-04T11:29:21.573548+00:00",
+  "status": "Completed: exact denied-tail1PASS, phaseB1FAIL before any permission mutation; original bytes/host stores unchanged. Slot released.",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "shippingInputCount": 35,
+  "shippingChanges": 0,
+  "testFile": "UITests/AdultUITests.swift",
+  "testSHA256": "8c1b901ccb41f1877a4fe5db45836ae776f6d0646e95b62cf99aaf65f657551d",
+  "sourceFreeze": "ios-denied-tail-r4-freeze.json",
+  "method": "AdultUITests/testNotificationDeniedRecoveryTail",
+  "noRepeatedPassingMethods": [
+    "Dark/largest",
+    "Share chooser",
+    "Fresh notification prompt"
+  ],
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "originalReleaseAppFileCount": 45,
+  "ownedDevice": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "expectedTraits": "Shutdown/light/large",
+  "permission": "Already genuinely denied; no reset or re-prompt.",
+  "scripts": {
+    "build-ios-denied-tail-r4-runner.py": "bb65feb47638880a5a39dbb68e32a49f486599a5aaab00de34f057607e211f8a",
+    "run-ios-denied-tail-r4.py": "bf71a1b3763934327da483ec57378befe45003a5c4d2f32cf3c212b851909b6b",
+    "run-ios-notification-settings-r4.py": "16a04c00a21736f93dfd2931852c7d8ba74f26c7efdfc4b74678fb89b8071a6d"
+  },
+  "observedNativeControlProof": {
+    "PNG": "ios-share-dismissal-r3-attachments/A8BD11E3-0490-412F-AF19-9F78734B13F4.png",
+    "AX": "ios-share-dismissal-r3-attachments/A30D8B6D-7CF2-46D1-B4A2-B91FC54D600A.txt",
+    "alertLabel": "Couldn\u2019t finish",
+    "buttonLabel": "OK"
+  },
+  "scope": [
+    "Same real guide \u2192 Remind me \u2192 Save under current denied authorization.",
+    "Capture actual denied alert before assertions, acknowledge actual OK.",
+    "After first actual post-OK AX capture, reopen through actual Remind me only if save-reminder is absent. Require enabled Save and no Remove reminder.",
+    "Cancel and verify same laundry reader."
+  ],
+  "controlFlowRationale": [
+    "AdultStore.schedule denied authorization sets actionIssue and returns false.",
+    "GuideReminderView dismisses only schedule success.",
+    "Actual r3 AX/PNG shows the root alert over the reader and no Save at that time. Post-OK state is still unobserved and will be captured before deciding whether to reopen.",
+    "Acknowledge actual OK, observe resulting native state, then use observed Remind me only when needed. No SwiftUI-internal dismissal claim."
+  ],
+  "preservedEvidence": [
+    "ios-completion-1-summary.json (actual Dark1PASS)",
+    "ios-completion-2-summary.json (Share selector1FAIL)",
+    "ios-share-selector-r2-summary.json (close selector1FAIL)",
+    "ios-share-dismissal-r3-summary.json (tail assumption1FAIL)"
+  ],
+  "pendingDeliveryPlan": "ios-notification-followup-plan.r3.json",
+  "buildBootRuntimeActions": 0,
+  "rootReviewRequiredBeforeRun": true,
+  "rootReview": "Root read r3 actual AX/PNG and source; approved narrow prepare only with post-OK observation and conditional reopen. Watch still owns serialized slot.",
+  "phaseB": {
+    "method": "AdultUITests/testNativeNotificationSettingsAndPickerReconnaissance",
+    "xctestrunPlan": "HowToAdult-Notification-Settings-R4-UI-only.xctestrun",
+    "sequence": "Only after recovery tail and explicit Watch slot release. Matching single-method plan uses the same one fresh compiled runner and exact original Release app.",
+    "nativeActions": [
+      "Capture actual private Settings AX, locate unambiguous visible Notifications cell, then How to Adult cell.",
+      "Capture target app page; require exact How to Adult navigation bar and one Allow Notifications switch with known 0/1 value before toggling.",
+      "Enable only this app on owned Simulator. Never change permission database or production/system host settings.",
+      "Open actual reminder and capture current date/time native controls. Tap only the unique time child matching actual r3 label pattern, capture expanded picker AX.",
+      "Stop without editing time, Save, scheduling or delivery."
+    ],
+    "ambiguousOrAbsentControl": "Stop with actual screenshots/AX; no alternate guessed selector or hidden database writes.",
+    "shippingChanges": 0,
+    "runtimeUntilWatchRelease": false,
+    "tailGuard": "Wrapper requires exported denied-recovery summary1processed/1passed/0failed before any boot."
+  },
+  "slotGrantRecordedAtUTC": "2026-10-04T11:43:36.654311+00:00",
+  "completedRuntimeMethods": {
+    "deniedTail": {
+      "processed": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "phaseB": {
+      "processed": 1,
+      "passed": 0,
+      "failed": 1
+    }
+  },
+  "visualObservation": "ios-notification-r4-visual-observation.json",
+  "pendingAppsRoutePlan": "ios-notification-settings-apps-route-plan.r5.json"
+}

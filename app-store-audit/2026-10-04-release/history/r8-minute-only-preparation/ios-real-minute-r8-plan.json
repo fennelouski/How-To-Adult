@@ -1,0 +1,28 @@
+{
+  "preparedAtUTC": "2026-10-04T12:22:38.347915+00:00",
+  "status": "PREPARED ONLY; no newbuild/boot/runtimeuntilrootreview",
+  "sourceFreeze": "ios-real-minute-r8-freeze.json",
+  "shipping35Unchanged": true,
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "originalApp45Unchanged": true,
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "testSHA256": "1b485a77364b07219449ba8089ff5c644d0143a2d75e667e9448d19c32842e69",
+  "previousTestSHA256": "7a335ff7af590b5edc5a8defb2f81af3f7d17cbecfe83e44233c3eee6105dedc",
+  "patch": "ios-real-minute-r8-test-only.patch",
+  "patchSHA256": "8501ca2d2836f70b0e87d6a0d0ff7ca9a2a4a756cdd7247293f45f1c3a23c3c0",
+  "scripts": {
+    "build-ios-real-minute-r8-runner.py": "0011480ffd88de18e9889ae3c190fa8758c1c85dcc454a9d542a52c368607491",
+    "run-ios-real-minute-r8.py": "b2e17eaa7882ec42b71a6dedfff0d5c8f039f043254405a8706c19ccabd63548"
+  },
+  "onlyMethod": "AdultUITests/testRealReminderDeliveryAndTapRoute",
+  "onlyCorrection": "Minute requestedselectablevalue numeric2digits fromactualaccepted00\u201359; retain existinghourspokenrequest, actualvalues/compactguard andoneSavefuturetimepolicy.",
+  "actualEvidence": "ios-real-notification-r7-attachments/DBAF8816-81B0-4600-B240-39B52B4C8341.txt",
+  "unobservedHourOptions": "No rawhourchoiceproof; existingrequest retainedfailclosed soactualacceptedchoicescanbe recordedifAPIrejects.",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown/light/large",
+  "buildBootRuntimeActions": 0,
+  "retainedPriorFailure": "ios-real-notification-r7-summary.json",
+  "noShippingChanges": true,
+  "noSyntheticNotifications": true
+}

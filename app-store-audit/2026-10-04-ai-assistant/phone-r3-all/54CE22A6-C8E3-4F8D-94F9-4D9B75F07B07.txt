@@ -1,0 +1,114 @@
+Attributes: Application, 0x10728f480, pid: 73870, label: 'How to Adult'
+Element subtree:
+ →Application, 0x10728f480, pid: 73870, label: 'How to Adult'
+    Window (Main), 0x10728f5c0, {{0.0, 0.0}, {393.0, 852.0}}
+      Other, 0x117118000, {{0.0, 0.0}, {393.0, 852.0}}
+        Other, 0x117118140, {{0.0, 0.0}, {393.0, 852.0}}
+          Other, 0x117118280, {{0.0, 0.0}, {393.0, 852.0}}
+            Other, 0x1171183c0, {{0.0, 0.0}, {393.0, 852.0}}
+              Other, 0x117118500, {{0.0, 0.0}, {393.0, 852.0}}
+                Other, 0x117118640, {{0.0, 0.0}, {393.0, 852.0}}
+                  Other, 0x117118780, {{0.0, 0.0}, {393.0, 852.0}}
+                    Other, 0x1171188c0, {{0.0, 0.0}, {393.0, 852.0}}
+                      Other, 0x117118a00, {{0.0, 0.0}, {393.0, 852.0}}
+                        Other, 0x117118b40, {{0.0, 0.0}, {393.0, 852.0}}
+                          Other, 0x117118c80, {{0.0, 0.0}, {393.0, 852.0}}
+                            NavigationBar, 0x117118dc0, {{0.0, 59.0}, {393.0, 54.0}}, identifier: 'Assistant'
+                              StaticText, 0x117118f00, {{159.3, 70.7}, {74.3, 20.7}}, label: 'Assistant'
+                              Button, 0x117119040, {{274.3, 63.0}, {41.3, 36.0}}, identifier: 'open-settings', label: 'Settings'
+                              Button, 0x117119180, {{331.7, 63.0}, {41.3, 36.0}}, identifier: 'assistant-settings', label: 'Assistant settings'
+                            Other, 0x1171192c0, {{0.0, 0.0}, {393.0, 852.0}}
+                              Other, 0x11711abc0, {{0.0, 0.0}, {393.0, 852.0}}
+                                Other, 0x117119400, {{0.0, 0.0}, {393.0, 852.0}}
+                                  Other, 0x117119540, {{0.0, 0.0}, {393.0, 852.0}}
+                                    ScrollView, 0x117119680, {{0.0, 0.0}, {393.0, 852.0}}, identifier: 'assistant-screen'
+                                      Other, 0x1171197c0, {{0.0, -8.3}, {393.0, 777.3}}
+                                        StaticText, 0x117119900, {{76.3, 13.6}, {235.3, 81.7}}, label: 'A little help.
+A doable plan.'
+                                        StaticText, 0x117119a40, {{22.0, 113.3}, {261.7, 20.3}}, label: 'What would you like to get done?'
+                                        TextView, 0x117119b80, {{32.0, 153.7}, {329.0, 96.0}}, identifier: 'assistant-goal', label: 'Task for your assistant'
+                                          Other, 0x117119cc0, {{328.0, 153.7}, {30.0, 96.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                                            Other, 0x117119e00, {{355.0, 214.7}, {3.0, 32.0}}
+                                        Button, 0x117119f40, {{22.0, 277.7}, {349.0, 56.0}}, identifier: 'assistant-connect', label: 'Choose your AI'
+                                          Image, 0x11711a080, {{124.3, 296.0}, {16.0, 19.3}}, identifier: 'sparkles', label: 'Sparkle'
+                                          StaticText, 0x11711a1c0, {{22.0, 277.7}, {349.0, 56.0}}, label: 'Choose your AI'
+                                        Other, 0x11711a300, {{22.0, 351.7}, {349.0, 216.7}}
+                                          Button, 0x11711a440, {{22.0, 351.7}, {168.7, 96.0}}, label: 'Reset my week'
+                                            Image, 0x11711a580, {{40.7, 369.3}, {21.7, 20.0}}, identifier: 'calendar', label: 'Calendar'
+                                            StaticText, 0x11711a6c0, {{38.0, 403.0}, {107.3, 18.0}}, label: 'Reset my week'
+                                          Button, 0x11711a800, {{202.7, 351.7}, {168.3, 96.0}}, label: 'Make dinner easier'
+                                            Image, 0x11711a940, {{221.0, 369.3}, {26.0, 25.7}}, identifier: 'carrot', label: 'carrot'
+                                            StaticText, 0x11711aa80, {{218.5, 408.6}, {135.0, 18.0}}, label: 'Make dinner easier'
+                                          Button, 0x116c0cc80, {{22.0, 459.7}, {168.7, 108.7}}, label: 'Sort the paperwork'
+                                            Image, 0x116c0c000, {{40.7, 477.3}, {18.3, 23.3}}, identifier: 'doc.text', label: 'Plain Text Document'
+                                            StaticText, 0x116c0c140, {{38.0, 514.3}, {77.0, 38.0}}, label: 'Sort the paperwork'
+                                          Button, 0x116c0c280, {{202.7, 466.0}, {168.3, 96.0}}, label: 'Care for my car'
+                                            Image, 0x116c0c3c0, {{221.3, 483.7}, {25.7, 20.0}}, identifier: 'car', label: 'Car'
+                                            StaticText, 0x116c0c500, {{218.5, 517.3}, {109.7, 18.0}}, label: 'Care for my car'
+                                        StaticText, 0x116c0c640, {{23.3, 587.0}, {80.3, 14.3}}, label: 'On device'
+                                        StaticText, 0x116c0c780, {{22.0, 627.4}, {107.3, 26.3}}, label: 'Your plans'
+                                        Button, 0x116c0c8c0, {{22.0, 667.7}, {349.0, 79.3}}, label: 'A calmer Sunday, 0 of 4 ready or done'
+                                          Image, 0x116c0ca00, {{42.7, 687.3}, {18.3, 27.3}}, identifier: 'list.bullet.clipboard', label: 'list.bullet.clipboard'
+                                          StaticText, 0x116c0cb40, {{77.7, 685.7}, {134.0, 20.3}}, label: 'A calmer Sunday'
+                                          StaticText, 0x116c0cdc0, {{77.7, 711.0}, {139.7, 18.0}}, label: '0 of 4 ready or done'
+                                          Image, 0x116c0cf00, {{346.0, 686.7}, {6.3, 10.7}}, identifier: 'chevron.right', label: 'Forward'
+                                      Other, 0x1170ef480, {{0.0, -0.0}, {393.0, 852.0}}
+                                        Other, 0x1170ef5c0, {{0.0, -0.0}, {393.0, 167.8}}
+                                        Other, 0x1170ef840, {{0.0, 704.2}, {393.0, 147.8}}
+                                      Other, 0x1170efe80, {{0.0, -0.0}, {393.0, 852.0}}
+                                        Other, 0x1170ef700, {{0.0, -0.0}, {393.0, 167.8}}
+                                          Image, 0x1170ee080, {{-120.0, -163.0}, {633.0, 326.0}}, identifier: 'AdditionalDimmingOverlay'
+                                          Other, 0x1170ef980, {{0.0, -0.0}, {393.0, 103.0}}
+                                          Other, 0x1170efac0, {{0.0, -0.0}, {393.0, 167.8}}
+                                            Other, 0x1170efc00, {{0.0, -0.0}, {393.0, 167.8}}
+                                          Other, 0x1170ee440, {{0.0, -0.0}, {393.0, 167.8}}
+                                            Other, 0x1170ee580, {{0.0, -0.0}, {393.0, 167.8}}
+                                          Other, 0x1170ee6c0, {{0.0, -0.0}, {393.0, 167.8}}
+                                            Other, 0x1170ee800, {{0.0, -0.0}, {393.0, 167.8}}
+                                            Other, 0x1170ee940, {{0.0, -0.0}, {393.0, 167.8}}
+                                      Other, 0x1170eea80, {{360.0, 113.0}, {30.0, 656.0}}, label: 'Vertical scroll bar, 2 pages', value: 100%
+                                        Other, 0x1170eebc0, {{387.0, 197.0}, {3.0, 569.0}}
+                                      Other, 0x1170eed00, {{360.0, 113.0}, {30.0, 656.0}}, label: 'Vertical scroll bar, 2 pages', value: 100%
+                                        Other, 0x1170eee40, {{387.0, 197.0}, {3.0, 569.0}}
+                            Other, 0x1170eef80, {{0.0, 0.0}, {393.0, 852.0}}
+                              Other, 0x1170ef0c0, {{0.0, 0.0}, {393.0, 852.0}}
+                Other, 0x117190000, {{0.0, 769.0}, {393.0, 83.0}}
+                  Other, 0x117190140, {{0.0, 0.0}, {393.0, 852.0}}
+                    TabBar, 0x117190280, {{0.0, 769.0}, {393.0, 83.0}}, label: 'Tab Bar'
+                      Other, 0x1171903c0, {{21.0, 769.0}, {351.0, 62.0}}
+                        Other, 0x117190500, {{21.0, 769.0}, {92.8, 54.0}}
+                        Other, 0x117190640, {{21.0, 769.0}, {351.0, 62.0}}
+                          Button, 0x117190780, {{25.0, 773.0}, {92.8, 54.0}}, label: 'Guides'
+                            Image, 0x1171908c0, {{55.0, 778.0}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                          Button, 0x117190a00, {{108.4, 773.0}, {92.7, 54.0}}, label: 'Assistant', Selected
+                            Image, 0x117190b40, {{141.4, 777.0}, {26.0, 30.0}}, identifier: 'sparkles', label: 'sparkle'
+                          Button, 0x117190c80, {{191.8, 773.0}, {92.8, 54.0}}, label: 'Saved'
+                            Image, 0x117190dc0, {{225.8, 778.7}, {24.3, 28.7}}, identifier: 'bookmark.fill', label: 'bookmark'
+                          Button, 0x117190f00, {{275.2, 773.0}, {92.8, 54.0}}, label: 'Reminders'
+                            Image, 0x117191040, {{308.2, 779.0}, {26.3, 28.0}}, identifier: 'bell.fill', label: 'notifications'
+                        Other, 0x117191180, {{108.4, 773.0}, {92.7, 54.0}}
+                          Other, 0x1171912c0, {{108.4, 773.0}, {92.7, 54.0}}
+                            Other, 0x117191400, {{108.4, 773.0}, {92.7, 54.0}}
+                            Other, 0x117191540, {{108.4, 773.0}, {92.7, 54.0}}
+                              Other, 0x117191680, {{108.4, 773.0}, {92.7, 54.0}}
+                                Other, 0x1171917c0, {{108.4, 773.0}, {92.7, 54.0}}
+                                  Other, 0x117191900, {{108.4, 773.0}, {92.7, 54.0}}
+                                Other, 0x117191a40, {{108.4, 773.0}, {92.7, 54.0}}
+                              Other, 0x117191b80, {{108.4, 773.0}, {92.7, 54.0}}
+                  Other, 0x117191cc0, {{0.0, 769.0}, {393.0, 83.0}}
+                    Other, 0x117191e00, {{0.0, 769.0}, {393.0, 83.0}}
+                      Other, 0x117191f40, {{0.0, 769.0}, {393.0, 83.0}}
+                        Other, 0x117192080, {{0.0, 769.0}, {393.0, 83.0}}
+                          Other, 0x1171921c0, {{0.0, 769.0}, {393.0, 83.0}}
+                            Other, 0x117192300, {{0.0, 769.0}, {393.0, 83.0}}
+                        Other, 0x117192440, {{0.0, 769.0}, {393.0, 83.0}}
+                          Other, 0x117192580, {{0.0, 769.0}, {393.0, 83.0}}
+              StaticText, 0x1171926c0, {{0.0, 0.0}, {393.0, 101.3}}, identifier: 'adult-private-qa-marker', label: 'Private QA · EA996C6D-1702-4B78-A0A9-71465C84D105
+Scheduling and AI disabled'
+Path to element:
+ →Application, 0x10728f480, pid: 73870, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x117192800, pid: 73870, label: 'How to Adult'
+  }

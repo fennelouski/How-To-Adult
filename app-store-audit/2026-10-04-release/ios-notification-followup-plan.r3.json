@@ -1,0 +1,71 @@
+{
+  "preparedAtUTC": "2026-10-04T11:27:15.102801+00:00",
+  "status": "Read-only follow-up proposal. No new test method, runner build or runtime is authorized by this plan alone.",
+  "originalReleaseApp": "/tmp/howtoadult-live-phone-20261003/Build/Products/Release-iphonesimulator/How to Adult.app",
+  "shippingAggregateSHA256": "cd9e1ee587f615268ee1157e9fb9693d3078762059a06dae11bcf48e06abb9df",
+  "ownedDevice": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "initialTraits": "Shutdown, light/large",
+  "observedPermission": "Denied by actual r3 permission dialog. Do not reset or expect a fresh prompt.",
+  "phaseA": {
+    "scope": "Only the remaining denied-recovery tail; reuse existing r3 chooser/prompt observations.",
+    "actions": [
+      "Open same actual featured guide \u2192 Remind me \u2192 normal Save under genuinely denied permission.",
+      "Capture actual Couldn\u2019t finish alert and AX before assertions.",
+      "Tap app.alerts.buttons[\"OK\"] from observed r3 AX.",
+      "Capture reader and confirm guide-reader restored.",
+      "Open Remind me again; capture real sheet/AX.",
+      "Require Save available and Remove reminder absent, then Cancel and same guide-reader."
+    ],
+    "pendingAuthorization": true
+  },
+  "observedPickerAX": {
+    "source": "app-store-audit/2026-10-04-release/ios-share-dismissal-r3-attachments/88B2DF85-9F4E-4D7F-B24D-9E17C69B49E7.txt",
+    "DatePickerFrame": "{{194.3,263.3},{205.7,36}}",
+    "parentButtonLabel": "Date and Time Picker",
+    "parentValue": "2:23 PM, Oct 4, 2026 (actual capture, not a future driver constant)",
+    "childDateButton": "Oct 4, 2026",
+    "childTimeButton": "2:23 PM",
+    "soundSwitch": {
+      "label": "Play a sound",
+      "value": "1"
+    },
+    "saveIdentifier": "save-reminder",
+    "cancelLabel": "Cancel"
+  },
+  "phaseB": {
+    "scope": "Bounded observed system Settings permission recovery and expanded DatePicker reconnaissance before delivery implementation.",
+    "actions": [
+      "Navigate only owned Simulator system Settings through XCTest; capture actual app Notifications controls before asserting or toggling.",
+      "Enable only How to Adult notifications with observed native Allow Notifications control. No production Mac prefs, database writes or other device access.",
+      "Open guide reminder and tap observed child time button; capture actual expanded native picker and AX before deriving wheel/text selectors.",
+      "Close/cancel without scheduling unless separately authorized after observed picker inputs."
+    ],
+    "pendingAuthorization": true
+  },
+  "phaseC": {
+    "scope": "Real calendar-trigger delivery and tap routing, after actual Settings/picker evidence and parent approval.",
+    "actions": [
+      "Use genuine DatePicker controls to select at least three minutes ahead; respect minute-only trigger resolution and guard against past due value.",
+      "Turn sound off through actual Switch, then normal Save. Record exact visible due minute and selected guide ID/title.",
+      "Move to a different guide or Home and background app through owned XCUIDevice.home.",
+      "Wait boundedly for actual SpringBoard notification with guide title/body; capture actual notification and AX plus first observed timestamp.",
+      "Tap actual delivered notification, assert guide-reader shows the scheduled unique title, capture route result.",
+      "Remove only private created reminder through native Remove reminder, then finally Shutdown and immutable-source/normal-store guard."
+    ],
+    "noSyntheticDelivery": [
+      "No simctl push",
+      "No scheduled-request injection",
+      "No DB mutation",
+      "No arbitrary deep link",
+      "No notification callback fabrication"
+    ],
+    "pendingAuthorization": true
+  },
+  "preserveExistingEvidence": [
+    "ios-completion-1 actual Dark1/1 pass with root-scoped review",
+    "ios-completion-2 Share-label1/1 fail",
+    "ios-share-selector-r2 close-label1/1 fail",
+    "ios-share-dismissal-r3 denied-tail1/1 fail"
+  ],
+  "noRepeatPassingMethods": "No Dark/gallery broad suite repeats; select only current tail and separately authorized observed notification work."
+}

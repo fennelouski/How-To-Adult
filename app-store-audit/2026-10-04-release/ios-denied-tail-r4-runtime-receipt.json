@@ -1,0 +1,259 @@
+{
+  "startedAtUTC": "2026-10-04T11:44:42.028230+00:00",
+  "scope": "Only denied-recovery tail; genuine denied permission from r3 retained",
+  "authorization": "Root explicitly granted serialized jobs2 build/runtime slot after Watch final Shutdown and exports for exact r4 denied tail.",
+  "wrapperSHA256": "bf71a1b3763934327da483ec57378befe45003a5c4d2f32cf3c212b851909b6b",
+  "testOnlyFreezeSHA256": "2a0f5304fd706cd67b779a2dfddc63a5096946a7450cee56f26eacf61f67e96a",
+  "buildReceiptSHA256": "4809096ee90ab1fcad9062a2bd46c220812fbedb348e510f8f1229e9030507d0",
+  "ownedPhone": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+  "shippingInputCount": 35,
+  "shippingInputChanges": 0,
+  "originalReleaseExecutableSHA256": "d7f1b727171bbc1cca494056ff608689cd9be26a8fa9bc39936f14fea59cc7db",
+  "actions": [
+    {
+      "atUTC": "2026-10-04T11:44:42.277974+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "list",
+        "devices",
+        "-j"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"devices\" : {\n    \"com.apple.CoreSimulator.SimRuntime.xrOS-26-5\" : [\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/89782259-8CE2-4B44-9F95-F87DE27B09B4\\/data\",\n        \"dataPathSize\" : 4096,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/89782259-8CE2-4B44-9F95-F87DE27B09B4\",\n        \"udid\" : \"89782259-8CE2-4B44-9F95-F87DE27B09B4\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro-4K\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"Apple Vision Pro\"\n      }\n    ],\n    \"com.apple.CoreSimulator.SimRuntime.iOS-18-5\" : [\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/4AEAAC1C-040C-4BB0-A377-05208B3CFF87\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/4AEAAC1C-040C-4BB0-A377-05208B3CFF87\",\n        \"udid\" : \"4AEAAC1C-040C-4BB0-A377-05208B3CFF87\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/697EC06F-C379-42B1-A18E-03E764F878FC\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/697EC06F-C379-42B1-A18E-03E764F878FC\",\n        \"udid\" : \"697EC06F-C379-42",
+      "stdoutSHA256": "5e619683fba246ef19c2827957e691b61917a3ad4f866e7db2c992ed3a3918fe",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:44:42.841316+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "boot",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:44:47.294437+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "bootstatus",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "-b"
+      ],
+      "exit": 0,
+      "stdout": "Monitoring boot status for HowToAdult-Completion-QA-Phone-20261004-123824 (1E5F4647-2BA3-4F26-8E75-9803F528D1BA).\n[2026-10-04 11:44:45 +0000] Status=2, isTerminal=NO, Elapsed=00:02.\n\tWaiting on Data Migration\n\t\tReason:(null)\n\t\tMigration Elapsed:00:00 seconds\n\n[2026-10-04 11:44:46 +0000] Status=4, isTerminal=NO, Elapsed=00:03.\n\tWaiting on System App\n\n[2026-10-04 11:44:46 +0000] Status=4, isTerminal=NO, Elapsed=00:04.\n\tWaiting on System App\n\n[2026-10-04 11:44:47 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:04.\n\tFinished\n\n",
+      "stdoutSHA256": "1f4dc4824d1cbb3a83c1ebc954d0bbc2b04f5ed417b8c9d2ce63cc4c1d9dbcaf",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:44:47.513921+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "appearance"
+      ],
+      "exit": 0,
+      "stdout": "light\n",
+      "stdoutSHA256": "00be490dace2ce959d7af6676ed67f78d1f9c8a58174447b1d6d96168f386166",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:44:47.686618+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "content_size"
+      ],
+      "exit": 0,
+      "stdout": "large\n",
+      "stdoutSHA256": "9bfce334a37bd1bc1d36b0370195b31fe9a9389dd43d0873891a3544ef1140a1",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:18.442423+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "appearance"
+      ],
+      "exit": 0,
+      "stdout": "light\n",
+      "stdoutSHA256": "00be490dace2ce959d7af6676ed67f78d1f9c8a58174447b1d6d96168f386166",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:18.537593+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "content_size"
+      ],
+      "exit": 0,
+      "stdout": "large\n",
+      "stdoutSHA256": "9bfce334a37bd1bc1d36b0370195b31fe9a9389dd43d0873891a3544ef1140a1",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:18.628783+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "appearance"
+      ],
+      "exit": 0,
+      "stdout": "light\n",
+      "stdoutSHA256": "00be490dace2ce959d7af6676ed67f78d1f9c8a58174447b1d6d96168f386166",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:18.734163+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "ui",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+        "content_size"
+      ],
+      "exit": 0,
+      "stdout": "large\n",
+      "stdoutSHA256": "9bfce334a37bd1bc1d36b0370195b31fe9a9389dd43d0873891a3544ef1140a1",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:19.727990+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "shutdown",
+        "1E5F4647-2BA3-4F26-8E75-9803F528D1BA"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": ""
+    },
+    {
+      "atUTC": "2026-10-04T11:45:19.833596+00:00",
+      "command": [
+        "xcrun",
+        "simctl",
+        "list",
+        "devices",
+        "-j"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"devices\" : {\n    \"com.apple.CoreSimulator.SimRuntime.xrOS-26-5\" : [\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/89782259-8CE2-4B44-9F95-F87DE27B09B4\\/data\",\n        \"dataPathSize\" : 4096,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/89782259-8CE2-4B44-9F95-F87DE27B09B4\",\n        \"udid\" : \"89782259-8CE2-4B44-9F95-F87DE27B09B4\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro-4K\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"Apple Vision Pro\"\n      }\n    ],\n    \"com.apple.CoreSimulator.SimRuntime.iOS-18-5\" : [\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/4AEAAC1C-040C-4BB0-A377-05208B3CFF87\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/4AEAAC1C-040C-4BB0-A377-05208B3CFF87\",\n        \"udid\" : \"4AEAAC1C-040C-4BB0-A377-05208B3CFF87\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/nathan\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/697EC06F-C379-42B1-A18E-03E764F878FC\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/nathan\\/Library\\/Logs\\/CoreSimulator\\/697EC06F-C379-42B1-A18E-03E764F878FC\",\n        \"udid\" : \"697EC06F-C379-42",
+      "stdoutSHA256": "89b4f0ee446f56b1f5dde6b7c432e4582fecda6c2581d6252653623995c1f32e",
+      "stderr": ""
+    }
+  ],
+  "normalHostBefore": {
+    "/Users/nathan/Library/Containers/com.nathanfennel.How-To-Adult/Data/Library/Preferences/com.nathanfennel.How-To-Adult.plist": "8c0855e6b213377ad86950d302ad503122f5cd26ee700660aea330571cfc182a"
+  },
+  "otherDeviceActions": 0,
+  "notificationDeliveryOrTapClaim": false,
+  "retainedEvidence": [
+    "ios-completion-1-summary.json: dark/largest method1/1PASS",
+    "ios-completion-2-summary.json: prior Share selector method1/1FAIL",
+    "ios-share-selector-r2-summary.json: close-selector1/1FAIL",
+    "ios-share-dismissal-r3-summary.json: denied-tail assumption1/1FAIL"
+  ],
+  "preflightDevice": {
+    "lastBootedAt": "2026-10-04T11:22:44Z",
+    "dataPath": "/Users/nathan/Library/Developer/CoreSimulator/Devices/1E5F4647-2BA3-4F26-8E75-9803F528D1BA/data",
+    "dataPathSize": 957546496,
+    "logPath": "/Users/nathan/Library/Logs/CoreSimulator/1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "udid": "1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "isAvailable": true,
+    "logPathSize": 507904,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max",
+    "state": "Shutdown",
+    "name": "HowToAdult-Completion-QA-Phone-20261004-123824"
+  },
+  "traitsBefore": {
+    "appearance": "light",
+    "content_size": "large"
+  },
+  "enumerationCommand": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/tmp/howtoadult-denied-tail-r4-20261004/Build/Products/HowToAdult-Denied-Tail-R4-UI-only.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "-parallel-testing-enabled",
+    "NO",
+    "-maximum-concurrent-test-simulator-destinations",
+    "1",
+    "-jobs",
+    "2",
+    "-only-testing:HowToAdultUITests-iOS/AdultUITests/testNotificationDeniedRecoveryTail",
+    "-enumerate-tests",
+    "-test-enumeration-style",
+    "flat",
+    "-test-enumeration-format",
+    "json",
+    "-test-enumeration-output-path",
+    "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/ios-denied-tail-r4-enumeration.json"
+  ],
+  "enumerationExit": 0,
+  "enumeratedEnabledTests": [
+    "HowToAdultUITests-iOS/AdultUITests/testNotificationDeniedRecoveryTail()"
+  ],
+  "enumerationSHA256": "c3553fcd88338b3ea0b4e3dfa9a844a06427e249f78e833315e4c05b2c611bfe",
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/tmp/howtoadult-denied-tail-r4-20261004/Build/Products/HowToAdult-Denied-Tail-R4-UI-only.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=1E5F4647-2BA3-4F26-8E75-9803F528D1BA",
+    "-parallel-testing-enabled",
+    "NO",
+    "-maximum-concurrent-test-simulator-destinations",
+    "1",
+    "-jobs",
+    "2",
+    "-only-testing:HowToAdultUITests-iOS/AdultUITests/testNotificationDeniedRecoveryTail",
+    "-resultBundlePath",
+    "/tmp/howtoadult-denied-tail-r4-1E5F4647-20261004.xcresult"
+  ],
+  "testExit": 0,
+  "resultBundle": "/tmp/howtoadult-denied-tail-r4-1E5F4647-20261004.xcresult",
+  "log": "ios-denied-tail-r4-runtime.log",
+  "logSHA256": "832c5822e3e5a8f64d13397e8e10eb57224cb456307b13222302b27920bc4a2e",
+  "traitsBeforeRestoration": {
+    "appearance": "light",
+    "content_size": "large"
+  },
+  "traitsAfter": {
+    "appearance": "light",
+    "content_size": "large"
+  },
+  "shutdownExit": 0,
+  "finalDeviceState": "Shutdown",
+  "normalHostAfter": {
+    "/Users/nathan/Library/Containers/com.nathanfennel.How-To-Adult/Data/Library/Preferences/com.nathanfennel.How-To-Adult.plist": "8c0855e6b213377ad86950d302ad503122f5cd26ee700660aea330571cfc182a"
+  },
+  "normalHostUnchanged": true,
+  "sourceOriginalAppRunnerAndPlanUnchanged": true,
+  "finishedAtUTC": "2026-10-04T11:45:19.906517+00:00",
+  "wrapperExit": 0,
+  "processedTestCountRequired": "Export actual xcresult summary and attachments only after final Shutdown; exit0 alone is not a test count."
+}

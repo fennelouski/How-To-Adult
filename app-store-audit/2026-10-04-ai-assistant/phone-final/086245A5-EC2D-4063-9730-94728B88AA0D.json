@@ -1,0 +1,34 @@
+{
+  "privateSessionID" : "A32B5564-76CB-41BE-A5C1-B31890F21159",
+  "qualification" : "Actual AX bounds and screenshots; AX labels alone do not prove rendered text is untruncated.",
+  "targets" : [
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 40.333333333333314,
+        "width" : 361,
+        "x" : 16,
+        "y" : 295
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "Your AI",
+      "type" : 48
+    },
+    {
+      "enabled" : true,
+      "exists" : true,
+      "frame" : {
+        "height" : 36,
+        "width" : 65.666666666666686,
+        "x" : 307.33333333333331,
+        "y" : 79
+      },
+      "hittable" : true,
+      "identifier" : "",
+      "label" : "Done",
+      "type" : 9
+    }
+  ]
+}

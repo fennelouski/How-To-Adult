@@ -1,0 +1,170 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "B65BDC29-6BCB-47D5-9819-A979903D7A63.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "required-target-outside-visible-window-native-tree_0_4DC46059-768F-4D4C-927B-124EA96C0C67.txt",
+        "timestamp" : 1791132676.652
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "91D5AAA1-6339-4890-9112-D140FD346A46.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "required-target-outside-visible-window_0_C7CFFB8A-9EBB-46AF-8948-A6CCF5896CEB.png",
+        "timestamp" : 1791132676.444
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "83382295-BD91-48F3-8A94-210A3D990D82.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-actual-bounds_0_06B7AC89-2E25-4AB4-B391-AD48090753D7.json",
+        "timestamp" : 1791132676.283
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "3D610114-1C18-43D7-99BB-EAF33001BB02.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar-native-tree_0_335BA305-A4F4-4C96-9C8A-119AB3B78750.txt",
+        "timestamp" : 1791132675.407
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "F5F65E74-CA5D-48FF-A2BA-95D6DC199889.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-private-assistant-plan-calendar_0_30A65CBB-F31C-4620-A73E-709FC5F20949.png",
+        "timestamp" : 1791132675.192
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "432BFAB9-2816-42F9-BFB3-18DDB37E2879",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-10-04 at 06.51.13 PM",
+        "timestamp" : 1791132673.889
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "4D67ACEA-31FA-4A94-A191-ABC014871A53",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 06.51.14 PM",
+        "timestamp" : 1791132674.342
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "0BDCBD42-46B4-47D7-AB7A-2FE84D093427",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-10-04 at 06.51.11 PM",
+        "timestamp" : 1791132671.208
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "795A1DFA-E7AD-4B83-95B6-4E039382847D",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 06.51.11 PM",
+        "timestamp" : 1791132671.505
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "3F40DF86-EBCE-4D1E-B57D-9A736F5513E4.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-actual-bounds_0_45A1ABBA-4722-4644-89CE-4FC71DC938E4.json",
+        "timestamp" : 1791132671.128
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "54CE22A6-C8E3-4F8D-94F9-4D9B75F07B07.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target-native-tree_0_55F70AEA-022E-4A45-A97D-4EE1D23C5DE8.txt",
+        "timestamp" : 1791132670.795
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "9EF109FF-BD3F-418A-9BB2-783042669D38.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-private-saved-plan-target_0_444FBC9E-8D4B-41FC-8419-7250D83E5E70.png",
+        "timestamp" : 1791132670.542
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "17032401-2CE8-4F26-AA39-221788CEC010",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-10-04 at 06.51.08 PM",
+        "timestamp" : 1791132668.589
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "10F19489-2B32-4BB4-A44C-FBA6DAEBD1FD",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-10-04 at 06.51.09 PM",
+        "timestamp" : 1791132669.08
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "CF032617-7FD2-49DA-8F78-7A7DB6F513D5.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-actual-bounds_0_AB6FCFA1-C347-4957-9CD9-7A908B34D3D4.json",
+        "timestamp" : 1791132667.086
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "6DECD24B-32A1-427B-9F47-2B213341F184.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer-native-tree_0_3069A5B0-7BE2-41E9-9526-1992C604D09E.txt",
+        "timestamp" : 1791132666.783
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "68E01C24-F12B-4239-AB55-7E6AABDC4C38.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-private-assistant-composer_0_65AFAF9A-E616-444D-BCCE-5EDFFFB44F82.png",
+        "timestamp" : 1791132666.454
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "0447C953-95E0-457F-8797-434BE6BB12DB",
+        "deviceName" : "HowToAdult Assistant Private QA 20261004",
+        "exportedFileName" : "2AF6AA56-F41C-4687-B66C-110B6FA19BB7.mp4",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Screen Recording 2026-10-04 at 06.51.00 PM.mp4",
+        "timestamp" : 1791132660.634
+      }
+    ],
+    "testIdentifier" : "AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn()",
+    "testIdentifierURL" : "test://com.apple.xcode/HowToAdult/HowToAdultUITests-iOS/AdultAssistantUITests/testPrivateAssistantComposerPlanSettingsAndReturn"
+  }
+]

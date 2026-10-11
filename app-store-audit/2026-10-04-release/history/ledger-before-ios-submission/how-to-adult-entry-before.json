@@ -1,0 +1,117 @@
+{
+  "app": "How to Adult: Pocket Guide",
+  "apple_id": "6818756061",
+  "source": {
+    "local_path": null,
+    "commit": null,
+    "status": "Not yet reconciled by root"
+  },
+  "required_fixes": "Independent release worker ownership/source/build/QA/gallery/metadata receipts must be reconciled before root action; no submission assumed.",
+  "submission_status": "How to Adult: Pocket Guide |  | iOS 1.0 Prepare for Submission |  | macOS 1.0 Prepare for Submission",
+  "coordination": "How to Adult owned by active hardware/guide release worker; My Funny Valentine ownership not yet established.",
+  "live_card_check_2026_10_03_latest": {
+    "at": "2026-10-03T09:30:29.848Z",
+    "card_text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "links": [
+      {
+        "href": "/apps/6818756061/distribution",
+        "name": ""
+      },
+      {
+        "href": "/apps/6818756061/distribution",
+        "name": "How to Adult: Pocket Guide"
+      },
+      {
+        "href": "/apps/6818756061/distribution/ios/version/inflight",
+        "name": "iOS 1.0 Prepare for Submission"
+      },
+      {
+        "href": "/apps/6818756061/distribution/macos/version/inflight",
+        "name": "macOS 1.0 Prepare for Submission"
+      }
+    ],
+    "qualification": "Card only; removed apps can still have pending review. Ready for Distribution is not independent public availability proof."
+  },
+  "live_card_check_2026_10_03_1255": {
+    "at": "2026-10-03T12:59:34.311Z",
+    "card_text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "links": [
+      {
+        "href": "/apps/6818756061/distribution",
+        "text": ""
+      },
+      {
+        "href": "/apps/6818756061/distribution",
+        "text": "How to Adult: Pocket Guide"
+      },
+      {
+        "href": "/apps/6818756061/distribution/ios/version/inflight",
+        "text": "iOS 1.0 Prepare for Submission"
+      },
+      {
+        "href": "/apps/6818756061/distribution/macos/version/inflight",
+        "text": "macOS 1.0 Prepare for Submission"
+      }
+    ],
+    "receipt": "/Users/nathan/Documents/GitHub/app-store-audit/2026-09-27-release/goal-release-2026-10-02/live-account-cards-2026-10-03-1255.json",
+    "qualification": "Rendered card only. Detailed platform receipts retain authority; no public storefront, build selection or gallery accuracy assertion."
+  },
+  "live_card_disk_recovery_2026_10_03": {
+    "at": "2026-10-03T21:06:34.567Z",
+    "card_text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "links": [
+      {
+        "href": "/apps/6818756061/distribution",
+        "text": ""
+      },
+      {
+        "href": "/apps/6818756061/distribution",
+        "text": "How to Adult: Pocket Guide"
+      },
+      {
+        "href": "/apps/6818756061/distribution/ios/version/inflight",
+        "text": "iOS 1.0 Prepare for Submission"
+      },
+      {
+        "href": "/apps/6818756061/distribution/macos/version/inflight",
+        "text": "macOS 1.0 Prepare for Submission"
+      }
+    ],
+    "receipt": "/Users/nathan/Documents/GitHub/app-store-audit/2026-09-27-release/goal-release-2026-10-02/live-account-disk-recovery-2026-10-03.json",
+    "qualification": "Rendered card; newer detailed platform receipt prevails. Ready for Distribution alone does not prove public storefront availability."
+  },
+  "live_card_check_2026_10_04_0647": {
+    "at": "2026-10-04T06:49:03.173Z",
+    "card_text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "receipt": "/Users/nathan/Documents/GitHub/app-store-audit/2026-09-27-release/goal-release-2026-10-02/live-account-cards-2026-10-04-0647.json",
+    "qualification": "Normal rendered App Store Connect account cards. No public availability or selected build proof inferred."
+  },
+  "live_card_check_2026_10_04_0848": {
+    "at": "2026-10-04T08:51:10.980Z",
+    "text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "receipt": "/Users/nathan/Documents/GitHub/app-store-audit/2026-09-27-release/goal-release-2026-10-02/live-account-cards-2026-10-04-0848.json",
+    "qualification": "Rendered private ASC cards, not public-store availability or detailed selected-build proof."
+  },
+  "privacy_publication_2026_10_04": {
+    "recordedAtUTC": "2026-10-04T10:31:25.131917+00:00",
+    "appleID": "6818756061",
+    "status": "Published",
+    "dataType": "Other Diagnostic Data",
+    "purpose": "App Functionality",
+    "linkedToUser": true,
+    "usedForTracking": false,
+    "basis": "Guide backend retains connection metadata; existing completed label unchanged",
+    "ownerAuthorization": "Current user explicitly answered Yes to privacy publication and needed Apple review actions on2026-10-04",
+    "proofDOM": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/published-privacy-label.txt",
+    "proofPNG": "/Users/nathan/Documents/GitHub/How-To-Adult/app-store-audit/2026-10-04-release/published-privacy-label.png",
+    "proofDOMSHA256": "4f4539f1c2bf1117b48ca5a75e747c1c42aa5bb7b9ed9bf6cdf9d600d69f1a6e",
+    "proofPNGSHA256": "4ce442151305d0ce680b28b7c3dc0873a60f19dc95636d0121030f9f3b38c6ea",
+    "reviewState": "iOS1.0 and macOS1.0 Prepare for Submission, not submitted"
+  },
+  "live_card_check_2026_10_04_1050": {
+    "at": "2026-10-04T10:53:00.782Z",
+    "text": "How to Adult: Pocket Guide\n\niOS 1.0 Prepare for Submission\n\nmacOS 1.0 Prepare for Submission",
+    "receipt": "/Users/nathan/Documents/GitHub/app-store-audit/2026-09-27-release/goal-release-2026-10-02/live-account-cards-2026-10-04-1050.json",
+    "qualification": "Rendered ASC cards; not exact build or public availability proof"
+  }
+}

@@ -1,0 +1,117 @@
+Optional(Attributes: Application, 0x107a844c0, pid: 73916, label: 'How to Adult'
+Element subtree:
+ →Application, 0x107a844c0, pid: 73916, label: 'How to Adult'
+    Window (Main), 0x107a0ae10, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x107a0a3d0, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x107a09500, {{0.0, 0.0}, {440.0, 956.0}}
+          Other, 0x107a885d0, {{0.0, 0.0}, {440.0, 956.0}}
+            Other, 0x107a0b4e0, {{0.0, 0.0}, {440.0, 956.0}}
+              Other, 0x107a0dca0, {{0.0, 0.0}, {440.0, 956.0}}
+                Other, 0x107a0c960, {{0.0, 0.0}, {440.0, 956.0}}
+                  Other, 0x107a0eb30, {{0.0, 0.0}, {440.0, 956.0}}
+                    Other, 0x107a0f210, {{0.0, 0.0}, {440.0, 956.0}}
+                      Other, 0x107a0f560, {{0.0, 0.0}, {440.0, 956.0}}
+                        Other, 0x107a0ffa0, {{0.0, 0.0}, {440.0, 956.0}}
+                          Other, 0x107a102f0, {{0.0, 0.0}, {440.0, 956.0}}
+                            NavigationBar, 0x107a17c10, {{0.0, 56.3}, {440.0, 44.0}}, identifier: 'Guide'
+                              Button, 0x107a17200, {{0.0, 56.3}, {132.3, 44.0}}, label: 'How to Adult'
+                              StaticText, 0x107a16ea0, {{196.7, 68.0}, {46.7, 20.3}}, label: 'Guide'
+                              Button, 0x107a178d0, {{277.3, 56.3}, {44.3, 44.0}}, identifier: 'save-guide', label: 'Save guide'
+                              Button, 0x107a873d0, {{329.7, 56.3}, {47.0, 44.0}}, identifier: 'remind-guide', label: 'Remind me'
+                              Button, 0x107a17f70, {{384.7, 56.3}, {43.3, 44.0}}, label: 'Share…'
+                            Other, 0x107a182d0, {{0.0, 0.0}, {440.0, 956.0}}
+                              Other, 0x107a18650, {{0.0, 0.0}, {440.0, 956.0}}
+                                Other, 0x107a189c0, {{0.0, 0.0}, {440.0, 956.0}}
+                                  Other, 0x107a18d40, {{0.0, 0.0}, {440.0, 956.0}}
+                                    ScrollView, 0x10bb09d20, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'guide-reader'
+                                      Other, 0x10bb07f50, {{0.0, 100.3}, {440.0, 1367.7}}
+                                        StaticText, 0x10bb0ddb0, {{24.0, 181.0}, {381.0, 40.7}}, label: 'Wash a load of laundry'
+                                        StaticText, 0x10bb051a0, {{24.0, 236.7}, {278.3, 49.0}}, label: 'Clean clothes without shrinking your favorites.'
+                                        StaticText, 0x10bb052c0, {{24.0, 300.7}, {153.3, 18.0}}, label: 'About 10 min · 4 steps'
+                                        StaticText, 0x10bb10de0, {{24.0, 348.7}, {163.7, 26.3}}, label: 'Before you start'
+                                        StaticText, 0x10bb10f00, {{26.0, 387.0}, {105.3, 20.3}}, label: 'Detergent'
+                                        StaticText, 0x10bb05c40, {{26.0, 419.3}, {89.7, 20.3}}, label: 'Hamper'
+                                        StaticText, 0x10bb05d60, {{26.0, 451.7}, {163.0, 20.3}}, label: 'Washing machine'
+                                        StaticText, 0x10bb0d300, {{24.0, 502.0}, {184.7, 26.3}}, label: 'One step at a time'
+                                        Button, 0x10bb0d420, {{24.0, 544.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-1', label: 'Sort a small load. Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.', value: Not completed
+                                          Image, 0x10bb0d540, {{27.0, 566.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x10bb100f0, {{68.0, 564.3}, {131.7, 20.3}}, label: 'Sort a small load'
+                                          StaticText, 0x10bb10210, {{68.0, 593.7}, {332.0, 86.3}}, label: 'Separate new dark colors, heavily dirty items and delicate garments. Empty pockets, close zippers and check each care label.'
+                                        Button, 0x10bb10330, {{24.0, 700.3}, {392.0, 133.7}}, identifier: 'step-wash-your-first-load-step-2', label: 'Set the machine. Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.', value: Not completed
+                                          Image, 0x10bb0cc20, {{27.0, 722.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x10bb0cd40, {{68.0, 720.3}, {128.7, 20.3}}, label: 'Set the machine'
+                                          StaticText, 0x10bb0ce60, {{68.0, 749.7}, {332.0, 64.3}}, label: 'Choose a cycle and temperature allowed by the labels. Give clothes room to move and follow the machine's loading limit.'
+                                        Button, 0x10bb04210, {{24.0, 834.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-3', label: 'Measure detergent. Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.', value: Not completed
+                                          Image, 0x10bb04330, {{27.0, 856.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x10bb04450, {{68.0, 854.3}, {151.3, 20.3}}, label: 'Measure detergent'
+                                          StaticText, 0x10bb04570, {{68.0, 883.7}, {320.7, 86.3}}, label: 'Use the detergent label's amount for your load and water conditions. Put it in the correct compartment or drum as the machine instructions require.'
+                                        Button, 0x10bb04690, {{24.0, 990.3}, {392.0, 155.7}}, identifier: 'step-wash-your-first-load-step-4', label: 'Finish the job. Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.', value: Not completed
+                                          Image, 0x10bb055c0, {{27.0, 1012.0}, {22.0, 22.0}}, identifier: 'circle', label: 'circle'
+                                          StaticText, 0x10bb056e0, {{68.0, 1010.3}, {105.7, 20.3}}, label: 'Finish the job'
+                                          StaticText, 0x10bb05800, {{68.0, 1039.7}, {330.3, 86.3}}, label: 'Set a timer for the wash. Remove clothes when it ends, follow their drying instructions, then put them away once fully dry.'
+                                        StaticText, 0x10bb05920, {{46.3, 1196.3}, {174.7, 26.3}}, label: 'Good to know'
+                                        StaticText, 0x10bb0f9a0, {{44.0, 1236.7}, {344.7, 42.3}}, label: 'Keep detergent away from children and pets. Never combine cleaning chemicals.'
+                                        StaticText, 0x10bb0fac0, {{24.0, 1329.0}, {168.0, 26.3}}, label: 'Go to the source'
+                                        Button, 0x10bb0fbe0, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                          Image, 0x10bb0fd00, {{26.0, 1377.0}, {15.3, 15.3}}, identifier: 'arrow.up.right.square', label: 'arrow.up.right.square'
+                                          StaticText, 0x10bb0fe20, {{24.0, 1374.3}, {214.0, 20.3}}, label: 'Whirlpool laundry basics'
+                                        StaticText, 0x10bb112d0, {{24.0, 1429.7}, {126.7, 14.3}}, label: 'Reviewed 2026-10-03'
+                                      Other, 0x10bb113f0, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x10bb11510, {{434.0, 109.0}, {3.0, 469.0}}
+                                      Other, 0x10bb11630, {{407.0, 100.3}, {30.0, 772.7}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                                        Other, 0x10bb11750, {{434.0, 109.0}, {3.0, 469.0}}
+                TabBar, 0x10bb11870, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar'
+                  Button, 0x10bb11990, {{2.0, 874.0}, {143.0, 48.0}}, label: 'Guides', Selected
+                    Image, 0x10bb11ab0, {{56.7, 876.7}, {33.3, 29.3}}, identifier: 'books.vertical.fill', label: 'Bookshelf'
+                  Button, 0x10bb11bd0, {{149.0, 874.0}, {142.0, 48.0}}, label: 'Saved'
+                  Button, 0x10bb12130, {{295.0, 874.0}, {143.0, 48.0}}, label: 'Reminders'
+      Other, 0x10bb12250, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x10bb12370, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x10bb12490, {{0.0, 0.0}, {440.0, 956.0}}
+        Alert, 0x10bb125b0, {{85.0, 414.0}, {270.0, 156.3}}, label: 'Couldn’t finish'
+          Other, 0x10bb126d0, {{85.0, 414.0}, {270.0, 156.3}}
+            Other, 0x10bb127f0, {{85.0, 414.0}, {270.0, 156.3}}
+              Other, 0x10bb12910, {{85.0, 414.0}, {270.0, 156.3}}
+                Other, 0x10bb12a30, {{85.0, 414.0}, {270.0, 156.3}}
+                  Other, 0x10bb12b50, {{85.0, 414.0}, {270.0, 156.3}}
+                  Other, 0x10bb12c70, {{85.0, 414.0}, {270.0, 156.3}}
+              Other, 0x10bb12d90, {{85.0, 414.0}, {270.0, 156.3}}
+                ScrollView, 0x10bb12eb0, {{85.0, 414.0}, {270.0, 112.0}}
+                  Other, 0x10bb12fd0, {{85.0, 414.0}, {270.0, 112.0}}
+                    StaticText, 0x10bb130f0, {{101.0, 433.7}, {238.0, 20.3}}, label: 'Couldn’t finish'
+                    StaticText, 0x10bb18d60, {{101.0, 457.7}, {238.0, 47.7}}, label: 'Notifications are turned off. Enable How to Adult notifications in system Settings, then try again.'
+                  Other, 0x10bb18e80, {{322.0, 414.0}, {30.0, 112.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x10bb18fa0, {{349.0, 375.0}, {3.0, 36.0}}
+                  Other, 0x10bb190c0, {{85.0, 493.0}, {270.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x10bb191e0, {{46.0, 520.0}, {36.0, 3.0}}
+                  Other, 0x10bb195f0, {{322.0, 414.0}, {30.0, 112.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x10bb19710, {{349.0, 375.0}, {3.0, 36.0}}
+                  Other, 0x10bb19830, {{85.0, 493.0}, {270.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x10bb19950, {{46.0, 520.0}, {36.0, 3.0}}
+                Other, 0x10bb19a70, {{85.0, 526.0}, {270.0, 0.3}}
+                  Other, 0x10bb19b90, {{85.0, 526.0}, {270.0, 0.3}}
+                    Other, 0x10bb19cb0, {{85.0, 526.0}, {270.0, 0.3}}
+                ScrollView, 0x10bb19dd0, {{85.0, 526.3}, {270.0, 44.0}}
+                  Other, 0x10bb19ef0, {{85.0, 526.3}, {270.0, 44.0}}
+                    Other, 0x10bb1a010, {{85.0, 526.3}, {270.0, 44.0}}
+                      Other, 0x10bb1a130, {{85.0, 526.3}, {270.0, 44.0}}
+                        Button, 0x10bb1a250, {{85.0, 526.3}, {270.0, 44.0}}, label: 'OK'
+                  Other, 0x10bb1a370, {{322.0, 526.3}, {30.0, 44.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x10bb1a490, {{349.0, 616.3}, {3.0, 7.0}}
+                  Other, 0x10bb1a5b0, {{85.0, 545.3}, {270.0, 22.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x10bb1a6d0, {{175.0, 564.3}, {7.0, 3.0}}
+                  Other, 0x10bb1a7f0, {{322.0, 526.3}, {30.0, 44.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x10bb1a910, {{349.0, 616.3}, {3.0, 7.0}}
+                  Other, 0x10bb1aa30, {{85.0, 545.3}, {270.0, 22.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x10bb1ab60, {{175.0, 564.3}, {7.0, 3.0}}
+    Window, 0x10bb1ac80, {{0.0, 0.0}, {440.0, 956.0}}
+      Other, 0x10bb1ada0, {{0.0, 0.0}, {440.0, 956.0}}
+        Other, 0x10bb1aec0, {{0.0, 0.0}, {440.0, 956.0}}
+Path to element:
+ →Application, 0x107a844c0, pid: 73916, label: 'How to Adult'
+Query chain:
+ →Find: Target Application 'com.nathanfennel.How-To-Adult'
+  Output: {
+    Application, 0x107d07fb0, pid: 73916, label: 'How to Adult'
+  }
+)

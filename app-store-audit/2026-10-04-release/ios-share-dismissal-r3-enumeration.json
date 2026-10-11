@@ -1,0 +1,23 @@
+{
+  "errors" : [
+
+  ],
+  "values" : [
+    {
+      "disabledTests" : [
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testDarkAppearanceAndAccessibilityText()"
+        },
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testGuidesSearchSaveProgressAndGallery()"
+        }
+      ],
+      "enabledTests" : [
+        {
+          "identifier" : "HowToAdultUITests-iOS/AdultUITests/testNativeShareAndNotificationDenialRecovery()"
+        }
+      ],
+      "testPlan" : "HowToAdult-iOS"
+    }
+  ]
+}

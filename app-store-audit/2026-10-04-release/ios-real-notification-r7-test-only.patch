@@ -1,0 +1,220 @@
+--- r6/UITests/AdultUITests.swift
++++ r7/UITests/AdultUITests.swift
+@@ -297,6 +297,217 @@
+         XCTAssertTrue(app.staticTexts["Wash a load of laundry"].exists)
+         // No value edit, Save, scheduling or synthetic delivery.
+     }
++
++    func testRealReminderDeliveryAndTapRoute() throws {
++        let title = "Wash a load of laundry"
++        let body = "Your guide is ready when you are."
++        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
++        var saved = false
++        func evidence(_ name: String, _ nativeApp: XCUIApplication) {
++            shot(name)
++            let tree = XCTAttachment(string: nativeApp.debugDescription)
++            tree.name = name + "-tree"
++            tree.lifetime = .keepAlways
++            add(tree)
++        }
++        func record(_ name: String, _ details: [String: String]) {
++            let data = try! JSONSerialization.data(withJSONObject: details, options: [.sortedKeys])
++            let text = String(decoding: data, as: UTF8.self)
++            print("ADULT_REAL_REMINDER " + name + " " + text)
++            let attachment = XCTAttachment(string: text)
++            attachment.name = name
++            attachment.lifetime = .keepAlways
++            add(attachment)
++        }
++        func normalized(_ value: String) -> String {
++            String(value.unicodeScalars.filter { !CharacterSet.whitespacesAndNewlines.contains($0) })
++        }
++        defer {
++            // Cleanup is a separate native private-QA action, never counted as notification routing.
++            if saved {
++                app.terminate()
++                app.launch()
++                if app.scrollViews["guide-collection"].waitForExistence(timeout: 10),
++                   app.buttons["featured-guide"].exists {
++                    app.buttons["featured-guide"].tap()
++                    if app.scrollViews["guide-reader"].waitForExistence(timeout: 5),
++                       app.buttons["remind-guide"].exists {
++                        app.buttons["remind-guide"].tap()
++                        _ = app.buttons["save-reminder"].waitForExistence(timeout: 5)
++                        evidence("49-native-private-reminder-cleanup", app)
++                        let remove = app.buttons["remove-reminder"]
++                        if remove.exists && remove.isHittable {
++                            remove.tap()
++                            record("49-cleanup-outcome", ["action": "Removed still-future own reminder through native app control"])
++                        } else if app.buttons["Cancel"].exists && app.buttons["Cancel"].isHittable {
++                            app.buttons["Cancel"].tap()
++                            record("49-cleanup-outcome", ["action": "No still-future native Remove control; cancelled editor, preserved expired/delivered evidence"])
++                        }
++                    }
++                }
++            }
++            app.terminate()
++        }
++        app.buttons["featured-guide"].tap()
++        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
++        XCTAssertTrue(app.staticTexts[title].exists)
++        app.buttons["remind-guide"].tap()
++        XCTAssertTrue(app.buttons["save-reminder"].waitForExistence(timeout: 5))
++        evidence("31-real-reminder-initial-date", app)
++        XCTAssertFalse(app.buttons["remove-reminder"].exists)
++        let calendar = Calendar.current
++        let now = Date()
++        let target = Date(timeIntervalSince1970: ceil(now.addingTimeInterval(240).timeIntervalSince1970 / 60) * 60)
++        guard calendar.isDate(target, inSameDayAs: now) else {
++            throw NSError(domain: "AdultQARealReminderDateBoundary", code: 1)
++        }
++        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: target)
++        let hour24 = components.hour!
++        let hour12 = hour24 % 12 == 0 ? 12 : hour24 % 12
++        let minute = components.minute!
++        let period = hour24 < 12 ? "AM" : "PM"
++        let dateFormat = DateFormatter()
++        dateFormat.locale = Locale(identifier: "en_US")
++        dateFormat.calendar = calendar
++        dateFormat.timeZone = calendar.timeZone
++        dateFormat.dateFormat = "MMM d, yyyy"
++        let expectedDate = dateFormat.string(from: target)
++        let expectedTime = String(format: "%d:%02d %@", hour12, minute, period)
++        let compact = app.datePickers
++        guard compact.count == 1, compact.firstMatch.buttons[expectedDate].exists else {
++            throw NSError(domain: "AdultQARealReminderActualDateMismatch", code: 1)
++        }
++        let time = compact.firstMatch.buttons.matching(NSPredicate(format: "label MATCHES %@", "^[0-9]{1,2}:[0-9]{2}.*"))
++        guard time.count == 1 && time.firstMatch.isHittable else {
++            throw NSError(domain: "AdultQARealReminderActualTimeControl", code: 1)
++        }
++        time.firstMatch.tap()
++        evidence("32-real-reminder-observed-wheels", app)
++        let wheels = app.pickerWheels
++        guard wheels.count == 3,
++              let initialHour = wheels.element(boundBy: 0).value as? String,
++              let initialMinute = wheels.element(boundBy: 1).value as? String,
++              let initialPeriod = wheels.element(boundBy: 2).value as? String,
++              initialHour.contains("o’clock"), initialMinute.contains("minute"),
++              ["AM", "PM"].contains(initialPeriod) else {
++            throw NSError(domain: "AdultQARealReminderActualWheelForms", code: 1)
++        }
++        // Set minutes first so reducing the default +1-hour selection does not transiently cross the minimum date.
++        let minuteValue = String(format: "%02d", minute) + (minute == 1 ? " minute" : " minutes")
++        wheels.element(boundBy: 1).adjust(toPickerWheelValue: minuteValue)
++        evidence("33-real-reminder-minute-selection", app)
++        wheels.element(boundBy: 0).adjust(toPickerWheelValue: "\(hour12) o’clock")
++        if (wheels.element(boundBy: 2).value as? String) != period {
++            wheels.element(boundBy: 2).adjust(toPickerWheelValue: period)
++        }
++        evidence("34-real-reminder-selected-time", app)
++        let actualHour = wheels.element(boundBy: 0).value as? String ?? ""
++        let actualMinute = wheels.element(boundBy: 1).value as? String ?? ""
++        let actualPeriod = wheels.element(boundBy: 2).value as? String ?? ""
++        guard actualHour == "\(hour12) o’clock",
++              Int(actualMinute.prefix(2)) == minute, actualPeriod == period else {
++            throw NSError(domain: "AdultQARealReminderWheelValueMismatch", code: 1)
++        }
++        let dismissal = app.buttons.matching(identifier: "PopoverDismissRegion")
++        guard dismissal.count == 1 && dismissal.firstMatch.isHittable else {
++            throw NSError(domain: "AdultQARealReminderActualPopoverDismissal", code: 1)
++        }
++        dismissal.firstMatch.tap()
++        let selectedTime = app.datePickers.firstMatch.buttons.matching(NSPredicate(format: "label MATCHES %@", "^[0-9]{1,2}:[0-9]{2}.*"))
++        guard selectedTime.count == 1,
++              normalized(selectedTime.firstMatch.label) == normalized(expectedTime),
++              app.datePickers.firstMatch.buttons[expectedDate].exists,
++              target.timeIntervalSinceNow >= 120 else {
++            evidence("35-real-reminder-date-guard-failure", app)
++            throw NSError(domain: "AdultQARealReminderCompactDateMismatch", code: 1)
++        }
++        let sound = app.switches.matching(NSPredicate(format: "label == %@", "Play a sound"))
++        guard sound.count == 1 && sound.firstMatch.isHittable,
++              let soundValue = sound.firstMatch.value as? String,
++              ["0", "1"].contains(soundValue) else {
++            throw NSError(domain: "AdultQARealReminderActualSoundSwitch", code: 1)
++        }
++        if soundValue == "1" { sound.firstMatch.tap() }
++        XCTAssertEqual(sound.firstMatch.value as? String, "0")
++        let iso = ISO8601DateFormatter()
++        record("36-real-reminder-before-save", ["targetUTC": iso.string(from: target),
++            "calendarTimeZone": calendar.timeZone.identifier, "dateLabel": expectedDate,
++            "timeLabel": selectedTime.firstMatch.label, "sound": "0",
++            "secondsRemaining": String(target.timeIntervalSinceNow), "guideID": "wash-your-first-load"])
++        evidence("36-real-reminder-before-save", app)
++        app.buttons["save-reminder"].tap() // Exactly one genuine scheduling attempt.
++        saved = app.buttons["save-reminder"].waitForNonExistence(timeout: 10)
++        evidence("37-real-reminder-save-result", app)
++        XCTAssertTrue(saved)
++        XCTAssertTrue(app.scrollViews["guide-reader"].exists)
++        app.buttons["remind-guide"].tap()
++        XCTAssertTrue(app.buttons["remove-reminder"].waitForExistence(timeout: 5))
++        evidence("38-real-reminder-pending-record", app)
++        XCTAssertTrue(app.datePickers.firstMatch.buttons[expectedDate].exists)
++        app.buttons["Cancel"].tap()
++        XCTAssertTrue(app.buttons["save-reminder"].waitForNonExistence(timeout: 5))
++        app.tabBars.buttons["Reminders"].tap()
++        let pending = app.buttons["guide-wash-your-first-load"]
++        XCTAssertTrue(pending.waitForExistence(timeout: 5))
++        evidence("39-real-reminders-list", app)
++        app.tabBars.buttons["Guides"].tap()
++        goHome()
++        XCTAssertTrue(app.scrollViews["guide-collection"].waitForExistence(timeout: 5))
++        XCTAssertFalse(app.scrollViews["guide-reader"].exists)
++        evidence("40-real-reminder-away-from-reader", app)
++        XCUIDevice.shared.press(.home)
++        let background = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
++            self.app.state == .runningBackground || self.app.state == .notRunning
++        }, object: nil)
++        XCTAssertEqual(XCTWaiter.wait(for: [background], timeout: 5), .completed)
++        record("41-real-reminder-background-wait", ["targetUTC": iso.string(from: target),
++            "startedUTC": iso.string(from: Date()), "appState": String(app.state.rawValue)])
++        evidence("41-real-springboard-before-delivery", springboard)
++        let combinedPredicate = NSPredicate(format: "label CONTAINS %@ AND label CONTAINS %@", title, body)
++        let delivered = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
++            springboard.descendants(matching: .any).matching(combinedPredicate).count > 0 ||
++            springboard.staticTexts.matching(NSPredicate(format: "label == %@", body)).count > 0
++        }, object: nil)
++        let maximumWait = min(400, max(1, target.timeIntervalSinceNow + 90))
++        let observedDelivery = XCTWaiter.wait(for: [delivered], timeout: maximumWait) == .completed
++        evidence("42-real-native-notification-observation", springboard)
++        record("42-real-native-notification-observation", ["targetUTC": iso.string(from: target),
++            "observedUTC": iso.string(from: Date()), "foundNativeContent": String(observedDelivery)])
++        guard observedDelivery else {
++            throw NSError(domain: "AdultQARealNativeNotificationNotObserved", code: 1)
++        }
++        let ownContainers = springboard.descendants(matching: .any).matching(NSPredicate(
++            format: "label CONTAINS %@ AND label CONTAINS %@ AND label CONTAINS[c] %@", title, body, "How to Adult"))
++        let ownHits = ownContainers.allElementsBoundByIndex.filter { $0.isHittable }
++        let targetElement: XCUIElement
++        if ownHits.count == 1 {
++            targetElement = ownHits[0]
++        } else if ownHits.isEmpty {
++            let titleHits = springboard.staticTexts.matching(NSPredicate(format: "label == %@", title)).allElementsBoundByIndex.filter { $0.isHittable }
++            let bodyHits = springboard.staticTexts.matching(NSPredicate(format: "label == %@", body)).allElementsBoundByIndex.filter { $0.isHittable }
++            let ownNameHits = springboard.staticTexts.matching(NSPredicate(format: "label ==[c] %@", "How to Adult")).allElementsBoundByIndex.filter { $0.isHittable }
++            guard titleHits.count == 1 && bodyHits.count == 1 && ownNameHits.count == 1 else {
++                throw NSError(domain: "AdultQARealNativeNotificationAmbiguousTarget", code: 1)
++            }
++            targetElement = bodyHits[0]
++        } else {
++            throw NSError(domain: "AdultQARealNativeNotificationAmbiguousTarget", code: 1)
++        }
++        record("43-real-native-notification-tap-target", ["elementType": String(targetElement.elementType.rawValue),
++            "identifier": targetElement.identifier, "label": targetElement.label,
++            "frame": String(describing: targetElement.frame)])
++        targetElement.tap() // No icon, URL/deep link, synthetic push, recipient or destination.
++        let foreground = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in self.app.state == .runningForeground }, object: nil)
++        let foregroundReady = XCTWaiter.wait(for: [foreground], timeout: 10) == .completed
++        let readerReady = app.scrollViews["guide-reader"].waitForExistence(timeout: 10)
++        evidence("44-real-notification-routed-guide", app)
++        XCTAssertTrue(foregroundReady)
++        XCTAssertTrue(readerReady)
++        XCTAssertTrue(app.staticTexts[title].exists)
++        record("44-real-notification-routed-guide", ["foreground": String(foregroundReady),
++            "guideReader": String(readerReady), "title": title,
++            "iconOrDeepLinkLaunch": "false", "syntheticNotification": "false"])
++    }
+     #endif
+ 
+     func testGuidesSearchSaveProgressAndGallery() throws {

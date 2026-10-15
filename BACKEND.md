@@ -1,6 +1,6 @@
 # How to Adult content backend
 
-The content service is live on AWS and Vercel. Initial and repeat releases on October 3, 2026 passed both-host verification at committed revision `7b6a116dc1e10ce002d3293be68c347d0939e365`. The publication contains the 56 starter guides. The native reader is configured to use [the Vercel catalog](https://how-to-adult-guides.vercel.app/v1/catalog) during parallel operation; native tests and packages must be verified again after that configuration change. See [the deployment receipt](backend/deployment-record.json).
+The last recorded AWS/Vercel release passed both-host verification on October 3, 2026 at committed revision `7b6a116dc1e10ce002d3293be68c347d0939e365` and records a 56-guide publication. The merged source includes a 273-guide bundled catalog, revision-bound artwork and restricted editor APIs. This source merge did not deploy backend code or publish a catalog; see [the deployment receipt](backend/deployment-record.json) for the last recorded live state.
 
 The app includes `Content/catalog.json`, so the starter guides work immediately without a network connection. Once configured, the app can download a new full catalog, validate it and retain its last valid copy. Reading, saved guides, checklist progress and reminders stay on the device.
 
@@ -10,7 +10,7 @@ An API Gateway HTTP API invokes a small Python Lambda. A private S3 bucket store
 
 The Lambda role has `s3:ListBucket` for this one editorial bucket so a missing first catalog produces a distinct missing-object response. `GetObject` does not supply a listing prefix, so that bucket-level grant has no `s3:prefix` condition. Object reads and writes remain limited to the published catalog and revision prefixes. Access denials propagate as service failures and never count as an empty library. [AWS GetObject permissions](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html).
 
-Vercel serves an explicit GET-only gateway to the AWS reader routes during parallel operation. It has no database, AWS credentials, publishing route, background task or generation scheduler. `/release.json` records its own committed source revision and handler hash. Both endpoints therefore read the same AWS publication.
+The October 3 deployment receipt describes a GET-only Vercel relay for AWS reader routes; it does not document the restricted editor routes added in this source tree. The current source supports authenticated guide-batch and asset-upload operations through the narrow editor API described in [EDITOR-API.md](EDITOR-API.md). These code changes were not deployed as part of this merge. `/release.json` records the Vercel source revision and handler hash for its own deployment.
 
 | Route | Method | Access | Result |
 | --- | --- | --- | --- |

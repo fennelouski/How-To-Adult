@@ -1,6 +1,6 @@
 # How to Adult
 
-A native pocket guide for iPhone, iPad and Mac. The bundled public snapshot contains 273 guides across seven topics and matches the existing AWS/Vercel publication. Its exact-revision sidecar identifies 233 teaching illustrations. Search works locally; saved guides, checked steps, reminders, personal notes and ratings stay on the device.
+A native pocket guide for iPhone, iPad and Mac. The bundled 273-guide catalog snapshot spans seven topics, and its exact-revision sidecar identifies 233 teaching illustrations. The separately recorded AWS/Vercel deployment state is in backend/deployment-record.json. Search works locally; saved guides, checked steps, reminders, personal notes and ratings stay on the device.
 
 The Fieldnotes interface uses warm paper, pine ink, clay actions and serif headings. It adapts from compact tabs to native guide-index/reader columns, retains search and selection while resizing, supports Dynamic Type and both appearances, and offers image descriptions and full-size zoom. Full guide bodies, cautions, jurisdiction, sources and stable guide/step identities are preserved.
 

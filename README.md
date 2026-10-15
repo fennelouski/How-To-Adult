@@ -68,3 +68,10 @@ The [independent finish review](app-store-audit/2026-10-03-how-to-adult/design-f
 The two privacy/support pages are committed in the website repository at `416fd8fb62fa46c8e40b4634ffd6ac5c095c8615` and were previewed locally. Neither their required dual deployment nor their public URLs have been verified. The [draft listing and privacy reasoning](app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md) and [release checklist](app-store-audit/2026-10-03-how-to-adult/release-checklist.json) retain these hosting and store gaps. The label proposal applies to the inspected bundled build. Provider request retention must be reviewed before enabling a remote catalog.
 
 Native release scripts prepare local archives and App Store packages only after a frozen committed revision passes QA. They do not upload or submit a release. There is no visionOS target, and visionOS build, Simulator, upload and submission work remains disabled at the user's request.
+
+
+## Fieldnotes native reader
+
+The native iPhone/iPad and Mac targets use the Fieldnotes paper, pine and clay design, with visible search, all published topics, saved guides, checked-step progress and native reminder editing. Both appearances and Dynamic Type are supported. The reader keeps complete cautions and original sources, and displays the exact revision-bound teaching artwork with accessible descriptions and native full-size zoom.
+
+The bundled public snapshot contains 273 guides. The matching sidecar identifies 233 public PNGs. The local read-only backend serves only assets referenced by that public revision. This source change does not publish a new remote catalog or deploy infrastructure.

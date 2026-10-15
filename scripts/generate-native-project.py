@@ -58,6 +58,8 @@ assets = file("assets", "Assets.xcassets", "folder.assetcatalog")
 catalog = file("catalog", "catalog.json", "text.json")
 manifest = file("manifest", "PrivacyInfo.xcprivacy", "text.xml")
 config_files = [manifest] + [file(f"config:{name}", name, "text.plist.xml") for name in ["iOS-Info.plist", "macOS-Info.plist", "iOS.entitlements", "macOS.entitlements"]]
+launch = file("launch", "LaunchScreen.storyboard", "file.storyboard")
+config_files.append(launch)
 products = []
 targets = []
 schemes = []
@@ -96,7 +98,7 @@ for platform in ["iOS", "macOS"]:
     product = obj(f"product:{platform}", "PBXFileReference", explicitFileType="wrapper.application", path="How to Adult.app", sourceTree="BUILT_PRODUCTS_DIR", includeInIndex=0)
     products.append(product)
     build_sources = [obj(f"build:{platform}:{ref}", "PBXBuildFile", fileRef=ref) for ref in sources]
-    resources = [obj(f"resource:{platform}:{ref}", "PBXBuildFile", fileRef=ref) for ref in [assets, catalog, manifest]]
+    resources = [obj(f"resource:{platform}:{ref}", "PBXBuildFile", fileRef=ref) for ref in [assets, catalog, manifest] + ([launch] if platform == "iOS" else [])]
     phases = [obj(f"phase:{platform}:sources", "PBXSourcesBuildPhase", buildActionMask=2147483647, files=build_sources, runOnlyForDeploymentPostprocessing=0), obj(f"phase:{platform}:frameworks", "PBXFrameworksBuildPhase", buildActionMask=2147483647, files=[], runOnlyForDeploymentPostprocessing=0), obj(f"phase:{platform}:resources", "PBXResourcesBuildPhase", buildActionMask=2147483647, files=resources, runOnlyForDeploymentPostprocessing=0)]
     settings = {**shared, "PRODUCT_BUNDLE_IDENTIFIER": "com.nathanfennel.How-To-Adult", "PRODUCT_NAME": "How to Adult", "PRODUCT_MODULE_NAME": "HowToAdult", "INFOPLIST_FILE": f"Configuration/{platform}-Info.plist", "CODE_SIGN_ENTITLEMENTS": f"Configuration/{platform}.entitlements", "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon", "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor", "GENERATE_INFOPLIST_FILE": "NO", "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path/Frameworks" if platform == "iOS" else "$(inherited) @executable_path/../Frameworks"}
     if platform == "iOS":

@@ -3,16 +3,18 @@ import SwiftUI
 @main
 struct HowToAdultApp: App {
     @State private var store = AdultStore()
+    @AppStorage("adultAppearance") private var appearance = "system"
 
     var body: some Scene {
         WindowGroup {
             AdultRootView()
                 .environment(store)
+                .preferredColorScheme(appearance == "dark" ? .dark : appearance == "light" ? .light : nil)
                 #if DEBUG
                 .modifier(AdultQAAppearance())
                 #endif
                 #if os(macOS)
-                .frame(minWidth: 680, minHeight: 520)
+                .frame(minWidth: 390, minHeight: 520)
                 #endif
         }
         #if os(macOS)

@@ -66,6 +66,8 @@ For an actual local HTTP reader, run:
 backend/.venv/bin/python backend/local.py --port 8769
 ```
 
+The 15 October integration seeds the exact 273-guide live snapshot. The local reader also serves its revision-bound `Content/illustrations.json` and the 233 published PNGs from `content-assets/recovered/`. Only digests referenced by that public manifest are exposed; unpublished review-queue images remain unavailable. The read-only HTTP wrapper decodes binary PNG responses correctly. Use a new `--store` directory to test this seed without replacing an older local publication. All 68 backend tests passed with the pinned dependencies, and real loopback HTTP catalog, immutable manifest, PNG and ETag responses were verified. No live deployment or publication is implied by local seeding.
+
 The server binds to `127.0.0.1`, exposes only reads and seeds its separate `backend/local-store` once. It never reads or modifies native user data. Delete only this disposable backend test store if you want to reseed a local test. Stop the owned server when checks are finished.
 
 ## First live release
@@ -128,3 +130,7 @@ The remote editor release was verified on 2026-10-03 at committed revision `26f8
 - [Python Lambda runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html): supported Python 3.13 runtime and managed SDK behavior.
 - [CloudFormation Lambda function](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-lambda-function.html): inline Python code and execution role.
 - [Vercel Build Output configuration](https://vercel.com/docs/build-output-api/configuration): method-restricted external rewrites and independently deployed static provenance.
+
+## October 15 integration readback
+
+Read-only checks at 10:30 UTC matched both existing origins to revision 2026-10-05-owner-bulk-09-083436: 273 guides and 233 illustration associations. Catalog SHA-256 is 18eb2012e44c6ab33ca0e4589a94b81bd57e0815cf1c451218bd8cd1883c448b; manifest SHA-256 is 2afc71a0e07db7de132a8a90f47ee37124d6d3a854134c5be4db31858827562c. Both returned 304 for the current catalog ETag. Earlier byte readbacks verified all 233 PNGs through both hosts. These reads do not establish a new deployment or publication. Current native source adds the revision-bound image reader and integrates the existing assistant/passport source independently of backend infrastructure.

@@ -59,5 +59,11 @@
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+	<string>Add calendar events from plans you approve.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Choose a calendar for events from plans you approve.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>Add planned tasks to the Reminders list you choose.</string>
 </dict>
 </plist>

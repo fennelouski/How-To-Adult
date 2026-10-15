@@ -6,6 +6,7 @@ import UIKit
 /// Real navigation and persistence checks. Never grants notification or other permissions.
 @MainActor final class FieldnotesUITests: XCTestCase {
     private var app: XCUIApplication!
+    private let sessionID = UUID()
     override func setUp() async throws {
         await MainActor.run {
             continueAfterFailure = false
@@ -13,9 +14,11 @@ import UIKit
         }
     }
     private func launch(_ arguments: [String] = []) {
-        app.launchArguments = arguments
+        app.launchEnvironment["ADULT_QA_BLANK_HOST"] = "0"
+        app.launchArguments = ["--adult-private-qa=" + sessionID.uuidString, "--qa-library"] + arguments
         app.launch()
         XCTAssertTrue(app.scrollViews["guide-collection"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.staticTexts["adult-private-qa-marker"].firstMatch.label.contains(sessionID.uuidString))
     }
     private func shot(_ name: String) {
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
@@ -26,7 +29,10 @@ import UIKit
     private func reveal(_ element: XCUIElement, in scroll: XCUIElement, up: Bool = true) {
         for _ in 0..<12 {
             if element.isHittable { return }
-            if up { scroll.swipeUp() } else { scroll.swipeDown() }
+            let frame = element.frame
+            if frame != .zero {
+                if frame.midY < scroll.frame.minY + 100 { scroll.swipeDown() } else { scroll.swipeUp() }
+            } else if up { scroll.swipeUp() } else { scroll.swipeDown() }
         }
         XCTAssertTrue(element.isHittable)
     }
@@ -87,6 +93,40 @@ import UIKit
         shot("phone-reminder")
         app.buttons["Cancel"].tap()
         XCTAssertTrue(app.buttons["save-reminder"].waitForNonExistence(timeout: 5))
+    }
+    func testPrivateNotesAndRating() {
+        launch()
+        let featured = app.buttons["featured-guide"].firstMatch
+        reveal(featured, in: app.scrollViews["guide-collection"])
+        featured.tap()
+        let reader = app.scrollViews["guide-reader"]
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        let rating = app.buttons["Rate 4 out of 5"]
+        reveal(rating, in: reader)
+        rating.tap()
+        XCTAssertEqual(rating.value as? String, "Selected")
+        let notes = app.buttons["guide-personal-notes"]
+        reveal(notes, in: reader)
+        notes.tap()
+        let editor = app.textViews.firstMatch
+        XCTAssertTrue(editor.waitForExistence(timeout: 5))
+        editor.tap(); editor.typeText("Private QA note: use matching thread.")
+        shot("phone-private-notes")
+        app.buttons["Save"].tap()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Private QA note: use matching thread."].exists)
+        shot("phone-private-reference")
+        notes.tap()
+        XCTAssertTrue(editor.waitForExistence(timeout: 5))
+        editor.tap(); editor.typeText(" Unsaved edit.")
+        app.buttons["Cancel"].tap()
+        // Native popovers omit their cancel-role action; assert and exercise the destructive route.
+        let discard = app.buttons["Discard changes"]
+        XCTAssertTrue(discard.waitForExistence(timeout: 5))
+        shot("phone-private-notes-discard")
+        discard.tap()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Private QA note: use matching thread."].exists)
     }
     func testDarkAndAccessibilityLayouts() {
         launch(["--qa-dark"])

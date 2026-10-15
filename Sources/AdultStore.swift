@@ -1,6 +1,7 @@
 import Foundation
 import Observation
 import UserNotifications
+import CoreGraphics
 
 @MainActor @Observable
 final class AdultStore {
@@ -13,6 +14,7 @@ final class AdultStore {
     private(set) var updateIssue: String?
     var actionIssue: String?
     var requestedGuideID: String?
+    var requestedAssistantActionID: UUID?
 
     @ObservationIgnored private let directory: URL
     @ObservationIgnored private let bundledURL: URL?
@@ -22,13 +24,21 @@ final class AdultStore {
     @ObservationIgnored private let notifications = UNUserNotificationCenter.current()
     @ObservationIgnored private var notificationRouter: AdultNotificationRouter?
     @ObservationIgnored private var loadedLibrary = false
+    @ObservationIgnored private let allowsNotifications: Bool
+    @ObservationIgnored private let allowsCatalogRefresh: Bool
 
     init(directory: URL? = nil, bundledURL: URL? = Bundle.main.url(forResource: "catalog", withExtension: "json"), remoteURL: URL? = nil,
-         illustrationDownload: (@Sendable (URL) async throws -> Data)? = nil) {
+         allowsRemoteUpdates: Bool = true, allowsNotifications: Bool = true, allowsArtworkReads: Bool = false, illustrationDownload: (@Sendable (URL) async throws -> Data)? = nil) {
         self.directory = directory ?? URL.applicationSupportDirectory.appendingPathComponent("HowToAdult", isDirectory: true)
         self.bundledURL = bundledURL
         let configured = (Bundle.main.object(forInfoDictionaryKey: "AdultCatalogURL") as? String).flatMap(URL.init(string:))
-        self.remoteURL = remoteURL ?? configured
+        self.remoteURL = allowsRemoteUpdates || allowsArtworkReads ? (remoteURL ?? configured) : nil
+        self.allowsCatalogRefresh = allowsRemoteUpdates
+        #if DEBUG
+        self.allowsNotifications = allowsNotifications && ProcessInfo.processInfo.environment["ADULT_QA_BLANK_HOST"] != "1"
+        #else
+        self.allowsNotifications = allowsNotifications
+        #endif
         self.illustrationDownload = illustrationDownload ?? { url in
             try await Self.downloadJSON(url, maximumBytes: AdultIllustrations.maximumBytes)
         }
@@ -38,7 +48,7 @@ final class AdultStore {
     var articles: [AdultArticle] { catalog?.articles ?? [] }
     var categories: [GuideCategory] { catalog?.categories ?? [] }
     var canSave: Bool { loadedLibrary }
-    var canRefresh: Bool { remoteURL?.scheme == "https" && remoteURL?.host != nil }
+    var canRefresh: Bool { allowsCatalogRefresh && remoteURL?.scheme == "https" && remoteURL?.host != nil }
     var upcoming: [AdultArticle] {
         articles.filter { (progress($0.id).reminderDate ?? .distantPast) > Date() }
             .sorted { (progress($0.id).reminderDate ?? .distantFuture) < (progress($1.id).reminderDate ?? .distantFuture) }
@@ -87,14 +97,6 @@ final class AdultStore {
         reloadIllustrations()
     }
 
-    private func reloadIllustrations() {
-        // A single bounded cache is enough: only the selected catalog can use it.
-        illustrations = nil
-        guard let catalog,
-              let data = try? Data(contentsOf: directory.appendingPathComponent("illustrations-cache-v1.json")) else { return }
-        illustrations = try? AdultIllustrations.decode(data, for: catalog)
-    }
-
     func refreshIllustrations() async {
         guard let snapshot = catalog, illustrations?.revision != snapshot.revision,
               !illustrationRequests.contains(snapshot.revision),
@@ -104,13 +106,12 @@ final class AdultStore {
         defer { illustrationRequests.remove(snapshot.revision) }
         do {
             let data = try await illustrationDownload(url)
-            let manifest = try AdultIllustrations.decode(data, for: snapshot)
+            _ = try AdultIllustrations.decode(data, for: snapshot)
             try Task.checkCancellation()
             // Navigation/refresh may select a newer catalog while this request is running.
             guard catalog?.revision == snapshot.revision else { return }
             // Artwork must never block the readable guide, including when storage is full.
-            try? write(data, to: directory.appendingPathComponent("illustrations-cache-v1.json"))
-            illustrations = manifest
+            try adoptIllustrations(data, for: snapshot)
         } catch {
             // Older catalogs may have no sidecar. Offline/invalid artwork is optional.
         }
@@ -135,10 +136,31 @@ final class AdultStore {
         commit(next)
     }
 
+    @discardableResult func saveNotes(_ notes: String, for id: String, expectedNotes: String? = nil) -> Bool {
+        guard article(id) != nil, notes.count <= 50_000 else { actionIssue = "Keep your notes under 50,000 characters. Your earlier notes are unchanged."; return false }
+        if let expectedNotes, (progress(id).personalNotes ?? "") != expectedNotes { actionIssue = "These notes changed in another window. Your draft is still here; copy it before reopening the latest notes."; return false }
+        var next = library
+        var progress = progress(id)
+        progress.personalNotes = notes.isEmpty ? nil : notes
+        next.articles[id] = progress
+        return commit(next)
+    }
+
+    func rate(_ id: String, stars: Int?) {
+        guard article(id) != nil, stars.map({ (1...5).contains($0) }) ?? true else { return }
+        var next = library
+        var progress = progress(id)
+        progress.rating = stars
+        next.articles[id] = progress
+        commit(next)
+    }
+
     @discardableResult private func commit(_ next: UserLibrary) -> Bool {
         guard loadedLibrary else { actionIssue = storageIssue; return false }
         do {
-            try write(JSONEncoder().encode(next), to: directory.appendingPathComponent("UserLibrary-v1.json"))
+            let data = try JSONEncoder().encode(next)
+            _ = try UserLibrary.decode(data)
+            try write(data, to: directory.appendingPathComponent("UserLibrary-v1.json"))
             library = next
             return true
         } catch {
@@ -201,17 +223,132 @@ final class AdultStore {
         return data
     }
 
-    func activateNotifications() async {
+
+    // Only the configured catalog service supplies artwork; manifests cannot nominate URLs.
+    private var illustrationService: URL? {
+        guard let remoteURL, remoteURL.scheme == "https", remoteURL.host != nil,
+              remoteURL.user == nil, remoteURL.password == nil, remoteURL.query == nil,
+              remoteURL.fragment == nil, remoteURL.path == "/v1/catalog" else { return nil }
+        return remoteURL.deletingLastPathComponent()
+    }
+
+    func illustration(for article: AdultArticle, stepID: String = "") -> GuideIllustration? {
+        guard self.article(article.id) == article, illustrations?.revision == catalog?.revision else { return nil }
+        return illustrations?.items.first { $0.guideID == article.id && $0.stepID == stepID }
+    }
+
+    private func reloadIllustrations() {
+        illustrations = nil
+        guard let catalog, let service = illustrationService,
+              let fingerprint = try? GuideIllustrationManifest.catalogFingerprint(catalog),
+              let data = try? Self.cachedData(directory.appendingPathComponent("illustrations-cache-v1.json"), maximumBytes: GuideIllustrationManifest.maximumBytes + 1_024),
+              let cached = try? JSONDecoder().decode(CachedIllustrations.self, from: data),
+              cached.schemaVersion == 1, cached.service == service.absoluteString,
+              cached.catalogFingerprint == fingerprint,
+              (try? cached.manifest.validate(for: catalog)) != nil else { return }
+        illustrations = cached.manifest
+    }
+
+    func adoptIllustrations(_ data: Data, for expectedCatalog: AdultCatalog) throws {
+        guard let catalog, let service = illustrationService,
+              try GuideIllustrationManifest.catalogFingerprint(catalog) == GuideIllustrationManifest.catalogFingerprint(expectedCatalog) else { throw CatalogError.invalid }
+        let manifest = try GuideIllustrationManifest.decode(data, for: catalog)
+        let cached = CachedIllustrations(schemaVersion: 1, service: service.absoluteString,
+                                         catalogFingerprint: try GuideIllustrationManifest.catalogFingerprint(catalog), manifest: manifest)
+        let encoded = try JSONEncoder().encode(cached)
+        guard encoded.count <= GuideIllustrationManifest.maximumBytes + 1_024 else { throw CatalogError.tooLarge }
+        try write(encoded, to: directory.appendingPathComponent("illustrations-cache-v1.json"))
+        illustrations = manifest
+    }
+
+    private func isCurrentIllustration(_ item: GuideIllustration, revision: String) -> Bool {
+        catalog?.revision == revision && illustrations?.revision == revision && illustrations?.items.contains(item) == true
+    }
+
+    func cachedIllustrationImage(_ item: GuideIllustration, revision: String) -> CGImage? {
+        guard isCurrentIllustration(item, revision: revision),
+              let data = try? Self.cachedData(imageURL(item), maximumBytes: GuideIllustration.maximumImageBytes) else { return nil }
+        return try? GuideIllustration.image(data, expectedDigest: item.assetSHA256)
+    }
+
+    func cacheIllustrationImage(_ data: Data, for item: GuideIllustration, revision: String) -> CGImage? {
+        guard isCurrentIllustration(item, revision: revision),
+              let image = try? GuideIllustration.image(data, expectedDigest: item.assetSHA256) else { return nil }
+        let url = imageURL(item)
+        do {
+            try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+            let files = try FileManager.default.contentsOfDirectory(at: url.deletingLastPathComponent(), includingPropertiesForKeys: [.fileSizeKey, .isRegularFileKey])
+            let used = files.filter { $0 != url }.reduce(0) { total, file in
+                let values = try? file.resourceValues(forKeys: [.fileSizeKey, .isRegularFileKey])
+                return total + (values?.isRegularFile == true ? (values?.fileSize ?? 0) : 0)
+            }
+            // ponytail: 32 MB cache ceiling with no eviction; add LRU only if needed for offline artwork.
+            if used + data.count <= 32 * 1_024 * 1_024 { try write(data, to: url) }
+        } catch { /* A storage failure can omit artwork, never overwrite personal progress. */ }
+        return image
+    }
+
+    func illustrationImage(_ item: GuideIllustration, revision: String) async -> CGImage? {
+        guard isCurrentIllustration(item, revision: revision) else { return nil }
+        if let image = cachedIllustrationImage(item, revision: revision) { return image }
+        guard let service = illustrationService else { return nil }
+        do {
+            let url = service.appendingPathComponent("assets").appendingPathComponent(item.assetSHA256)
+            let data = try await Self.downloadIllustrationResource(url, type: "image/png", maximumBytes: GuideIllustration.maximumImageBytes)
+            try Task.checkCancellation()
+            return cacheIllustrationImage(data, for: item, revision: revision)
+        } catch { return nil }
+    }
+
+    private func imageURL(_ item: GuideIllustration) -> URL {
+        directory.appendingPathComponent("illustration-assets-v1", isDirectory: true).appendingPathComponent(item.assetSHA256 + ".png")
+    }
+
+    nonisolated private static func cachedData(_ url: URL, maximumBytes: Int) throws -> Data {
+        let values = try url.resourceValues(forKeys: [.fileSizeKey, .isRegularFileKey])
+        guard values.isRegularFile == true, let size = values.fileSize, size <= maximumBytes else { throw CatalogError.tooLarge }
+        let data = try Data(contentsOf: url)
+        guard data.count <= maximumBytes else { throw CatalogError.tooLarge }
+        return data
+    }
+
+    nonisolated private static func downloadIllustrationResource(_ url: URL, type: String, maximumBytes: Int) async throws -> Data {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.httpShouldSetCookies = false
+        configuration.timeoutIntervalForRequest = 25
+        configuration.timeoutIntervalForResource = 45
+        let session = URLSession(configuration: configuration)
+        defer { session.invalidateAndCancel() }
+        var request = URLRequest(url: url)
+        request.setValue(type, forHTTPHeaderField: "Accept")
+        let (bytes, response) = try await session.bytes(for: request)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200, response.url == url,
+              http.mimeType?.lowercased() == type, response.expectedContentLength <= Int64(maximumBytes) else { throw CatalogError.unavailable }
+        var data = Data()
+        for try await byte in bytes {
+            guard data.count < maximumBytes else { throw CatalogError.tooLarge }
+            data.append(byte)
+        }
+        return data
+    }
+
+    func installNotificationRouting() {
+        guard allowsNotifications else { return }
         if notificationRouter == nil {
             let router = AdultNotificationRouter(store: self)
             notificationRouter = router
             notifications.delegate = router
         }
+    }
+
+    func activateNotifications() async {
+        guard allowsNotifications else { return }
+        installNotificationRouting()
         await reconcileNotifications()
     }
 
     private func reconcileNotifications() async {
-        guard loadedLibrary else { return }
+        guard loadedLibrary, allowsNotifications else { return }
         let settings = await notifications.notificationSettings()
         if settings.authorizationStatus == .authorized || settings.authorizationStatus == .provisional {
             let liveIDs = Set(upcoming.map { notificationID($0.id) })
@@ -219,10 +356,12 @@ final class AdultStore {
             let orphanIDs = pending.map(\.identifier).filter { $0.hasPrefix("AdultGuide.") && !liveIDs.contains($0) }
             notifications.removePendingNotificationRequests(withIdentifiers: orphanIDs)
             // Repair a previous process interruption between the file write and notification scheduling.
-            for planned in upcoming {
+            let otherCount = pending.filter { !$0.identifier.hasPrefix("AdultGuide.") }.count
+            let capacity = max(0, min(40, 60 - otherCount))
+            for planned in upcoming.prefix(capacity) {
                 guard let article = self.article(planned.id), let date = progress(planned.id).reminderDate, date > Date() else { continue }
                 do {
-                    try await notifications.add(request(for: article, date: date, sound: progress(article.id).reminderSound))
+                    try await AdultNotificationBudget.add(request(for: article, date: date, sound: progress(article.id).reminderSound))
                     if self.article(article.id) == nil || progress(article.id).reminderDate == nil {
                         notifications.removePendingNotificationRequests(withIdentifiers: [notificationID(article.id)])
                     }
@@ -233,6 +372,7 @@ final class AdultStore {
     }
 
     func schedule(_ article: AdultArticle, date: Date, sound: Bool) async -> Bool {
+        guard allowsNotifications else { return false }
         guard canSave, !isScheduling, self.article(article.id) != nil else { return false }
         guard date.timeIntervalSinceNow >= 60 else {
             actionIssue = "Choose a reminder at least one minute from now."
@@ -258,7 +398,7 @@ final class AdultStore {
                 return false
             }
             let oldProgress = progress(article.id)
-            try await notifications.add(request(for: currentArticle, date: date, sound: sound))
+            try await AdultNotificationBudget.add(request(for: currentArticle, date: date, sound: sound))
             guard self.article(article.id) != nil else {
                 notifications.removePendingNotificationRequests(withIdentifiers: [notificationID(article.id)])
                 actionIssue = "This guide is no longer in the current library. Choose another guide."
@@ -272,7 +412,7 @@ final class AdultStore {
             if !commit(next) {
                 notifications.removePendingNotificationRequests(withIdentifiers: [notificationID(article.id)])
                 if let previous = oldProgress.reminderDate, previous > Date() {
-                    try await notifications.add(request(for: article, date: previous, sound: oldProgress.reminderSound))
+                    try await AdultNotificationBudget.add(request(for: article, date: previous, sound: oldProgress.reminderSound))
                 }
                 return false
             }
@@ -295,8 +435,10 @@ final class AdultStore {
         updated.reminderDate = nil
         next.articles[id] = updated
         guard commit(next) else { return false }
-        notifications.removePendingNotificationRequests(withIdentifiers: [notificationID(id)])
-        notifications.removeDeliveredNotifications(withIdentifiers: [notificationID(id)])
+        if allowsNotifications {
+            notifications.removePendingNotificationRequests(withIdentifiers: [notificationID(id)])
+            notifications.removeDeliveredNotifications(withIdentifiers: [notificationID(id)])
+        }
         return true
     }
 
@@ -318,12 +460,24 @@ final class AdultStore {
     }
 }
 
+
+private struct CachedIllustrations: Codable {
+    let schemaVersion: Int
+    let service: String
+    let catalogFingerprint: String
+    let manifest: GuideIllustrationManifest
+}
+
 private final class AdultNotificationRouter: NSObject, UNUserNotificationCenterDelegate, @unchecked Sendable {
     private weak var store: AdultStore?
     @MainActor init(store: AdultStore) { self.store = store }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-        guard let id = response.notification.request.content.userInfo["guideID"] as? String else { return }
-        await MainActor.run { self.store?.openGuide(id) }
+        let info = response.notification.request.content.userInfo
+        if let id = info["guideID"] as? String {
+            await MainActor.run { self.store?.openGuide(id) }
+        } else if let raw = info["assistantActionID"] as? String, let id = UUID(uuidString: raw) {
+            await MainActor.run { self.store?.requestedAssistantActionID = id }
+        }
     }
 }

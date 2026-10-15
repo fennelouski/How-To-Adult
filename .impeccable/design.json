@@ -1,106 +1,56 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "name": "how-to-adult",
-  "status": "design-reference; implementation verification pending",
-  "colors": {
-    "paper": "#F5F0E6",
-    "paper-raised": "#EAE4D6",
-    "pine": "#173E38",
-    "muted": "#5C6259",
-    "clay": "#9B412F",
-    "on-clay": "#FFF9EF",
-    "rule": "#D1C9B7",
-    "caution": "#EAE1BE",
-    "dark-paper": "#172A26",
-    "dark-raised": "#223C35",
-    "dark-ink": "#F4EFE5",
-    "dark-muted": "#BDCCBF",
-    "dark-action": "#E8BC80",
-    "dark-rule": "#476057",
-    "dark-caution": "#3C402C"
-  },
-  "spacing": [
-    4,
-    8,
-    12,
-    18,
-    24,
-    28,
-    40
-  ],
-  "screens": [
-    "01-discovery.png",
-    "02-search.png",
-    "03-reader.png",
-    "04-steps.png",
-    "05-saved.png",
-    "06-safety.png",
-    "07-discovery-dark.png",
-    "08-accessibility-dark.png",
-    "09-wide.png",
-    "10-launch.png"
-  ],
   "source": "DESIGN.md",
-  "noExternalAssets": true,
-  "unit": "logical pt/dp; reference CSS px equals one logical point",
-  "typography": {
-    "display": {
-      "familyRole": "editorial-serif",
-      "size": 36,
-      "lineHeight": 38
+  "tokens": {
+    "authority": "DESIGN.md YAML frontmatter",
+    "strategy": "normative semantic roles; no duplicated primitive values"
+  },
+  "extensions": {
+    "native": {
+      "navigationBreakpointsPt": [
+        680,
+        1000
+      ],
+      "accessibilityLayout": "compact navigation and stacked reader header",
+      "readerSpreadMinPt": 520,
+      "readerArtWidthsPt": {
+        "520to599": 168,
+        "600plus": 200
+      },
+      "readerMaxPt": 720,
+      "compositionMaxPt": 1800,
+      "phoneInsetPt": 24,
+      "minimumTargetPt": 44,
+      "searchPromptContrastLight": 4.950665920729284,
+      "typography": "Relatively scaled system serif and sans; reference CSS line heights are not measured native metrics.",
+      "chrome": "Native tab bars, sidebars, grouped forms, sheets, keyboard/focus and safe areas."
     },
-    "body": {
-      "familyRole": "native-sans",
-      "size": 17,
-      "lineHeight": 25.5
+    "referenceScreens": [
+      "01-discovery.png",
+      "02-search.png",
+      "03-reader.png",
+      "04-steps.png",
+      "05-saved.png",
+      "06-safety.png",
+      "07-discovery-dark.png",
+      "08-accessibility-dark.png",
+      "09-wide.png",
+      "10-launch.png",
+      "11-assistant.png",
+      "12-plan.png",
+      "13-private-notes.png"
+    ],
+    "referenceKind": "Design renderings; synthetic reference text never replaces full catalog content.",
+    "verification": {
+      "historicalAcceptedPin": "94bc23c99f83a908ba349ba506120d86cf19f050",
+      "scope": "Phone/tablet/light/dark/AX/forms/launch; scoped visual acceptance, not release or publication approval.",
+      "currentReconciliation": "Await current frozen source and Assistant/notes/QA review receipt.",
+      "gaps": [
+        "Mac resize runtime: Studio locked",
+        "Spoken VoiceOver traversal unobserved"
+      ]
     },
-    "metadata": {
-      "size": 12,
-      "lineHeight": 18
-    }
-  },
-  "radii": {
-    "control": 8,
-    "search": 10,
-    "artwork": 3
-  },
-  "layout": {
-    "phoneInset": 24,
-    "minimumHitTarget": 44,
-    "androidMinimumHitTarget": 48,
-    "wideSidebar": [
-      220,
-      240
-    ],
-    "largeLayoutThreshold": 1000
-  },
-  "motion": {
-    "controlPressMs": [
-      80,
-      120
-    ],
-    "navigationMs": [
-      180,
-      240
-    ],
-    "reduceMotion": "disable transforms and continuous marquee; preserve state feedback"
-  },
-  "states": [
-    "default",
-    "selected",
-    "pressed",
-    "disabled",
-    "loading",
-    "empty",
-    "error",
-    "offline"
-  ],
-  "accessibility": [
-    "Dynamic Type",
-    "VoiceOver",
-    "keyboard",
-    "Reduce Motion",
-    "High Contrast",
-    "Differentiate without Color"
-  ]
+    "motion": "Reference guidance only; native transitions and system Reduce Motion govern implementation."
+  }
 }

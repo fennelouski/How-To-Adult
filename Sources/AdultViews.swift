@@ -3,10 +3,14 @@ import Observation
 
 struct AdultRootView: View {
     @Environment(AdultStore.self) private var store
+    @Environment(AdultAssistantController.self) private var assistant
     @Environment(\.dynamicTypeSize) private var typeSize
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var sizeClass
     #endif
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var assistantPath: [String] = []
+    @State private var assistantFilters = GuideCollectionState()
     @State private var section: AdultSection = .browse
     @State private var selectedID: String?
     @State private var browsePath: [String] = []
@@ -40,14 +44,14 @@ struct AdultRootView: View {
                     .navigationSplitViewColumnWidth(min: 180, ideal: 220, max: 240)
                     .toolbar { settingsButton }
                 } content: {
-                    GuideCollectionView(section: section, filters: collectionState(for: section), selectedID: $selectedID, isSidebar: true, onBrowse: { section = .browse })
+                    sectionCollection
                         .navigationSplitViewColumnWidth(min: 300, ideal: 360, max: 410)
                 } detail: {
                     NavigationStack { readerSelection }
                 }
             } else if usesSidebar && geometry.size.width >= 680 && !typeSize.isAccessibilitySize {
                 NavigationSplitView {
-                    GuideCollectionView(section: section, filters: collectionState(for: section), selectedID: $selectedID, isSidebar: true, onBrowse: { section = .browse })
+                    sectionCollection
                         .navigationSplitViewColumnWidth(min: 260, ideal: 320, max: 400)
                         .toolbar {
                             settingsButton
@@ -60,7 +64,10 @@ struct AdultRootView: View {
                 TabView(selection: $section) {
                     ForEach(AdultSection.allCases) { item in
                         NavigationStack(path: navigationPath(for: item)) {
-                            GuideCollectionView(section: item, filters: collectionState(for: item), selectedID: $selectedID, isSidebar: false, onBrowse: { section = .browse })
+                            Group {
+                                if item == .assistant { AdultAssistantView() }
+                                else { GuideCollectionView(section: item, filters: collectionState(for: item), selectedID: $selectedID, isSidebar: false, onBrowse: { section = .browse }) }
+                            }
                                 .navigationDestination(for: String.self) { id in
                                     if let article = store.article(id) { GuideReaderView(article: article) { activeSheet = .reminder(article) } }
                                 }
@@ -76,9 +83,9 @@ struct AdultRootView: View {
             }
         }
             .onChange(of: navigationMode(width: geometry.size.width)) { old, new in
-                if old != .compact, new == .compact, let selectedID {
+                if section != .assistant, old != .compact, new == .compact, let selectedID {
                     navigationPath(for: section).wrappedValue = [selectedID]
-                } else if old == .compact, new != .compact, let current = navigationPath(for: section).wrappedValue.last {
+                } else if section != .assistant, old == .compact, new != .compact, let current = navigationPath(for: section).wrappedValue.last {
                     selectedID = current
                 }
             }
@@ -96,12 +103,22 @@ struct AdultRootView: View {
         .alert("Couldn’t finish", isPresented: Binding(get: { store.actionIssue != nil }, set: { if !$0 { store.actionIssue = nil } })) {
             Button("OK", role: .cancel) { store.actionIssue = nil }
         } message: { Text(store.actionIssue ?? "Please try again.") }
-        .onChange(of: store.requestedGuideID) { _, id in
+        .onChange(of: scenePhase) { _, phase in if phase == .active { assistant.connection.refreshAvailability() } }
+        .onChange(of: store.requestedGuideID, initial: true) { _, id in
             guard let id else { return }
             section = .browse
             selectedID = id
             browsePath = [id]
             store.requestedGuideID = nil
+        }
+        .onChange(of: assistant.requestedPresentationID, initial: true) { _, id in
+            if id != nil { section = .assistant; assistant.requestedPresentationID = nil }
+        }
+        .onChange(of: store.requestedAssistantActionID, initial: true) { _, id in
+            guard let id, let plan = assistant.library.plans.first(where: { $0.actions.contains { $0.id == id } }) else { return }
+            assistant.selectedPlanID = plan.id
+            section = .assistant
+            store.requestedAssistantActionID = nil
         }
         .onChange(of: browsePath) { _, path in if section == .browse { preserveSelection(path) } }
         .onChange(of: savedPath) { _, path in if section == .saved { preserveSelection(path) } }
@@ -111,10 +128,14 @@ struct AdultRootView: View {
             store.openGuide(url.lastPathComponent)
         }
         .task {
+            guard !assistant.isPrivateQA else { return }
             await store.activateNotifications()
             await store.refresh()
         }
-        .task(id: store.catalog?.revision) { await store.refreshIllustrations() }
+        .task(id: store.catalog?.revision) { if !assistant.isPrivateQA || ProcessInfo.processInfo.arguments.contains("--qa-library") { await store.refreshIllustrations() } }
+        #if DEBUG
+        .onAppear { if assistant.isPrivateQA && ProcessInfo.processInfo.arguments.contains("--qa-assistant") { section = .assistant } }
+        #endif
     }
 
     private enum NavigationMode: Equatable { case compact, double, triple }
@@ -123,11 +144,16 @@ struct AdultRootView: View {
         return width >= 1000 ? .triple : width >= 680 ? .double : .compact
     }
     private func collectionState(for section: AdultSection) -> GuideCollectionState {
-        switch section { case .browse: browseFilters; case .saved: savedFilters; case .reminders: reminderFilters }
+        switch section { case .browse: browseFilters; case .saved: savedFilters; case .reminders: reminderFilters; case .assistant: assistantFilters }
     }
 
+    @ViewBuilder private var sectionCollection: some View {
+        if section == .assistant { AdultPlanSidebar() }
+        else { GuideCollectionView(section: section, filters: collectionState(for: section), selectedID: $selectedID, isSidebar: true, onBrowse: { section = .browse }) }
+    }
     @ViewBuilder private var readerSelection: some View {
-        if let selectedID, let article = store.article(selectedID) {
+        if section == .assistant { AdultAssistantView() }
+        else if let selectedID, let article = store.article(selectedID) {
             GuideReaderView(article: article) { activeSheet = .reminder(article) }
         } else {
             VStack(alignment: .leading, spacing: 16) {
@@ -156,6 +182,7 @@ struct AdultRootView: View {
         case .browse: $browsePath
         case .saved: $savedPath
         case .reminders: $reminderPath
+        case .assistant: $assistantPath
         }
     }
 
@@ -185,6 +212,7 @@ private enum AdultSheet: Identifiable {
 
 struct GuideCollectionView: View {
     @Environment(AdultStore.self) private var store
+    @Environment(AdultAssistantController.self) private var assistant
     @Environment(\.dynamicTypeSize) private var typeSize
     let section: AdultSection
     @Bindable var filters: GuideCollectionState
@@ -210,6 +238,7 @@ struct GuideCollectionView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 28) {
+                AdultPrivateQABanner()
                 if let issue = store.storageIssue {
                     VStack(alignment: .leading, spacing: 10) {
                         Label("Saved guides need attention", systemImage: "exclamationmark.triangle").font(.headline)
@@ -273,6 +302,7 @@ struct GuideCollectionView: View {
         case .browse: isDiscovery ? "Life comes\nwith questions." : "Find a useful\nnext step."
         case .saved: "Your useful\nlibrary."
         case .reminders: "A nudge\nfor later."
+        case .assistant: "A doable plan."
         }
     }
     private var subtitle: String {
@@ -280,6 +310,7 @@ struct GuideCollectionView: View {
         case .browse: "A useful next step is closer than you think."
         case .saved: "Saved for the moment you need it."
         case .reminders: "Your guides, at the right time."
+        case .assistant: "A little help with everyday life."
         }
     }
     private var searchField: some View {
@@ -413,9 +444,8 @@ private struct FeaturedGuide: View {
     }
     @ViewBuilder private var artwork: some View {
         if let illustration = store.illustration(guideID: article.id) {
-            AsyncImage(url: store.illustrationURL(illustration)) { phase in
-                if let image = phase.image { image.resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 3)).accessibilityLabel(illustration.altText) }
-                else { Text("Teaching illustration in guide").font(.caption).foregroundStyle(AdultPalette.secondaryText).padding(12).background(AdultPalette.surface) }
+            VerifiedGuideImage(illustration: illustration) { image in
+                image.resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 3)).accessibilityLabel(illustration.altText)
             }
         }
     }
@@ -452,10 +482,13 @@ private struct GuideRow: View {
 
 struct GuideReaderView: View {
     @Environment(AdultStore.self) private var store
+    @Environment(AdultAssistantController.self) private var assistant
     @Environment(\.dynamicTypeSize) private var typeSize
     @State private var readerWidth: CGFloat = 0
     let article: AdultArticle
     let onReminder: () -> Void
+    var isPassportReview = false
+    @State private var editingNotes = false
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 28) {
@@ -518,6 +551,7 @@ struct GuideReaderView: View {
                         }
                     }
                 }
+                personalReference
                 Text("Reviewed \(article.updatedAt)").font(.caption).foregroundStyle(AdultPalette.secondaryText)
                 if let date = store.progress(article.id).reminderDate, date > Date() {
                     VStack(alignment: .leading, spacing: 10) {
@@ -539,10 +573,11 @@ struct GuideReaderView: View {
                 Button { store.toggleSaved(article.id) } label: {
                     Label(store.progress(article.id).isSaved ? "Unsave guide" : "Save guide", systemImage: store.progress(article.id).isSaved ? "bookmark.fill" : "bookmark")
                 }.disabled(!store.canSave).accessibilityIdentifier("save-guide")
-                Button(action: onReminder) { Label("Remind me", systemImage: "bell") }.disabled(!store.canSave).accessibilityIdentifier("remind-guide")
-                ShareLink(item: article.shareText)
+                if !isPassportReview { Button(action: onReminder) { Label("Remind me", systemImage: "bell") }.disabled(!store.canSave).accessibilityIdentifier("remind-guide")
+                ShareLink(item: article.shareText) }
             }
         }.accessibilityIdentifier("guide-reader")
+        .sheet(isPresented: $editingNotes) { GuideNotesEditor(article: article) }
         .background {
             GeometryReader { geometry in
                 Color.clear.onAppear { readerWidth = geometry.size.width }
@@ -551,15 +586,65 @@ struct GuideReaderView: View {
         }
     }
     private var usesSpread: Bool { readerWidth >= 520 && !typeSize.isAccessibilitySize }
+    private var personalReference: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            FieldnotesRule()
+            FieldnotesHeading("Make this yours", size: 25)
+            Text("My rating").font(.headline)
+            HStack(spacing: 4) {
+                ForEach(1...5, id: \.self) { stars in
+                    let selected = store.progress(article.id).rating ?? 0
+                    Button { store.rate(article.id, stars: selected == stars ? nil : stars) } label: {
+                        Image(systemName: selected >= stars ? "star.fill" : "star").font(.title2)
+                            .foregroundStyle(selected >= stars ? AdultPalette.accent : AdultPalette.secondaryText).frame(minWidth: 44, minHeight: 44)
+                    }.buttonStyle(.plain).disabled(!store.canSave)
+                        .accessibilityLabel("Rate \(stars) out of 5").accessibilityValue(selected == stars ? "Selected" : "Not selected")
+                }
+            }
+            if let notes = store.progress(article.id).personalNotes, !notes.isEmpty {
+                Text(notes).font(.body).lineLimit(4).textSelection(.enabled)
+            }
+            Button { editingNotes = true } label: {
+                Label(store.progress(article.id).personalNotes == nil ? "Add my notes" : "Open my notes", systemImage: "square.and.pencil").font(.headline).padding(.vertical, 6)
+            }.disabled(!store.canSave).accessibilityIdentifier("guide-personal-notes")
+        }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+
     private var introduction: some View {
-VStack(alignment: .leading, spacing: 15) {
+        VStack(alignment: .leading, spacing: 15) {
                     FieldnotesHeading(article.title, size: 34, relativeTo: .largeTitle)
                     Text((store.category(article)?.title ?? "Guide") + " · " + (article.jurisdiction == "General" ? "General guidance" : article.jurisdiction + " rules"))
                         .font(.caption).foregroundStyle(AdultPalette.secondaryText)
                     Text(article.summary).fieldnotesBody().foregroundStyle(AdultPalette.secondaryText)
                     Text("\(article.minutes) min · \(article.steps.count) steps").font(.caption).foregroundStyle(AdultPalette.secondaryText)
+            if let notice = article.adviceNotice { Text(notice).fieldnotesBody(size: 15).foregroundStyle(AdultPalette.secondaryText) }
+            if !isPassportReview {
+                Button { assistant.prepare(article) } label: { Label("Help me do this", systemImage: "sparkles").frame(maxWidth: .infinity, minHeight: 44, alignment: .leading) }
+                    .accessibilityIdentifier("guide-assistant")
+            }
                 }
                 .accessibilityElement(children: .contain).accessibilitySortPriority(6)
+    }
+}
+
+private struct GuideNotesEditor: View {
+    @Environment(AdultStore.self) private var store
+    @Environment(\.dismiss) private var dismiss
+    let article: AdultArticle
+    @State private var notes = ""
+    @State private var original = ""
+    @State private var discard = false
+    var body: some View {
+        NavigationStack {
+            TextEditor(text: $notes).scrollContentBackground(.hidden).padding(16).background(AdultPalette.background).foregroundStyle(AdultPalette.ink).navigationTitle("My notes")
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) { Button("Cancel") { if notes == original { dismiss() } else { discard = true } } }
+                    ToolbarItem(placement: .confirmationAction) { Button("Save") { if store.saveNotes(notes, for: article.id, expectedNotes: original) { dismiss() } }.disabled(!store.canSave || notes.count > 50_000) }
+                }
+                .onAppear { original = store.progress(article.id).personalNotes ?? ""; notes = original }
+                .confirmationDialog("Discard these changes?", isPresented: $discard, titleVisibility: .visible) { Button("Discard changes", role: .destructive) { dismiss() }; Button("Keep editing", role: .cancel) { } }
+                .alert("Couldn’t save notes", isPresented: Binding(get: { store.actionIssue != nil }, set: { if !$0 { store.actionIssue = nil } })) { Button("OK") { store.actionIssue = nil } } message: { Text(store.actionIssue ?? "Please try again.") }
+        }.tint(AdultPalette.accent).interactiveDismissDisabled(notes != original).frame(minWidth: 280, minHeight: 320)
     }
 }
 
@@ -589,16 +674,8 @@ private struct GuideIllustrationView: View {
                 VStack(alignment: .leading, spacing: 4) { descriptionButton; fullSizeButton }
             }
             if expanded { Text(illustration.altText).fieldnotesBody().fixedSize(horizontal: false, vertical: true) }
-            AsyncImage(url: url) { phase in
-                if let image = phase.image {
-                    image.resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 3)).accessibilityLabel(illustration.altText)
-                } else {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Label("Illustration unavailable", systemImage: "photo").font(.headline)
-                        Text(illustration.altText).fieldnotesBody(size: 15)
-                        Button("Retry illustration") { attempt += 1 }.frame(minHeight: 44)
-                    }.padding(16).foregroundStyle(AdultPalette.secondaryText).frame(maxWidth: .infinity, alignment: .leading).background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 3))
-                }
+            VerifiedGuideImage(illustration: illustration) { image in
+                image.resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 3)).accessibilityLabel(illustration.altText)
             }.id("\(url?.absoluteString ?? "")-\(attempt)")
             if !compactPlate {
                 if !illustration.caption.isEmpty { Text(illustration.caption).fieldnotesBody(size: 15) }
@@ -628,10 +705,8 @@ private struct IllustrationViewer: View {
         NavigationStack {
             GeometryReader { geometry in
                 ScrollView([.horizontal, .vertical]) {
-                    AsyncImage(url: url) { phase in
-                        if let image = phase.image {
-                            image.resizable().scaledToFit().frame(width: max(1, geometry.size.width - 32) * zoom * pinch).padding(16).accessibilityLabel(illustration.altText)
-                        } else { Text(illustration.altText).fieldnotesBody().padding(24) }
+                    VerifiedGuideImage(illustration: illustration) { image in
+                        image.resizable().scaledToFit().frame(width: max(1, geometry.size.width - 32) * zoom * pinch).padding(16).accessibilityLabel(illustration.altText)
                     }
                 }
                 .gesture(MagnificationGesture().updating($pinch) { value, state, _ in state = value }.onEnded { zoom = min(5, max(1, zoom * $0)) })
@@ -728,7 +803,7 @@ private struct AdultSettingsView: View {
         GeometryReader { geometry in
             if geometry.size.width >= 680 {
                 NavigationSplitView {
-                    List(["Appearance", "Your library", "About"], id: \.self,
+                    List(["Appearance", "Assistant", "Your library", "About"], id: \.self,
                          selection: Binding<String?>(get: { selectedSection }, set: { if let value = $0 { selectedSection = value } })) { section in
                         Text(section).tag(section)
                     }
@@ -758,6 +833,11 @@ private struct AdultSettingsView: View {
                     Text("Text size and motion follow your system accessibility settings.").font(.subheadline).foregroundStyle(AdultPalette.secondaryText)
                 }.listRowBackground(AdultPalette.surface)
             }
+            if !focused || selectedSection == "Assistant" {
+                Section("Assistant") {
+                    NavigationLink { AdultAssistantSettingsView() } label: { Label("AI and automation", systemImage: "sparkles") }
+                }.listRowBackground(AdultPalette.surface)
+            }
             if !focused || selectedSection == "Your library" {
                 Section("Your library") {
                     LabeledContent("Guides") { Text("\(store.articles.count)").foregroundStyle(AdultPalette.secondaryText) }
@@ -784,5 +864,31 @@ private struct AdultSettingsView: View {
             }
         }.scrollContentBackground(.hidden).background(AdultPalette.background)
             .foregroundStyle(AdultPalette.ink).tint(AdultPalette.accent)
+    }
+}
+
+/// Main's bounded PNG/digest checks apply to every artwork surface, including zoom.
+private struct VerifiedGuideImage<Content: View>: View {
+    @Environment(AdultStore.self) private var store
+    let illustration: GuideIllustration
+    @ViewBuilder let content: (Image) -> Content
+    @State private var pixels: CGImage?
+    @State private var didLoad = false
+    @State private var attempt = 0
+    var body: some View {
+        Group {
+            if let pixels { content(Image(decorative: pixels, scale: 1)) }
+            else if didLoad {
+                VStack(alignment: .leading, spacing: 10) {
+                    Label("Illustration unavailable", systemImage: "photo").font(.headline)
+                    Text(illustration.altText).fieldnotesBody(size: 15)
+                    Button("Retry illustration") { attempt += 1 }.frame(minHeight: 44)
+                }.padding(12).foregroundStyle(AdultPalette.secondaryText).frame(maxWidth: .infinity, alignment: .leading).background(AdultPalette.surface)
+            } else { ProgressView("Loading illustration").font(.caption).foregroundStyle(AdultPalette.secondaryText) }
+        }.task(id: "\(store.catalog?.revision ?? "")/\(illustration.assetSHA256)/\(attempt)") {
+            pixels = nil; didLoad = false
+            if let revision = store.catalog?.revision { pixels = await store.illustrationImage(illustration, revision: revision) }
+            didLoad = true
+        }
     }
 }

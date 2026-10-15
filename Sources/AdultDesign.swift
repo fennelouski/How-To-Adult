@@ -9,6 +9,7 @@ enum AdultPalette {
     static let accent = Color("AccentColor")
     static let rule = Color("PaperRule")
     static let caution = Color("CautionPaper")
+    static func category(_ key: String) -> Color { accent }
 }
 
 struct FieldnotesHeading: View {

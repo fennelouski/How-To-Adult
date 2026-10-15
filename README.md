@@ -1,77 +1,31 @@
 # How to Adult
 
-A native pocket guide to everyday life for iPhone, iPad and Mac. The included library has 56 guides across seven topics, with 224 checkable steps. It covers Home, Food, Money, Work, Wellbeing, People and Everyday.
+A native pocket guide for iPhone, iPad and Mac. The bundled public snapshot contains 273 guides across seven topics and matches the existing AWS/Vercel publication. Its exact-revision sidecar identifies 233 teaching illustrations. Search works locally; saved guides, checked steps, reminders, personal notes and ratings stay on the device.
 
-Open a guide, follow its steps and keep useful answers for later. Guides include supplies, cautions and source links where needed. United States-specific guidance carries a visible jurisdiction label.
+The Fieldnotes interface uses warm paper, pine ink, clay actions and serif headings. It adapts from compact tabs to native guide-index/reader columns, retains search and selection while resizing, supports Dynamic Type and both appearances, and offers image descriptions and full-size zoom. Full guide bodies, cautions, jurisdiction, sources and stable guide/step identities are preserved.
 
-## Current app
+## Assistant source
 
-- Browse and search the included library offline.
-- Save guides and track completed steps locally.
-- Set a local reminder with a chosen date, time and sound preference. Notification permission is requested when saving a reminder.
-- Share a guide through the system share menu.
-- Use native layouts on iPhone, iPad and Mac. Minimum versions are iOS/iPadOS 17 and macOS 14.
+Assistant is a separate tab and the guide's “Help me do this” route prepares its real context. Plans retain reminder, calendar, research, shopping and checklist actions, stable IDs and durable execution receipts. Existing explicit execution/automation opt-ins, uncertain-write review and shared notification limits remain in force. Automation defaults to off and affects only new eligible plans; deleting a plan does not remove native items already created.
 
-There is no account, subscription, in-app purchase, advertising or tracking SDK. Bookmarks, progress and reminders remain on each device. Cross-device sync is not implemented.
+On-device planning requires the existing Apple Intelligence availability checks on supported 26+ systems. Other devices may use the existing optional user-supplied OpenAI API key. Keys remain in non-synced device Keychain storage. OpenAI requests use the user's API account and may incur its charges. Nothing is generated merely by opening a guide. Shopping prepares a list; there is no integrated checkout. Shortcuts invokes the existing “Make a life plan” intent. There is no always-on authoring service.
 
-The content backend is deployed to AWS and Vercel, with one private publication store and a restricted remote editor that needs no AWS login. Guide publishing, immutable PNG uploads, exact-revision illustration manifests and repeat deployment are verified; 66 backend tests pass. See [EDITOR-API.md](EDITOR-API.md), [CONTENT-AGENT-PROMPT.md](CONTENT-AGENT-PROMPT.md) and the deployment record. Native release status remains in the app-store audit; this backend change does not build or submit apps or add native image rendering. No content-generation schedule is installed by the endpoint.
+Skill-passport models and tests are retained. Its navigation is a DEBUG-only review session with explicit fixture gates; it is absent from ordinary navigation. No new passport content has been admitted.
 
-## Build locally
+## Build and verify locally
 
-Open `HowToAdult.xcodeproj` or regenerate it using Python's standard library:
+Run `python3 scripts/generate-native-project.py`, then open `HowToAdult.xcodeproj`. Active schemes are HowToAdult-iOS and HowToAdult-macOS; minimum systems remain iOS/iPadOS 17 and macOS 14. Existing visionOS source/assets are preserved, but the generator does not create or build a visionOS target under the owner's current restriction.
 
-```sh
-python3 scripts/generate-native-project.py
-```
+The native tests use blank hosts or private UUID sessions before ordinary library, preferences or Keychain initialization. Private UI sessions use their own data/defaults, show a QA marker and disable AI, scheduling and external actions. A separate art-read flag allows immutable public artwork without catalog refresh. Historical permission/device UI probes are retained under UITests/Legacy outside the active source glob.
 
-Build the two native schemes without starting Simulator:
+The original Objective-C app and Core Data files remain in place. Modern targets never open or rewrite the old SQLite store. The modern UserLibrary-v1.json retains prior bookmarks/check fingerprints/reminders when optional notes and ratings are added. Notes keep explicit Save/Cancel, dirty-dismiss/discard protection and concurrent-edit checks.
 
-```sh
-xcodebuild -project HowToAdult.xcodeproj -scheme HowToAdult-iOS -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
-xcodebuild -project HowToAdult.xcodeproj -scheme HowToAdult-macOS -destination 'generic/platform=macOS' CODE_SIGNING_ALLOWED=NO build
-```
+## Content service
 
-The generator creates separate unit-test and UI-test targets for both platforms. The native project uses SwiftUI and system frameworks, without third-party runtime packages. `project.yml` documents the project; XcodeGen is not required.
+The verified reader origins are https://how-to-adult-guides.vercel.app and https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com. This integration does not publish a catalog or deploy infrastructure. Content writes continue to use the existing editorial API contracts, ETags and version guards. No daily generation schedule is enabled. See BACKEND.md, EDITOR-API.md and CONTENT-EDITORIAL.md.
 
-Codex's Run action calls `./script/build_and_run.sh` for local macOS development. It builds into `build/macos`, stops only this checkout's matching app process with a normal termination signal, and opens the resulting debug app. Coordinate GUI access before using it on a shared Mac. It never launches visionOS. See [native project and packaging notes](Configuration/NATIVE-PROJECT.md).
+Public content and artwork must remain separate from recovery/review material. Only the 273-guide catalog, its exact manifest and the 233 referenced PNGs seed the reader backend. Artwork is bound to the exact catalog/service fingerprint and verifies PNG digest, byte and dimension limits before display/cache; an artwork failure leaves text/progress usable.
 
-## Storage and the original app
+## Verification limits
 
-The original Objective-C project, storyboard, Core Data model and tests remain in their original locations. The modern targets exclude them and never open, rewrite or delete the old SQLite store.
-
-The modern app stores its library at `Application Support/HowToAdult/UserLibrary-v1.json`. A configured reader can store its last valid downloaded catalog at `Application Support/HowToAdult/catalog-cache-v1.json`. These paths are inside the platform's app container. No cloud sync is attached to either file.
-
-## Content and backend
-
-`Content/catalog.json` contains the starter library. Validate edits before including or publishing them:
-
-```sh
-python3 scripts/content_validate.py --self-test
-```
-
-Keep article and step IDs stable. Review financial, tax, retirement, health, food and safety guidance against current primary sources, mark the jurisdiction and update the review date. Task duration estimates describe the task or first session, rather than reading time. See [editorial guidance](CONTENT-EDITORIAL.md), [product decisions](PRODUCT.md) and [native design decisions](DESIGN.md).
-
-[BACKEND.md](BACKEND.md) describes the public catalog API, authenticated editorial publishing, validation, versioned storage, rollback and local checks. The native reader can fetch a verified HTTPS catalog once configured; its search, bookmarks, progress and reminders remain local. No daily authoring job is enabled.
-
-Web/API releases must follow the workspace AWS migration policy, including verified AWS and Vercel deployments from the same committed revision during parallel operation. No live endpoint or deployment receipt exists yet. Refresh the owner's AWS CLI authentication before attempting deployment. Do not configure a guessed URL.
-
-## Release state
-
-Version 1.0, build 1 retains bundle identifier `com.nathanfennel.How-To-Adult` and development team `EJLR2RPSV2`. The intended price is free in every eligible App Store territory, but pricing and availability have not been saved or verified in App Store Connect. App Store authentication is blocked, and the existing app record is unknown.
-
-The planned public privacy and support pages are `https://nathanfennel.com/how-to-adult/privacy.html` and `https://nathanfennel.com/how-to-adult/support.html`. They still need deployment and public URL verification. An unlisted privacy page must remain publicly accessible.
-
-The native freeze is `ab95cedbe7401da1f11f52e5befeafbc0b04848d`. iPhone and iPad each passed 10 model and two UI tests. Both signed iOS and Mac exports were inspected against the same 35 native inputs and canonical SHA-256 `45c558b118e8813b7bad781f7e24538a395cff2ccffb8fd14b4f797f739f8c6e`; the bundled catalog, icons, signatures and encryption key were verified. See [final package inspection](app-store-audit/2026-10-03-how-to-adult/final-package-inspection-contrast-final.json).
-
-The [independent finish review](app-store-audit/2026-10-03-how-to-adult/design-finish-review.md) approved all 26 final phone/tablet captures and the scoped galleries of ten genuine-capture images per device. Original-bundle Mac runtime verification, 13 Mac captures and ten Mac gallery images await the owner's existing-container sharing consent. Notification delivery, notification taps, permission denial and minimum-OS runtime checks also remain pending. The overall finish disposition is `recapture` because Mac evidence is missing.
-
-The two privacy/support pages are committed in the website repository at `416fd8fb62fa46c8e40b4634ffd6ac5c095c8615` and were previewed locally. Neither their required dual deployment nor their public URLs have been verified. The [draft listing and privacy reasoning](app-store-audit/2026-10-03-how-to-adult/app-store-metadata.md) and [release checklist](app-store-audit/2026-10-03-how-to-adult/release-checklist.json) retain these hosting and store gaps. The label proposal applies to the inspected bundled build. Provider request retention must be reviewed before enabling a remote catalog.
-
-Native release scripts prepare local archives and App Store packages only after a frozen committed revision passes QA. They do not upload or submit a release. There is no visionOS target, and visionOS build, Simulator, upload and submission work remains disabled at the user's request.
-
-
-## Fieldnotes native reader
-
-The native iPhone/iPad and Mac targets use the Fieldnotes paper, pine and clay design, with visible search, all published topics, saved guides, checked-step progress and native reminder editing. Both appearances and Dynamic Type are supported. The reader keeps complete cautions and original sources, and displays the exact revision-bound teaching artwork with accessible descriptions and native full-size zoom.
-
-The bundled public snapshot contains 273 guides. The matching sidecar identifies 233 public PNGs. The local read-only backend serves only assets referenced by that public revision. This source change does not publish a new remote catalog or deploy infrastructure.
+Local build/test and native capture receipts belong to the integration handoff. A previous design verdict does not certify later code, live providers, native external-action delivery, minimum-OS runtime, App Store status or publication. Current Mac resizing is unobserved while the Studio is locked, and spoken VoiceOver traversal remains unobserved. This source has not been uploaded or submitted during this integration.

@@ -114,6 +114,22 @@ final class AdultIllustrationTests: XCTestCase {
         XCTAssertEqual(offline.articles.count, catalog.articles.count)
     }
 
+    @MainActor func testArtworkOnlyPrivateSessionCannotRefreshCatalog() async throws {
+        let catalog = try catalog()
+        let data = try fixture(catalog)
+        let directory = try prepareDirectory(catalog)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = AdultStore(directory: directory, bundledURL: directory.appendingPathComponent("seed.json"), remoteURL: catalogURL,
+                               allowsRemoteUpdates: false, allowsNotifications: false, allowsArtworkReads: true) { _ in data }
+        XCTAssertFalse(store.canRefresh)
+        await store.refresh()
+        XCTAssertFalse(store.isRefreshing)
+        XCTAssertNil(store.illustrations)
+        await store.refreshIllustrations()
+        XCTAssertEqual(store.illustrations?.revision, catalog.revision)
+        XCTAssertNil(store.updateIssue)
+    }
+
     @MainActor func testWrongRevisionCacheAndFailedFetchLeaveTextAndProgressUsable() async throws {
         let catalog = try catalog()
         let directory = try prepareDirectory(catalog)

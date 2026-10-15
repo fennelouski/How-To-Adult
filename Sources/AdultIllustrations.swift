@@ -1,4 +1,6 @@
 import Foundation
+import CryptoKit
+import ImageIO
 
 /// Optional artwork is bound to the exact catalog snapshot, never the live sidecar.
 struct AdultIllustrations: Codable, Sendable {
@@ -21,6 +23,7 @@ struct AdultIllustrations: Codable, Sendable {
                   matches(item.assetSHA256, "^[a-f0-9]{64}$"),
                   validText(item.altText, maximum: 500),
                   item.caption.count <= 500,
+                  !item.caption.unicodeScalars.contains(where: { CharacterSet.controlCharacters.contains($0) && $0 != "\n" && $0 != "\t" }),
                   validText(item.creator, maximum: 200),
                   validText(item.license, maximum: 300),
                   validText(item.provenance, maximum: 2_000) else { throw CatalogError.invalid }
@@ -59,7 +62,7 @@ struct AdultIllustrations: Codable, Sendable {
     }
 
     private static func validText(_ value: String, maximum: Int) -> Bool {
-        !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && value.count <= maximum
+        !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && value.count <= maximum && !value.unicodeScalars.contains(where: { CharacterSet.controlCharacters.contains($0) && $0 != "\n" && $0 != "\t" })
     }
 }
 
@@ -73,3 +76,38 @@ struct GuideIllustration: Codable, Hashable, Sendable {
     let license: String
     let provenance: String
 }
+
+extension GuideIllustration {
+    static let maximumImageBytes = 2 * 1_024 * 1_024
+    var slot: String { guideID + "\u{0}" + stepID }
+
+    static func digest(_ data: Data) -> String {
+        SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
+    }
+
+    static func image(_ data: Data, expectedDigest: String) throws -> CGImage {
+        guard data.count <= maximumImageBytes, digest(data) == expectedDigest,
+              let source = CGImageSourceCreateWithData(data as CFData, nil),
+              CGImageSourceGetType(source) as String? == "public.png",
+              CGImageSourceGetCount(source) == 1,
+              let properties = CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any],
+              let width = properties[kCGImagePropertyPixelWidth] as? Int,
+              let height = properties[kCGImagePropertyPixelHeight] as? Int,
+              (1...4_096).contains(width), (1...4_096).contains(height),
+              let image = CGImageSourceCreateThumbnailAtIndex(source, 0, [
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceThumbnailMaxPixelSize: 2_000,
+                kCGImageSourceCreateThumbnailWithTransform: true
+              ] as CFDictionary) else { throw CatalogError.invalid }
+        return image
+    }
+}
+
+extension AdultIllustrations {
+    func validate(for catalog: AdultCatalog) throws { _ = try Self.decode(JSONEncoder().encode(self), for: catalog) }
+    static func catalogFingerprint(_ catalog: AdultCatalog) throws -> String {
+        let encoder = JSONEncoder(); encoder.outputFormatting = .sortedKeys
+        return GuideIllustration.digest(try encoder.encode(catalog))
+    }
+}
+typealias GuideIllustrationManifest = AdultIllustrations

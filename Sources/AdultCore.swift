@@ -1,5 +1,6 @@
 import Foundation
 import CryptoKit
+import ImageIO
 
 struct AdultCatalog: Codable, Sendable {
     let schemaVersion: Int
@@ -98,6 +99,10 @@ struct AdultArticle: Codable, Identifiable, Hashable, Sendable {
     let cautions: [String]
     let sources: [GuideSource]
 
+    var adviceNotice: String? {
+        categoryID == "money" || categoryID == "wellbeing" || jurisdiction != "General" ? "General guidance, not professional financial, legal or medical advice." : nil
+    }
+
     func matches(_ query: String) -> Bool {
         let tokens = query.split(whereSeparator: \.isWhitespace)
         let haystack = ([title, summary, jurisdiction] + tags + steps.map { $0.title + " " + $0.body }).joined(separator: " ")
@@ -106,6 +111,7 @@ struct AdultArticle: Codable, Identifiable, Hashable, Sendable {
 
     var shareText: String {
         var parts = [title, summary]
+        if let adviceNotice { parts.append(adviceNotice) }
         if jurisdiction != "General" { parts.append(jurisdiction + " rules") }
         if !tools.isEmpty { parts.append("Before you start\n" + tools.joined(separator: "\n")) }
         parts.append(steps.map { $0.title + "\n" + $0.body }.joined(separator: "\n\n"))
@@ -137,6 +143,8 @@ struct ArticleProgress: Codable, Equatable, Sendable {
     var checkedSteps: [String: String] = [:]
     var reminderDate: Date?
     var reminderSound = true
+    var personalNotes: String?
+    var rating: Int?
 
     func isChecked(_ step: GuideStep) -> Bool { checkedSteps[step.id] == step.fingerprint }
     func completedCount(in article: AdultArticle) -> Int { article.steps.filter(isChecked).count }
@@ -150,14 +158,16 @@ struct UserLibrary: Codable, Equatable, Sendable {
         guard data.count <= AdultCatalog.maximumBytes else { throw CatalogError.tooLarge }
         let library = try JSONDecoder().decode(UserLibrary.self, from: data)
         guard library.schemaVersion == 1 else { throw CatalogError.invalid }
+        guard library.articles.values.allSatisfy({ ($0.personalNotes?.count ?? 0) <= 50_000 && ($0.rating.map { (1...5).contains($0) } ?? true) }) else { throw CatalogError.invalid }
         return library
     }
 }
 
 enum AdultSection: String, CaseIterable, Identifiable {
-    case browse = "Guides", saved = "Saved", reminders = "Reminders"
+    case browse = "Guides", assistant = "Assistant", saved = "Saved", reminders = "Reminders"
     var id: Self { self }
     var symbol: String {
-        switch self { case .browse: "books.vertical"; case .saved: "bookmark"; case .reminders: "bell" }
+        switch self { case .browse: "books.vertical"; case .assistant: "sparkles"; case .saved: "bookmark"; case .reminders: "bell" }
     }
 }
+

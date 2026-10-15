@@ -465,9 +465,10 @@ struct GuideReaderView: View {
                             introduction.frame(maxWidth: .infinity, alignment: .leading)
                             GuideIllustrationView(illustration: illustration, url: store.illustrationURL(illustration), compactPlate: true)
                                 .frame(width: readerWidth >= 600 ? 200 : 168)
+                                .accessibilityElement(children: .contain).accessibilitySortPriority(3)
                         }
-                        if !illustration.caption.isEmpty { Text(illustration.caption).fieldnotesBody(size: 15).foregroundStyle(AdultPalette.secondaryText) }
-                        Text(illustration.creator + " · " + illustration.license).font(.caption).foregroundStyle(AdultPalette.secondaryText)
+                        if !illustration.caption.isEmpty { Text(illustration.caption).fieldnotesBody(size: 15).foregroundStyle(AdultPalette.secondaryText).accessibilitySortPriority(3) }
+                        Text(illustration.creator + " · " + illustration.license).font(.caption).foregroundStyle(AdultPalette.secondaryText).accessibilitySortPriority(3)
                     }
                 } else {
                     introduction
@@ -478,6 +479,7 @@ struct GuideReaderView: View {
                         ForEach(article.cautions, id: \.self) { Text($0).fieldnotesBody(size: 15) }
                     }.padding(16).frame(maxWidth: .infinity, alignment: .leading)
                         .background(AdultPalette.caution, in: RoundedRectangle(cornerRadius: 8))
+                        .accessibilityElement(children: .contain).accessibilitySortPriority(5)
                 }
                 if !article.tools.isEmpty {
                     DisclosureGroup {
@@ -485,9 +487,11 @@ struct GuideReaderView: View {
                             ForEach(article.tools, id: \.self) { Text($0).fieldnotesBody() }
                         }.padding(.top, 12)
                     } label: { FieldnotesHeading("What you’ll need", size: 25) }
+                    .accessibilityElement(children: .contain).accessibilitySortPriority(4)
                 }
                 if !usesSpread, let illustration = store.illustration(guideID: article.id) {
                     GuideIllustrationView(illustration: illustration, url: store.illustrationURL(illustration))
+                        .accessibilityElement(children: .contain).accessibilitySortPriority(3)
                 }
                 VStack(alignment: .leading, spacing: 16) {
                     FieldnotesHeading("One step at a time", size: 25)
@@ -555,6 +559,7 @@ VStack(alignment: .leading, spacing: 15) {
                     Text(article.summary).fieldnotesBody().foregroundStyle(AdultPalette.secondaryText)
                     Text("\(article.minutes) min · \(article.steps.count) steps").font(.caption).foregroundStyle(AdultPalette.secondaryText)
                 }
+                .accessibilityElement(children: .contain).accessibilitySortPriority(6)
     }
 }
 

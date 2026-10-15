@@ -325,3 +325,13 @@ final class AdultPassportTests: XCTestCase {
         XCTAssertEqual(store.achievements.first?.entry, target)
     }
 }
+
+#if DEBUG
+final class AdultPassportReviewIntegrationTests: XCTestCase {
+    @MainActor func testReviewSessionAcceptsOnlyPinnedUnchangedGuideInCurrentCatalog() throws {
+        let session = try AdultPassportReviewSession(id: UUID())
+        XCTAssertFalse(session.passport.admittedEntries().isEmpty)
+        XCTAssertTrue(session.assistant.isPrivateQA)
+    }
+}
+#endif

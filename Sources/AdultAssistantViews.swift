@@ -11,7 +11,7 @@ struct AdultAssistantView: View {
                 AdultPrivateQABanner()
                 if let issue = assistant.library.storageIssue {
                     Label(issue, systemImage: "externaldrive.badge.exclamationmark")
-                        .foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
+                        .foregroundStyle(AdultPalette.accent).fixedSize(horizontal: false, vertical: true)
                     Button("Retry opening plans") { assistant.library.reload() }
                 }
                 if let plan = assistant.selectedPlan {
@@ -35,16 +35,16 @@ struct AdultAssistantView: View {
                                         }.fixedSize(horizontal: false, vertical: true)
                                         Spacer(minLength: 8)
                                         Image(systemName: "chevron.right").font(.caption.bold()).accessibilityHidden(true)
-                                    }.padding(18).frame(maxWidth: .infinity, alignment: .leading)
-                                        .background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 16))
+                                    }.padding(.vertical, 18).frame(maxWidth: .infinity, alignment: .leading)
+                                        .overlay(alignment: .bottom) { FieldnotesRule() }
                                 }.buttonStyle(.plain)
                             }
                         }
                     }
                 }
-            }.padding(22).frame(maxWidth: 760, alignment: .leading).frame(maxWidth: .infinity)
+            }.padding(24).frame(maxWidth: 760, alignment: .leading).frame(maxWidth: .infinity)
         }
-        .background(AdultPalette.background)
+        .background(AdultPalette.background).foregroundStyle(AdultPalette.ink).tint(AdultPalette.accent)
         .navigationTitle("Assistant")
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
@@ -68,8 +68,7 @@ struct AdultAssistantView: View {
             HStack(alignment: .top, spacing: 16) {
                 Image(systemName: "sparkles").font(.system(size: 34, weight: .semibold))
                     .foregroundStyle(AdultPalette.accent).accessibilityHidden(true)
-                Text("A little help.\nA doable plan.")
-                    .font(.system(.largeTitle, design: .serif, weight: .bold))
+                FieldnotesHeading("A little help.\nA doable plan.", size: 36, relativeTo: .largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
             }
             if let guide = assistant.guide {
@@ -79,14 +78,14 @@ struct AdultAssistantView: View {
                     Spacer(minLength: 8)
                     Button { assistant.guide = nil } label: { Image(systemName: "xmark.circle.fill") }
                         .accessibilityLabel("Remove guide context").buttonStyle(.plain)
-                }.padding(14).background(AdultPalette.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                }.padding(14).background(AdultPalette.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 8))
             }
             VStack(alignment: .leading, spacing: 10) {
                 Text("What would you like to get done?").font(.headline)
                 TextEditor(text: $assistant.goal)
                     .frame(minHeight: 96, maxHeight: 150).scrollContentBackground(.hidden)
-                    .padding(10).background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 12))
-                    .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(AdultPalette.accent.opacity(0.25)))
+                    .padding(10).background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 8))
+                    .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(AdultPalette.accent.opacity(0.25)))
                     .accessibilityLabel("Task for your assistant").accessibilityIdentifier("assistant-goal")
             }
             if assistant.isWorking {
@@ -111,7 +110,7 @@ struct AdultAssistantView: View {
                 }.buttonStyle(.borderedProminent).foregroundStyle(AdultPalette.background).accessibilityIdentifier("assistant-connect")
             }
             if assistant.goal.isEmpty {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 145), spacing: 12)], spacing: 12) {
+                VStack(spacing: 0) {
                     suggestion("Reset my week", symbol: "calendar", color: .teal, goal: "Plan a Sunday reset with laundry, groceries and a 30-minute tidy. Ask for dates if needed.")
                     suggestion("Make dinner easier", symbol: "carrot", color: .orange, goal: "Help me plan three simple dinners and a shopping list for one person.")
                     suggestion("Sort the paperwork", symbol: "doc.text", color: .indigo, goal: "Make a checklist to organize household paperwork and research any rules that depend on where I live.")
@@ -125,12 +124,13 @@ struct AdultAssistantView: View {
 
     private func suggestion(_ title: String, symbol: String, color: Color, goal: String) -> some View {
         Button { assistant.goal = goal } label: {
-            VStack(alignment: .leading, spacing: 12) {
-                Image(systemName: symbol).font(.title2).foregroundStyle(color)
-                Text(title).font(.subheadline.bold()).foregroundStyle(AdultPalette.ink)
-                    .fixedSize(horizontal: false, vertical: true)
-            }.padding(16).frame(maxWidth: .infinity, minHeight: 96, alignment: .topLeading)
-                .background(color.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
+            HStack(spacing: 12) {
+                Image(systemName: symbol).foregroundStyle(AdultPalette.accent).frame(width: 24).accessibilityHidden(true)
+                Text(title).fieldnotesBody().foregroundStyle(AdultPalette.ink)
+                Spacer(minLength: 0)
+                Image(systemName: "arrow.right").foregroundStyle(AdultPalette.accent).accessibilityHidden(true)
+            }.frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                .padding(.vertical, 8).overlay(alignment: .bottom) { FieldnotesRule() }
         }.buttonStyle(.plain)
     }
 }
@@ -164,7 +164,7 @@ struct AdultPlanSidebar: View {
                     }.padding(.vertical, 6).frame(maxWidth: .infinity, alignment: .leading)
                 }.buttonStyle(.plain)
             }
-        }.navigationTitle("Your plans")
+        }.navigationTitle("Your plans").scrollContentBackground(.hidden).background(AdultPalette.background).foregroundStyle(AdultPalette.ink)
     }
 }
 
@@ -174,7 +174,7 @@ private struct AdultPlanView: View {
     @State private var deleting = false
     var body: some View {
         VStack(alignment: .leading, spacing: 22) {
-            Text(plan.title).font(.system(.largeTitle, design: .serif, weight: .bold)).fixedSize(horizontal: false, vertical: true)
+            FieldnotesHeading(plan.title, size: 34, relativeTo: .largeTitle).fixedSize(horizontal: false, vertical: true)
             Text(plan.summary).font(.title3).foregroundStyle(AdultPalette.secondaryText).fixedSize(horizontal: false, vertical: true)
             HStack(spacing: 12) {
                 Label(plan.provider.displayName, systemImage: "sparkles")
@@ -237,13 +237,12 @@ private struct AdultActionCard: View {
             }
             if action.repeatRule != .none { Text("Repeats \(action.repeatRule.rawValue)").font(.caption).foregroundStyle(.secondary) }
             if let duration = action.durationMinutes, action.kind == .calendar { Text("\(duration) minutes").font(.caption).foregroundStyle(.secondary) }
-            if let error = action.error { Label(error, systemImage: "exclamationmark.circle").foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true) }
+            if let error = action.error { Label(error, systemImage: "exclamationmark.circle").foregroundStyle(AdultPalette.accent).fixedSize(horizontal: false, vertical: true) }
             actionControls
             if let evidence = action.researchEvidence { AdultResearchView(evidence: evidence) }
         }
-        .padding(18).frame(maxWidth: .infinity, alignment: .leading)
-        .background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 16))
-        .overlay(alignment: .leading) { UnevenRoundedRectangle(topLeadingRadius: 16, bottomLeadingRadius: 16).fill(action.kind.color).frame(width: 4) }
+        .padding(.vertical, 18).frame(maxWidth: .infinity, alignment: .leading)
+        .overlay(alignment: .bottom) { FieldnotesRule() }
         .sheet(isPresented: $editing) { AdultActionEditor(planID: planID, action: action) }
         .confirmationDialog("Only reset after checking Calendar and your reminders for this item.", isPresented: $reviewing, titleVisibility: .visible) {
             Button("I checked: no item was created") {
@@ -256,7 +255,7 @@ private struct AdultActionCard: View {
 
     @ViewBuilder private var actionControls: some View {
         if action.status == .completed {
-            Label(action.completionLabel, systemImage: "checkmark.circle.fill").font(.subheadline.bold()).foregroundStyle(.green)
+            Label(action.completionLabel, systemImage: "checkmark.circle.fill").font(.subheadline.bold()).foregroundStyle(AdultPalette.ink)
         } else if action.status == .needsReview {
             Button("I’ve checked the result") { reviewing = true }.buttonStyle(.bordered)
         } else if action.status == .running || assistant.busyActionID == action.id {
@@ -356,7 +355,7 @@ private struct AdultResearchView: View {
     let evidence: AdultResearchEvidence
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Label("Research", systemImage: "text.book.closed").font(.title2.bold()).foregroundStyle(.blue)
+            Label("Research", systemImage: "text.book.closed").font(.title2.bold()).foregroundStyle(AdultPalette.ink)
             Text(evidence.checkedAt, format: .dateTime.day().month().year()).font(.caption).foregroundStyle(.secondary)
             ForEach(Array(evidence.text.components(separatedBy: "\n\n").enumerated()), id: \.offset) { _, paragraph in
                 VStack(alignment: .leading, spacing: 6) {
@@ -370,7 +369,7 @@ private struct AdultResearchView: View {
             ForEach(evidence.citations, id: \.url) { citation in
                 Link(destination: citation.url) { Label(citation.title, systemImage: "link").fixedSize(horizontal: false, vertical: true) }.font(.subheadline)
             }
-        }.padding(18).background(Color.blue.opacity(0.06), in: RoundedRectangle(cornerRadius: 16))
+        }.padding(18).background(AdultPalette.surface, in: RoundedRectangle(cornerRadius: 8))
     }
     private func safeAttributed(_ text: String) -> AttributedString {
         var value = (try? AttributedString(markdown: text, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace))) ?? AttributedString(text)
@@ -384,7 +383,7 @@ private struct AdultResearchView: View {
 extension AdultActionKind {
     var label: String { switch self { case .reminder: "Reminder"; case .calendar: "Calendar"; case .research: "Research"; case .shopping: "Shopping"; case .checklist: "Checklist" } }
     var symbol: String { switch self { case .reminder: "bell.badge"; case .calendar: "calendar.badge.plus"; case .research: "magnifyingglass"; case .shopping: "basket"; case .checklist: "checklist" } }
-    var color: Color { switch self { case .reminder: Color("AssistantReminder"); case .calendar: Color("AssistantCalendar"); case .research: Color("AssistantResearch"); case .shopping: Color("AssistantShopping"); case .checklist: Color("AssistantChecklist") } }
+    var color: Color { AdultPalette.accent }
 }
 
 extension AdultAssistantAction {

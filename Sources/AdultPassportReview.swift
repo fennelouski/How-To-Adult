@@ -7,11 +7,12 @@ struct AdultPassportReviewSession {
     let guides: AdultStore
     let assistant: AdultAssistantController
     let passport: AdultPassportStore
+    let preferences: UserDefaults
 
     init(id: UUID) throws {
         let directory = URL.applicationSupportDirectory.appendingPathComponent("HowToAdult-PassportReview/" + id.uuidString, isDirectory: true)
         let guides = AdultStore(directory: directory, allowsRemoteUpdates: false, allowsNotifications: false)
-        guard let catalog = guides.catalog, catalog.revision == "2026-10-03-starter-1",
+        guard let catalog = guides.catalog,
               let article = catalog.articles.first(where: { $0.id == "read-a-care-label" }),
               try PassportManifest.articleFingerprint(article) == "1495a2108198a77a90c76cd90f92e08d137184a0f3bdbcc0a1ff06fb101708e1" else { throw CatalogError.invalid }
         let worlds = [
@@ -32,6 +33,7 @@ struct AdultPassportReviewSession {
         self.guides = guides
         self.passport = AdultPassportStore(directory: directory, manifest: manifest, catalog: catalog, countryCode: "US", reviewFixture: true)
         let preferences = UserDefaults(suiteName: "com.nathanfennel.How-To-Adult.PassportReview." + id.uuidString)!
+        self.preferences = preferences
         self.assistant = AdultAssistantController(library: AdultAssistantLibrary(directory: directory),
             connection: AdultAIConnection(preferences: preferences, isPrivateQA: true), isPrivateQA: true, privateSessionID: id)
     }

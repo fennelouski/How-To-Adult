@@ -1,77 +1,34 @@
 # How to Adult
 
-A native pocket guide to everyday life for iPhone, iPad and Mac. The included library has 56 guides across seven topics, with 224 checkable steps. It covers Home, Food, Money, Work, Wellbeing, People and Everyday.
+A native pocket guide for iPhone, iPad and Mac. The bundled public snapshot contains 273 guides across seven topics and matches the existing AWS/Vercel publication. Its exact-revision sidecar identifies 233 teaching illustrations. Search works locally; saved guides, checked steps, reminders, personal notes and ratings stay on the device.
 
-Open a guide, follow its steps and keep useful answers for later. Guides include supplies, cautions and source links where needed. United States-specific guidance carries a visible jurisdiction label.
+The Fieldnotes interface uses warm paper, pine ink, clay actions and serif headings. It adapts from compact tabs to native guide-index/reader columns, retains search and selection while resizing, supports Dynamic Type and both appearances, and offers image descriptions and full-size zoom. Full guide bodies, cautions, jurisdiction, sources and stable guide/step identities are preserved.
 
-## Current app
+## Assistant source
 
-- Browse and search the included library offline.
-- Save guides and track completed steps locally.
-- Set a local reminder with a chosen date, time and sound preference. Notification permission is requested when saving a reminder.
-- Share a guide through the system share menu.
-- Use native layouts on iPhone, iPad and Mac. Minimum versions are iOS/iPadOS 17 and macOS 14.
+Assistant is a separate tab and the guide's “Help me do this” route prepares its real context. Plans retain reminder, calendar, research, shopping and checklist actions, stable IDs and durable execution receipts. Existing explicit execution/automation opt-ins, uncertain-write review and shared notification limits remain in force. Automation defaults to off and affects only new eligible plans; deleting a plan does not remove native items already created.
 
-There is no account, subscription, in-app purchase, advertising or tracking SDK. Bookmarks, progress and reminders remain on each device. Cross-device sync is not implemented.
+On-device planning requires the existing Apple Intelligence availability checks on supported 26+ systems. Other devices may use the existing optional user-supplied OpenAI API key. Keys remain in non-synced device Keychain storage. OpenAI requests use the user's API account and may incur its charges. Nothing is generated merely by opening a guide. Shopping prepares a list; there is no integrated checkout. Shortcuts invokes the existing “Make a life plan” intent. There is no always-on authoring service.
 
-The 56-guide content service was verified on AWS and Vercel. Its 49 backend checks passed; initial and repeat deployments served the same publication from both hosts. Both native app configurations use the verified catalog URL. The bundled library still works offline, and the last valid downloaded library remains available after a failed update. No daily publishing schedule is enabled. The pocket-guide iOS release is Waiting for Review; the new Assistant source described below has not been uploaded or submitted.
+Skill-passport models and tests are retained. Its navigation is a DEBUG-only review session with explicit fixture gates; it is absent from ordinary navigation. No new passport content has been admitted.
 
-## Assistant in development
+## Build and verify locally
 
-The working source adds a dedicated Assistant tab. Describe a task, or choose “Help me do this” from a guide, then review a saved plan with separate reminder, calendar, research, shopping and checklist cards. This feature is not in the submitted iOS 1.0 build 1.
+Run `python3 scripts/generate-native-project.py`, then open `HowToAdult.xcodeproj`. Active schemes are HowToAdult-iOS and HowToAdult-macOS; minimum systems remain iOS/iPadOS 17 and macOS 14. Existing visionOS source/assets are preserved, but the generator does not create or build a visionOS target under the owner's current restriction.
 
-On-device planning requires iOS/iPadOS 26 or macOS 26, Apple Intelligence enabled and Apple's model reporting that it is available. Other supported devices can use an optional user-supplied OpenAI API key. Keys stay in this device's non-synced Keychain and are never included in saved plans. API requests are billed to the user's OpenAI API account. The current source does not offer ChatGPT sign-in or use a ChatGPT subscription; OpenAI has received the portfolio access request, but has not approved it.
+The native tests use blank hosts or private UUID sessions before ordinary library, preferences or Keychain initialization. Private UI sessions use their own data/defaults, show a QA marker and disable AI, scheduling and external actions. A separate art-read flag allows immutable public artwork without catalog refresh. Historical permission/device UI probes are retained under UITests/Legacy outside the active source glob.
 
-Plans keep stable action IDs and durable reminder/calendar receipts. Interrupted or uncertain native writes require review before retrying. Reminder actions currently schedule app notifications; calendar actions create real events after permission. Automatic reminders and calendar events are off by default, apply only to newly generated plans when enabled, and leave already-created items intact when disabled. Deleting a local plan also leaves those native items intact.
+The original Objective-C app and Core Data files remain in place. Modern targets never open or rewrite the old SQLite store. The modern UserLibrary-v1.json retains prior bookmarks/check fingerprints/reminders when optional notes and ratings are added. Notes keep explicit Save/Cancel, dirty-dismiss/discard protection and concurrent-edit checks.
 
-OpenAI web research saves the original answer and clickable sources from provider annotations. Each action retains its own research; initial research used to create a plan remains separate. Shopping prepares an item list and can research sourced options. There is no integrated merchant checkout or order service.
+## Content service
 
-The “Make a life plan” Shortcuts action requests execution without opening the app, so users can configure their own personal automations. Scheduled notifications are managed by the OS while the app is closed. AI runs when requested or invoked by Shortcuts, subject to provider availability, permissions and protected credentials. There is no always-on AI agent. Closed-app execution and live provider behavior still need final release verification.
+The verified reader origins are https://how-to-adult-guides.vercel.app and https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com. This integration does not publish a catalog or deploy infrastructure. Content writes continue to use the existing editorial API contracts, ETags and version guards. No daily generation schedule is enabled. See BACKEND.md, EDITOR-API.md and CONTENT-EDITORIAL.md.
 
-See [Assistant design decisions](app-store-audit/2026-10-04-ai-assistant/native-design-decisions.md) and [Assistant release readiness](app-store-audit/2026-10-04-ai-assistant/release-readiness.md). The new source remains unshipped, with no version bump or new submission. Privacy policy and App Store disclosures must be updated and verified before releasing it.
+Public content and artwork must remain separate from recovery/review material. Only the 273-guide catalog, its exact manifest and the 233 referenced PNGs seed the reader backend. Artwork is bound to the exact catalog/service fingerprint and verifies PNG digest, byte and dimension limits before display/cache; an artwork failure leaves text/progress usable.
 
-The final Assistant source compiles for iOS and macOS. Its offline unit run passed 76 tests with one intentionally skipped live-catalog test; private UUID UI flows passed on iPhone and iPad. A real Apple Intelligence service call on this Mac produced a useful three-step checklist. Live OpenAI, native action delivery, closed-app Shortcuts and Mac app UI remain separate release checks. [Actual verification and limits](app-store-audit/2026-10-04-ai-assistant/verification.md).
+## Verification limits
 
-## Build locally
-
-Open `HowToAdult.xcodeproj` or regenerate it using Python's standard library:
-
-```sh
-python3 scripts/generate-native-project.py
-```
-
-Build the two native schemes without starting Simulator:
-
-```sh
-xcodebuild -project HowToAdult.xcodeproj -scheme HowToAdult-iOS -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
-xcodebuild -project HowToAdult.xcodeproj -scheme HowToAdult-macOS -destination 'generic/platform=macOS' CODE_SIGNING_ALLOWED=NO build
-```
-
-The generator creates separate unit-test and UI-test targets for both platforms. The native project uses SwiftUI and system frameworks, without third-party runtime packages. `project.yml` documents the project; XcodeGen is not required.
-
-Codex's Run action calls `./script/build_and_run.sh` for local macOS development. It builds into `build/macos`, stops only this checkout's matching app process with a normal termination signal, and opens the resulting debug app. Coordinate GUI access before using it on a shared Mac. It never launches visionOS. See [native project and packaging notes](Configuration/NATIVE-PROJECT.md).
-
-## Storage and the original app
-
-The original Objective-C project, storyboard, Core Data model and tests remain in their original locations. The modern targets exclude them and never open, rewrite or delete the old SQLite store.
-
-The modern app stores its library at `Application Support/HowToAdult/UserLibrary-v1.json`. A configured reader can store its last valid downloaded catalog at `Application Support/HowToAdult/catalog-cache-v1.json`. These paths are inside the platform's app container. No cloud sync is attached to either file.
-
-The Assistant uses a separate `Application Support/HowToAdult/AssistantLibrary-v1.json` for plans, per-action research, execution receipts and automation preferences. Writes are atomic. Corrupt or unsupported files are preserved rather than replaced with an empty library. Plans remain device-local, with limits of 100 plans, 12 actions per plan and 2 MB for the archive. API keys are kept outside this file in Keychain.
-
-## Content and backend
-
-`Content/catalog.json` contains the starter library. Validate edits before including or publishing them:
-
-```sh
-python3 scripts/content_validate.py --self-test
-```
-
-Keep article and step IDs stable. Review financial, tax, retirement, health, food and safety guidance against current primary sources, mark the jurisdiction and update the review date. Task duration estimates describe the task or first session, rather than reading time. See [editorial guidance](CONTENT-EDITORIAL.md), [product decisions](PRODUCT.md) and [native design decisions](DESIGN.md).
-
-[BACKEND.md](BACKEND.md) describes the public catalog API, authenticated editorial publishing, validation, versioned storage, rollback and local checks. The native reader can fetch a verified HTTPS catalog once configured; its search, bookmarks, progress and reminders remain local. No daily authoring job is enabled.
-
-Web/API releases must follow the workspace AWS migration policy, including verified AWS and Vercel deployments from the same committed revision during parallel operation. The verified production reader during parallel operation is `https://how-to-adult-guides.vercel.app/v1/catalog`. AWS owns the only private publication store, and Vercel provides GET-only forwarding. [The deployment receipt](backend/deployment-record.json) records both-host checks and the initial/repeat releases at `7b6a116dc1e10ce002d3293be68c347d0939e365`. Code rollback and sustained parallel observation remain pending.
+Local build/test and native capture receipts belong to the integration handoff. A previous design verdict does not certify later code, live providers, native external-action delivery, minimum-OS runtime, App Store status or publication. Current Mac resizing is unobserved while the Studio is locked, and spoken VoiceOver traversal remains unobserved. This source has not been uploaded or submitted during this integration.
 
 ## Release state
 

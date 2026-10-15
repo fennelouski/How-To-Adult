@@ -1,0 +1,93 @@
+{
+  "mode": "parallel",
+  "status": "verified",
+  "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+  "verifiedRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+  "awsURL": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com",
+  "vercelURL": "https://how-to-adult-guides.vercel.app",
+  "actualCutoverAt": null,
+  "commands": [
+    "python3 backend/deploy.py parallel"
+  ],
+  "checks": {
+    "aws": {
+      "health": 200,
+      "catalog": 200,
+      "etagRevalidation": 304,
+      "individualGuide": 200,
+      "searchPagination": 200,
+      "missingGuide": 404,
+      "unauthenticatedPublication": 403,
+      "catalogRevision": "2026-10-03-editor-verified-2-094423",
+      "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "restrictedEditor": {
+        "GET /v1/editor/status missing": 401,
+        "GET /v1/editor/status wrong": 401,
+        "POST /v1/editor/guides missing": 401,
+        "POST /v1/editor/guides wrong": 401,
+        "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 missing": 401,
+        "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 wrong": 401
+      },
+      "illustrationManifest": 200
+    },
+    "vercel": {
+      "health": 200,
+      "catalog": 200,
+      "etagRevalidation": 304,
+      "individualGuide": 200,
+      "searchPagination": 200,
+      "missingGuide": 404,
+      "unauthenticatedPublication": 404,
+      "catalogRevision": "2026-10-03-editor-verified-2-094423",
+      "catalogSHA256": "67c07be5bc58e2d52045050c49bb996665db38774b88e1125f2bfb0a729d35bc",
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "restrictedEditor": {
+        "GET /v1/editor/status missing": 401,
+        "GET /v1/editor/status wrong": 401,
+        "POST /v1/editor/guides missing": 401,
+        "POST /v1/editor/guides wrong": 401,
+        "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 missing": 401,
+        "PUT /v1/editor/assets/0000000000000000000000000000000000000000000000000000000000000000 wrong": 401
+      },
+      "illustrationManifest": 200
+    }
+  },
+  "singleDataOwner": "AWS versioned private S3; Vercel relays reads and restricted editor requests",
+  "scheduledGenerationEnabled": false,
+  "productionDomainsChanged": false,
+  "readiness": "New API; repeat deployment, rollback and parallel observation remain pending",
+  "sourceSHA256": {
+    "backend/deploy.py": "4fc0c2dee9ad4b432eb51e05d96e5f55f2cc906bcf4bbf72831c985fc3819e2e",
+    "backend/handler.py": "a165c667f5afbbb3cb099f6e187cb5a71f81b0b4692439216e473412aeb46176",
+    "backend/infrastructure.py": "a0a2e69caa2ce6f27fe4f8b96abd8510f87e6617f848d114f5ed09b6857274b0",
+    "backend/publish.py": "fa203faf07494323e740b68e2c7d9421574fdebe3eaa1b2e954e34ddabe59cc3",
+    "backend/local.py": "36642a2756fa453384df883e1d5e2759f442896acbef712666c1f48a0d721e0f",
+    "backend/tests/test_backend.py": "2650a7b8a2c45e3797c07f2e49282d5722ce3c7d0c418f6ff5ea548bc35dfc76",
+    "backend/tests/__init__.py": "cee83210b5021d7fea63ccc810f252330c7210a5ad8363c26aaf65e5a88410ad",
+    "backend/requirements-dev.txt": "5dbb6c765d30ff104ecd032ef9ac17ae7a5de2085405339e65dfc5759272f049",
+    "Content/catalog.json": "1497a669ca901f4fac557047fb0623ac97f7715b753a74dfca1bf90b7b878b3e",
+    "backend/editor_client.py": "49797905100b676af371e9cf60b8f1f70fdfbc3fef75ef31855a27a3546d464f",
+    "backend/provision_editor.py": "efa78ced162191df1470b653ceec3acc32cb983677527f29a7003bf1f997ebb2",
+    "backend/tests/test_editor.py": "ebe38cf0d26ee9bdc5e53ffdb016df389d2d6acaac11bcd36d1e24366c2108d8"
+  },
+  "templateSHA256": "4cb610c1266a00bde50294da1567e3ed9354d7d1b1b7ed1cd0fc3e09742cdb4b",
+  "awsRegion": "us-west-2",
+  "stack": "how-to-adult-guides-v1",
+  "bootstrap": {
+    "action": "existing-publication-preserved",
+    "revision": "2026-10-03-editor-verified-2-094423"
+  },
+  "vercelDeploymentURL": "https://how-to-adult-guides-l5oumx2j1-nathan-fennels-projects.vercel.app",
+  "vercelDeploymentID": "dpl_FSeeUxDpD8AV1ZyATELCVpoZDYDU",
+  "vercelProject": "how-to-adult-guides",
+  "vercelArtifactSHA256": {
+    ".vercel/output/config.json": "3415ce6abc1e6020d642966a60ffdc96a669f3cc536757ed1df4dc48b3a64f6d",
+    ".vercel/output/static/release.json": "aae5e8feab8460ed746702ca507fbdfd468bfef0e646ad28d18154889b4552aa",
+    ".vercel/output/static/index.html": "2aaf7c13773b67af6fba15b2df454e6c284e8c35c3b5e1cb721f558817587951",
+    "vercel.json": "d8209115a448d5e218f94369a0a9703c7213cf26d71c967565b341d104100ea7"
+  },
+  "sameRevisionVerified": true,
+  "verifiedAt": "2026-10-03T09:49:34.990015+00:00",
+  "handlerSHA256": "a165c667f5afbbb3cb099f6e187cb5a71f81b0b4692439216e473412aeb46176"
+}

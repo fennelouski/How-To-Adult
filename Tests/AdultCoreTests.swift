@@ -181,6 +181,8 @@ final class AdultCoreTests: XCTestCase {
         XCTAssertFalse(reloaded.progress(article.id).reminderSound)
     }
 
+
+
     @MainActor func testRevisionBoundIllustrationsPreserveOfflineGuidesAndProgress() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
@@ -273,5 +275,4 @@ final class AdultCoreTests: XCTestCase {
         XCTAssertFalse(FileManager.default.fileExists(atPath: assetURL.path))
         XCTAssertEqual(try Data(contentsOf: personalURL), personalBytes)
     }
-
 }

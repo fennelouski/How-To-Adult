@@ -12,6 +12,10 @@ backend/node_modules/
 backend/.vercel/
 backend/.env*
 !backend/.env.example
+backend/.venv/
+backend/release-output/
+backend/local-store/
+*.editor-credentials.json
 
 # Keep diagnostic/superseded captures locally; publish only the final matrix.
 app-store-audit/2026-10-03-how-to-adult/raw/*

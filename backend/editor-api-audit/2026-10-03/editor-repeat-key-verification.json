@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-03T09:55:14.435452+00:00",
+  "checks": {
+    "https://how-to-adult-guides.vercel.app": {
+      "authenticatedStatus": 200,
+      "catalogPreserved": true,
+      "keyPreserved": true
+    },
+    "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com": {
+      "authenticatedStatus": 200,
+      "catalogPreserved": true,
+      "keyPreserved": true
+    }
+  }
+}

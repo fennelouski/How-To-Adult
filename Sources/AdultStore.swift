@@ -6,7 +6,7 @@ import CoreGraphics
 @MainActor @Observable
 final class AdultStore {
     private(set) var catalog: AdultCatalog?
-    private(set) var illustrations: GuideIllustrationManifest?
+    private(set) var illustrations: AdultIllustrations?
     private(set) var library = UserLibrary()
     private(set) var isRefreshing = false
     private(set) var isScheduling = false
@@ -19,28 +19,36 @@ final class AdultStore {
     @ObservationIgnored private let directory: URL
     @ObservationIgnored private let bundledURL: URL?
     @ObservationIgnored private let remoteURL: URL?
+    @ObservationIgnored private let illustrationDownload: @Sendable (URL) async throws -> Data
+    @ObservationIgnored private var illustrationRequests = Set<String>()
     @ObservationIgnored private let notifications = UNUserNotificationCenter.current()
     @ObservationIgnored private var notificationRouter: AdultNotificationRouter?
     @ObservationIgnored private var loadedLibrary = false
     @ObservationIgnored private let allowsNotifications: Bool
+    @ObservationIgnored private let allowsCatalogRefresh: Bool
 
-    init(directory: URL? = nil, bundledURL: URL? = Bundle.main.url(forResource: "catalog", withExtension: "json"), remoteURL: URL? = nil, allowsRemoteUpdates: Bool = true, allowsNotifications: Bool = true) {
+    init(directory: URL? = nil, bundledURL: URL? = Bundle.main.url(forResource: "catalog", withExtension: "json"), remoteURL: URL? = nil,
+         allowsRemoteUpdates: Bool = true, allowsNotifications: Bool = true, allowsArtworkReads: Bool = false, illustrationDownload: (@Sendable (URL) async throws -> Data)? = nil) {
         self.directory = directory ?? URL.applicationSupportDirectory.appendingPathComponent("HowToAdult", isDirectory: true)
         self.bundledURL = bundledURL
         let configured = (Bundle.main.object(forInfoDictionaryKey: "AdultCatalogURL") as? String).flatMap(URL.init(string:))
-        self.remoteURL = allowsRemoteUpdates ? (remoteURL ?? configured) : nil
+        self.remoteURL = allowsRemoteUpdates || allowsArtworkReads ? (remoteURL ?? configured) : nil
+        self.allowsCatalogRefresh = allowsRemoteUpdates
         #if DEBUG
         self.allowsNotifications = allowsNotifications && ProcessInfo.processInfo.environment["ADULT_QA_BLANK_HOST"] != "1"
         #else
         self.allowsNotifications = allowsNotifications
         #endif
+        self.illustrationDownload = illustrationDownload ?? { url in
+            try await Self.downloadJSON(url, maximumBytes: AdultIllustrations.maximumBytes)
+        }
         reloadLocalFiles()
     }
 
     var articles: [AdultArticle] { catalog?.articles ?? [] }
     var categories: [GuideCategory] { catalog?.categories ?? [] }
     var canSave: Bool { loadedLibrary }
-    var canRefresh: Bool { remoteURL?.scheme == "https" && remoteURL?.host != nil }
+    var canRefresh: Bool { allowsCatalogRefresh && remoteURL?.scheme == "https" && remoteURL?.host != nil }
     var upcoming: [AdultArticle] {
         articles.filter { (progress($0.id).reminderDate ?? .distantPast) > Date() }
             .sorted { (progress($0.id).reminderDate ?? .distantFuture) < (progress($1.id).reminderDate ?? .distantFuture) }
@@ -49,6 +57,16 @@ final class AdultStore {
     func article(_ id: String) -> AdultArticle? { articles.first { $0.id == id } }
     func category(_ article: AdultArticle) -> GuideCategory? { categories.first { $0.id == article.categoryID } }
     func progress(_ id: String) -> ArticleProgress { library.articles[id] ?? ArticleProgress() }
+
+    func illustration(guideID: String, stepID: String = "") -> GuideIllustration? {
+        guard illustrations?.revision == catalog?.revision else { return nil }
+        return illustrations?.illustration(guideID: guideID, stepID: stepID)
+    }
+
+    func illustrationURL(_ illustration: GuideIllustration) -> URL? {
+        guard let remoteURL else { return nil }
+        return AdultIllustrations.assetURL(catalogURL: remoteURL, digest: illustration.assetSHA256)
+    }
 
     func reloadLocalFiles() {
         do {
@@ -76,7 +94,27 @@ final class AdultStore {
                 updateIssue = "The downloaded library could not be opened. Your included guides are still available."
             }
         } else { catalog = bundledCatalog }
-        loadCachedIllustrations()
+        reloadIllustrations()
+    }
+
+    func refreshIllustrations() async {
+        guard let snapshot = catalog, illustrations?.revision != snapshot.revision,
+              !illustrationRequests.contains(snapshot.revision),
+              let remoteURL,
+              let url = AdultIllustrations.manifestURL(catalogURL: remoteURL, revision: snapshot.revision) else { return }
+        illustrationRequests.insert(snapshot.revision)
+        defer { illustrationRequests.remove(snapshot.revision) }
+        do {
+            let data = try await illustrationDownload(url)
+            _ = try AdultIllustrations.decode(data, for: snapshot)
+            try Task.checkCancellation()
+            // Navigation/refresh may select a newer catalog while this request is running.
+            guard catalog?.revision == snapshot.revision else { return }
+            // Artwork must never block the readable guide, including when storage is full.
+            try adoptIllustrations(data, for: snapshot)
+        } catch {
+            // Older catalogs may have no sidecar. Offline/invalid artwork is optional.
+        }
     }
 
     func toggleSaved(_ id: String) {
@@ -151,7 +189,7 @@ final class AdultStore {
             }
             try write(data, to: directory.appendingPathComponent("catalog-cache-v1.json"))
             catalog = newCatalog
-            loadCachedIllustrations()
+            reloadIllustrations()
             updateIssue = nil
             await reconcileNotifications()
         } catch {
@@ -161,6 +199,11 @@ final class AdultStore {
     }
 
     nonisolated private static func download(_ url: URL) async throws -> (Data, AdultCatalog) {
+        let data = try await downloadJSON(url, maximumBytes: AdultCatalog.maximumBytes)
+        return (data, try AdultCatalog.decode(data))
+    }
+
+    nonisolated private static func downloadJSON(_ url: URL, maximumBytes: Int) async throws -> Data {
         guard url.scheme == "https", url.host != nil, url.user == nil, url.password == nil else { throw CatalogError.invalid }
         let configuration = URLSessionConfiguration.ephemeral
         configuration.timeoutIntervalForRequest = 25
@@ -171,13 +214,13 @@ final class AdultStore {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         let (bytes, response) = try await session.bytes(for: request)
         guard let http = response as? HTTPURLResponse, http.statusCode == 200,
-              response.url?.scheme == "https", response.expectedContentLength <= Int64(AdultCatalog.maximumBytes) else { throw CatalogError.unavailable }
+              response.url == url, response.expectedContentLength <= Int64(maximumBytes) else { throw CatalogError.unavailable }
         var data = Data()
         for try await byte in bytes {
-            guard data.count < AdultCatalog.maximumBytes else { throw CatalogError.tooLarge }
+            guard data.count < maximumBytes else { throw CatalogError.tooLarge }
             data.append(byte)
         }
-        return (data, try AdultCatalog.decode(data))
+        return data
     }
 
 
@@ -194,7 +237,7 @@ final class AdultStore {
         return illustrations?.items.first { $0.guideID == article.id && $0.stepID == stepID }
     }
 
-    private func loadCachedIllustrations() {
+    private func reloadIllustrations() {
         illustrations = nil
         guard let catalog, let service = illustrationService,
               let fingerprint = try? GuideIllustrationManifest.catalogFingerprint(catalog),
@@ -216,17 +259,6 @@ final class AdultStore {
         guard encoded.count <= GuideIllustrationManifest.maximumBytes + 1_024 else { throw CatalogError.tooLarge }
         try write(encoded, to: directory.appendingPathComponent("illustrations-cache-v1.json"))
         illustrations = manifest
-    }
-
-    private func refreshIllustrations() async {
-        guard let expectedCatalog = catalog, let service = illustrationService,
-              expectedCatalog.revision.range(of: "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$", options: .regularExpression) != nil else { return }
-        do {
-            let url = service.appendingPathComponent("illustrations").appendingPathComponent(expectedCatalog.revision)
-            let data = try await Self.downloadIllustrationResource(url, type: "application/json", maximumBytes: GuideIllustrationManifest.maximumBytes)
-            try Task.checkCancellation()
-            try adoptIllustrations(data, for: expectedCatalog)
-        } catch { /* Optional artwork never blocks the guide or its saved progress. */ }
     }
 
     private func isCurrentIllustration(_ item: GuideIllustration, revision: String) -> Bool {
@@ -427,6 +459,7 @@ final class AdultStore {
         requestedGuideID = id
     }
 }
+
 
 private struct CachedIllustrations: Codable {
     let schemaVersion: Int

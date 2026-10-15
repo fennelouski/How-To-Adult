@@ -1,19 +1,54 @@
 """Read-only localhost API and a durable local store for backend verification."""
 import argparse
+import base64
 import fcntl
+import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import os
 from pathlib import Path
+import re
 import tempfile
 from urllib.parse import urlsplit
 
-from handler import canonical, CatalogError, decode_json, handle, timestamp, validate_catalog
+from handler import canonical, CatalogError, decode_json, handle, png_dimensions, timestamp, validate_catalog
 
 
 class FileCatalogStore:
-    def __init__(self, directory):
+    def __init__(self, directory, illustration_manifest=None, assets=None):
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=True)
+        self.illustration_manifest = Path(illustration_manifest) if illustration_manifest else None
+        self.assets = Path(assets) if assets else None
+
+    def get_key(self, key):
+        # Expose only the selected public snapshot, never the recovered draft art.
+        history = re.fullmatch(r"revisions/([A-Za-z0-9][A-Za-z0-9._-]{0,95})\.json", key)
+        if history:
+            path = self.directory / (history[1] + ".json")
+            if path.is_file():
+                data = path.read_bytes()
+                return data, '"' + hashlib.sha256(data).hexdigest() + '"'
+            return None
+        current = self.get()
+        if current is None or self.illustration_manifest is None or not self.illustration_manifest.is_file():
+            return None
+        catalog = decode_json(current[0])
+        manifest = decode_json(self.illustration_manifest.read_bytes())
+        if manifest.get("schemaVersion") != 1 or manifest.get("revision") != catalog["revision"]:
+            return None
+        if key == "illustrations/" + catalog["revision"] + ".json":
+            data = canonical(manifest)
+            return data, '"' + hashlib.sha256(data).hexdigest() + '"'
+        asset = re.fullmatch(r"assets/([0-9a-f]{64})\.png", key)
+        if asset and self.assets and any(item.get("assetSHA256") == asset[1] for item in manifest.get("items", [])):
+            path = self.assets / (asset[1] + ".png")
+            if path.is_file():
+                data = path.read_bytes()
+                if hashlib.sha256(data).hexdigest() != asset[1]:
+                    raise CatalogError("The local artwork does not match its publication digest.", 503)
+                png_dimensions(data)
+                return data, '"' + asset[1] + '"'
+        return None
 
     def get(self):
         path = self.directory / "catalog.json"
@@ -63,7 +98,7 @@ def serve(store, port):
             self.send_response(result["statusCode"])
             for key, value in result["headers"].items():
                 self.send_header(key, value)
-            body = result["body"].encode("utf-8")
+            body = base64.b64decode(result["body"], validate=True) if result.get("isBase64Encoded") else result["body"].encode("utf-8")
             self.send_header("Content-Length", str(len(body)))
             self.end_headers()
             self.wfile.write(body)
@@ -86,9 +121,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, default=Path(__file__).resolve().parents[1] / "Content" / "catalog.json")
     parser.add_argument("--store", type=Path, default=Path(__file__).resolve().parent / "local-store")
+    parser.add_argument("--illustrations", type=Path, default=Path(__file__).resolve().parents[1] / "Content" / "illustrations.json")
+    parser.add_argument("--assets", type=Path, default=Path(__file__).resolve().parents[1] / "content-assets" / "recovered")
     parser.add_argument("--port", type=int, default=8769)
     options = parser.parse_args()
-    store = FileCatalogStore(options.store)
+    store = FileCatalogStore(options.store, options.illustrations, options.assets)
     if store.get() is None:
         store.publish(validate_catalog(decode_json(options.catalog.read_bytes())), create=True)
     serve(store, options.port)

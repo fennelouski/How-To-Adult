@@ -121,6 +121,8 @@ On 2026-10-03, the 49 backend checks passed, including nine checks against the a
 
 The initial release created one publication with IAM-signed conditional writes. Both public hosts passed health/revision checks, identical catalog content, ETag revalidation, guide retrieval, filtered pagination, missing-guide responses and rejection of unauthenticated publication. A second release preserved the catalog, S3 object version and public origins. The deployed original CloudFormation template and Vercel provenance matched their frozen source artifacts. Live settings confirmed private encrypted versioned storage.
 
+On 2026-10-20, read-only checks of both origins returned the same API source revision, `26f82e669b4261a0e639e2d9d1cd949de38e0fde`. Both served catalog revision `2026-10-05-owner-bulk-09-083436` with 273 guides and the same ETag and SHA-256 as committed `Content/catalog.json`. The immutable illustration route returned 233 associations with a SHA-256 matching committed `Content/illustrations.json`. The deployed API runtime paths are unchanged from that source revision, so this source merge required no backend deployment or content publication. The exact readback is recorded in [the 2026-10-20 verification receipt](backend/deployment-evidence/2026-10-20-live-readback.json); it is not a deployment receipt.
+
 Code rollback remains unverified. Repeating identical code does not prove rollback. The required sustained parallel observation period began at `2026-10-03T08:46:28.162881+00:00`; its earliest fourteen-day milestone is October 17. Readiness review remains October 20 and target cutover remains October 22 at 07:00 UTC. No cutover, DNS change or Vercel cancellation has occurred.
 
 ## Primary implementation references

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "verificationType": "read-only-live-parity-readback",
+  "verifiedAt": "2026-10-20T12:23:48+00:00",
+  "remoteMainRevision": "e8c40aedaeec5f4f3156e5f41faa7969ef9a2ee8",
+  "readOnly": true,
+  "origins": {
+    "aws": {
+      "url": "https://m0jxoitx8f.execute-api.us-west-2.amazonaws.com",
+      "healthStatus": 200,
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "catalogStatus": 200,
+      "catalogETag": "\"67f661c348295fe00214cb23eff3e80c\"",
+      "manifestStatus": 200
+    },
+    "vercel": {
+      "url": "https://how-to-adult-guides.vercel.app",
+      "healthStatus": 200,
+      "sourceRevision": "26f82e669b4261a0e639e2d9d1cd949de38e0fde",
+      "catalogStatus": 200,
+      "catalogETag": "\"67f661c348295fe00214cb23eff3e80c\"",
+      "manifestStatus": 200
+    }
+  },
+  "publication": {
+    "revision": "2026-10-05-owner-bulk-09-083436",
+    "guideCount": 273,
+    "responseSHA256": "18eb2012e44c6ab33ca0e4589a94b81bd57e0815cf1c451218bd8cd1883c448b",
+    "committedCatalogSHA256": "18eb2012e44c6ab33ca0e4589a94b81bd57e0815cf1c451218bd8cd1883c448b"
+  },
+  "illustrationManifest": {
+    "revision": "2026-10-05-owner-bulk-09-083436",
+    "associationCount": 233,
+    "responseSHA256": "2afc71a0e07db7de132a8a90f47ee37124d6d3a854134c5be4db31858827562c",
+    "committedManifestSHA256": "2afc71a0e07db7de132a8a90f47ee37124d6d3a854134c5be4db31858827562c"
+  },
+  "hostedRuntimeCodeUnchangedSinceDeployedRevision": [
+    "backend/deploy.py",
+    "backend/handler.py",
+    "backend/infrastructure.py",
+    "backend/publish.py",
+    "vercel.json"
+  ],
+  "otherBackendChangesSinceDeployedRevision": [
+    "backend/deployment-evidence/2026-10-03-first-release.json",
+    "backend/deployment-evidence/2026-10-03-repeat-release.json",
+    "backend/editor-api-audit/2026-10-03/editor-final-deployment.json",
+    "backend/editor-api-audit/2026-10-03/editor-initial-deployment.json",
+    "backend/editor-api-audit/2026-10-03/editor-live-verification.json",
+    "backend/editor-api-audit/2026-10-03/editor-repeat-deployment.json",
+    "backend/editor-api-audit/2026-10-03/editor-repeat-key-verification.json",
+    "backend/local.py",
+    "backend/provider-privacy-verification.json",
+    "backend/tests/test_local_art.py"
+  ],
+  "deploymentRequired": false,
+  "deploymentPerformed": false,
+  "contentPublicationPerformed": false,
+  "reason": "The deployed API runtime paths are unchanged from the live source revision, and the committed public catalog and illustration manifest match both origins byte-for-byte.",
+  "cutoverOrRoutingChangePerformed": false
+}

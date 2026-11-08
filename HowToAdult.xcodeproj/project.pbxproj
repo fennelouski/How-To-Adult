@@ -113,6 +113,12 @@
 			path = "AdultPassportViews.swift";
 			sourceTree = "<group>";
 		};
+		6181AE9D2F9E8497B2167A02 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultPresenter.swift";
+			sourceTree = "<group>";
+		};
 		E8BFFC13605D8558DDB18199 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
@@ -189,6 +195,12 @@
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultAssistantUITests.swift";
+			sourceTree = "<group>";
+		};
+		D04044745AD01A576CF310C8 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultExternalDisplayUITests.swift";
 			sourceTree = "<group>";
 		};
 		13BD6DCF6818C3FECDACCCB0 = {
@@ -330,6 +342,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "1A84A17A7D297BD8396DE055";
 		};
+		3AC06EADFE03D524898EEF72 = {
+			isa = "PBXBuildFile";
+			fileRef = "6181AE9D2F9E8497B2167A02";
+		};
 		49EEA09D899A6AB5DC6DC2AB = {
 			isa = "PBXBuildFile";
 			fileRef = "E8BFFC13605D8558DDB18199";
@@ -380,6 +396,7 @@
 				"5C782D6D21D463A5957F2521",
 				"27684C16516F8F15C0DFD0A7",
 				"ABB502770FB29A7D07DCC55F",
+				"3AC06EADFE03D524898EEF72",
 				"49EEA09D899A6AB5DC6DC2AB",
 				"F6E9BB0FBE8F9D62180362EF",
 				"FE16BFF9DFE8F03C994A7A19",
@@ -699,6 +716,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "D1F0873ED88A9AF5273F370D";
 		};
+		0AF74A76399331A2B8D38538 = {
+			isa = "PBXBuildFile";
+			fileRef = "D04044745AD01A576CF310C8";
+		};
 		46230286BD920E8606AD1716 = {
 			isa = "PBXBuildFile";
 			fileRef = "13BD6DCF6818C3FECDACCCB0";
@@ -708,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				"A2015DFF9FA48D13A3769291",
+				"0AF74A76399331A2B8D38538",
 				"46230286BD920E8606AD1716",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +914,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "1A84A17A7D297BD8396DE055";
 		};
+		94601EA525776849CDA41C27 = {
+			isa = "PBXBuildFile";
+			fileRef = "6181AE9D2F9E8497B2167A02";
+		};
 		B659604C39AF149D10F797BC = {
 			isa = "PBXBuildFile";
 			fileRef = "E8BFFC13605D8558DDB18199";
@@ -942,6 +968,7 @@
 				"F5AF1E0CADC8D2E09B9212F0",
 				"F1F221EE451A38E9E238DE15",
 				"7A3E3063A7401A52411CF2F5",
+				"94601EA525776849CDA41C27",
 				"B659604C39AF149D10F797BC",
 				"59690055C016C53401B577CC",
 				"D781AB9508796526DEAE100E",
@@ -1253,6 +1280,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "D1F0873ED88A9AF5273F370D";
 		};
+		42AB4AB38ED2DB7742207275 = {
+			isa = "PBXBuildFile";
+			fileRef = "D04044745AD01A576CF310C8";
+		};
 		1D27CC9CC8EC4F83AFC3F2F2 = {
 			isa = "PBXBuildFile";
 			fileRef = "13BD6DCF6818C3FECDACCCB0";
@@ -1262,6 +1293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				"4E98437FC389DC719EEC4364",
+				"42AB4AB38ED2DB7742207275",
 				"1D27CC9CC8EC4F83AFC3F2F2",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1440,6 +1472,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "1A84A17A7D297BD8396DE055";
 		};
+		58B4045D16DF6EFF458601B8 = {
+			isa = "PBXBuildFile";
+			fileRef = "6181AE9D2F9E8497B2167A02";
+		};
 		051F9E84AA51ABCFA391A333 = {
 			isa = "PBXBuildFile";
 			fileRef = "E8BFFC13605D8558DDB18199";
@@ -1490,6 +1526,7 @@
 				"70E6ADF635A08930D883DCB3",
 				"F952C554293E090591D49289",
 				"553E16DD9994642F95A5E8CF",
+				"58B4045D16DF6EFF458601B8",
 				"051F9E84AA51ABCFA391A333",
 				"7E54FAFCB786F7CE2B412F63",
 				"F6920C7E9FC723F6D412C913",
@@ -1805,6 +1842,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "D1F0873ED88A9AF5273F370D";
 		};
+		BAC94D422C621D71E26F795B = {
+			isa = "PBXBuildFile";
+			fileRef = "D04044745AD01A576CF310C8";
+		};
 		1C83920F61F32917CE5B9D54 = {
 			isa = "PBXBuildFile";
 			fileRef = "13BD6DCF6818C3FECDACCCB0";
@@ -1814,6 +1855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				"A94DD717E6CF52F052791A52",
+				"BAC94D422C621D71E26F795B",
 				"1C83920F61F32917CE5B9D54",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1938,6 +1980,7 @@
 				"60F6B5531523A1FE71D5E486",
 				"1FE5F97A547897B436ED818B",
 				"1A84A17A7D297BD8396DE055",
+				"6181AE9D2F9E8497B2167A02",
 				"E8BFFC13605D8558DDB18199",
 				"485A678A0ABC20D0EBFF7E89",
 				"636B1AB0105B4EC4323FBC19",
@@ -1965,6 +2008,7 @@
 			isa = "PBXGroup";
 			children = (
 				"D1F0873ED88A9AF5273F370D",
+				"D04044745AD01A576CF310C8",
 				"13BD6DCF6818C3FECDACCCB0",
 			);
 			path = "UITests";

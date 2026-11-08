@@ -2,6 +2,9 @@ import SwiftUI
 
 @main
 struct HowToAdultApp: App {
+    #if os(iOS)
+    @UIApplicationDelegateAdaptor(AdultAppDelegate.self) private var appDelegate
+    #endif
     @State private var store: AdultStore?
     @State private var passport: AdultPassportStore?
     @State private var assistant: AdultAssistantController?
@@ -94,6 +97,10 @@ struct HowToAdultApp: App {
         #endif
         .commands { GuideMenuCommands() }
 
+        #if os(macOS)
+        Window("Presenter", id: "presenter") { PresenterWindow() }
+            .defaultSize(width: 1280, height: 720)
+        #endif
 
         #if os(visionOS)
         WindowGroup("Guide", id: "guide", for: String.self) { $guideID in

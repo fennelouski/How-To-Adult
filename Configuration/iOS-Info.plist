@@ -24,7 +24,19 @@
     <key>LSRequiresIPhoneOS</key><true/>
     <key>UILaunchScreen</key><dict/>
     <key>UIApplicationSceneManifest</key>
-    <dict><key>UIApplicationSupportsMultipleScenes</key><true/></dict>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key><true/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleExternalDisplayNonInteractive</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key><string>External Display</string>
+                    <key>UISceneDelegateClassName</key><string>$(PRODUCT_MODULE_NAME).ExternalDisplaySceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
     <key>UISupportedInterfaceOrientations</key>
     <array>
         <string>UIInterfaceOrientationPortrait</string>

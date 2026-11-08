@@ -271,7 +271,7 @@ struct PresenterLayout: Equatable, Sendable {
             let fit = Int(size.width / (landscape ? 420 : 520))
             columns = min(max(fit, 1), max(stepCount, 1), 4)
         }
-        let base = mode == .current ? 2.2 : mode == .expanded ? 1.6 : 1.1
+        let base = mode == .current ? 2.2 : mode == .expanded ? 1.6 : 1.35
         let scale = min(max(base * shortSide / 1080, 1), 3)
         return PresenterLayout(columns: columns, scale: (scale * 100).rounded() / 100)
     }
@@ -284,7 +284,9 @@ final class PresenterState {
     var articleID: String?
     var pageIndex = 0
     var mode = PresenterMode.expanded
-    var externalDisplayConnected = false
+    /// Counted, not a flag: overlapping connect/disconnect callbacks can't leave it wrong.
+    var externalDisplayCount = 0
+    var externalDisplayConnected: Bool { externalDisplayCount > 0 }
     @ObservationIgnored weak var store: AdultStore?
 
     enum Command: Sendable { case next, previous, done, known, favorite }

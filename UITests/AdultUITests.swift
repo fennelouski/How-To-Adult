@@ -45,9 +45,16 @@ import UIKit
 
     /// Opens the guide's overflow menu if needed and returns one of its items.
     private func menuItem(_ id: String) -> XCUIElement {
+        #if os(macOS)
+        let item = app.menuItems[id].firstMatch
+        if item.exists && item.isHittable { return item }
+        let more = app.menuButtons["guide-more"].firstMatch
+        (more.exists ? more : app.buttons["guide-more"].firstMatch).click()
+        #else
         let item = app.buttons[id].firstMatch
         if item.exists && item.isHittable { return item }
         app.buttons["guide-more"].firstMatch.tap()
+        #endif
         _ = item.waitForExistence(timeout: 5)
         return item
     }

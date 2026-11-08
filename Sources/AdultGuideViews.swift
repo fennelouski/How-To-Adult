@@ -30,6 +30,7 @@ struct GuideReaderView: View {
     @State private var askPrompt: AskAIPresentation?
     @State private var showsSupplies = false
     @State private var markFeedback = 0
+    @State private var movedForward = true
     @FocusState private var focused: Bool
     private let presenter = PresenterState.shared
 
@@ -50,19 +51,7 @@ struct GuideReaderView: View {
         VStack(spacing: 0) {
             PageIndicator(article: article, progress: progress, carousel: carousel, tint: style.tint) { go(to: $0) }
                 .padding(.horizontal, 20).padding(.vertical, 10)
-            ScrollView(.horizontal) {
-                LazyHStack(spacing: 0) {
-                    ForEach(0..<carousel.pageCount, id: \.self) { index in
-                        page(GuideCarousel.page(at: index, stepCount: article.steps.count))
-                            .containerRelativeFrame(.horizontal)
-                            .id(index)
-                    }
-                }
-                .scrollTargetLayout()
-            }
-            .scrollTargetBehavior(.paging)
-            .scrollPosition(id: $scrolled)
-            .scrollIndicators(.hidden)
+            pager
             actionBar
         }
         .background(AdultPalette.background)
@@ -111,6 +100,42 @@ struct GuideReaderView: View {
         .sheet(isPresented: $editingNotes) { GuideNotesEditor(article: article) }
         .sheet(item: $askPrompt) { AskAISheet(presentation: $0) }
         .sheet(isPresented: $showsSupplies) { suppliesSheet }
+    }
+
+    /// iOS pages by swiping a horizontal scroll view. macOS shows one page with a push transition:
+    /// its floating sidebar insets a horizontal scroll view and misaligns paging, and Mac navigation
+    /// is keys, segments, buttons and menu commands anyway.
+    @ViewBuilder private var pager: some View {
+        #if os(macOS)
+        ZStack {
+            page(carousel.page)
+                .id(carousel.index)
+                .transition(reduceMotion ? .opacity : .push(from: (movedForward == (layoutDirection == .leftToRight)) ? .trailing : .leading))
+        }
+        .clipped()
+        #else
+        ScrollView(.horizontal) {
+            LazyHStack(spacing: 0) {
+                ForEach(0..<carousel.pageCount, id: \.self) { index in
+                    page(GuideCarousel.page(at: index, stepCount: article.steps.count))
+                        .containerRelativeFrame(.horizontal)
+                        .id(index)
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .scrollTargetBehavior(.paging)
+        .scrollPosition(id: $scrolled)
+        .scrollIndicators(.hidden)
+        // VoiceOver three-finger swipes page through steps; leading/trailing follow the layout direction.
+        .accessibilityScrollAction { edge in
+            switch edge {
+            case .leading: go(to: carousel.index - 1)
+            case .trailing: go(to: carousel.index + 1)
+            default: break
+            }
+        }
+        #endif
     }
 
     // MARK: Pages
@@ -334,7 +359,8 @@ struct GuideReaderView: View {
         .accessibilityHint(mark == .done ? "Undo" : "Moves to the next step")
         .accessibilityIdentifier("done-step")
         Button { go(to: carousel.index + 1) } label: {
-            Label("Skip", systemImage: "forward.fill").frame(maxWidth: .infinity)
+            Label { Text("Skip") } icon: { Image(systemName: "forward.fill").flipsForRightToLeftLayoutDirection(true) }
+                .frame(maxWidth: .infinity)
         }
         .buttonStyle(.bordered).controlSize(.large)
         .accessibilityIdentifier("skip-step")
@@ -354,6 +380,7 @@ struct GuideReaderView: View {
     private func unmark(_ step: GuideStep) { store.setMark(nil, for: step, in: article) }
 
     private func go(to index: Int) {
+        movedForward = index >= carousel.index
         withAnimation(.adult(reduceMotion)) {
             carousel.go(to: index)
             scrolled = carousel.index

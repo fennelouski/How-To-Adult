@@ -32,6 +32,10 @@ See [Assistant design decisions](app-store-audit/2026-10-04-ai-assistant/native-
 
 The final Assistant source compiles for iOS and macOS. Its offline unit run passed 76 tests with one intentionally skipped live-catalog test; private UUID UI flows passed on iPhone and iPad. A real Apple Intelligence service call on this Mac produced a useful three-step checklist. Live OpenAI, native action delivery, closed-app Shortcuts and Mac app UI remain separate release checks. [Actual verification and limits](app-store-audit/2026-10-04-ai-assistant/verification.md).
 
+## Redesign in development
+
+The working source replaces the list-first browser with **Now** (guides in progress, upcoming reminders, favorites), **Explore** (color-coded topic tiles, sub-area chips, icon filters) and **Passport** (a stamp for each finished guide and a seal for each completed topic, beside the unchanged reviewed-skill tier). Guides open as a one-step-per-page carousel with done, "I know this" and skip actions, glanceable supplies/caution/source cards, and an overflow menu with Ask an AI (copies a prompt; sends nothing) and Search Google. An external display gets a dedicated second screen; Mac has a Presenter window. Like the Assistant, this is unshipped: no version bump, upload or submission. See [DESIGN.md](DESIGN.md) and [the redesign audit and verification](Documentation/redesign-audit.md).
+
 ## Build locally
 
 Open `HowToAdult.xcodeproj` or regenerate it using Python's standard library:

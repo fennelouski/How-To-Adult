@@ -121,7 +121,10 @@ struct ContinueCard: View {
                 Image(systemName: "play.fill").font(.title3).padding(12).background(.white.opacity(0.22), in: Circle()).accessibilityHidden(true)
             }
             Text(article.title).font(.title2.bold()).fixedSize(horizontal: false, vertical: true)
-            if let next { Label(next.title, systemImage: "arrow.turn.down.right").font(.subheadline.weight(.semibold)).fixedSize(horizontal: false, vertical: true) }
+            if let next {
+                Label { Text(next.title) } icon: { Image(systemName: "arrow.turn.down.right").flipsForRightToLeftLayoutDirection(true) }
+                    .font(.subheadline.weight(.semibold)).fixedSize(horizontal: false, vertical: true)
+            }
             StepSegments(article: article, progress: progress, tint: .white, height: 8)
         }
         .foregroundStyle(.white)

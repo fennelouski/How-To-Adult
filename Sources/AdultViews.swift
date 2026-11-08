@@ -100,7 +100,13 @@ struct AdultRootView: View {
             let arguments = ProcessInfo.processInfo.arguments
             if assistant.isPrivateQA && arguments.contains("--qa-assistant") { section = .assistant }
             if let tab = arguments.first(where: { $0.hasPrefix("--qa-tab=") }), let value = AdultSection(rawValue: String(tab.dropFirst(9))) { section = value }
-            if let guide = arguments.first(where: { $0.hasPrefix("--qa-guide=") }) { paths[section] = [.guide(String(guide.dropFirst(11)))] }
+            if let guide = arguments.first(where: { $0.hasPrefix("--qa-guide=") }) {
+                // Deferred one tick: a split view's detail stack resets a path set before it appears.
+                Task { @MainActor in
+                    try? await Task.sleep(for: .milliseconds(400))
+                    paths[section] = [.guide(String(guide.dropFirst(11)))]
+                }
+            }
         }
         #endif
     }

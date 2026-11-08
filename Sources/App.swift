@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct HowToAdultApp: App {
     @State private var store: AdultStore?
+    @State private var passport: AdultPassportStore?
     @State private var assistant: AdultAssistantController?
     #if DEBUG
     @State private var passportReview: AdultPassportReviewSession?
@@ -47,7 +48,9 @@ struct HowToAdultApp: App {
                 ])
             if library.plans.isEmpty { _ = try? library.add(fixture) }
             if ProcessInfo.processInfo.arguments.contains("--qa-plan") { preview.selectedPlanID = library.plans.first?.id }
-            _store = State(initialValue: AdultStore(directory: directory, allowsRemoteUpdates: false, allowsNotifications: false))
+            let qaStore = AdultStore(directory: directory, allowsRemoteUpdates: false, allowsNotifications: false)
+            _store = State(initialValue: qaStore)
+            PresenterState.shared.store = qaStore
             _assistant = State(initialValue: preview)
             return
         }
@@ -55,6 +58,12 @@ struct HowToAdultApp: App {
         let store = AdultStore()
         store.installNotificationRouting()
         _store = State(initialValue: store)
+        PresenterState.shared.store = store
+        // Reviewed skills tier: production admission is empty, so this only shows skills already on this device.
+        if let catalog = store.catalog {
+            _passport = State(initialValue: AdultPassportStore(directory: URL.applicationSupportDirectory.appendingPathComponent("HowToAdult", isDirectory: true),
+                manifest: .empty, catalog: catalog, countryCode: Locale.current.region?.identifier ?? "US"))
+        }
         _assistant = State(initialValue: AdultAssistantRuntime.shared)
     }
 
@@ -83,6 +92,8 @@ struct HowToAdultApp: App {
         #if os(visionOS)
         .windowResizability(.contentMinSize)
         #endif
+        .commands { GuideMenuCommands() }
+
 
         #if os(visionOS)
         WindowGroup("Guide", id: "guide", for: String.self) { $guideID in
@@ -117,7 +128,7 @@ struct HowToAdultApp: App {
 
     @ViewBuilder private var ordinaryRoot: some View {
         if let store, let assistant {
-            AdultRootView().environment(store).environment(assistant)
+            AdultRootView().environment(store).environment(assistant).environment(passport)
         } else { Color.clear.accessibilityIdentifier("adult-blank-test-host") }
     }
 }

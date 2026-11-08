@@ -18,31 +18,41 @@ struct GuideSubArea: Hashable, Identifiable, Sendable {
             GuideSubArea(id: categoryID + "." + id, title: title, symbol: symbol, tags: Set(tags))
         }
         switch categoryID {
-        case "home": return [area("laundry", "Laundry", "washer", ["laundry"]),
-                             area("cleaning", "Cleaning", "bubbles.and.sparkles", ["cleaning", "tidying"]),
+        case "home": return [area("laundry", "Laundry & clothes", "washer", ["laundry", "clothing care", "clothing repair", "hand sewing"]),
+                             area("cleaning", "Cleaning", "bubbles.and.sparkles", ["cleaning", "tidying", "surface care", "appliance care", "household"]),
                              area("safety", "Safety & energy", "bolt.shield", ["home safety", "energy"]),
-                             area("setup", "Setting up", "sofa", ["tools", "decorating", "repair"])]
-        case "food": return [area("cooking", "Cooking", "frying.pan", ["cooking"]),
-                             area("safety", "Food safety", "thermometer.medium", ["food safety"]),
-                             area("shopping", "Shopping", "cart", ["groceries", "meal planning"])]
+                             area("moving", "Moving & renting", "shippingbox", ["moving", "renting", "packing", "transitions"]),
+                             area("setup", "Setting up", "sofa", ["tools", "decorating", "repair", "organization", "home administration", "model number"])]
+        case "food": return [area("cooking", "Cooking", "frying.pan", ["cooking", "simple meals", "stovetop", "cooking basics", "basic cooking", "oven", "no cook", "breakfast", "baking", "measuring", "pasta", "bread"]),
+                             area("safety", "Food safety", "thermometer.medium", ["food safety", "food storage"]),
+                             area("shopping", "Shopping", "cart", ["groceries", "meal planning"]),
+                             area("kitchen", "Kitchen care", "sink", ["dishwashing", "kitchen cleaning", "water bottle", "reusable bottle"])]
         case "money": return [area("budget", "Budgeting", "chart.pie", ["budget", "bills", "savings"]),
-                              area("credit", "Credit", "creditcard", ["credit"]),
-                              area("taxes", "Taxes", "building.columns", ["taxes"]),
-                              area("retirement", "Retirement", "chart.line.uptrend.xyaxis", ["401k", "retirement"])]
-        case "work": return [area("search", "Job search", "magnifyingglass", ["job search", "resume", "interview"]),
+                              area("banking", "Banking", "building.columns", ["banking", "checking account", "account opening", "fees"]),
+                              area("credit", "Credit & loans", "creditcard", ["credit", "loans", "auto loan", "apr", "borrowing"]),
+                              area("taxes", "Taxes", "doc.text", ["taxes"]),
+                              area("retirement", "Retirement", "chart.line.uptrend.xyaxis", ["401k", "retirement"]),
+                              area("paperwork", "Paperwork", "folder", ["paperwork", "medical bills", "financial assistance", "eob"])]
+        case "work": return [area("search", "Job search", "magnifyingglass", ["job search", "resume", "interview", "job applications", "cover letters", "career exploration"]),
                              area("pay", "Pay & benefits", "doc.plaintext", ["paycheck", "benefits"]),
-                             area("talk", "Communication", "envelope", ["email", "communication"])]
+                             area("talk", "Communication", "envelope", ["email", "communication", "zoom", "video calls", "audio"]),
+                             area("docs", "Documents", "doc.richtext", ["google docs", "writing", "documents", "notes", "accessibility", "alt text", "links", "headings"])]
         case "wellbeing": return [area("move", "Movement", "figure.walk", ["exercise"]),
                                   area("rest", "Rest", "moon.zzz", ["sleep", "rest"]),
-                                  area("care", "Care", "stethoscope", ["health", "mental health", "appointments"])]
-        case "people": return [area("friends", "Friends", "person.2", ["friends", "social", "community"]),
-                               area("relationships", "Relationships", "hand.raised", ["relationships", "boundaries", "apology", "roommates"]),
+                                  area("care", "Health care", "stethoscope", ["health", "healthcare", "mental health", "appointments", "dental care", "pharmacy", "medicine labels", "repeat prescriptions", "vaccination records"]),
+                                  area("personal", "Personal care", "comb", ["personal care", "brushing", "flossing"])]
+        case "people": return [area("friends", "Friends", "person.2", ["friends", "friendship", "social", "community", "introductions", "conversation", "hobbies", "invitations", "checking in"]),
+                               area("talk", "Keeping in touch", "bubble.left.and.bubble.right", ["communication", "messages", "calls", "greeting cards"]),
+                               area("relationships", "Relationships", "hand.raised", ["relationships", "adult relationships", "boundaries", "apology", "roommates", "consent", "intimacy", "grief", "caregiving"]),
                                area("hosting", "Hosting", "fork.knife.circle", ["hosting"])]
-        case "everyday": return [area("car", "Car", "car.side", ["car"]),
+        case "everyday": return [area("digital", "Digital", "laptopcomputer", ["iphone", "mac", "files", "digital basics", "chrome", "keyboard", "documents", "notes", "accessibility"]),
+                                 area("hobbies", "Hobbies", "paintpalette", ["hobbies", "creative practice", "drawing", "languages", "reading", "leisure"]),
+                                 area("style", "Style", "tshirt", ["style", "clothes", "clothing", "getting dressed"]),
+                                 area("car", "Car", "car.side", ["car"]),
                                  area("travel", "Getting around", "tram", ["transport", "travel"]),
-                                 area("style", "Style", "tshirt", ["style", "clothes"]),
                                  area("bills", "Bills", "iphone", ["phone bill", "contracts"]),
-                                 area("routines", "Routines", "arrow.clockwise", ["planning", "routine", "reading", "leisure"])]
+                                 area("civic", "Civic life", "building.2", ["civic duties"]),
+                                 area("routines", "Routines", "arrow.clockwise", ["planning", "routine", "routines", "organization"])]
         default: return []
         }
     }
@@ -141,7 +151,7 @@ enum AskAIPrompt {
     static let includeNotesKey = "AskAIIncludeNotes"
     static let placeholders = ["guide", "summary", "step", "stepDetail", "progress", "region", "supplies", "cautions", "notes"]
     static let defaultTemplate = """
-    I'm working through a how-to guide called "{guide}" ({summary}).
+    I'm working through a how-to guide called "{guide}": {summary}
     I'm on this step: {step}
     {stepDetail}
 
@@ -177,7 +187,7 @@ enum AskAIPrompt {
         return [
             "guide": article.title,
             "summary": article.summary,
-            "step": step.map { "Step \((stepIndex ?? 0) + 1) of \(article.steps.count): \($0.title)" } ?? "the overview, before step 1",
+            "step": step.map { "Step \((stepIndex ?? 0) + 1) of \(article.steps.count): \($0.title)" } ?? "the guide as a whole",
             "stepDetail": step?.body ?? article.steps.map { "- " + $0.title }.joined(separator: "\n"),
             "progress": "\(progress.completedCount(in: article)) done, \(progress.knownCount(in: article)) already known, of \(article.steps.count) steps",
             "region": article.jurisdiction,
@@ -276,4 +286,12 @@ final class PresenterState {
     var mode = PresenterMode.expanded
     var externalDisplayConnected = false
     @ObservationIgnored weak var store: AdultStore?
+
+    enum Command: Sendable { case next, previous, done, known, favorite }
+    private(set) var pendingCommand: Command?
+    private(set) var commandSerial = 0
+    func send(_ command: Command) {
+        pendingCommand = command
+        commandSerial += 1
+    }
 }

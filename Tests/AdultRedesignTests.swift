@@ -206,7 +206,7 @@ final class AdultRedesignTests: XCTestCase {
         XCTAssertTrue(AskAIPrompt.make(template: "N: {notes}", article: article, stepIndex: nil, progress: p, includeNotes: true).contains("private thing"))
         XCTAssertEqual(AskAIPrompt.make(template: "  \n", article: article, stepIndex: nil, progress: p, includeNotes: false),
                        AskAIPrompt.make(template: nil, article: article, stepIndex: nil, progress: p, includeNotes: false), "Blank template falls back")
-        XCTAssertTrue(AskAIPrompt.make(template: nil, article: article, stepIndex: nil, progress: p, includeNotes: false).contains("the overview"))
+        XCTAssertTrue(AskAIPrompt.make(template: nil, article: article, stepIndex: nil, progress: p, includeNotes: false).contains("the guide as a whole"))
     }
 
     func testGoogleURLPercentEncodesEverythingMeaningful() throws {

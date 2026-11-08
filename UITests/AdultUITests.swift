@@ -14,8 +14,42 @@ import UIKit
         if UIDevice.current.userInterfaceIdiom != .pad { XCUIDevice.shared.orientation = .portrait }
         #endif
         self.app.launch()
-        XCTAssertTrue(self.app.scrollViews["guide-collection"].waitForExistence(timeout: 15))
+        XCTAssertTrue(self.home.waitForExistence(timeout: 15))
         }
+    }
+
+    private var home: XCUIElement { app.descendants(matching: .any).matching(identifier: "now-screen").firstMatch }
+    private var reader: XCUIElement { app.descendants(matching: .any).matching(identifier: "guide-reader").firstMatch }
+    private func element(_ id: String) -> XCUIElement { app.descendants(matching: .any).matching(identifier: id).firstMatch }
+
+    /// Explore → Home → laundry guide; replaces the old featured-guide card.
+    private func openGuide(_ id: String = "wash-your-first-load", category: String = "home") {
+        selectSection("Explore")
+        let tile = element("category-" + category)
+        XCTAssertTrue(tile.waitForExistence(timeout: 5))
+        tile.tap()
+        let card = element("guide-" + id)
+        XCTAssertTrue(card.waitForExistence(timeout: 5))
+        if !card.isHittable { app.swipeUp() }
+        card.tap()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        showOverview()
+    }
+    /// A started guide resumes at its first open step; tests that need the overview jump there.
+    private func showOverview() {
+        let overview = app.buttons["Overview"].firstMatch
+        if overview.waitForExistence(timeout: 3) { overview.tap() }
+        _ = element("start-guide").waitForExistence(timeout: 3)
+    }
+    private func openLaundry() { openGuide() }
+
+    /// Opens the guide's overflow menu if needed and returns one of its items.
+    private func menuItem(_ id: String) -> XCUIElement {
+        let item = app.buttons[id].firstMatch
+        if item.exists && item.isHittable { return item }
+        app.buttons["guide-more"].firstMatch.tap()
+        _ = item.waitForExistence(timeout: 5)
+        return item
     }
 
     private func shot(_ name: String) {
@@ -32,7 +66,7 @@ import UIKit
     private func search(_ query: String) {
         let search = app.searchFields.firstMatch
         if !search.exists {
-            app.scrollViews["guide-collection"].swipeDown()
+            element("guide-collection").swipeDown()
         }
         XCTAssertTrue(search.waitForExistence(timeout: 5))
         search.tap()
@@ -53,33 +87,33 @@ import UIKit
         if app.tabBars.buttons[name].exists { app.tabBars.buttons[name].tap(); return }
         #endif
         let row = app.buttons[name].firstMatch
-        if row.exists { row.tap() } else { app.staticTexts[name].firstMatch.tap() }
+        if row.exists && row.isHittable { row.tap() } else { app.staticTexts[name].firstMatch.tap() }
     }
 
     func testDarkAppearanceAndAccessibilityText() throws {
         app.terminate()
         app.launchArguments = ["--qa-dark", "--qa-accessibility-text"]
         app.launch()
-        XCTAssertTrue(app.scrollViews["guide-collection"].waitForExistence(timeout: 10))
-        shot("11-dark-large-guides")
-        app.buttons["featured-guide"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
-        shot("12-dark-large-reader")
-        let reader = app.scrollViews["guide-reader"]
-        // SwiftUI combines nearby prose into one accessibility text element;
-        // its hit-test frame can be visible before the source link itself.
-        for _ in 0..<5 { reader.swipeUp() }
-        shot("13-dark-large-sources")
-        let source = app.descendants(matching: .any)
-            .matching(NSPredicate(format: "label CONTAINS %@", "Whirlpool laundry basics")).firstMatch
+        XCTAssertTrue(home.waitForExistence(timeout: 10))
+        shot("11-dark-large-now")
+        openLaundry()
+        shot("12-dark-large-overview")
+        // Supplies, cautions and sources stay reachable at the largest size, scrolling inside the page.
+        let source = app.descendants(matching: .any).matching(NSPredicate(format: "label CONTAINS %@", "Whirlpool laundry basics")).firstMatch
+        for _ in 0..<6 where !(source.exists && source.isHittable) { reader.swipeUp() }
         XCTAssertTrue(source.exists)
+        shot("13-dark-large-sources")
+        element("start-guide").tap()
+        XCTAssertTrue(element("done-step").waitForExistence(timeout: 5))
+        XCTAssertTrue(element("done-step").isHittable, "Step actions stay reachable at accessibility sizes")
+        shot("13b-dark-large-step")
     }
 
     func testNativeShareAndNotificationDenialRecovery() throws {
         defer { app.terminate() }
-        app.buttons["featured-guide"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
-        let share = app.buttons["Share…"].firstMatch
+        openLaundry()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        let share = menuItem("Share")
         XCTAssertTrue(share.waitForExistence(timeout: 5))
         share.tap()
         let chooser = app.otherElements["ActivityListView"].firstMatch
@@ -97,8 +131,8 @@ import UIKit
         }
         dismissal.tap()
         XCTAssertTrue(chooser.waitForNonExistence(timeout: 5))
-        XCTAssertTrue(app.scrollViews["guide-reader"].exists)
-        app.buttons["remind-guide"].tap()
+        XCTAssertTrue(reader.exists)
+        menuItem("remind-guide").tap()
         let pickerReady = app.buttons["save-reminder"].waitForExistence(timeout: 5)
         shot("15-actual-reminder-picker")
         let pickerTree = XCTAttachment(string: app.debugDescription)
@@ -133,15 +167,15 @@ import UIKit
         XCTAssertTrue(app.buttons["save-reminder"].exists)
         XCTAssertFalse(app.buttons["remove-reminder"].exists)
         app.buttons["Cancel"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
     }
 
     #if os(iOS)
     func testNotificationDeniedRecoveryTail() throws {
         defer { app.terminate() }
-        app.buttons["featured-guide"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
-        app.buttons["remind-guide"].tap()
+        openLaundry()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        menuItem("remind-guide").tap()
         XCTAssertTrue(app.buttons["save-reminder"].waitForExistence(timeout: 5))
         // The private device was genuinely denied through the r3 system prompt.
         // Save now returns the recorded app alert without permission reset or re-prompt.
@@ -170,8 +204,8 @@ import UIKit
         let save = app.buttons["save-reminder"]
         // Observe the native state after OK; iOS may retain or dismiss the picker.
         if !save.exists {
-            XCTAssertTrue(app.scrollViews["guide-reader"].exists)
-            let remind = app.buttons["remind-guide"]
+            XCTAssertTrue(reader.exists)
+            let remind = menuItem("remind-guide")
             XCTAssertTrue(remind.exists && remind.isHittable)
             remind.tap()
         }
@@ -187,7 +221,7 @@ import UIKit
         let cancel = app.buttons["Cancel"]
         XCTAssertTrue(cancel.exists && cancel.isHittable)
         cancel.tap()
-        let returned = app.scrollViews["guide-reader"].waitForExistence(timeout: 5)
+        let returned = reader.waitForExistence(timeout: 5)
         shot("20-denied-recovery-cancel-same-reader")
         let cancelledTree = XCTAttachment(string: app.debugDescription)
         cancelledTree.name = "20-denied-recovery-cancel-same-reader-tree"
@@ -261,10 +295,10 @@ import UIKit
         XCTAssertTrue(enabledReady)
         settings.terminate()
         app.launch()
-        XCTAssertTrue(app.scrollViews["guide-collection"].waitForExistence(timeout: 15))
-        app.buttons["featured-guide"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
-        app.buttons["remind-guide"].tap()
+        XCTAssertTrue(home.waitForExistence(timeout: 15))
+        openLaundry()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        menuItem("remind-guide").tap()
         let pickerReady = app.buttons["save-reminder"].waitForExistence(timeout: 5)
         evidence("25-current-reminder-date-controls", app)
         XCTAssertTrue(pickerReady)
@@ -293,7 +327,7 @@ import UIKit
         let cancelled = app.buttons["save-reminder"].waitForNonExistence(timeout: 5)
         evidence("28-reminder-cancelled-same-guide", app)
         XCTAssertTrue(cancelled)
-        XCTAssertTrue(app.scrollViews["guide-reader"].exists)
+        XCTAssertTrue(reader.exists)
         XCTAssertTrue(app.staticTexts["Wash a load of laundry"].exists)
         // No value edit, Save, scheduling or synthetic delivery.
     }
@@ -327,12 +361,12 @@ import UIKit
             if saved {
                 app.terminate()
                 app.launch()
-                if app.scrollViews["guide-collection"].waitForExistence(timeout: 10),
-                   app.buttons["featured-guide"].exists {
-                    app.buttons["featured-guide"].tap()
-                    if app.scrollViews["guide-reader"].waitForExistence(timeout: 5),
-                       app.buttons["remind-guide"].exists {
-                        app.buttons["remind-guide"].tap()
+                if home.waitForExistence(timeout: 10),
+                   true {
+                    openLaundry()
+                    if reader.waitForExistence(timeout: 5),
+                       menuItem("remind-guide").exists {
+                        menuItem("remind-guide").tap()
                         _ = app.buttons["save-reminder"].waitForExistence(timeout: 5)
                         evidence("49-native-private-reminder-cleanup", app)
                         let remove = app.buttons["remove-reminder"]
@@ -348,10 +382,10 @@ import UIKit
             }
             app.terminate()
         }
-        app.buttons["featured-guide"].tap()
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
+        openLaundry()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts[title].exists)
-        app.buttons["remind-guide"].tap()
+        menuItem("remind-guide").tap()
         XCTAssertTrue(app.buttons["save-reminder"].waitForExistence(timeout: 5))
         evidence("31-real-reminder-initial-date", app)
         XCTAssertFalse(app.buttons["remove-reminder"].exists)
@@ -457,8 +491,8 @@ import UIKit
         saved = app.buttons["save-reminder"].waitForNonExistence(timeout: 10)
         evidence("37-real-reminder-save-result", app)
         XCTAssertTrue(saved)
-        XCTAssertTrue(app.scrollViews["guide-reader"].exists)
-        app.buttons["remind-guide"].tap()
+        XCTAssertTrue(reader.exists)
+        menuItem("remind-guide").tap()
         XCTAssertTrue(app.buttons["remove-reminder"].waitForExistence(timeout: 5))
         evidence("38-real-reminder-pending-record", app)
         XCTAssertTrue(app.datePickers.firstMatch.buttons[expectedDate].exists)
@@ -470,8 +504,8 @@ import UIKit
         evidence("39-real-reminders-list", app)
         app.tabBars.buttons["Guides"].tap()
         goHome()
-        XCTAssertTrue(app.scrollViews["guide-collection"].waitForExistence(timeout: 5))
-        XCTAssertFalse(app.scrollViews["guide-reader"].exists)
+        XCTAssertTrue(home.waitForExistence(timeout: 5))
+        XCTAssertFalse(reader.exists)
         evidence("40-real-reminder-away-from-reader", app)
         XCUIDevice.shared.press(.home)
         let background = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
@@ -517,7 +551,7 @@ import UIKit
         targetElement.tap() // No icon, URL/deep link, synthetic push, recipient or destination.
         let foreground = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in self.app.state == .runningForeground }, object: nil)
         let foregroundReady = XCTWaiter.wait(for: [foreground], timeout: 10) == .completed
-        let readerReady = app.scrollViews["guide-reader"].waitForExistence(timeout: 10)
+        let readerReady = reader.waitForExistence(timeout: 10)
         evidence("44-real-notification-routed-guide", app)
         XCTAssertTrue(foregroundReady)
         XCTAssertTrue(readerReady)
@@ -529,83 +563,107 @@ import UIKit
     #endif
 
     func testGuidesSearchSaveProgressAndGallery() throws {
-        shot("01-guides")
-        let featured = app.buttons["featured-guide"].firstMatch
-        let featuredLink = app.otherElements["featured-guide"].firstMatch
-        if featured.exists { featured.tap() }
-        else if featuredLink.exists { featuredLink.tap() }
-        else { app.buttons["guide-read-a-care-label"].tap() }
-        XCTAssertTrue(app.scrollViews["guide-reader"].waitForExistence(timeout: 5))
-        shot("02-guide")
-        let save = app.buttons["save-guide"]
-        if save.label == "Save guide" { save.tap() }
-        XCTAssertEqual(save.label, "Unsave guide")
-        let step = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'step-'")).firstMatch
-        XCTAssertTrue(step.exists)
-        if (step.value as? String) != "Completed" { step.tap() }
-        XCTAssertEqual(step.value as? String, "Completed")
-        shot("03-steps")
-        let reader = app.scrollViews["guide-reader"]
-        reader.swipeUp()
-        reader.swipeUp()
-        shot("04-sources")
+        shot("01-now-empty")
+        selectSection("Explore")
+        XCTAssertTrue(element("category-money").waitForExistence(timeout: 5))
+        shot("02-explore-bento")
+        element("category-home").tap()
+        XCTAssertTrue(element("subarea-home.laundry").waitForExistence(timeout: 5))
+        element("subarea-home.laundry").tap()
+        XCTAssertFalse(element("guide-clean-a-bathroom").exists, "Sub-area chip filters the topic")
+        shot("03-category-laundry")
+        element("guide-wash-your-first-load").tap()
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        showOverview()
+        XCTAssertTrue(element("card-supplies").exists && element("card-cautions").exists && element("card-sources").exists)
+        shot("04-guide-overview")
+        let save = app.buttons["save-guide"].firstMatch
+        if save.label == "Favorite" { save.tap() }
+        XCTAssertEqual(save.label, "Remove from favorites")
+
+        element("start-guide").tap()
+        XCTAssertTrue(element("done-step").waitForExistence(timeout: 5))
+        shot("05-step-1")
+        element("done-step").tap()           // marks step 1 and advances
+        XCTAssertTrue(element("know-step").waitForExistence(timeout: 5))
+        sleep(1)
+        shot("06-step-2")
+        element("know-step").tap()           // step 2 already known
+        sleep(1)
+        element("step-page-wash-your-first-load-step-3").descendants(matching: .button).matching(identifier: "favorite-step").firstMatch.tap() // heart step 3
+        element("skip-step").tap()           // leave step 3 open
+        sleep(1)
         #if os(iOS)
-        if app.tabBars.firstMatch.exists {
-            goHome()
-        }
-        #endif
-        selectSection("Saved")
-        XCTAssertTrue(app.buttons["guide-wash-your-first-load"].waitForExistence(timeout: 5) || app.links["guide-wash-your-first-load"].exists)
-        #if os(macOS)
-        app.buttons["guide-wash-your-first-load"].tap()
+        reader.swipeRight()                  // swipe back to step 3
+        sleep(1)
         #else
-        if !app.tabBars.firstMatch.exists { app.buttons["guide-wash-your-first-load"].tap() }
+        app.typeKey(.leftArrow, modifierFlags: [])
         #endif
-        shot("05-saved")
-        selectSection("Guides")
+        let indicator = element("page-indicator")
+        XCTAssertTrue(indicator.exists)
+        shot("07-progress-segments")
+
+        selectSection("Now")
+        let continueCard = element("continue-wash-your-first-load")
+        XCTAssertTrue(continueCard.waitForExistence(timeout: 5), "A started guide appears in Now")
+        XCTAssertTrue(element("favorite-step-wash-your-first-load-step-3").exists)
+        shot("08-now-continue")
+        continueCard.tap()
+        XCTAssertTrue(element("done-step").waitForExistence(timeout: 5), "Resumes at the first open step")
+        element("done-step").tap(); sleep(1)
+        element("done-step").tap(); sleep(1)
+        XCTAssertTrue(element("finish-stamp").waitForExistence(timeout: 5))
+        shot("09-finish-stamp")
+
+        _ = menuItem("menu-ask-ai")
+        shot("10-overflow-menu")
+        menuItem("menu-ask-ai").tap()
+        XCTAssertTrue(element("ask-ai-copied").waitForExistence(timeout: 5))
+        shot("10b-ask-ai")
+        app.buttons["Done"].firstMatch.tap()
+
+        selectSection("Passport")
+        XCTAssertTrue(element("passport-page-home").waitForExistence(timeout: 5))
+        shot("11-passport")
+
+        selectSection("Explore")
+        for _ in 0..<3 where !element("category-home").exists {
+            let back = app.navigationBars.buttons.element(boundBy: 0)
+            if back.exists { back.tap() }
+        }
+        XCTAssertTrue(element("category-home").waitForExistence(timeout: 5))
+        element("filter-favorites").tap()
+        XCTAssertTrue(element("guide-wash-your-first-load").waitForExistence(timeout: 5))
+        shot("12-favorites-filter")
+        element("filter-favorites").tap()
         search("401")
-        shot("06-search")
-        let retirement = app.buttons["guide-start-with-your-401k"]
-        if retirement.exists { retirement.tap() } else { app.links["guide-start-with-your-401k"].tap() }
+        let retirement = element("guide-start-with-your-401k")
+        XCTAssertTrue(retirement.waitForExistence(timeout: 5))
+        shot("13-search")
+        retirement.tap()
         XCTAssertTrue(app.staticTexts["United States rules"].waitForExistence(timeout: 5))
-        shot("07-money")
-        app.buttons["remind-guide"].tap()
+        menuItem("menu-know-guide").tap()
+        XCTAssertTrue(app.staticTexts["Already known"].waitForExistence(timeout: 5))
+        shot("14-known-guide")
+        menuItem("remind-guide").tap()
         XCTAssertTrue(app.buttons["save-reminder"].waitForExistence(timeout: 5))
-        shot("08-reminder")
-        let sound = app.switches["Play a sound"]
-        XCTAssertTrue(sound.exists)
-        if sound.value as? String == "1" { sound.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
-        XCTAssertEqual(sound.value as? String, "0")
-        app.buttons["save-reminder"].tap()
-        #if os(iOS)
-        let allow = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts.buttons["Allow"]
-        if allow.waitForExistence(timeout: 3) { allow.tap() }
-        #endif
-        XCTAssertTrue(app.buttons["save-reminder"].waitForNonExistence(timeout: 10))
-        app.terminate()
-        app.launch()
-        selectSection("Reminders")
-        let reminderRow = app.buttons["guide-start-with-your-401k"]
-        XCTAssertTrue(reminderRow.waitForExistence(timeout: 5))
-        reminderRow.tap()
-        shot("09-reminders")
-        app.buttons["remind-guide"].tap()
-        XCTAssertTrue(app.buttons["save-reminder"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.switches["Play a sound"].value as? String, "0")
-        app.buttons["remove-reminder"].tap()
-        XCTAssertTrue(app.buttons["save-reminder"].waitForNonExistence(timeout: 5))
-        #if os(iOS)
-        if app.tabBars.firstMatch.exists { goHome() }
-        #endif
-        selectSection("Reminders")
-        XCTAssertTrue(app.buttons["guide-start-with-your-401k"].waitForNonExistence(timeout: 5))
-        app.buttons["open-settings"].tap()
+        shot("15-reminder")
+        app.buttons["Cancel"].tap()
+        selectSection("Passport")
+        app.buttons["open-settings"].firstMatch.tap()
         XCTAssertTrue(app.buttons["Done"].waitForExistence(timeout: 5))
-        shot("10-settings")
+        shot("16-settings")
         app.buttons["Done"].tap()
+
+        // Cold relaunch keeps marks, favorites and known state.
         app.terminate()
         app.launch()
-        selectSection("Saved")
-        XCTAssertTrue(app.buttons["guide-wash-your-first-load"].waitForExistence(timeout: 5) || app.links["guide-wash-your-first-load"].exists)
+        XCTAssertTrue(element("continue-wash-your-first-load").waitForNonExistence(timeout: 3), "Finished guide left Now")
+        selectSection("Passport")
+        XCTAssertTrue(element("passport-page-home").waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any).matching(NSPredicate(format: "label == %@ AND value == %@", "Wash a load of laundry", "Finished")).firstMatch.exists)
+        let knownStamp = app.descendants(matching: .any).matching(NSPredicate(format: "label == %@ AND value == %@", "Start with your 401(k)", "Already known")).firstMatch
+        for _ in 0..<6 where !knownStamp.exists { element("passport-screen").swipeUp() }
+        XCTAssertTrue(knownStamp.exists, "Known guide shows a distinct stamp after relaunch")
     }
 }

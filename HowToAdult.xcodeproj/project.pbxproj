@@ -59,6 +59,12 @@
 			path = "AdultAssistantViews.swift";
 			sourceTree = "<group>";
 		};
+		092BEB94B554FCBE68B97A54 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultBrowse.swift";
+			sourceTree = "<group>";
+		};
 		CF8E697AD3C7FF66A2674976 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
@@ -153,6 +159,12 @@
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultPassportTests.swift";
+			sourceTree = "<group>";
+		};
+		17FFB35C4D96C5A9FB54DD60 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultRedesignTests.swift";
 			sourceTree = "<group>";
 		};
 		D1F0873ED88A9AF5273F370D = {
@@ -264,6 +276,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F9158C5E39346C9508C9A38A";
 		};
+		0051F326CC0F09B84875E7EC = {
+			isa = "PBXBuildFile";
+			fileRef = "092BEB94B554FCBE68B97A54";
+		};
 		2B05C6321DDB659CC319DD8E = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
@@ -325,6 +341,7 @@
 				"C5C0BCFA9E17D2A351A211FE",
 				"48B05EBBFC78229B6FFE5D93",
 				"24E6F71D8BC1C943A371AFCA",
+				"0051F326CC0F09B84875E7EC",
 				"2B05C6321DDB659CC319DD8E",
 				"4BFE6E628C20ECEA3BDD20AC",
 				"36BC2D65C79E7AEB39BA8542",
@@ -489,6 +506,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F0ADDCC8EF10C3160575CE4A";
 		};
+		92FE8E6FFEBB5BBC0F35102E = {
+			isa = "PBXBuildFile";
+			fileRef = "17FFB35C4D96C5A9FB54DD60";
+		};
 		11D337EB63662E67F547D537 = {
 			isa = "PBXBuildFile";
 			fileRef = "652F55016243BF1B9F1BBEA4";
@@ -504,6 +525,7 @@
 				"51548C506FC8F59230AC08E6",
 				"E4144E7E80C9874C3C2C642E",
 				"5648CC84590CC1AFE5021BE3",
+				"92FE8E6FFEBB5BBC0F35102E",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +823,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F9158C5E39346C9508C9A38A";
 		};
+		CBCEE28D6EE3C03B94ACCAAF = {
+			isa = "PBXBuildFile";
+			fileRef = "092BEB94B554FCBE68B97A54";
+		};
 		DD3A25CE63B9349AD9B482CB = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
@@ -862,6 +888,7 @@
 				"EACE0D5D345292DF5C4368A5",
 				"E96DA1C391962136DEC2C8FE",
 				"84EEBB175041CF621996578F",
+				"CBCEE28D6EE3C03B94ACCAAF",
 				"DD3A25CE63B9349AD9B482CB",
 				"12E9DF03153C6C8C9DF7CF77",
 				"3E3E067115A8B2F9F2D2DEBB",
@@ -1024,6 +1051,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F0ADDCC8EF10C3160575CE4A";
 		};
+		94B9965884088D8C3D629C6B = {
+			isa = "PBXBuildFile";
+			fileRef = "17FFB35C4D96C5A9FB54DD60";
+		};
 		B403380705AF04D6C6D84ECD = {
 			isa = "PBXBuildFile";
 			fileRef = "652F55016243BF1B9F1BBEA4";
@@ -1039,6 +1070,7 @@
 				"DE6CDD7D12CEF1FF63ACE886",
 				"70BDC7741536CB5CD6A5CE2D",
 				"EF392158A1546EF6D583CA78",
+				"94B9965884088D8C3D629C6B",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1324,6 +1356,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F9158C5E39346C9508C9A38A";
 		};
+		519526E0ADB8223504EFD8A7 = {
+			isa = "PBXBuildFile";
+			fileRef = "092BEB94B554FCBE68B97A54";
+		};
 		8CCEDF70A379E7A0A54475BF = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
@@ -1385,6 +1421,7 @@
 				"CC4C510814AC8FD277B952DC",
 				"5088BFC249CD4755D3C545B6",
 				"69A554D9CF4CD768F04E7A2E",
+				"519526E0ADB8223504EFD8A7",
 				"8CCEDF70A379E7A0A54475BF",
 				"664204236A952CFDEDFED271",
 				"D766E4F4CAD9ECC0561E5A16",
@@ -1547,6 +1584,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F0ADDCC8EF10C3160575CE4A";
 		};
+		B2423A44AC4CD265F32C0347 = {
+			isa = "PBXBuildFile";
+			fileRef = "17FFB35C4D96C5A9FB54DD60";
+		};
 		B457F8CFD145CF8B254C9389 = {
 			isa = "PBXBuildFile";
 			fileRef = "652F55016243BF1B9F1BBEA4";
@@ -1562,6 +1603,7 @@
 				"C1DDFE23E9A8BCE766C1741C",
 				"578ECA2DAC9F2DF38509999F",
 				"5CF0826C656AED563C3C0387",
+				"B2423A44AC4CD265F32C0347",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1824,6 +1866,7 @@
 				"6CE34C7240FD108DCE67A5F2",
 				"6BC944CA59ED42E6494052ED",
 				"F9158C5E39346C9508C9A38A",
+				"092BEB94B554FCBE68B97A54",
 				"CF8E697AD3C7FF66A2674976",
 				"2B8F529F7FCEF5F0CD8C2B58",
 				"8AF4ED43FBF655F234F38380",
@@ -1847,6 +1890,7 @@
 				"96D1D999AC86052AD9E6D711",
 				"637F41F301BB63A88E922DDB",
 				"F0ADDCC8EF10C3160575CE4A",
+				"17FFB35C4D96C5A9FB54DD60",
 			);
 			path = "Tests";
 			sourceTree = "<group>";

@@ -89,13 +89,59 @@ final class AdultStore {
     }
 
     func toggleStep(_ step: GuideStep, in article: AdultArticle) {
+        setMark(progress(article.id).isChecked(step) ? nil : .done, for: step, in: article)
+    }
+
+    /// A step is done, known or open; setting one clears the other. nil reopens it.
+    @discardableResult func setMark(_ mark: StepMark?, for step: GuideStep, in article: AdultArticle) -> Bool {
+        guard self.article(article.id)?.steps.contains(step) == true else { return false }
+        return update(article.id) { progress in
+            progress.checkedSteps.removeValue(forKey: step.id)
+            progress.knownSteps?.removeValue(forKey: step.id)
+            switch mark {
+            case .done: progress.checkedSteps[step.id] = step.fingerprint
+            case .known: progress.knownSteps = (progress.knownSteps ?? [:]).merging([step.id: step.fingerprint]) { $1 }
+            case nil: break
+            }
+            if progress.knownSteps?.isEmpty == true { progress.knownSteps = nil }
+            progress.lastActivity = Date()
+        }
+    }
+
+    /// Marks every step not already done as known, or clears all known marks. Done steps stay done.
+    @discardableResult func setGuideKnown(_ known: Bool, _ article: AdultArticle) -> Bool {
+        guard self.article(article.id) == article else { return false }
+        return update(article.id) { progress in
+            if known {
+                var marks = progress.knownSteps ?? [:]
+                for step in article.steps where !progress.isChecked(step) { marks[step.id] = step.fingerprint }
+                progress.knownSteps = marks
+            } else { progress.knownSteps = nil }
+            progress.lastActivity = Date()
+        }
+    }
+
+    func toggleFavorite(_ step: GuideStep, in article: AdultArticle) {
         guard self.article(article.id)?.steps.contains(step) == true else { return }
+        update(article.id) { progress in
+            var ids = progress.favoriteSteps ?? []
+            if let index = ids.firstIndex(of: step.id) { ids.remove(at: index) } else { ids.append(step.id) }
+            progress.favoriteSteps = ids.isEmpty ? nil : ids
+        }
+    }
+
+    /// Guides with progress, most recently touched first: the Now tab.
+    var inProgress: [AdultArticle] {
+        articles.filter { progress($0.id).isInProgress($0) }
+            .sorted { (progress($0.id).lastActivity ?? .distantPast) > (progress($1.id).lastActivity ?? .distantPast) }
+    }
+
+    @discardableResult private func update(_ id: String, _ change: (inout ArticleProgress) -> Void) -> Bool {
         var next = library
-        var progress = progress(article.id)
-        if progress.isChecked(step) { progress.checkedSteps.removeValue(forKey: step.id) }
-        else { progress.checkedSteps[step.id] = step.fingerprint }
-        next.articles[article.id] = progress
-        commit(next)
+        var updated = progress(id)
+        change(&updated)
+        next.articles[id] = updated
+        return commit(next)
     }
 
     @discardableResult func saveNotes(_ notes: String, for id: String, expectedNotes: String? = nil) -> Bool {

@@ -145,10 +145,26 @@ struct ArticleProgress: Codable, Equatable, Sendable {
     var reminderSound = true
     var personalNotes: String?
     var rating: Int?
+    // Added in the redesign. Optional so files written by 1.0 still decode, and 1.0 ignores them.
+    var knownSteps: [String: String]?
+    var favoriteSteps: [String]?
+    var lastActivity: Date?
 
     func isChecked(_ step: GuideStep) -> Bool { checkedSteps[step.id] == step.fingerprint }
+    func isKnown(_ step: GuideStep) -> Bool { knownSteps?[step.id] == step.fingerprint }
+    func isFavorite(_ step: GuideStep) -> Bool { favoriteSteps?.contains(step.id) == true }
+    func mark(_ step: GuideStep) -> StepMark? { isChecked(step) ? .done : isKnown(step) ? .known : nil }
     func completedCount(in article: AdultArticle) -> Int { article.steps.filter(isChecked).count }
+    func knownCount(in article: AdultArticle) -> Int { article.steps.filter(isKnown).count }
+    /// Done and known steps both count toward progress.
+    func handledCount(in article: AdultArticle) -> Int { article.steps.filter { mark($0) != nil }.count }
+    func isFinished(_ article: AdultArticle) -> Bool { handledCount(in: article) == article.steps.count }
+    /// Every step known and none done: the person already knew this guide.
+    func isKnownGuide(_ article: AdultArticle) -> Bool { knownCount(in: article) == article.steps.count }
+    func isInProgress(_ article: AdultArticle) -> Bool { (1..<article.steps.count).contains(handledCount(in: article)) }
 }
+
+enum StepMark: String, Sendable { case done, known }
 
 struct UserLibrary: Codable, Equatable, Sendable {
     var schemaVersion = 1
@@ -158,7 +174,8 @@ struct UserLibrary: Codable, Equatable, Sendable {
         guard data.count <= AdultCatalog.maximumBytes else { throw CatalogError.tooLarge }
         let library = try JSONDecoder().decode(UserLibrary.self, from: data)
         guard library.schemaVersion == 1 else { throw CatalogError.invalid }
-        guard library.articles.values.allSatisfy({ ($0.personalNotes?.count ?? 0) <= 50_000 && ($0.rating.map { (1...5).contains($0) } ?? true) }) else { throw CatalogError.invalid }
+        guard library.articles.values.allSatisfy({ ($0.personalNotes?.count ?? 0) <= 50_000 && ($0.rating.map { (1...5).contains($0) } ?? true)
+            && ($0.knownSteps?.count ?? 0) <= 80 && ($0.favoriteSteps?.count ?? 0) <= 80 }) else { throw CatalogError.invalid }
         return library
     }
 }

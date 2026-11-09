@@ -1,6 +1,6 @@
 ---
 name: How to Adult — Fieldnotes
-description: An adult, practical editorial guide with warm paper, pine ink and authored teaching art.
+description: A practical editorial guide on warm paper with pine ink and authored teaching art, browsed by color-accented topics and read one step at a time.
 colors:
   paper: "#F5F0E6"
   paper-raised: "#EAE4D6"
@@ -17,6 +17,20 @@ colors:
   dark-action: "#E8BC80"
   dark-rule: "#476057"
   dark-caution: "#3C402C"
+  topic-home: "#0F6E74"
+  topic-home-dark: "#5FD4D9"
+  topic-food: "#A9481A"
+  topic-food-dark: "#FFA36B"
+  topic-money: "#2C6E37"
+  topic-money-dark: "#7FD68B"
+  topic-work: "#1F4E99"
+  topic-work-dark: "#86AEF5"
+  topic-wellbeing: "#A8325A"
+  topic-wellbeing-dark: "#FF8FB4"
+  topic-people: "#6B3FA0"
+  topic-people-dark: "#C6A2F2"
+  topic-everyday: "#3D47A3"
+  topic-everyday-dark: "#9AA3F5"
 typography:
   display:
     fontFamily: "Georgia, serif"
@@ -40,18 +54,20 @@ typography:
 rounded:
   control: "8px"
   search: "10px"
+  card: "14px"
+  tile: "16px"
   image: "3px"
 spacing:
   unit: "4px"
   inline: "8px"
   component: "12px"
   row: "18px"
-  inset: "24px"
+  inset: "20-24px"
   section: "28px"
   spread: "40px"
 components:
   primary:
-    backgroundColor: "{colors.clay}"
+    backgroundColor: "{colors.clay} or the topic color"
     textColor: "{colors.on-clay}"
     rounded: "{rounded.control}"
     height: "48px"
@@ -62,86 +78,214 @@ components:
     rounded: "{rounded.control}"
 ---
 
+# How to Adult: Fieldnotes with topics, steps and a passport
+
+This file is the source of truth for the visual system. SwiftUI wins if they disagree; update this file in the same change.
+
+The code is organised as follows:
+
+| File | Contents |
+| --- | --- |
+| `Sources/AdultDesign.swift` | Fieldnotes tokens and components |
+| `Sources/AdultTheme.swift` | Topic styles, shapes, cards and chips |
+| `Sources/AdultHomeViews.swift` | Now, Explore, topic pages and Passport |
+| `Sources/AdultGuideViews.swift` | Step carousel, "…" menu and Ask an AI |
+| `Sources/AdultPresenter.swift` | Second screen |
+| `Sources/AdultViews.swift` | Root, illustration pipeline, reminders, notes and settings |
+
 ## Overview
 
-**Design authority:** `screens/*.png` and their editable HTML are the platform-independent spatial references. These are design renderings, not native screenshots. Implement in the existing app through its single writer. Preserve guide bodies, cautions, scope, sources, revision-bound images, original IDs, bookmark/check fingerprints, reminders, storage handling and publication gates. All progress and counts in the reference screens are fixtures. Do not paste shortened presentation extracts over catalog content.
+The visual world is a carefully typeset practical field guide: warm paper, dark pine type, clay actions, quiet rules, serif headings and the authored cream teaching plates.
 
-The product helps someone find an answer during a real everyday task, follow the steps, then keep the answer handy. Its visual world is a carefully typeset practical field guide: warm paper, dark pine type, clay links, quiet rules and generous editorial headings. It should feel capable and welcoming to adults. No badges, gamification, childish illustrations, motivational filler or equal-size card wall.
+The November 2026 redesign keeps that world and changes how people move through it:
 
-Discovery is **Operate**, the guide reader is **Read**. The first viewport must offer search, one useful illustrated guide and direct topic routes. The reading page leads with the actual question and the next useful action. The signature interaction is a checked step that fills quietly while the instruction remains readable. The hero never replaces discovery with a promotional landing page.
+- **Browse by topic, visually.** Seven topic tiles carry an accent color, an icon and a shape language on paper. Tag-derived sub-area chips and icon filter chips narrow a topic.
+- **Read one step at a time.** A guide opens as a paged carousel: overview, one page per step, then finish. Glanceable cards show supplies, cautions and sources.
+- **See what you're doing and what you've done.** **Now** shows guides in progress, upcoming reminders and favorites. **Passport** stamps finished guides.
+- **Show, then tell.** Color, icons, shape, progress and art carry meaning first. Text stays where it carries meaning or safety: instructions, cautions, jurisdiction labels, sources, the advice notice, errors and permissions. Every icon has an accessibility label, and no meaning relies on color alone.
 
-**IA:** Guides (search, topic and region facets; featured guide; optional resume row) / Saved (In progress, All saved) / Reminders / Assistant. Settings is a toolbar destination. The existing Assistant and its action executor, connection/automation settings, notification budget, private guide notes/ratings and gated passport preview were identified in the newer native base and must be retained. Phone stacks retain independent paths. Wide layouts use sidebar, guide index/plan index and reader/assistant workspace. Every published category remains available, including Everyday; six visible examples are not a reduced taxonomy. Search activates results immediately and uses current ordering and actual jurisdiction data.
+### Owner decisions that supersede earlier Fieldnotes rules (8–9 November 2026)
 
-Safety and approval are content states, not a public authoring dashboard. Normal users see only published content. Do not reveal draft identities or sensitive review counts. A previously saved guide that is unavailable gets a concise “Unavailable” notice and preserved local progress, according to the actual policy; never silently republish a withdrawn guide. The availability screen is a state/style reference, not a mandatory new navigation destination. Reviewed does not mean certified or universally safe. Keep explicit local guidance and full cautions before relevant steps.
+The owner asked for this redesign and chose the bento topic browser, the tabs Now · Explore · Passport (plus Assistant), passport stamps, and porting onto Fieldnotes with its palette as the base and topic colors as accents. These earlier Fieldnotes rules are therefore replaced:
+
+| Earlier Fieldnotes rule | Now |
+| --- | --- |
+| "No badges, gamification … equal-size card wall"; "avoid seven competing pastel containers" | Seven topic tiles on paper: each has a light tint wash, a motif in its accent at 12% and one solid topic badge. Pine and clay still govern hierarchy; headings stay serif ink. Stamps record finished guides and never claim competence. |
+| "Progress is a count plus segmented line, never a reward ring" | Step progress is still a segmented line. Rings appear only for topic completion (tiles) and passport totals. |
+| "Keep completed text full contrast; no dimming" | Done steps stay full contrast. *Known* steps and guides render at 75% opacity, which measures at least 4.83:1 on every paper ground. |
+| IA: Guides / Saved / Reminders / Assistant, with a featured guide and topic index | Now / Explore / Passport / Assistant. Saved becomes the ♥ favorites shelf and filter, and Reminders becomes the Upcoming shelf on Now. Teaching art appears on cards and inside the carousel instead of one featured spread. |
+| Passport is DEBUG-only and absent from root navigation | The **review flow** stays DEBUG-only and its admission rules are unchanged. The root Passport tab shows automatic stamps, plus reviewed skills only when already earned on the device; production admission is still empty. |
+
+Everything else in Fieldnotes still applies: the colors, typography roles, illustration handling, notes and ratings behavior, reminder and permission timing, storage and offline states, Settings, Assistant, and the accessibility order and target sizes.
 
 ## Colors
 
-The native search prompt explicitly uses supporting text on raised paper; light sRGB contrast is 4.950665920729284:1. Native tab bars, sidebars, grouped forms, sheets and focus treatment retain platform behavior.
+Fieldnotes semantic tokens drive the interface in both appearances: paper, raised paper, pine or dark ink, muted text, clay or dark action, rule, and caution.
 
-Use semantic tokens, resolved by appearance. Light: paper/background, raised/search, pine/main ink, muted/supporting text, clay/action, rule/separators, caution/safety. Dark: dark-paper/background, dark-raised/search, dark-ink/main ink, dark-muted/supporting, dark-action/actions, dark-rule/separators, dark-caution/safety. Dark actions use dark-paper text. Accent never carries completion or caution without a symbol/label.
+**Topic accents.** Each topic has a deep **ground** (badge fill behind white symbols, at least 4.5:1) and an adaptive **tint** (accent strokes, progress and washes: the ground in light mode, the `-dark` value in dark mode).
 
-Category accents may appear in the 18–22pt topic symbol, but hierarchy is governed by pine/clay. Avoid seven competing pastel containers. The light paper field and the cream originals belong together. Preserve an illustration’s original colors in dark mode; give it a quiet paper matte. Never invert its pixels.
+| Topic | Ground | Shape | Motif |
+| --- | --- | --- | --- |
+| Home | teal `#0F6E74` | rounded square | rounded squares |
+| Food | burnt orange `#A9481A` | circle | circles |
+| Money | green `#2C6E37` | diamond | triangles |
+| Work | blue `#1F4E99` | square (4pt) | horizontal bars |
+| Wellbeing | rose `#A8325A` | capsule | waves |
+| People | purple `#6B3FA0` | ellipse | rings |
+| Everyday | indigo `#3D47A3` | rounded square (16pt) | dots |
 
-`../evidence/contrast.json` records measured sRGB contrast for actual foreground/background pairs. Dividers are decorative and do not substitute for labels or required control boundaries. Focus outline uses action color at 3px, with 4px separation; native focus rings may use the platform equivalent. High Contrast increases rules and circle strokes, not grain.
+Unknown future topics use clay and dots.
+
+- **Tiles and cards:** raised paper, the topic tint at 8–10% as a wash, the motif at 8–12%, and a 1pt border (rule color, or the topic tint at 35%).
+- **Selected chips:** clay with on-clay text. Unselected chips are raised paper with a rule border.
+- **Prominent step actions** use the topic ground with white labels. Fieldnotes sets ink app-wide, so prominent buttons set their own label color.
+- **Cautions** always use caution paper with pine text and an ink warning symbol.
+- **Illustrations** keep their original colors in both appearances.
+- **Second screen:** a black ground with the topic tint at 25% and its motif.
 
 ## Typography
 
-Native headings use relatively scaled system serif with −0.6pt tracking: display 36pt, reader/plan 34pt, featured 27pt and section 25pt. Native body uses scaled system sans with additional line spacing of 22% of font size. Portable Georgia and reference line heights describe the design rendering, not measured native metrics.
+Fieldnotes roles:
 
-The system is defined by **roles**, not an Apple font dependency: editorial serif for display/section titles, practical native sans for body and controls. The portable reference uses Georgia. Apple implementation may use system serif at the same optical scale and a normal system sans, maintaining the serif/sans contrast. Do not flatten every heading into system bold. No new font purchase, network load or redistributed system font.
+| Role | Style |
+| --- | --- |
+| Display (screen titles: Now, Explore, Passport, topic) | Serif 36 (`FieldnotesHeading`), Dynamic Type scaled |
+| Section | Serif 25 |
+| Guide title on the overview | Serif 34 |
+| Step title | Serif 32 |
+| Step body | `fieldnotesBody(size: 20)` |
+| Card titles | Body semibold |
+| Facts and chips | Caption or subheadline, semibold |
 
-Phone defaults: display 36/38, reader title 34/36, featured title 27/28, section 25/29, guide and step title 17/22 semibold, long reading body 17/25.5, supporting copy 15/22.5, metadata 12/18. Use Dynamic Type text styles and relative scaling, not fixed render sizes in runtime. The PNG is a reference at normal scale. Desktop display may rise to 40/43; body remains 17/26. Readable measure 56–72 characters, maximum reader column 720pt including padding. Long titles wrap without ellipsis. No decorative uppercase eyebrow; actual country/scope metadata may follow the title. Tab labels remain visible by default.
+On the second screen, sizes are `base × PresenterLayout.scale`. The scale grows with the display's short side, clamped to 1–3×. The base is 2.2 for Current step, 1.6 for Step and context, and 1.35 for Whole guide.
 
 ## Layout
 
-The implemented native layout uses two columns from 680pt and three from 1000pt when the size class permits; accessibility text uses compact navigation. The reader pairs its title and art from 520pt, with 168pt art below 600pt and 200pt art from 600pt; accessibility text stacks the header. Reader content caps at 720pt and the complete composition at 1800pt. Queries, facets, sections and selected readers persist across these layout changes.
+The Fieldnotes width thresholds are kept:
+- Compact tabs below 680pt and at accessibility sizes.
+- A sidebar plus detail from 680pt, on iPad regular width and on Mac.
+- Assistant keeps its three columns (sidebar, plan index, workspace).
+- The whole composition is capped at 1800pt.
 
-4pt base; 8 inline, 12 component gap, 18 row vertical, 24 phone inset, 28 section separation, 40 large spread. Phone width reference 390 × 844 logical points; account for real status/safe areas rather than baking 44/83pt bars into SwiftUI. Search is 48pt high. Header controls have 44pt targets. Native tab/safe-area heights win.
+The sidebar lists the four sections and the seven topics.
 
-The featured spread pairs a title-led left column and a complete teaching image on the right. On narrow phones or accessibility sizes, stack text and art vertically. No cropped instructional text inside the art. When artwork cannot be readable at thumbnail scale, treat the thumbnail as recognition only: keep an image-description/full-size action in the reader and no essential instruction solely in a thumbnail. Inline step art uses full aspect fit and may span the reader; hero and step associations remain bound to their original step IDs. Never move a teaching image to an unrelated guide because the palette matches.
+Screen and component sizes:
+- **Content width:** browse content caps at 1100pt and the reader at 760pt.
+- **Topic grid:** 2 columns on iPhone, 3 on iPad and Mac, 1 at accessibility sizes. An uneven last row stretches its tile.
+- **Guide cards:** adaptive grid, 300pt minimum (600pt at accessibility sizes).
+- **Card badge:** the guide's hero teaching art clipped into its topic shape, or the topic symbol while art loads or is unavailable.
+- **Card contents:** title, ⏱ time, US flag fact, ♥, and step segments.
+- **Guide carousel:**
+  - Tappable page indicator: overview ⓘ, one segment per step, finish 🏁.
+  - One page per step, with an action bar on paper above a rule.
+  - Short pages center vertically; tall pages (large text) scroll inside the page.
+  - At accessibility sizes the action bar becomes one row of icon-only buttons.
+  - On Mac, one page with a push transition: the floating sidebar misaligns a paging scroll view.
+- **Overview:** badge, facts, serif title, summary, advice notice, then the hero illustration (image description, full-size zoom, credits). After that, up to three glance cards (You need · Careful · Sources), side by side or stacked.
+- **Step pages:** show their step illustration when one exists (8 steps currently have one), and the guide's caution on every step.
 
-Below ~680pt: a single stack and native tabs. At ~680–999pt: optional index plus reader, collapsible sidebar. At ≥1000pt: 220–240pt sidebar, 320–410pt index, flexible 560–760pt reader. Collapse columns when available width or text size demands it. Center the full composition on very wide windows; do not stretch body text. See `09-wide.png` at 1440 × 960. Native minimum windows may be smaller and must reflow.
+## Illustrations
 
-Scroll content has bottom inset equal to the floating action or tab height plus 16pt. Reference frames show the initial viewport; controls must never cover content at the end of a scroll. Onboarding is optional and must not block the bundled library.
+Unchanged from Fieldnotes:
+- Artwork is bound to the exact catalog revision.
+- Every surface uses `VerifiedGuideImage` (PNG and digest checks, bounded size).
+- Full-size zoom closes with Done or Escape.
+- Image descriptions use the existing alt text.
+- Unavailable art shows "Illustration unavailable" with its description and Retry.
 
-## Elevation & Depth
+Compact badges pass a placeholder, so they show the topic symbol instead of loading or retry states. The thumbnail is recognition only: no instruction depends on it, and the reader always offers the full image.
 
-Texture comes from paper tonality, fine book-like horizontal rules, the cream teaching plates and original diagrams. Do not add noisy filters, fake parchment, bevels or a background grain layer behind text. The reference is intentionally tactile through material contrast. A neutral 1pt inner paper edge is permitted on a print-style image plate. No global shadows, gradients or material blur. Native sheets and bars keep their platform depth.
+## Motion and haptics
 
-Launch uses the same paper/pine values, book mark and wordmark positioning family as the first interactive frame (`10-launch.png` → `01-discovery.png`). Use original app-icon artwork where appropriate; the line book in the reference is the UI symbol role. Static launch is attractive by itself. No timer, forced splash or artificial delay. If real local loading persists, show a small progress indicator next to its task label; the page and cached text remain visible. Content refresh never clears the screen.
+- One spring for interface changes (`Animation.adult`: response 0.38, damping 0.82). Under Reduce Motion it becomes no animation, and the Mac page push becomes a fade.
+- Marking a step done or known plays a success haptic, waits 350ms so the mark registers, then advances. Page changes play a selection haptic. The finish stamp bounces once.
+- No ambient or entrance motion while reading.
 
-Motion: step check fill 120–160ms; pressed opacity 100ms; content/navigation follows native 180–240ms ease out. No page-wide entrance. Reduce Motion removes custom transforms and step movement; state changes remain immediate and perceivable. No continuous ambient movement while reading.
+## Progress model
 
-## Shapes
+- **Step marks:**
+  - A step is **done**, **known** (already knew it) or **open**. Done and known are exclusive.
+  - Both are fingerprinted, so an edited step must be marked again.
+  - Both count toward progress. Skip is not saved.
+  - Every mark is undoable: tap the same action again, or use the "…" menu.
+- **Guide states:**
+  - A guide is **finished** when every step is done or known, and **known** when every step is known.
+  - Marking a whole guide known marks each step that isn't already done.
+  - Known guides recede to 75% opacity with an outlined seal, and the "Hide known" chip removes them.
+- **Storage:** optional fields on `ArticleProgress` (`knownSteps`, `favoriteSteps`, `lastActivity`). `schemaVersion` stays 1, so files from the submitted 1.0 build and from Fieldnotes still decode.
+- **Favorites:** ♥ reuses the existing `isSaved` flag for guides, and steps can be hearted too.
 
-8pt controls/notices, 10pt search, 3pt image plates. The reference check circle reserves a44pt visual and hit region; native implementation may use a28–30pt circle inside a44pt target. Rounded shape is a control language, not a container around every paragraph. Section rules are 1pt. Use a consistent outline icon family at 1.7–2pt, 18pt in topic rows, 22pt in toolbar/tab roles. Apple uses semantic SF Symbols; other platforms use equivalent outline icons. Never replace teaching art with enlarged stock symbols or emoji. Authored illustrations are sourced from the existing verified manifest, without modifications or paid assets.
+## Passport
 
-## Components
+- **Stamps (automatic):**
+  - One page per topic, with one stamp slot per guide.
+  - A finished guide gets a filled stamp in the topic shape; a known guide gets an outlined stamp with a check; an open guide is a dashed outline.
+  - A completed topic gets a rotated seal.
+  - Stamps record finishing a guide, never competence.
+- **Skills (reviewed):** the existing `AdultPassportStore` rules are unchanged; reading or marking steps never awards a skill. The tab shows only skills already earned on the device.
 
-- **Search:** visible on discovery, direct question placeholder, semantic label “Search guides.” Results replace featured content and expose active topic/scope facets. Clear query and clear facets are separate controls. Empty: “No guides found” + active filters + “Clear filters.” A spelling suggestion is optional only if the search supports it.
-- **Featured spread:** one title, time/step metadata, complete art thumbnail, one “Open guide” action. Match the reference’s asymmetric editorial hierarchy. Selection is one container/underline, never nested button backgrounds.
-- **Topic index:** compact two-column text/icon routes, fine bottom rules, no descriptive blurb per topic. At large text it becomes one column. Include all real categories.
-- **Guide row:** wrapping title, useful short summary, time/steps and jurisdiction if specific. Chevron optional on native platform. Entire row target ≥44pt. No artificial numbered search ranking; the reference numbering can be omitted in real results.
-- **Reader:** actual title and scope, full summary, meaningful time, tools, full cautions at the relevant moment, full-aspect art, step list, source links and exact review date. Full-size art is zoomable and dismissible with keyboard/Escape; labels/descriptions remain accessible. Save, reminder, share remain native toolbar actions; primary next-step dock is optional only when its anchor scrolls directly to the next unchecked step. It is never an extra copy of a persistent Save button.
-- **Steps:** check circle + title/body; index only where sequence matters. Keep completed text full contrast; no strike-through/dimming. Progress is a count plus segmented line, never a reward ring. Autosave immediately with the existing store. Reset requires the app’s existing undo/confirmation policy and must not erase bookmark/reminder state.
-- **Saved:** resume section first, then remaining bookmarks. Do not infer completed from saved. Empty screen uses one book mark, “Keep a useful guide handy” and “Browse guides.” No fake empty-state progress.
-- **Reminders/permission:** show the selected guide and explicit Save/Cancel. Request notification permission only after saving the first actual reminder. Denied: retain reminder intent and provide Settings recovery. Never launch a system request on discovery.
-- **Storage/offline:** cached text remains usable; unavailable art gets “Illustration unavailable” plus accessible description and Retry. Data-storage failure gets a persistent concise notice + Retry, without false “saved” copy. Background refresh uses inline status only while real work runs. Do not represent reachability as successful publication.
-- **Settings:** themed native grouped sections; appearance, accessibility/sound, content status, privacy, about. Retain settings section on wide layout and persist all options.
-- **Accessibility:** VoiceOver order title → scope → summary → safety → tools/art → steps → sources. Step announces title, completion and position; the whole paragraph need not be a repeated button label. Decorative symbols hidden. Described images use existing alt text, not repeated captions. At AX sizes stack image/title, use one-column topics, no floating dock over body. Provide 44pt iOS / 48dp Android targets and keyboard focus/activation on desktop. High contrast and differentiation without color remain meaningful.
+## Sub-areas
 
-Assistant is a fourth native tab/sidebar route. The guide's existing **Help me do this** control prepares its real context and navigates to Assistant; retain guide cautions, storage gates and passport restrictions. Use a secondary, full-width clear action below the introduction/metadata without displacing required cautions. The composer uses a serif heading, semantic task label, raised-paper editor and one primary action: actual **Choose your AI** or **Make my plan**, according to existing connection and QA gates. Keep a removable guide context row when present. Suggestions are compact ruled routes, one column at AX; avoid a new set of competing pastel cards. Saved plans use ruled wrapping title/progress rows. A pending request shows task-specific status and Cancel while real work runs, never an artificial delay.
+Sub-areas are derived from guide tags in `GuideSubArea`; the catalog schema has no sub-area field. All 273 bundled guides fall into at least one sub-area, and a unit test enforces at least 90% coverage. When new content arrives, add tags to an area rather than adding a backend field.
 
-Plans retain all real action kinds, statuses, evidence/citations, editing, sharing and execution-review recovery. Group each action with a rule, kind label/icon, full title/details/items, actual date/repeat/duration and its existing explicit action. Clay is for actionable emphasis; status meaning also has text and icon. Never recolor a needs-review execution as success or offer an unsafe retry that bypasses existing review. Keep Schedule reminder, Add to Calendar, Research, shopping-list and checklist labels/behavior honest. Existing automation preferences, permission timing, notification budget, consent and connection/billing/privacy disclosures remain intact. The source's validated executor governs behavior; design does not broaden execution permissions.
+## Overflow menu
 
-Assistant settings use the same themed native grouped form roles as main Settings. Keep connection status, key privacy, live-research consent and costs where they support an actual choice. Private QA banners remain explicit. The DEBUG-only skill passport stays gated review-only and absent from ordinary root navigation; retain its existing data/privacy restrictions.
+- **Marks:** favorite guide or step, mark step or guide known.
+- **Look further:**
+  - **Ask an AI** renders an editable template (Settings ▸ Ask an AI ▸ Prompt template), copies it, and offers "Open [assistant] and paste". It opens the assistant's plain home page with nothing pre-filled or sent.
+    - Notes are included only when the "Include my notes" setting is on.
+    - Rendering is single pass, so placeholder-looking guide text stays literal.
+  - **Search Google** opens a query that keeps only unreserved characters unescaped.
+- **Share, remind, notes, Help me do this.**
+- **Second-screen mode**, shown only while an external display is connected.
 
-At the reader's end, **Make this yours** is a ruled personal-reference section after sources, with existing five-star 44pt targets and Add/Open my notes. It does not compete with teaching art or cautions. My notes uses the paper editor with explicit Cancel/Save. Preserve dirty-dismiss/discard confirmation, 50,000-character limit, expected-original conflict checking and storage failure feedback. Notes/ratings retain original guide IDs and local privacy; never include them in AI requests or sharing by implication.
+## Second screen
 
-At AX sizes, assistant task text, plan details and form disclosures wrap/scroll naturally. Read title/context before the task field, action kind/title/details before status/action, and never announce a spinner per frame. Buttons expose current state and full labels. Reduce Motion removes custom transitions. Native keyboard navigation and sheet focus return remain mandatory. Updated runtime captures are required after restoration; the earlier 94bc checkpoint verdict does not certify these newly restored routes.
+- An external display gets its own non-interactive scene (`UIWindowSceneSessionRoleExternalDisplayNonInteractive`, declared in `Configuration/iOS-Info.plist`), never a mirror.
+- Three modes:
+  - **Current step:** readable across a room.
+  - **Step and context:** the step plus supplies, cautions, the next step and progress.
+  - **Whole guide:** up to four columns, scrolling itself to the current step when everything doesn't fit.
+- Layout follows the display's real size and shape. Text never truncates: each mode tries smaller scales (down to 46%) until it fits.
+- **Mac:** a resizable Presenter window (⇧⌘P).
 
-## Do's and Don'ts
+## Keyboard
 
-Native verification is scoped: the earlier 94bc phone/tablet, light/dark, accessibility, forms and launch was independently accepted. Restored Assistant/plans/notes and private QA isolation require their current capture/receipt review. Current Mac resize runtime is blocked while Studio is locked; spoken VoiceOver traversal is unobserved. Source accessibility priorities are introduction 6, cautions 5, tools 4 and art 3. Private DEBUG QA branches before ordinary storage/preferences/Keychain, uses session-specific data/defaults and synthetic plans, and disables AI, notifications and external execution. Its optional teaching-art reads do not enable catalog refresh. Passport remains DEBUG-only review navigation.
+- ← and → page through the guide, mirrored in right-to-left layouts. Space moves forward.
+- Guide menu:
 
-Do preserve the current guide catalog and every functional recovery fix. Do implement the real list, reader and saved flows through the owner. Do compare light/dark, compact/large and accessibility captures against the references. Do leave approvals/push with the parent. Do not add backend fields, publish drafts, rename source identifiers, claim new content safety, use paid compute or touch a physical phone from this design task.
+  | Command | Shortcut |
+  | --- | --- |
+  | Next step | ⌘→ |
+  | Previous step | ⌘← |
+  | Done | ⌘↩ |
+  | I know this step | ⇧⌘K |
+  | Favorite guide | ⌘D |
+  | Presenter (Mac) | ⇧⌘P |
+
+- Commands post through `PresenterState`. Don't pass closures through `focusedSceneValue`: it caused an update loop during accessibility snapshots.
+
+## Accessibility
+
+Fieldnotes' order is kept within the overview: title → scope → summary → safety → tools/art. Other rules:
+- **Element structure:**
+  - Tiles, cards and stamps are single elements with a label and value.
+  - Page segments are buttons ("Step 2", "Done, current").
+  - VoiceOver three-finger swipes page through the carousel.
+  - The step caution is read as "Caution: …".
+- **Targets:** at least 44pt.
+- **Container identifiers:** scope them with `.accessibilityElement(children: .contain)` before setting the identifier. On a bare stack, an identifier overwrites every child's identifier.
+- Dynamic Type, Reduce Motion, both appearances, Increase Contrast (Fieldnotes rules thicken) and right-to-left layouts are supported.
+
+## Kept from Fieldnotes without change
+
+- **Elevation:** paper tonality, rules and plates. No global shadows or blur.
+- **Launch screen.**
+- **Reminders:** explicit Save and Cancel; permission requested only on the first save.
+- **Storage and offline notices.**
+- **Settings:** a sidebar on wide screens, with appearance persisted. An "Ask an AI" section is added.
+- **Notes:** the editor with discard confirmation and conflict checks. Notes now live on the finish page.
+- **Assistant:** the composer, plans and execution-review rules.
+- **Private QA isolation.**
+
+The Fieldnotes spatial references (`screens/*.png`) predate this redesign: they describe the paper, ink, type and reader details, not the new navigation.

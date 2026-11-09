@@ -4,6 +4,12 @@ A native pocket guide for iPhone, iPad and Mac. The bundled 273-guide catalog sn
 
 The Fieldnotes interface uses warm paper, pine ink, clay actions and serif headings. It adapts from compact tabs to native guide-index/reader columns, retains search and selection while resizing, supports Dynamic Type and both appearances, and offers image descriptions and full-size zoom. Full guide bodies, cautions, jurisdiction, sources and stable guide/step identities are preserved.
 
+## Topics, steps and passport (working source, unshipped)
+
+On the Fieldnotes base, the app now opens to **Now** (guides in progress, upcoming reminders, favorite guides and steps). **Explore** shows seven topic tiles on paper, each with its own accent color, shape and motif, plus tag-derived sub-areas and icon filters (favorites, hide known, ≤ 10 min, region). **Passport** stamps each finished guide and seals each completed topic, beside the unchanged reviewed-skill tier.
+
+A guide opens as a carousel with one step per page. Each step offers done, "I know this" and skip, and the overview shows supplies, caution and source cards with the teaching art. The "…" menu adds Ask an AI (copies an editable prompt; nothing is sent) and Search Google. An external display gets its own second screen with three layouts, and Mac has a Presenter window. Saved progress files stay readable by older builds. There has been no version bump, upload or submission. See [DESIGN.md](DESIGN.md) and the [redesign audit and verification](Documentation/redesign-audit.md).
+
 ## Assistant source
 
 Assistant is a separate tab and the guide's “Help me do this” route prepares its real context. Plans retain reminder, calendar, research, shopping and checklist actions, stable IDs and durable execution receipts. Existing explicit execution/automation opt-ins, uncertain-write review and shared notification limits remain in force. Automation defaults to off and affects only new eligible plans; deleting a plan does not remove native items already created.

@@ -119,4 +119,5 @@ You chose to port onto Fieldnotes, keeping its palette and voice and using topic
   - The Assistant flow fails at `AdultAssistantUITests.swift:35` on iPad.
   - It fails identically on unmodified `origin/main`, so it predates this work. It was not changed here.
 - **Builds:** iOS and macOS. Fieldnotes removed the visionOS target.
-- **External display (port):** connected at 1920×1080 and showed the hem guide in Step and context mode with every line complete. The connection was confirmed in the presenter log. The full opt-in mode-switching test result is recorded in the commit that adds this note.
+- **External display (port):** connected at 1920×1080 and showed the hem guide in Step and context mode with every line complete. The connection was confirmed in the presenter log. The opt-in mode-switching test (`TEST_RUNNER_ADULT_EXTERNAL_DISPLAY=1`) also passed with the display attached at launch, and the scene connected at launch on that run. Without a display it skips by design.
+- **Project check:** `scripts/check-native-project.py` still asserts a visionOS target that Fieldnotes removed from the generator. The failure is unchanged from `origin/main`.

@@ -59,6 +59,12 @@
 			path = "AdultAssistantViews.swift";
 			sourceTree = "<group>";
 		};
+		092BEB94B554FCBE68B97A54 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultBrowse.swift";
+			sourceTree = "<group>";
+		};
 		CF8E697AD3C7FF66A2674976 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
@@ -173,6 +179,12 @@
 			path = "AdultPassportTests.swift";
 			sourceTree = "<group>";
 		};
+		17FFB35C4D96C5A9FB54DD60 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultRedesignTests.swift";
+			sourceTree = "<group>";
+		};
 		D1F0873ED88A9AF5273F370D = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
@@ -276,6 +288,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F9158C5E39346C9508C9A38A";
 		};
+		0051F326CC0F09B84875E7EC = {
+			isa = "PBXBuildFile";
+			fileRef = "092BEB94B554FCBE68B97A54";
+		};
 		2B05C6321DDB659CC319DD8E = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
@@ -349,6 +365,7 @@
 				"C5C0BCFA9E17D2A351A211FE",
 				"48B05EBBFC78229B6FFE5D93",
 				"24E6F71D8BC1C943A371AFCA",
+				"0051F326CC0F09B84875E7EC",
 				"2B05C6321DDB659CC319DD8E",
 				"FEA18B52132E969F831E6524",
 				"331EC4EFEDBA2CC8E220B741",
@@ -520,6 +537,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F0ADDCC8EF10C3160575CE4A";
 		};
+		92FE8E6FFEBB5BBC0F35102E = {
+			isa = "PBXBuildFile";
+			fileRef = "17FFB35C4D96C5A9FB54DD60";
+		};
 		11D337EB63662E67F547D537 = {
 			isa = "PBXBuildFile";
 			fileRef = "652F55016243BF1B9F1BBEA4";
@@ -536,6 +557,7 @@
 				"1B49C120DF4187222E504A9F",
 				"E4144E7E80C9874C3C2C642E",
 				"5648CC84590CC1AFE5021BE3",
+				"92FE8E6FFEBB5BBC0F35102E",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +855,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F9158C5E39346C9508C9A38A";
 		};
+		CBCEE28D6EE3C03B94ACCAAF = {
+			isa = "PBXBuildFile";
+			fileRef = "092BEB94B554FCBE68B97A54";
+		};
 		DD3A25CE63B9349AD9B482CB = {
 			isa = "PBXBuildFile";
 			fileRef = "CF8E697AD3C7FF66A2674976";
@@ -902,6 +928,7 @@
 				"EACE0D5D345292DF5C4368A5",
 				"E96DA1C391962136DEC2C8FE",
 				"84EEBB175041CF621996578F",
+				"CBCEE28D6EE3C03B94ACCAAF",
 				"DD3A25CE63B9349AD9B482CB",
 				"C2599BC6E847313DDD787B2B",
 				"3ACD107C2C6F3AA3AF54EF21",
@@ -1070,6 +1097,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "F0ADDCC8EF10C3160575CE4A";
 		};
+		94B9965884088D8C3D629C6B = {
+			isa = "PBXBuildFile";
+			fileRef = "17FFB35C4D96C5A9FB54DD60";
+		};
 		B403380705AF04D6C6D84ECD = {
 			isa = "PBXBuildFile";
 			fileRef = "652F55016243BF1B9F1BBEA4";
@@ -1086,6 +1117,7 @@
 				"90D7E2B0DAB186EFAECD3BD3",
 				"70BDC7741536CB5CD6A5CE2D",
 				"EF392158A1546EF6D583CA78",
+				"94B9965884088D8C3D629C6B",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1340,6 +1372,7 @@
 				"6CE34C7240FD108DCE67A5F2",
 				"6BC944CA59ED42E6494052ED",
 				"F9158C5E39346C9508C9A38A",
+				"092BEB94B554FCBE68B97A54",
 				"CF8E697AD3C7FF66A2674976",
 				"33114096F9E2F18FE78F45BE",
 				"F7B66A8723FFF837A24A03EE",
@@ -1366,6 +1399,7 @@
 				"B85EC5D5EC12ED3A9DBB76B5",
 				"637F41F301BB63A88E922DDB",
 				"F0ADDCC8EF10C3160575CE4A",
+				"17FFB35C4D96C5A9FB54DD60",
 			);
 			path = "Tests";
 			sourceTree = "<group>";

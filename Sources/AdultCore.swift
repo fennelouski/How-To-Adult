@@ -181,10 +181,10 @@ struct UserLibrary: Codable, Equatable, Sendable {
 }
 
 enum AdultSection: String, CaseIterable, Identifiable {
-    case browse = "Guides", assistant = "Assistant", saved = "Saved", reminders = "Reminders"
+    case now = "Now", explore = "Explore", passport = "Passport", assistant = "Assistant"
     var id: Self { self }
     var symbol: String {
-        switch self { case .browse: "books.vertical"; case .assistant: "sparkles"; case .saved: "bookmark"; case .reminders: "bell" }
+        switch self { case .now: "play.circle"; case .explore: "square.grid.2x2"; case .passport: "seal"; case .assistant: "sparkles" }
     }
 }
 

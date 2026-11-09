@@ -2,7 +2,11 @@ import SwiftUI
 
 @main
 struct HowToAdultApp: App {
+    #if os(iOS)
+    @UIApplicationDelegateAdaptor(AdultAppDelegate.self) private var appDelegate
+    #endif
     @State private var store: AdultStore?
+    @State private var passport: AdultPassportStore?
     @State private var assistant: AdultAssistantController?
     @State private var privatePreferences: UserDefaults?
     #if DEBUG
@@ -51,7 +55,9 @@ struct HowToAdultApp: App {
                 ])
             if library.plans.isEmpty { _ = try? library.add(fixture) }
             if ProcessInfo.processInfo.arguments.contains("--qa-plan") { preview.selectedPlanID = library.plans.first?.id }
-            _store = State(initialValue: AdultStore(directory: directory, allowsRemoteUpdates: false, allowsNotifications: false, allowsArtworkReads: ProcessInfo.processInfo.arguments.contains("--qa-library")))
+            let qaStore = AdultStore(directory: directory, allowsRemoteUpdates: false, allowsNotifications: false, allowsArtworkReads: ProcessInfo.processInfo.arguments.contains("--qa-library"))
+            _store = State(initialValue: qaStore)
+            PresenterState.shared.store = qaStore
             _assistant = State(initialValue: preview)
             return
         }
@@ -59,6 +65,12 @@ struct HowToAdultApp: App {
         let store = AdultStore()
         store.installNotificationRouting()
         _store = State(initialValue: store)
+        PresenterState.shared.store = store
+        // Reviewed skills tier: production admission is empty, so this only shows skills already on this device.
+        if let catalog = store.catalog {
+            _passport = State(initialValue: AdultPassportStore(directory: URL.applicationSupportDirectory.appendingPathComponent("HowToAdult", isDirectory: true),
+                manifest: .empty, catalog: catalog, countryCode: Locale.current.region?.identifier ?? "US"))
+        }
         _assistant = State(initialValue: AdultAssistantRuntime.shared)
     }
 
@@ -85,11 +97,17 @@ struct HowToAdultApp: App {
         #if os(macOS)
         .defaultSize(width: 1180, height: 820)
         #endif
+        .commands { GuideMenuCommands() }
+
+        #if os(macOS)
+        Window("Presenter", id: "presenter") { PresenterWindow() }
+            .defaultSize(width: 1280, height: 720)
+        #endif
     }
 
     @ViewBuilder private var ordinaryRoot: some View {
         if let store, let assistant {
-            AdultAppearanceRoot().environment(store).environment(assistant)
+            AdultAppearanceRoot().environment(store).environment(assistant).environment(passport)
         } else { Color.clear.accessibilityIdentifier("adult-blank-test-host") }
     }
 }

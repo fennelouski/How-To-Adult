@@ -77,6 +77,18 @@
 			path = "AdultDesign.swift";
 			sourceTree = "<group>";
 		};
+		E7DFE2697782F81D145D7276 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultGuideViews.swift";
+			sourceTree = "<group>";
+		};
+		DA204A4927483B73537417AC = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultHomeViews.swift";
+			sourceTree = "<group>";
+		};
 		F7B66A8723FFF837A24A03EE = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
@@ -113,10 +125,22 @@
 			path = "AdultPassportViews.swift";
 			sourceTree = "<group>";
 		};
+		6181AE9D2F9E8497B2167A02 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultPresenter.swift";
+			sourceTree = "<group>";
+		};
 		E8BFFC13605D8558DDB18199 = {
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultStore.swift";
+			sourceTree = "<group>";
+		};
+		485A678A0ABC20D0EBFF7E89 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultTheme.swift";
 			sourceTree = "<group>";
 		};
 		636B1AB0105B4EC4323FBC19 = {
@@ -189,6 +213,12 @@
 			isa = "PBXFileReference";
 			lastKnownFileType = "sourcecode.swift";
 			path = "AdultAssistantUITests.swift";
+			sourceTree = "<group>";
+		};
+		D04044745AD01A576CF310C8 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "AdultExternalDisplayUITests.swift";
 			sourceTree = "<group>";
 		};
 		8A51A2E1E60EC525DC3DF808 = {
@@ -300,6 +330,14 @@
 			isa = "PBXBuildFile";
 			fileRef = "33114096F9E2F18FE78F45BE";
 		};
+		59E91CBFA950F2C9B2147F60 = {
+			isa = "PBXBuildFile";
+			fileRef = "E7DFE2697782F81D145D7276";
+		};
+		3D71A1E30D552BCF1C5DA9B1 = {
+			isa = "PBXBuildFile";
+			fileRef = "DA204A4927483B73537417AC";
+		};
 		331EC4EFEDBA2CC8E220B741 = {
 			isa = "PBXBuildFile";
 			fileRef = "F7B66A8723FFF837A24A03EE";
@@ -324,9 +362,17 @@
 			isa = "PBXBuildFile";
 			fileRef = "1A84A17A7D297BD8396DE055";
 		};
+		3AC06EADFE03D524898EEF72 = {
+			isa = "PBXBuildFile";
+			fileRef = "6181AE9D2F9E8497B2167A02";
+		};
 		49EEA09D899A6AB5DC6DC2AB = {
 			isa = "PBXBuildFile";
 			fileRef = "E8BFFC13605D8558DDB18199";
+		};
+		F6E9BB0FBE8F9D62180362EF = {
+			isa = "PBXBuildFile";
+			fileRef = "485A678A0ABC20D0EBFF7E89";
 		};
 		FE16BFF9DFE8F03C994A7A19 = {
 			isa = "PBXBuildFile";
@@ -368,13 +414,17 @@
 				"0051F326CC0F09B84875E7EC",
 				"2B05C6321DDB659CC319DD8E",
 				"FEA18B52132E969F831E6524",
+				"59E91CBFA950F2C9B2147F60",
+				"3D71A1E30D552BCF1C5DA9B1",
 				"331EC4EFEDBA2CC8E220B741",
 				"4BFE6E628C20ECEA3BDD20AC",
 				"36BC2D65C79E7AEB39BA8542",
 				"5C782D6D21D463A5957F2521",
 				"27684C16516F8F15C0DFD0A7",
 				"ABB502770FB29A7D07DCC55F",
+				"3AC06EADFE03D524898EEF72",
 				"49EEA09D899A6AB5DC6DC2AB",
+				"F6E9BB0FBE8F9D62180362EF",
 				"FE16BFF9DFE8F03C994A7A19",
 				"2774DA2D8D44B58F173005D5",
 			);
@@ -698,6 +748,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "D1F0873ED88A9AF5273F370D";
 		};
+		0AF74A76399331A2B8D38538 = {
+			isa = "PBXBuildFile";
+			fileRef = "D04044745AD01A576CF310C8";
+		};
 		2A3E776242707C055CC2DCC5 = {
 			isa = "PBXBuildFile";
 			fileRef = "8A51A2E1E60EC525DC3DF808";
@@ -707,6 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				"A2015DFF9FA48D13A3769291",
+				"0AF74A76399331A2B8D38538",
 				"2A3E776242707C055CC2DCC5",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +922,14 @@
 			isa = "PBXBuildFile";
 			fileRef = "33114096F9E2F18FE78F45BE";
 		};
+		ED8408788D03D39EFF25E5F6 = {
+			isa = "PBXBuildFile";
+			fileRef = "E7DFE2697782F81D145D7276";
+		};
+		2D5B80265087C4BD9F213D63 = {
+			isa = "PBXBuildFile";
+			fileRef = "DA204A4927483B73537417AC";
+		};
 		3ACD107C2C6F3AA3AF54EF21 = {
 			isa = "PBXBuildFile";
 			fileRef = "F7B66A8723FFF837A24A03EE";
@@ -891,9 +954,17 @@
 			isa = "PBXBuildFile";
 			fileRef = "1A84A17A7D297BD8396DE055";
 		};
+		94601EA525776849CDA41C27 = {
+			isa = "PBXBuildFile";
+			fileRef = "6181AE9D2F9E8497B2167A02";
+		};
 		B659604C39AF149D10F797BC = {
 			isa = "PBXBuildFile";
 			fileRef = "E8BFFC13605D8558DDB18199";
+		};
+		59690055C016C53401B577CC = {
+			isa = "PBXBuildFile";
+			fileRef = "485A678A0ABC20D0EBFF7E89";
 		};
 		D781AB9508796526DEAE100E = {
 			isa = "PBXBuildFile";
@@ -931,13 +1002,17 @@
 				"CBCEE28D6EE3C03B94ACCAAF",
 				"DD3A25CE63B9349AD9B482CB",
 				"C2599BC6E847313DDD787B2B",
+				"ED8408788D03D39EFF25E5F6",
+				"2D5B80265087C4BD9F213D63",
 				"3ACD107C2C6F3AA3AF54EF21",
 				"12E9DF03153C6C8C9DF7CF77",
 				"3E3E067115A8B2F9F2D2DEBB",
 				"F5AF1E0CADC8D2E09B9212F0",
 				"F1F221EE451A38E9E238DE15",
 				"7A3E3063A7401A52411CF2F5",
+				"94601EA525776849CDA41C27",
 				"B659604C39AF149D10F797BC",
+				"59690055C016C53401B577CC",
 				"D781AB9508796526DEAE100E",
 				"ABD930F4ECEA5C85DC3FAD84",
 			);
@@ -1252,6 +1327,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "D1F0873ED88A9AF5273F370D";
 		};
+		42AB4AB38ED2DB7742207275 = {
+			isa = "PBXBuildFile";
+			fileRef = "D04044745AD01A576CF310C8";
+		};
 		B8106AE5BB897BD0B5839EC2 = {
 			isa = "PBXBuildFile";
 			fileRef = "8A51A2E1E60EC525DC3DF808";
@@ -1261,6 +1340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				"4E98437FC389DC719EEC4364",
+				"42AB4AB38ED2DB7742207275",
 				"B8106AE5BB897BD0B5839EC2",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1375,13 +1455,17 @@
 				"092BEB94B554FCBE68B97A54",
 				"CF8E697AD3C7FF66A2674976",
 				"33114096F9E2F18FE78F45BE",
+				"E7DFE2697782F81D145D7276",
+				"DA204A4927483B73537417AC",
 				"F7B66A8723FFF837A24A03EE",
 				"2B8F529F7FCEF5F0CD8C2B58",
 				"8AF4ED43FBF655F234F38380",
 				"60F6B5531523A1FE71D5E486",
 				"1FE5F97A547897B436ED818B",
 				"1A84A17A7D297BD8396DE055",
+				"6181AE9D2F9E8497B2167A02",
 				"E8BFFC13605D8558DDB18199",
+				"485A678A0ABC20D0EBFF7E89",
 				"636B1AB0105B4EC4323FBC19",
 				"12AC0F1A42CD7EF33B7D8F9C",
 			);
@@ -1408,6 +1492,7 @@
 			isa = "PBXGroup";
 			children = (
 				"D1F0873ED88A9AF5273F370D",
+				"D04044745AD01A576CF310C8",
 				"8A51A2E1E60EC525DC3DF808",
 			);
 			path = "UITests";
